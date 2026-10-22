@@ -89,3 +89,15 @@ Question52 explicitly proposed the same complete HV local matrix for the six P06
 Exact answer: **“Apply this local matrix to all6 pairs”**. Unknown prerequisites block. No exception was supplied. The selection applies to these exact six model pairs, without accepting unrelated source or earth relationships.
 
 These answers are recorded for the next configuration increment. They are not part of immutable `.3`.
+
+## Answer53 — SW505 inching-linked HV pairs
+
+Question53 explicitly proposed the same complete six-action HV local matrix listed under52 for the three TF505A/B/C CB/earth pairs in P08. It retained unknown-prerequisite blocking, asked for local exceptions, and referenced `500CB-04220-DR-EL-0055.pdf`, rev3, p1 D–F/3–8. Their inching-isolator/key sequences were already explicitly deferred under49.
+
+Exact answer: **“Apply this local matrix to all3 pairs”**. This selects those six controls' local profiles only. No additional deferral or hardware/source/earth relationship acceptance follows.
+
+## Answer54 — six converter AC inputs
+
+Question54 proposed Open/Close only, no racking, no additional prerequisites and independent operation for the A/B AC input switches of VS4061, VS4101 and the RM413A converter. It explicitly distinguished a selected teaching profile from a source-confirmed physical interlock table and requested exceptions or coordinated-operation requirements.
+
+Exact answer: **“Use this profile for all6 inputs”**. This selects the six exact P11 model interactions. It does not establish actual switching permission or accept converter internals.
