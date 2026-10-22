@@ -141,13 +141,54 @@ No material missing requirements, incorrect behavior or scope creep found for th
 
 Review summary: Standards 0 material findings; Spec 0 material findings. Neither review establishes installed-network correctness or owner acceptance.
 
-## Current whole-network work
+## Whole-network construction and owner review (#25, open)
 
-All 13 original area packages are implemented as provisional construction models. A separate agent is composing them into one model with evidence-linked cross-area joins, scoped review identities and area navigation. The CV006 proxy through RM419 must be replaced by the western area's actual RM419/RM418 equipment, without retaining a bypass. Disputed Hopper10 and services interfaces remain unjoined pending reconciliation.
+Commit `848bdfd` records the stable `site-whole-network` / `construction-2026-10-22.4` assembly: 13 original area packages, 961 assets, 558 null controls, 28 null sources, 357 coverage boundaries and 123 views. The orientation has 13 navigable area cards; view search filters the detail list. The CV006 conducting proxy through RM419 is removed, retaining the western area's actual RM419/RM418 devices and cable once. Seventeen cross-area joins retain their supported, provisional or owner-confirmed status; unsupported interfaces remain explicit gaps.
+
+Five scoped owner decisions dated 22 October 2026 record the TF04 33 kV Hopper10 feed, both selected 33 kV transformer inputs, SW411 tier03's current RM406/RM410 22 kV feed and removal of the former 22 kV Hopper10 line, TF11/TF12 to IN03/IN04 with IN01/IN02 unused, and corrected tier16 CB/ES model tags. Remaining hardware, cable, winding, source availability, baseline and interlock questions are retained. See the [construction guide](whole-network-construction.md) and [owner packet](model-owner-review.md). No whole-network acceptance has been given.
 
 The coverage register names all 141 original PDFs in explicit area-review source rows, with 140 unique hashes and no unmatched files. The byte-identical duplicate has an explicit disposition; a row is a pointer to the recorded inspection scope, not an independent topology approval or model acceptance.
 
-The assembled model's initial public session snapshot was measured at roughly seven seconds by the assembly agent. A separate agent is investigating the calculation cost while composition proceeds. No numeric performance acceptance threshold has been agreed, and no final performance result is claimed yet.
+Shared calculation/indexing changes in `400a7b3` reduced measured snapshot time for the same pinned construction from roughly 6–7 seconds to 2.13–2.64 seconds, with identical serialized snapshots in each comparison. These are local diagnostic timings, not an agreed performance acceptance threshold. The UI yields before whole-network actions and shows progress. Evidence/path groups are collapsed so the inspector is usable; the view list scrolls separately. The unused graph-walk wrapper noted by Standards was removed in `c2f1c5d` and checked by that reviewer.
+
+The 13 targeted whole-network session checks pass, including owner decisions, removed former-line connections, package round trips, region navigation data and explicitly fictional cross-area switching contracts. `pnpm build` passes (689.69 kB minified application chunk / 204.34 kB gzip, Vite size advisory). Chrome at 1704 × 1214 opens `.4`, follows the Hopper10 overview card, filters views and displays the confirmed TF04 route with switching still blocked. A saved `.4` scenario was downloaded and reopened with a matching-version restoration message. The browser automation's large accessibility-tree capture timed out during that check; subsequent focused DOM reads confirmed the result. The full suite remains reserved for final whole-goal delivery.
+
+### Standards
+
+No hard documented-standard violations in `d753765...848bdfd`. One optional P3 heuristic remains: intermediate review-question/evidence-summary assignments in `whole-network.ts` are overwritten by later owner-decision processing. Consolidating those final assignments would make construction easier to audit; no incorrect final package content was reported. Shared performance/UI review through `400a7b3` otherwise had no remaining hard findings.
+
+### Spec
+
+No actionable implementation defects or scope creep in the reviewed assembly at `848bdfd`. The explicit owner-acceptance and agreed starting-configuration requirement remains open. Software review and test results do not establish installed-network correctness.
+
+Review summary: Standards 0 hard violations and 1 optional heuristic; Spec 0 actionable findings. #25 and #26 remain open.
 
 An additional Farwest revision-9 drawing was retrieved from PIMS and visually inspected as a supplemental source lead. It is outside the original 141-file count and has not been incorporated into the runtime model. Its interfaces, V1 extent and final LV coverage require reconciliation. The station manual download was blocked by the browser; the missing DB01 drawing revision/topology remains unconfirmed. See `drawing-review/supplemental/farwest-review.md`.
+
+## Supplemental LV endpoints and sixth owner decision
+
+Commit `3e44704` records current `site-whole-network` / `construction-2026-10-22.8`. The immutable `.4` assembly remains unchanged. Current construction adds four first LV bars and four null/blocked incomers from three visually reviewed supplemental source pages: SW455 D/Y, Hopper3 SS416-MC416A and MC454. Three detail views and reverse navigation bring the package to 969 assets, 562 controls, 28 sources, 361 boundaries and 126 views. Outgoing LV circuits are excluded; existing transformer channels and independent earth coverage are preserved. The original source inventory remains 141 files, with these additional sources recorded separately.
+
+The sixth exact owner response, “your assumption is correct tht it is RM721-P-01”, is recorded as `WN-SW411-TIER16-CABLE`, dated 22 October 2026 by Project owner (conversation). It confirms the cable tag; original SW454-P-01 drawing text remains traceable. Physical nameplate inspection, whole-route acceptance, actual states and complete interlocks are not inferred. The partial R002/SV-Q01/WN-JOIN-rm721 questions no longer ask for the cable tag.
+
+Supplemental installed precedence remains unconfirmed. MC454's printed 3000 A incomer and 500 A phase-bar ratings remain an explicit discrepancy, without correcting either value. The [source review](../drawing-review/supplemental/endpoint-sources-review.md) records exact document/revision/page/region references, capture fingerprints and the local original MC454 PDF hash. Original source captures/PDF are retained under ignored `drawings/supplemental/`; runtime exploration does not read them.
+
+### Checks and browser evidence
+
+- Five targeted supplemental session checks and two current-package checks pass. The combined run initially exceeded the default five-second timeout in the whole-model historical round-trip test; its explicit allowance is now 20 seconds, and the combined endpoint/current checks passed. The two current-package checks passed again after the sixth owner decision.
+- Production build/typecheck pass at `.8`: 706.16 kB minified application chunk, 208.56 kB gzip, with Vite's size advisory. The built directory contains only HTML, JavaScript and CSS.
+- Chrome production preview at `http://127.0.0.1:4173/`, 1704 × 1214, opens `.8` and the new endpoint views. Caption overlaps found in intermediate `.5`/`.6` were corrected under new versions; `.7` introduced the final spacing and `.8` retains it. Endpoint controls remain disabled with explicit unresolved-interlock reasons.
+- Saving `.8` produced a 9,032,487-byte self-contained scenario. Reopening it against current `.8` reports restoration, with reset enabled and no historical notice. Opening the original saved `.4` against current `.8` displays both versions and view-only mode; device controls, source Enable/Disable, undo and reset are disabled. **Start current model** returns to `.8`.
+- These checks used the production server serving only `dist`; it has no source PDFs or separate historical model file. No warning/error console entries were returned from the production tab.
+- The full suite remains reserved for final whole-goal delivery. Narrow whole-network layouts and overall owner acceptance remain pending.
+
+### Standards
+
+No new hard documented-standard violations or actionable Fowler heuristics in `848bdfd..3e44704`, reviewed within `d753765...3e44704`. Clone/version contracts, source references, null/blocked controls, separate D/Y conductors, scoped cable confirmation and the public session test seam are preserved. The existing optional P3 repeated-assignment cleanup in `.4` remains unchanged.
+
+### Spec
+
+No actionable missing behavior, incorrect implementation or scope creep in the supplemental/current-package increment. Endpoint scope, separate Hopper3/Hopper8 identity, historical presentation/evidence and unresolved physical information are preserved. Explicit owner model acceptance and an agreed starting configuration remain open under #25.
+
+Review summary: Standards 0 new hard/heuristic findings, 1 existing optional P3; Spec 0 actionable findings. GitHub #25 has four checked and four unchecked criteria and remains open. #26 remains open. No model acceptance, final delivery completion, remote push or production GPT Site deployment is claimed.
 
