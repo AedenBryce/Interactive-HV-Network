@@ -86,7 +86,7 @@ describe('Stockpile / wet plant drawing construction through the session', () =>
   it('reopens all model-owned views, source provenance and ten open reviews without source PDFs', () => {
     const session = new SimulationSession(stockpileWetPlantModel);
     const result = session.snapshot();
-    expect(result.model.presentation?.views.map(view => view.id)).toEqual(['overview', 'stockpile-hv', 'wet-hv', 'final-lv', 'mv-drives']);
+    expect(result.model.presentation?.views.map(view => view.id)).toEqual(['overview', 'stockpile-hv', 'wet-hv', 'final-lv', 'mv-drives', 'lv-dual-windings', 'lv-mccs']);
     expect(result.model.presentation?.views.find(view => view.id === 'stockpile-hv')?.boundaries).toContainEqual(expect.objectContaining({ connectionId: 'sw454:sw505:cable-SW505-P-01', remoteAssetId: 'sw505:in:cb', targetViewId: 'wet-hv' }));
     expect(result.model.presentation?.views.find(view => view.id === 'wet-hv')?.boundaries).toContainEqual(expect.objectContaining({ remoteAssetId: 'sw505:vs50501:converter', targetViewId: 'mv-drives' }));
     expect(result.model.reviews?.map(review => review.id)).toEqual(['SW-R01', 'SW-R02', 'SW-R03', 'SW-R04', 'SW-R05', 'SW-R06', 'SW-R07', 'SW-R08', 'SW-R09', 'SW-R10']);

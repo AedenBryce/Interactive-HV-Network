@@ -179,12 +179,15 @@ for (const [letter, driveNumber, x, motorTag, columns] of [
   const converter = fact(`SW-${drive}-CONVERTER`, `${drive} ACS1013-A3-R / ERS505${driveNumber} has two AC rectifier inputs, DC section and inverter output. No metallic AC/DC/output shortcut or reverse/earth relationship is established. Vendor reference 3BHS355813E01 is absent. Endpoint scope, stored-energy and converter policy remain unconfirmed.`, [['drives', `C-F / ${columns}, ${drive} rectifier/DC/inverter enclosure and vendor reference`]], ['SW-R06', 'SW-R08'], 'unresolved');
   const ports = [`${prefix}:ac-d`, `${prefix}:ac-y`, `${prefix}:dc`, `${prefix}:output`];
   add({ id: `${prefix}:converter`, label: `${drive}\nAC / DC / output\nRelationships unconfirmed`, aliases: [drive, `ERS505${driveNumber}`, 'ACS1013-A3-R', 'ABB 3BHS355813E01 missing'], kind: 'interface', terminals: ports, conductivePairs: [], sourcePairs: [], earthPairs: [], positions: [], ...converter }, [x, 1060], [[x - 50, 1015], [x + 50, 1015], [x + 75, 1060], [x, 1110]], ['mv-drives']);
+  layout.labelOffsets![`${prefix}:converter`] = [-150, 0];
   const ac = fact(`SW-${drive}-AC-CABLES`, `The two distinct ${tf} 1.9kV winding outputs feed ${drive}'s separate AC rectifier inputs via ${drive}-P-01 and ${drive}-P-02. Auxiliary 400VAC/230VAC, control and PROFIBUS lines are not main-power edges.`, [['drives', `C-E / ${columns}, ${drive}-P-01/-02 and rectifier inputs`]], ['SW-R06']);
   link(`${prefix}:ac-d-cable`, winding[1], ports[0], ac); link(`${prefix}:ac-y-cable`, winding[2], ports[1], ac);
   for (const port of ports) unknown(`${port}:coverage`, port, `${drive} converter source/earth relationship and boundary unconfirmed`, converter);
   const contacts = fact(`SW-${drive}-CONTACTS`, `${drive} shows a labelled DC BUS EARTHING SWITCH and an untagged series output-switch symbol before ${motorTag}. IDs are construction identifiers; exact tags, full position sets, converter/DC earthing conditions and physical interlocks are unconfirmed.`, [['drives', `E-F / ${columns}, DC BUS EARTHING SWITCH and output switch below inverter`]], ['SW-R06', 'SW-R07', 'SW-R09']);
-  earthBranch(`${prefix}:dc-earth`, `${drive}\nDC bus earth · tag unconfirmed`, ports[2], [x + 100, 1170], contacts, ['mv-drives'], ['DC BUS EARTHING SWITCH', `${drive} internal DC earth; no printed unique tag`]);
-  const output = control(`${prefix}:output-switch`, `${drive}\nOutput contact · tag unconfirmed`, 'disconnector', [x, 1300], contacts, ['mv-drives'], ['Untagged output switch below inverter', `Before ${motorTag}`]);
+  earthBranch(`${prefix}:dc-earth`, `${drive}\nDC earth`, ports[2], [x + 100, 1170], contacts, ['mv-drives'], ['DC BUS EARTHING SWITCH', `${drive} internal DC earth; no printed unique tag`]);
+  layout.labelOffsets![`${prefix}:dc-earth`] = [100, 0];
+  const output = control(`${prefix}:output-switch`, `${drive}\nOutput contact`, 'disconnector', [x, 1300], contacts, ['mv-drives'], ['Untagged output switch below inverter', `Before ${motorTag}`]);
+  layout.labelOffsets![`${prefix}:output-switch`] = [0, 65];
   link(`${prefix}:inverter-output-contact`, ports[3], output[0], contacts);
   const motor = fact(`SW-${drive}-MOTOR`, `${motorTag} Scrubber No.${Number(driveNumber)} motor is labelled 1600kW below the drive output switch. Motor voltage and final scope boundary are unconfirmed; this is an explicit MV-drive interface, not an LV bus endpoint.`, [['drives', `F-G / ${columns}, ${motorTag} motor and 1600kW label`]], ['SW-R06']);
   const motorId = `sw505:${motorTag.toLowerCase()}`; const port = `${motorId}:port`;
@@ -226,6 +229,7 @@ for (const [index, transformerId] of lvTransformerIds.entries()) {
     if (endpoint.fuseId) {
       const fuse = assets.find(asset => asset.id === endpoint.fuseId)!;
       lvLayout.assets[fuse.id] = [ex, 305]; lvLayout.terminals[fuse.terminals[0]] = [ex, 285]; lvLayout.terminals[fuse.terminals[1]] = [ex, 325];
+      lvLayout.labelOffsets![fuse.id] = [150, 0];
       lvLayout.bends![endpoint.cableId] = [];
     }
   }
@@ -252,8 +256,21 @@ const detailViews: DiagramView[] = viewDefinitions.map(definition => {
   }
   return view;
 });
+const allLvView = detailViews.find(view => view.id === 'final-lv')!;
+for (const [id, label, first, bounds] of [
+  ['lv-dual-windings', 'LV detail · SW456 / SW506', 0, [50, -40, 1250, 850]],
+  ['lv-mccs', 'LV detail · MC507 / MC508', 2, [1250, -40, 1250, 850]],
+] as const) {
+  const transformerIds = lvTransformerIds.slice(first, first + 2);
+  const ids = [...transformerIds, ...lvEndpoints.filter(endpoint => transformerIds.includes(endpoint.transformerId)).flatMap(endpoint => [endpoint.cbId, endpoint.busId, ...(endpoint.fuseId ? [endpoint.fuseId] : [])])];
+  const visible = new Set(ids);
+  detailViews.push({ id, label, assetIds: ids, bounds: [...bounds], layout: lvLayout, boundaries: allLvView.boundaries!.filter(boundary => {
+    const connection = connections.find(item => item.id === boundary.connectionId)!;
+    return visible.has(owners.get(connection.from)!) || visible.has(owners.get(connection.to)!);
+  }) });
+}
 export const stockpileWetPlantModel: NetworkModel = {
-  id: 'site-stockpile-wet-plant', version: 'construction-2026-10-22.1', name: 'Stockpile / wet plant · unconfirmed construction', synthetic: false,
+  id: 'site-stockpile-wet-plant', version: 'construction-2026-10-22.3', name: 'Stockpile / wet plant · unconfirmed construction', synthetic: false,
   assets, connections, evidence, reviews, earths, boundaries, sources: [], starting: { devices, sources: {} },
   interlocks: { reviews: assets.filter(asset => asset.positions.length > 0).map(asset => {
     const lv = branchDefinitions.find(branch => asset.id.startsWith(`${branch.board}:${branch.endpoint.toLowerCase()}:`));
