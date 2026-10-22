@@ -1,4 +1,4 @@
-import { walkGraph } from './connectivity';
+import { walkGraph, pathFromWalk } from './connectivity';
 import type { ActiveGraph, WalkStep } from './connectivity';
 import type { NetworkModel } from './model';
 
@@ -32,15 +32,8 @@ export function evaluateEarths(model: NetworkModel, graph: ActiveGraph, enabledS
     sourceReach.set(source.id, reachable);
     for (const earth of earths) {
       if (!reachable.has(earth.terminal)) continue;
-      const terminalPath = [earth.terminal];
-      const connectionIds: string[] = [];
-      let step: WalkStep | undefined = reachable.get(earth.terminal);
-      while (step?.previous !== null && step?.previous !== undefined) {
-        if (step.edge?.connectionId) connectionIds.unshift(step.edge.connectionId);
-        terminalPath.unshift(step.previous);
-        step = reachable.get(step.previous);
-      }
-      conflicts.push({ sourceId: source.id, earthId: earth.id, terminalPath, connectionIds });
+      const path = pathFromWalk(reachable, earth.terminal);
+      conflicts.push({ sourceId: source.id, earthId: earth.id, terminalPath: path.terminals, connectionIds: path.connectionIds });
     }
   }
   const connectivity: Record<string, EarthConnectivity> = Object.fromEntries(model.assets.map(asset => {

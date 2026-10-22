@@ -8,6 +8,7 @@ describe('exploring alternate supplies and loops', () => {
     expect(session.snapshot().connectivity['lv-bus'].sourceIds).toEqual(['source-a', 'source-b']);
     session.changeDevice('cb-01', 'open');
     expect(session.snapshot().connectivity['lv-bus'].sourceIds).toEqual(['source-b']);
+    expect(session.snapshot().impact.find(item => item.assetId === 'lv-bus')).toMatchObject({ connectivityChanged: false, routesChanged: true });
     const devices = session.snapshot().devices;
     expect(session.changeSource('source-b', false).ok).toBe(true);
     expect(session.snapshot().connectivity['lv-bus'].sourceIds).toEqual([]);
@@ -40,6 +41,8 @@ describe('exploring alternate supplies and loops', () => {
     expect(snapshot.connectivity['lv-bus'].routeEdgeIds).not.toContain('connection:loop-bus-a');
     expect(snapshot.connectivity['lv-bus'].routeEdgeIds).toContain('connection:bus-a-tie');
     session.changeSource('source-b', false);
+    expect(session.snapshot().impact.find(item => item.assetId === 'lv-bus')).toMatchObject({ connectivityChanged: false, routesChanged: true });
+    session.changeSource('source-a', false);
     expect(session.snapshot().impact.find(item => item.assetId === 'lv-bus')).toMatchObject({ connectivityChanged: true });
   });
 

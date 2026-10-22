@@ -57,7 +57,7 @@ export function App() {
       <aside className="network-rail" aria-label="Network model">
         <h2>Network model</h2>
         <p className="model-name">{snapshot.model.name}<br /><span className="version">{snapshot.model.version}</span></p>
-        <p className="model-note">Demonstration model.<br />Not the site network.</p>
+        <p className="model-note">Demonstration model.<br /> Not the site network.</p>
         <label className="model-picker">Demonstration model<select value={snapshot.model.id} onChange={event => selectModel(event.target.value)}>{demonstrations.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label>
         <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={() => selectAsset(item.id)}>
           <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={snapshot.devices[item.id] === 'open'} /></svg><span>{item.label}</span>
@@ -65,9 +65,9 @@ export function App() {
       </aside>
 
       <main className="diagram-panel">
-        <div className="panel-heading"><h2>Single-line diagram</h2><p>{snapshot.model.name}</p></div>
+        <div className="panel-heading"><h2>Single-line diagram</h2><p>{snapshot.model.name}</p><p className="diagram-hint">Scroll the diagram to explore.</p></div>
         <div className="diagram-surface">
-          <svg className="network-diagram" viewBox="0 0 830 600" aria-label={`${snapshot.model.name} single-line diagram`}>
+          <svg className="network-diagram" data-layout={snapshot.model.id} viewBox={snapshot.model.id === 'single-supply' ? '0 150 830 300' : '0 40 830 520'} aria-label={`${snapshot.model.name} single-line diagram`}>
             <title>{snapshot.model.name} single-line diagram</title>
             {snapshot.model.connections.map(connection => {
               const [x1, y1] = layout.terminals[connection.from];
@@ -99,7 +99,7 @@ export function App() {
         {snapshot.model.sources.filter(source => source.assetId === asset.id).map(source => <section className="switch-controls" key={source.id} aria-label={`${source.label} availability`}><h3>Source availability</h3><p>{snapshot.sources[source.id] ? 'Enabled' : 'Disabled'}</p><div className="state-buttons"><button aria-label={`Enable ${source.label}`} disabled={snapshot.sources[source.id]} onClick={() => changeSource(source.id, true)}>Enable</button><button aria-label={`Disable ${source.label}`} disabled={!snapshot.sources[source.id]} onClick={() => changeSource(source.id, false)}>Disable</button></div></section>)}
         {snapshot.model.earths?.length ? <EarthDetails model={snapshot.model} connectivity={snapshot.connectivity[asset.id]} /> : null}
         <section className="source-paths" aria-label="Source paths"><h3>Source paths</h3>{paths.length ? <><p>One example per source and terminal. Highlight a path to follow its equipment.</p>{paths.map(path => <button key={`${path.sourceId}:${path.terminalId}`} aria-pressed={tracedPath === path} onClick={() => setTraceKey(`${path.sourceId}:${path.terminalId}`)}><strong>{snapshot.model.sources.find(source => source.id === path.sourceId)?.label} → {path.terminalId}</strong><span>{path.assetIds.map(id => labels.get(id)).join(' → ')}</span></button>)}</> : <p>No path to an enabled modelled source.</p>}</section>
-        {snapshot.impact.length > 0 && <section className="impact-list" aria-label="Last action impacts"><h3>Last action impacts</h3><ul>{snapshot.impact.map(item => <li key={item.assetId}><button onClick={() => selectAsset(item.assetId)}>{labels.get(item.assetId)}</button><span>{item.connectivityChanged ? 'Connectivity changed' : 'Route changed; source connection retained'}</span></li>)}</ul></section>}
+        {snapshot.impact.length > 0 && <section className="impact-list" aria-label="Last action impacts"><h3>Last action impacts</h3><ul>{snapshot.impact.map(item => <li key={item.assetId}><button onClick={() => selectAsset(item.assetId)}>{labels.get(item.assetId)}</button><span>{item.connectivityChanged ? 'Connectivity classification changed' : item.after.sourceIds.length ? 'Supply route changed; source connection retained' : 'Connection explanation changed'}</span></li>)}</ul></section>}
         <p className="action-message" role="status" aria-live="polite">{message}</p>
       </aside>
     </div>

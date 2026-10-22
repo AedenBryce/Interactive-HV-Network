@@ -67,8 +67,10 @@ export class SimulationSession {
   #recordImpact(before: Record<string, AssetConnectivity>) {
     const after = this.snapshot().connectivity;
     this.#impact = this.#model.assets.flatMap(asset => {
-      const connectivityChanged = JSON.stringify([before[asset.id].terminalSources, before[asset.id].terminalEarths, before[asset.id].conflictSourceIds]) !== JSON.stringify([after[asset.id].terminalSources, after[asset.id].terminalEarths, after[asset.id].conflictSourceIds]);
-      const routesChanged = JSON.stringify(before[asset.id].routeEdgeIds) !== JSON.stringify(after[asset.id].routeEdgeIds);
+      const classification = (result: AssetConnectivity) => [result.sourceIds.length > 0, result.earthIds.length > 0, result.conflictSourceIds.length > 0];
+      const explanation = (result: AssetConnectivity) => [result.terminalSources, result.terminalEarths, result.conflictSourceIds, result.routeEdgeIds];
+      const connectivityChanged = JSON.stringify(classification(before[asset.id])) !== JSON.stringify(classification(after[asset.id]));
+      const routesChanged = JSON.stringify(explanation(before[asset.id])) !== JSON.stringify(explanation(after[asset.id]));
       return connectivityChanged || routesChanged ? [{ assetId: asset.id, connectivityChanged, routesChanged, before: before[asset.id], after: after[asset.id] }] : [];
     });
   }

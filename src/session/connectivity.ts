@@ -36,6 +36,19 @@ export function walkGraph(graph: ActiveGraph, start: string, options: { stopAt?:
   return reached;
 }
 
+export function pathFromWalk(reached: Map<string, WalkStep>, terminal: string) {
+  const terminals: string[] = [];
+  const connectionIds: string[] = [];
+  let step: string | null = terminal;
+  while (step !== null) {
+    terminals.push(step);
+    const entry: WalkStep = reached.get(step)!;
+    if (entry.edge?.connectionId) connectionIds.push(entry.edge.connectionId);
+    step = entry.previous;
+  }
+  return { terminals: terminals.reverse(), connectionIds: connectionIds.reverse() };
+}
+
 export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources: Record<string, boolean>): Record<string, Connectivity> {
   const stops = new Set((model.earths ?? []).map(earth => earth.terminal));
   const routes = indexRoutes(graph, stops);
@@ -49,16 +62,7 @@ export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources
     for (const terminal of reached.keys()) {
       terminalSources.get(terminal)!.push(source.id);
       for (const edgeId of routes.edgeIds(source.terminal, terminal)) routeEdges.get(terminal)!.add(edgeId);
-      const terminals: string[] = [];
-      const connectionIds: string[] = [];
-      let step: string | null = terminal;
-      while (step !== null) {
-        terminals.push(step);
-        const entry: WalkStep = reached.get(step)!;
-        if (entry.edge?.connectionId) connectionIds.push(entry.edge.connectionId);
-        step = entry.previous;
-      }
-      terminals.reverse(); connectionIds.reverse();
+      const { terminals, connectionIds } = pathFromWalk(reached, terminal);
       const assetIds = terminals.map(t => owners.get(t)!).filter((id, index, all) => id !== all[index - 1]);
       paths.get(terminal)!.push({ sourceId: source.id, terminalId: terminal, terminals, connectionIds, assetIds });
     }
