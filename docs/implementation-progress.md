@@ -86,11 +86,38 @@ No material findings for #12–#15 in `d753765...58df8a7`. Documented topology, 
 
 Review summary: Standards 0 material findings; Spec 0 material findings. Neither review establishes installed-network acceptance.
 
+## GitHub #16–#19: screening, Desands, stockpile/wet plant and train loading
+
+Four more provisional area slices are implemented locally and closed in GitHub after targeted checks, rendered inspection and parallel review. Commits: `ccacd3a` (#16/#17/#19), `dc5b557` (#18), and `e84a55b` (stockpile diagram refinements). The closure/checklist states were verified through the GitHub API.
+
+| Ticket | Runtime boundary | Targeted session checks |
+| --- | --- | --- |
+| #16 | SW421, three transformers, four final LV buses and spare interfaces | 6 passed |
+| #17 | SW426, laboratory RM714/SW714, nine transformers and 14 final LV buses; services references remain separate interfaces | 6 passed |
+| #18 | SW454/SW505, six evidenced LV buses, missing-endpoint interfaces and three unresolved MV converter branches | 6 passed |
+| #19 | SW451, TF451/TF452, three final LV buses and the drawn MC451B section bridge | 6 passed |
+
+All actual area positions remain null and affected unresolved interlocks block controls. Fictional operability examples have distinct identities/versions and explicitly defined software constraints; their results do not establish installed behavior. Model-owned views, exact source references, open questions and scenario round trips are included.
+
+Chrome checks at 1704 × 1214 covered model selection, detailed LV bus navigation and inspection, laboratory navigation, disabled controls, converter/DC-earth inspection and zoom. Screening newline labels now render on separate lines. Desands has readable two-transformer details (`construction-2026-10-22.2`). Stockpile has two closer LV views, separated fuse/converter/DC-earth/output labels and version `construction-2026-10-22.3`; its six checks passed again after refinement. No warning/error console messages were returned in the fresh browser check. Individual narrow area layouts remain unchecked.
+
+Production build passed at `dc5b557`, with Vite's advisory for a 520.43 kB minified application chunk (153.05 kB gzip). A later typecheck reported only unfinished, untracked CV006/western-hopper worker declarations; it is not recorded as a passing whole-workspace check. No final whole-suite run has been performed yet.
+
+### Standards
+
+No material documented-standard breaches or actionable Fowler findings in `d753765...ccacd3a` for #16/#17/#19, or in the stockpile increment through `dc5b557`. Unknown baselines, blocked unresolved controls, separate channels and provisional evidence are preserved. The subsequent stockpile label/detail refinements were checked through session tests and browser inspection; final whole-goal review remains pending.
+
+### Spec
+
+No material missing/wrong behavior or scope creep found for these four area slices at the pinned commits. Laboratory/services references remain distinct; MC451B continuity does not create another source; incomplete LV endpoints and MV converter groups remain explicit questions. Whole-network integration and owner acceptance remain pending.
+
+Review summary: Standards 0 material findings; Spec 0 material findings. Neither axis constitutes installed-network acceptance.
+
 ## Current area-model work
 
-Fourteen of 25 implementation tickets are closed (#2–#15). Nine real-area slices, whole-network reconciliation/owner acceptance and final delivery remain required.
+Eighteen of 25 implementation tickets are closed (#2–#19). Five real-area slices, whole-network reconciliation/owner acceptance and final delivery remain required.
 
-Source reviews are prepared for Screening, Desands/laboratory, stockpile/wet plant, train loading and CV006. Screening and Desands/laboratory runtime models and the western-hopper source review are being built in parallel in separately owned files. The coverage register names all 141 original PDFs and their dispositions; 94 files have explicit completed area-review source rows. That count describes recorded inspection scope, not blanket topology approval or model acceptance.
+CV006 and western-hopper runtime models are being built in parallel in separately owned files. Services and Hopper10 source reviews are prepared; mine/camp and remaining source dispositions are being reviewed. The coverage register names all 141 original PDFs and their dispositions; its current committed table names 115 files in explicit area-review source rows, before reconciliation of the latest Hopper10/mine work. That count describes recorded inspection scope, not blanket topology approval or model acceptance.
 
 An additional Farwest revision-9 drawing was retrieved from PIMS and visually inspected as a supplemental source lead. It is outside the original 141-file count and has not been incorporated into the runtime model. Its interfaces, V1 extent and final LV coverage require reconciliation. The station manual download was blocked by the browser; the missing DB01 drawing revision/topology remains unconfirmed. See `drawing-review/supplemental/farwest-review.md`.
 
