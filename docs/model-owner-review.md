@@ -211,7 +211,7 @@ For each original and additional source, retain reviewed in-scope content, an ex
 
 | Required record | Status |
 | --- | --- |
-| Final whole model ID/version, commit/package identity and included `WN-AREA-<area>` versions | Current inspection snapshot is `site-whole-network` / `construction-2026-10-22.14`, extending immutable `.4`, with the station cut implemented. Code commit identity is pending the maintainer's commit. Included area versions remain in `WN-AREA-*`; downstream mine/camp disposition and explicit acceptance remain **pending**. |
+| Final whole model ID/version, commit/package identity and included `WN-AREA-<area>` versions | Current inspection snapshot is `site-whole-network` / `construction-2026-10-22.14`, extending immutable `.4`, with the station cut implemented. Code commit: `db7a756`. Included area versions remain in `WN-AREA-*`; downstream mine/camp disposition and explicit acceptance remain **pending**. |
 | Resolutions or explicit owner boundary/treatment decisions for material review questions, including all `WN-JOIN-*` and WN-OWNER-ACCEPTANCE | **Pending overall.** WN-H10-TF04-SOURCE, WN-H10-PRIMARY33-CONFIGURATION, WN-CV006-FEED-AND-REMOVED-H10, WN-SW411-INCOMING-ASSIGNMENT, WN-SW411-TIER16-TAGS, WN-SW411-TIER16-CABLE, WN-CRUSHING-TIE and WN-MINE-TF03-FEED record the eight scoped owner decisions above; remaining questions stay open. |
 | Coverage through final LV buses; additional-source and excluded-source dispositions | **Pending owner review.** |
 | Reviewed whole diagram, asset identities/connections, winding channels, device positions and physical interlocks | **Pending owner review.** |
