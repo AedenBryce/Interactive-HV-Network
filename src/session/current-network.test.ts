@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel } from '../models/site/current-network';
+import { preConfigurationNetworkModel } from '../models/site/current-network';
 import { wholeNetworkModel } from '../models/site/whole-network';
 
-describe('current whole-network review package', () => {
+describe('immutable whole-network package before owner configuration', () => {
   it('versions supplemental endpoints and current owner-confirmed view titles without changing the original assembly', () => {
     const original = JSON.stringify(wholeNetworkModel);
-    const session = new SimulationSession(currentNetworkModel);
+    const session = new SimulationSession(preConfigurationNetworkModel);
     const snapshot = session.snapshot();
     expect(session.saveScenario()).toEqual({ formatVersion: 1, modelVersion: snapshot.model.version, model: snapshot.model, devices: snapshot.devices, sources: snapshot.sources });
     expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-23.1', synthetic: false });
@@ -32,7 +32,7 @@ describe('current whole-network review package', () => {
     expect(wholeNetworkModel.version).toBe('construction-2026-10-22.4');
   }, 20_000);
   it('composes the remaining referenced hopper and CV006 details without losing owner decisions or retaining an outgoing LV bypass', () => {
-    const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
+    const { model, devices, sources } = new SimulationSession(preConfigurationNetworkModel).saveScenario();
     for (const id of ['wh:h3:mc416:bus', 'wh:h8:mc416:bus', 'wh:h8:mc416a:bus', 'rm420:mc420a:bus', 'rm410:mc410a:bus']) expect(model.assets.some(asset => asset.id === id)).toBe(true);
     for (const id of ['rm410:mc410b:cb', 'rm410:mc410b:bus']) expect(model.assets.some(asset => asset.id === id)).toBe(false);
     expect(model.assets.find(asset => asset.id === 'rm410:interface:mc410a')).toMatchObject({ sourcePairs: [], earthPairs: [] });
@@ -59,7 +59,7 @@ describe('current whole-network review package', () => {
     }
   });
   it('records the exact tier16 cable-tag confirmation without asserting broader route acceptance', () => {
-    const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
+    const { model, devices, sources } = new SimulationSession(preConfigurationNetworkModel).saveScenario();
     const id = 'WN-SW411-TIER16-CABLE';
     const decision = 'your assumption is correct tht it is RM721-P-01';
     expect(model.evidence!.find(record => record.id === id)).toMatchObject({ status: 'owner-confirmed', confirmation: { by: 'Project owner (conversation)', date: '2026-10-22', decision } });
@@ -73,7 +73,7 @@ describe('current whole-network review package', () => {
     expect(wholeNetworkModel.evidence!.some(record => record.id === id)).toBe(false);
   });
   it('saves the scoped crushing-tie confirmation while retaining document and switching questions', () => {
-    const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
+    const { model, devices, sources } = new SimulationSession(preConfigurationNetworkModel).saveScenario();
     const id = 'WN-CRUSHING-TIE';
     const question = 'Next connection to confirm: is SW431-P-02 the current tie between Crushing 1 SW431 and Crushing 2 SW435, with CB SW435 FD02 at the SW431 end and CB SW431 FD02 at the SW435 end? Sources:11098-07110-EL-DR-2353.pdf rev5 p1 C-G/2-3,2354rev9p1 B-G/2-3. Please correct any detail or say unconfirmed.';
     const confirmation = { by: 'Project owner (conversation)', date: '2026-10-22', decision: 'confirmed' };
@@ -105,7 +105,7 @@ describe('current whole-network review package', () => {
     expect(original.evidence!.some(record => record.id === id)).toBe(false);
   });
   it('retains the exact mine-services feeding fact after its station feeder is excluded by the later scope decision', () => {
-    const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
+    const { model, devices, sources } = new SimulationSession(preConfigurationNetworkModel).saveScenario();
     const id = 'WN-MINE-TF03-FEED';
     expect(model.evidence!.find(record => record.id === id)).toMatchObject({ status: 'owner-confirmed', confirmation: { by: 'Project owner (conversation)', date: '2026-10-22', decision: 'It does' }, summary: expect.stringContaining('SB01 feeder F1') });
     expect(model.connections.some(connection => connection.id === 'whole:join:mine-tf03')).toBe(false);
@@ -120,7 +120,7 @@ describe('current whole-network review package', () => {
   });
 
   it('applies station/mine/camp/railcar scope exclusions while retaining Services and the confirmed water branch', () => {
-    const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
+    const { model, devices, sources } = new SimulationSession(preConfigurationNetworkModel).saveScenario();
     expect(model.assets.some(asset => asset.id === 'station:sb01:bus')).toBe(false);
     expect(model.assets.some(asset => asset.id === 'station:sb02:bus')).toBe(false);
     expect(model.assets.some(asset => asset.id.startsWith('station:gen-'))).toBe(false);
@@ -145,7 +145,7 @@ describe('current whole-network review package', () => {
   });
 
   it('retains the MC413 supplemental source while leaving its installed upstream identity open', () => {
-    const { model, devices } = new SimulationSession(currentNetworkModel).saveScenario();
+    const { model, devices } = new SimulationSession(preConfigurationNetworkModel).saveScenario();
     expect(model.assets.find(asset => asset.id === 'rm413:mc413:cb')).toMatchObject({ knowledge: 'provisional', aliases: expect.arrayContaining(['CB MC413 IN', '3000 A']) });
     expect(model.assets.find(asset => asset.id === 'rm413:mc413:bus')?.aliases).toContain('50 kA for 1 sec');
     expect(model.reviews!.find(review => review.id === 'SV-MC413-INSTALLED')).toMatchObject({ status: 'open', question: expect.stringContaining('RC001') });

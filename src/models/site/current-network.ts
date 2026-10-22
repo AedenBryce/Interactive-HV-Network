@@ -10,10 +10,18 @@ import { withOwnerFollowups } from './owner-followups';
 import { withOwnerIdentityCorrections } from './owner-identities';
 import { withOwnerRouteConfirmations } from './owner-routes';
 import { withOwnerSw411Feeds } from './owner-sw411-feeds';
+import { withOwnerRemovableBreakers } from './owner-removable-breakers';
+import { withOwnerSw411LocalRules } from './owner-sw411-local-rules';
+import { withOwnerStartingConfiguration } from './owner-starting-configuration';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
-export const currentNetworkModel = buildCurrentNetworkModel();
+export const preConfigurationNetworkModel = buildCurrentNetworkModel();
+const configuredVersion = 'construction-2026-10-23.2';
+export const currentNetworkModel = withOwnerStartingConfiguration(
+  withOwnerSw411LocalRules(withOwnerRemovableBreakers(preConfigurationNetworkModel, configuredVersion), configuredVersion),
+  configuredVersion,
+);
 
 function buildCurrentNetworkModel() {
   const version = 'construction-2026-10-23.1';

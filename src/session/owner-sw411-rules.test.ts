@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel } from '../models/site/current-network';
+import { preConfigurationNetworkModel } from '../models/site/current-network';
 import { withOwnerRemovableBreakers } from '../models/site/owner-removable-breakers';
 import { withOwnerSw411LocalRules } from '../models/site/owner-sw411-local-rules';
 
 describe('owner-selected SW411 local rules through the session', () => {
   it('permits only the selected local line-earth sequence and preserves other interlock reviews', () => {
-    const base = withOwnerRemovableBreakers(currentNetworkModel, 'test-removable-base');
+    const base = withOwnerRemovableBreakers(preConfigurationNetworkModel, 'test-removable-base');
     const model = withOwnerSw411LocalRules(base, 'test-sw411-rules');
     model.starting.devices['sw411:in-03:cb'] = { contact: 'closed', racking: 'in' };
     model.starting.devices['sw411:in-03:es'] = 'open';
