@@ -75,4 +75,16 @@ These are explicit individual values; they do not depend on assuming whether eve
 
 No additional local condition was supplied in answer37. This is an explicit selected V1 rule set for these pairs, not a generalised rule for every switchgear family. Whole-model acceptance remains separate. The later source classification, baseline and rule selections are not yet applied to immutable `construction-2026-10-23.1`.
 
-Question38 asks separately whether the three retained station feeder breakers and two SW441 HV breakers are removable. Those five cases remain unconfirmed pending that answer.
+## Answer38: retained station and water HV breakers
+
+Question38 separately named SB01 F4/TF11, SB02 F1/TF12, SB02 F4/TF04, SW441 IN01 and the SW441 TF441 feeder. The owner answered exactly **“All five removable”** on 23 October 2026. These five are therefore selected as removable for this tool. The question cited `500CBC0002-13015-DR-EL-0001.pdf`, rev3, p1 B–C/9 and F–G/6,10, and `11098-07110-EL-DR-2355.pdf`, rev7, p1 B–E/4–8. Their own legends did not define the plug/contact marks as removable; that source limitation remains recorded alongside the explicit owner classification.
+
+The answer supplies no additional local physical-interlock rules. The three station breakers and two SW441 breakers retain their separate interlock review. It does not classify the TF04 pole1 recloser, other generic breaker symbols or fuse mechanisms. The [complete removability audit](removable-breakers-review.md) records every retained breaker-kind asset and its classification basis. These selections remain unapplied to immutable `construction-2026-10-23.1`.
+
+## Answers39–40: remaining contact baseline
+
+Question39 named `line33:tie-in-abs`, the AMR/IOP tie-in ABS at pole49-38-1 on `CB21OP055B-10016-DR-EL-0089.pdf`, rev0, p1 D–E/7, separately from the removed former22kV Hopper10 branch. The owner answered exactly **“Closed”**. This selects its teaching-scenario contact baseline.
+
+Question40 presented [proposal BASELINE-PROPOSAL-2026-10-23](baseline-proposal.md), with all199 exact asset rows available for review:184 modeled feed controls Closed,10 drawing-labelled spare candidates Open,4 special cases Unconfirmed, and the tie separately answered in39. The owner answered exactly **“Approve the listed proposal”**, without exceptions. The original proposed values and document/revision/page/region references remain in [the structured proposal](baseline-proposal.json).
+
+Together with the earlier161 direct contact selections, this supplies **356 known contact values and4 Unconfirmed values**. All119 selected removable mechanisms have racking baselines:116 Rack in and the3 individually named ties Rack out. The3 abstract supplies are available. These are chosen simulation values; they do not report actual site positions or establish current installed service/spare categories. Physical-interlock reviews and whole-model acceptance remain separate. The four contact exceptions remain `cv006:abs:49-38-1`, `cv006:fused-abs:286`, `rm712:in01` and `rm413a:es-q8:lower`.
