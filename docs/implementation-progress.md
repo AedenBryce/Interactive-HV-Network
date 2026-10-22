@@ -113,11 +113,41 @@ No material missing/wrong behavior or scope creep found for these four area slic
 
 Review summary: Standards 0 material findings; Spec 0 material findings. Neither axis constitutes installed-network acceptance.
 
-## Current area-model work
+## GitHub #20–#24: CV006, western hoppers, services, Hopper10 and mine/camp
 
-Eighteen of 25 implementation tickets are closed (#2–#19). Five real-area slices, whole-network reconciliation/owner acceptance and final delivery remain required.
+Implemented locally in `189841d`, independently reviewed against the approved baseline `d753765`, and closed in GitHub. API verification confirms six checked acceptance items and no unchecked items on each ticket. Twenty-three of 25 implementation tickets are now closed (#2–#24). Whole-network reconciliation/owner acceptance (#25) and final accepted delivery (#26) remain open.
 
-CV006 and western-hopper runtime models are being built in parallel in separately owned files. Services and Hopper10 source reviews are prepared; mine/camp and remaining source dispositions are being reviewed. The coverage register names all 141 original PDFs and their dispositions; its current committed table names 115 files in explicit area-review source rows, before reconciliation of the latest Hopper10/mine work. That count describes recorded inspection scope, not blanket topology approval or model acceptance.
+| Ticket | Construction model | Targeted session checks |
+| --- | --- | --- |
+| #20 | CV006 overhead/RM406/RM410, separate VSD AC boundaries, MC406A and the unconfirmed MC410A→MC410B chain | 6 passed |
+| #21 | Western Hopper 1/3/7/8/9, scoped SS416 identities, RM417/418/419 and three final LV buses | 12 passed |
+| #22 | RM721/services, RM712 DG1/DG7 with undefined MCS matrix and removed TF712 cable, RM412/413/413A and seven first LV buses | 8 passed |
+| #23 | Hopper10/RM420, unjoined 22/33 kV alternatives and dual-primary selection gaps, distinct MV contactor paths and missing MC420A detail | 6 passed |
+| #24 | Mine/camp ring, generation, RM700/732, supplied mine branches and water-tower endpoint; legacy/study conflicts retained | 7 passed |
+
+All 39 checks passed together after the area refinements. Fictional switching examples remain separately identified and versioned. Actual controls remain null and blocked where interlocks are unresolved; actual source availability remains unconfirmed. Missing endpoint and external-source coverage remains explicit.
+
+Chrome checks at 1704 × 1214 covered model selection and detail navigation, first-LV inspection, Hopper10 primary gaps and paired motor paths, disabled binary/three-position controls, the undefined services MCS matrix and separate RM412 LV conductors. Readability repairs widened CV006 AC input spacing, narrowed western two-asset LV views, cleared services transformer captions and repaired mine/camp text encoding. Those area packages now use `construction-2026-10-22.2`. Unknown-position question marks stay upright when symbols rotate. View navigation now scrolls within 140 px so the mine/camp's 43 views leave usable diagram space. No warning/error console entries were returned in the fresh browser check. Individual narrow area layouts remain unchecked.
+
+The integrated application build/typecheck passed before whole-network test construction began (655.04 kB application chunk; 194.55 kB gzip, with Vite's size advisory). A subsequent build encountered the assembly agent's intentionally unresolved first test import; this is not recorded as a final passing workspace build. The whole-goal full-suite run remains pending.
+
+### Standards
+
+No actionable documented-standard violations or material Fowler heuristic findings in `d753765...189841d`, including the prior stockpile presentation refinement. Evidence, unknown baselines, blocked controls, separate transformer channels, immutable versions and the approved session test seam are preserved.
+
+### Spec
+
+No material missing requirements, incorrect behavior or scope creep found for these five area slices or the stockpile refinement. Identity conflicts, unconfirmed interfaces, missing endpoints and physical-interlock gaps remain visible. Whole-network assembly and owner acceptance remain separate requirements.
+
+Review summary: Standards 0 material findings; Spec 0 material findings. Neither review establishes installed-network correctness or owner acceptance.
+
+## Current whole-network work
+
+All 13 original area packages are implemented as provisional construction models. A separate agent is composing them into one model with evidence-linked cross-area joins, scoped review identities and area navigation. The CV006 proxy through RM419 must be replaced by the western area's actual RM419/RM418 equipment, without retaining a bypass. Disputed Hopper10 and services interfaces remain unjoined pending reconciliation.
+
+The coverage register names all 141 original PDFs in explicit area-review source rows, with 140 unique hashes and no unmatched files. The byte-identical duplicate has an explicit disposition; a row is a pointer to the recorded inspection scope, not an independent topology approval or model acceptance.
+
+The assembled model's initial public session snapshot was measured at roughly seven seconds by the assembly agent. A separate agent is investigating the calculation cost while composition proceeds. No numeric performance acceptance threshold has been agreed, and no final performance result is claimed yet.
 
 An additional Farwest revision-9 drawing was retrieved from PIMS and visually inspected as a supplemental source lead. It is outside the original 141-file count and has not been incorporated into the runtime model. Its interfaces, V1 extent and final LV coverage require reconciliation. The station manual download was blocked by the browser; the missing DB01 drawing revision/topology remains unconfirmed. See `drawing-review/supplemental/farwest-review.md`.
 
