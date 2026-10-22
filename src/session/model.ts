@@ -9,7 +9,7 @@ const assetSchema = z.strictObject({
   ...claimFields,
   id, label: z.string().min(1),
   aliases: z.array(id).optional(),
-  kind: z.enum(['source', 'breaker', 'disconnector', 'transformer', 'bus', 'earth-switch', 'interface']),
+  kind: z.enum(['source', 'breaker', 'contactor', 'disconnector', 'transformer', 'bus', 'earth-switch', 'interface']),
   terminals: z.array(id).min(1),
   conductivePairs: z.array(pair),
   sourcePairs: z.array(pair).optional(),

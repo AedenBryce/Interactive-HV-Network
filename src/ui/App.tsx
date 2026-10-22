@@ -13,7 +13,7 @@ import { SessionHistory } from './SessionHistory';
 import { RelationshipDetails } from './RelationshipDetails';
 import { ScenarioControls } from './ScenarioControls';
 
-const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
+const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', contactor: 'Contactor', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 
 export function App() {
   const [session] = useState(() => new SimulationSession(models[0]));
