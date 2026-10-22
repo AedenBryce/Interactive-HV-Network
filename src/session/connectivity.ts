@@ -47,10 +47,6 @@ export function indexWalks(graph: ActiveGraph, options: { stopAt?: ReadonlySet<s
   } };
 }
 
-export function walkGraph(graph: ActiveGraph, start: string, options: { stopAt?: ReadonlySet<string> } = {}): Map<string, WalkStep> {
-  return indexWalks(graph, options).walk(start);
-}
-
 export function pathFromWalk(reached: Map<string, WalkStep>, terminal: string) {
   const terminals: string[] = [];
   const connectionIds: string[] = [];
