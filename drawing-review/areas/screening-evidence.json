@@ -1,0 +1,176 @@
+{
+  "area": "Screening / SW421",
+  "issue": 16,
+  "reviewDate": "2026-10-22",
+  "status": "source-review-only-unaccepted",
+  "narrative": "drawing-review/areas/screening-review.md",
+  "coverage": {
+    "distinctSuppliedFilesVisuallyInspectedThisReview": 10,
+    "distinctPagesVisuallyInspectedThisReview": 10,
+    "previousInitialReviewIdsRevisited": {
+      "SC-S09": "S2",
+      "SC-S10": "S3",
+      "SC-S04": "S7"
+    },
+    "globalCoverageCountUpdated": false,
+    "identicalCopyNotSeparatelyReviewed": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465 (2).pdf"
+  },
+  "sources": [
+    {
+      "id": "SC-S01",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2351.pdf",
+      "sha256": "e73a10adb477c9f9e58ab3f4432fd288e14e02578ba7273eacbab7508fcb8725",
+      "revision": "5",
+      "revisionDateAsPrinted": "28/01/25",
+      "revisionStatusAsPrinted": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "incomer",
+        "feeders"
+      ]
+    },
+    {
+      "id": "SC-S02",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465.pdf",
+      "sha256": "32250465eab4a6ec8b5ca14cfb4169911eb7a2cd6c3ce2d2649451da87fa143b",
+      "revision": "7",
+      "revisionDateAsPrinted": "28/10/25",
+      "revisionStatusAsPrinted": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "incomers"
+      ]
+    },
+    {
+      "id": "SC-S03",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2466.pdf",
+      "sha256": "07566cd60b17d4e4d1f5ffcdc7be29bdcb506cae51e53d03289bd41cc3961ba2",
+      "revision": "5",
+      "revisionDateAsPrinted": "18/11/25",
+      "revisionStatusAsPrinted": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": []
+    },
+    {
+      "id": "SC-S04",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2467.pdf",
+      "sha256": "4406b420b4b673aa3a486502cf04f4caa9a2fe1f8be705dfa171b4a1f25b08bb",
+      "revision": "10",
+      "revisionDateAsPrinted": "18/11/25",
+      "revisionStatusAsPrinted": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "reference-table"
+      ]
+    },
+    {
+      "id": "SC-S05",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2474.pdf",
+      "sha256": "d8bd570eabb1bada7b2041c7e30f06d355bb2d23ffd286571b202d45f8c76bd0",
+      "revision": "4",
+      "revisionDateAsPrinted": "20/08/09",
+      "revisionStatusAsPrinted": "ISSUED FOR AS-BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "revision"
+      ]
+    },
+    {
+      "id": "SC-S06",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2650.pdf",
+      "sha256": "6205ad6998829b722ac9ba75e521d6d0a0aa567f559737f0d3187d2b179e16da",
+      "revision": "10",
+      "revisionDateAsPrinted": "23/01/26",
+      "revisionStatusAsPrinted": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "transformer-MEN"
+      ]
+    },
+    {
+      "id": "SC-S07",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2652.pdf",
+      "sha256": "b4abbe0d3a19ba863809c2e49f378f83fe74448fd8ae2e538a77aab1218c3fb8",
+      "revision": "10",
+      "revisionDateAsPrinted": "23/01/26",
+      "revisionStatusAsPrinted": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "transformer-MEN",
+        "revision"
+      ]
+    },
+    {
+      "id": "SC-S08",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2671.pdf",
+      "sha256": "0cbe8fb08ae9f52c286ffe3d28ec97bb34fc4d54ad2e4ce9cd2ee940ecadd2f8",
+      "revision": "5B",
+      "revisionDateAsPrinted": "10/02/26",
+      "revisionStatusAsPrinted": "RE-ISSUED FOR REVIEW - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": [
+        "revision"
+      ]
+    },
+    {
+      "id": "SC-S09",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "revision": "0",
+      "revisionDateAsPrinted": "27/10/25",
+      "revisionStatusAsPrinted": "ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": []
+    },
+    {
+      "id": "SC-S10",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "revision": "7",
+      "revisionDateAsPrinted": "28/01/25",
+      "revisionStatusAsPrinted": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "enlargedCropRegions": []
+    }
+  ],
+  "openReviewIds": [
+    "SC-R01",
+    "SC-R02",
+    "SC-R03",
+    "SC-R04",
+    "SC-R05",
+    "SC-R06"
+  ],
+  "runtimeModelCreated": false,
+  "ownerAcceptance": false
+}
