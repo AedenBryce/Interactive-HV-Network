@@ -2,7 +2,7 @@
   "method": "Explicit first source tables from area reviews; no inferred area allocation or topology acceptance",
   "source_count": 141,
   "unique_sha256_count": 140,
-  "files_with_explicit_review_source_row": 115,
+  "files_with_explicit_review_source_row": 141,
   "unmatched_source_rows": [],
   "drawings": [
     {
@@ -244,9 +244,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2355.pdf",
       "sha256": "b2213432220a34a34f6d6d834cee1421328f833616d4f7120995f6196f726d21",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S10",
+          "source_table_row": "| MC-S10 | `11098-07110-EL-DR-2355.pdf` | 7 / 28.01.25 / AS FOUND23.10.23; printed drawing07110-EL-DR-2355 | 1; incoming A-C / 4; SW441 main phase bar C / 2-9; bus earth D-E / 5; transformer feeder D-G / 7-8; title/history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -428,9 +434,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465 (2).pdf",
       "sha256": "32250465eab4a6ec8b5ca14cfb4169911eb7a2cd6c3ce2d2649451da87fa143b",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-D01",
+          "source_table_row": "| SUP-D01 | `11098-07110-EL-DR-2465 (2).pdf` | Byte-identical to2465.pdf; inherits its recorded rev7 source content, not a separate revision | 1; verified SHA-256 relationship only. **No new visual-review claim.** Identical content was visually reviewed as screening SC-S02. Not another unique topology source. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -537,9 +549,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2471.pdf",
       "sha256": "c079fe729ba65ceaef7716004a75c5e84b6ea0691ff6cc9f401ebad0a5a1d414",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S01",
+          "source_table_row": "| SUP-S01 | `11098-07110-EL-DR-2471.pdf` | 6 / 04.03.16 / ISSUED FOR CONSTRUCTION - STACKER UPGRADE | 1; full SW442 sheet3; 690V D/Y bar continuations B-C / 2-9, outgoing drives D-G; SH102 key note A / 11-12; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -666,9 +684,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2657.pdf",
       "sha256": "d047fbfa28bf5ecd0166edf7a85ef4dc149c6792f5d2bb0bf1feb9a7b7347d4d",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S11",
+          "source_table_row": "| MC-S11 | `11098-07110-EL-DR-2657.pdf` | 13 / 09.01.26 / ISSUED FOR CONSTRUCTION - CB25OP003A; older rev12 issuedAS BUILT07/09/12; printed drawing07110-EL-DR-2657 | 1; TF441 A-B / 5; MC441 incomer/bar C / 2-12; neutral/MEN C / 9-11; title/history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -735,54 +759,90 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2664.pdf",
       "sha256": "6b1bfb79206a424cfe7cee7d6132f48b2f9fa301401f6f8114cb640162f0c6b4",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S02",
+          "source_table_row": "| SUP-S02 | `11098-07110-EL-DR-2664.pdf` | 3 / 11.09.09 / ISSUED FOR AS BUILT | 1; full MC434A sheet1; 400V bar C / 1-10, outgoing lube/hydraulic/heater circuits D-G; continuation right to2665; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2665.pdf",
       "sha256": "bb70adf1632d32299ca0ac344d023339a209bcf5089a0805ae32c51d0d84d116",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S03",
+          "source_table_row": "| SUP-S03 | `11098-07110-EL-DR-2665.pdf` | 4 / 11.09.09 / ISSUED FOR AS BUILT | 1; full MC434A sheet2; MC431 source A-B / 5, main isolator/bar C / 5, DC control supplies A-C / 4 and9, outgoing circuits D-G; title H. Subordinate LV board after MC431 first bus. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2666.pdf",
       "sha256": "c929714968f73c8bd2725850cbbaaa2fe01c0d97c9dbbf6a4a056195cf749990",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S04",
+          "source_table_row": "| SUP-S04 | `11098-07110-EL-DR-2666.pdf` | 3 / 11.09.09 / ISSUED FOR AS BUILT | 1; full MC434A sheet3; 400V bar continuation C / 1-10 from2665 to2685, outgoing motors/heaters D-G; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2667.pdf",
       "sha256": "0b4427463df36d7910afa700c32cbaeabb5d9979c41f7f2d311d8c0c9e139a88",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S05",
+          "source_table_row": "| SUP-S05 | `11098-07110-EL-DR-2667.pdf` | 4 / 15.07.25 / ISSUED FOR CONSTRUCTION - CP25OP003A | 1; full MC434B sheet1; 400V bar C / 1-12 to2668, outgoing auxiliaries D-G, construction notes A / 10-12; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2668.pdf",
       "sha256": "0fa1228a98378034c0f66ce6c0698986281a8c320ffa3d2cc3319c2900e1b6b7",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S06",
+          "source_table_row": "| SUP-S06 | `11098-07110-EL-DR-2668.pdf` | 4 / 11.09.09 / ISSUED FOR AS BUILT | 1; full MC434B sheet2; MC435 source A-B / 7, main isolator/bar C / 7, DC supplies A-C / 4-6; outgoing circuits D-G; title H. Subordinate LV board after MC435 first bus. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2669.pdf",
       "sha256": "d94feac75235bf9e37c8394a117bf55cc97781b0cf69b4696c9cc007e64daf97",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S07",
+          "source_table_row": "| SUP-S07 | `11098-07110-EL-DR-2669.pdf` | 5 / 15.05.26 / AS BUILT; separate stamp15/05/2026 | 1; full MC434B sheet3; 400V bar C / 2-10 from2668 to2686, outgoing motors/heaters D-G; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -849,9 +909,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2675.pdf",
       "sha256": "e277d18f3761cf275054aaea4e02323c5ccde763cdaf5d25532416b810e5bfb3",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S08",
+          "source_table_row": "| SUP-S08 | `11098-07110-EL-DR-2675.pdf` | 13 / 28.11.25 / ISSUED FOR CONSTRUCTION in red revision row/title; row12 dated18.11.25 retained | 1; full MC453 stockpiling-apron-feeders sheet; MC435 source A-B / 5, incoming isolator/bar B-C / 5, outgoing circuits C-G including red PU371A fire-pump DB; title H. Subordinate400V board after MC435 first bus. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -888,18 +954,30 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2678.pdf",
       "sha256": "69f54a96e4b51779dbdd88879da3723fee39a14d9c48a824f31e92b50f5fcdf4",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S09",
+          "source_table_row": "| SUP-S09 | `11098-07110-EL-DR-2678.pdf` | 4 / 21.05.25 / ISSUED FOR CONSTRUCTION - CP25OP003A | 1; full MC411 main-HV-substation auxiliary sheet; source MC435 A-B / 5, CB MC411 IN/main400V bar C / 2-7, UPS/DB/AC outgoing circuits D-G; title H. Location title does not make its400V circuit an HV supply. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2679.pdf",
       "sha256": "ea6eb217f4d080b3f5f8f6b0e5a6b5b436dc48e1f11af7f74835387a71b8f339",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S10",
+          "source_table_row": "| SUP-S10 | `11098-07110-EL-DR-2679.pdf` | 4 / 08.01.26 / ISSUED FOR CONSTRUCTION - CB25OP003A | 1; full MC415 central-control-room sheet; MC426 source A-B / 5, CB MC415 IN/400V bar C / 2-7, outgoing UPS/DB D-G; title H. Subordinate LV board after MC426 first bus. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -951,18 +1029,30 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2685.pdf",
       "sha256": "e6aa7fc04ca602caffa2b158ae4fd5eb7a1b9066be6fe65acecd6e1f63b94ec7",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S11",
+          "source_table_row": "| SUP-S11 | `11098-07110-EL-DR-2685.pdf` | 1 / 11.09.09 / ISSUED FOR AS BUILT | 1; full MC434A sheet4; continuation from2666 C / 4, outgoing DB/AC/JB circuits D-G; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2686.pdf",
       "sha256": "1eb4967fc7eed1072cd25300d1ab23014c69a320bce17b362c14b191b0031708",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/supplementary-scope-review.md",
+          "source_id": "SUP-S12",
+          "source_table_row": "| SUP-S12 | `11098-07110-EL-DR-2686.pdf` | 2 / 05.05.25 / ISSUED FOR CONSTRUCTION - CP25OP003A | 1; full MC434B sheet4; continuation from2669 C / 2, outgoing AC/drive-brake circuits D-G, construction notes G / 10-12; title H. Outgoing LV continuation. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1544,9 +1634,15 @@
       "path": "drawings/Asset Drawing Repo/500CB-07100-DR-EL-0022.pdf",
       "sha256": "3efaa58f284c257386f4ac31645156e4ffa4481621c721312bd39cf9898f71a5",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S01",
+          "source_table_row": "| MC-S01 | `500CB-07100-DR-EL-0022.pdf` | Project5 / 31.05.16 / AS BUILT FOR CB16OP003; vendor005001-2200-1400-SLD-0057 rev3; drawing-number-change note from500CB-07110-DR-EL-004 | 1; whole mine distribution; RM721/services B-F / 8-12; title/history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1568,90 +1664,150 @@
       "path": "drawings/Asset Drawing Repo/520CBC0007-2130-DR-EL-0003.pdf",
       "sha256": "d6f3cd896c228f9dd8f0947260f32417db4873ee6e75a9074fb7eb7838f073ca",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/hopper-10-review.md",
+          "source_id": "H10-S01",
+          "source_table_row": "| H10-S01 | `520CBC0007-2130-DR-EL-0003.pdf` | 3 / 28.01.25 / MODIFIED AS FOUND 23.10.23; vendor 5554-ESL-001 rev1, RCR ELC-504-001 rev1 | 1; RM420 A-D / 2-11; TF420A/B D-F / 3-6; notes1-4 G / 8-11; title/history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/520CBC0007-2130-DR-EL-0004.pdf",
       "sha256": "79f55c7302450c6efd9db5aefaee303004d7bf6f9b22eaaa82a865db5c698df1",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/hopper-10-review.md",
+          "source_id": "H10-S02",
+          "source_table_row": "| H10-S02 | `520CBC0007-2130-DR-EL-0004.pdf` | 2 / 28.01.25 / AS FOUND 23.10.23; vendor 5554-ESL-002 rev1, RCR ELC-504-002 rev1 | 1; MC420 main phase bar A; incoming tier5 C-D / 4-5; motor pairs C-D / 7-11; outgoing labels E-F; notes5-8 G / 1-7; title/history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0001.pdf",
       "sha256": "7c4d73cab218170c24b46d9dc8d6014ee675523794278748dc4d594bd51b7560",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S02",
+          "source_table_row": "| MC-S02 | `CB-10016-DR-EL-0001.pdf` | 0 / 24.07.09 / AS BUILT | 1; camp power station generators A-D / 1-6; TF700/RM700 E-G / 4-6; notes A / 11-12; title/history H. PDF rotated for reading. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0002.002.pdf",
       "sha256": "6f0d75196119508f2258d302e8092248bb344e440b71da1a185d6daf92e22cab",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S03",
+          "source_table_row": "| MC-S03 | `CB-10016-DR-EL-0002.002.pdf` | 3 / 08.12.11 / CAMP POWERLINE RELOCATION ADDED; printed drawingCB-10016-DR-EL-0002-002, sheet2of2 | 1; station/RM732 A-C / 6-8; SS731/SS719 D-E / 4-9; camp spurs and RM700 D-G / 5-10; title/history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.001.pdf",
       "sha256": "d4a1199cd1c22661d4119f37da747d088315a9a896f56e50c2ce6d3942d71a2a",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S04",
+          "source_table_row": "| MC-S04 | `CB-10016-DR-EL-0003.001.pdf` | 9 / 21.01.21 / ADDITIONAL GENERATION, ALINTA TIER; printed baseCB-10016-DR-EL-0003 sheet1 | 1; complete fault/protection study; station A-C / 1-15; mine-services/workshops D-G; camp overhead line H-K; camp RMU ring H-L / 10-16; notes A-B / 15-16; title/history M. Rotated for reading. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.002.pdf",
       "sha256": "70f032132819d6c66b1c1ba46589f07dbf26e7f841fd6a873e256165efc964d5",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S05",
+          "source_table_row": "| MC-S05 | `CB-10016-DR-EL-0003.002.pdf` | 4 / 02.05.18 / WESTERN POWERLINE FEEDER ADDITION; printed baseCB-10016-DR-EL-0003 sheet2 | 1; whole SW411/processing overlap; SW411 A-C / 5-12; continuations C-D / 15-16; title/history M. Rotated for reading. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.003.pdf",
       "sha256": "4b052f0a6bcde7a618ec522b66dfc946d1937b51712518872dc3a6b78d21e7f1",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S06",
+          "source_table_row": "| MC-S06 | `CB-10016-DR-EL-0003.003.pdf` | 3 / 24.05.17 / REVISED AS BUILT; AS BUILT stamp31/05/2016; printed baseCB-10016-DR-EL-0003 sheet3 | 1; whole wet/services/western overlap; RM721/RM712/RM713 A-E / 7-9; RM417 A-E / 10-15; RM413/414 F-K / 11-14; title/history M |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.004.pdf",
       "sha256": "903897e805cb04d9f9cf248f1f972479e9f6b14b5a787b7ae90775c9a0b2b058",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S07",
+          "source_table_row": "| MC-S07 | `CB-10016-DR-EL-0003.004.pdf` | 0 / 02.05.18 / AS BUILT; printed baseCB-10016-DR-EL-0003 sheet4 | 1; whole western line; SW411-OHL A-B / 1; drop-tower spur C-E / 5; RM418 B-G / 9-15; futureSizer8; title/history M. Rotated for reading. |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0004.pdf",
       "sha256": "b456480c13831f2ba916862ac46a57e538f71ab2b3e22d388b0ce9dd94ec115e",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S08",
+          "source_table_row": "| MC-S08 | `CB-10016-DR-EL-0004.pdf` | 0; title signatures date28.9.10; separate revision issue date not confirmed | 1; entire camp MSB6 sheet; TX6/main switch/bar A-C / 5-9; downstream DB062 E-G / 2-4; title H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0005.pdf",
       "sha256": "84ca8f231e34b00ec99a96d262df60662dd4849014fb253c6d219c9417cffb2e",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/mine-camp-review.md",
+          "source_id": "MC-S09",
+          "source_table_row": "| MC-S09 | `CB-10016-DR-EL-0005.pdf` | 0; title signatures date28.9.10; separate revision issue date not confirmed | 1; entire camp MSB5 sheet; TX5/main switch/bar A-C / 5-8; downstream DB053/DB054 E-G; title H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1720,6 +1876,11 @@
           "review": "drawing-review/areas/desands-laboratory-review.md",
           "source_id": "D00",
           "source_table_row": "| D00 | [CB-10016-DR-EL-0011.pdf](../../drawings/Asset%20Drawing%20Repo/CB-10016-DR-EL-0011.pdf) | 0 | Overview index and Desands/laboratory comparison; not isolation authority |"
+        },
+        {
+          "review": "drawing-review/areas/hopper-10-review.md",
+          "source_id": "H10-S04",
+          "source_table_row": "| H10-S04 | `CB-10016-DR-EL-0011.pdf` | 0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMMENDED); AS BUILT stamp 27/10/2025; FOR INFORMATION ONLY | 1; Hopper10 C-D / 1-3; notes1-2 G / 1-3; title/history H. Re-reviewed shared overview. |"
         },
         {
           "review": "drawing-review/areas/screening-review.md",
@@ -1947,6 +2108,11 @@
           "source_table_row": "| CV-S01 | `CB19OP001B-04057-DR-EL-0001.pdf` | 6; 28.01.25; AS FOUND 23.10.23 | 1 | Whole CV006 power distribution; 22 kV OHL A, RM410 B-C / 1-3, RM406 B-C / 9-11, RM419/RM418 centre |"
         },
         {
+          "review": "drawing-review/areas/hopper-10-review.md",
+          "source_id": "H10-S05",
+          "source_table_row": "| H10-S05 | `CB19OP001B-04057-DR-EL-0001.pdf` | 6 / 28.01.25 / AS FOUND 23.10.23 | 1; entire CV006 distribution; Hopper10 source/line A / 1-12; title/history H. Re-reviewed cross-area source conflict; downstream CV006 remains owned by its area. |"
+        },
+        {
           "review": "drawing-review/areas/western-hoppers-review.md",
           "source_id": "WH-S15",
           "source_table_row": "| WH-S15 | `CB19OP001B-04057-DR-EL-0001.pdf` | 6 / 28.01.25 / AS FOUND 23.10.23 | 1 | CV006 distribution; RM410 -> RM419 B-D; RM419 -> RM418 C-E; RM406 -> Hopper8 C-D / 10-11; RM418 transformer aliases E-F / 6-8 |"
@@ -2125,6 +2291,11 @@
           "review": "drawing-review/areas/cv006-review.md",
           "source_id": "CV-S06",
           "source_table_row": "| CV-S06 | `CB21OP055B-10016-DR-EL-0089.pdf` | 0; 10.06.22; ISSUED FOR CONSTRUCTION | 1 | 33 kV line; station TF04/AMR C-D / 1-7; pole 49-38-1 tie D-E / 7; IOP/Hopper10/Norfolk/Bigge routes E-G / 7-11 |"
+        },
+        {
+          "review": "drawing-review/areas/hopper-10-review.md",
+          "source_id": "H10-S03",
+          "source_table_row": "| H10-S03 | `CB21OP055B-10016-DR-EL-0089.pdf` | 0 / 10.06.22 / ISSUED FOR CONSTRUCTION | 1; complete AMR/IOP arrangement; Hopper10 branch E-G / 9-11; legend A-C / 11-12; title/history H. Re-reviewed station/line source, not another unique project file. |"
         },
         {
           "review": "drawing-review/areas/power-station-review.md",

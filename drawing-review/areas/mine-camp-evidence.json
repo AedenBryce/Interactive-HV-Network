@@ -1,0 +1,426 @@
+{
+  "status": "Source preparation only; no runtime, installed, interlock or owner acceptance",
+  "reviewDate": "2026-10-22",
+  "method": {
+    "fullPagesVisuallyReviewed": 11,
+    "fullPageDpi": 90,
+    "detailCropsVisuallyReviewed": 28,
+    "cropDpi": 180,
+    "rotation": "0001 and0003.001/.002/.004 rotated90degrees for reading; crop coordinates use upright image",
+    "counting": "Eleven original files classified here; shared physical equipment and repeated base document IDs are not extra equipment or unique area networks",
+    "text": "Locator only, never topology evidence"
+  },
+  "sources": [
+    {
+      "ref": "MC-S01",
+      "path": "drawings/Asset Drawing Repo/500CB-07100-DR-EL-0022.pdf",
+      "sha256": "3efaa58f284c257386f4ac31645156e4ffa4481621c721312bd39cf9898f71a5",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "5 / 31.05.16 / AS BUILT FOR CB16OP003; vendor rev3",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Legacy/fault-study shared topology; no installed acceptance"
+    },
+    {
+      "ref": "MC-S02",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0001.pdf",
+      "sha256": "7c4d73cab218170c24b46d9dc8d6014ee675523794278748dc4d594bd51b7560",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "0 / 24.07.09 / AS BUILT",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Camp or water-tower source/first-LV coverage; installed baseline unconfirmed"
+    },
+    {
+      "ref": "MC-S03",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0002.002.pdf",
+      "sha256": "6f0d75196119508f2258d302e8092248bb344e440b71da1a185d6daf92e22cab",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "3 / 08.12.11 / CAMP POWERLINE RELOCATION ADDED",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Camp or water-tower source/first-LV coverage; installed baseline unconfirmed"
+    },
+    {
+      "ref": "MC-S04",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.001.pdf",
+      "sha256": "d4a1199cd1c22661d4119f37da747d088315a9a896f56e50c2ce6d3942d71a2a",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "9 / 21.01.21 / ADDITIONAL GENERATION, ALINTA TIER",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Legacy/fault-study shared topology; no installed acceptance"
+    },
+    {
+      "ref": "MC-S05",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.002.pdf",
+      "sha256": "70f032132819d6c66b1c1ba46589f07dbf26e7f841fd6a873e256165efc964d5",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "4 / 02.05.18 / WESTERN POWERLINE FEEDER ADDITION",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Legacy/fault-study shared topology; no installed acceptance"
+    },
+    {
+      "ref": "MC-S06",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.003.pdf",
+      "sha256": "4b052f0a6bcde7a618ec522b66dfc946d1937b51712518872dc3a6b78d21e7f1",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "3 / 24.05.17 / REVISED AS BUILT",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Legacy/fault-study shared topology; no installed acceptance"
+    },
+    {
+      "ref": "MC-S07",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.004.pdf",
+      "sha256": "903897e805cb04d9f9cf248f1f972479e9f6b14b5a787b7ae90775c9a0b2b058",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "0 / 02.05.18 / AS BUILT",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Legacy/fault-study shared topology; no installed acceptance"
+    },
+    {
+      "ref": "MC-S08",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0004.pdf",
+      "sha256": "b456480c13831f2ba916862ac46a57e538f71ab2b3e22d388b0ce9dd94ec115e",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "0 / signature28.9.10, revision issue date unconfirmed",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Camp or water-tower source/first-LV coverage; installed baseline unconfirmed"
+    },
+    {
+      "ref": "MC-S09",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0005.pdf",
+      "sha256": "84ca8f231e34b00ec99a96d262df60662dd4849014fb253c6d219c9417cffb2e",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "0 / signature28.9.10, revision issue date unconfirmed",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Camp or water-tower source/first-LV coverage; installed baseline unconfirmed"
+    },
+    {
+      "ref": "MC-S10",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2355.pdf",
+      "sha256": "b2213432220a34a34f6d6d834cee1421328f833616d4f7120995f6196f726d21",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "7 / 28.01.25 / AS FOUND23.10.23",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Camp or water-tower source/first-LV coverage; installed baseline unconfirmed"
+    },
+    {
+      "ref": "MC-S11",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2657.pdf",
+      "sha256": "d047fbfa28bf5ecd0166edf7a85ef4dc149c6792f5d2bb0bf1feb9a7b7347d4d",
+      "matchesIntakeHash": true,
+      "page": 1,
+      "revision": "13 / 09.01.26 / ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "review": "Full page and necessary enlarged crops visually inspected",
+      "disposition": "Camp or water-tower source/first-LV coverage; installed baseline unconfirmed"
+    }
+  ],
+  "crops": [
+    {
+      "source": "CB-10016-DR-EL-0001.pdf",
+      "name": "emergency",
+      "normalizedBox": [
+        0.03,
+        0.06,
+        0.8,
+        0.85
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0002.002.pdf",
+      "name": "camp-top",
+      "normalizedBox": [
+        0.28,
+        0.03,
+        0.76,
+        0.63
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0002.002.pdf",
+      "name": "camp-emergency",
+      "normalizedBox": [
+        0.4,
+        0.6,
+        0.78,
+        0.9
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "station-left",
+      "normalizedBox": [
+        0.03,
+        0.03,
+        0.57,
+        0.3
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "station-right",
+      "normalizedBox": [
+        0.55,
+        0.03,
+        0.96,
+        0.42
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "mine-services",
+      "normalizedBox": [
+        0.07,
+        0.27,
+        0.71,
+        0.68
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "camp-rmus",
+      "normalizedBox": [
+        0.58,
+        0.57,
+        0.97,
+        0.88
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "camp-poles",
+      "normalizedBox": [
+        0.06,
+        0.57,
+        0.6,
+        0.88
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "sheet1-title",
+      "normalizedBox": [
+        0.43,
+        0.89,
+        0.97,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.002.pdf",
+      "name": "sheet2-interfaces",
+      "normalizedBox": [
+        0.27,
+        0.09,
+        0.93,
+        0.34
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.002.pdf",
+      "name": "sheet2-title",
+      "normalizedBox": [
+        0.43,
+        0.89,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.003.pdf",
+      "name": "sheet3-services",
+      "normalizedBox": [
+        0.37,
+        0.08,
+        0.57,
+        0.45
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.003.pdf",
+      "name": "sheet3-western",
+      "normalizedBox": [
+        0.53,
+        0.04,
+        0.96,
+        0.81
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.003.pdf",
+      "name": "sheet3-title",
+      "normalizedBox": [
+        0.38,
+        0.89,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.004.pdf",
+      "name": "sheet4-western",
+      "normalizedBox": [
+        0.03,
+        0.04,
+        0.95,
+        0.74
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.004.pdf",
+      "name": "sheet4-title",
+      "normalizedBox": [
+        0.43,
+        0.89,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0004.pdf",
+      "name": "msb6",
+      "normalizedBox": [
+        0.35,
+        0.06,
+        0.78,
+        0.46
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0005.pdf",
+      "name": "msb5",
+      "normalizedBox": [
+        0.34,
+        0.05,
+        0.69,
+        0.42
+      ]
+    },
+    {
+      "source": "500CB-07100-DR-EL-0022.pdf",
+      "name": "mine-services-2016",
+      "normalizedBox": [
+        0.56,
+        0.03,
+        0.97,
+        0.79
+      ]
+    },
+    {
+      "source": "500CB-07100-DR-EL-0022.pdf",
+      "name": "mine-title",
+      "normalizedBox": [
+        0.02,
+        0.85,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2355.pdf",
+      "name": "sw441",
+      "normalizedBox": [
+        0.26,
+        0.04,
+        0.71,
+        0.65
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2657.pdf",
+      "name": "mc441",
+      "normalizedBox": [
+        0.03,
+        0.03,
+        0.96,
+        0.47
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "study-notes",
+      "normalizedBox": [
+        0.85,
+        0.035,
+        0.98,
+        0.14
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0002.002.pdf",
+      "name": "camp-title",
+      "normalizedBox": [
+        0.02,
+        0.88,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0004.pdf",
+      "name": "msb6-title",
+      "normalizedBox": [
+        0.49,
+        0.88,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0005.pdf",
+      "name": "msb5-title",
+      "normalizedBox": [
+        0.49,
+        0.88,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2657.pdf",
+      "name": "water-title",
+      "normalizedBox": [
+        0.02,
+        0.86,
+        0.98,
+        0.99
+      ]
+    },
+    {
+      "source": "CB-10016-DR-EL-0003.001.pdf",
+      "name": "study-emergency-identities",
+      "normalizedBox": [
+        0.82,
+        0.39,
+        0.99,
+        0.63
+      ]
+    }
+  ],
+  "openReviewIds": [
+    "MC-Q01",
+    "MC-Q02",
+    "MC-Q03",
+    "MC-Q04",
+    "MC-Q05",
+    "MC-Q06",
+    "MC-Q07",
+    "MC-Q08",
+    "MC-Q09",
+    "MC-Q10",
+    "MC-Q11"
+  ],
+  "limits": [
+    "Study states, fault levels and protection settings are not installed baseline or electrical simulation requirements",
+    "TF700 and camp generation lineup differs across drawings",
+    "Current transformer reverse/source/earth channel policies and physical key truth tables unconfirmed",
+    "Existing area and supplemental Farwest reviews are referenced-only leads, not runtime or installed acceptance"
+  ]
+}

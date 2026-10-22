@@ -2,7 +2,7 @@
 
 Every supplied PDF has a disposition below. A source-table entry points to the recorded inspection scope; it does not approve the installed arrangement, revision precedence or model. Identical-file duplicates are recorded separately. Files awaiting classification remain unreviewed.
 
-Files: 141. Unique SHA-256 values: 140. Files named in explicit area-review source rows: 115.
+Files: 141. Unique SHA-256 values: 140. Files named in explicit area-review source rows: 141.
 
 Regenerate with `scripts/update_drawing_coverage.py` after completing an area review. The script reads only the first source table; confirm its format before relying on the count. Full records and exact source-table rows are in `coverage.json`.
 
@@ -21,7 +21,7 @@ Regenerate with `scripts/update_drawing_coverage.py` after completing an area re
 | `11098-07110-EL-DR-2352.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D01](../drawing-review/areas/desands-laboratory-review.md); [services-review: SV-S11](../drawing-review/areas/services-review.md) |
 | `11098-07110-EL-DR-2353.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S01](../drawing-review/areas/crushing-1-review.md); [crushing-2-hpgr-review: C2-S03](../drawing-review/areas/crushing-2-hpgr-review.md) |
 | `11098-07110-EL-DR-2354.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S02](../drawing-review/areas/crushing-1-review.md); [crushing-2-hpgr-review: C2-S01](../drawing-review/areas/crushing-2-hpgr-review.md) |
-| `11098-07110-EL-DR-2355.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2355.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S10](../drawing-review/areas/mine-camp-review.md) |
 | `11098-07110-EL-DR-2356.pdf` | Source table recorded; see cited review for inspected scope and limitations | [train-loading-review: TL-S01](../drawing-review/areas/train-loading-review.md) |
 | `11098-07110-EL-DR-2357.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D02](../drawing-review/areas/desands-laboratory-review.md); [services-review: SV-S12](../drawing-review/areas/services-review.md) |
 | `11098-07110-EL-DR-2361.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D31](../drawing-review/areas/desands-laboratory-review.md); [train-loading-review: TL-S08](../drawing-review/areas/train-loading-review.md) |
@@ -33,14 +33,14 @@ Regenerate with `scripts/update_drawing_coverage.py` after completing an area re
 | `11098-07110-EL-DR-2460.pdf` | Source table recorded; see cited review for inspected scope and limitations | [train-loading-review: TL-S02](../drawing-review/areas/train-loading-review.md) |
 | `11098-07110-EL-DR-2463.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D07](../drawing-review/areas/desands-laboratory-review.md) |
 | `11098-07110-EL-DR-2464.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D08](../drawing-review/areas/desands-laboratory-review.md) |
-| `11098-07110-EL-DR-2465 (2).pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2465 (2).pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-D01](../drawing-review/areas/supplementary-scope-review.md) |
 | `11098-07110-EL-DR-2465.pdf` | Byte-identical duplicate; not counted as an independent topology review | [screening-review: SC-S02](../drawing-review/areas/screening-review.md); duplicate of `11098-07110-EL-DR-2465 (2).pdf` |
 | `11098-07110-EL-DR-2466.pdf` | Source table recorded; see cited review for inspected scope and limitations | [screening-review: SC-S03](../drawing-review/areas/screening-review.md) |
 | `11098-07110-EL-DR-2467.pdf` | Source table recorded; see cited review for inspected scope and limitations | [screening-review: SC-S04](../drawing-review/areas/screening-review.md) |
 | `11098-07110-EL-DR-2468.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-2-hpgr-review: C2-S07](../drawing-review/areas/crushing-2-hpgr-review.md); [train-loading-review: TL-S06](../drawing-review/areas/train-loading-review.md) |
 | `11098-07110-EL-DR-2469.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-2-hpgr-review: C2-S08](../drawing-review/areas/crushing-2-hpgr-review.md); [train-loading-review: TL-S07](../drawing-review/areas/train-loading-review.md) |
 | `11098-07110-EL-DR-2470.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S07](../drawing-review/areas/crushing-1-review.md) |
-| `11098-07110-EL-DR-2471.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2471.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S01](../drawing-review/areas/supplementary-scope-review.md) |
 | `11098-07110-EL-DR-2474.pdf` | Source table recorded; see cited review for inspected scope and limitations | [screening-review: SC-S05](../drawing-review/areas/screening-review.md) |
 | `11098-07110-EL-DR-2481.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D13](../drawing-review/areas/desands-laboratory-review.md) |
 | `11098-07110-EL-DR-2482.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D14](../drawing-review/areas/desands-laboratory-review.md) |
@@ -49,31 +49,31 @@ Regenerate with `scripts/update_drawing_coverage.py` after completing an area re
 | `11098-07110-EL-DR-2652.pdf` | Source table recorded; see cited review for inspected scope and limitations | [screening-review: SC-S07](../drawing-review/areas/screening-review.md) |
 | `11098-07110-EL-DR-2653.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D04](../drawing-review/areas/desands-laboratory-review.md) |
 | `11098-07110-EL-DR-2654.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S08](../drawing-review/areas/crushing-1-review.md) |
-| `11098-07110-EL-DR-2657.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2657.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S11](../drawing-review/areas/mine-camp-review.md) |
 | `11098-07110-EL-DR-2658.pdf` | Source table recorded; see cited review for inspected scope and limitations | [train-loading-review: TL-S03](../drawing-review/areas/train-loading-review.md) |
 | `11098-07110-EL-DR-2660.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-2-hpgr-review: C2-S04](../drawing-review/areas/crushing-2-hpgr-review.md) |
 | `11098-07110-EL-DR-2662.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D05](../drawing-review/areas/desands-laboratory-review.md) |
 | `11098-07110-EL-DR-2663.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D06](../drawing-review/areas/desands-laboratory-review.md) |
-| `11098-07110-EL-DR-2664.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2665.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2666.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2667.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2668.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2669.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2664.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S02](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2665.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S03](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2666.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S04](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2667.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S05](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2668.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S06](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2669.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S07](../drawing-review/areas/supplementary-scope-review.md) |
 | `11098-07110-EL-DR-2670.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S09](../drawing-review/areas/crushing-1-review.md) |
 | `11098-07110-EL-DR-2671.pdf` | Source table recorded; see cited review for inspected scope and limitations | [screening-review: SC-S08](../drawing-review/areas/screening-review.md) |
 | `11098-07110-EL-DR-2672.pdf` | Source table recorded; see cited review for inspected scope and limitations | [train-loading-review: TL-S04](../drawing-review/areas/train-loading-review.md) |
 | `11098-07110-EL-DR-2673.pdf` | Source table recorded; see cited review for inspected scope and limitations | [train-loading-review: TL-S05](../drawing-review/areas/train-loading-review.md) |
-| `11098-07110-EL-DR-2675.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2675.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S08](../drawing-review/areas/supplementary-scope-review.md) |
 | `11098-07110-EL-DR-2676.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D10](../drawing-review/areas/desands-laboratory-review.md) |
 | `11098-07110-EL-DR-2677.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D11](../drawing-review/areas/desands-laboratory-review.md) |
-| `11098-07110-EL-DR-2678.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2679.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2678.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S09](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2679.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S10](../drawing-review/areas/supplementary-scope-review.md) |
 | `11098-07110-EL-DR-2682.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-2-hpgr-review: C2-S05](../drawing-review/areas/crushing-2-hpgr-review.md) |
 | `11098-07110-EL-DR-2683.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D18](../drawing-review/areas/desands-laboratory-review.md) |
 | `11098-07110-EL-DR-2684.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D19](../drawing-review/areas/desands-laboratory-review.md) |
-| `11098-07110-EL-DR-2685.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `11098-07110-EL-DR-2686.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `11098-07110-EL-DR-2685.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S11](../drawing-review/areas/supplementary-scope-review.md) |
+| `11098-07110-EL-DR-2686.pdf` | Source table recorded; see cited review for inspected scope and limitations | [supplementary-scope-review: SUP-S12](../drawing-review/areas/supplementary-scope-review.md) |
 | `11098-07110-EL-DR-5151.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S12](../drawing-review/areas/crushing-1-review.md); [crushing-2-hpgr-review: C2-S02](../drawing-review/areas/crushing-2-hpgr-review.md); [cv006-review: CV-S09](../drawing-review/areas/cv006-review.md); [screening-review: SC-S10](../drawing-review/areas/screening-review.md); [services-review: SV-S10](../drawing-review/areas/services-review.md); [stockpile-wet-plant-review: SW-S25](../drawing-review/areas/stockpile-wet-plant-review.md); [sw411-review: W1](../drawing-review/areas/sw411-review.md); [train-loading-review: TL-S10](../drawing-review/areas/train-loading-review.md) |
 | `500CB-04220-DR-EL-0036.pdf` | Source table recorded; see cited review for inspected scope and limitations | [stockpile-wet-plant-review: SW-S05](../drawing-review/areas/stockpile-wet-plant-review.md) |
 | `500CB-04220-DR-EL-0037.pdf` | Source table recorded; see cited review for inspected scope and limitations | [stockpile-wet-plant-review: SW-S06](../drawing-review/areas/stockpile-wet-plant-review.md) |
@@ -110,20 +110,20 @@ Regenerate with `scripts/update_drawing_coverage.py` after completing an area re
 | `500CB-04230-DR-EL-0933.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D27](../drawing-review/areas/desands-laboratory-review.md) |
 | `500CB-04230-DR-EL-0936.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D28](../drawing-review/areas/desands-laboratory-review.md) |
 | `500CB-04230-DR-EL-0937.pdf` | Source table recorded; see cited review for inspected scope and limitations | [desands-laboratory-review: D29](../drawing-review/areas/desands-laboratory-review.md) |
-| `500CB-07100-DR-EL-0022.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `500CB-07100-DR-EL-0022.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S01](../drawing-review/areas/mine-camp-review.md) |
 | `500CBC0002-13015-DR-EL-0001.pdf` | Source table recorded; see cited review for inspected scope and limitations | [power-station-review: PS1](../drawing-review/areas/power-station-review.md) |
-| `520CBC0007-2130-DR-EL-0003.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `520CBC0007-2130-DR-EL-0004.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0001.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0002.002.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0003.001.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0003.002.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0003.003.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0003.004.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0004.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
-| `CB-10016-DR-EL-0005.pdf` | Awaiting visual classification and topology review | No completed source-table entry |
+| `520CBC0007-2130-DR-EL-0003.pdf` | Source table recorded; see cited review for inspected scope and limitations | [hopper-10-review: H10-S01](../drawing-review/areas/hopper-10-review.md) |
+| `520CBC0007-2130-DR-EL-0004.pdf` | Source table recorded; see cited review for inspected scope and limitations | [hopper-10-review: H10-S02](../drawing-review/areas/hopper-10-review.md) |
+| `CB-10016-DR-EL-0001.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S02](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0002.002.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S03](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0003.001.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S04](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0003.002.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S05](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0003.003.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S06](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0003.004.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S07](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0004.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S08](../drawing-review/areas/mine-camp-review.md) |
+| `CB-10016-DR-EL-0005.pdf` | Source table recorded; see cited review for inspected scope and limitations | [mine-camp-review: MC-S09](../drawing-review/areas/mine-camp-review.md) |
 | `CB-10016-DR-EL-0010.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S11](../drawing-review/areas/crushing-1-review.md); [crushing-2-hpgr-review: C2-S10](../drawing-review/areas/crushing-2-hpgr-review.md); [cv006-review: CV-S07](../drawing-review/areas/cv006-review.md); [stockpile-wet-plant-review: SW-S24](../drawing-review/areas/stockpile-wet-plant-review.md); [sw411-review: W2](../drawing-review/areas/sw411-review.md); [train-loading-review: TL-S09](../drawing-review/areas/train-loading-review.md); [western-hoppers-review: WH-S19](../drawing-review/areas/western-hoppers-review.md) |
-| `CB-10016-DR-EL-0011.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S10](../drawing-review/areas/crushing-1-review.md); [cv006-review: CV-S08](../drawing-review/areas/cv006-review.md); [desands-laboratory-review: D00](../drawing-review/areas/desands-laboratory-review.md); [screening-review: SC-S09](../drawing-review/areas/screening-review.md); [services-review: SV-S09](../drawing-review/areas/services-review.md); [sw411-review: W3](../drawing-review/areas/sw411-review.md); [western-hoppers-review: WH-S20](../drawing-review/areas/western-hoppers-review.md) |
+| `CB-10016-DR-EL-0011.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-1-review: C1-S10](../drawing-review/areas/crushing-1-review.md); [cv006-review: CV-S08](../drawing-review/areas/cv006-review.md); [desands-laboratory-review: D00](../drawing-review/areas/desands-laboratory-review.md); [hopper-10-review: H10-S04](../drawing-review/areas/hopper-10-review.md); [screening-review: SC-S09](../drawing-review/areas/screening-review.md); [services-review: SV-S09](../drawing-review/areas/services-review.md); [sw411-review: W3](../drawing-review/areas/sw411-review.md); [western-hoppers-review: WH-S20](../drawing-review/areas/western-hoppers-review.md) |
 | `CB095-02004-DR-EL-0014.pdf` | Source table recorded; see cited review for inspected scope and limitations | [services-review: SV-S07](../drawing-review/areas/services-review.md) |
 | `CB095-02004-DR-EL-0015.pdf` | Source table recorded; see cited review for inspected scope and limitations | [services-review: SV-S08](../drawing-review/areas/services-review.md) |
 | `CB112-02006-DR-EL-0005.pdf` | Source table recorded; see cited review for inspected scope and limitations | [crushing-2-hpgr-review: C2-S09](../drawing-review/areas/crushing-2-hpgr-review.md) |
@@ -136,7 +136,7 @@ Regenerate with `scripts/update_drawing_coverage.py` after completing an area re
 | `CB17OP023C-01006-DR-EL-0003.pdf` | Source table recorded; see cited review for inspected scope and limitations | [western-hoppers-review: WH-S06](../drawing-review/areas/western-hoppers-review.md) |
 | `CB17OP023C-01006-DR-EL-0004.pdf` | Source table recorded; see cited review for inspected scope and limitations | [western-hoppers-review: WH-S07](../drawing-review/areas/western-hoppers-review.md) |
 | `CB17OP023C-01006-DR-EL-0041.pdf` | Source table recorded; see cited review for inspected scope and limitations | [western-hoppers-review: WH-S08](../drawing-review/areas/western-hoppers-review.md) |
-| `CB19OP001B-04057-DR-EL-0001.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S01](../drawing-review/areas/cv006-review.md); [western-hoppers-review: WH-S15](../drawing-review/areas/western-hoppers-review.md) |
+| `CB19OP001B-04057-DR-EL-0001.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S01](../drawing-review/areas/cv006-review.md); [hopper-10-review: H10-S05](../drawing-review/areas/hopper-10-review.md); [western-hoppers-review: WH-S15](../drawing-review/areas/western-hoppers-review.md) |
 | `CB19OP001B-04057-DR-EL-0002.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S02](../drawing-review/areas/cv006-review.md); [western-hoppers-review: WH-S16](../drawing-review/areas/western-hoppers-review.md) |
 | `CB19OP001B-04057-DR-EL-0003.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S03](../drawing-review/areas/cv006-review.md) |
 | `CB19OP001B-04057-DR-EL-0004.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S04](../drawing-review/areas/cv006-review.md); [western-hoppers-review: WH-S17](../drawing-review/areas/western-hoppers-review.md) |
@@ -147,5 +147,5 @@ Regenerate with `scripts/update_drawing_coverage.py` after completing an area re
 | `CB19OP001C-01068-DR-EL-0004.pdf` | Source table recorded; see cited review for inspected scope and limitations | [western-hoppers-review: WH-S12](../drawing-review/areas/western-hoppers-review.md) |
 | `CB19OP001C-01068-DR-EL-0005.pdf` | Source table recorded; see cited review for inspected scope and limitations | [western-hoppers-review: WH-S13](../drawing-review/areas/western-hoppers-review.md) |
 | `CB19OP001C-01068-DR-EL-0153.pdf` | Source table recorded; see cited review for inspected scope and limitations | [western-hoppers-review: WH-S14](../drawing-review/areas/western-hoppers-review.md) |
-| `CB21OP055B-10016-DR-EL-0089.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S06](../drawing-review/areas/cv006-review.md); [power-station-review: PL1](../drawing-review/areas/power-station-review.md) |
+| `CB21OP055B-10016-DR-EL-0089.pdf` | Source table recorded; see cited review for inspected scope and limitations | [cv006-review: CV-S06](../drawing-review/areas/cv006-review.md); [hopper-10-review: H10-S03](../drawing-review/areas/hopper-10-review.md); [power-station-review: PL1](../drawing-review/areas/power-station-review.md) |
 | `CBC0012-02004-DR-EL-0007.pdf` | Source table recorded; see cited review for inspected scope and limitations | [services-review: SV-S05](../drawing-review/areas/services-review.md) |

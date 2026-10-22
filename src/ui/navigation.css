@@ -1,4 +1,4 @@
-.view-navigation { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 12px; border-bottom: 1px solid var(--border); }
+.view-navigation { display: flex; flex-wrap: wrap; gap: 6px; max-height: 140px; flex-shrink: 0; overflow-y: auto; padding: 0 16px 12px; border-bottom: 1px solid var(--border); }
 .view-navigation button, .diagram-toolbar button, .outside-selection button { padding: 6px 9px; border: 1px solid var(--border); border-radius: 5px; background: white; color: #102640; font-size: 13px; }
 .view-navigation button[aria-current=page] { background: #092443; border-color: #092443; color: white; }
 .diagram-toolbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 10px 16px 4px; }

@@ -1,0 +1,145 @@
+{
+  "status": "Source preparation only; no runtime/model/installed acceptance",
+  "reviewDate": "2026-10-22",
+  "method": {
+    "fullPagesVisuallyReviewed": 5,
+    "fullPageDpi": 90,
+    "detailCropsVisuallyReviewed": 10,
+    "cropDpi": 180,
+    "counting": "Two newly classified source files; three original files re-reviewed from other areas, never additional unique project sources",
+    "text": "Search support only, not topology evidence"
+  },
+  "sources": [
+    {
+      "ref": "H10-S01",
+      "path": "drawings/Asset Drawing Repo/520CBC0007-2130-DR-EL-0003.pdf",
+      "sha256": "d6f3cd896c228f9dd8f0947260f32417db4873ee6e75a9074fb7eb7838f073ca",
+      "revision": "3 / 28.01.25 / MODIFIED AS FOUND 23.10.23",
+      "page": 1,
+      "review": "Full page and necessary crops visually inspected",
+      "alreadyReviewedInOtherArea": false,
+      "matchesIntakeHash": true
+    },
+    {
+      "ref": "H10-S02",
+      "path": "drawings/Asset Drawing Repo/520CBC0007-2130-DR-EL-0004.pdf",
+      "sha256": "79f55c7302450c6efd9db5aefaee303004d7bf6f9b22eaaa82a865db5c698df1",
+      "revision": "2 / 28.01.25 / AS FOUND 23.10.23",
+      "page": 1,
+      "review": "Full page and necessary crops visually inspected",
+      "alreadyReviewedInOtherArea": false,
+      "matchesIntakeHash": true
+    },
+    {
+      "ref": "H10-S03",
+      "path": "drawings/Asset Drawing Repo/CB21OP055B-10016-DR-EL-0089.pdf",
+      "sha256": "a29fa147e05e9d13b40fee274bfe97134a97ed788f2c54581b3861a4af260aa9",
+      "revision": "0 / 10.06.22 / ISSUED FOR CONSTRUCTION",
+      "page": 1,
+      "review": "Full page and necessary crops visually inspected",
+      "alreadyReviewedInOtherArea": true,
+      "matchesIntakeHash": true
+    },
+    {
+      "ref": "H10-S04",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "revision": "0 / 27.10.25 / ISSUED FOR USE; FOR INFORMATION ONLY",
+      "page": 1,
+      "review": "Full page and necessary crops visually inspected",
+      "alreadyReviewedInOtherArea": true,
+      "matchesIntakeHash": true
+    },
+    {
+      "ref": "H10-S05",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0001.pdf",
+      "sha256": "829c088a3e21390201c627495f5d98e9633c91974894d07657911099bec2ed4e",
+      "revision": "6 / 28.01.25 / AS FOUND 23.10.23",
+      "page": 1,
+      "review": "Full page and necessary crops visually inspected",
+      "alreadyReviewedInOtherArea": true,
+      "matchesIntakeHash": true
+    }
+  ],
+  "normalizedCropBoxes": {
+    "rmu": [
+      0.17,
+      0.12,
+      0.67,
+      0.49
+    ],
+    "transformers": [
+      0.17,
+      0.48,
+      0.56,
+      0.75
+    ],
+    "notes-title": [
+      0.58,
+      0.7,
+      0.98,
+      0.98
+    ],
+    "mv": [
+      0.25,
+      0.1,
+      0.93,
+      0.53
+    ],
+    "notes": [
+      0.03,
+      0.7,
+      0.55,
+      0.93
+    ],
+    "hopper-branch": [
+      0.52,
+      0.53,
+      0.9,
+      0.83
+    ],
+    "legend": [
+      0.84,
+      0.03,
+      0.98,
+      0.31
+    ],
+    "hopper": [
+      0.03,
+      0.25,
+      0.24,
+      0.52
+    ],
+    "motor-outlets": [
+      0.5,
+      0.5,
+      0.96,
+      0.78
+    ],
+    "cv006-hopper-interface": [
+      0.02,
+      0.02,
+      0.55,
+      0.25
+    ]
+  },
+  "openReviewIds": [
+    "H10-Q01",
+    "H10-Q02",
+    "H10-Q03",
+    "H10-Q04",
+    "H10-Q05",
+    "H10-Q06",
+    "H10-Q07"
+  ],
+  "referencedOnlyNotCounted": [
+    "CB19OP001C-01068-DR-EL-0002.pdf",
+    "drawings/supplemental-pims/CB22OP050B-10018-DR-EL-0032_9_IFC_Distributable_01.pdf"
+  ],
+  "limitations": [
+    "MC420A first LV incomer/bus not detailed on reviewed sheets",
+    "PL1 33kV versus CV006/SW411 22kV source unresolved",
+    "Dual-primary winding configuration and source/reverse/earth transfer unconfirmed",
+    "No installed baseline, source availability, switching permission or complete interlock truth table confirmed"
+  ]
+}

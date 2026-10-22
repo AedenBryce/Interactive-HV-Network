@@ -1,7 +1,7 @@
 import type { Asset } from '../session/model';
 
-export function Symbol({ kind, open = false, unknown = false }: { kind: Asset['kind']; open?: boolean; unknown?: boolean }) {
-  if (unknown) return <g fill="none" stroke="currentColor" strokeWidth="3"><path d="M-30 0 H-15 M15 0 H30" /><text textAnchor="middle" y="8" stroke="none" fill="currentColor" fontSize="25">?</text></g>;
+export function Symbol({ kind, open = false, unknown = false, rotation = 0 }: { kind: Asset['kind']; open?: boolean; unknown?: boolean; rotation?: number }) {
+  if (unknown) return <g fill="none" stroke="currentColor" strokeWidth="3"><path d="M-30 0 H-15 M15 0 H30" /><text transform={`rotate(${-rotation})`} textAnchor="middle" y="8" stroke="none" fill="currentColor" fontSize="25">?</text></g>;
   return <g fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
     {kind === 'source' && <><circle r="30" /><path d="M-15 0 Q-7-15 0 0 T15 0" /></>}
     {kind === 'interface' && <><circle r="18" /><path d="M-8 8 L8-8 M-2-8 H8 V2" /></>}

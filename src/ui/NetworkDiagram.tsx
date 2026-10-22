@@ -79,7 +79,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
             <rect x="-45" y="-45" width="90" height="90" rx="6" className={item.id === selectedId ? 'selection active' : 'selection'} />
             {item.sourcePairs || item.earthPairs || item.positions.some(position => position.sourcePairs || position.earthPairs)
               ? <RelationshipsSymbol asset={item} positionId={snapshot.devices[item.id]} layout={view.layout} />
-              : <g transform={`rotate(${view.layout.rotations?.[item.id] ?? 0})`}><Symbol kind={item.kind} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></g>}
+              : <g transform={`rotate(${view.layout.rotations?.[item.id] ?? 0})`}><Symbol kind={item.kind} rotation={view.layout.rotations?.[item.id] ?? 0} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></g>}
             <text x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} y={view.layout.labelOffsets?.[item.id]?.[1] ?? 65} textAnchor="middle">{item.label.split(/ · |\n/).map((line, index) => <tspan key={index} x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} dy={index === 0 ? 0 : 20}>{line}</tspan>)}</text>
           </g>;
         })}

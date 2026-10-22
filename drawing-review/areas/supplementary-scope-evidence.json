@@ -1,0 +1,345 @@
+{
+  "status": "Read-only source scope classification; no installed baseline or acceptance",
+  "reviewDate": "2026-10-22",
+  "method": {
+    "fullPagesVisuallyReviewed": 12,
+    "detailCropsVisuallyReviewed": 18,
+    "fullPageDpi": 90,
+    "cropDpi": 180,
+    "text": "Locator only, no text-only topology",
+    "duplicate": "One original filename resolved by exact SHA-256 relationship; no additional visual/unique-topology count"
+  },
+  "sources": [
+    {
+      "ref": "SUP-S01",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2471.pdf",
+      "page": 1,
+      "sha256": "c079fe729ba65ceaef7716004a75c5e84b6ea0691ff6cc9f401ebad0a5a1d414",
+      "matchesIntakeHash": true,
+      "revision": "6 /04.03.16 / IFC STACKER UPGRADE",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S02",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2664.pdf",
+      "page": 1,
+      "sha256": "6b1bfb79206a424cfe7cee7d6132f48b2f9fa301401f6f8114cb640162f0c6b4",
+      "matchesIntakeHash": true,
+      "revision": "3 /11.09.09 / ISSUED FOR AS BUILT",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S03",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2665.pdf",
+      "page": 1,
+      "sha256": "bb70adf1632d32299ca0ac344d023339a209bcf5089a0805ae32c51d0d84d116",
+      "matchesIntakeHash": true,
+      "revision": "4 /11.09.09 / ISSUED FOR AS BUILT",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S04",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2666.pdf",
+      "page": 1,
+      "sha256": "c929714968f73c8bd2725850cbbaaa2fe01c0d97c9dbbf6a4a056195cf749990",
+      "matchesIntakeHash": true,
+      "revision": "3 /11.09.09 / ISSUED FOR AS BUILT",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S05",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2667.pdf",
+      "page": 1,
+      "sha256": "0b4427463df36d7910afa700c32cbaeabb5d9979c41f7f2d311d8c0c9e139a88",
+      "matchesIntakeHash": true,
+      "revision": "4 /15.07.25 / IFC CP25OP003A",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S06",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2668.pdf",
+      "page": 1,
+      "sha256": "0fa1228a98378034c0f66ce6c0698986281a8c320ffa3d2cc3319c2900e1b6b7",
+      "matchesIntakeHash": true,
+      "revision": "4 /11.09.09 / ISSUED FOR AS BUILT",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S07",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2669.pdf",
+      "page": 1,
+      "sha256": "d94feac75235bf9e37c8394a117bf55cc97781b0cf69b4696c9cc007e64daf97",
+      "matchesIntakeHash": true,
+      "revision": "5 /15.05.26 / AS BUILT",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S08",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2675.pdf",
+      "page": 1,
+      "sha256": "e277d18f3761cf275054aaea4e02323c5ccde763cdaf5d25532416b810e5bfb3",
+      "matchesIntakeHash": true,
+      "revision": "13 /28.11.25 / IFC; red row12 dated18.11.25",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S09",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2678.pdf",
+      "page": 1,
+      "sha256": "69f54a96e4b51779dbdd88879da3723fee39a14d9c48a824f31e92b50f5fcdf4",
+      "matchesIntakeHash": true,
+      "revision": "4 /21.05.25 / IFC CP25OP003A",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S10",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2679.pdf",
+      "page": 1,
+      "sha256": "ea6eb217f4d080b3f5f8f6b0e5a6b5b436dc48e1f11af7f74835387a71b8f339",
+      "matchesIntakeHash": true,
+      "revision": "4 /08.01.26 / IFC CB25OP003A",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S11",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2685.pdf",
+      "page": 1,
+      "sha256": "e6aa7fc04ca602caffa2b158ae4fd5eb7a1b9066be6fe65acecd6e1f63b94ec7",
+      "matchesIntakeHash": true,
+      "revision": "1 /11.09.09 / ISSUED FOR AS BUILT",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    },
+    {
+      "ref": "SUP-S12",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2686.pdf",
+      "page": 1,
+      "sha256": "1eb4967fc7eed1072cd25300d1ab23014c69a320bce17b362c14b191b0031708",
+      "matchesIntakeHash": true,
+      "revision": "2 /05.05.25 / IFC CP25OP003A",
+      "review": "Full page at90dpi and necessary180dpi crop visually inspected",
+      "disposition": "After first LV endpoint: continuation, auxiliaries or outgoing LV; no runtime extension proposed",
+      "newUpstreamSourceExplicitlyEstablished": false
+    }
+  ],
+  "duplicates": [
+    {
+      "ref": "SUP-D01",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465 (2).pdf",
+      "sha256": "32250465eab4a6ec8b5ca14cfb4169911eb7a2cd6c3ce2d2649451da87fa143b",
+      "duplicateOf": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465.pdf",
+      "contentAlreadyVisuallyReviewedAs": "screening-review.md SC-S02",
+      "review": "Hash relationship only; not independently visually reviewed"
+    }
+  ],
+  "crops": [
+    {
+      "source": "11098-07110-EL-DR-2471.pdf",
+      "name": "2471-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2664.pdf",
+      "name": "2664-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2665.pdf",
+      "name": "2665-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2666.pdf",
+      "name": "2666-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2667.pdf",
+      "name": "2667-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2668.pdf",
+      "name": "2668-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2669.pdf",
+      "name": "2669-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2675.pdf",
+      "name": "2675-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2678.pdf",
+      "name": "2678-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2679.pdf",
+      "name": "2679-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2685.pdf",
+      "name": "2685-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2686.pdf",
+      "name": "2686-history",
+      "normalizedBox": [
+        0.02,
+        0.87,
+        0.53,
+        0.99
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2665.pdf",
+      "name": "mc434a-source",
+      "normalizedBox": [
+        0.25,
+        0.04,
+        0.78,
+        0.42
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2668.pdf",
+      "name": "mc434b-source",
+      "normalizedBox": [
+        0.28,
+        0.04,
+        0.8,
+        0.42
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2675.pdf",
+      "name": "mc453-source",
+      "normalizedBox": [
+        0.25,
+        0.02,
+        0.53,
+        0.32
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2678.pdf",
+      "name": "mc411-source",
+      "normalizedBox": [
+        0.11,
+        0.03,
+        0.6,
+        0.43
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2679.pdf",
+      "name": "mc415-source",
+      "normalizedBox": [
+        0.11,
+        0.03,
+        0.6,
+        0.43
+      ]
+    },
+    {
+      "source": "11098-07110-EL-DR-2471.pdf",
+      "name": "sw442-notes",
+      "normalizedBox": [
+        0.79,
+        0.025,
+        0.98,
+        0.17
+      ]
+    }
+  ],
+  "conclusion": "Inference: inspected revisions contain outgoing LV/auxiliary/continuation context after existing first LV endpoints; no new upstream HV/source fact was explicitly established",
+  "limits": [
+    "MC453 subordinate400V board is separate from SW453690V switchboard",
+    "MC411 main-HV-substation location title does not create an HV feeder",
+    "SH102 outgoing LV key note does not define upstream HV interlocks",
+    "IFC/AS BUILT and construction notes do not establish present installation or baseline"
+  ]
+}
