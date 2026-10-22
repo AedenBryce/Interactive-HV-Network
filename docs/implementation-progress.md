@@ -212,6 +212,27 @@ Chrome at 1704 × 1214 on the built-only production preview verified the contact
 
 ### Review and subsequent scope amendment
 
-Separate Standards and Spec reviews of `d753765...90b5663` each identified the stale `.8` owner packet/current inventory as one P2 documentation finding; neither identified an electrical implementation defect in this increment. The existing optional P3 repeated-assignment cleanup in historical `.4` remains unchanged. The owner packet and construction guide are being corrected before the next review target is issued.
+Separate Standards and Spec reviews of `d753765...90b5663` each identified the stale `.8` owner packet/current inventory as one P2 documentation finding; neither identified an electrical implementation defect in this increment. The existing optional P3 repeated-assignment cleanup in historical `.4` remains unchanged. Commit `e649563` corrects the owner packet, construction guide, README and scope record. Both reviewers independently confirmed their P2 finding resolved, with no new hard Standards or actionable Spec findings. The optional historical P3 remains.
 
 The owner subsequently limited station coverage to TF11, TF12 and western TF04, beginning at their SB01/SB02 feeder breakers and retaining those feeders/transformers while excluding station buses, generators and other feeders. See the [scope amendment](specs/interactive-hv-network.md#owner-scope-amendment--22-october-2026). `.11` is the pre-amendment snapshot. Downstream mine/camp exclusion versus retention behind boundaries remains **Unconfirmed**, with a required question pending. The TF03 feeding fact remains recorded historically; it does not override the newer scope instruction. Station DB01/DB01B details are no longer active station-coverage requests under the amended scope. Boundary implementation requires a new immutable version. #25 and #26 remain open; no accepted baseline or whole-model acceptance is claimed.
+
+
+## Station feeder battery limits (`.13`, #25 still open)
+
+Commit `afd043a` applies the owner's confirmed station cut in `construction-2026-10-22.13`: retain SB01 F4 / TF11, SB02 F1 / TF12 and SB02 F4 / western TF04 from their feeder-breaker inputs, including their existing CB/ES/transformer assemblies. Other station feeders, station buses and 23 generator branches are excluded. The separate SB01 spare TF04 is not the retained western transformer. Historical packages and source evidence remain unchanged.
+
+Three abstract supply boundaries (`boundary:tf11`, `boundary:tf12`, `boundary:tf04`) feed the retained breaker inputs. Their representation is explicitly provisional and their availability is null; outside source coupling/backfeed and independent earth coverage remain unconfirmed. No external bus tie or metallic earth bridge is invented. Retained feeder assets, relationships, positions and interlock reviews are unchanged. A retained interlock depending on excluded equipment/source causes an explicit review failure, including nested conditions. Removed mine/village station joins leave unconfirmed coverage at the surviving ports. The earlier TF03 feeding confirmation remains historical evidence, not a runtime station join.
+
+**Unconfirmed:** whether downstream mine-services and village/camp are excluded or retained behind boundaries. They remain provisionally represented while the owner's second scope question is pending. Services DG1/DG7 are separate and retained. Station DB01/DB01B and other excluded feeder details are no longer active coverage requests. See the [station scope record](../drawing-review/supplemental/station-battery-limits-review.md).
+
+The saved current package contains 900 assets, 895 connections, 510 null controls, 8 null sources, 350 coverage boundaries, 127 views, 13 orientation regions and 24 contactors. Fifteen retained cross-area joins comprise 9 supported drawing relationships, 5 owner-confirmed and 1 provisional; the 2 selected-primary33 links are separate. Source inventory is 3 provisional external inputs, 3 camp generators and 2 Services sources. Counts are software inventory, not coverage acceptance.
+
+### Checks and review
+
+- Five station-boundary session checks and six current-package checks passed together. The integration regression first failed with the old station buses present, then passed with the boundary composed. Typecheck and production build pass (748.64 kB application chunk / 219.62 kB gzip; Vite size advisory). The whole-goal full suite remains pending final delivery.
+- Chrome at 1704 × 1214 verified the three-feeder detail, retained breaker identity and disabled controls. Overlapping source/output captions found in intermediate `.12` were corrected in `.13`; its electrical inventory is unchanged. The current scenario is self-contained (8,286,268 bytes).
+- Matching `.13` reopened with restoration and reset enabled. Historical `.11` reopened against `.13` with both versions shown, view-only mode, reset disabled and GEN23 Enable/Disable disabled despite its removal from current scope. Start current model returned to `.13`. No warning/error console entries were returned in the production tab.
+- **Standards:** no new hard violations or actionable Fowler heuristics in `e649563..afd043a`, reviewed within `d753765...afd043a`. The existing optional historical P3 remains.
+- **Spec:** no actionable implementation defects in that increment. Review confirmed that unresolved downstream scope, baseline and owner acceptance remain gates. Separate historical area packages do not expand the current whole-model boundary.
+
+#25 and #26 remain open. No whole-model acceptance or agreed starting configuration has been recorded. No remote push, PR or GPT Site deployment is claimed.
