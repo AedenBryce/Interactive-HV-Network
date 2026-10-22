@@ -59,11 +59,38 @@ These seven software slices are implemented locally and closed in GitHub after r
 - There are 95 passing targeted checks across ten session test files. Files were run individually; the whole-goal final full-suite check remains pending. Production build and typecheck pass.
 - The browser download-event wait stalled once; the actual downloaded file was verified on disk. Subsequent direct Save and concurrent file-chooser handling completed successfully. This was not reported as a successful check until the saved content and reopened UI were observed.
 
+## GitHub #12–#15: four provisional site areas
+
+Implemented locally in commit `58df8a7`, reviewed against the approved baseline `d753765`, and closed in GitHub. API verification confirms all six acceptance items checked on each ticket and no open blockers. These construction slices do not establish installed-network correctness or owner acceptance.
+
+| Ticket | Runtime model | Targeted session checks |
+| --- | --- | --- |
+| #12 | SW411 bus sections, incomers, tie, earth devices, feeder aliases and unconfirmed external interfaces | 30 passed |
+| #13 | Station SB01/SB02, 23 generator branches, separate tie breakers/fuse and 33 kV line interfaces | 11 passed |
+| #14 | SW431/Crushing No.1, SW435 interface, transformer branches and seven distinct final LV buses | 5 passed |
+| #15 | SW435/Crushing No.2, HPGR intermediate HV, six final LV buses and separate unresolved MV converter groups | 6 passed |
+
+All 52 checks passed together as a targeted four-file run. The production build passed after catalog integration. A subsequent station label-only presentation adjustment has a distinct model version (`construction-2026-10-22.2`); its 11 checks passed again.
+
+The app distinguishes these real construction models from the synthetic demonstrations. Drawing aliases, exact evidence references, open questions, unknown device/source baselines and unconfirmed coverage remain inspectable. Unresolved physical interlocks disable affected controls. No converter AC/DC shortcut or neutral/MEN-to-phase earth connection is invented.
+
+Browser verification used the existing Chrome tab at `http://127.0.0.1:5173/`, at 1704 × 1214. The Browser plugin was not available; CUA's documented Playwright/Chrome controls were used. Model selection, station generator/detail/line navigation, source Enable and Undo, disabled unresolved breaker controls, distinct Crushing LV buses, and HPGR converter terminal inspection were exercised. A downloaded HPGR scenario reopened with its original model and unresolved relationships. No warning/error console messages were returned during the fresh check. The station generator earth-switch labels were moved clear of breaker labels and visually rechecked. Narrow layouts were checked earlier for the shared application; these four new area layouts have not each been checked at a narrow viewport.
+
+### Standards
+
+No material documented-standard violations found in `d753765...58df8a7`. Evidence, nullable baselines, blocked unresolved controls and separate transformer channels follow ADRs 0003–0005. Fowler heuristics were considered; repeated declarative records and area helpers did not warrant a material finding in this scope.
+
+### Spec
+
+No material findings for #12–#15 in `d753765...58df8a7`. Documented topology, device/winding identities, aliases, continuation gaps and provisional state/interlock information are preserved. No scope creep identified. Whole-network assembly, missing-source reconciliation and owner acceptance remain pending under later tickets.
+
+Review summary: Standards 0 material findings; Spec 0 material findings. Neither review establishes installed-network acceptance.
+
 ## Current area-model work
 
-Ten of 25 implementation tickets are closed (#2–#11). The 13 real-area models, whole-network reconciliation/owner acceptance and final delivery remain required.
+Fourteen of 25 implementation tickets are closed (#2–#15). Nine real-area slices, whole-network reconciliation/owner acceptance and final delivery remain required.
 
-SW411, power station/33 kV, Crushing 1, Crushing 2/HPGR and screening evidence reviews are prepared. Desands/laboratory and stockpile/wet-plant reviews are in progress. These local reviews retain exact source references and discrepancies; they do not establish installed status, starting states or owner acceptance. Counts from separate reviews must be deduplicated before updating whole-drawing coverage.
+Source reviews are prepared for Screening, Desands/laboratory, stockpile/wet plant, train loading and CV006. Screening and Desands/laboratory runtime models and the western-hopper source review are being built in parallel in separately owned files. The coverage register names all 141 original PDFs and their dispositions; 94 files have explicit completed area-review source rows. That count describes recorded inspection scope, not blanket topology approval or model acceptance.
 
-SW411 runtime construction has started with unconfirmed baseline/source/interlock records. Its source and downstream interfaces must retain incomplete coverage until the adjoining areas are reconciled.
+An additional Farwest revision-9 drawing was retrieved from PIMS and visually inspected as a supplemental source lead. It is outside the original 141-file count and has not been incorporated into the runtime model. Its interfaces, V1 extent and final LV coverage require reconciliation. The station manual download was blocked by the browser; the missing DB01 drawing revision/topology remains unconfirmed. See `drawing-review/supplemental/farwest-review.md`.
 

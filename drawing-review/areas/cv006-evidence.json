@@ -1,0 +1,166 @@
+{
+  "area": "CV006 / RM406 / RM410 and OHL interfaces",
+  "issue": 20,
+  "reviewDate": "2026-10-22",
+  "status": "source-review-only-unaccepted",
+  "narrative": "drawing-review/areas/cv006-review.md",
+  "coverage": {
+    "distinctFilesVisuallyInspectedThisReview": 10,
+    "distinctPagesVisuallyInspectedThisReview": 10,
+    "enlargedCropsInspected": 11,
+    "previousInitialReviewIdsRevisited": {
+      "CV-S06": "S6",
+      "CV-S07": "S1",
+      "CV-S08": "S2",
+      "CV-S09": "S3"
+    },
+    "globalCoverageCountUpdated": false
+  },
+  "sources": [
+    {
+      "id": "CV-S01",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0001.pdf",
+      "sha256": "829c088a3e21390201c627495f5d98e9633c91974894d07657911099bec2ed4e",
+      "printedRevision": "6",
+      "printedDate": "28.01.25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Whole CV006 power distribution; 22 kV OHL A, RM410 B-C / 1-3, RM406 B-C / 9-11, RM419/RM418 centre"
+    },
+    {
+      "id": "CV-S02",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0002.pdf",
+      "sha256": "7ede7a5edfa8c7cb42a07d0557c544e6d4b073eef192c8aaaf0480a49d32370a",
+      "printedRevision": "4",
+      "printedDate": "28.01.25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Head RM406; incoming pole 57 A-B / 4-5; three feeder branches B-E / 6-11; historical note1 F / 11-12"
+    },
+    {
+      "id": "CV-S03",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0003.pdf",
+      "sha256": "508bad1e6a9d24762dd083fac9c55723c21b89cc23224f359205002ed77785f2",
+      "printedRevision": "2",
+      "printedDate": "17.12.20",
+      "printedStatus": "AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Head MC406A; TF406B A-B / 5-6; incomer/neutral C / 5-8; 415 V phase bus C-D"
+    },
+    {
+      "id": "CV-S04",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0004.pdf",
+      "sha256": "6bfb649b99c5d08f96277b5acd85630d6215cc840f536165bd0c531dac9c3c71",
+      "printedRevision": "6",
+      "printedDate": "28.01.25",
+      "printedStatus": "AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Tail RM410; pole 49-40 incoming A-B / 4-5; transformer branches B-F / 6-9; RM419 continuation E / 10-12"
+    },
+    {
+      "id": "CV-S05",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0005.pdf",
+      "sha256": "af5b30aa11f9dc96329c0ae012f62c930d5a04dbfde303bf6adb0dee18116df3",
+      "printedRevision": "2A redline; underlying 2",
+      "printedDate": "11.01.22 redline; underlying 27.08.21",
+      "printedStatus": "UPDATED TIER NUMBER AND MCCB SIZE; AS BUILT changes-as-marked stamp",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC410B; source MC410A A / 5-7; incomer and 415 V phase bar C-D; red MEN-removal annotation C / 6-8; raster/markup"
+    },
+    {
+      "id": "CV-S06",
+      "path": "drawings/Asset Drawing Repo/CB21OP055B-10016-DR-EL-0089.pdf",
+      "sha256": "a29fa147e05e9d13b40fee274bfe97134a97ed788f2c54581b3861a4af260aa9",
+      "printedRevision": "0",
+      "printedDate": "10.06.22",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "33 kV line; station TF04/AMR C-D / 1-7; pole 49-38-1 tie D-E / 7; IOP/Hopper10/Norfolk/Bigge routes E-G / 7-11"
+    },
+    {
+      "id": "CV-S07",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0010.pdf",
+      "sha256": "cd77222ad84e15a9ca13d2120994db03be9765ed1a923595bc17bacca4a2795f",
+      "printedRevision": "0",
+      "printedDate": "27.10.25",
+      "printedStatus": "ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Overview sheet1; SW411 tier3 B / 3; OHL C / 2-7; RM406/RM410 C-E / 4-7; RM419/RM418 E-G / 9-12"
+    },
+    {
+      "id": "CV-S08",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "printedRevision": "0",
+      "printedDate": "27.10.25",
+      "printedStatus": "ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Overview sheet2; Hopper10/RM420 C-D / 1-2 and explicit 33 kV line reference above it"
+    },
+    {
+      "id": "CV-S09",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "printedRevision": "7",
+      "printedDate": "28/01/25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW411 tier3 OHL WEST, CB SPARE / ES SPARE and CV006 reference, D-G / 4-5"
+    },
+    {
+      "id": "CV-S10",
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0001.pdf",
+      "sha256": "2fafa3bd57d8706a0c7ad592b3f961bbc2f3d91915cb04224df573fe088f09d8",
+      "printedRevision": "6",
+      "printedDate": "28/01/25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Hopper7/8 interface; RM418 incoming RM419-SW02 A / 6-7; RM406-CB03 supply to SS416-HV416 C-E / 9-10"
+    }
+  ],
+  "openReviewIds": [
+    "CV-R01",
+    "CV-R02",
+    "CV-R03",
+    "CV-R04",
+    "CV-R05",
+    "CV-R06",
+    "CV-R07",
+    "CV-R08",
+    "CV-R09",
+    "CV-R10",
+    "CV-R11"
+  ],
+  "runtimeModelCreated": false,
+  "ownerAcceptance": false
+}

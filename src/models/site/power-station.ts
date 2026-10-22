@@ -260,6 +260,7 @@ for (const zone of ['sb01', 'sb02'] as const) {
     group.forEach(([key, ids], index) => {
       const x = 130 + index * 260; const [source, cb, es] = ids;
       branchLayout.assets[source] = [x, 80]; branchLayout.assets[cb] = [x, 300]; branchLayout.assets[es] = [x + 85, 190];
+      branchLayout.labelOffsets![es] = [95, 0];
       branchLayout.terminals[`${source}:out`] = [x, 110]; branchLayout.terminals[`${cb}:in`] = [x, 270]; branchLayout.terminals[`${cb}:out`] = [x, 330]; branchLayout.terminals[`${es}:in`] = [x + 55, 190]; branchLayout.terminals[`${es}:out`] = [x + 115, 190];
       branchLayout.bends![`${key}:bus-link`] = [[x, 500]]; branchLayout.bends![`${es}:branch`] = [[x, 190]];
     });
@@ -268,7 +269,7 @@ for (const zone of ['sb01', 'sb02'] as const) {
 }
 
 export const powerStationModel: NetworkModel = {
-  id: 'site-power-station-line', version: 'construction-2026-10-22.1', name: 'Station and 33 kV line — provisional', synthetic: false,
+  id: 'site-power-station-line', version: 'construction-2026-10-22.2', name: 'Station and 33 kV line — provisional', synthetic: false,
   assets, connections, sources, earths, boundaries, evidence, reviews,
   starting: { devices, sources: availability },
   interlocks: { reviews: assets.filter(asset => asset.positions.length).map(asset => ({ assetId: asset.id, status: 'unresolved', note: asset.id.startsWith('line33:') ? 'Unconfirmed line interlock/position conditions. PL1 legend and notes 1-5 do not establish switching permission.' : 'Unconfirmed physical interlock conditions. PS1 dashed device/tie associations have no complete written key or operating condition.', evidence: [{ ...(asset.id.startsWith('line33:') ? PL1 : PS1), clause: asset.id.startsWith('line33:') ? 'Legend and general notes 1-5, right of page' : 'A-G, dashed device linkages; C-E, tie earth-switch association' }] })), rules: [] },
