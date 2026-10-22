@@ -2,11 +2,10 @@ import { singleSupply, alternateSupplies } from '../models/synthetic';
 import { earthFixture } from '../models/earth-fixture';
 import { interlockFixture } from '../models/interlock-fixture';
 import { uncertaintyFixture } from '../models/uncertainty-fixture';
+import { relationshipsFixture } from '../models/relationships-fixture';
 import { singleSupplyLayout, alternateLayout, earthLayout } from './diagram';
 import type { DiagramLayout, DiagramPresentation, DiagramView } from './diagram';
 import type { NetworkModel } from '../session/model';
-
-export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture];
 
 function overview(model: NetworkModel, layout: DiagramLayout, bounds: DiagramView['bounds']): DiagramView {
   return { id: 'overview', label: 'Network overview', assetIds: model.assets.map(asset => asset.id), layout, bounds };
@@ -47,3 +46,13 @@ const uncertaintyLayout: DiagramLayout = {
   bends: { ...earthLayout.bends, 'candidate-feed': [[650, 140], [650, 300]], 'unknown-source-feed': [[150, 480], [150, 550], [800, 550], [800, 440]] },
 };
 diagramPresentations[uncertaintyFixture.id] = { overviewId: 'overview', views: [overview(uncertaintyFixture, uncertaintyLayout, [0, 40, 830, 560])] };
+
+const relationshipsLayout: DiagramLayout = {
+  assets: { 'supply-a': [70, 200], 'cb-01': [280, 200], 'tf-01': [510, 200], 'lv-bus-a': [740, 160], 'lv-bus-b': [740, 360], 'supply-b': [300, 470] },
+  terminals: { 'source-a-out': [100, 200], 'ds-in': [245, 200], 'ds-out': [315, 200], 'ds-earth': [280, 240], 'tf-hv': [475, 200], 'tf-lv-a': [545, 180], 'tf-lv-b': [545, 230], 'lv-a': [740, 160], 'lv-b': [740, 360], 'source-b-out': [330, 470] },
+  bends: { 'winding-a-bus': [[620, 180], [620, 160]], 'winding-b-bus': [[620, 230], [620, 360]], 'lv-backfeed': [[680, 470], [680, 160]] },
+  labelOffsets: { 'lv-bus-b': [-60, 65] },
+};
+diagramPresentations[relationshipsFixture.id] = { overviewId: 'overview', views: [overview(relationshipsFixture, relationshipsLayout, [0, 70, 900, 520])] };
+
+export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture, relationshipsFixture].map(model => ({ ...model, presentation: diagramPresentations[model.id] }));

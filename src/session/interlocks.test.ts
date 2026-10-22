@@ -103,6 +103,15 @@ describe('physical interlock conditions through the simulation session', () => {
     expect(session.snapshot()).toEqual(before);
   });
 
+  it('blocks a required unconfirmed device position rather than treating it as Open', () => {
+    const fixture = structuredClone(interlockFixture);
+    const session = new SimulationSession({ ...fixture, starting: { ...fixture.starting, devices: { ...fixture.starting.devices, 'es-01': null } } });
+    session.changeDevice('cb-01', 'open');
+    const before = session.snapshot();
+    expect(session.changeDevice('cb-01', 'closed')).toMatchObject({ ok: false, error: expect.stringContaining('Unconfirmed interlock condition') });
+    expect(session.snapshot()).toEqual(before);
+  });
+
   it('exposes rule evidence separately from review evidence for inspection', () => {
     const fixture: NetworkModel = structuredClone(interlockFixture);
     fixture.interlocks!.rules[0].evidence = [{ document: 'Fictional fixture rule', revision: '1', page: 2, clause: 'CB-close' }];

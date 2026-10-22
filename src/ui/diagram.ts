@@ -4,11 +4,8 @@ export const singleSupplyLayout = {
   terminals: { 'source-out': [110, 300], 'cb-in': [280, 300], 'cb-out': [340, 300], 'tf-hv': [487, 300], 'tf-lv': [553, 300], lv: [750, 300] },
 } satisfies { assets: Record<string, [number, number]>; terminals: Record<string, [number, number]> };
 
-export type DiagramLayout = { assets: Record<string, [number, number]>; terminals: Record<string, [number, number]>; rotations?: Record<string, number>; labelOffsets?: Record<string, [number, number]>; bends?: Record<string, [number, number][]> };
-
-export type DiagramBoundary = { connectionId: string; remoteAssetId: string; targetViewId: string; position: [number, number] };
-export type DiagramView = { id: string; label: string; assetIds: string[]; layout: DiagramLayout; bounds: [number, number, number, number]; boundaries?: DiagramBoundary[] };
-export type DiagramPresentation = { overviewId: string; views: DiagramView[] };
+import type { DiagramLayout } from '../session/presentation';
+export type { DiagramLayout, DiagramBoundary, DiagramView, DiagramPresentation } from '../session/presentation';
 
 export const alternateLayout: DiagramLayout = {
   assets: { 'supply-a': [70, 140], 'cb-01': [240, 140], 'bus-a': [420, 140], 'tf-01': [590, 140], 'lv-bus': [760, 140], 'supply-b': [70, 440], 'cb-02': [240, 440], 'bus-b': [420, 440], 'tie-01': [420, 290], 'loop-01': [600, 440] },

@@ -59,8 +59,27 @@ describe('material uncertainty in a provisional model', () => {
     };
     model.starting.devices['cb-01'] = 'open';
     const session = new SimulationSession(model);
-    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', sourceIds: [], sourceBoundaryIds: ['off-page'], earthStatus: 'disconnected' });
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', sourceIds: [], sourceBoundaryIds: ['off-page'], earthStatus: 'unconfirmed' });
     expect(session.snapshot().connectivity['supply-a']).toMatchObject({ sourceStatus: 'connected', sourceBoundaryIds: [] });
+  });
+
+  it('retains the evidence and review of an uncertain earth route independently of source paths', () => {
+    const model: NetworkModel = structuredClone(earthFixture);
+    model.evidence = [{ id: 'earth-route-evidence', status: 'provisional', summary: 'Unconfirmed earth branch', references: [{ document: 'Fictional earth drawing', revision: '1', page: 2 }] }];
+    model.reviews = [{ id: 'earth-route-review', status: 'open', question: 'Confirm this earth branch', evidenceIds: ['earth-route-evidence'] }];
+    Object.assign(model.connections.find(connection => connection.id === 'section-earth')!, { knowledge: 'provisional', evidenceIds: ['earth-route-evidence'], reviewIds: ['earth-route-review'] });
+    model.starting.devices['es-01'] = 'closed';
+    const result = new SimulationSession(model).snapshot().connectivity['lv-bus'];
+    expect(result).toMatchObject({ sourceStatus: 'connected', earthStatus: 'unconfirmed', evidenceIds: ['earth-route-evidence'], reviewIds: ['earth-route-review'] });
+  });
+
+  it('does not trust an unsupported claim of complete boundary coverage', () => {
+    const model: NetworkModel = structuredClone(singleSupply);
+    model.starting.devices['cb-01'] = 'open';
+    model.boundaries = [{ id: 'off-page', label: 'Unreviewed continuation', terminal: 'lv', sourceCoverage: 'complete', earthCoverage: 'complete', knowledge: 'provisional' }];
+    const result = new SimulationSession(model).snapshot();
+    expect(result.connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed', sourceBoundaryIds: ['off-page'], earthBoundaryIds: ['off-page'] });
+    expect(result.connectionResults['transformer-lv']).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed' });
   });
 
   it('does not promote provisional evidence or an open review into a supported or confirmed fact', () => {

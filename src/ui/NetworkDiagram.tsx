@@ -4,6 +4,7 @@ import type { SessionSnapshot } from '../session/session';
 import type { SourcePath } from '../session/connectivity';
 import type { DiagramPresentation } from './diagram';
 import { Symbol } from './Symbol';
+import { RelationshipsSymbol } from './RelationshipsSymbol';
 import './navigation.css';
 
 type Props = { snapshot: SessionSnapshot; selectedId: string; tracedPath?: SourcePath; presentation: DiagramPresentation; onSelectAsset: (id: string) => void };
@@ -76,7 +77,9 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
           return <g key={item.id} transform={`translate(${x},${y})`} role="button" tabIndex={0} data-selectable="true" aria-label={`Select ${item.label} on diagram`} aria-pressed={item.id === selectedId} className="diagram-asset" onClick={() => onSelectAsset(item.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id); } }}>
             {changedAssets.has(item.id) && <rect x="-48" y="-48" width="96" height="96" rx="8" className="impact-outline" />}
             <rect x="-45" y="-45" width="90" height="90" rx="6" className={item.id === selectedId ? 'selection active' : 'selection'} />
-            <g transform={`rotate(${view.layout.rotations?.[item.id] ?? 0})`}><Symbol kind={item.kind} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></g>
+            {item.sourcePairs || item.earthPairs || item.positions.some(position => position.sourcePairs || position.earthPairs)
+              ? <RelationshipsSymbol asset={item} positionId={snapshot.devices[item.id]} layout={view.layout} />
+              : <g transform={`rotate(${view.layout.rotations?.[item.id] ?? 0})`}><Symbol kind={item.kind} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></g>}
             <text x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} y={view.layout.labelOffsets?.[item.id]?.[1] ?? 65} textAnchor="middle">{item.label}</text>
           </g>;
         })}
@@ -88,6 +91,6 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
       </svg>
     </div>
     {!!view.boundaries?.length && <section className="boundary-list" aria-label="Connections beyond this view"><h3>Connections beyond this view</h3>{view.boundaries.map(boundary => <button key={boundary.connectionId} onClick={() => navigate(boundary.targetViewId)}><strong>{boundary.connectionId}</strong><span>→ {labels.get(boundary.remoteAssetId)} · {presentation.views.find(item => item.id === boundary.targetViewId)?.label}</span></button>)}</section>}
-    <div className="legend" aria-label="Diagram legend"><span><i className="dot connected" />Source connected</span><span><i className="dot disconnected" />No source connection</span>{snapshot.model.earths?.length ? <span><i className="dot earth-dot" />Earth connected (dashed)</span> : null}{Object.values(snapshot.connectionResults).some(result => result.unconfirmed) && <span><i className="dot unconfirmed-dot" />Unconfirmed (amber dashes)</span>}{snapshot.conflicts.length > 0 && <span><i className="dot conflict-dot" />Source-to-earth conflict</span>}{snapshot.impact.length > 0 && <span><i className="dot impact-dot" />Changed path or asset</span>}{tracedPath && <span><i className="dot trace-dot" />Selected supply path</span>}</div>
+    <div className="legend" aria-label="Diagram legend"><span><i className="dot connected" />Source connected</span><span><i className="dot disconnected" />No source connection</span>{snapshot.model.earths?.length ? <span><i className="dot earth-dot" />Earth connected (dashed)</span> : null}{snapshot.model.assets.some(asset => asset.sourcePairs || asset.earthPairs) && <span>Inside equipment: violet = declared source transfer; blue dashes = declared earth relationship</span>}{Object.values(snapshot.connectionResults).some(result => result.unconfirmed) && <span><i className="dot unconfirmed-dot" />Unconfirmed (amber dashes)</span>}{snapshot.conflicts.length > 0 && <span><i className="dot conflict-dot" />Source-to-earth conflict</span>}{snapshot.impact.length > 0 && <span><i className="dot impact-dot" />Changed path or asset</span>}{tracedPath && <span><i className="dot trace-dot" />Selected supply path</span>}</div>
   </main>;
 }

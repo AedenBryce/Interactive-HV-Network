@@ -16,6 +16,8 @@ The conservative graph is an upper bound. Candidate paths can combine unresolved
 
 Represent off-page coverage explicitly for source and earth information. Missing coverage can propagate an unconfirmed result through represented possible connections without inventing an enabled external source or declaring the boundary disconnected.
 
+An unsupported claim that coverage is complete remains unconfirmed. Track material earth-route edges independently of source-route edges so an uncertain earth branch retains its own evidence and review questions, including branches that are absent from a source-to-asset path.
+
 Connection rendering consumes session results. A known source path remains identifiable while amber marks show other unresolved information. Asset and connection inspectors expose linked evidence and review questions. PDFs are not a runtime dependency.
 
 ## Acceptance boundary

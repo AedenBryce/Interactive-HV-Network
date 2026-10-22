@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { interlockSchema, validateInterlocks } from './interlock-model';
 import { claimFields, evidenceRecordSchema, reviewRecordSchema } from './evidence';
+import { presentationSchema, validatePresentation } from './presentation';
 
 const id = z.string().min(1);
 const pair = z.tuple([id, id]);
@@ -10,7 +11,9 @@ const assetSchema = z.strictObject({
   kind: z.enum(['source', 'breaker', 'disconnector', 'transformer', 'bus', 'earth-switch']),
   terminals: z.array(id).min(1),
   conductivePairs: z.array(pair),
-  positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair) })),
+  sourcePairs: z.array(pair).optional(),
+  earthPairs: z.array(pair).optional(),
+  positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
 });
 
 export const modelSchema = z.strictObject({
@@ -23,10 +26,12 @@ export const modelSchema = z.strictObject({
   reviews: z.array(reviewRecordSchema).optional(),
   boundaries: z.array(z.strictObject({ id, label: id, terminal: id, sourceCoverage: z.enum(['unconfirmed', 'complete']), earthCoverage: z.enum(['unconfirmed', 'complete']), ...claimFields })).optional(),
   interlocks: interlockSchema.optional(),
+  presentation: presentationSchema.optional(),
   starting: z.strictObject({ devices: z.record(id, id.nullable()), sources: z.record(id, z.boolean().nullable()) }),
 }).superRefine((model, context) => {
   const error = (message: string) => context.addIssue({ code: 'custom', message });
   validateInterlocks(model, error);
+  validatePresentation(model, error);
   const unique = (values: string[], label: string) => {
     if (new Set(values).size !== values.length) error(`Duplicate ${label}.`);
   };
@@ -59,8 +64,12 @@ export const modelSchema = z.strictObject({
   }
   for (const asset of model.assets) {
     unique(asset.positions.map(p => p.id), `position in ${asset.id}`);
-    for (const [a, b] of [...asset.conductivePairs, ...asset.positions.flatMap(p => p.pairs)]) {
+    for (const [a, b] of [...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? []), ...asset.positions.flatMap(p => [...p.pairs, ...(p.sourcePairs ?? []), ...(p.earthPairs ?? [])])]) {
       if (!asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Relationship in ${asset.id} references an external or missing terminal.`);
+    }
+    if (!model.synthetic && asset.kind === 'transformer') {
+      if (asset.sourcePairs === undefined || asset.earthPairs === undefined || asset.positions.some(position => position.sourcePairs === undefined || position.earthPairs === undefined)) error(`Transformer ${asset.id} requires explicit source and earth relationships.`);
+      if (asset.conductivePairs.length || asset.positions.some(position => position.pairs.length)) error(`Transformer ${asset.id} cannot use shared conductive relationships; specify source and earth relationships separately.`);
     }
     if (asset.positions.length && (!Object.hasOwn(model.starting.devices, asset.id) || (model.starting.devices[asset.id] !== null && !asset.positions.some(p => p.id === model.starting.devices[asset.id])))) error(`Missing or unsupported starting position for ${asset.id}.`);
   }

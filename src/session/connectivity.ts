@@ -8,15 +8,17 @@ export type WalkStep = { previous: string | null; edge: GraphEdge | null };
 export type SourcePath = { sourceId: string; terminalId: string; terminals: string[]; connectionIds: string[]; assetIds: string[] };
 export type Connectivity = { sourceIds: string[]; terminalSources: Record<string, string[]>; paths: SourcePath[]; routeEdgeIds: string[] };
 
-export function buildGraph(model: NetworkModel, devices: DeviceStates, options: { includeUnconfirmed?: boolean } = {}): ActiveGraph {
+export function buildGraph(model: NetworkModel, devices: DeviceStates, options: { includeUnconfirmed?: boolean; channel?: 'source' | 'earth' } = {}): ActiveGraph {
   const edges: GraphEdge[] = model.connections.filter(c => options.includeUnconfirmed || isSupported(model, c)).map(c => ({ id: `connection:${c.id}`, from: c.from, to: c.to, connectionId: c.id }));
   for (const asset of model.assets) {
     if (!options.includeUnconfirmed && !isSupported(model, asset)) continue;
     const pairKey = (pair: [string, string]) => JSON.stringify([...pair].sort());
+    const channelPairs = (item: { sourcePairs?: [string, string][]; earthPairs?: [string, string][] }) => (options.channel === 'earth' ? item.earthPairs : item.sourcePairs) ?? [];
+    const positionRelationships = asset.positions.map(position => ({ id: position.id, pairs: [...position.pairs, ...channelPairs(position)] }));
     const positionPairs = devices[asset.id] === null
-      ? options.includeUnconfirmed ? asset.positions.flatMap(p => p.pairs) : (asset.positions[0]?.pairs ?? []).filter(pair => asset.positions.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
-      : asset.positions.find(p => p.id === devices[asset.id])?.pairs ?? [];
-    const pairs = new Map([...asset.conductivePairs, ...positionPairs].map(pair => [pairKey(pair), pair]));
+      ? options.includeUnconfirmed ? positionRelationships.flatMap(p => p.pairs) : (positionRelationships[0]?.pairs ?? []).filter(pair => positionRelationships.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
+      : positionRelationships.find(p => p.id === devices[asset.id])?.pairs ?? [];
+    const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs].map(pair => [pairKey(pair), pair]));
     for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
   }
   return { terminals: model.assets.flatMap(a => a.terminals), edges };

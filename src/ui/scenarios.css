@@ -1,0 +1,7 @@
+.scenario-controls { padding-top: 16px; border-top: 1px solid #d9dfe5; }
+.scenario-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.scenario-buttons button, .load-scenario { padding: 8px 10px; border: 1px solid #c9d2dc; border-radius: 5px; background: white; color: #102a43; font: inherit; cursor: pointer; }
+.load-scenario { display: block; }
+.load-scenario input { display: block; width: 180px; margin-top: 6px; font-size: 12px; }
+.historical-notice { padding: 12px; margin-bottom: 12px; border: 1px solid #b5661c; border-radius: 6px; background: #fff3e6; }
+.historical-notice p { margin-bottom: 0; }
