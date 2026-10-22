@@ -1,0 +1,5 @@
+.interlock-details { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.interlock-details p, .interlock-details li { margin-top: 8px; font-size: 14px; color: #526279; }
+.interlock-details ul { padding-left: 18px; margin-block: 8px 0; }
+.interlock-details.unresolved { padding: 12px; border: 1px solid #a26b16; border-radius: 6px; background: #fff8e8; }
+.interlock-details.unresolved h3 { color: #795017; }

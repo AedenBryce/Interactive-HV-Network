@@ -1,27 +1,34 @@
 import { modelSchema } from './model';
-import type { NetworkModel } from './model';
+import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { buildGraph, evaluateSources } from './connectivity';
 import type { Connectivity, SourcePath } from './connectivity';
 import { evaluateEarths } from './earth';
 import type { EarthConnectivity, SourceEarthConflict } from './earth';
+import { evaluateInterlocks } from './interlocks';
+import type { SwitchingStatus } from './interlocks';
+import { evaluateUncertainty } from './uncertainty';
+import type { UncertaintyConnectivity, ConnectionResult } from './uncertainty';
 
-export type AssetConnectivity = Connectivity & EarthConnectivity;
+export type AssetConnectivity = Connectivity & EarthConnectivity & UncertaintyConnectivity;
 
 export type SessionSnapshot = {
   model: NetworkModel;
-  devices: Record<string, string>;
-  sources: Record<string, boolean>;
+  devices: DeviceStates;
+  sources: SourceStates;
   connectivity: Record<string, AssetConnectivity>;
   impact: Impact[];
   conflicts: SourceEarthConflict[];
+  possibleConflicts: SourceEarthConflict[];
+  switching: Record<string, SwitchingStatus>;
+  connectionResults: Record<string, ConnectionResult>;
 };
 export type Impact = { assetId: string; connectivityChanged: boolean; routesChanged: boolean; before: AssetConnectivity; after: AssetConnectivity };
 export type ActionResult = { ok: true } | { ok: false; error: string };
 
 export class SimulationSession {
   #model: NetworkModel;
-  #devices: Record<string, string>;
-  #sources: Record<string, boolean>;
+  #devices: DeviceStates;
+  #sources: SourceStates;
   #impact: Impact[] = [];
 
   constructor(model: unknown) {
@@ -45,6 +52,8 @@ export class SimulationSession {
     if (!asset?.positions.some(state => state.id === position)) {
       return { ok: false, error: `Unsupported position ${position} for ${assetId}.` };
     }
+    const option = evaluateInterlocks(this.#model, this.#devices, this.#sources)[assetId].positions.find(option => option.id === position)!;
+    if (!option.allowed) return { ok: false, error: option.reason ?? 'Switching is blocked by the represented interlock.' };
     const before = this.snapshot().connectivity;
     this.#devices[assetId] = position;
     this.#recordImpact(before);
@@ -67,8 +76,8 @@ export class SimulationSession {
   #recordImpact(before: Record<string, AssetConnectivity>) {
     const after = this.snapshot().connectivity;
     this.#impact = this.#model.assets.flatMap(asset => {
-      const classification = (result: AssetConnectivity) => [result.sourceIds.length > 0, result.earthIds.length > 0, result.conflictSourceIds.length > 0];
-      const explanation = (result: AssetConnectivity) => [result.terminalSources, result.terminalEarths, result.conflictSourceIds, result.routeEdgeIds];
+      const classification = (result: AssetConnectivity) => [result.sourceStatus, result.earthStatus, result.conflictSourceIds.length > 0 ? 'conflict' : result.possibleConflictSourceIds.length > 0 ? 'unconfirmed' : 'none'];
+      const explanation = (result: AssetConnectivity) => [result.terminalSources, result.terminalEarths, result.conflictSourceIds, result.routeEdgeIds, result.possibleSourceIds, result.possibleEarthIds, result.sourceBoundaryIds, result.earthBoundaryIds, result.hasSourceUncertainty, result.hasEarthUncertainty];
       const connectivityChanged = JSON.stringify(classification(before[asset.id])) !== JSON.stringify(classification(after[asset.id]));
       const routesChanged = JSON.stringify(explanation(before[asset.id])) !== JSON.stringify(explanation(after[asset.id]));
       return connectivityChanged || routesChanged ? [{ assetId: asset.id, connectivityChanged, routesChanged, before: before[asset.id], after: after[asset.id] }] : [];
@@ -79,11 +88,16 @@ export class SimulationSession {
     const graph = buildGraph(this.#model, this.#devices);
     const sourceConnectivity = evaluateSources(this.#model, graph, this.#sources);
     const earths = evaluateEarths(this.#model, graph, this.#sources);
+    const definite = Object.fromEntries(this.#model.assets.map(asset => [asset.id, { ...sourceConnectivity[asset.id], ...earths.connectivity[asset.id] }]));
+    const uncertainty = evaluateUncertainty(this.#model, this.#devices, this.#sources, definite, earths.conflicts);
     return structuredClone({
       model: this.#model, devices: this.#devices, sources: this.#sources,
-      connectivity: Object.fromEntries(this.#model.assets.map(asset => [asset.id, { ...sourceConnectivity[asset.id], ...earths.connectivity[asset.id] }])),
+      connectivity: Object.fromEntries(this.#model.assets.map(asset => [asset.id, { ...definite[asset.id], ...uncertainty.connectivity[asset.id] }])),
       impact: this.#impact,
       conflicts: earths.conflicts,
+      possibleConflicts: uncertainty.possibleConflicts,
+      switching: evaluateInterlocks(this.#model, this.#devices, this.#sources),
+      connectionResults: uncertainty.connectionResults,
     });
   }
 }

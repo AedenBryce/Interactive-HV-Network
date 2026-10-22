@@ -2,7 +2,7 @@ import type { NetworkModel } from '../session/model';
 
 // Explicit fictional relationships: these are software examples, not site evidence.
 export const singleSupply: NetworkModel = {
-  id: 'single-supply', version: 'fixture-1.0', name: 'Synthetic network', synthetic: true,
+  id: 'single-supply', version: 'fixture-1.1', name: 'Synthetic network', synthetic: true,
   assets: [
     { id: 'supply-a', label: 'Source A', kind: 'source', terminals: ['source-out'], conductivePairs: [], positions: [] },
     { id: 'cb-01', label: 'CB-01', kind: 'breaker', terminals: ['cb-in', 'cb-out'], conductivePairs: [], positions: [
@@ -18,11 +18,12 @@ export const singleSupply: NetworkModel = {
     { id: 'transformer-lv', from: 'tf-lv', to: 'lv' },
   ],
   sources: [{ id: 'source-a', assetId: 'supply-a', terminal: 'source-out', label: 'Source A' }],
+  interlocks: { reviews: [{ assetId: 'cb-01', status: 'confirmed-none', note: 'This fictional fixture explicitly defines no physical interlocks for CB-01.', evidence: [] }], rules: [] },
   starting: { devices: { 'cb-01': 'closed' }, sources: { 'source-a': true } },
 };
 
 export const alternateSupplies: NetworkModel = {
-  ...structuredClone(singleSupply), id: 'alternate-supplies', version: 'alternate-fixture-1.0', name: 'Synthetic alternate supplies',
+  ...structuredClone(singleSupply), id: 'alternate-supplies', version: 'alternate-fixture-1.1', name: 'Synthetic alternate supplies',
   assets: [
     ...structuredClone(singleSupply.assets),
     { id: 'supply-b', label: 'Source B', kind: 'source', terminals: ['source-b-out'], conductivePairs: [], positions: [] },
@@ -51,5 +52,6 @@ export const alternateSupplies: NetworkModel = {
     { id: 'loop-bus-a', from: 'loop-b', to: 'hv-a' },
   ],
   sources: [...structuredClone(singleSupply.sources), { id: 'source-b', assetId: 'supply-b', terminal: 'source-b-out', label: 'Source B' }],
+  interlocks: { reviews: ['cb-01', 'cb-02', 'tie-01', 'loop-01'].map(assetId => ({ assetId, status: 'confirmed-none' as const, note: `This fictional fixture explicitly defines no physical interlocks for ${assetId}.`, evidence: [] })), rules: [] },
   starting: { devices: { 'cb-01': 'closed', 'cb-02': 'closed', 'tie-01': 'closed', 'loop-01': 'closed' }, sources: { 'source-a': true, 'source-b': true } },
 };

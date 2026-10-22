@@ -33,6 +33,8 @@ h3 { font-size: 16px; font-weight: 650; }
 .wire.disconnected { stroke: var(--disconnected); }
 .wire.earthed { stroke-dasharray: 9 5; }
 .wire.traced { stroke: #3864d5; stroke-width: 7; }
+.wire.unconfirmed-source { stroke: #aa761c; stroke-dasharray: 4 6; }
+.wire.uncertainty-outline { stroke: #aa761c; stroke-width: 10; stroke-dasharray: 2 8; opacity: .7; }
 .wire.conflict { stroke: #b93838; }
 .wire.earthed:not(.connected):not(.traced):not(.conflict) { stroke: #718362; }
 .wire.change-outline { stroke: #f4a346; stroke-width: 11; opacity: .65; }
@@ -41,6 +43,7 @@ h3 { font-size: 16px; font-weight: 650; }
 .impact-dot { background: #c27a23; }
 .trace-dot { background: #3864d5; }
 .conflict-dot { background: #b93838; }
+.unconfirmed-dot { background: #aa761c; }
 .diagram-asset { cursor: pointer; }
 .diagram-asset text { fill: #102640; font-size: 17px; font-weight: 600; }
 .selection { fill: transparent; stroke: transparent; stroke-width: 2; }

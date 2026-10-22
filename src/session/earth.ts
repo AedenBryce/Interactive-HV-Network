@@ -1,6 +1,7 @@
 import { walkGraph, pathFromWalk } from './connectivity';
 import type { ActiveGraph, WalkStep } from './connectivity';
-import type { NetworkModel } from './model';
+import type { NetworkModel, SourceStates } from './model';
+import { isSupported } from './evidence';
 
 export type SourceEarthConflict = {
   sourceId: string;
@@ -16,9 +17,9 @@ export type EarthConnectivity = {
 };
 
 /** Earth labels/group IDs never create conductive edges. Every earth terminal is a trace sink. */
-export function evaluateEarths(model: NetworkModel, graph: ActiveGraph, enabledSources: Record<string, boolean>) {
-  const earths = model.earths ?? [];
-  const stopAt = new Set(earths.map(earth => earth.terminal));
+export function evaluateEarths(model: NetworkModel, graph: ActiveGraph, enabledSources: SourceStates, options: { includeUnconfirmed?: boolean } = {}) {
+  const earths = (model.earths ?? []).filter(earth => options.includeUnconfirmed || isSupported(model, earth));
+  const stopAt = new Set((model.earths ?? []).map(earth => earth.terminal));
   const terminalEarths = Object.fromEntries(graph.terminals.map(terminal => {
     if (earths.length === 0) return [terminal, [] as string[]];
     const reachable = walkGraph(graph, terminal, { stopAt });
@@ -27,7 +28,8 @@ export function evaluateEarths(model: NetworkModel, graph: ActiveGraph, enabledS
   const conflicts: SourceEarthConflict[] = [];
   const sourceReach = new Map<string, Map<string, WalkStep>>();
   for (const source of earths.length ? model.sources : []) {
-    if (!enabledSources[source.id]) continue;
+    const enabled = enabledSources[source.id];
+    if (!(enabled === true || (options.includeUnconfirmed && enabled === null)) || (!options.includeUnconfirmed && !isSupported(model, source))) continue;
     const reachable = walkGraph(graph, source.terminal, { stopAt });
     sourceReach.set(source.id, reachable);
     for (const earth of earths) {

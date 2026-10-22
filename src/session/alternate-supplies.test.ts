@@ -53,9 +53,10 @@ describe('exploring alternate supplies and loops', () => {
     ] });
     model.connections.push({ id: 'spare-branch', from: 'hv-a', to: 'spare-in' });
     model.starting.devices['spare-switch'] = 'closed';
+    model.interlocks!.reviews.push({ assetId: 'spare-switch', status: 'confirmed-none', note: 'Fictional spare-switch fixture has no interlocks.', evidence: [] });
     const session = new SimulationSession(model);
     const before = session.trace('lv-bus');
-    session.changeDevice('spare-switch', 'open');
+    expect(session.changeDevice('spare-switch', 'open').ok).toBe(true);
     expect(session.trace('lv-bus')).toEqual(before);
     expect(session.snapshot().impact.some(item => item.assetId === 'lv-bus')).toBe(false);
     expect(session.snapshot().impact.some(item => item.assetId === 'spare-switch')).toBe(true);

@@ -6,6 +6,10 @@ export const singleSupplyLayout = {
 
 export type DiagramLayout = { assets: Record<string, [number, number]>; terminals: Record<string, [number, number]>; rotations?: Record<string, number>; labelOffsets?: Record<string, [number, number]>; bends?: Record<string, [number, number][]> };
 
+export type DiagramBoundary = { connectionId: string; remoteAssetId: string; targetViewId: string; position: [number, number] };
+export type DiagramView = { id: string; label: string; assetIds: string[]; layout: DiagramLayout; bounds: [number, number, number, number]; boundaries?: DiagramBoundary[] };
+export type DiagramPresentation = { overviewId: string; views: DiagramView[] };
+
 export const alternateLayout: DiagramLayout = {
   assets: { 'supply-a': [70, 140], 'cb-01': [240, 140], 'bus-a': [420, 140], 'tf-01': [590, 140], 'lv-bus': [760, 140], 'supply-b': [70, 440], 'cb-02': [240, 440], 'bus-b': [420, 440], 'tie-01': [420, 290], 'loop-01': [600, 440] },
   terminals: { 'source-out': [100, 140], 'cb-in': [210, 140], 'cb-out': [270, 140], 'hv-a': [420, 140], 'tf-hv': [557, 140], 'tf-lv': [623, 140], lv: [760, 140], 'source-b-out': [100, 440], 'cb-b-in': [210, 440], 'cb-b-out': [270, 440], 'hv-b': [420, 440], 'tie-a': [420, 260], 'tie-b': [420, 320], 'loop-a': [570, 440], 'loop-b': [630, 440] },

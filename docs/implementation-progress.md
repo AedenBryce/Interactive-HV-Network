@@ -39,3 +39,11 @@ Implemented locally in parallel, reviewed and closed in GitHub. Implementation c
 - #5: physical interlocks, explicit review status and blocked-control explanations.
 - #6: provisional/unknown facts, source evidence and material connectivity uncertainty.
 - #9: overview/detail navigation and pan/zoom over one simulation session.
+
+These three slices are implemented locally; final combined review and GitHub completion remain pending.
+
+- #5 has 22 targeted session checks passing for allowed/blocked transitions, explicit/missing/unresolved review, evidence, source predicates and three-valued AND/OR conditions. Browser checks confirm disabled close controls and the permitted fictional breaker/earth-switch sequence.
+- #6 has 8 targeted session checks passing for provisional routes, unknown source/device states, independent uncertain earths/conflicts, off-page coverage, evidence integrity, retained definite supply and invariant relationships. Browser checks show exact fictional source references and review questions, unknown Source B availability, and the known Source A path beside uncertain earth/off-page data.
+- #9 browser checks demonstrate switching across incoming/transformer views, following cross-view connections, retained selection/tracing, zoom, pan and Fit. Presentation remains separate from topology.
+- Earlier switching (11), alternate supply (4) and earthing (7) checks pass after integration. Typechecking and production build pass.
+- Detailed SW411 and power-station/33 kV evidence reviews are prepared under `drawing-review/areas/`. They are construction evidence, not runtime models or owner acceptance. No additional unique-PDF coverage count is claimed because these reviews revisit initial sheets in more detail.

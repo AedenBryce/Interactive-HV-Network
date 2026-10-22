@@ -1,8 +1,11 @@
 import { z } from 'zod';
+import { interlockSchema, validateInterlocks } from './interlock-model';
+import { claimFields, evidenceRecordSchema, reviewRecordSchema } from './evidence';
 
 const id = z.string().min(1);
 const pair = z.tuple([id, id]);
 const assetSchema = z.strictObject({
+  ...claimFields,
   id, label: z.string().min(1),
   kind: z.enum(['source', 'breaker', 'disconnector', 'transformer', 'bus', 'earth-switch']),
   terminals: z.array(id).min(1),
@@ -13,12 +16,17 @@ const assetSchema = z.strictObject({
 export const modelSchema = z.strictObject({
   id, version: z.string().min(1), name: z.string().min(1), synthetic: z.boolean(),
   assets: z.array(assetSchema).min(1),
-  connections: z.array(z.strictObject({ id, from: id, to: id })),
-  sources: z.array(z.strictObject({ id, assetId: id, terminal: id, label: z.string().min(1) })),
-  earths: z.array(z.strictObject({ id, label: z.string().min(1), terminal: id, groupId: id.optional() })).optional(),
-  starting: z.strictObject({ devices: z.record(id, id), sources: z.record(id, z.boolean()) }),
+  connections: z.array(z.strictObject({ id, from: id, to: id, ...claimFields })),
+  sources: z.array(z.strictObject({ id, assetId: id, terminal: id, label: z.string().min(1), ...claimFields })),
+  earths: z.array(z.strictObject({ id, label: z.string().min(1), terminal: id, groupId: id.optional(), ...claimFields })).optional(),
+  evidence: z.array(evidenceRecordSchema).optional(),
+  reviews: z.array(reviewRecordSchema).optional(),
+  boundaries: z.array(z.strictObject({ id, label: id, terminal: id, sourceCoverage: z.enum(['unconfirmed', 'complete']), earthCoverage: z.enum(['unconfirmed', 'complete']), ...claimFields })).optional(),
+  interlocks: interlockSchema.optional(),
+  starting: z.strictObject({ devices: z.record(id, id.nullable()), sources: z.record(id, z.boolean().nullable()) }),
 }).superRefine((model, context) => {
   const error = (message: string) => context.addIssue({ code: 'custom', message });
+  validateInterlocks(model, error);
   const unique = (values: string[], label: string) => {
     if (new Set(values).size !== values.length) error(`Duplicate ${label}.`);
   };
@@ -29,6 +37,18 @@ export const modelSchema = z.strictObject({
   unique(model.sources.map(s => s.id), 'source identity');
   unique((model.earths ?? []).map(earth => earth.id), 'earth identity');
   unique((model.earths ?? []).map(earth => earth.terminal), 'earth termination');
+  unique((model.evidence ?? []).map(record => record.id), 'evidence identity');
+  unique((model.reviews ?? []).map(record => record.id), 'review identity');
+  unique((model.boundaries ?? []).map(boundary => boundary.id), 'boundary identity');
+  for (const boundary of model.boundaries ?? []) if (!terminals.includes(boundary.terminal)) error(`Boundary ${boundary.id} references missing terminal ${boundary.terminal}.`);
+  for (const claim of [...model.assets, ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
+    for (const evidenceId of claim.evidenceIds ?? []) if (!model.evidence?.some(record => record.id === evidenceId)) error(`${claim.id} references missing evidence ${evidenceId}.`);
+    for (const reviewId of claim.reviewIds ?? []) if (!model.reviews?.some(record => record.id === reviewId)) error(`${claim.id} references missing review ${reviewId}.`);
+    if (!model.synthetic && (claim.knowledge === 'supported' || claim.knowledge === 'owner-confirmed') && !claim.evidenceIds?.length) error(`Supported fact ${claim.id} requires evidence.`);
+    if (claim.knowledge === 'supported' && !claim.evidenceIds?.some(evidenceId => model.evidence?.some(record => record.id === evidenceId && ((record.status === 'supported' && record.references.length > 0) || record.status === 'owner-confirmed')))) error(`Fact ${claim.id} has no supporting evidence with a source reference or owner confirmation.`);
+    if (claim.knowledge === 'owner-confirmed' && !claim.evidenceIds?.some(evidenceId => model.evidence?.some(record => record.id === evidenceId && record.status === 'owner-confirmed'))) error(`Owner-confirmed fact ${claim.id} requires an owner confirmation record.`);
+  }
+  for (const review of model.reviews ?? []) for (const evidenceId of review.evidenceIds) if (!model.evidence?.some(record => record.id === evidenceId)) error(`Review ${review.id} references missing evidence ${evidenceId}.`);
   for (const earth of model.earths ?? []) {
     if (!terminals.includes(earth.terminal)) error(`Earth ${earth.id} references missing terminal ${earth.terminal}.`);
   }
@@ -42,7 +62,7 @@ export const modelSchema = z.strictObject({
     for (const [a, b] of [...asset.conductivePairs, ...asset.positions.flatMap(p => p.pairs)]) {
       if (!asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Relationship in ${asset.id} references an external or missing terminal.`);
     }
-    if (asset.positions.length && !asset.positions.some(p => p.id === model.starting.devices[asset.id])) error(`Missing or unsupported starting position for ${asset.id}.`);
+    if (asset.positions.length && (!Object.hasOwn(model.starting.devices, asset.id) || (model.starting.devices[asset.id] !== null && !asset.positions.some(p => p.id === model.starting.devices[asset.id])))) error(`Missing or unsupported starting position for ${asset.id}.`);
   }
   for (const deviceId of Object.keys(model.starting.devices)) {
     if (!model.assets.some(a => a.id === deviceId && a.positions.length)) error(`Starting configuration references unknown device ${deviceId}.`);
@@ -58,3 +78,5 @@ export const modelSchema = z.strictObject({
 
 export type NetworkModel = z.infer<typeof modelSchema>;
 export type Asset = NetworkModel['assets'][number];
+export type SourceStates = NetworkModel['starting']['sources'];
+export type DeviceStates = NetworkModel['starting']['devices'];

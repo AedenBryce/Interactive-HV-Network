@@ -1,5 +1,6 @@
-import type { NetworkModel } from './model';
+import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { indexRoutes } from './routes';
+import { isSupported } from './evidence';
 
 export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string };
 export type ActiveGraph = { terminals: string[]; edges: GraphEdge[] };
@@ -7,11 +8,16 @@ export type WalkStep = { previous: string | null; edge: GraphEdge | null };
 export type SourcePath = { sourceId: string; terminalId: string; terminals: string[]; connectionIds: string[]; assetIds: string[] };
 export type Connectivity = { sourceIds: string[]; terminalSources: Record<string, string[]>; paths: SourcePath[]; routeEdgeIds: string[] };
 
-export function buildGraph(model: NetworkModel, devices: Record<string, string>): ActiveGraph {
-  const edges: GraphEdge[] = model.connections.map(c => ({ id: `connection:${c.id}`, from: c.from, to: c.to, connectionId: c.id }));
+export function buildGraph(model: NetworkModel, devices: DeviceStates, options: { includeUnconfirmed?: boolean } = {}): ActiveGraph {
+  const edges: GraphEdge[] = model.connections.filter(c => options.includeUnconfirmed || isSupported(model, c)).map(c => ({ id: `connection:${c.id}`, from: c.from, to: c.to, connectionId: c.id }));
   for (const asset of model.assets) {
-    const pairs = [...asset.conductivePairs, ...(asset.positions.find(p => p.id === devices[asset.id])?.pairs ?? [])];
-    pairs.forEach(([from, to], index) => edges.push({ id: `asset:${JSON.stringify([asset.id, ...[from, to].sort(), index])}`, from, to, assetId: asset.id }));
+    if (!options.includeUnconfirmed && !isSupported(model, asset)) continue;
+    const pairKey = (pair: [string, string]) => JSON.stringify([...pair].sort());
+    const positionPairs = devices[asset.id] === null
+      ? options.includeUnconfirmed ? asset.positions.flatMap(p => p.pairs) : (asset.positions[0]?.pairs ?? []).filter(pair => asset.positions.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
+      : asset.positions.find(p => p.id === devices[asset.id])?.pairs ?? [];
+    const pairs = new Map([...asset.conductivePairs, ...positionPairs].map(pair => [pairKey(pair), pair]));
+    for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
   }
   return { terminals: model.assets.flatMap(a => a.terminals), edges };
 }
@@ -49,7 +55,7 @@ export function pathFromWalk(reached: Map<string, WalkStep>, terminal: string) {
   return { terminals: terminals.reverse(), connectionIds: connectionIds.reverse() };
 }
 
-export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources: Record<string, boolean>): Record<string, Connectivity> {
+export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources: SourceStates, options: { includeUnconfirmed?: boolean } = {}): Record<string, Connectivity> {
   const stops = new Set((model.earths ?? []).map(earth => earth.terminal));
   const routes = indexRoutes(graph, stops);
   const owners = new Map(model.assets.flatMap(a => a.terminals.map(t => [t, a.id] as const)));
@@ -57,7 +63,8 @@ export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources
   const paths = new Map(graph.terminals.map(t => [t, [] as SourcePath[]]));
   const routeEdges = new Map(graph.terminals.map(t => [t, new Set<string>()]));
   for (const source of model.sources) {
-    if (!sources[source.id]) continue;
+    const enabled = sources[source.id];
+    if (!(enabled === true || (options.includeUnconfirmed && enabled === null)) || (!options.includeUnconfirmed && !isSupported(model, source))) continue;
     const reached = walkGraph(graph, source.terminal, { stopAt: stops });
     for (const terminal of reached.keys()) {
       terminalSources.get(terminal)!.push(source.id);
