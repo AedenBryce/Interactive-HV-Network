@@ -26,7 +26,7 @@ The owner answers confirm feeding routes rather than accepting all hardware alia
 
 ## Package status
 
-These answers were received after immutable `.17` froze. They are applied together in `site-whole-network` / `construction-2026-10-22.18` through `withOwnerRouteConfirmations` in `src/models/site/owner-routes.ts`; `.17` remains unchanged. Questions16–21 are answered to the specific scope above. Remaining position, source-availability, winding/earth and physical-interlock questions are not resolved by those answers.
+These answers were received after immutable `.17` froze. They are applied together in `site-whole-network` / `construction-2026-10-22.18`, code commit `045a1e1`, through `withOwnerRouteConfirmations` in `src/models/site/owner-routes.ts`; `.17` remains unchanged. Questions16–21 are answered to the specific scope above. Remaining position, source-availability, winding/earth and physical-interlock questions are not resolved by those answers.
 
 | Answer | Runtime decision record |
 | --- | --- |
