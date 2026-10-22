@@ -8,13 +8,14 @@ import { withMc413Detail } from './mc413-detail';
 import { withOwnerScopeConnections } from './owner-scope-connections';
 import { withOwnerFollowups } from './owner-followups';
 import { withOwnerIdentityCorrections } from './owner-identities';
+import { withOwnerRouteConfirmations } from './owner-routes';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
 export const currentNetworkModel = buildCurrentNetworkModel();
 
 function buildCurrentNetworkModel() {
-  const version = 'construction-2026-10-22.17';
+  const version = 'construction-2026-10-22.18';
   const model = withSupplementalEndpoints(wholeNetworkModel, version);
 
   for (const view of model.presentation!.views) {
@@ -114,5 +115,10 @@ function buildCurrentNetworkModel() {
     if (!asset || !asset.evidenceIds?.length) throw new Error(`Contactor classification requires the evidenced phase asset ${id}.`);
     asset.kind = 'contactor';
   }
-  return withOwnerIdentityCorrections(withOwnerFollowups(withOwnerScopeConnections(withMc413Detail(withStationBatteryLimits(detailed, version), version), version), version), version);
+  const stationLimited = withStationBatteryLimits(detailed, version);
+  const mc413Detailed = withMc413Detail(stationLimited, version);
+  const scoped = withOwnerScopeConnections(mc413Detailed, version);
+  const followedUp = withOwnerFollowups(scoped, version);
+  const identities = withOwnerIdentityCorrections(followedUp, version);
+  return withOwnerRouteConfirmations(identities, version);
 }

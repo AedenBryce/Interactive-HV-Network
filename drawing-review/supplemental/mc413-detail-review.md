@@ -24,13 +24,17 @@ An exact shortened-reference search for CB-02006-DR-EL-1001 returned unrelated p
 - **D–G / 6–7:** MC413A is an outgoing 400 V MCC branch referencing 04057-DR-EL-0033, beyond the first MC413 bar. Outgoing motors, DBs, VSDs, UPS and auxiliaries are outside this tool's first-LV boundary.
 - **A / 10–12 and revision 11 clouds:** construction notes concern motor-protection and contactor upgrades on outgoing circuits. They establish no complete incoming-device position or physical-interlock truth table. The source does not confirm switching is permitted.
 
-## Current construction treatment
+## Initial `.14` construction treatment
 
 Inference: the depicted incoming tag/rating and first-bar rating are attached provisionally to the existing source-scoped `rm413:mc413:cb` and `rm413:mc413:bus`. Their existing terminals, conductive position candidates, source/earth relationships, topology, baseline and unresolved interlock review are preserved. No transformer, source, earth, phase connection or outgoing LV asset is added. The existing TF413 is reused without changing its provisional winding policy.
 
 `SV-MC413-SUPPLEMENT` records supported drawing content. Asset/connection knowledge remains provisional because installed identity and reference equivalence are not confirmed. `SV-MC413-INSTALLED` stays open for RC001 / ref 2350 versus RM413, the longer 1001 prefix, installed revision precedence, current positions, complete interlocks and independent transformer source/backfeed/earth policies. Existing `SV-Q08` and former missing-detail wording are updated as partial reviews, not resolved wholesale.
 
 The helper clones its input and adds only evidence, review/caption refinement and one first-LV detail view. Historical area and whole-network packages retain their original content. A separately identified model version is required before distribution.
+
+## Owner route correction retained in `.18`
+
+On 22 October 2026, the project owner answered exactly “yes” to question21 confirming RM413's TF413 feeder → TF413 → MC413 and the differing RC001 reference as incorrect/old. `WN-MC413-RM413-SUPPLY` records that answer in `.18`. The current named supply binding is confirmed; RC001 is not its current feeder reference. **Unconfirmed:** whether that label's cause is an old name or an error, document-prefix equivalence, installed revision precedence, ratings, actual positions, full physical interlocks and independent winding/backfeed/earth policies. No RC001 physical asset is created or merged. The source depiction above and the historical `.14` treatment remain unchanged. See the [exact question/answer and route record](owner-hopper-routes-review.md).
 
 ## Software evidence and limits
 

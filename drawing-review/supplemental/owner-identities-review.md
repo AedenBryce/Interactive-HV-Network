@@ -26,4 +26,4 @@ The package also records the reviewed0008control sheet as supported evidence. Se
 
 **Answer16:** the owner answered exactly “yes it is” to “Is RM413 IN02’s cable side currently a double-boot connection serving both RM417 (Hopper 1) and RM413A?” Context: `CB17OP023A-04057-DR-EL-0004.pdf`, revision5, page1 A–C/1–6. This confirms that named cable-side fork only. It does not bypass IN02 to the RM413 bus or set any state/interlock/transformer policy.
 
-This answer is recorded for the next immutable model increment; it is **not included in `.17`**. Questions17–18, about the Hopper8 and Hopper9/Hopper7 routes, remain pending. No answer is inferred.
+This answer is **not included in `.17`**. Answers17–21 have since confirmed the Hopper8, Hopper9/Hopper7 and Hopper3 routes, RM418 names and the current MC413 feed. All six are recorded in the [next route increment](owner-hopper-routes-review.md); `.17` remains unchanged. Their remaining electrical-behavior and interlock questions are separate.
