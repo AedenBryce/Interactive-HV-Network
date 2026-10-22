@@ -21,6 +21,8 @@ export function App() {
   const [selectedId, setSelectedId] = useState('cb-01');
   const [message, setMessage] = useState('');
   const [traceKey, setTraceKey] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const pending = useRef(false);
   const inspector = useRef<HTMLElement>(null);
   const asset = snapshot.model.assets.find(asset => asset.id === selectedId)!;
   const currentPosition = asset.positions.find(p => p.id === snapshot.devices[asset.id]);
@@ -32,45 +34,66 @@ export function App() {
 
   function selectAsset(id: string) { setSelectedId(id); setTraceKey(null); inspector.current?.scrollTo({ top: 0 }); }
 
+  function updateSession(action: () => void) {
+    if (pending.current) return;
+    pending.current = true;
+    setBusy(true);
+    // Yield the input event so progress is visible before a whole-network calculation.
+    window.requestAnimationFrame(() => window.setTimeout(() => {
+      try { action(); }
+      finally { pending.current = false; setBusy(false); }
+    }, 0));
+  }
+
   function selectModel(id: string) {
-    const result = session.loadModel(models.find(model => model.id === id));
-    if (result.ok) { const next = session.snapshot(); setSnapshot(next); setSelectedId(next.model.assets.find(item => item.positions.length)?.id ?? next.model.assets[0].id); setTraceKey(null); setMessage(''); inspector.current?.scrollTo({ top: 0 }); }
-    else setMessage(result.error);
+    updateSession(() => {
+      const result = session.loadModel(models.find(model => model.id === id));
+      if (result.ok) { const next = session.snapshot(); setSnapshot(next); setSelectedId(next.model.assets.find(item => item.positions.length)?.id ?? next.model.assets[0].id); setTraceKey(null); setMessage(''); inspector.current?.scrollTo({ top: 0 }); }
+      else setMessage(result.error);
+    });
   }
 
   function changeSource(id: string, enabled: boolean) {
-    const result = session.changeSource(id, enabled);
-    if (result.ok) { setSnapshot(session.snapshot()); setMessage(`${snapshot.model.sources.find(source => source.id === id)?.label} ${enabled ? 'enabled' : 'disabled'}. Connectivity updated.`); }
-    else setMessage(result.error);
+    updateSession(() => {
+      const result = session.changeSource(id, enabled);
+      if (result.ok) { setSnapshot(session.snapshot()); setMessage(`${snapshot.model.sources.find(source => source.id === id)?.label} ${enabled ? 'enabled' : 'disabled'}. Connectivity updated.`); }
+      else setMessage(result.error);
+    });
   }
 
   function changePosition(position: string) {
-    const result = session.changeDevice(asset.id, position);
-    if (result.ok) {
-      setSnapshot(session.snapshot());
-      setMessage(`${asset.label} changed to ${asset.positions.find(p => p.id === position)?.label}. Connectivity updated.`);
-    } else setMessage(result.error);
+    updateSession(() => {
+      const result = session.changeDevice(asset.id, position);
+      if (result.ok) {
+        setSnapshot(session.snapshot());
+        setMessage(`${asset.label} changed to ${asset.positions.find(p => p.id === position)?.label}. Connectivity updated.`);
+      } else setMessage(result.error);
+    });
   }
 
   function restoreSession(action: 'undo' | 'reset') {
-    const result = action === 'undo' ? session.undo() : session.reset();
-    if (result.ok) { setSnapshot(session.snapshot()); setMessage(action === 'undo' ? 'Previous accepted states restored. Connectivity updated.' : 'Starting configuration restored.'); }
-    else setMessage(result.error);
+    updateSession(() => {
+      const result = action === 'undo' ? session.undo() : session.reset();
+      if (result.ok) { setSnapshot(session.snapshot()); setMessage(action === 'undo' ? 'Previous accepted states restored. Connectivity updated.' : 'Starting configuration restored.'); }
+      else setMessage(result.error);
+    });
   }
 
   function loadScenario(input: unknown) {
-    const result = session.loadScenario(input);
-    if (result.ok) {
-      const next = session.snapshot(); setSnapshot(next);
-      setSelectedId(next.model.assets.find(item => item.positions.length)?.id ?? next.model.assets[0].id);
-      setTraceKey(null); setMessage(next.mode === 'view-only' ? 'Historical scenario opened in view-only mode.' : 'Scenario opened. Connectivity restored.');
-      inspector.current?.scrollTo({ top: 0 });
-    } else setMessage(result.error);
+    updateSession(() => {
+      const result = session.loadScenario(input);
+      if (result.ok) {
+        const next = session.snapshot(); setSnapshot(next);
+        setSelectedId(next.model.assets.find(item => item.positions.length)?.id ?? next.model.assets[0].id);
+        setTraceKey(null); setMessage(next.mode === 'view-only' ? 'Historical scenario opened in view-only mode.' : 'Scenario opened. Connectivity restored.');
+        inspector.current?.scrollTo({ top: 0 });
+      } else setMessage(result.error);
+    });
   }
 
   return <div className="app">
-    <header className="app-header"><h1>HV Network</h1><span>Local simulation</span></header>
-    <div className="workspace">
+    <header className="app-header"><h1>HV Network</h1><span role="status" aria-live="polite">{busy ? 'Updating network…' : 'Local simulation'}</span></header>
+    <div className="workspace" inert={busy} aria-busy={busy}>
       <aside className="network-rail" aria-label="Network model">
         <h2>Network model</h2>
         <p className="model-name">{snapshot.model.name}<br /><span className="version">{snapshot.model.version}</span></p>

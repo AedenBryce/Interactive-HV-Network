@@ -12,6 +12,8 @@ type Camera = { x: number; y: number; width: number; height: number };
 
 export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation, onSelectAsset }: Props) {
   const [viewId, setViewId] = useState(presentation.overviewId);
+  const [viewSearch, setViewSearch] = useState('');
+  const matchingViews = presentation.views.filter(item => item.label.toLowerCase().includes(viewSearch.trim().toLowerCase()));
   const view = presentation.views.find(item => item.id === viewId)!;
   const [cameraOverride, setCamera] = useState<Camera | null>(null);
   const camera = cameraOverride ?? { x: view.bounds[0], y: view.bounds[1], width: view.bounds[2], height: view.bounds[3] };
@@ -54,7 +56,8 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
 
   return <main className="diagram-panel interactive-diagram">
     <div className="panel-heading"><h2>Single-line diagram</h2><p>{snapshot.model.name}</p></div>
-    <nav className="view-navigation" aria-label="Network views">{presentation.views.map(item => <button key={item.id} aria-current={item.id === viewId ? 'page' : undefined} onClick={() => navigate(item.id)}>{item.label}</button>)}</nav>
+    {presentation.views.length > 12 && <div className="view-search"><label>Find view<input aria-label="Find network view" value={viewSearch} onChange={event => setViewSearch(event.target.value)} placeholder="Area or view name" /></label>{viewSearch && <button onClick={() => setViewSearch('')}>Clear view search</button>}<span>{matchingViews.length} of {presentation.views.length} views</span></div>}
+    <nav className="view-navigation" aria-label="Network views">{matchingViews.map(item => <button key={item.id} aria-current={item.id === viewId ? 'page' : undefined} onClick={() => navigate(item.id)}>{item.label}</button>)}{!matchingViews.length && <p>No matching views. Clear the search to see all views.</p>}</nav>
     <div className="diagram-toolbar" aria-label="Diagram navigation">
       <div className="zoom-controls"><button aria-label="Zoom out" onClick={() => zoom(1.25)} disabled={zoomPercent <= 25}>−</button><output aria-label="Diagram zoom">{zoomPercent}%</output><button aria-label="Zoom in" onClick={() => zoom(.8)} disabled={zoomPercent >= 400}>+</button><button onClick={() => setCamera(null)}>Fit view</button></div>
       <div className="pan-controls" aria-label="Pan diagram"><button aria-label="Pan left" onClick={() => pan(-.1, 0)}>←</button><button aria-label="Pan up" onClick={() => pan(0, -.1)}>↑</button><button aria-label="Pan down" onClick={() => pan(0, .1)}>↓</button><button aria-label="Pan right" onClick={() => pan(.1, 0)}>→</button></div>
@@ -64,6 +67,15 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
     <div className="diagram-surface">
       <svg className="network-diagram" viewBox={`${camera.x} ${camera.y} ${camera.width} ${camera.height}`} aria-label={`${view.label} single-line diagram`} tabIndex={0} onKeyDown={keyboard} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerCancel={() => { drag.current = null; }}>
         <title>{view.label} single-line diagram</title>
+        {view.regions?.map(region => {
+          const [x, y, width, height] = region.bounds;
+          const fontSize = Math.min(width / 12, height / 8);
+          return <g key={`region:${region.id}`} className="diagram-region" role="button" tabIndex={0} data-selectable="true" aria-label={`Open area ${region.label}`} onClick={() => navigate(region.targetViewId)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); navigate(region.targetViewId); } }}>
+            <title>{region.label} — open detailed area view</title>
+            <rect x={x} y={y} width={width} height={height} rx={25} />
+            <text x={x + width / 2} y={y + fontSize + 15} textAnchor="middle" fontSize={fontSize}>{region.label.split('\n').map((line, index) => <tspan key={index} x={x + width / 2} dy={index === 0 ? 0 : fontSize * 1.1}>{line}</tspan>)}</text>
+          </g>;
+        })}
         {connections.map(connection => {
           const [x1, y1] = view.layout.terminals[connection.from];
           const [x2, y2] = view.layout.terminals[connection.to];

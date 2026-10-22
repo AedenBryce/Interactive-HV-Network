@@ -24,24 +24,31 @@ export function buildGraph(model: NetworkModel, devices: DeviceStates, options: 
   return { terminals: model.assets.flatMap(a => a.terminals), edges };
 }
 
-export function walkGraph(graph: ActiveGraph, start: string, options: { stopAt?: ReadonlySet<string> } = {}): Map<string, WalkStep> {
+export function indexWalks(graph: ActiveGraph, options: { stopAt?: ReadonlySet<string> } = {}) {
+  // One evaluation shares adjacency; each walk still owns its traversal state.
   const adjacency = new Map(graph.terminals.map(t => [t, [] as { terminal: string; edge: GraphEdge }[]]));
   for (const edge of graph.edges) {
     adjacency.get(edge.from)?.push({ terminal: edge.to, edge });
     adjacency.get(edge.to)?.push({ terminal: edge.from, edge });
   }
-  const reached = new Map<string, WalkStep>([[start, { previous: null, edge: null }]]);
-  const queue = [start];
-  for (let index = 0; index < queue.length; index++) {
-    const terminal = queue[index];
-    if (options.stopAt?.has(terminal)) continue;
-    for (const neighbor of adjacency.get(terminal) ?? []) {
-      if (reached.has(neighbor.terminal)) continue;
-      reached.set(neighbor.terminal, { previous: terminal, edge: neighbor.edge });
-      queue.push(neighbor.terminal);
+  return { walk(start: string): Map<string, WalkStep> {
+    const reached = new Map<string, WalkStep>([[start, { previous: null, edge: null }]]);
+    const queue = [start];
+    for (let index = 0; index < queue.length; index++) {
+      const terminal = queue[index];
+      if (options.stopAt?.has(terminal)) continue;
+      for (const neighbor of adjacency.get(terminal) ?? []) {
+        if (reached.has(neighbor.terminal)) continue;
+        reached.set(neighbor.terminal, { previous: terminal, edge: neighbor.edge });
+        queue.push(neighbor.terminal);
+      }
     }
-  }
-  return reached;
+    return reached;
+  } };
+}
+
+export function walkGraph(graph: ActiveGraph, start: string, options: { stopAt?: ReadonlySet<string> } = {}): Map<string, WalkStep> {
+  return indexWalks(graph, options).walk(start);
 }
 
 export function pathFromWalk(reached: Map<string, WalkStep>, terminal: string) {
@@ -59,6 +66,7 @@ export function pathFromWalk(reached: Map<string, WalkStep>, terminal: string) {
 
 export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources: SourceStates, options: { includeUnconfirmed?: boolean } = {}): Record<string, Connectivity> {
   const stops = new Set((model.earths ?? []).map(earth => earth.terminal));
+  const walks = indexWalks(graph, { stopAt: stops });
   const routes = indexRoutes(graph, stops);
   const owners = new Map(model.assets.flatMap(a => a.terminals.map(t => [t, a.id] as const)));
   const terminalSources = new Map(graph.terminals.map(t => [t, [] as string[]]));
@@ -67,7 +75,7 @@ export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources
   for (const source of model.sources) {
     const enabled = sources[source.id];
     if (!(enabled === true || (options.includeUnconfirmed && enabled === null)) || (!options.includeUnconfirmed && !isSupported(model, source))) continue;
-    const reached = walkGraph(graph, source.terminal, { stopAt: stops });
+    const reached = walks.walk(source.terminal);
     for (const terminal of reached.keys()) {
       terminalSources.get(terminal)!.push(source.id);
       for (const edgeId of routes.edgeIds(source.terminal, terminal)) routeEdges.get(terminal)!.add(edgeId);

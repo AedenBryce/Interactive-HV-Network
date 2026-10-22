@@ -3,17 +3,19 @@ import { z } from 'zod';
 const id = z.string().min(1);
 const coordinate = z.number().finite();
 const point = z.tuple([coordinate, coordinate]);
+const bounds = z.tuple([coordinate, coordinate, z.number().positive().finite(), z.number().positive().finite()]);
 export const presentationSchema = z.strictObject({
   overviewId: id,
   views: z.array(z.strictObject({
     id, label: id, assetIds: z.array(id).min(1),
-    bounds: z.tuple([coordinate, coordinate, z.number().positive().finite(), z.number().positive().finite()]),
+    bounds,
     layout: z.strictObject({
       assets: z.record(id, point), terminals: z.record(id, point),
       rotations: z.record(id, coordinate).optional(), labelOffsets: z.record(id, point).optional(),
       bends: z.record(id, z.array(point)).optional(),
     }),
     boundaries: z.array(z.strictObject({ connectionId: id, remoteAssetId: id, targetViewId: id, position: point })).optional(),
+    regions: z.array(z.strictObject({ id, label: id, bounds, targetViewId: id })).optional(),
   })).min(1),
 });
 
@@ -21,6 +23,7 @@ export type DiagramPresentation = z.infer<typeof presentationSchema>;
 export type DiagramView = DiagramPresentation['views'][number];
 export type DiagramLayout = DiagramView['layout'];
 export type DiagramBoundary = NonNullable<DiagramView['boundaries']>[number];
+export type DiagramRegion = NonNullable<DiagramView['regions']>[number];
 
 type PresentedModel = {
   assets: { id: string; terminals: string[] }[];
@@ -40,6 +43,8 @@ export function validatePresentation(model: PresentedModel, error: (message: str
   for (const view of presentation.views) {
     const fail = (message: string) => error(`Diagram view ${view.id}: ${message}`);
     if (new Set(view.assetIds).size !== view.assetIds.length) fail('duplicate visible asset.');
+    if (new Set((view.regions ?? []).map(region => region.id)).size !== (view.regions ?? []).length) fail('duplicate region identity.');
+    for (const region of view.regions ?? []) if (!ids.includes(region.targetViewId)) fail(`region ${region.id} references a missing view.`);
     for (const assetId of view.assetIds) {
       const asset = model.assets.find(asset => asset.id === assetId);
       if (!asset || !view.layout.assets[assetId]) fail(`missing asset or coordinates for ${assetId}.`);

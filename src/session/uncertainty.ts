@@ -1,5 +1,5 @@
-import { buildGraph, evaluateSources, walkGraph } from './connectivity';
-import type { Connectivity } from './connectivity';
+import { buildGraph, evaluateSources, indexWalks } from './connectivity';
+import type { Connectivity, GraphEdge } from './connectivity';
 import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { evaluateEarths } from './earth';
 import type { EarthConnectivity, SourceEarthConflict } from './earth';
@@ -28,8 +28,17 @@ export function evaluateUncertainty(model: NetworkModel, devices: DeviceStates, 
   const earthGraph = buildGraph(model, devices, { includeUnconfirmed: true, channel: 'earth' });
   const possible = evaluateSources(model, graph, sources, { includeUnconfirmed: true });
   const earths = evaluateEarths(model, earthGraph, sources, { includeUnconfirmed: true, sourceGraph: graph });
-  const boundaryReach = new Map((model.boundaries ?? []).map(boundary => [boundary.id, walkGraph(graph, boundary.terminal, { stopAt: new Set((model.earths ?? []).map(earth => earth.terminal)) })]));
-  const earthBoundaryReach = new Map((model.boundaries ?? []).map(boundary => [boundary.id, walkGraph(earthGraph, boundary.terminal, { stopAt: new Set((model.earths ?? []).map(earth => earth.terminal)) })]));
+  const earthTerminals = new Set((model.earths ?? []).map(earth => earth.terminal));
+  const walks = indexWalks(graph, { stopAt: earthTerminals });
+  const earthWalks = indexWalks(earthGraph, { stopAt: earthTerminals });
+  const boundaryReach = new Map((model.boundaries ?? []).map(boundary => [boundary.id, walks.walk(boundary.terminal)]));
+  const earthBoundaryReach = new Map((model.boundaries ?? []).map(boundary => [boundary.id, earthWalks.walk(boundary.terminal)]));
+  const edgesById = new Map<string, GraphEdge[]>();
+  for (const edge of [...graph.edges, ...earthGraph.edges]) {
+    const matches = edgesById.get(edge.id) ?? [];
+    matches.push(edge);
+    edgesById.set(edge.id, matches);
+  }
   const connectivity: Record<string, UncertaintyConnectivity> = Object.fromEntries(model.assets.map(asset => {
     const known = definite[asset.id];
     const upper = possible[asset.id];
@@ -39,13 +48,19 @@ export function evaluateUncertainty(model: NetworkModel, devices: DeviceStates, 
     const earthBoundaryIds = (model.boundaries ?? []).filter(boundary => (boundary.earthCoverage === 'unconfirmed' || !isSupported(model, boundary)) && asset.terminals.some(terminal => earthBoundaryReach.get(boundary.id)!.has(terminal))).map(boundary => boundary.id);
     const changedEarthEdges = earths.connectivity[asset.id].earthRouteEdgeIds.filter(id => !known.earthRouteEdgeIds.includes(id));
     const changedEdges = new Set([...upper.routeEdgeIds.filter(id => !known.routeEdgeIds.includes(id)), ...changedEarthEdges]);
-    const relevantEdges = [...graph.edges, ...earthGraph.edges].filter(edge => changedEdges.has(edge.id));
+    const connectionIds = new Set<string>();
+    const assetIds = new Set<string>();
+    for (const id of changedEdges) for (const edge of edgesById.get(id) ?? []) {
+      if (edge.connectionId !== undefined) connectionIds.add(edge.connectionId);
+      if (edge.assetId !== undefined) assetIds.add(edge.assetId);
+    }
+    const boundaryIds = new Set([...sourceBoundaryIds, ...earthBoundaryIds]);
     const claims = [asset,
-      ...model.connections.filter(connection => relevantEdges.some(edge => edge.connectionId === connection.id)),
-      ...model.assets.filter(item => relevantEdges.some(edge => edge.assetId === item.id)),
+      ...model.connections.filter(connection => connectionIds.has(connection.id)),
+      ...model.assets.filter(item => assetIds.has(item.id)),
       ...model.sources.filter(source => possibleSourceIds.includes(source.id)),
       ...(model.earths ?? []).filter(earth => possibleEarthIds.includes(earth.id)),
-      ...(model.boundaries ?? []).filter(boundary => [...sourceBoundaryIds, ...earthBoundaryIds].includes(boundary.id)),
+      ...(model.boundaries ?? []).filter(boundary => boundaryIds.has(boundary.id)),
     ];
     return [asset.id, {
       sourceStatus: status(known.sourceIds.length > 0, possibleSourceIds.length + sourceBoundaryIds.length > 0),

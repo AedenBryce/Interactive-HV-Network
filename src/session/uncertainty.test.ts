@@ -82,6 +82,29 @@ describe('material uncertainty in a provisional model', () => {
     expect(result.connectionResults['transformer-lv']).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed' });
   });
 
+  it('preserves model-ordered claim evidence across overlapping source and earth routes', () => {
+    const model: NetworkModel = structuredClone(earthFixture);
+    model.starting.devices['cb-01'] = null;
+    model.starting.devices['es-01'] = null;
+    model.starting.sources['source-a'] = null;
+    model.boundaries = [
+      { id: 'lv-boundary', label: 'Fictional LV continuation', terminal: 'lv', sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' },
+      { id: 'hv-boundary', label: 'Fictional HV continuation', terminal: 'tf-hv', sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' },
+    ];
+    const claims = [...model.assets, ...model.connections, ...model.sources, ...model.earths!, ...model.boundaries];
+    model.evidence = [...claims.map(claim => ({ id: `e:${claim.id}`, status: 'provisional' as const, summary: `Fictional ${claim.id}`, references: [] })), { id: 'shared', status: 'provisional', summary: 'Shared fictional evidence', references: [] }];
+    model.reviews = [...claims.map(claim => ({ id: `r:${claim.id}`, status: 'open' as const, question: `Confirm fictional ${claim.id}`, evidenceIds: [`e:${claim.id}`] })), { id: 'shared', status: 'open', question: 'Shared fictional review', evidenceIds: ['shared'] }];
+    for (const claim of claims) {
+      claim.evidenceIds = [`e:${claim.id}`, 'shared'];
+      claim.reviewIds = [`r:${claim.id}`, 'shared'];
+    }
+    const result = new SimulationSession(model).snapshot().connectivity['lv-bus'];
+    const orderedClaims = ['lv-bus', 'supply-breaker', 'breaker-transformer', 'transformer-lv', 'section-earth', 'cb-01', 'tf-01', 'es-01', 'source-a', 'earth-a', 'lv-boundary', 'hv-boundary'];
+    expect(result.evidenceIds).toEqual(['e:lv-bus', 'shared', ...orderedClaims.slice(1).map(id => `e:${id}`)]);
+    expect(result.reviewIds).toEqual(['r:lv-bus', 'shared', ...orderedClaims.slice(1).map(id => `r:${id}`)]);
+    expect(result).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed', possibleSourceIds: ['source-a'], possibleEarthIds: ['earth-a'], sourceBoundaryIds: ['lv-boundary', 'hv-boundary'], earthBoundaryIds: ['lv-boundary', 'hv-boundary'] });
+  });
+
   it('does not promote provisional evidence or an open review into a supported or confirmed fact', () => {
     const session = new SimulationSession(uncertaintyFixture);
     const before = session.snapshot();
