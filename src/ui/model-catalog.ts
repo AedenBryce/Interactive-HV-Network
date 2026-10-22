@@ -55,4 +55,5 @@ const relationshipsLayout: DiagramLayout = {
 };
 diagramPresentations[relationshipsFixture.id] = { overviewId: 'overview', views: [overview(relationshipsFixture, relationshipsLayout, [0, 70, 900, 520])] };
 
-export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture, relationshipsFixture].map(model => ({ ...model, presentation: diagramPresentations[model.id] }));
+// Adding diagram organisation creates a distinct immutable package version.
+export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture, relationshipsFixture].map(model => ({ ...model, version: `${model.version}-presentation.1`, presentation: diagramPresentations[model.id] }));

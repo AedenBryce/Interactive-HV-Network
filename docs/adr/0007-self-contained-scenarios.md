@@ -10,6 +10,8 @@ Validate the complete envelope, embedded model, presentation and exact state ide
 
 Treat the combination of model identity and version as an immutable package. Canonically compare complete content, ignoring object-key order. Reject different content claiming a previously seen identity/version. Changes to topology, identities, relationships, interlocks, baseline, evidence or presentation require a new model version. No migration is attempted.
 
+The complete demonstration packages use a `-presentation.1` version suffix distinct from the underlying topology-only fixtures. Their different content cannot claim the fixture's original version. Further changes to either package require another version.
+
 Compare the saved identity/version with the current model. A match opens for exploration. A mismatch opens the saved original model in view-only mode, retaining current-model metadata separately. Device/source actions, undo and reset are gated in the session and disabled in the UI. Inspection, path tracing, pan/zoom, navigation and saving remain available. Starting the current model exits the historical view and restores its baseline.
 
 ## Limit

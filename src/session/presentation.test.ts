@@ -1,8 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
 import { demonstrations } from '../ui/model-catalog';
+import { singleSupply } from '../models/synthetic';
 
 describe('model-owned diagram organisation through the session', () => {
+  it('gives a completed diagram package a different version from its topology fixture', () => {
+    const session = new SimulationSession(demonstrations[0]);
+    const topologyScenario = new SimulationSession(singleSupply).saveScenario();
+    expect(session.loadScenario(topologyScenario)).toEqual({ ok: true });
+    expect(session.snapshot().mode).toBe('view-only');
+    expect(session.snapshot().currentModel.version).not.toBe(singleSupply.version);
+  });
+
   it('retains every demonstration layout in its detached model snapshot', () => {
     for (const model of demonstrations) {
       const session = new SimulationSession(model);
