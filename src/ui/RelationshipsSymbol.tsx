@@ -1,6 +1,6 @@
 import { useId } from 'react';
 import type { Asset, NetworkModel } from '../session/model';
-import { isSupported } from '../session/evidence';
+import { isSourceArcSupported } from '../session/evidence';
 import type { DiagramLayout } from './diagram';
 import { isBreakerState, removablePairs } from '../session/mechanisms';
 import type { DeviceState } from '../session/mechanisms';
@@ -36,7 +36,7 @@ export function RelationshipsSymbol({ asset, positionId, layout, model }: { asse
       const distance = Math.hypot(end.x - start.x, end.y - start.y);
       const offset = (group.indexOf(arc) - (group.length - 1) / 2) * 24;
       const middle = { x: (from.x + to.x) / 2 - (distance ? (end.y - start.y) / distance * offset : 0), y: (from.y + to.y) / 2 + (distance ? (end.x - start.x) / distance * offset : 0) };
-      const supported = isSupported(model, asset) && isSupported(model, arc);
+      const supported = isSourceArcSupported(model, asset, arc);
       const status = supported ? 'Supported source relationship' : 'Unconfirmed source relationship';
       return <path key={`arc:${arc.id}`} data-source-arc={arc.id} d={`M${from.x} ${from.y} L${middle.x} ${middle.y} L${to.x} ${to.y}`} className="relationship-source" fill="none" markerMid={`url(#${arrowId})`} style={supported ? undefined : { stroke: 'var(--unconfirmed, #b7791f)', strokeDasharray: '6 4' }}><title>{status}: {arc.from} → {arc.to}. Arc {arc.id}; claim: {arc.knowledge ?? (model.synthetic ? 'synthetic model data' : 'unconfirmed — status not recorded')}. Evidence: {arc.evidenceIds?.join(', ') || 'none linked'}. Reviews: {arc.reviewIds?.join(', ') || 'none linked'}.</title></path>;
     })}

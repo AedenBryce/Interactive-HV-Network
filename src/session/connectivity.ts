@@ -1,6 +1,6 @@
 import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { indexSourceQueries } from './source-query';
-import { isSupported } from './evidence';
+import { isSourceArcSupported, isSupported } from './evidence';
 import { removablePairs } from './mechanisms';
 
 export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string; directed?: true; sourceArcId?: string };
@@ -12,18 +12,19 @@ export type Connectivity = { sourceIds: string[]; terminalSources: Record<string
 export function buildGraph(model: NetworkModel, devices: DeviceStates, options: { includeUnconfirmed?: boolean; channel?: 'source' | 'earth' } = {}): ActiveGraph {
   const edges: GraphEdge[] = model.connections.filter(c => options.includeUnconfirmed || isSupported(model, c)).map(c => ({ id: `connection:${c.id}`, from: c.from, to: c.to, connectionId: c.id }));
   for (const asset of model.assets) {
-    if (!options.includeUnconfirmed && !isSupported(model, asset)) continue;
-    const pairKey = (pair: [string, string]) => JSON.stringify([...pair].sort());
-    const channelPairs = (item: { sourcePairs?: [string, string][]; earthPairs?: [string, string][] }) => (options.channel === 'earth' ? item.earthPairs : item.sourcePairs) ?? [];
-    const positionRelationships = asset.positions.map(position => ({ id: position.id, pairs: [...position.pairs, ...channelPairs(position)] }));
-    const positionPairs = devices[asset.id] === null
-      ? options.includeUnconfirmed ? positionRelationships.flatMap(p => p.pairs) : (positionRelationships[0]?.pairs ?? []).filter(pair => positionRelationships.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
-      : positionRelationships.find(p => p.id === devices[asset.id])?.pairs ?? [];
-    const mechanicalPairs = asset.removableBreaker ? removablePairs(asset.removableBreaker.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
-    const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));
-    for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
+    if (options.includeUnconfirmed || isSupported(model, asset)) {
+      const pairKey = (pair: [string, string]) => JSON.stringify([...pair].sort());
+      const channelPairs = (item: { sourcePairs?: [string, string][]; earthPairs?: [string, string][] }) => (options.channel === 'earth' ? item.earthPairs : item.sourcePairs) ?? [];
+      const positionRelationships = asset.positions.map(position => ({ id: position.id, pairs: [...position.pairs, ...channelPairs(position)] }));
+      const positionPairs = devices[asset.id] === null
+        ? options.includeUnconfirmed ? positionRelationships.flatMap(p => p.pairs) : (positionRelationships[0]?.pairs ?? []).filter(pair => positionRelationships.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
+        : positionRelationships.find(p => p.id === devices[asset.id])?.pairs ?? [];
+      const mechanicalPairs = asset.removableBreaker ? removablePairs(asset.removableBreaker.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
+      const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));
+      for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
+    }
     if (options.channel !== 'earth') for (const arc of asset.sourceArcs ?? []) {
-      if (options.includeUnconfirmed || isSupported(model, arc)) edges.push({ id: `source-arc:${JSON.stringify([asset.id, arc.id, arc.from, arc.to])}`, from: arc.from, to: arc.to, assetId: asset.id, directed: true, sourceArcId: arc.id });
+      if (options.includeUnconfirmed || isSourceArcSupported(model, asset, arc)) edges.push({ id: `source-arc:${JSON.stringify([asset.id, arc.id, arc.from, arc.to])}`, from: arc.from, to: arc.to, assetId: asset.id, directed: true, sourceArcId: arc.id });
     }
   }
   return { terminals: model.assets.flatMap(a => a.terminals), edges };

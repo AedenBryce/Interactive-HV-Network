@@ -14,7 +14,7 @@ const assetSchema = z.strictObject({
   terminals: z.array(id).min(1),
   conductivePairs: z.array(pair),
   sourcePairs: z.array(pair).optional(),
-  sourceArcs: z.array(z.strictObject({ id, from: id, to: id, ...claimFields })).optional(),
+  sourceArcs: z.array(z.strictObject({ id, from: id, to: id, supportScope: z.literal('relationship').optional(), ...claimFields })).optional(),
   earthPairs: z.array(pair).optional(),
   removableBreaker: z.strictObject({ mainPair: pair }).optional(),
   positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
@@ -71,6 +71,7 @@ export const modelSchema = z.strictObject({
     if (asset.sourceArcs !== undefined && (asset.positions.length > 0 || asset.removableBreaker)) error(`Source arcs in ${asset.id} require a fixed asset without positions or a removable mechanism.`);
     for (const arc of asset.sourceArcs ?? []) {
       if (arc.from === arc.to || !asset.terminals.includes(arc.from) || !asset.terminals.includes(arc.to)) error(`Source arc ${arc.id} requires two distinct owned terminals in ${asset.id}.`);
+      if (arc.supportScope === 'relationship' && (arc.knowledge === undefined || !arc.evidenceIds?.length)) error(`Relationship-scoped source arc ${arc.id} requires explicit knowledge and linked evidence.`);
     }
     const state = model.starting.devices[asset.id];
     if (asset.removableBreaker) {

@@ -43,6 +43,9 @@ The user's confirmation of a model version after reviewing the whole-network dia
 **Earth connectivity**:
 Whether an asset is connected through the model to earth in the selected device states. It is tracked independently of source connectivity.
 
+**Source-transfer claim**:
+An explicit directed relationship between named model terminals, with its own evidence and knowledge status. A relationship-scoped claim establishes only that modeled source transfer; equipment metadata, reverse transfer and earth continuity remain separate claims. Earlier unscoped arcs retain their parent-equipment support requirement.
+
 **Source-to-earth conflict**:
 A modelled path connecting an enabled electrical source to earth. The tool highlights this condition as a conflict.
 

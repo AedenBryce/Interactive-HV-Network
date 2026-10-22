@@ -1,5 +1,5 @@
 import type { Asset, NetworkModel } from '../session/model';
-import { isSupported } from '../session/evidence';
+import { isSourceArcSupported, isSupported } from '../session/evidence';
 import { describeDeviceState } from '../session/mechanisms';
 import type { DeviceState } from '../session/mechanisms';
 import { EvidenceReferences } from './EvidenceReferences';
@@ -14,7 +14,7 @@ function SourceArcDetails({ arc, asset, model }: { arc: SourceArc; asset: Asset;
   return <article aria-label={`Directed source arc ${arc.id}`}>
     <h4>{arc.from} → {arc.to}</h4>
     <p>Arc {arc.id}: {arc.knowledge ? claimLabels[arc.knowledge] : model.synthetic ? 'Synthetic model data' : 'Unconfirmed — status not recorded'}.</p>
-    {!isSupported(model, asset) && <p>Unconfirmed source transfer: the asset claim is unconfirmed.</p>}
+    {!isSupported(model, asset) && <p>{isSourceArcSupported(model, asset, arc) ? 'This modeled source transfer is supported by its relationship-scoped claim; other asset claims remain Unconfirmed.' : 'Unconfirmed source transfer: the asset claim is unconfirmed.'}</p>}
     {records.length > 0 && <details><summary>Arc evidence ({records.length} records)</summary>{records.map(record => <article key={record.id}>
       <h4>{record.id} · {claimLabels[record.status]}</h4><p>{record.summary}</p><EvidenceReferences references={record.references} />
       {record.confirmation && <p>Confirmed by {record.confirmation.by}, {record.confirmation.date}: {record.confirmation.decision}</p>}

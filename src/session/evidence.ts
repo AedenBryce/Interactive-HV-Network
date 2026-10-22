@@ -24,3 +24,7 @@ export const claimFields = { knowledge: knowledgeSchema.optional(), evidenceIds:
 export function isSupported(model: { synthetic: boolean }, claim: { knowledge?: z.infer<typeof knowledgeSchema> }) {
   return claim.knowledge === 'supported' || claim.knowledge === 'owner-confirmed' || (model.synthetic && claim.knowledge === undefined);
 }
+
+export function isSourceArcSupported(model: { synthetic: boolean }, asset: { knowledge?: z.infer<typeof knowledgeSchema> }, arc: { knowledge?: z.infer<typeof knowledgeSchema>; supportScope?: 'relationship' }) {
+  return isSupported(model, arc) && (arc.supportScope === 'relationship' || isSupported(model, asset));
+}
