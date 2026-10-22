@@ -1,4 +1,4 @@
-# Owner modeling rules, breaker actions and partial baseline
+# Owner modeling rules, breaker actions and selected baseline
 
 Source: **Project owner (conversation)**, 23 October 2026. Answers25–27 were received after `construction-2026-10-23.1` completed its focused checks. They are recorded here for a subsequent immutable increment and are **not applied to that package**.
 
@@ -92,3 +92,7 @@ Together with the earlier161 direct contact selections, this supplies **356 know
 ## Answer41: three-position baseline names
 
 Question41 explicitly named RM406 SW01–SW04, RM410 SW01–SW04, RM417 SW01–SW04 and RM419 SW01–SW04, whose existing model positions are Service / Isolated / Earthed. It asked whether the approved Closed baseline means Service (main contacts connected, earth contact open). The owner answered exactly **“Yes, Closed means Service for these16”**. Apply that mapping only to the sixteen named controls. Their candidate physical mechanism/earth relationships and interlock reviews remain separate; no unlisted mechanism is mapped by analogy.
+
+## Applied configuration increment
+
+`construction-2026-10-23.2`, model code `0a38fae`, applies the119 removable mechanism selections,356 contact values,119 racking values,3 supply availabilities and local rules for24 SW411 line-earth controls. It retains4 Unconfirmed contacts and336 unresolved interlock reviews. The preserved `.1` package remains unchanged. Transformer-direction site conversion, winding/earth verification and whole-model acceptance remain pending.
