@@ -14,6 +14,7 @@ const assetSchema = z.strictObject({
   terminals: z.array(id).min(1),
   conductivePairs: z.array(pair),
   sourcePairs: z.array(pair).optional(),
+  sourceArcs: z.array(z.strictObject({ id, from: id, to: id, ...claimFields })).optional(),
   earthPairs: z.array(pair).optional(),
   removableBreaker: z.strictObject({ mainPair: pair }).optional(),
   positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
@@ -42,6 +43,7 @@ export const modelSchema = z.strictObject({
   unique(model.assets.map(a => a.id), 'asset identity');
   unique(terminals, 'terminal identity');
   unique(model.connections.map(c => c.id), 'connection identity');
+  unique(model.assets.flatMap(asset => (asset.sourceArcs ?? []).map(arc => arc.id)), 'source arc identity');
   unique(model.sources.map(s => s.id), 'source identity');
   unique((model.earths ?? []).map(earth => earth.id), 'earth identity');
   unique((model.earths ?? []).map(earth => earth.terminal), 'earth termination');
@@ -49,7 +51,7 @@ export const modelSchema = z.strictObject({
   unique((model.reviews ?? []).map(record => record.id), 'review identity');
   unique((model.boundaries ?? []).map(boundary => boundary.id), 'boundary identity');
   for (const boundary of model.boundaries ?? []) if (!terminals.includes(boundary.terminal)) error(`Boundary ${boundary.id} references missing terminal ${boundary.terminal}.`);
-  for (const claim of [...model.assets, ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
+  for (const claim of [...model.assets, ...model.assets.flatMap(asset => asset.sourceArcs ?? []), ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
     for (const evidenceId of claim.evidenceIds ?? []) if (!model.evidence?.some(record => record.id === evidenceId)) error(`${claim.id} references missing evidence ${evidenceId}.`);
     for (const reviewId of claim.reviewIds ?? []) if (!model.reviews?.some(record => record.id === reviewId)) error(`${claim.id} references missing review ${reviewId}.`);
     if (!model.synthetic && (claim.knowledge === 'supported' || claim.knowledge === 'owner-confirmed') && !claim.evidenceIds?.length) error(`Supported fact ${claim.id} requires evidence.`);
@@ -66,6 +68,10 @@ export const modelSchema = z.strictObject({
     }
   }
   for (const asset of model.assets) {
+    if (asset.sourceArcs !== undefined && (asset.positions.length > 0 || asset.removableBreaker)) error(`Source arcs in ${asset.id} require a fixed asset without positions or a removable mechanism.`);
+    for (const arc of asset.sourceArcs ?? []) {
+      if (arc.from === arc.to || !asset.terminals.includes(arc.from) || !asset.terminals.includes(arc.to)) error(`Source arc ${arc.id} requires two distinct owned terminals in ${asset.id}.`);
+    }
     const state = model.starting.devices[asset.id];
     if (asset.removableBreaker) {
       if (asset.kind !== 'breaker' || asset.positions.length) error(`Removable breaker ${asset.id} requires breaker kind and no discrete positions.`);
@@ -79,7 +85,7 @@ export const modelSchema = z.strictObject({
       if (!asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Relationship in ${asset.id} references an external or missing terminal.`);
     }
     if (!model.synthetic && asset.kind === 'transformer') {
-      if (asset.sourcePairs === undefined || asset.earthPairs === undefined || asset.positions.some(position => position.sourcePairs === undefined || position.earthPairs === undefined)) error(`Transformer ${asset.id} requires explicit source and earth relationships.`);
+      if ((asset.sourcePairs === undefined && asset.sourceArcs === undefined) || asset.earthPairs === undefined || asset.positions.some(position => position.sourcePairs === undefined || position.earthPairs === undefined)) error(`Transformer ${asset.id} requires explicit source and earth relationships.`);
       if (asset.conductivePairs.length || asset.positions.some(position => position.pairs.length)) error(`Transformer ${asset.id} cannot use shared conductive relationships; specify source and earth relationships separately.`);
     }
     if (asset.positions.length && (!Object.hasOwn(model.starting.devices, asset.id) || (model.starting.devices[asset.id] !== null && !asset.positions.some(p => p.id === model.starting.devices[asset.id])))) error(`Missing or unsupported starting position for ${asset.id}.`);

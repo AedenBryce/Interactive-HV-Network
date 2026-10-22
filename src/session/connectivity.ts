@@ -1,9 +1,9 @@
 import type { NetworkModel, SourceStates, DeviceStates } from './model';
-import { indexRoutes } from './routes';
+import { indexSourceQueries } from './source-query';
 import { isSupported } from './evidence';
 import { removablePairs } from './mechanisms';
 
-export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string };
+export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string; directed?: true; sourceArcId?: string };
 export type ActiveGraph = { terminals: string[]; edges: GraphEdge[] };
 export type WalkStep = { previous: string | null; edge: GraphEdge | null };
 export type SourcePath = { sourceId: string; terminalId: string; terminals: string[]; connectionIds: string[]; assetIds: string[] };
@@ -22,6 +22,9 @@ export function buildGraph(model: NetworkModel, devices: DeviceStates, options: 
     const mechanicalPairs = asset.removableBreaker ? removablePairs(asset.removableBreaker.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
     const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));
     for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
+    if (options.channel !== 'earth') for (const arc of asset.sourceArcs ?? []) {
+      if (options.includeUnconfirmed || isSupported(model, arc)) edges.push({ id: `source-arc:${JSON.stringify([asset.id, arc.id, arc.from, arc.to])}`, from: arc.from, to: arc.to, assetId: asset.id, directed: true, sourceArcId: arc.id });
+    }
   }
   return { terminals: model.assets.flatMap(a => a.terminals), edges };
 }
@@ -31,7 +34,7 @@ export function indexWalks(graph: ActiveGraph, options: { stopAt?: ReadonlySet<s
   const adjacency = new Map(graph.terminals.map(t => [t, [] as { terminal: string; edge: GraphEdge }[]]));
   for (const edge of graph.edges) {
     adjacency.get(edge.from)?.push({ terminal: edge.to, edge });
-    adjacency.get(edge.to)?.push({ terminal: edge.from, edge });
+    if (!edge.directed) adjacency.get(edge.to)?.push({ terminal: edge.from, edge });
   }
   return { walk(start: string): Map<string, WalkStep> {
     const reached = new Map<string, WalkStep>([[start, { previous: null, edge: null }]]);
@@ -64,8 +67,7 @@ export function pathFromWalk(reached: Map<string, WalkStep>, terminal: string) {
 
 export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources: SourceStates, options: { includeUnconfirmed?: boolean } = {}): Record<string, Connectivity> {
   const stops = new Set((model.earths ?? []).map(earth => earth.terminal));
-  const walks = indexWalks(graph, { stopAt: stops });
-  const routes = indexRoutes(graph, stops);
+  const queries = indexSourceQueries(graph, stops);
   const owners = new Map(model.assets.flatMap(a => a.terminals.map(t => [t, a.id] as const)));
   const terminalSources = new Map(graph.terminals.map(t => [t, [] as string[]]));
   const paths = new Map(graph.terminals.map(t => [t, [] as SourcePath[]]));
@@ -73,10 +75,10 @@ export function evaluateSources(model: NetworkModel, graph: ActiveGraph, sources
   for (const source of model.sources) {
     const enabled = sources[source.id];
     if (!(enabled === true || (options.includeUnconfirmed && enabled === null)) || (!options.includeUnconfirmed && !isSupported(model, source))) continue;
-    const reached = walks.walk(source.terminal);
+    const reached = queries.walk(source.terminal);
     for (const terminal of reached.keys()) {
       terminalSources.get(terminal)!.push(source.id);
-      for (const edgeId of routes.edgeIds(source.terminal, terminal)) routeEdges.get(terminal)!.add(edgeId);
+      for (const edgeId of queries.edgeIds(source.terminal, terminal)) routeEdges.get(terminal)!.add(edgeId);
       const { terminals, connectionIds } = pathFromWalk(reached, terminal);
       const assetIds = terminals.map(t => owners.get(t)!).filter((id, index, all) => id !== all[index - 1]);
       paths.get(terminal)!.push({ sourceId: source.id, terminalId: terminal, terminals, connectionIds, assetIds });

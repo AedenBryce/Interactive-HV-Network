@@ -3,6 +3,7 @@ import type { ActiveGraph, WalkStep } from './connectivity';
 import type { NetworkModel, SourceStates } from './model';
 import { isSupported } from './evidence';
 import { indexRoutes } from './routes';
+import { indexSourceQueries } from './source-query';
 
 export type SourceEarthConflict = {
   sourceId: string;
@@ -23,7 +24,7 @@ export function evaluateEarths(model: NetworkModel, graph: ActiveGraph, enabledS
   const earths = (model.earths ?? []).filter(earth => options.includeUnconfirmed || isSupported(model, earth));
   const stopAt = new Set((model.earths ?? []).map(earth => earth.terminal));
   const walks = indexWalks(graph, { stopAt });
-  const sourceWalks = options.sourceGraph && options.sourceGraph !== graph ? indexWalks(options.sourceGraph, { stopAt }) : walks;
+  const sourceWalks = indexSourceQueries(options.sourceGraph ?? graph, stopAt);
   const routes = indexRoutes(graph, stopAt);
   const terminalEarths = Object.fromEntries(graph.terminals.map(terminal => {
     if (earths.length === 0) return [terminal, [] as string[]];

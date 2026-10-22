@@ -4,6 +4,7 @@ import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { evaluateEarths } from './earth';
 import type { EarthConnectivity, SourceEarthConflict } from './earth';
 import { isSupported } from './evidence';
+import { indexSourceQueries } from './source-query';
 
 export type ConnectivityStatus = 'connected' | 'disconnected' | 'unconfirmed';
 export type UncertaintyConnectivity = {
@@ -29,7 +30,7 @@ export function evaluateUncertainty(model: NetworkModel, devices: DeviceStates, 
   const possible = evaluateSources(model, graph, sources, { includeUnconfirmed: true });
   const earths = evaluateEarths(model, earthGraph, sources, { includeUnconfirmed: true, sourceGraph: graph });
   const earthTerminals = new Set((model.earths ?? []).map(earth => earth.terminal));
-  const walks = indexWalks(graph, { stopAt: earthTerminals });
+  const walks = indexSourceQueries(graph, earthTerminals);
   const earthWalks = indexWalks(earthGraph, { stopAt: earthTerminals });
   const boundaryReach = new Map((model.boundaries ?? []).map(boundary => [boundary.id, walks.walk(boundary.terminal)]));
   const earthBoundaryReach = new Map((model.boundaries ?? []).map(boundary => [boundary.id, earthWalks.walk(boundary.terminal)]));
@@ -50,14 +51,17 @@ export function evaluateUncertainty(model: NetworkModel, devices: DeviceStates, 
     const changedEdges = new Set([...upper.routeEdgeIds.filter(id => !known.routeEdgeIds.includes(id)), ...changedEarthEdges]);
     const connectionIds = new Set<string>();
     const assetIds = new Set<string>();
+    const arcIds = new Set<string>();
     for (const id of changedEdges) for (const edge of edgesById.get(id) ?? []) {
       if (edge.connectionId !== undefined) connectionIds.add(edge.connectionId);
       if (edge.assetId !== undefined) assetIds.add(edge.assetId);
+      if (edge.sourceArcId !== undefined) arcIds.add(edge.sourceArcId);
     }
     const boundaryIds = new Set([...sourceBoundaryIds, ...earthBoundaryIds]);
     const claims = [asset,
       ...model.connections.filter(connection => connectionIds.has(connection.id)),
       ...model.assets.filter(item => assetIds.has(item.id)),
+      ...model.assets.flatMap(item => (item.sourceArcs ?? []).filter(arc => arcIds.has(arc.id))),
       ...model.sources.filter(source => possibleSourceIds.includes(source.id)),
       ...(model.earths ?? []).filter(earth => possibleEarthIds.includes(earth.id)),
       ...(model.boundaries ?? []).filter(boundary => boundaryIds.has(boundary.id)),
