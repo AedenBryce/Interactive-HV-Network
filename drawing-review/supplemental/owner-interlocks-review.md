@@ -101,3 +101,23 @@ Exact answer: **“Apply this local matrix to all3 pairs”**. This selects thos
 Question54 proposed Open/Close only, no racking, no additional prerequisites and independent operation for the A/B AC input switches of VS4061, VS4101 and the RM413A converter. It explicitly distinguished a selected teaching profile from a source-confirmed physical interlock table and requested exceptions or coordinated-operation requirements.
 
 Exact answer: **“Use this profile for all6 inputs”**. This selects the six exact P11 model interactions. It does not establish actual switching permission or accept converter internals.
+
+## Answer55 — integrated three-position RMU assemblies
+
+Question55 proposed this complete V1 profile for P13's16 three-position switches and10 feeder CBs at RM406, RM410, RM417 and RM419:
+
+- CBs use Open/Close only, without racking. CB Open allowed; CB Close requires its associated switch in Service.
+- Every outgoing three-position switch movement requires its CB Open.
+- Service↔Earthed must pass through Isolated. Selecting Service or Earthed requires current Isolated.
+- Incoming/ring switches use the same transition sequence without a separate CB prerequisite.
+- Unknown prerequisites block; no other local/key conditions are modeled for these exact assemblies.
+
+Sources named in the question: `CB19OP001B-04057-DR-EL-0002.pdf` rev4 and `-0004.pdf` rev6; `CB16OP038A-02006-DR-EL-0044.pdf` rev2; `CB19OP001C-01068-DR-EL-0001.pdf` rev4, each p1 RMU region. The question explicitly selected a teaching profile, not operational permission.
+
+Exact answer: **“Approve this complete profile for all26 controls”**. This selects the exact P13 action profile; it does not accept unrelated source/earth relationships or resolve installed hardware knowledge wholesale.
+
+## Answer56 — RM714 earth-switch presence
+
+Question56 asked whether earth switches are installed on RM714's two incoming paths IN01/IN02 and TF714 feeder. It identified the disagreement between `11098-07110-EL-DR-2255.pdf` rev1 p1 A–C and `CB-10016-DR-EL-0011.pdf` rev0 p1 RM714 lower panel.
+
+Exact answer: **“All3 earth switches are installed”**. This confirms the presence of those three named earth devices only. Their complete local action profile, detailed path/termination claims and other mechanism properties require separate evidence or selection.

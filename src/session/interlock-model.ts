@@ -1,7 +1,8 @@
 import { z } from 'zod';
 import { evidenceRefSchema } from './evidence';
 import type { InterlockCondition, InterlockDefinition } from './interlocks';
-import { breakerCommandSchema } from './mechanisms';
+import { getRemovableMechanism, independentCommandSchema } from './mechanisms';
+import type { RemovableMechanismFields } from './mechanisms';
 
 const id = z.string().min(1);
 const conditionSchema: z.ZodType<InterlockCondition> = z.lazy(() => z.union([
@@ -15,12 +16,12 @@ const conditionSchema: z.ZodType<InterlockCondition> = z.lazy(() => z.union([
 const ruleFields = { require: conditionSchema, explanation: id, evidence: z.array(evidenceRefSchema) };
 export const interlockSchema = z.strictObject({
   reviews: z.array(z.strictObject({ assetId: id, status: z.enum(['confirmed-none', 'confirmed-rules', 'unresolved']), note: id, evidence: z.array(evidenceRefSchema) })),
-  rules: z.array(z.union([z.strictObject({ id, assetId: id, position: id, ...ruleFields }), z.strictObject({ id, assetId: id, command: breakerCommandSchema, ...ruleFields })])),
+  rules: z.array(z.union([z.strictObject({ id, assetId: id, position: id, ...ruleFields }), z.strictObject({ id, assetId: id, command: independentCommandSchema, ...ruleFields })])),
 });
 
 type ModelForInterlockValidation = {
   synthetic: boolean;
-  assets: { id: string; positions: { id: string }[]; removableBreaker?: { mainPair: [string, string] } }[];
+  assets: ({ id: string; positions: { id: string }[] } & RemovableMechanismFields)[];
   sources: { id: string }[];
   interlocks?: InterlockDefinition;
 };
@@ -35,13 +36,13 @@ export function validateInterlocks(model: ModelForInterlockValidation, error: (m
     if (condition.kind === 'device') {
       if ('position' in condition) {
         if (!isPosition(condition.assetId, condition.position)) error(`Interlock ${ruleId} references an unknown device or position: ${condition.assetId}/${condition.position}.`);
-      } else if (!model.assets.some(asset => asset.id === condition.assetId && asset.removableBreaker)) error(`Interlock ${ruleId} axis predicate requires a removable breaker: ${condition.assetId}/${condition.axis}.`);
+      } else if (!model.assets.some(asset => asset.id === condition.assetId && getRemovableMechanism(asset))) error(`Interlock ${ruleId} axis predicate requires a removable breaker or contactor: ${condition.assetId}/${condition.axis}.`);
     } else if (condition.kind === 'source') {
       if (!model.sources.some(source => source.id === condition.sourceId)) error(`Interlock ${ruleId} references unknown source ${condition.sourceId}.`);
     } else condition.conditions.forEach(child => checkCondition(child, ruleId));
   };
   for (const review of reviews) {
-    if (!model.assets.some(asset => asset.id === review.assetId && (asset.positions.length > 0 || asset.removableBreaker))) error(`Interlock review references unknown switchable asset ${review.assetId}.`);
+    if (!model.assets.some(asset => asset.id === review.assetId && (asset.positions.length > 0 || getRemovableMechanism(asset)))) error(`Interlock review references unknown switchable asset ${review.assetId}.`);
     const hasRules = rules.some(rule => rule.assetId === review.assetId);
     if (review.status === 'confirmed-none' && hasRules) error(`Interlock review for ${review.assetId} confirms no rules but rules are present.`);
     if (review.status === 'confirmed-rules' && !hasRules) error(`Interlock review for ${review.assetId} confirms rules but none are present.`);
@@ -50,7 +51,7 @@ export function validateInterlocks(model: ModelForInterlockValidation, error: (m
   for (const rule of rules) {
     if ('position' in rule) {
       if (!isPosition(rule.assetId, rule.position)) error(`Interlock ${rule.id} references an unknown target device or position.`);
-    } else if (!model.assets.some(asset => asset.id === rule.assetId && asset.removableBreaker)) error(`Interlock ${rule.id} command target requires a removable breaker.`);
+    } else if (!model.assets.some(asset => asset.id === rule.assetId && getRemovableMechanism(asset))) error(`Interlock ${rule.id} command target requires a removable breaker or contactor.`);
     if (!reviews.some(review => review.assetId === rule.assetId)) error(`Interlock ${rule.id} has no review record.`);
     if (!model.synthetic && rule.evidence.length === 0) error(`Interlock ${rule.id} requires evidence.`);
     checkCondition(rule.require, rule.id);

@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { interlockSchema, validateInterlocks } from './interlock-model';
 import { claimFields, evidenceRecordSchema, reviewRecordSchema } from './evidence';
 import { presentationSchema, validatePresentation } from './presentation';
-import { deviceStateSchema, isBreakerState } from './mechanisms';
+import { deviceStateSchema, getRemovableMechanism, isIndependentState } from './mechanisms';
 
 const id = z.string().min(1);
 const pair = z.tuple([id, id]);
@@ -17,6 +17,7 @@ const assetSchema = z.strictObject({
   sourceArcs: z.array(z.strictObject({ id, from: id, to: id, supportScope: z.literal('relationship').optional(), ...claimFields })).optional(),
   earthPairs: z.array(pair).optional(),
   removableBreaker: z.strictObject({ mainPair: pair }).optional(),
+  removableContactor: z.strictObject({ mainPair: pair }).optional(),
   positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
 });
 
@@ -68,19 +69,21 @@ export const modelSchema = z.strictObject({
     }
   }
   for (const asset of model.assets) {
-    if (asset.sourceArcs !== undefined && (asset.positions.length > 0 || asset.removableBreaker)) error(`Source arcs in ${asset.id} require a fixed asset without positions or a removable mechanism.`);
+    const mechanism = getRemovableMechanism(asset);
+    if (asset.removableBreaker && asset.removableContactor) error(`Asset ${asset.id} cannot declare both removable breaker and contactor mechanisms.`);
+    if (asset.sourceArcs !== undefined && (asset.positions.length > 0 || mechanism)) error(`Source arcs in ${asset.id} require a fixed asset without positions or a removable mechanism.`);
     for (const arc of asset.sourceArcs ?? []) {
       if (arc.from === arc.to || !asset.terminals.includes(arc.from) || !asset.terminals.includes(arc.to)) error(`Source arc ${arc.id} requires two distinct owned terminals in ${asset.id}.`);
       if (arc.supportScope === 'relationship' && (arc.knowledge === undefined || !arc.evidenceIds?.length)) error(`Relationship-scoped source arc ${arc.id} requires explicit knowledge and linked evidence.`);
     }
     const state = model.starting.devices[asset.id];
-    if (asset.removableBreaker) {
-      if (asset.kind !== 'breaker' || asset.positions.length) error(`Removable breaker ${asset.id} requires breaker kind and no discrete positions.`);
-      if (!isBreakerState(state)) error(`Removable breaker ${asset.id} requires explicit nullable contact and racking starting states.`);
-      const [a, b] = asset.removableBreaker.mainPair;
-      if (a === b || !asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Removable breaker ${asset.id} requires two distinct owned main terminals.`);
-      if ([...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? [])].some(([x, y]) => x === a && y === b || x === b && y === a)) error(`Removable breaker ${asset.id} main pair cannot also be fixed conducting.`);
-    } else if (isBreakerState(state)) error(`Discrete asset ${asset.id} cannot use independent breaker states.`);
+    if (mechanism) {
+      if (asset.kind !== mechanism.kind || asset.positions.length) error(`Removable ${mechanism.kind} ${asset.id} requires ${mechanism.kind} kind and no discrete positions.`);
+      if (!isIndependentState(state)) error(`Removable ${mechanism.kind} ${asset.id} requires explicit nullable contact and racking starting states.`);
+      const [a, b] = mechanism.mainPair;
+      if (a === b || !asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Removable ${mechanism.kind} ${asset.id} requires two distinct owned main terminals.`);
+      if ([...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? [])].some(([x, y]) => x === a && y === b || x === b && y === a)) error(`Removable ${mechanism.kind} ${asset.id} main pair cannot also be fixed conducting.`);
+    } else if (isIndependentState(state)) error(`Discrete asset ${asset.id} cannot use independent contact/racking states.`);
     unique(asset.positions.map(p => p.id), `position in ${asset.id}`);
     for (const [a, b] of [...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? []), ...asset.positions.flatMap(p => [...p.pairs, ...(p.sourcePairs ?? []), ...(p.earthPairs ?? [])])]) {
       if (!asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Relationship in ${asset.id} references an external or missing terminal.`);
@@ -92,7 +95,7 @@ export const modelSchema = z.strictObject({
     if (asset.positions.length && (!Object.hasOwn(model.starting.devices, asset.id) || (model.starting.devices[asset.id] !== null && !asset.positions.some(p => p.id === model.starting.devices[asset.id])))) error(`Missing or unsupported starting position for ${asset.id}.`);
   }
   for (const deviceId of Object.keys(model.starting.devices)) {
-    if (!model.assets.some(a => a.id === deviceId && (a.positions.length || a.removableBreaker))) error(`Starting configuration references unknown device ${deviceId}.`);
+    if (!model.assets.some(a => a.id === deviceId && (a.positions.length || getRemovableMechanism(a)))) error(`Starting configuration references unknown device ${deviceId}.`);
   }
   for (const source of model.sources) {
     if (!model.assets.find(a => a.id === source.assetId)?.terminals.includes(source.terminal)) error(`Source ${source.id} references an external or missing terminal.`);

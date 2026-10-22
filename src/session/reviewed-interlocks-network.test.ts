@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, ownerConfiguredNetworkModel } from '../models/site/current-network';
+import { interlockReviewedNetworkModel, ownerConfiguredNetworkModel } from '../models/site/current-network';
 
 describe('current additional-interlock review package', () => {
   it('adds only selected profiles and current notes while preserving the distributed baseline package', () => {
     const old = new SimulationSession(ownerConfiguredNetworkModel).saveScenario();
-    const session = new SimulationSession(currentNetworkModel); const snapshot = session.snapshot();
+    const session = new SimulationSession(interlockReviewedNetworkModel); const snapshot = session.snapshot();
     expect(snapshot.model.version).toBe('construction-2026-10-23.3');
     expect(snapshot.model.interlocks!.reviews.filter(review => review.status !== 'unresolved')).toHaveLength(169);
     expect(snapshot.model.interlocks!.reviews.filter(review => review.status === 'unresolved')).toHaveLength(191);

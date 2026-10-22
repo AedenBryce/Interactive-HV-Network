@@ -13,8 +13,13 @@ import { withOwnerSw411Feeds } from './owner-sw411-feeds';
 import { withOwnerRemovableBreakers } from './owner-removable-breakers';
 import { withOwnerSw411LocalRules } from './owner-sw411-local-rules';
 import { withOwnerStartingConfiguration } from './owner-starting-configuration';
-import { withCurrentConfigurationNotes } from './configuration-review-notes';
+import { withCurrentConfigurationNotes, withExpandedMechanismNotes } from './configuration-review-notes';
 import { withOwnerAdditionalInterlocks } from './owner-additional-interlocks';
+import { withOwnerKeySequenceDeferral } from './owner-key-sequence-deferral';
+import { withOwnerTransformerTransfers } from './owner-transformer-transfers';
+import { withOwnerBusEarthLvProfiles } from './owner-bus-earth-lv-profiles';
+import { withOwnerHopperLocalProfiles } from './owner-hopper-local-profiles';
+import { withOwnerDriveLocalProfiles } from './owner-drive-local-profiles';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -25,8 +30,15 @@ export const ownerConfiguredNetworkModel = withOwnerStartingConfiguration(
   configuredVersion,
 );
 const interlockVersion = 'construction-2026-10-23.3';
-export const currentNetworkModel = withOwnerAdditionalInterlocks(
+export const interlockReviewedNetworkModel = withOwnerAdditionalInterlocks(
   withCurrentConfigurationNotes(ownerConfiguredNetworkModel, interlockVersion), interlockVersion,
+);
+const expandedVersion = 'construction-2026-10-23.4';
+const keyScopedNetworkModel = withOwnerKeySequenceDeferral(interlockReviewedNetworkModel, expandedVersion);
+export const currentNetworkModel = withExpandedMechanismNotes(
+  withOwnerDriveLocalProfiles(withOwnerHopperLocalProfiles(withOwnerBusEarthLvProfiles(
+    withOwnerTransformerTransfers(keyScopedNetworkModel, expandedVersion), expandedVersion,
+  ), expandedVersion), expandedVersion), expandedVersion,
 );
 
 function buildCurrentNetworkModel() {

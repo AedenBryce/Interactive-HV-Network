@@ -2,7 +2,7 @@ import { useId } from 'react';
 import type { Asset, NetworkModel } from '../session/model';
 import { isSourceArcSupported } from '../session/evidence';
 import type { DiagramLayout } from './diagram';
-import { isBreakerState, removablePairs } from '../session/mechanisms';
+import { getRemovableMechanism, isIndependentState, removablePairs } from '../session/mechanisms';
 import type { DeviceState } from '../session/mechanisms';
 import { Symbol } from './Symbol';
 
@@ -11,9 +11,10 @@ export function RelationshipsSymbol({ asset, positionId, layout, model }: { asse
   const arrowId = useId();
   const [cx, cy] = layout.assets[asset.id];
   const position = asset.positions.find(position => position.id === positionId);
-  const mechanism = asset.removableBreaker ? removablePairs(asset.removableBreaker.mainPair, positionId, false) : [];
-  const uncertainMain = asset.removableBreaker && !mechanism.length ? removablePairs(asset.removableBreaker.mainPair, positionId, true) : [];
-  const common = [...asset.conductivePairs, ...(position?.pairs ?? []), ...mechanism];
+  const mechanism = getRemovableMechanism(asset);
+  const main = mechanism ? removablePairs(mechanism.mainPair, positionId, false) : [];
+  const uncertainMain = mechanism && !main.length ? removablePairs(mechanism.mainPair, positionId, true) : [];
+  const common = [...asset.conductivePairs, ...(position?.pairs ?? []), ...main];
   const source = [...common, ...(asset.sourcePairs ?? []), ...(position?.sourcePairs ?? [])];
   const earth = [...common, ...(asset.earthPairs ?? []), ...(position?.earthPairs ?? [])];
   const point = (terminal: string) => { const [x, y] = layout.terminals[terminal]; return { x: x - cx, y: y - cy }; };
@@ -42,7 +43,7 @@ export function RelationshipsSymbol({ asset, positionId, layout, model }: { asse
     })}
     {earth.map(([a, b], index) => <line key={`earth:${index}`} x1={point(a).x} y1={point(a).y + 5} x2={point(b).x} y2={point(b).y + 5} className="relationship-earth"><title>Declared earth relationship: {a} ↔ {b}</title></line>)}
     {asset.terminals.map(terminal => <circle key={terminal} cx={point(terminal).x} cy={point(terminal).y} r="4" className="relationship-terminal"><title>{terminal}</title></circle>)}
-    {asset.removableBreaker && isBreakerState(positionId) && <g className="removable-mechanism"><Symbol kind="breaker" open={positionId.contact === 'open'} unknown={positionId.contact === null} /><text x="0" y="-75" textAnchor="middle" className="position-label">Contact: {positionId.contact ?? 'Unconfirmed'}</text><text x="0" y="-55" textAnchor="middle" className="position-label">Rack: {positionId.racking ?? 'Unconfirmed'}</text></g>}
+    {mechanism && isIndependentState(positionId) && <g className="removable-mechanism"><Symbol kind={mechanism.kind} open={positionId.contact === 'open'} unknown={positionId.contact === null} /><text x="0" y="-75" textAnchor="middle" className="position-label">Contact: {positionId.contact ?? 'Unconfirmed'}</text><text x="0" y="-55" textAnchor="middle" className="position-label">Rack: {positionId.racking ?? 'Unconfirmed'}</text></g>}
     {asset.positions.length > 0 && <text x="0" y="-62" textAnchor="middle" className="position-label">{positionId === null ? 'Unconfirmed position' : position?.label}</text>}
   </g>;
 }

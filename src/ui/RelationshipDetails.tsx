@@ -1,6 +1,6 @@
 import type { Asset, NetworkModel } from '../session/model';
 import { isSourceArcSupported, isSupported } from '../session/evidence';
-import { describeDeviceState } from '../session/mechanisms';
+import { describeDeviceState, getRemovableMechanism } from '../session/mechanisms';
 import type { DeviceState } from '../session/mechanisms';
 import { EvidenceReferences } from './EvidenceReferences';
 
@@ -28,7 +28,8 @@ function SourceArcDetails({ arc, asset, model }: { arc: SourceArc; asset: Asset;
 }
 
 export function RelationshipDetails({ asset, positionId, model }: { asset: Asset; positionId: DeviceState | undefined; model: NetworkModel }) {
-  if (asset.removableBreaker) return <section aria-label="Declared terminal relationships"><h3>Declared main pair</h3><p>{asset.removableBreaker.mainPair.join(' ↔ ')} conducts only with Contact Closed and Rack In. Unknown axes retain only compatible possibilities.</p><p>{describeDeviceState(positionId)}</p><p>Independent fixed earth relationships remain separate: {(asset.earthPairs ?? []).map(pair => pair.join(' ↔ ')).join('; ') || 'None declared'}.</p></section>;
+  const mechanism = getRemovableMechanism(asset);
+  if (mechanism) return <section aria-label="Declared terminal relationships"><h3>Declared main pair</h3><p>{mechanism.mainPair.join(' ↔ ')} conducts only with Contact Closed and Rack In. Unknown axes retain only compatible possibilities.</p><p>{describeDeviceState(positionId)}</p><p>Independent fixed earth relationships remain separate: {(asset.earthPairs ?? []).map(pair => pair.join(' ↔ ')).join('; ') || 'None declared'}.</p></section>;
   const arcs = asset.sourceArcs ?? [];
   if (!arcs.length && asset.sourcePairs === undefined && asset.earthPairs === undefined && !asset.positions.some(position => position.sourcePairs !== undefined || position.earthPairs !== undefined)) return null;
   const position = asset.positions.find(position => position.id === positionId);

@@ -12,8 +12,8 @@ import { UncertaintyDetails } from './UncertaintyDetails';
 import { SessionHistory } from './SessionHistory';
 import { RelationshipDetails } from './RelationshipDetails';
 import { ScenarioControls } from './ScenarioControls';
-import { contactPosition, describeDeviceState } from '../session/mechanisms';
-import type { BreakerCommand } from '../session/mechanisms';
+import { contactPosition, describeDeviceState, getRemovableMechanism } from '../session/mechanisms';
+import type { IndependentCommand } from '../session/mechanisms';
 
 const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', contactor: 'Contactor', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 
@@ -27,6 +27,7 @@ export function App() {
   const pending = useRef(false);
   const inspector = useRef<HTMLElement>(null);
   const asset = snapshot.model.assets.find(asset => asset.id === selectedId)!;
+  const mechanism = getRemovableMechanism(asset);
   const currentPosition = asset.positions.find(p => p.id === snapshot.devices[asset.id]);
   const connectivity = snapshot.connectivity[asset.id];
   const switching = snapshot.switching[asset.id];
@@ -50,7 +51,7 @@ export function App() {
   function selectModel(id: string) {
     updateSession(() => {
       const result = session.loadModel(models.find(model => model.id === id));
-      if (result.ok) { const next = session.snapshot(); setSnapshot(next); setSelectedId(next.model.assets.find(item => item.positions.length || item.removableBreaker)?.id ?? next.model.assets[0].id); setTraceKey(null); setMessage(''); inspector.current?.scrollTo({ top: 0 }); }
+      if (result.ok) { const next = session.snapshot(); setSnapshot(next); setSelectedId(next.model.assets.find(item => item.positions.length || getRemovableMechanism(item))?.id ?? next.model.assets[0].id); setTraceKey(null); setMessage(''); inspector.current?.scrollTo({ top: 0 }); }
       else setMessage(result.error);
     });
   }
@@ -63,7 +64,7 @@ export function App() {
     });
   }
 
-  function changePosition(position: string | BreakerCommand) {
+  function changePosition(position: string | IndependentCommand) {
     updateSession(() => {
       const result = session.changeDevice(asset.id, position);
       if (result.ok) {
@@ -87,7 +88,7 @@ export function App() {
       const result = session.loadScenario(input);
       if (result.ok) {
         const next = session.snapshot(); setSnapshot(next);
-        setSelectedId(next.model.assets.find(item => item.positions.length || item.removableBreaker)?.id ?? next.model.assets[0].id);
+        setSelectedId(next.model.assets.find(item => item.positions.length || getRemovableMechanism(item))?.id ?? next.model.assets[0].id);
         setTraceKey(null); setMessage(next.mode === 'view-only' ? 'Historical scenario opened in view-only mode.' : 'Scenario opened. Connectivity restored.');
         inspector.current?.scrollTo({ top: 0 });
       } else setMessage(result.error);
@@ -105,7 +106,7 @@ export function App() {
         <label className="model-picker">Model<select aria-label="Model" value={snapshot.currentModel.id} onChange={event => selectModel(event.target.value)}>{models.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label>
         <ScenarioControls snapshot={snapshot} onSave={() => session.saveScenario()} onLoad={loadScenario} onError={setMessage} onReturn={() => selectModel(snapshot.currentModel.id)} />
         <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={() => selectAsset(item.id)}>
-          <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={contactPosition(snapshot.devices[item.id]) === 'open'} unknown={(item.positions.length > 0 || !!item.removableBreaker) && contactPosition(snapshot.devices[item.id]) === null} /></svg><span>{item.label}{item.removableBreaker && <small style={{ display: 'block' }}>{describeDeviceState(snapshot.devices[item.id])}</small>}</span>
+          <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={contactPosition(snapshot.devices[item.id]) === 'open'} unknown={(item.positions.length > 0 || !!getRemovableMechanism(item)) && contactPosition(snapshot.devices[item.id]) === null} /></svg><span>{item.label}{getRemovableMechanism(item) && <small style={{ display: 'block' }}>{describeDeviceState(snapshot.devices[item.id])}</small>}</span>
         </button>)}</nav>
       </aside>
 
@@ -113,11 +114,11 @@ export function App() {
 
       <aside ref={inspector} className="inspector" aria-label="Asset details">
         <h2>Asset details</h2>
-        <div className="asset-heading"><svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={asset.kind} open={contactPosition(snapshot.devices[asset.id]) === 'open'} unknown={(asset.positions.length > 0 || !!asset.removableBreaker) && contactPosition(snapshot.devices[asset.id]) === null} /></svg><div><h3>{asset.label}</h3><p>{kindLabels[asset.kind]}</p></div></div>
-        <dl className="identity-rows"><div><dt>Identity</dt><dd>{asset.id === 'cb-01' ? 'CB-01' : asset.id}</dd></div><div><dt>State</dt><dd>{asset.removableBreaker ? describeDeviceState(snapshot.devices[asset.id]) : asset.positions.length && snapshot.devices[asset.id] === null ? 'Unconfirmed' : currentPosition?.label ?? 'No position modelled'}</dd></div><div><dt>Source connectivity</dt><dd>{connectivity.sourceStatus === 'unconfirmed' ? 'Unconfirmed' : connectivity.sourceStatus === 'connected' ? 'Connected' : 'No source connection'}</dd></div></dl>
+        <div className="asset-heading"><svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={asset.kind} open={contactPosition(snapshot.devices[asset.id]) === 'open'} unknown={(asset.positions.length > 0 || !!mechanism) && contactPosition(snapshot.devices[asset.id]) === null} /></svg><div><h3>{asset.label}</h3><p>{kindLabels[asset.kind]}</p></div></div>
+        <dl className="identity-rows"><div><dt>Identity</dt><dd>{asset.id === 'cb-01' ? 'CB-01' : asset.id}</dd></div><div><dt>State</dt><dd>{mechanism ? describeDeviceState(snapshot.devices[asset.id]) : asset.positions.length && snapshot.devices[asset.id] === null ? 'Unconfirmed' : currentPosition?.label ?? 'No position modelled'}</dd></div><div><dt>Source connectivity</dt><dd>{connectivity.sourceStatus === 'unconfirmed' ? 'Unconfirmed' : connectivity.sourceStatus === 'connected' ? 'Connected' : 'No source connection'}</dd></div></dl>
         {asset.aliases?.length ? <p>Drawing aliases: {asset.aliases.join('; ')}</p> : null}
         {asset.positions.length > 0 && <section className="switch-controls" aria-label="Switching controls"><h3>Set intended state</h3><div className="state-buttons">{asset.positions.map(position => { const option = switching.positions.find(option => option.id === position.id)!; return <button key={position.id} title={option.reason} onClick={() => changePosition(position.id)} disabled={currentPosition?.id === position.id || !option.allowed}>{position.id === 'closed' ? 'Close' : position.label}</button>; })}</div><p>Changing this device updates the represented connections.</p><InterlockDetails status={switching} /></section>}
-        {asset.removableBreaker && <section className="switch-controls" aria-label="Independent breaker controls"><h3>Contact and racking</h3><p>{describeDeviceState(snapshot.devices[asset.id])}</p><div className="state-buttons">{switching.actions?.map(action => <button key={`${action.command.kind}:${action.command.value}`} title={action.reason} disabled={!action.allowed} onClick={() => changePosition(action.command)}>{action.label}</button>)}</div><InterlockDetails status={switching} /></section>}
+        {mechanism && <section className="switch-controls" aria-label={`Independent ${mechanism.kind} controls`}><h3>Contact and racking</h3><p>{describeDeviceState(snapshot.devices[asset.id])}</p><div className="state-buttons">{switching.actions?.map(action => <button key={`${action.command.kind}:${action.command.value}`} title={action.reason} disabled={!action.allowed} onClick={() => changePosition(action.command)}>{action.label}</button>)}</div><InterlockDetails status={switching} /></section>}
         {snapshot.model.sources.filter(source => source.assetId === asset.id).map(source => <section className="switch-controls" key={source.id} aria-label={`${source.label} availability`}><h3>Source availability</h3><p>{snapshot.sources[source.id] === null ? 'Unconfirmed' : snapshot.sources[source.id] ? 'Enabled' : 'Disabled'}</p><div className="state-buttons"><button aria-label={`Enable ${source.label}`} disabled={snapshot.mode === 'view-only' || snapshot.sources[source.id] === true} onClick={() => changeSource(source.id, true)}>Enable</button><button aria-label={`Disable ${source.label}`} disabled={snapshot.mode === 'view-only' || snapshot.sources[source.id] === false} onClick={() => changeSource(source.id, false)}>Disable</button></div></section>)}
         {snapshot.model.earths?.length ? <EarthDetails model={snapshot.model} connectivity={snapshot.connectivity[asset.id]} /> : null}
         <RelationshipDetails asset={asset} positionId={snapshot.devices[asset.id]} model={snapshot.model} />

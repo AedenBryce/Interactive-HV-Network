@@ -10,13 +10,13 @@ import { evaluateUncertainty } from './uncertainty';
 import type { UncertaintyConnectivity, ConnectionResult } from './uncertainty';
 import { scenarioSchema, canonicalModelPackage } from './scenario';
 import type { ScenarioFile } from './scenario';
-import { breakerCommandSchema, isBreakerState } from './mechanisms';
-import type { BreakerCommand, BreakerState } from './mechanisms';
+import { getRemovableMechanism, independentCommandSchema, isIndependentState } from './mechanisms';
+import type { IndependentCommand, IndependentState } from './mechanisms';
 
 export type AssetConnectivity = Connectivity & EarthConnectivity & UncertaintyConnectivity;
 export type SessionChange =
   | { kind: 'device'; assetId: string; from: string | null; to: string }
-  | { kind: 'breaker'; assetId: string; command: BreakerCommand; from: BreakerState; to: BreakerState }
+  | { kind: 'breaker' | 'contactor'; assetId: string; command: IndependentCommand; from: IndependentState; to: IndependentState }
   | { kind: 'source'; sourceId: string; from: boolean | null; to: boolean };
 export type SessionAction = SessionChange & { id: number };
 type ScenarioStates = { devices: DeviceStates; sources: SourceStates };
@@ -77,7 +77,7 @@ export class SimulationSession {
   }
 
   saveScenario(): ScenarioFile {
-    return structuredClone({ formatVersion: this.#model.assets.some(asset => asset.removableBreaker) ? 2 : 1, modelVersion: this.#model.version, model: this.#model, devices: this.#devices, sources: this.#sources });
+    return structuredClone({ formatVersion: this.#model.assets.some(asset => getRemovableMechanism(asset)) ? 2 : 1, modelVersion: this.#model.version, model: this.#model, devices: this.#devices, sources: this.#sources });
   }
 
   loadScenario(input: unknown): ActionResult {
@@ -104,18 +104,19 @@ export class SimulationSession {
     return { ok: true };
   }
 
-  changeDevice(assetId: string, position: string | BreakerCommand): ActionResult {
+  changeDevice(assetId: string, position: string | IndependentCommand): ActionResult {
     if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
     const asset = this.#model.assets.find(asset => asset.id === assetId);
     if (typeof position !== 'string') {
-      const parsed = breakerCommandSchema.safeParse(position); const state = this.#devices[assetId];
-      if (!asset?.removableBreaker || !parsed.success || !isBreakerState(state)) return { ok: false, error: `Unsupported independent breaker command for ${assetId}.` };
+      const mechanism = getRemovableMechanism(asset);
+      const parsed = independentCommandSchema.safeParse(position); const state = this.#devices[assetId];
+      if (!mechanism || !parsed.success || !isIndependentState(state)) return { ok: false, error: `Unsupported independent ${mechanism?.kind ?? 'breaker'} command for ${assetId}.` };
       const command = parsed.data;
       const option = evaluateInterlocks(this.#model, this.#devices, this.#sources)[assetId].actions!.find(action => action.command.kind === command.kind && action.command.value === command.value)!;
-      if (!option.allowed) return { ok: false, error: option.reason ?? 'Breaker action blocked.' };
+      if (!option.allowed) return { ok: false, error: option.reason ?? `${mechanism.kind === 'breaker' ? 'Breaker' : 'Contactor'} action blocked.` };
       if (state[command.kind] === command.value) return { ok: true };
       const next = { ...state, [command.kind]: command.value };
-      this.#acceptChange({ kind: 'breaker', assetId, command, from: structuredClone(state), to: structuredClone(next) }, () => { this.#devices[assetId] = next; });
+      this.#acceptChange({ kind: mechanism.kind, assetId, command, from: structuredClone(state), to: structuredClone(next) }, () => { this.#devices[assetId] = next; });
       return { ok: true };
     }
     if (!asset?.positions.some(state => state.id === position)) {
@@ -125,7 +126,7 @@ export class SimulationSession {
     if (!option.allowed) return { ok: false, error: option.reason ?? 'Switching is blocked by the represented interlock.' };
     if (this.#devices[assetId] === position) return { ok: true };
     const from = this.#devices[assetId];
-    if (isBreakerState(from)) return { ok: false, error: `Unsupported discrete position for removable breaker ${assetId}.` };
+    if (isIndependentState(from)) return { ok: false, error: `Unsupported discrete position for removable ${getRemovableMechanism(asset)?.kind ?? 'breaker'} ${assetId}.` };
     this.#acceptChange({ kind: 'device', assetId, from, to: position }, () => { this.#devices[assetId] = position; });
     return { ok: true };
   }

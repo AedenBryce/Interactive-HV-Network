@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { modelSchema } from './model';
 import type { NetworkModel } from './model';
-import { deviceStateSchema, isBreakerState } from './mechanisms';
+import { deviceStateSchema, getRemovableMechanism, isIndependentState } from './mechanisms';
 
 const id = z.string().min(1);
 export const scenarioSchema = z.strictObject({
@@ -11,9 +11,9 @@ export const scenarioSchema = z.strictObject({
   devices: z.record(id, deviceStateSchema),
   sources: z.record(id, z.boolean().nullable()),
 }).superRefine((scenario, context) => {
-  const independent = scenario.model.assets.some(asset => asset.removableBreaker);
-  if (scenario.formatVersion === 1 && (independent || Object.values(scenario.devices).some(isBreakerState))) context.addIssue({ code: 'custom', message: 'Format1 supports discrete position states only; independent breaker models require format2.' });
-  if (scenario.formatVersion === 2 && !independent) context.addIssue({ code: 'custom', message: 'Legacy-only models retain format1; format2 requires an independent breaker mechanism.' });
+  const independent = scenario.model.assets.some(asset => getRemovableMechanism(asset));
+  if (scenario.formatVersion === 1 && (independent || Object.values(scenario.devices).some(isIndependentState))) context.addIssue({ code: 'custom', message: 'Format1 supports discrete position states only; independent contact/racking models require format2.' });
+  if (scenario.formatVersion === 2 && !independent) context.addIssue({ code: 'custom', message: 'Legacy-only models retain format1; format2 requires an independent contact/racking mechanism.' });
   if (scenario.modelVersion !== scenario.model.version) context.addIssue({ code: 'custom', path: ['modelVersion'], message: 'Scenario modelVersion does not match its original model snapshot.' });
   const states = modelSchema.safeParse({ ...scenario.model, starting: { devices: scenario.devices, sources: scenario.sources } });
   if (!states.success) for (const issue of states.error.issues) context.addIssue({ code: 'custom', message: `Scenario states: ${issue.message}` });

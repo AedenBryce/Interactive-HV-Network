@@ -1,4 +1,5 @@
 import type { NetworkModel } from '../../session/model';
+import { getRemovableMechanism, isIndependentState } from '../../session/mechanisms';
 
 const baselineId = 'WN-OWNER-STARTING-CONFIGURATION';
 const noteMarker = 'Current teaching configuration note';
@@ -48,6 +49,31 @@ export function withCurrentConfigurationNotes(base: NetworkModel, version: strin
     const asset = model.assets.find(asset => asset.id === source?.assetId);
     if (!asset) throw new Error(`Current configuration captions require the retained abstract source ${sourceId}.`);
     asset.label = asset.label.split('\n').map(line => line === 'Availability unconfirmed' ? 'Simulation supply input' : line).join('\n');
+  }
+  return model;
+}
+
+/** Refresh inherited package-wide counts after explicitly selected new mechanisms. */
+export function withExpandedMechanismNotes(base: NetworkModel, version: string): NetworkModel {
+  const profileIds = ['WN-INTERLOCK-P05', 'WN-INTERLOCK-P07'];
+  if (profileIds.some(id => !base.evidence?.some(record => record.id === id && record.status === 'owner-confirmed'))) throw new Error('Expanded configuration notes require the selected LV and contactor profiles.');
+  const model = { ...structuredClone(base), version };
+  const mechanisms = model.assets.filter(asset => getRemovableMechanism(asset));
+  const states = mechanisms.map(asset => model.starting.devices[asset.id]);
+  if (states.some(state => !isIndependentState(state))) throw new Error('Expanded configuration notes require explicit mechanism starting states.');
+  const contacts = Object.values(model.starting.devices).map(state => isIndependentState(state) ? state.contact : state);
+  const updated = `Current expanded teaching configuration: ${contacts.filter(state => state !== null).length} selected contact positions, ${contacts.filter(state => state === null).length} contacts Unconfirmed, ${mechanisms.length} independent racking positions and ${Object.values(model.starting.sources).filter(state => state === true).length} available abstract supplies. Later owner46/51 selections add two LV breaker mechanisms and24 removable contactors. Actual site positions, physical truth and whole-model acceptance remain separate.`;
+  const qualify = (text: string) => text.includes(currentNote) ? `${updated}\nHistorical .3 configuration description (retained provenance; counts superseded above): ${text}` : text;
+  const reference = { document: 'Project owner conversation', revision: '2026-10-23', clause: 'Answers46/51: two LV incomers selected removable and all24 FC/RC contactors selected removable with Open/Rack in baseline. Exact decisions and identities remain in WN-INTERLOCK-P05/P07. These are model selections, not live state or physical switching permission.' };
+  for (const review of model.reviews ?? []) if (review.question.includes(currentNote)) {
+    review.question = qualify(review.question);
+    review.evidenceIds = [...new Set([...review.evidenceIds, ...profileIds])];
+  }
+  for (const review of model.interlocks?.reviews ?? []) if (review.note.includes(currentNote)) {
+    review.note = qualify(review.note); review.evidence.push(reference);
+  }
+  for (const record of model.evidence ?? []) if (record.summary.includes(currentNote)) {
+    record.summary = qualify(record.summary); record.references.push(reference);
   }
   return model;
 }
