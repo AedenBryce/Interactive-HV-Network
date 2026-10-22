@@ -2,17 +2,17 @@
 
 The package is ready for software exploration and owner review. **It is not an accepted installed-network model or an isolation instruction.** GitHub #25's owner acceptance and coverage gates remain open.
 
-## Current inspection snapshot: `.16`
+## Current inspection snapshot: `.17`
 
-`currentNetworkModel` exports **`site-whole-network` / `construction-2026-10-22.16`**. The [latest owner decision record](../drawing-review/supplemental/owner-scope-connections-review.md) records exact answers, retained uncertainty, inventory and software checks. It supersedes historical scope/connection descriptions below.
+`currentNetworkModel` exports **`site-whole-network` / `construction-2026-10-22.17`**. The [latest owner decision record](../drawing-review/supplemental/owner-scope-connections-review.md) records exact answers and retained uncertainty. The [latest identity increment](../drawing-review/supplemental/owner-identities-review.md) records `.17` inventory/checks, answers13–15 and the received-but-not-applied RM413 fork answer16. Code commit: `853a9e8`. It supersedes historical scope/connection descriptions below.
 
 - Mine-services RM711/study continuations, village/camp and RM718 unloading are excluded. SW441/TF441/MC441 water-tower/process-water is included. MC431A is downstream of MC431 and excluded beyond the first LV bus.
 - The TF04→Hopper10 route remains. Seven other line branches stop at abstract takeoff markers with unknown external source/backfeed and earth coverage. No supplemental Farwest downstream topology is added.
 - `owner:join:rm721-rm712` connects RM721 IN02 cable terminal `rm721:in02:b` to SF RM712 IN02 terminal `rm712:in02:a`. Cable tag/reference corrections remain unconfirmed. Former SW426 labels are disputed historical markers with no second supply joined.
 - RM721's cable to SF RM713 IN01 is owner-confirmed at both ends. Nothing is attached externally at RM712 IN01; no switch state follows from that answer. TF712's LV cables connect to the SW712 incomer input, retaining that breaker in series. The MCS/DG alternative assembly is outside this model's scope; this does not assert physical removal.
 - The corrected water supply is TF12 → OPF1-7 pole spur → WT1-CB → SW441 IN01. The new junction splits the existing TF12→SW411 IN04 line; both the water branch and SW411 continuation remain represented. Earlier TF712 source wording is superseded history, not a second supply.
-- TF436 is a spare cubicle with no installed downstream branch; internal device hardware/interlocks remain unconfirmed. TF453/SW453 is installed and connected to SW435 tier8. The first-bus/transformer details and actual states remain subject to their separate reviews.
-- The three null sources are abstract TF11/TF12/TF04 feeder inputs. Camp, station generator and Services MCS/DG details are excluded from the current whole model. All retained actual controls remain null and blocked pending physical-interlock review. Older snapshots retain their original models and open view-only against `.16`. Inventory counts in the decision record describe software, not installed coverage or acceptance.
+- TF436 has an owner-confirmed breaker and earth switch but no outgoing cables/downstream feed; actual positions, earth mechanisms and physical interlocks remain unconfirmed. TF432 is tier5, and MC001/MC438 identify the one TF004-fed HPGR LV board. TF453/SW453 is installed and connected to SW435 tier8. The first-bus/transformer details and actual states remain subject to their separate reviews.
+- The three null sources are abstract TF11/TF12/TF04 feeder inputs. Camp, station generator and Services MCS/DG details are excluded from the current whole model. All retained actual controls remain null and blocked pending physical-interlock review. Older snapshots retain their original models and open view-only against `.17`. Inventory counts in the decision record describe software, not installed coverage or acceptance.
 
 The historical details below describe earlier increments. Current scope excludes mine-services/camp/RM718, non-Hopper10 33 kV branch detail and the MCS/DG assembly even where a historical source package contains those assets. Owner acceptance remains pending.
 
