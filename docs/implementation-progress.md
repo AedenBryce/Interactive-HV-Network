@@ -255,3 +255,11 @@ Current `.14` adds only evidence/review/caption refinement and one view, `supple
 - **Spec:** no actionable findings in this increment. Source-supported printed content is distinguished from provisional installed binding; unresolved acceptance/configuration gates remain open.
 
 #25 and #26 remain open. This increment made source/endpoint-review progress; it did not accept the installed model or answer the pending mine/camp scope question.
+
+## Downstream scope and RM712 owner decisions (`.15`, #25 still open)
+
+The owner explicitly excluded mine-services and village/camp, limited the TF04 line to the Hopper10 route with other branches shown at takeoffs only, and confirmed RM721 IN02 enters SF RM712 IN02. The [decision and implementation record](../drawing-review/supplemental/owner-scope-connections-review.md) preserves the exact answers, affected terminals, historical source differences and remaining questions.
+
+Current `.15` has 695 assets,691 connections,368 null controls,5 null sources,142 earth terminations,317 coverage boundaries and93 views. RM718 unloading and SW441/water are provisionally retained pending their separate explicit scope decision; namespace grouping is not scope evidence. Seven other33kV branches stop at abstract takeoff markers with unknown external source/earth coverage. No Farwest downstream topology is added. `owner:join:rm721-rm712` is owner-confirmed; old SW426 labels are disputed historical references, not a second current supply. The former RM712 IN01→RM713 route and current TF712 LV/DG/MCS arrangement remain unconfirmed.
+
+Ten focused public-session tests passed, as did typecheck and production build (765.38kB /223.91kB gzip; Vite size advisory). Browser review at1704×1214 confirmed the current version, reciprocal RM721/RM712 navigation, the SF RM712 IN02 identity and disabled controls. Historical packages are unchanged. Full-suite testing remains reserved for final accepted delivery; no source availability, device baseline, complete interlocks or whole-model acceptance is claimed. #25 and#26 remain open.

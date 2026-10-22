@@ -1,5 +1,7 @@
 # Services, workshop, conveyor and laboratory: source review
 
+**Later owner connection decision, 22 October 2026:** “RM721 goes through SF RM712 IN02 at RM712”, in answer to the explicit RM721 IN02 remote-connection question. This resolves the remote switch for that route. The printed SW426 arrival in2253 remains disputed source evidence, not a second confirmed supply. The cable tag, wrong2252 reference, former RM712 IN01→RM713 route, installed TF712 LV gap, MCS contact matrix, states and interlocks remain unconfirmed. See the [exact decision record](../supplemental/owner-scope-connections-review.md). The source comparisons below retain the pre-answer drawing differences.
+
 Reviewed 22 October 2026 for published GitHub #22 / T21. **Source preparation only. No runtime model, actual starting configuration, complete installed interlock rules or whole-network acceptance is established.**
 
 The PDF skill was used to render and visually inspect all 15 distinct original one-page PDFs below. Ten detail crops covered source/disconnection wording, RM721 interfaces and aliases, TF412 windings/bars, RM413's double-boot branch, MCC414's incomer and revision/reference conflicts. Text extraction was used for discovery, not as sole connectivity evidence. Full source hashes were recomputed against the supplied inventory; the companion `services-evidence.json` records them. The first table has exact original filenames in column 2 for the coverage script. Revisited drawings are not new unique project sources.

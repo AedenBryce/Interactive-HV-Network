@@ -2,6 +2,8 @@
 
 Reviewed 22 October 2026. This source is additional to the original 141-PDF intake. It has not been incorporated into a runtime model or owner-accepted scope.
 
+**Later owner scope decision, 22 October 2026:** “that 33kV line is only relevant for the Hopper 10 stuff. Can show the branch points but no further details from that”. FW-R01 is resolved for scope: retain takeoff points only for the other branches; Norfolk/Bigge/Farwest downstream detail and its final LV endpoints are excluded. FW-R03 is therefore not an active endpoint request for those excluded branches. FW-R02 remains applicable to any retained main-line/takeoff reconciliation; the answer does not confirm commissioning or drawing precedence. See the [exact decision record](owner-scope-connections-review.md). The review below records the source as inspected before that answer.
+
 ## Verified source
 
 | Ref | Local source | Drawing revision | PDF page / inspected region |

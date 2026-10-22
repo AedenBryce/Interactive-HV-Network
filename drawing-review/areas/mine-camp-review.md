@@ -1,5 +1,7 @@
 # Mine, camp and overlapping legacy source review
 
+**Later owner scope decision, 22 October 2026:** “Exclude mine-services and village/camp networks”. The mine-services and village/camp portions are excluded from V1. **Unconfirmed:** whether this also excludes the separately documented RM718 railcar/fuel-unloading and SW441/TF441/MC441 water/process-water branches, grouped in this review for source preparation. Their software namespace does not establish the owner's intended scope. The excluded portions remain historical evidence, not active requests to approve or construct excluded equipment. Any crossing into retained equipment requires explicit coverage treatment; exclusion does not assert physical disconnection. See the [exact decision record](../supplemental/owner-scope-connections-review.md).
+
 Reviewed 22 October 2026 for GitHub #24 / T23, including the additional SW441/MC441 supplied coverage requested during coordination. Source preparation only; no installed topology, revision precedence, starting configuration, physical-interlock acceptance or model acceptance is recorded.
 
 ## Visually reviewed original sources

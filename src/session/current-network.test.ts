@@ -8,11 +8,18 @@ describe('current whole-network review package', () => {
     const original = JSON.stringify(wholeNetworkModel);
     const session = new SimulationSession(currentNetworkModel);
     const snapshot = session.snapshot();
-    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.14', synthetic: false });
+    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.15', synthetic: false });
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/rmu')?.label).toBe('Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed');
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/transformers')?.label).toBe('Hopper 10 · Selected 33 kV inputs / MC420A LV');
     for (const id of ['sw455:bus-d', 'sw455:bus-y', 'wh:h3:mc416a:bus', 'mc454:bus']) expect(snapshot.model.assets.some(asset => asset.id === id)).toBe(true);
-    expect(snapshot.model.presentation!.views).toHaveLength(128);
+    expect(snapshot.model.presentation!.views).toHaveLength(93);
+    expect(snapshot.model.assets).toHaveLength(695);
+    expect(snapshot.model.connections).toHaveLength(691);
+    expect(snapshot.model.sources).toHaveLength(5);
+    expect(snapshot.model.earths).toHaveLength(142);
+    expect(snapshot.model.boundaries).toHaveLength(317);
+    expect(Object.keys(snapshot.devices)).toHaveLength(368);
+    expect(Object.values(snapshot.switching).every(control => control.positions.every(position => !position.allowed))).toBe(true);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/mc454-lv')?.layout.labelOffsets!['sw454:interface:mc454-mc455']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/hopper3-lv')?.layout.labelOffsets!['wh:h3:mc416a:interface']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/sw455-lv')?.layout.labelOffsets!['sw454:interface:sw455']).toEqual([55, 0]);
@@ -101,7 +108,7 @@ describe('current whole-network review package', () => {
     const id = 'WN-MINE-TF03-FEED';
     expect(model.evidence!.find(record => record.id === id)).toMatchObject({ status: 'owner-confirmed', confirmation: { by: 'Project owner (conversation)', date: '2026-10-22', decision: 'It does' }, summary: expect.stringContaining('SB01 feeder F1') });
     expect(model.connections.some(connection => connection.id === 'whole:join:mine-tf03')).toBe(false);
-    expect(model.boundaries!.find(boundary => boundary.id === 'boundary:excluded-station:whole:join:mine-tf03')).toMatchObject({ terminal: 'mine:interface:station-tf03:port', sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' });
+    expect(model.boundaries!.some(boundary => boundary.id === 'boundary:excluded-station:whole:join:mine-tf03')).toBe(false);
     expect(model.reviews!.find(review => review.id === 'WN-JOIN-mine-tf03')).toMatchObject({ status: 'resolved', resolution: { decision: 'It does' } });
     for (const reviewId of ['MC-Q06', 'MC-Q09', 'MC-Q11']) expect(model.reviews!.find(review => review.id === reviewId)?.status).toBe('open');
     expect(model.connections.some(connection => [connection.from, connection.to].includes('mine:interface:study-tf03:port') && connection.id.startsWith('whole:join:'))).toBe(false);
@@ -111,7 +118,7 @@ describe('current whole-network review package', () => {
     expect(wholeNetworkModel.evidence!.some(record => record.id === id)).toBe(false);
   });
 
-  it('applies the confirmed feeder-breaker station limits while keeping downstream mine/camp disposition unconfirmed', () => {
+  it('applies the station and mine/camp scope decisions while retaining Services and separately reviewed water/railcar branches', () => {
     const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
     expect(model.assets.some(asset => asset.id === 'station:sb01:bus')).toBe(false);
     expect(model.assets.some(asset => asset.id === 'station:sb02:bus')).toBe(false);
@@ -125,10 +132,12 @@ describe('current whole-network review package', () => {
       expect(model.sources.find(source => source.id === id)).toMatchObject({ knowledge: 'provisional' });
       expect(sources[id]).toBeNull();
     }
-    expect(model.assets.some(asset => asset.id === 'mine:interface:station-tf03')).toBe(true);
-    expect(model.assets.some(asset => asset.id === 'camp:interface:station-village')).toBe(true);
+    expect(model.assets.some(asset => asset.id === 'mine:interface:station-tf03')).toBe(false);
+    expect(model.assets.some(asset => asset.id === 'camp:interface:station-village')).toBe(false);
+    expect(model.assets.some(asset => asset.id === 'mine:rm718:bus')).toBe(true);
+    expect(model.assets.some(asset => asset.id === 'mine:sw441:bus')).toBe(true);
     expect(model.connections.some(connection => ['whole:join:mine-tf03', 'whole:join:village'].includes(connection.id))).toBe(false);
-    expect(model.sources.filter(source => source.id.startsWith('camp:dg'))).toHaveLength(3);
+    expect(model.sources.filter(source => source.id.startsWith('camp:dg'))).toHaveLength(0);
     expect(model.sources.some(source => source.id === 'rm712:dg1:supply')).toBe(true);
     expect(model.sources.some(source => source.id === 'rm712:dg7:supply')).toBe(true);
     expect(model.reviews!.find(review => review.id === 'WN-OWNER-ACCEPTANCE')?.status).toBe('open');
@@ -141,7 +150,7 @@ describe('current whole-network review package', () => {
     expect(model.reviews!.find(review => review.id === 'SV-MC413-INSTALLED')).toMatchObject({ status: 'open', question: expect.stringContaining('RC001') });
     expect(model.presentation!.views.some(view => view.id === 'supplemental/mc413-lv')).toBe(true);
     expect(model.assets.some(asset => asset.id.includes('mc413a'))).toBe(false);
-    expect(model.sources).toHaveLength(8);
+    expect(model.sources).toHaveLength(5);
     expect(devices['rm413:mc413:cb']).toBeNull();
   });
 
