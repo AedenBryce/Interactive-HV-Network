@@ -8,11 +8,11 @@ describe('current whole-network review package', () => {
     const original = JSON.stringify(wholeNetworkModel);
     const session = new SimulationSession(currentNetworkModel);
     const snapshot = session.snapshot();
-    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.13', synthetic: false });
+    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.14', synthetic: false });
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/rmu')?.label).toBe('Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed');
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/transformers')?.label).toBe('Hopper 10 · Selected 33 kV inputs / MC420A LV');
     for (const id of ['sw455:bus-d', 'sw455:bus-y', 'wh:h3:mc416a:bus', 'mc454:bus']) expect(snapshot.model.assets.some(asset => asset.id === id)).toBe(true);
-    expect(snapshot.model.presentation!.views).toHaveLength(127);
+    expect(snapshot.model.presentation!.views).toHaveLength(128);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/mc454-lv')?.layout.labelOffsets!['sw454:interface:mc454-mc455']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/hopper3-lv')?.layout.labelOffsets!['wh:h3:mc416a:interface']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/sw455-lv')?.layout.labelOffsets!['sw454:interface:sw455']).toEqual([55, 0]);
@@ -132,6 +132,17 @@ describe('current whole-network review package', () => {
     expect(model.sources.some(source => source.id === 'rm712:dg1:supply')).toBe(true);
     expect(model.sources.some(source => source.id === 'rm712:dg7:supply')).toBe(true);
     expect(model.reviews!.find(review => review.id === 'WN-OWNER-ACCEPTANCE')?.status).toBe('open');
+  });
+
+  it('retains the MC413 supplemental source while leaving its installed upstream identity open', () => {
+    const { model, devices } = new SimulationSession(currentNetworkModel).saveScenario();
+    expect(model.assets.find(asset => asset.id === 'rm413:mc413:cb')).toMatchObject({ knowledge: 'provisional', aliases: expect.arrayContaining(['CB MC413 IN', '3000 A']) });
+    expect(model.assets.find(asset => asset.id === 'rm413:mc413:bus')?.aliases).toContain('50 kA for 1 sec');
+    expect(model.reviews!.find(review => review.id === 'SV-MC413-INSTALLED')).toMatchObject({ status: 'open', question: expect.stringContaining('RC001') });
+    expect(model.presentation!.views.some(view => view.id === 'supplemental/mc413-lv')).toBe(true);
+    expect(model.assets.some(asset => asset.id.includes('mc413a'))).toBe(false);
+    expect(model.sources).toHaveLength(8);
+    expect(devices['rm413:mc413:cb']).toBeNull();
   });
 
 });
