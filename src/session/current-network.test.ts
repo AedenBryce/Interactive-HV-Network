@@ -8,11 +8,11 @@ describe('current whole-network review package', () => {
     const original = JSON.stringify(wholeNetworkModel);
     const session = new SimulationSession(currentNetworkModel);
     const snapshot = session.snapshot();
-    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.11', synthetic: false });
+    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.13', synthetic: false });
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/rmu')?.label).toBe('Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed');
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/transformers')?.label).toBe('Hopper 10 · Selected 33 kV inputs / MC420A LV');
     for (const id of ['sw455:bus-d', 'sw455:bus-y', 'wh:h3:mc416a:bus', 'mc454:bus']) expect(snapshot.model.assets.some(asset => asset.id === id)).toBe(true);
-    expect(snapshot.model.presentation!.views).toHaveLength(135);
+    expect(snapshot.model.presentation!.views).toHaveLength(127);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/mc454-lv')?.layout.labelOffsets!['sw454:interface:mc454-mc455']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/hopper3-lv')?.layout.labelOffsets!['wh:h3:mc416a:interface']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/sw455-lv')?.layout.labelOffsets!['sw454:interface:sw455']).toEqual([55, 0]);
@@ -96,11 +96,12 @@ describe('current whole-network review package', () => {
     expect(original.connections.find(connection => connection.id === 'whole:join:crushing-tie')?.knowledge).toBe('provisional');
     expect(original.evidence!.some(record => record.id === id)).toBe(false);
   });
-  it('records the exact mine-services feed confirmation without accepting study overlaps or switching configuration', () => {
+  it('retains the exact mine-services feeding fact after its station feeder is excluded by the later scope decision', () => {
     const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
     const id = 'WN-MINE-TF03-FEED';
     expect(model.evidence!.find(record => record.id === id)).toMatchObject({ status: 'owner-confirmed', confirmation: { by: 'Project owner (conversation)', date: '2026-10-22', decision: 'It does' }, summary: expect.stringContaining('SB01 feeder F1') });
-    expect(model.connections.find(connection => connection.id === 'whole:join:mine-tf03')).toMatchObject({ from: 'station:sb01:f1:interface:port', to: 'mine:interface:station-tf03:port', knowledge: 'owner-confirmed', evidenceIds: expect.arrayContaining([id]) });
+    expect(model.connections.some(connection => connection.id === 'whole:join:mine-tf03')).toBe(false);
+    expect(model.boundaries!.find(boundary => boundary.id === 'boundary:excluded-station:whole:join:mine-tf03')).toMatchObject({ terminal: 'mine:interface:station-tf03:port', sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' });
     expect(model.reviews!.find(review => review.id === 'WN-JOIN-mine-tf03')).toMatchObject({ status: 'resolved', resolution: { decision: 'It does' } });
     for (const reviewId of ['MC-Q06', 'MC-Q09', 'MC-Q11']) expect(model.reviews!.find(review => review.id === reviewId)?.status).toBe('open');
     expect(model.connections.some(connection => [connection.from, connection.to].includes('mine:interface:study-tf03:port') && connection.id.startsWith('whole:join:'))).toBe(false);
@@ -108,6 +109,29 @@ describe('current whole-network review package', () => {
     expect(Object.values(sources).every(state => state === null)).toBe(true);
     expect(wholeNetworkModel.connections.find(connection => connection.id === 'whole:join:mine-tf03')?.knowledge).toBe('provisional');
     expect(wholeNetworkModel.evidence!.some(record => record.id === id)).toBe(false);
+  });
+
+  it('applies the confirmed feeder-breaker station limits while keeping downstream mine/camp disposition unconfirmed', () => {
+    const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
+    expect(model.assets.some(asset => asset.id === 'station:sb01:bus')).toBe(false);
+    expect(model.assets.some(asset => asset.id === 'station:sb02:bus')).toBe(false);
+    expect(model.assets.some(asset => asset.id.startsWith('station:gen-'))).toBe(false);
+    expect(model.assets.some(asset => asset.id === 'station:sb01:spare-tf04:transformer')).toBe(false);
+    for (const prefix of ['station:sb01:f4', 'station:sb02:f1', 'station:sb02:f4']) {
+      for (const suffix of ['cb', 'es', 'transformer']) expect(model.assets.find(asset => asset.id === `${prefix}:${suffix}`)).toEqual(wholeNetworkModel.assets.find(asset => asset.id === `${prefix}:${suffix}`));
+      expect(devices[`${prefix}:cb`]).toBeNull();
+    }
+    for (const id of ['boundary:tf11', 'boundary:tf12', 'boundary:tf04']) {
+      expect(model.sources.find(source => source.id === id)).toMatchObject({ knowledge: 'provisional' });
+      expect(sources[id]).toBeNull();
+    }
+    expect(model.assets.some(asset => asset.id === 'mine:interface:station-tf03')).toBe(true);
+    expect(model.assets.some(asset => asset.id === 'camp:interface:station-village')).toBe(true);
+    expect(model.connections.some(connection => ['whole:join:mine-tf03', 'whole:join:village'].includes(connection.id))).toBe(false);
+    expect(model.sources.filter(source => source.id.startsWith('camp:dg'))).toHaveLength(3);
+    expect(model.sources.some(source => source.id === 'rm712:dg1:supply')).toBe(true);
+    expect(model.sources.some(source => source.id === 'rm712:dg7:supply')).toBe(true);
+    expect(model.reviews!.find(review => review.id === 'WN-OWNER-ACCEPTANCE')?.status).toBe('open');
   });
 
 });
