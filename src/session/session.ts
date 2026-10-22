@@ -1,19 +1,28 @@
 import { modelSchema } from './model';
 import type { NetworkModel } from './model';
+import { buildGraph, evaluateSources } from './connectivity';
+import type { Connectivity, SourcePath } from './connectivity';
+import { evaluateEarths } from './earth';
+import type { EarthConnectivity, SourceEarthConflict } from './earth';
 
-export type Connectivity = { sourceIds: string[]; terminalSources: Record<string, string[]> };
+export type AssetConnectivity = Connectivity & EarthConnectivity;
+
 export type SessionSnapshot = {
   model: NetworkModel;
   devices: Record<string, string>;
   sources: Record<string, boolean>;
-  connectivity: Record<string, Connectivity>;
+  connectivity: Record<string, AssetConnectivity>;
+  impact: Impact[];
+  conflicts: SourceEarthConflict[];
 };
+export type Impact = { assetId: string; connectivityChanged: boolean; routesChanged: boolean; before: AssetConnectivity; after: AssetConnectivity };
 export type ActionResult = { ok: true } | { ok: false; error: string };
 
 export class SimulationSession {
   #model: NetworkModel;
   #devices: Record<string, string>;
   #sources: Record<string, boolean>;
+  #impact: Impact[] = [];
 
   constructor(model: unknown) {
     this.#model = modelSchema.parse(model);
@@ -27,6 +36,7 @@ export class SimulationSession {
     this.#model = result.data;
     this.#devices = { ...result.data.starting.devices };
     this.#sources = { ...result.data.starting.sources };
+    this.#impact = [];
     return { ok: true };
   }
 
@@ -35,44 +45,43 @@ export class SimulationSession {
     if (!asset?.positions.some(state => state.id === position)) {
       return { ok: false, error: `Unsupported position ${position} for ${assetId}.` };
     }
+    const before = this.snapshot().connectivity;
     this.#devices[assetId] = position;
+    this.#recordImpact(before);
     return { ok: true };
   }
 
+  changeSource(sourceId: string, enabled: boolean): ActionResult {
+    if (!this.#model.sources.some(source => source.id === sourceId) || typeof enabled !== 'boolean') return { ok: false, error: `Unknown source or unsupported availability: ${sourceId}.` };
+    const before = this.snapshot().connectivity;
+    this.#sources[sourceId] = enabled;
+    this.#recordImpact(before);
+    return { ok: true };
+  }
+
+  trace(assetId: string): { ok: true; paths: SourcePath[] } | { ok: false; error: string } {
+    if (!this.#model.assets.some(asset => asset.id === assetId)) return { ok: false, error: `Unknown asset ${assetId}.` };
+    return { ok: true, paths: this.snapshot().connectivity[assetId].paths };
+  }
+
+  #recordImpact(before: Record<string, AssetConnectivity>) {
+    const after = this.snapshot().connectivity;
+    this.#impact = this.#model.assets.flatMap(asset => {
+      const connectivityChanged = JSON.stringify([before[asset.id].terminalSources, before[asset.id].terminalEarths, before[asset.id].conflictSourceIds]) !== JSON.stringify([after[asset.id].terminalSources, after[asset.id].terminalEarths, after[asset.id].conflictSourceIds]);
+      const routesChanged = JSON.stringify(before[asset.id].routeEdgeIds) !== JSON.stringify(after[asset.id].routeEdgeIds);
+      return connectivityChanged || routesChanged ? [{ assetId: asset.id, connectivityChanged, routesChanged, before: before[asset.id], after: after[asset.id] }] : [];
+    });
+  }
+
   snapshot(): SessionSnapshot {
-    const adjacency = new Map<string, string[]>();
-    const join = (a: string, b: string) => {
-      adjacency.get(a)?.push(b);
-      adjacency.get(b)?.push(a);
-    };
-    for (const asset of this.#model.assets) {
-      for (const terminal of asset.terminals) adjacency.set(terminal, []);
-    }
-    for (const connection of this.#model.connections) join(connection.from, connection.to);
-    for (const asset of this.#model.assets) {
-      const pairs = [...asset.conductivePairs, ...(asset.positions.find(p => p.id === this.#devices[asset.id])?.pairs ?? [])];
-      for (const [a, b] of pairs) join(a, b);
-    }
-    const terminalSources = new Map<string, string[]>();
-    for (const terminal of adjacency.keys()) terminalSources.set(terminal, []);
-    for (const source of this.#model.sources) {
-      if (!this.#sources[source.id]) continue;
-      const visited = new Set<string>();
-      const queue = [source.terminal];
-      for (let index = 0; index < queue.length; index++) {
-        const terminal = queue[index];
-        if (visited.has(terminal)) continue;
-        visited.add(terminal);
-        terminalSources.get(terminal)?.push(source.id);
-        queue.push(...(adjacency.get(terminal) ?? []));
-      }
-    }
+    const graph = buildGraph(this.#model, this.#devices);
+    const sourceConnectivity = evaluateSources(this.#model, graph, this.#sources);
+    const earths = evaluateEarths(this.#model, graph, this.#sources);
     return structuredClone({
       model: this.#model, devices: this.#devices, sources: this.#sources,
-      connectivity: Object.fromEntries(this.#model.assets.map(asset => {
-        const terminals = Object.fromEntries(asset.terminals.map(t => [t, terminalSources.get(t) ?? []]));
-        return [asset.id, { terminalSources: terminals, sourceIds: [...new Set(Object.values(terminals).flat())].sort() }];
-      })),
+      connectivity: Object.fromEntries(this.#model.assets.map(asset => [asset.id, { ...sourceConnectivity[asset.id], ...earths.connectivity[asset.id] }])),
+      impact: this.#impact,
+      conflicts: earths.conflicts,
     });
   }
 }

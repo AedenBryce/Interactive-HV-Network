@@ -15,6 +15,7 @@ export const modelSchema = z.strictObject({
   assets: z.array(assetSchema).min(1),
   connections: z.array(z.strictObject({ id, from: id, to: id })),
   sources: z.array(z.strictObject({ id, assetId: id, terminal: id, label: z.string().min(1) })),
+  earths: z.array(z.strictObject({ id, label: z.string().min(1), terminal: id, groupId: id.optional() })).optional(),
   starting: z.strictObject({ devices: z.record(id, id), sources: z.record(id, z.boolean()) }),
 }).superRefine((model, context) => {
   const error = (message: string) => context.addIssue({ code: 'custom', message });
@@ -26,6 +27,11 @@ export const modelSchema = z.strictObject({
   unique(terminals, 'terminal identity');
   unique(model.connections.map(c => c.id), 'connection identity');
   unique(model.sources.map(s => s.id), 'source identity');
+  unique((model.earths ?? []).map(earth => earth.id), 'earth identity');
+  unique((model.earths ?? []).map(earth => earth.terminal), 'earth termination');
+  for (const earth of model.earths ?? []) {
+    if (!terminals.includes(earth.terminal)) error(`Earth ${earth.id} references missing terminal ${earth.terminal}.`);
+  }
   for (const connection of model.connections) {
     for (const terminal of [connection.from, connection.to]) {
       if (!terminals.includes(terminal)) error(`Connection ${connection.id} references missing terminal ${terminal}.`);

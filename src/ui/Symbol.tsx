@@ -6,6 +6,6 @@ export function Symbol({ kind, open = false }: { kind: Asset['kind']; open?: boo
     {(kind === 'breaker' || kind === 'disconnector') && <><path d="M-30 0 H-12 M12 0 H30" />{open ? <path d="M-12 0 L10-19 M12-9 V9" /> : <path d="M-12-15 V15 M12-15 V15 M-12 0 H12" />}</>}
     {kind === 'transformer' && <><circle cx="-11" r="22" /><circle cx="11" r="22" /></>}
     {kind === 'bus' && <path strokeWidth="5" d="M0-30 V30" />}
-    {kind === 'earth-switch' && <path d="M0-28 V9 M-20 9 H20 M-13 18 H13 M-5 27 H5" />}
+    {kind === 'earth-switch' && <><path d={open ? 'M0-30 V-16 L13-3 M0 3 V10' : 'M0-30 V10'} /><path d="M-20 10 H20 M-13 18 H13 M-5 26 H5" /></>}
   </g>;
 }

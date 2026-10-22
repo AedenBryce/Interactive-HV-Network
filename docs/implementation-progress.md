@@ -19,3 +19,15 @@ Implemented and reviewed locally. Implementation commit: `0836d48`; review basel
 ## Remaining acceptance gates
 
 Whole-network source review, area models, cross-area reconciliation, baseline/interlock/source confirmation and explicit owner acceptance remain required. No installed-network fact has been confirmed by this software slice.
+
+## GitHub #3 and #4: alternate supplies and earth connectivity
+
+Implemented locally in parallel; combined review and issue completion pending.
+
+- #3: two sources, two HV buses, bus tie and loop-link fixture; source availability actions; example source paths; exact alternate-route change detection without enumerating all paths; affected-asset and path highlights.
+- #4: explicit earth terminations, independent terminal earth results, source-to-earth conflict paths and two separate circuits sharing earth group metadata. Earth is a trace sink, never a supply-through node.
+- Both use the same active conductive graph and session boundary. UI components only display returned connectivity, paths and impacts.
+- Targeted source/path, earth and original switching test files and typechecking pass. The production build passes.
+- Chrome: open CB-01 in the alternate fixture, inspect the surviving Source B path, highlight it, disable Source B and inspect the disconnected LV bus. In the earth fixture, open CB-01, close ES-01 and inspect an earthed LV bus without source connectivity; close CB-01 and inspect the explicit conflict. No console warning/error messages returned.
+- Desktop layout fixed after browser inspection: contain the inspector scroll within the viewport; move HV bus and tie labels clear of the vertical connection.
+- All models remain synthetic. Real model acceptance and physical interlock enforcement remain outstanding.
