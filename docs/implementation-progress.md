@@ -13,7 +13,7 @@ Implemented and reviewed locally. Implementation commit: `0836d48`; review basel
 - Typecheck and production build passed.
 - Chrome browser check: Open CB-01, select LV bus and observe no source connection; Close CB-01 and observe the bus reconnect. No warning/error console messages were returned during the check.
 - Separate standards and specification reviews reported no material findings for this ticket.
-- Desktop screenshot compared with the design reference using image inspection: header/rail/canvas/inspector arrangement, copy, navy/teal/orange palette, symbol treatment and control spacing checked. Actual browser screenshot was 1704 × 1214; the browser adapter has no viewport resize capability, so exact reference-size and narrow-screen checks remain unverified.
+- Desktop screenshot compared with the design reference using image inspection: header/rail/canvas/inspector arrangement, copy, navy/teal/orange palette, symbol treatment and control spacing checked. The first direct screenshot was 1704 × 1214; later checks used temporary same-origin frames at the reference size of 1586 × 992 and a narrow 390 × 844 viewport. Narrow diagram labels now retain a readable scale in a dedicated scroll region.
 - Model construction, other simulation features and all real-area tickets remain outstanding.
 
 ## Remaining acceptance gates
@@ -22,7 +22,7 @@ Whole-network source review, area models, cross-area reconciliation, baseline/in
 
 ## GitHub #3 and #4: alternate supplies and earth connectivity
 
-Implemented locally in parallel; combined review and issue completion pending.
+Implemented locally in parallel, reviewed and closed in GitHub. Implementation commit: `81e26d0`; review fix: `f51e2e0`.
 
 - #3: two sources, two HV buses, bus tie and loop-link fixture; source availability actions; example source paths; exact alternate-route change detection without enumerating all paths; affected-asset and path highlights.
 - #4: explicit earth terminations, independent terminal earth results, source-to-earth conflict paths and two separate circuits sharing earth group metadata. Earth is a trace sink, never a supply-through node.
@@ -30,4 +30,12 @@ Implemented locally in parallel; combined review and issue completion pending.
 - Targeted source/path, earth and original switching test files and typechecking pass. The production build passes.
 - Chrome: open CB-01 in the alternate fixture, inspect the surviving Source B path, highlight it, disable Source B and inspect the disconnected LV bus. In the earth fixture, open CB-01, close ES-01 and inspect an earthed LV bus without source connectivity; close CB-01 and inspect the explicit conflict. No console warning/error messages returned.
 - Desktop layout fixed after browser inspection: contain the inspector scroll within the viewport; move HV bus and tie labels clear of the vertical connection.
+- Standards review found duplicated path reconstruction, consolidated into the shared path helper. Specification review found source-set changes being reported as changed connectivity classifications; regression tests reproduced the issue before the classification/explanation distinction was corrected. Both review axes then reported no remaining material findings.
+- Fresh-browser verification confirms the retained Source B path is shown as “Supply route changed; source connection retained.”
 - All models remain synthetic. Real model acceptance and physical interlock enforcement remain outstanding.
+
+## Current parallel work
+
+- #5: physical interlocks, explicit review status and blocked-control explanations.
+- #6: provisional/unknown facts, source evidence and material connectivity uncertainty.
+- #9: overview/detail navigation and pan/zoom over one simulation session.
