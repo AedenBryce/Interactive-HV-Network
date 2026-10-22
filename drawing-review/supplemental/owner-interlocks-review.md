@@ -121,3 +121,15 @@ Exact answer: **“Approve this complete profile for all26 controls”**. This s
 Question56 asked whether earth switches are installed on RM714's two incoming paths IN01/IN02 and TF714 feeder. It identified the disagreement between `11098-07110-EL-DR-2255.pdf` rev1 p1 A–C and `CB-10016-DR-EL-0011.pdf` rev0 p1 RM714 lower panel.
 
 Exact answer: **“All3 earth switches are installed”**. This confirms the presence of those three named earth devices only. Their complete local action profile, detailed path/termination claims and other mechanism properties require separate evidence or selection.
+
+## Answer57 — RM714 local actions
+
+Question57 separately proposed the complete V1 profile for RM714 IN01/IN02/TF714 main/earth pairs: Open/Close only, no racking; main Open allowed; main Close requires its own earth Open; Earth Close requires its own main Open; Earth Open allowed; unknown prerequisites block; no additional local/key conditions. It retained the same source references as56.
+
+Exact answer: **“Use this complete profile for all3 pairs”**. This selects those six local control profiles. Presence confirmation56 remains separate from detailed earth-path/termination knowledge and operational permission.
+
+## Answer58 — SW505 drive output/DC-earth actions
+
+Question58 proposed Open/Close-only, no-racking interactions for each VS50501/02/03 output/DC-earth pair: Output Open allowed; Output Close requires own DC earth Open; DC Earth Close requires own output Open; DC Earth Open allowed; unknown prerequisites block. It explicitly retained owner49's bounded inching/key deferral and left converter transfer, stored energy and discharge behavior Unconfirmed. Source: `500CB-04220-DR-EL-0042.pdf` rev4 p1 D–F/2–10. The question requested any additional local condition or different output-contact mechanism.
+
+Exact answer: **“Use this complete local profile for all3 drives”**. This selects those exact six local model interactions only; it does not establish converter coupling, stored-energy/discharge behavior or actual switching permission.
