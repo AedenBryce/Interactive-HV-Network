@@ -7,6 +7,9 @@ import { sw411Model } from '../models/site/sw411';
 import { crushing1Model } from '../models/site/crushing-1';
 import { powerStationModel } from '../models/site/power-station';
 import { crushing2HpgrModel } from '../models/site/crushing-2-hpgr';
+import { screeningModel } from '../models/site/screening';
+import { desandsLaboratoryModel } from '../models/site/desands-laboratory';
+import { trainLoadingModel } from '../models/site/train-loading';
 import { singleSupplyLayout, alternateLayout, earthLayout } from './diagram';
 import type { DiagramLayout, DiagramPresentation, DiagramView } from './diagram';
 import type { NetworkModel } from '../session/model';
@@ -62,4 +65,4 @@ diagramPresentations[relationshipsFixture.id] = { overviewId: 'overview', views:
 // Adding diagram organisation creates a distinct immutable package version.
 export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture, relationshipsFixture].map(model => ({ ...model, version: `${model.version}-presentation.1`, presentation: diagramPresentations[model.id] }));
 
-export const models: NetworkModel[] = [...demonstrations, sw411Model, powerStationModel, crushing1Model, crushing2HpgrModel];
+export const models: NetworkModel[] = [...demonstrations, sw411Model, powerStationModel, crushing1Model, crushing2HpgrModel, screeningModel, desandsLaboratoryModel, trainLoadingModel];

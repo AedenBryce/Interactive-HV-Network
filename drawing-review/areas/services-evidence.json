@@ -1,0 +1,623 @@
+{
+  "area": "Services/workshop/conveyor/laboratory RM721/RM712/RM713/RM714/RM412/RM413/RM413A",
+  "issue": 22,
+  "proposal": "T21",
+  "reviewDate": "2026-10-22",
+  "status": "source-review-only-unaccepted",
+  "narrative": "drawing-review/areas/services-review.md",
+  "coverage": {
+    "distinctOriginalFilesVisuallyInspected": 15,
+    "distinctPagesVisuallyInspected": 15,
+    "enlargedCropsInspected": 10,
+    "renderMethod": "Poppler full-page PNG scale-to2400 plus Pillow detail crops",
+    "textAloneUsedForTopology": false,
+    "globalCoverageUpdated": false,
+    "originalFilesModified": false
+  },
+  "sources": [
+    {
+      "id": "SV-S01",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2256.pdf",
+      "sha256": "568825012b850cf550ba63d29e834880a6e6bfe3eba646fedb23222c42d57ec1",
+      "printedRevisionDateDescription": "3 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM721 power branches C-F / 4-7; four earth contacts; RM751 rename in rev1, H; primary source"
+    },
+    {
+      "id": "SV-S02",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2253.pdf",
+      "sha256": "f8981d690da6ea8d5f19b8ffd5b076e375485cad9109286274f6b75aa35c9fc2",
+      "printedRevisionDateDescription": "3 / 22.02.08 / RE-ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM712 incoming/TF712 A-C / 1-3; DG1/DG7/MCS A-D / 4-8; disconnected cable D / 2; SW712 incomer/bar D-E"
+    },
+    {
+      "id": "SV-S03",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2254.pdf",
+      "sha256": "b25cebed21a6b61d2d8ec5d654d79156947c35dd2a643eac16c771a958be25f2",
+      "printedRevisionDateDescription": "1 / 21.02.08 / RM713 WAS SUPPLIED FROM RM712",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM721 arrival A / 3-4; RM713 and TF713 B-C; SW713 incomer/bar D-E; revision history H"
+    },
+    {
+      "id": "SV-S04",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2255.pdf",
+      "sha256": "5fba7ea53b05f164243f1d06c2002d4c6252c34924918b6f20e5862622764b1d",
+      "printedRevisionDateDescription": "1 / 25.09.09 / ISSUED FOR AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM714 from SW426 A-C / 2-4; TF714 and SW714 incomer/bar C-E; laboratory interface, shared with Desands review"
+    },
+    {
+      "id": "SV-S05",
+      "path": "drawings/Asset Drawing Repo/CBC0012-02004-DR-EL-0007.pdf",
+      "sha256": "2601c813a839c2a3d9752721e0a217485b36d3668cf7ef5d23f743a2fd8baf50",
+      "printedRevisionDateDescription": "9 / 23.10.23 / AS FOUND",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM412 S100/S101/Q100/E100-E102 upper-left F-G / 1-3; TF412 windings E / 1-3; LV Q200/Q201/Q202 and separate conductors D-E"
+    },
+    {
+      "id": "SV-S06",
+      "path": "drawings/Asset Drawing Repo/CB17OP023A-04057-DR-EL-0004.pdf",
+      "sha256": "4f4d4f95c4429a45587642444c285ddf47a084b0f63e1974a5a9a7d7b341ee7f",
+      "printedRevisionDateDescription": "5 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM413 and IN02 double-boot branch A-C / 1-6; TF413/MC413 C-E; RM413A/TF413A and converter input routes B-E / 4-7"
+    },
+    {
+      "id": "SV-S07",
+      "path": "drawings/Asset Drawing Repo/CB095-02004-DR-EL-0014.pdf",
+      "sha256": "3a09026e0ff79e40cd435f83bc7d706b7608855966b21c64745fd435c95d88eb",
+      "printedRevisionDateDescription": "4 / 23.03.12 / AS BUILT - CB145",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "TF414 A-B / 4-6; MCC414 2500 A incomer, neutral/MEN and 415 V phase bar B-C; outgoing LV excluded"
+    },
+    {
+      "id": "SV-S08",
+      "path": "drawings/Asset Drawing Repo/CB095-02004-DR-EL-0015.pdf",
+      "sha256": "609f3b71783a723eb2f441d57b46a713a9aa2838b87f3ee1a57a4ad9e7b0a0bb",
+      "printedRevisionDateDescription": "5 / 05.09.24 / ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "Continuation of MCC414 phase bar C; downstream LV motor/soft-start circuits and construction notes excluded at first LV bus"
+    },
+    {
+      "id": "SV-S09",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "printedRevisionDateDescription": "0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "RM721/RM712 A-B / 7-12; RM412/RM713/RM413A C-D; RM413 E-G / 9-10; RM714 F-G / 5-6; notes1-2 G / 1-3"
+    },
+    {
+      "id": "SV-S10",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "printedRevisionDateDescription": "7 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "SW411 tier16 RM721/SW454 alias conflict D-G / 11-12; note3 A / 11-12; cross-area interface only"
+    },
+    {
+      "id": "SV-S11",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2352.pdf",
+      "sha256": "caccfe8785454cea4cc7b1af6a6d6ac7f4a6db541d0b8b0ee83990df0445e6f3",
+      "printedRevisionDateDescription": "9 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "SW426 first-sheet feeder headings and destinations B-G; no RM712-named power feeder shown; cross-area comparison"
+    },
+    {
+      "id": "SV-S12",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2357.pdf",
+      "sha256": "2f919874b1608c4c3ba4f4d52536a4edf47d1319cee9a570b0e54c4b376519dd",
+      "printedRevisionDateDescription": "6 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "SW426 continuation; SS714 tier9 feeder and laboratory arrow B-G / 7-8; cross-area comparison"
+    },
+    {
+      "id": "SV-S13",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2252.pdf",
+      "sha256": "39d2bc3b5727f825cba2f3eecc6a35f6d3bc16857253f1594eed87285e454e20",
+      "printedRevisionDateDescription": "5 / 22.02.12 / DB03, DB07 BECOME SPARE",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "Full-page reference lookup: actual sheet is SS711 / RM711 / SW711, not RM712; different area ownership retained"
+    },
+    {
+      "id": "SV-S14",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2257.pdf",
+      "sha256": "56710b0ae050c79d813b0ad06058217283b2003a1415d331459b58e77b5192e3",
+      "printedRevisionDateDescription": "0 / 04.12.09 / ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "Full-page candidate disposition: SS718/RM718/SW718 fuel-unloading supply, not one of T21's named branches; no new services join"
+    },
+    {
+      "id": "SV-S15",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2350.pdf",
+      "sha256": "758316a53d6c34d9d5273dbc77e4556753bfc2fcbe9e951745b0aec6693c2b08",
+      "printedRevisionDateDescription": "16 / 31.05.16 / AS BUILT FOR CB16OP003",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "regionAndDisposition": "Mine overview SW411 RM721 feeder A-B / 10-11; general source-reference check only; other area topology excluded"
+    }
+  ],
+  "drawnTopologyRecords": [
+    {
+      "id": "SV-T01",
+      "status": "supported-depiction-only",
+      "claim": "SW411 tier16 is headed RM721 FEEDER and terminates at RM721 with reference 07110-EL-DR-2256, but its CB/ES and cable remain printed SW454 FD01 / SW454-P-01. The RM721 page reciprocally says FROM MAIN HV SWITCHBOARD SW411, reference5151, through RM721-P-01 to ISOL RM721 IN01.",
+      "references": [
+        {
+          "sourceId": "SV-S10",
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "printedRevisionDateDescription": "7 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S10 p1 D-G / 11-12; SV-S01 p1 B-D / 6-7"
+        },
+        {
+          "sourceId": "SV-S01",
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "printedRevisionDateDescription": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S10 p1 D-G / 11-12; SV-S01 p1 B-D / 6-7"
+        }
+      ]
+    },
+    {
+      "id": "SV-T02",
+      "status": "supported-depiction-only",
+      "claim": "RM721 has one 22 kV, 630 A phase bar. ISOL RM721 IN01 is the SW411-facing device; CB RM721 IN02 faces a TO SS712 / RING MAIN UNIT RM712 arrow. Independent cable-side earth-contact branches are drawn above both devices. The upper IN02 reference prints 07110-EL-DR-2252.",
+      "references": [
+        {
+          "sourceId": "SV-S01",
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "printedRevisionDateDescription": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S01 p1 C-D / 4-7"
+        }
+      ]
+    },
+    {
+      "id": "SV-T03",
+      "status": "supported-depiction-only",
+      "claim": "RM721's bar independently feeds CB RM412 and ISOL RM713. Both outgoing sides have separate earth branches. The first continues to dump-pocket SS412/RM412, vendor0701-19026-E100; the second to workshop SS713/RM713, reference07110-EL-DR-2254.",
+      "references": [
+        {
+          "sourceId": "SV-S01",
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "printedRevisionDateDescription": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S01 p1 D-F / 4-6"
+        }
+      ]
+    },
+    {
+      "id": "SV-T04",
+      "status": "supported-depiction-only",
+      "claim": "RM713's incoming RM713-P-01 says FROM O/D RING MAIN UNIT RM721 / 2256, entering SF RM713 IN01. IN02 is a separate undestinated incoming position. One 22 kV bar feeds CB TF713 FD -> TF713, 22 kV/400 V, 1 MVA -> SW713-P-01 -> CB SW713 IN, 1600 A -> SW713 400 V, 2000 A bar.",
+      "references": [
+        {
+          "sourceId": "SV-S03",
+          "document": "11098-07110-EL-DR-2254.pdf",
+          "printedRevisionDateDescription": "1 / 21.02.08 / RM713 WAS SUPPLIED FROM RM712",
+          "page": 1,
+          "clause": "SV-S03 p1 A-E / 2-9"
+        }
+      ]
+    },
+    {
+      "id": "SV-T05",
+      "status": "supported-depiction-only",
+      "claim": "RM712's left arrival says FROM DESAND SWITCHBOARD SW426 / 2352 through RM712-P-01 to SF RM712 IN02. Its right arrow says TO RING MAIN UNIT RM713 / 2254 through RM713-P-01 to SF RM712 IN01. The two devices meet the same 22 kV, 630 A bar, which feeds CB TF712 FD -> TF712, 22 kV/415 V (NO LOAD), 1 MVA.",
+      "references": [
+        {
+          "sourceId": "SV-S02",
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "printedRevisionDateDescription": "3 / 22.02.08 / RE-ISSUED FOR CONSTRUCTION",
+          "page": 1,
+          "clause": "SV-S02 p1 A-C / 1-3"
+        }
+      ]
+    },
+    {
+      "id": "SV-T06",
+      "status": "supported-depiction-only",
+      "claim": "TF712's LV cable SW712-P-01 ends with explicit CABLES DISCONNECTED AND PULLED OUT OF MAIN DISTRIBUTION BOARD wording. The page instead draws DG1 (6207) and DG7 (6206) separately into MAIN CHANGEOVER SWITCH MCS, whose output feeds CB SW712 IN (1600 A) and SW712's 400 V (FULL LOAD), 2000 A bar. This is a depicted physical gap, not an inferred open setting of an existing switch.",
+      "references": [
+        {
+          "sourceId": "SV-S02",
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "printedRevisionDateDescription": "3 / 22.02.08 / RE-ISSUED FOR CONSTRUCTION",
+          "page": 1,
+          "clause": "SV-S02 p1 A-E / 2-8"
+        }
+      ]
+    },
+    {
+      "id": "SV-T07",
+      "status": "supported-depiction-only",
+      "claim": "RM412 receives FROM RM721 / 2256 at S100 and has a separate through S101 route TO RM413 / CB17OP023A-04057-DR-EL-0004. Their common RMU bar feeds Q100, 200 A, the following disconnecting-contact assembly and TF412. Earth contacts E100/E101 are depicted at the switch common/bar-side points; E102 branches from the transformer-side phase conductor below Q100/its disconnecting contact.",
+      "references": [
+        {
+          "sourceId": "SV-S05",
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "printedRevisionDateDescription": "9 / 23.10.23 / AS FOUND",
+          "page": 1,
+          "clause": "SV-S05 p1 F-G / 1-3"
+        }
+      ]
+    },
+    {
+      "id": "SV-T08",
+      "status": "supported-depiction-only",
+      "claim": "TF412 is explicitly 22 kV / 690 V / 690 V / 415 V, with 2.5/1.0/1.0/0.5 MVA labels. The separate 690 V star and delta secondaries pass F1/Q200 and F2/Q201 respectively to separate AC conductors. The 415 V star secondary passes Q202 to the auxiliary phase distribution conductor. No direct common LV phase bar between these three secondary paths is drawn.",
+      "references": [
+        {
+          "sourceId": "SV-S05",
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "printedRevisionDateDescription": "9 / 23.10.23 / AS FOUND",
+          "page": 1,
+          "clause": "SV-S05 p1 D-E / 1-7"
+        }
+      ]
+    },
+    {
+      "id": "SV-T09",
+      "status": "supported-depiction-only",
+      "claim": "RM413 IN01 receives FROM RM412 with reciprocal source0007. RM413 IN02 has an explicitly labelled DOUBLE BOOT CONNECTION: the cable-facing side branches both TO RM417 / CB16OP038A-02006-DR-EL-0044 and to RM413A. The RM413A branch is not a new independent supply and does not bypass IN02 to the RM413 bus.",
+      "references": [
+        {
+          "sourceId": "SV-S06",
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "printedRevisionDateDescription": "5 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S06 p1 A-C / 1-6; SV-S05 p1 G / 2-3"
+        },
+        {
+          "sourceId": "SV-S05",
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "printedRevisionDateDescription": "9 / 23.10.23 / AS FOUND",
+          "page": 1,
+          "clause": "SV-S06 p1 A-C / 1-6; SV-S05 p1 G / 2-3"
+        }
+      ]
+    },
+    {
+      "id": "SV-T10",
+      "status": "supported-depiction-only",
+      "claim": "RM413's 22 kV bar has distinct TF413 FD and TF414 FD branches with ABB REJ603 protection labels. TF413 is 22 kV/400 V, 2 MVA and feeds a depicted MC413 incoming switch/phase bar. TF414 FD points to CB095-02004-DR-EL-0014, whose own transformer and bus are TF414/MCC414.",
+      "references": [
+        {
+          "sourceId": "SV-S06",
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "printedRevisionDateDescription": "5 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S06 p1 B-E / 2-4; SV-S07 p1 A-C / 4-6"
+        },
+        {
+          "sourceId": "SV-S07",
+          "document": "CB095-02004-DR-EL-0014.pdf",
+          "printedRevisionDateDescription": "4 / 23.03.12 / AS BUILT - CB145",
+          "page": 1,
+          "clause": "SV-S06 p1 B-E / 2-4; SV-S07 p1 A-C / 4-6"
+        }
+      ]
+    },
+    {
+      "id": "SV-T11",
+      "status": "supported-depiction-only",
+      "claim": "RM413A has an upper earth branch at its incoming conductor/bar, TF413A Q1 CB, and a separate lower switching/earth arrangement on the transformer side. Both earth-related locations are printed ES-Q8 on SV-S06; they are physically distinct depicted locations. TF413A has separate 22 kV/720 V/720 V winding routes, is labelled 12 PULSE/NO REGEN (AFE), 5 MVA, and feeds two separate 2500 A switch/rectifier input paths. Their DC sides meet at a DC bus.",
+      "references": [
+        {
+          "sourceId": "SV-S06",
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "printedRevisionDateDescription": "5 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S06 p1 B-E / 4-8"
+        }
+      ]
+    },
+    {
+      "id": "SV-T12",
+      "status": "supported-depiction-only",
+      "claim": "TF414, 22 kV/400 V, 2 MVA feeds the MCC414 2500 A incomer and single phase bar labelled 3P / 415 V / 3200 A / 65 kA / 1 sec. The transformer neutral, MCC neutral bar, MEN link and earth bar are separately drawn. Sheet0015 explicitly continues the same MCC414 phase bar; it adds no separate HV supply or final bus.",
+      "references": [
+        {
+          "sourceId": "SV-S07",
+          "document": "CB095-02004-DR-EL-0014.pdf",
+          "printedRevisionDateDescription": "4 / 23.03.12 / AS BUILT - CB145",
+          "page": 1,
+          "clause": "SV-S07 p1 A-D / 4-10; SV-S08 p1 C / 1-11"
+        },
+        {
+          "sourceId": "SV-S08",
+          "document": "CB095-02004-DR-EL-0015.pdf",
+          "printedRevisionDateDescription": "5 / 05.09.24 / ISSUED FOR CONSTRUCTION - CB25OP003A",
+          "page": 1,
+          "clause": "SV-S07 p1 A-D / 4-10; SV-S08 p1 C / 1-11"
+        }
+      ]
+    },
+    {
+      "id": "SV-T13",
+      "status": "supported-depiction-only",
+      "claim": "RM714's source is FROM HV SWITCHBOARD SW426 / 2357 via SS714-P-01 and SF RM714 IN01. The local 22 kV bar has a separate undestinated IN02 and CB TF714 FD -> TF714 (22 kV/400 V, 1 MVA) -> SW714-P-01 -> CB SW714 IN (1600 A) -> SW714 400 V, 2000 A bar. SW426's tier9 explicitly labels CB/ES SS714 FD and the laboratory package-substation arrow to2255.",
+      "references": [
+        {
+          "sourceId": "SV-S04",
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "printedRevisionDateDescription": "1 / 25.09.09 / ISSUED FOR AS BUILT",
+          "page": 1,
+          "clause": "SV-S04 p1 A-E / 2-9; SV-S12 p1 B-G / 7-8"
+        },
+        {
+          "sourceId": "SV-S12",
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "printedRevisionDateDescription": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S04 p1 A-E / 2-9; SV-S12 p1 B-G / 7-8"
+        }
+      ]
+    }
+  ],
+  "interlockEvidence": [
+    {
+      "id": "SV-I01",
+      "references": [
+        {
+          "sourceId": "SV-S05",
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "printedRevisionDateDescription": "9 / 23.10.23 / AS FOUND",
+          "page": 1,
+          "clause": "SV-S05 p1 F-G / 1-3, dashed linkage between feeder disconnecting contact and E102"
+        }
+      ],
+      "unconfirmed": "Candidate mechanical linkage; full truth table/key identities/installed permissions unconfirmed.",
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "SV-I02",
+      "references": [
+        {
+          "sourceId": "SV-S06",
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "printedRevisionDateDescription": "5 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S06 p1 B-C / 4-6, two ES-Q8 locations and Q1 CB; SV-S09 p1 C-D / 10-12"
+        },
+        {
+          "sourceId": "SV-S09",
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "printedRevisionDateDescription": "0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+          "page": 1,
+          "clause": "SV-S06 p1 B-C / 4-6, two ES-Q8 locations and Q1 CB; SV-S09 p1 C-D / 10-12"
+        }
+      ],
+      "unconfirmed": "Conflicting identifiers/geometry do not establish a complete physical rule set.",
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "SV-I03",
+      "references": [
+        {
+          "sourceId": "SV-S02",
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "printedRevisionDateDescription": "3 / 22.02.08 / RE-ISSUED FOR CONSTRUCTION",
+          "page": 1,
+          "clause": "SV-S02 p1 A-D / 4-8, MAIN CHANGEOVER SWITCH MCS"
+        }
+      ],
+      "unconfirmed": "Two depicted generator inputs and common output; contact matrix/overlap/neutral switching/full interlock conditions unconfirmed.",
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "SV-I04",
+      "references": [
+        {
+          "sourceId": "SV-S10",
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "printedRevisionDateDescription": "7 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "SV-S10 p1 A / 11-12, note3"
+        }
+      ],
+      "unconfirmed": "Mechanical interlock of earthing is to be provided to switchyard/power station; no installed RM721 key sequence confirmed.",
+      "installedRuleSetAccepted": false
+    }
+  ],
+  "reviewQuestions": [
+    {
+      "id": "SV-Q01",
+      "status": "open",
+      "sourceDifference": "SW411 tier16 RM721/SW454 CB/ES/cable labels differ on SV-S10; SV-S09 prints CB/ES RM721 FD01; SV-S15 also identifies an RM721 feeder. This is existing R002, not a new automatically resolved alias.",
+      "constructionConsequence": "Link the existing tier16 construction interface and retain all source aliases. Do not connect this branch to SW454 merely from its repeated cable/device text."
+    },
+    {
+      "id": "SV-Q02",
+      "status": "open",
+      "sourceDifference": "SV-S01's TO SS712/RM712 arrow references2252, but the actual supplied2252 (SV-S13) is SS711/RM711/SW711. SV-S02 is the RM712 sheet2253 and does not identify an RM721-facing terminal.",
+      "constructionConsequence": "Preserve the named RM712 interface and exact wrong-document reference. Do not use2252 as RM712, turn SS711 into SS712 or invent a precise accepted remote RM712 connection."
+    },
+    {
+      "id": "SV-Q03",
+      "status": "open",
+      "sourceDifference": "SV-S02 names SW426/2352 as RM712's HV source. Neither supplied SW426 power sheet SV-S11/S12 has an RM712-named feeder; their destinations are explicitly other transformers and SS714.",
+      "constructionConsequence": "Retain DES-Q01/source-coverage uncertainty. Do not invent a missing SW426 bay, reuse the SS714 bay or infer connection from overview proximity."
+    },
+    {
+      "id": "SV-Q04",
+      "status": "open",
+      "sourceDifference": "SV-S02 still draws RM712 -> RM713. SV-S03's current arrival is RM721, with revision1 explicitly saying RM713 WAS SUPPLIED FROM RM712. SV-S01 independently has an RM713 outgoing feeder.",
+      "constructionConsequence": "Record former versus depicted replacement routes. Whether the retained RM712 cable is installed/connected remains unconfirmed; do not create a confirmed parallel RM712/RM721 feed."
+    },
+    {
+      "id": "SV-Q05",
+      "status": "open",
+      "sourceDifference": "SV-S02 explicitly disconnects TF712's LV cable and adds two DG/MCS supply paths. SV-S09's services overview only shows TF712 -> MC712 and omits the DGs/disconnection.",
+      "constructionConsequence": "Preserve the detailed gap and distinct generator/MCS evidence. SW712/MC712 naming, actual DG availability, switch positions, transfer modes and installed-current status require confirmation. Never make TF712 and both DGs simultaneous fixed supplies."
+    },
+    {
+      "id": "SV-Q06",
+      "status": "open",
+      "sourceDifference": "SV-S01 uses CB/ISOL RM721 identifiers. SV-S09 substitutes SF RM721 IN01/IN02 and CB RM713 FDR; SV-S03/04 show SF incoming symbols without the extra separately named earth devices added in the overview.",
+      "constructionConsequence": "Preserve differing names/symbols and confirm installed equipment/earth positions. An added overview earth symbol does not prove a complete local earth mechanism or state table."
+    },
+    {
+      "id": "SV-Q07",
+      "status": "open",
+      "sourceDifference": "SV-S01 revision1 (03.06.09) explicitly says RM751 RENAMED TO RM721.",
+      "constructionConsequence": "Retain RM751 as a source-backed historical alias, without treating every similarly numbered RMU as identical or resolving R002 by this rename alone."
+    },
+    {
+      "id": "SV-Q08",
+      "status": "open",
+      "sourceDifference": "RM413/TF413/MC413, TF414/MCC414, RM413A/TF413A and MC413A are different printed roles. SV-S06 points MC413 to CB-02006-DR-EL-1001 and MC413A to CB17OP023A-04057-DR-EL-0033; exact files are not supplied. Its incoming RM412 reference prints CB0012-02004-DR-EL-0007, while the supplied file/customer drawing number is CBC0012-02004-DR-EL-0007.",
+      "constructionConsequence": "Do not substitute SV-S07/08's MCC414 for MC413. Retain schematic MC413 bar evidence, incomplete detail, the exact prefix variation and separate downstream MC413A continuation. The first LV bus is MC413; its outgoing extension is outside scope."
+    },
+    {
+      "id": "SV-Q09",
+      "status": "open",
+      "sourceDifference": "SV-S06 prints ES-Q8 at two separate RM413A earth locations; SV-S09 prints ES-08 IN01 and SW TF413A SW-01.",
+      "constructionConsequence": "Use source-scoped role identities and keep ambiguous aliases. Confirm distinct physical devices, supported positions, earth sides and complete interlocks before enabling."
+    },
+    {
+      "id": "SV-Q10",
+      "status": "open",
+      "sourceDifference": "TF412 has three separate LV secondary circuits; SV-S09 groups their destination under SW5001. TF413A has two AC rectifier inputs and a common DC bus, labelled NO REGEN (AFE).",
+      "constructionConsequence": "Confirm endpoint identities and winding/backfeed rules. Do not merge AC secondaries through a generic transformer or DC-bus conductive pair. No executable reverse-transfer rule follows from the label alone."
+    },
+    {
+      "id": "SV-Q11",
+      "status": "open",
+      "sourceDifference": "TF712 415 V NO LOAD / SW712 400 V FULL LOAD, TF413/TF414 400 V transformer / MCC414 415 V phase-bar and overview rounding are printed source descriptions.",
+      "constructionConsequence": "Preserve each label; do not calculate ratings, choose precedence or infer an extra conversion device."
+    },
+    {
+      "id": "SV-Q12",
+      "status": "open",
+      "sourceDifference": "Drawn poses, issue stamps, revision dates, undestinated IN02 positions and source symbols do not establish agreed normal positions, availability or complete interlock reviews.",
+      "constructionConsequence": "Baseline device positions and source availability remain null/unconfirmed. Keep affected physical-interlock reviews unresolved; absence of stated restrictions is not permission."
+    }
+  ],
+  "endpointCoverage": {
+    "depictedDetailedFinalLvBuses": [
+      "SW712",
+      "SW713",
+      "SW714",
+      "MCC414"
+    ],
+    "schematicFinalLvBusWithIncompleteDetail": [
+      "MC413"
+    ],
+    "separateUnlabelledLvEndpoints": [
+      {
+        "sourceId": "SV-S05",
+        "terminalGroup": "TF412 690V star after F1/Q200"
+      },
+      {
+        "sourceId": "SV-S05",
+        "terminalGroup": "TF412 690V delta after F2/Q201"
+      },
+      {
+        "sourceId": "SV-S05",
+        "terminalGroup": "TF412 415V star after Q202"
+      }
+    ],
+    "converterBoundaryProposals": [
+      {
+        "status": "Inference-unconfirmed",
+        "sourceId": "SV-S06",
+        "description": "Two separate TF413A 720V AC input boundaries ahead of rectifiers; do not merge through DC bus."
+      }
+    ],
+    "detailedEndpointFilesNotLocated": [
+      "CB-02006-DR-EL-1001.pdf",
+      "CB17OP023A-04057-DR-EL-0033.pdf"
+    ],
+    "outgoingLvDispositionOnly": [
+      "SV-S08"
+    ],
+    "referenceLookupOtherAreaSources": [
+      "SV-S13",
+      "SV-S14"
+    ],
+    "sharedExistingReviewIds": [
+      "R002",
+      "DES-Q01",
+      "DES-Q02",
+      "DES-Q03"
+    ],
+    "depictedGeneratorCandidates": [
+      {
+        "id": "DG1",
+        "alias": "6207",
+        "sourceId": "SV-S02",
+        "availability": "unconfirmed"
+      },
+      {
+        "id": "DG7",
+        "alias": "6206",
+        "sourceId": "SV-S02",
+        "availability": "unconfirmed"
+      }
+    ],
+    "fixedDrawingGap": {
+      "sourceId": "SV-S02",
+      "description": "TF712 secondary cable SW712-P-01 is disconnected and pulled out of main distribution board; actual current installation remains unconfirmed."
+    }
+  },
+  "acceptance": {
+    "startingStates": false,
+    "sourceAvailability": false,
+    "windingSourceEarthRules": false,
+    "physicalInterlockRuleSet": false,
+    "wholeNetwork": false
+  },
+  "limits": [
+    "RM721-to-RM712 exact remote terminal/source-document mapping remains unconfirmed; supplied2252 is RM711.",
+    "No missing SW426 bay has been invented.",
+    "Legacy RM712-to-RM713 route is not declared a confirmed parallel feed to current RM721 route.",
+    "Transformer and converter source/backfeed/phase-earth relationships require explicit separate review.",
+    "No default source availability, actual switching pose or permission has been inferred."
+  ]
+}

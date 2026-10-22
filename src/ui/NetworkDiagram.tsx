@@ -80,7 +80,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
             {item.sourcePairs || item.earthPairs || item.positions.some(position => position.sourcePairs || position.earthPairs)
               ? <RelationshipsSymbol asset={item} positionId={snapshot.devices[item.id]} layout={view.layout} />
               : <g transform={`rotate(${view.layout.rotations?.[item.id] ?? 0})`}><Symbol kind={item.kind} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></g>}
-            <text x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} y={view.layout.labelOffsets?.[item.id]?.[1] ?? 65} textAnchor="middle">{item.label.split(' · ').map((line, index) => <tspan key={index} x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} dy={index === 0 ? 0 : 20}>{line}</tspan>)}</text>
+            <text x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} y={view.layout.labelOffsets?.[item.id]?.[1] ?? 65} textAnchor="middle">{item.label.split(/ · |\n/).map((line, index) => <tspan key={index} x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} dy={index === 0 ? 0 : 20}>{line}</tspan>)}</text>
           </g>;
         })}
         {(snapshot.model.boundaries ?? []).filter(boundary => visible.has(terminalOwners.get(boundary.terminal)!) && (boundary.sourceCoverage === 'unconfirmed' || boundary.earthCoverage === 'unconfirmed')).map(boundary => {

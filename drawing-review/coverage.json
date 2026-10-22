@@ -2,7 +2,7 @@
   "method": "Explicit first source tables from area reviews; no inferred area allocation or topology acceptance",
   "source_count": 141,
   "unique_sha256_count": 140,
-  "files_with_explicit_review_source_row": 94,
+  "files_with_explicit_review_source_row": 115,
   "unmatched_source_rows": [],
   "drawings": [
     {
@@ -39,9 +39,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2252.pdf",
       "sha256": "39d2bc3b5727f825cba2f3eecc6a35f6d3bc16857253f1594eed87285e454e20",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S13",
+          "source_table_row": "| SV-S13 | `11098-07110-EL-DR-2252.pdf` | 5 / 22.02.12 / DB03, DB07 BECOME SPARE | 1 | Full-page reference lookup: actual sheet is SS711 / RM711 / SW711, not RM712; different area ownership retained |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -55,6 +61,11 @@
           "review": "drawing-review/areas/desands-laboratory-review.md",
           "source_id": "D30",
           "source_table_row": "| D30 | [11098-07110-EL-DR-2253.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2253.pdf) | 3 | Cross-area SW426 source-reference conflict and explicit TF712/LV disconnection |"
+        },
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S02",
+          "source_table_row": "| SV-S02 | `11098-07110-EL-DR-2253.pdf` | 3 / 22.02.08 / RE-ISSUED FOR CONSTRUCTION | 1 | RM712 incoming/TF712 A-C / 1-3; DG1/DG7/MCS A-D / 4-8; disconnected cable D / 2; SW712 incomer/bar D-E |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -63,9 +74,15 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2254.pdf",
       "sha256": "b25cebed21a6b61d2d8ec5d654d79156947c35dd2a643eac16c771a958be25f2",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S03",
+          "source_table_row": "| SV-S03 | `11098-07110-EL-DR-2254.pdf` | 1 / 21.02.08 / RM713 WAS SUPPLIED FROM RM712 | 1 | RM721 arrival A / 3-4; RM713 and TF713 B-C; SW713 incomer/bar D-E; revision history H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -79,6 +96,11 @@
           "review": "drawing-review/areas/desands-laboratory-review.md",
           "source_id": "D03",
           "source_table_row": "| D03 | [11098-07110-EL-DR-2255.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2255.pdf) | 1 | RM714 and TF714 through SW714 LV bus |"
+        },
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S04",
+          "source_table_row": "| SV-S04 | `11098-07110-EL-DR-2255.pdf` | 1 / 25.09.09 / ISSUED FOR AS BUILT | 1 | RM714 from SW426 A-C / 2-4; TF714 and SW714 incomer/bar C-E; laboratory interface, shared with Desands review |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -87,18 +109,30 @@
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2256.pdf",
       "sha256": "568825012b850cf550ba63d29e834880a6e6bfe3eba646fedb23222c42d57ec1",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S01",
+          "source_table_row": "| SV-S01 | `11098-07110-EL-DR-2256.pdf` | 3 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM721 power branches C-F / 4-7; four earth contacts; RM751 rename in rev1, H; primary source |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2257.pdf",
       "sha256": "56710b0ae050c79d813b0ad06058217283b2003a1415d331459b58e77b5192e3",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S14",
+          "source_table_row": "| SV-S14 | `11098-07110-EL-DR-2257.pdf` | 0 / 04.12.09 / ISSUED FOR CONSTRUCTION | 1 | Full-page candidate disposition: SS718/RM718/SW718 fuel-unloading supply, not one of T21's named branches; no new services join |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -117,6 +151,11 @@
           "review": "drawing-review/areas/crushing-2-hpgr-review.md",
           "source_id": "C2-S11",
           "source_table_row": "| C2-S11 | `11098-07110-EL-DR-2350.pdf` | 16 / 31/05/16 / as-built | Earlier mine overview: SW435 and downstream branches in C-F / 1-5; raster source |"
+        },
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S15",
+          "source_table_row": "| SV-S15 | `11098-07110-EL-DR-2350.pdf` | 16 / 31.05.16 / AS BUILT FOR CB16OP003 | 1 | Mine overview SW411 RM721 feeder A-B / 10-11; general source-reference check only; other area topology excluded |"
         },
         {
           "review": "drawing-review/areas/sw411-review.md",
@@ -152,6 +191,11 @@
           "review": "drawing-review/areas/desands-laboratory-review.md",
           "source_id": "D01",
           "source_table_row": "| D01 | [11098-07110-EL-DR-2352.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2352.pdf) | 9 | HV incomer, bus, bus earth and feeder topology |"
+        },
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S11",
+          "source_table_row": "| SV-S11 | `11098-07110-EL-DR-2352.pdf` | 9 / 28.01.25 / AS FOUND 23.10.23 | 1 | SW426 first-sheet feeder headings and destinations B-G; no RM712-named power feeder shown; cross-area comparison |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -231,6 +275,11 @@
           "review": "drawing-review/areas/desands-laboratory-review.md",
           "source_id": "D02",
           "source_table_row": "| D02 | [11098-07110-EL-DR-2357.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2357.pdf) | 6 | Same HV bus continuation, remaining feeders and laboratory interface |"
+        },
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S12",
+          "source_table_row": "| SV-S12 | `11098-07110-EL-DR-2357.pdf` | 6 / 28.01.25 / AS FOUND 23.10.23 | 1 | SW426 continuation; SS714 tier9 feeder and laboratory arrow B-G / 7-8; cross-area comparison |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -944,6 +993,11 @@
           "source_table_row": "| SC-S10 | `11098-07110-EL-DR-5151.pdf` | 7, 28/01/25, AS FOUND 23.10.23 | 1 | SW411 tier 15 SW421 feeder D-G / 10-11; source connections above the main bar; note 3 at upper right |"
         },
         {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S10",
+          "source_table_row": "| SV-S10 | `11098-07110-EL-DR-5151.pdf` | 7 / 28.01.25 / AS FOUND 23.10.23 | 1 | SW411 tier16 RM721/SW454 alias conflict D-G / 11-12; note3 A / 11-12; cross-area interface only |"
+        },
+        {
           "review": "drawing-review/areas/stockpile-wet-plant-review.md",
           "source_id": "SW-S25",
           "source_table_row": "| SW-S25 | `11098-07110-EL-DR-5151.pdf` | 7; 28/01/25; AS FOUND 23.10.23 | 1 | SW411 SW454 feeder tier1, D-G / 1-2 |"
@@ -1636,6 +1690,11 @@
           "review": "drawing-review/areas/train-loading-review.md",
           "source_id": "TL-S09",
           "source_table_row": "| TL-S09 | `CB-10016-DR-EL-0010.pdf` | 0; 27.10.25; ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025 | 1 | Overview; SW451 panel E-G / 5-8; SW411 feeder B / 2; SW435/TF453 panel A-C / 7-12 |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S19",
+          "source_table_row": "| WH-S19 | `CB-10016-DR-EL-0010.pdf` | 0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025 | 1 | Hopper8/SS416 C-D / 5-6; RM419/RM418 E-G / 9-12; notes1-2 G / 1-3 |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -1668,9 +1727,19 @@
           "source_table_row": "| SC-S09 | `CB-10016-DR-EL-0011.pdf` | 0, 27/10/25; revision entry says ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp dated 27/10/2025 | 1 | Overview sheet 2; SW411 tier 15 feeder B / 5; SS421 panel E-G / 6-8; overview-use notes lower left |"
         },
         {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S09",
+          "source_table_row": "| SV-S09 | `CB-10016-DR-EL-0011.pdf` | 0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025 | 1 | RM721/RM712 A-B / 7-12; RM412/RM713/RM413A C-D; RM413 E-G / 9-10; RM714 F-G / 5-6; notes1-2 G / 1-3 |"
+        },
+        {
           "review": "drawing-review/areas/sw411-review.md",
           "source_id": "W3",
           "source_table_row": "| W3 | [CB-10016-DR-EL-0011.pdf](../../drawings/Asset%20Drawing%20Repo/CB-10016-DR-EL-0011.pdf) | Rev 0, 27 October 2025 | Page 1; upper-left SW411 Bus B, lower-left notes; overview sheet 2 of 2 |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S20",
+          "source_table_row": "| WH-S20 | `CB-10016-DR-EL-0011.pdf` | 0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025 | 1 | RM413 and RM417 E-G / 9-12; notes1-2 G / 1-3 |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -1679,18 +1748,30 @@
       "path": "drawings/Asset Drawing Repo/CB095-02004-DR-EL-0014.pdf",
       "sha256": "3a09026e0ff79e40cd435f83bc7d706b7608855966b21c64745fd435c95d88eb",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S07",
+          "source_table_row": "| SV-S07 | `CB095-02004-DR-EL-0014.pdf` | 4 / 23.03.12 / AS BUILT - CB145 | 1 | TF414 A-B / 4-6; MCC414 2500 A incomer, neutral/MEN and 415 V phase bar B-C; outgoing LV excluded |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB095-02004-DR-EL-0015.pdf",
       "sha256": "609f3b71783a723eb2f441d57b46a713a9aa2838b87f3ee1a57a4ad9e7b0a0bb",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S08",
+          "source_table_row": "| SV-S08 | `CB095-02004-DR-EL-0015.pdf` | 5 / 05.09.24 / ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | Continuation of MCC414 phase bar C; downstream LV motor/soft-start circuits and construction notes excluded at first LV bus |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1712,36 +1793,65 @@
       "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0044.pdf",
       "sha256": "2557e6b469fd787807e0c0157b37e781a912fd416f232f6fcee35f31d24813f6",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S01",
+          "source_table_row": "| WH-S01 | `CB16OP038A-02006-DR-EL-0044.pdf` | 2 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM417 A-C / 3-9; TF417/TF417A D-F / 3-5; Hopper 3 SS416 D-G / 8-11 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0045.pdf",
       "sha256": "3a7531b638c94ae8fb76c014568f750619a1fb6d5149dbf28722e9694b38b1bd",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S02",
+          "source_table_row": "| WH-S02 | `CB16OP038A-02006-DR-EL-0045.pdf` | 1 / handwritten date not confidently transcribed / AS BUILT | 1 | MC417A LV incomer A-C / 8-10; 415 V phase bar C; revision row H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0046.pdf",
       "sha256": "115a5350686bba9cb463ca7e99b8e34956280eea2955a5afa8dc728d99caa2a8",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S03",
+          "source_table_row": "| WH-S03 | `CB16OP038A-02006-DR-EL-0046.pdf` | 3 / 28.01.25 / AS FOUND 23.10.23 | 1 | MC417 HV bar A; tier1 VCB/earth C-D / 4-5; paired motor contactors C-D / 7-11; legend and notes5-8 F-G / 1-7 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB17OP023A-04057-DR-EL-0004.pdf",
       "sha256": "4f4d4f95c4429a45587642444c285ddf47a084b0f63e1974a5a9a7d7b341ee7f",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S06",
+          "source_table_row": "| SV-S06 | `CB17OP023A-04057-DR-EL-0004.pdf` | 5 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM413 and IN02 double-boot branch A-C / 1-6; TF413/MC413 C-E; RM413A/TF413A and converter input routes B-E / 4-7 |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S18",
+          "source_table_row": "| WH-S18 | `CB17OP023A-04057-DR-EL-0004.pdf` | 5 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM413 IN02 double-boot branch -> RM417 A-B / 2-5; exact 0044 reference A |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1755,6 +1865,11 @@
           "review": "drawing-review/areas/cv006-review.md",
           "source_id": "CV-S10",
           "source_table_row": "| CV-S10 | `CB17OP023C-01006-DR-EL-0001.pdf` | 6; 28/01/25; AS FOUND 23.10.23 | 1 | Hopper7/8 interface; RM418 incoming RM419-SW02 A / 6-7; RM406-CB03 supply to SS416-HV416 C-E / 9-10 |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S04",
+          "source_table_row": "| WH-S04 | `CB17OP023C-01006-DR-EL-0001.pdf` | 6 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM418 incoming A-B / 6-7; CB03/CB04 B-C; TF418/TF418A D-F; Hopper 8 SS416 C-G / 8-11 |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -1763,36 +1878,60 @@
       "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0002.pdf",
       "sha256": "464bcb180e36cc61f2db002cace3c4c27260fd0a5c7261d3ed50b66f32e6c1e6",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S05",
+          "source_table_row": "| WH-S05 | `CB17OP023C-01006-DR-EL-0002.pdf` | 2 / 28.01.25 / AS FOUND 23.10.23 | 1 | MC418 HV bar A; tier1 VCB/earth C-D / 4-5; motor assemblies C-D / 7-11; notes5-8,11 F-G / 1-7 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0003.pdf",
       "sha256": "1bc5dccbb140bc863d8e99ae60fb775fa9b88c553e3b9d6a1e6ca05129a89166",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S06",
+          "source_table_row": "| WH-S06 | `CB17OP023C-01006-DR-EL-0003.pdf` | 1 / 14.06.18 / AS BUILT | 1 | MC418A LV incomer A-C / 8-10; 415 V bar C; footer H |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0004.pdf",
       "sha256": "1143b7931bf8843f76b03a0965d8e1ae4d3d70bd242406435d712ba7ed7a3434",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S07",
+          "source_table_row": "| WH-S07 | `CB17OP023C-01006-DR-EL-0004.pdf` | 3 / 03.09.20 / ISSUED FOR CONSTRUCTION; older rev1 AS BUILT 17.08.20 | 1 | HV/LV earth bars B-D; TF418/TF418A neutral and NER B-C / 5-8; MEN note9 G; disconnectable measurement-link note11 G |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0041.pdf",
       "sha256": "eb7f9cc260f112110bd92626251afe0790c9e70980612aed5cd7c6a85eb2c172",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S08",
+          "source_table_row": "| WH-S08 | `CB17OP023C-01006-DR-EL-0041.pdf` | 4 / 06.10.20 / AS BUILT | 1 | 24 V source reference A / 1-3; RM418 SW01 commands/status A-B; CB01/SW03 status C-D; spare commands E; tier1 truck signals A / 7-9 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1806,6 +1945,11 @@
           "review": "drawing-review/areas/cv006-review.md",
           "source_id": "CV-S01",
           "source_table_row": "| CV-S01 | `CB19OP001B-04057-DR-EL-0001.pdf` | 6; 28.01.25; AS FOUND 23.10.23 | 1 | Whole CV006 power distribution; 22 kV OHL A, RM410 B-C / 1-3, RM406 B-C / 9-11, RM419/RM418 centre |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S15",
+          "source_table_row": "| WH-S15 | `CB19OP001B-04057-DR-EL-0001.pdf` | 6 / 28.01.25 / AS FOUND 23.10.23 | 1 | CV006 distribution; RM410 -> RM419 B-D; RM419 -> RM418 C-E; RM406 -> Hopper8 C-D / 10-11; RM418 transformer aliases E-F / 6-8 |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -1821,6 +1965,11 @@
           "review": "drawing-review/areas/cv006-review.md",
           "source_id": "CV-S02",
           "source_table_row": "| CV-S02 | `CB19OP001B-04057-DR-EL-0002.pdf` | 4; 28.01.25; AS FOUND 23.10.23 | 1 | Head RM406; incoming pole 57 A-B / 4-5; three feeder branches B-E / 6-11; historical note1 F / 11-12 |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S16",
+          "source_table_row": "| WH-S16 | `CB19OP001B-04057-DR-EL-0002.pdf` | 4 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM406 CB03/SW04 outgoing C-E / 10-11; Hopper008 reference E; historical Hopper007 note1 F / 10-12 |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -1851,6 +2000,11 @@
           "review": "drawing-review/areas/cv006-review.md",
           "source_id": "CV-S04",
           "source_table_row": "| CV-S04 | `CB19OP001B-04057-DR-EL-0004.pdf` | 6; 28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022 | 1 | Tail RM410; pole 49-40 incoming A-B / 4-5; transformer branches B-F / 6-9; RM419 continuation E / 10-12 |"
+        },
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S17",
+          "source_table_row": "| WH-S17 | `CB19OP001B-04057-DR-EL-0004.pdf` | 6 / 28.01.25 / AS FOUND 23.10.21; older AS BUILT stamp 11.01.2022 | 1 | RM410 CB03-A04/SW04 C / 10-11 and RM419 continuation E-F / 10-12 |"
         }
       ],
       "model_acceptance": "Unconfirmed"
@@ -1874,54 +2028,90 @@
       "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0001.pdf",
       "sha256": "faa247739343fd032d5388dc6103a3ee0453c531397a65b22da3d6b40a0531b6",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S09",
+          "source_table_row": "| WH-S09 | `CB19OP001C-01068-DR-EL-0001.pdf` | 4 / 28.01.25 / AS FOUND 23.10.23 | 1 | RM419 SW01/SW02 A-B / 6-8; CB01/SW03 and CB02/SW04 B-D / 3-5; TF419A/B D-F; administrative-control note1 F-G / 1-4 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0002.pdf",
       "sha256": "cda8f95b922210ae75f0d2e05016a12e05151c51336a8e7b725be71a5ded21da",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S10",
+          "source_table_row": "| WH-S10 | `CB19OP001C-01068-DR-EL-0002.pdf` | 2 / 28.01.25 / AS FOUND 23.10.23 | 1 | MC419 HV bar A; tier5 VCB/earth C-D / 4-5; motor pairs C-D / 7-11; notes5-8 F-G / 1-6 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0003.pdf",
       "sha256": "b827f108461f1b0bad2cdb0798f1331f9a2a184dc852555b9fbeb9cfc2fe5353",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S11",
+          "source_table_row": "| WH-S11 | `CB19OP001C-01068-DR-EL-0003.pdf` | 1 / 15.06.20 / AS BUILT | 1 | MC419A TF419B supply, ACB01 and CT A-C / 8-10; 415 V bus C; continuation arrow D / 12 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0004.pdf",
       "sha256": "04117257c37d9e0e1a00ad87556c357252279d0f2c1f36b2578b5db9a5b20843",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S12",
+          "source_table_row": "| WH-S12 | `CB19OP001C-01068-DR-EL-0004.pdf` | 2 / 22.07.20 / RE-ISSUED FOR AS BUILT | 1 | Same MC419A phase bar B-C; continuation from 0003 C / 1; outgoing LV circuits excluded |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0005.pdf",
       "sha256": "00c543d446144b86f3ef48f66000cfd8ed8c9925ceef232f8cfd63f59065eb26",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S13",
+          "source_table_row": "| WH-S13 | `CB19OP001C-01068-DR-EL-0005.pdf` | 2 / 28.07.20 / RE-ISSUED FOR AS BUILT | 1 | MC419A MEN/neutral B / 3-4; TF419A NER B / 9-10; earth bars C; notes9,10,11,14 E-F / 8-11 |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
       "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0153.pdf",
       "sha256": "1b7e98827f544c532fa071433b49dfbbbafd83e40e17b8ddd54f1fe2f27277f8",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/western-hoppers-review.md",
+          "source_id": "WH-S14",
+          "source_table_row": "| WH-S14 | `CB19OP001C-01068-DR-EL-0153.pdf` | 1 / 05.11.20 / AS BUILT | 1 | SN009 LV motor power/control diagram B-F / 3-8; title H; inspected for disposition, below final LV bus |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     },
     {
@@ -1948,9 +2138,15 @@
       "path": "drawings/Asset Drawing Repo/CBC0012-02004-DR-EL-0007.pdf",
       "sha256": "2601c813a839c2a3d9752721e0a217485b36d3668cf7ef5d23f743a2fd8baf50",
       "page_count": 1,
-      "disposition": "Awaiting visual classification and topology review",
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
       "duplicate_of": null,
-      "area_review_sources": [],
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/services-review.md",
+          "source_id": "SV-S05",
+          "source_table_row": "| SV-S05 | `CBC0012-02004-DR-EL-0007.pdf` | 9 / 23.10.23 / AS FOUND | 1 | RM412 S100/S101/Q100/E100-E102 upper-left F-G / 1-3; TF412 windings E / 1-3; LV Q200/Q201/Q202 and separate conductors D-E |"
+        }
+      ],
       "model_acceptance": "Unconfirmed"
     }
   ]
