@@ -22,7 +22,7 @@ export function InterlockDetails({ status }: { status: SwitchingStatus }) {
       {evidence.document}{evidence.revision ? `, revision ${evidence.revision}` : ''}{evidence.clause ? `, clause ${evidence.clause}` : ''}{evidence.page ? `, page ${evidence.page}` : ''}
     </li>)}</ul>}
     {status.conditions.length > 0 && <div aria-label="Represented interlock conditions">{status.conditions.map(condition => <div key={condition.id}>
-      <p><strong>{condition.id}</strong>: {condition.explanation}</p>
+      <p><strong>{condition.id}</strong>{'command' in condition ? ` · ${condition.targetLabel}` : ` · Position ${condition.position}`}: {condition.explanation}</p>
       {condition.evidence.length > 0 && <ul>{condition.evidence.map((evidence, index) => <li key={index}>
         {evidence.document}{evidence.revision ? `, revision ${evidence.revision}` : ''}{evidence.clause ? `, clause ${evidence.clause}` : ''}{evidence.page ? `, page ${evidence.page}` : ''}
       </li>)}</ul>}

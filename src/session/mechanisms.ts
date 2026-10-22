@@ -16,16 +16,19 @@ export function removablePairs(mainPair: [string, string], state: DeviceState | 
   return (state.contact === 'closed' || possible && state.contact === null) && (state.racking === 'in' || possible && state.racking === null) ? [mainPair] : [];
 }
 
+export function breakerCommandLabel(command: BreakerCommand): string {
+  return command.kind === 'contact' ? command.value === 'open' ? 'Open' : 'Close' : command.value === 'in' ? 'Rack in' : 'Rack out';
+}
+
 export function breakerActions(state: BreakerState) {
-  const commands: { command: BreakerCommand; label: string }[] = [
-    { command: { kind: 'contact', value: 'open' }, label: 'Open' }, { command: { kind: 'contact', value: 'closed' }, label: 'Close' },
-    { command: { kind: 'racking', value: 'in' }, label: 'Rack in' }, { command: { kind: 'racking', value: 'out' }, label: 'Rack out' },
+  const commands: BreakerCommand[] = [
+    { kind: 'contact', value: 'open' }, { kind: 'contact', value: 'closed' }, { kind: 'racking', value: 'in' }, { kind: 'racking', value: 'out' },
   ];
-  return commands.map(action => {
-    const reason = action.command.kind === 'contact'
+  return commands.map(command => {
+    const reason = command.kind === 'contact'
       ? state.racking !== 'in' ? 'Contact operations require racking known In; Out or unconfirmed racking blocks this action.' : undefined
       : state.contact !== 'open' ? 'Racking requires the breaker contact known Open; Closed or unconfirmed contact blocks this action.' : undefined;
-    return { ...action, allowed: reason === undefined, ...(reason ? { reason } : {}) };
+    return { command, label: breakerCommandLabel(command), allowed: reason === undefined, ...(reason ? { reason } : {}) };
   });
 }
 
