@@ -2,7 +2,7 @@ import type { SwitchingStatus } from '../session/interlocks';
 import './interlocks.css';
 
 const reviewLabels: Record<SwitchingStatus['reviewStatus'], string> = {
-  'confirmed-none': 'Reviewed: no interlocks represented',
+  'confirmed-none': 'Reviewed: no additional local interlocks',
   'confirmed-rules': 'Reviewed interlock conditions',
   unresolved: 'Unresolved interlock',
   unconfirmed: 'Interlock review unconfirmed',

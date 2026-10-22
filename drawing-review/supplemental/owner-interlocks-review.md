@@ -47,3 +47,45 @@ Unknown prerequisites block. Dependencies are `sw411:bus-a:es` and `sw411:bus-b:
 ## Applied configuration increment
 
 `construction-2026-10-23.3` applies42–44 to preserved `.2`, supplying169 reviewed controls:121 with declared rules and48 with intrinsic guards alone. The remaining191 control reviews remain unresolved. Selected states, topology, equipment knowledge, winding and earth policies are unchanged. It also qualifies inherited null-baseline text as historical and uses neutral simulation-input captions. Historical `.2`/`.1` content remains immutable. Whole-model acceptance is still pending.
+
+## Answers45–48 — bus earths, LV incomers and OHL controls
+
+Question45 proposed Earth Open allowed and Earth Close requiring every exact breaker in [the bus-earth proposal](bus-earth-proposal.md) to be Open and Rack out, including SW411 BT for both sections. Unknown prerequisites block. Exact answer: **“Approve all10 listed bus-earth profiles”**. This selects those exact ten teaching profiles; the source drawings do not establish the physical interlock truth table.
+
+Question46 proposed fixed Open/Close with no additional local prerequisites for all eleven P05 LV breakers and asked for removable exceptions. Exact answer: **“all are correct excluding SW712/SW713 Incomers are removable and can have the racki in/out funciton”**. Nine retain fixed model interactions; `rm712:sw712:cb` and `rm713:sw713:cb` gain independent contact/racking states and the previously approved intrinsic racking restrictions. The existing all-in baseline applies to these two breakers. This does not promote unrelated hardware knowledge.
+
+Question47 asked for the complete action profile of ten retained OHL controls. Exact answer: **“consider them all closed and no racking function.”** This confirmed the baseline and model interaction, leaving other prerequisites unanswered. Question48 explicitly asked whether those same ten controls had any additional physical-interlock prerequisites in V1. Exact answer: **“No additional prerequisites in V1”**. Together these select Closed, Open/Close only and no additional prerequisites for those exact ten controls. The former CV006 Hopper10 controls remain excluded and unresolved.
+
+## Answer49 — bounded key, door and inching deferral
+
+Exact question: “49. For V1, how should the remaining key, door and inching-isolator sequences be handled in profile groups P06–P10 and P15: hopper MV/maintenance keys, SW505 inching/drive keys, HPGR Fortress/DC-earth keys and RM420 Ronis keys? These are additional systems beyond the cross-station keys already deferred. Deferral would explicitly mark these sequences as not modeled; local contact/racking/earth restrictions would still need their own agreed profiles.”
+
+Exact answer: **“Explicitly defer these listed sequences for V1”**.
+
+The deferral is limited to the named sequences on the82 exact controls in those six review groups. It does not enable a control, resolve its local contact/racking/earth profile, defer other systems, or establish operational permission.
+
+## Answers50–51 — removable motor contactors
+
+Question50 proposed mutual exclusion of Forward/Reverse, both contactors Open before maintenance Earth Close, and Earth Open allowed for all twelve P07 assemblies. Exact answer: **“COrrect, but the contactors are also removable and require racking out before closing earths. follows same rules around opening/racking as the other circuit breakers”**.
+
+Question51 then explicitly proposed the complete profile and baseline for all24 FC/RC contactors. Exact answer: **“Confirm this profile and Open/Rack in baseline”**.
+
+| Action | Required known state |
+| --- | --- |
+| Each contactor Open | Own Rack in |
+| Each contactor Rack out | Own contact Open |
+| Each contactor Rack in | Own contact Open and maintenance earth Open |
+| Forward Close | Own Rack in, Reverse Open and maintenance earth Open |
+| Reverse Close | Own Rack in, Forward Open and maintenance earth Open |
+| Maintenance Earth Close | Both contactors Open and both Rack out |
+| Maintenance Earth Open | Allowed |
+
+All24 start Open/Rack in. Unknown prerequisites block. The contactors retain their contactor classification. Only the listed key/door sequences are deferred under49.
+
+## Answer52 — six hopper MV incomer/earth pairs
+
+Question52 explicitly proposed the same complete HV local matrix for the six P06 pairs at Hoppers1,3,7,8,9,10: Open requires Rack in; Close requires Rack in and own ES Open; Rack out requires CB Open; Rack in requires CB Open and own ES Open; ES Open allowed; ES Close requires CB Open and Rack out. Upstream key-transfer sequences remain deferred under49; additional local conditions were requested as exceptions.
+
+Exact answer: **“Apply this local matrix to all6 pairs”**. Unknown prerequisites block. No exception was supplied. The selection applies to these exact six model pairs, without accepting unrelated source or earth relationships.
+
+These answers are recorded for the next configuration increment. They are not part of immutable `.3`.

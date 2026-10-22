@@ -1,0 +1,520 @@
+{
+  "id": "BUS-EARTH-PROPOSAL-2026-10-23",
+  "status": "pending-owner-selection",
+  "sourceModel": "construction-2026-10-23.2",
+  "interpretation": "Inference: direct depicted model bus/CB associations organize the proposed rule only; no physical interlock is inferred from wiring. Owner must select the complete V1 profile.",
+  "proposedProfile": "Earth Open allowed. Earth Close requires every exact listed breaker contact Open and Rack out. Unknown prerequisite blocks.",
+  "records": [
+    {
+      "earthAssetId": "mine:sw441:bus:es",
+      "busAssetId": "mine:sw441:bus",
+      "branchConnectionId": "mine:sw441:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "mine:sw441:in:cb",
+          "label": "CB SW441 IN01",
+          "connectionId": "mine:sw441:incoming:bar",
+          "from": "mine:sw441:in:cb:b",
+          "to": "mine:sw441:bus:bar"
+        },
+        {
+          "assetId": "mine:tf441:cb",
+          "label": "CB TF441 FD",
+          "connectionId": "mine:tf441:bar",
+          "from": "mine:sw441:bus:bar",
+          "to": "mine:tf441:cb:a"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw411:bus-a:es",
+      "busAssetId": "sw411:bus-a",
+      "branchConnectionId": "sw411:bus-a:earth-branch",
+      "dependencies": [
+        {
+          "assetId": "sw411:bus-tie:cb",
+          "label": "CB SW411 BT",
+          "connectionId": "sw411:tie-to-bus-a",
+          "from": "sw411:bus-tie:cb:bus-a",
+          "to": "sw411:bus-a:bar"
+        },
+        {
+          "assetId": "sw411:in-01:cb",
+          "label": "CB SW411 IN01",
+          "connectionId": "sw411:in-01:bus-link",
+          "from": "sw411:bus-a:bar",
+          "to": "sw411:in-01:cb:bus"
+        },
+        {
+          "assetId": "sw411:in-03:cb",
+          "label": "CB SW411 IN03",
+          "connectionId": "sw411:in-03:bus-link",
+          "from": "sw411:bus-a:bar",
+          "to": "sw411:in-03:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-01:cb",
+          "label": "CB SW454 FD01",
+          "connectionId": "sw411:tier-01:bus-link",
+          "from": "sw411:bus-a:bar",
+          "to": "sw411:tier-01:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-02:cb",
+          "label": "CB SW451 FD01",
+          "connectionId": "sw411:tier-02:bus-link",
+          "from": "sw411:bus-a:bar",
+          "to": "sw411:tier-02:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-03:cb",
+          "label": "T3 CB — unconfirmed",
+          "connectionId": "sw411:tier-03:bus-link",
+          "from": "sw411:bus-a:bar",
+          "to": "sw411:tier-03:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-04:cb",
+          "label": "CB SW435 FD01",
+          "connectionId": "sw411:tier-04:bus-link",
+          "from": "sw411:bus-a:bar",
+          "to": "sw411:tier-04:cb:bus"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw411:bus-b:es",
+      "busAssetId": "sw411:bus-b",
+      "branchConnectionId": "sw411:bus-b:earth-branch",
+      "dependencies": [
+        {
+          "assetId": "sw411:bus-tie:cb",
+          "label": "CB SW411 BT",
+          "connectionId": "sw411:tie-to-bus-b",
+          "from": "sw411:bus-tie:cb:bus-b",
+          "to": "sw411:bus-b:bar"
+        },
+        {
+          "assetId": "sw411:in-02:cb",
+          "label": "CB SW411 IN02",
+          "connectionId": "sw411:in-02:bus-link",
+          "from": "sw411:bus-b:bar",
+          "to": "sw411:in-02:cb:bus"
+        },
+        {
+          "assetId": "sw411:in-04:cb",
+          "label": "CB SW411 IN04",
+          "connectionId": "sw411:in-04:bus-link",
+          "from": "sw411:bus-b:bar",
+          "to": "sw411:in-04:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-13:cb",
+          "label": "CB SW431 FD01",
+          "connectionId": "sw411:tier-13:bus-link",
+          "from": "sw411:bus-b:bar",
+          "to": "sw411:tier-13:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-14:cb",
+          "label": "CB SW426 FD01",
+          "connectionId": "sw411:tier-14:bus-link",
+          "from": "sw411:bus-b:bar",
+          "to": "sw411:tier-14:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-15:cb",
+          "label": "CB SW421 FD01",
+          "connectionId": "sw411:tier-15:bus-link",
+          "from": "sw411:bus-b:bar",
+          "to": "sw411:tier-15:cb:bus"
+        },
+        {
+          "assetId": "sw411:tier-16:cb",
+          "label": "CB RM721 FD01",
+          "connectionId": "sw411:tier-16:bus-link",
+          "from": "sw411:bus-b:bar",
+          "to": "sw411:tier-16:cb:bus"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw421:bus:es",
+      "busAssetId": "sw421:bus",
+      "branchConnectionId": "sw421:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw421:in:cb",
+          "label": "CB SW421 IN 01",
+          "connectionId": "sw421:incoming:bus-link",
+          "from": "sw421:in:cb:b",
+          "to": "sw421:bus:bar"
+        },
+        {
+          "assetId": "sw421:spare:tier2:cb",
+          "label": "CB SPARE FD\nTier 2",
+          "connectionId": "sw421:spare:tier2:bus-link",
+          "from": "sw421:bus:bar",
+          "to": "sw421:spare:tier2:cb:a"
+        },
+        {
+          "assetId": "sw421:spare:tier7:cb",
+          "label": "CB SPARE FD\nTier 7",
+          "connectionId": "sw421:spare:tier7:bus-link",
+          "from": "sw421:bus:bar",
+          "to": "sw421:spare:tier7:cb:a"
+        },
+        {
+          "assetId": "sw421:tf421:hv-cb",
+          "label": "CB TF421 FD\nTier 4",
+          "connectionId": "sw421:tf421:bus-link",
+          "from": "sw421:bus:bar",
+          "to": "sw421:tf421:hv-cb:a"
+        },
+        {
+          "assetId": "sw421:tf422:hv-cb",
+          "label": "CB TF422 FD\nTier 5",
+          "connectionId": "sw421:tf422:bus-link",
+          "from": "sw421:bus:bar",
+          "to": "sw421:tf422:hv-cb:a"
+        },
+        {
+          "assetId": "sw421:tf423:hv-cb",
+          "label": "CB TF423 FD\nTier 6",
+          "connectionId": "sw421:tf423:bus-link",
+          "from": "sw421:bus:bar",
+          "to": "sw421:tf423:hv-cb:a"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw426:bus:es",
+      "busAssetId": "sw426:bus",
+      "branchConnectionId": "sw426:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw426:in:cb",
+          "label": "CB SW426 IN 01",
+          "connectionId": "sw426:incoming:bus-link",
+          "from": "sw426:in:cb:b",
+          "to": "sw426:bus:bar"
+        },
+        {
+          "assetId": "sw426:ss714:cb",
+          "label": "CB SS714 FD",
+          "connectionId": "sw426:ss714:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:ss714:cb:a"
+        },
+        {
+          "assetId": "sw426:tf426:cb",
+          "label": "CB TF426 FD",
+          "connectionId": "sw426:tf426:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf426:cb:a"
+        },
+        {
+          "assetId": "sw426:tf427:cb",
+          "label": "CB TF427 FD",
+          "connectionId": "sw426:tf427:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf427:cb:a"
+        },
+        {
+          "assetId": "sw426:tf428:cb",
+          "label": "CB TF428 FD",
+          "connectionId": "sw426:tf428:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf428:cb:a"
+        },
+        {
+          "assetId": "sw426:tf429:cb",
+          "label": "CB TF429 FD",
+          "connectionId": "sw426:tf429:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf429:cb:a"
+        },
+        {
+          "assetId": "sw426:tf430:cb",
+          "label": "CB TF430 FD",
+          "connectionId": "sw426:tf430:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf430:cb:a"
+        },
+        {
+          "assetId": "sw426:tf439:cb",
+          "label": "CB TF439 FD",
+          "connectionId": "sw426:tf439:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf439:cb:a"
+        },
+        {
+          "assetId": "sw426:tf440:cb",
+          "label": "CB TF440 FD",
+          "connectionId": "sw426:tf440:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf440:cb:a"
+        },
+        {
+          "assetId": "sw426:tf443:cb",
+          "label": "CB TF443 FD",
+          "connectionId": "sw426:tf443:bus-link",
+          "from": "sw426:bus:bar",
+          "to": "sw426:tf443:cb:a"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw431:bus:es",
+      "busAssetId": "sw431:bus",
+      "branchConnectionId": "sw431:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw431:in:cb",
+          "label": "CB SW431 IN 01",
+          "connectionId": "sw431:incoming:bus-link",
+          "from": "sw431:in:cb:b",
+          "to": "sw431:bus:bar"
+        },
+        {
+          "assetId": "sw431:sw435:cb",
+          "label": "CB SW435 FD 02",
+          "connectionId": "sw431:sw435:bus-link",
+          "from": "sw431:bus:bar",
+          "to": "sw431:sw435:cb:a"
+        },
+        {
+          "assetId": "sw431:tf431:hv-cb",
+          "label": "CB TF431 FD",
+          "connectionId": "sw431:tf431:bus-link",
+          "from": "sw431:bus:bar",
+          "to": "sw431:tf431:hv-cb:a"
+        },
+        {
+          "assetId": "sw431:tf432:hv-cb",
+          "label": "CB TF432 FD · Tier 5",
+          "connectionId": "sw431:tf432:bus-link",
+          "from": "sw431:bus:bar",
+          "to": "sw431:tf432:hv-cb:a"
+        },
+        {
+          "assetId": "sw431:tf437:hv-cb",
+          "label": "CB TF437 FD",
+          "connectionId": "sw431:tf437:bus-link",
+          "from": "sw431:bus:bar",
+          "to": "sw431:tf437:hv-cb:a"
+        },
+        {
+          "assetId": "sw431:tf442:hv-cb",
+          "label": "CB TF442 FD",
+          "connectionId": "sw431:tf442:bus-link",
+          "from": "sw431:bus:bar",
+          "to": "sw431:tf442:hv-cb:a"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw435:bus:es",
+      "busAssetId": "sw435:bus",
+      "branchConnectionId": "sw435:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw435:hpgr:cb",
+          "label": "CB HPGR FD",
+          "connectionId": "sw435:hpgr:bus-link",
+          "from": "sw435:bus:bar",
+          "to": "sw435:hpgr:cb:a"
+        },
+        {
+          "assetId": "sw435:in:cb",
+          "label": "CB SW435 IN 01",
+          "connectionId": "sw435:incoming:bus-link",
+          "from": "sw435:in:cb:b",
+          "to": "sw435:bus:bar"
+        },
+        {
+          "assetId": "sw435:sw431:cb",
+          "label": "CB SW431 FD 02",
+          "connectionId": "sw435:sw431:bus-link",
+          "from": "sw435:bus:bar",
+          "to": "sw435:sw431:cb:a"
+        },
+        {
+          "assetId": "sw435:tf433:hv-cb",
+          "label": "CB TF433 FD",
+          "connectionId": "sw435:tf433:bus-link",
+          "from": "sw435:bus:bar",
+          "to": "sw435:tf433:hv-cb:a"
+        },
+        {
+          "assetId": "sw435:tf435:hv-cb",
+          "label": "CB TF435 FD",
+          "connectionId": "sw435:tf435:bus-link",
+          "from": "sw435:bus:bar",
+          "to": "sw435:tf435:hv-cb:a"
+        },
+        {
+          "assetId": "sw435:tf436:hv-cb",
+          "label": "CB TF436 FD · tier5 spare\nBreaker present · no outgoing cable",
+          "connectionId": "sw435:tf436:bus-link",
+          "from": "sw435:bus:bar",
+          "to": "sw435:tf436:hv-cb:a"
+        },
+        {
+          "assetId": "sw435:tf453:hv-cb",
+          "label": "CB TF453 FD",
+          "connectionId": "sw435:tf453:bus-link",
+          "from": "sw435:bus:bar",
+          "to": "sw435:tf453:hv-cb:a"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw451:bus:es",
+      "busAssetId": "sw451:bus",
+      "branchConnectionId": "sw451:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw451:in:cb",
+          "label": "CB SW451 IN 01",
+          "connectionId": "sw451:incoming:bus-link",
+          "from": "sw451:in:cb:out",
+          "to": "sw451:bus:port"
+        },
+        {
+          "assetId": "sw451:spare-2:cb",
+          "label": "T2 · CB SPARE FD",
+          "connectionId": "sw451:spare-2:bus-link",
+          "from": "sw451:bus:port",
+          "to": "sw451:spare-2:cb:in"
+        },
+        {
+          "assetId": "sw451:spare-6:cb",
+          "label": "T6 · CB SPARE FD",
+          "connectionId": "sw451:spare-6:bus-link",
+          "from": "sw451:bus:port",
+          "to": "sw451:spare-6:cb:in"
+        },
+        {
+          "assetId": "sw451:spare-7:cb",
+          "label": "T7 · CB SPARE FD",
+          "connectionId": "sw451:spare-7:bus-link",
+          "from": "sw451:bus:port",
+          "to": "sw451:spare-7:cb:in"
+        },
+        {
+          "assetId": "sw451:tf451:hv-cb",
+          "label": "CB TF451 FD",
+          "connectionId": "sw451:tf451:bus-link",
+          "from": "sw451:bus:port",
+          "to": "sw451:tf451:hv-cb:in"
+        },
+        {
+          "assetId": "sw451:tf452:hv-cb",
+          "label": "CB TF452 FD",
+          "connectionId": "sw451:tf452:bus-link",
+          "from": "sw451:bus:port",
+          "to": "sw451:tf452:hv-cb:in"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw454:bus:es",
+      "busAssetId": "sw454:bus",
+      "branchConnectionId": "sw454:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw454:in:cb",
+          "label": "CB SW454 IN 01",
+          "connectionId": "sw454:incoming:bus-link",
+          "from": "sw454:in:cb:b",
+          "to": "sw454:bus:bar"
+        },
+        {
+          "assetId": "sw454:sw505:cb",
+          "label": "CB SW505 FD\nSW454 tier 6",
+          "connectionId": "sw454:sw505:bus-link",
+          "from": "sw454:bus:bar",
+          "to": "sw454:sw505:cb:a"
+        },
+        {
+          "assetId": "sw454:tf454:hv-cb",
+          "label": "CB TF454 FD",
+          "connectionId": "sw454:tf454:bus-link",
+          "from": "sw454:bus:bar",
+          "to": "sw454:tf454:hv-cb:a"
+        },
+        {
+          "assetId": "sw454:tf455:hv-cb",
+          "label": "CB TF455 FD",
+          "connectionId": "sw454:tf455:bus-link",
+          "from": "sw454:bus:bar",
+          "to": "sw454:tf455:hv-cb:a"
+        },
+        {
+          "assetId": "sw454:tf456:hv-cb",
+          "label": "CB TF456 FD",
+          "connectionId": "sw454:tf456:bus-link",
+          "from": "sw454:bus:bar",
+          "to": "sw454:tf456:hv-cb:a"
+        }
+      ]
+    },
+    {
+      "earthAssetId": "sw505:bus:es",
+      "busAssetId": "sw505:bus",
+      "branchConnectionId": "sw505:bus:es:branch",
+      "dependencies": [
+        {
+          "assetId": "sw505:in:cb",
+          "label": "CB SW505 IN 01",
+          "connectionId": "sw505:incoming:bus-link",
+          "from": "sw505:in:cb:b",
+          "to": "sw505:bus:bar"
+        },
+        {
+          "assetId": "sw505:tf505a:hv-cb",
+          "label": "CB TF505A FD",
+          "connectionId": "sw505:tf505a:bus-link",
+          "from": "sw505:bus:bar",
+          "to": "sw505:tf505a:hv-cb:a"
+        },
+        {
+          "assetId": "sw505:tf505b:hv-cb",
+          "label": "CB TF505B FD",
+          "connectionId": "sw505:tf505b:bus-link",
+          "from": "sw505:bus:bar",
+          "to": "sw505:tf505b:hv-cb:a"
+        },
+        {
+          "assetId": "sw505:tf505c:hv-cb",
+          "label": "CB TF505C FD",
+          "connectionId": "sw505:tf505c:bus-link",
+          "from": "sw505:bus:bar",
+          "to": "sw505:tf505c:hv-cb:a"
+        },
+        {
+          "assetId": "sw505:tf506:hv-cb",
+          "label": "CB TF506 FD",
+          "connectionId": "sw505:tf506:bus-link",
+          "from": "sw505:bus:bar",
+          "to": "sw505:tf506:hv-cb:a"
+        },
+        {
+          "assetId": "sw505:tf507:hv-cb",
+          "label": "CB TF507 FD",
+          "connectionId": "sw505:tf507:bus-link",
+          "from": "sw505:bus:bar",
+          "to": "sw505:tf507:hv-cb:a"
+        },
+        {
+          "assetId": "sw505:tf508:hv-cb",
+          "label": "CB TF508 FD",
+          "connectionId": "sw505:tf508:bus-link",
+          "from": "sw505:bus:bar",
+          "to": "sw505:tf508:hv-cb:a"
+        }
+      ]
+    }
+  ]
+}

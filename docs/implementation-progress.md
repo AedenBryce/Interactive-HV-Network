@@ -378,4 +378,16 @@ The implementation agent reports18/18 focused tests passing across the additiona
 
 ADR0009 adds an explicit opt-in for a narrowly evidenced source arc to establish only its modeled transfer while parent equipment metadata remains provisional. supportScope=relationship requires an explicit claim and linked evidence; omitted scope keeps the existing asset-and-arc gate. Legacy pairs, mechanisms and earth continuity retain parent gating. A shared predicate drives graph and UI behavior. No parent knowledge or unrelated earth/reverse claim is promoted, and old snapshots retain their prior semantics. This addresses the coarse-parent evidence issue identified before site conversion; no site arc has yet been composed.
 
-The implementation agent reports59 targeted tests passing across six session files (7 scoped-source,10 directed-source,8 relationships,11 uncertainty,7 earth,16 scenario), plus typecheck. Seven new tests cover exact scoped support, missing claim/evidence rejection, unresolved reverse, unchanged earth/metadata and default/history compatibility. No full suite was run. Independent Standards review through4989d19 found0 new findings; independent Spec review of that committed point is pending.
+The implementation agent reports59 targeted tests passing across six session files (7 scoped-source,10 directed-source,8 relationships,11 uncertainty,7 earth,16 scenario), plus typecheck. Seven new tests cover exact scoped support, missing claim/evidence rejection, unresolved reverse, unchanged earth/metadata and default/history compatibility. No full suite was run. Independent Standards and Spec reviews of both committed4989d19 and4d8e6e1 found0 new findings, using fixed baseline d753765.
+
+### Production browser verification of `.3`
+
+Model code identity:4989d19; core relationship-support extension:4d8e6e1. Typecheck and production build pass; Vite reports the existing chunk-size advisory (1,363.89kB JavaScript,287.71kB gzip). No browser warning/error was reported during the checked flows.
+
+In the production preview, SW411 BT starts Open/Rack out, blocks contact actions, permits Rack in with both bus earths Open, then permits Close. Reset restores its selected baseline. MC431's LV incomer opens and racks out; both contact actions then disable. The inspection heading explicitly says no **additional** local interlocks, retaining intrinsic guards.
+
+The actual saved `.3` format2 scenario is5,281,216bytes and contains169 reviewed controls,304 declared rules,4 null contacts and3 available sources. Matching reopen restores connectivity. The saved `.2` format2 scenario opens view-only against `.3`, displays both versions, and blocks Undo/Reset. Start current model restores `.3`. Screenshot: `hv-v3-lv-interlocks.png` in the task visualization directory. Narrow/mobile layout remains unverified.
+
+### Next increment decisions
+
+Owner answers45–52 are recorded in `drawing-review/supplemental/owner-interlocks-review.md`: ten bus-earth profiles; nine fixed LV interactions and two removable LV incomers; ten OHL controls; bounded key/door/inching deferral;24 removable contactors with their complete local matrix and Open/Rack in baseline; and six hopper MV incomer/earth profiles. The transformer direction audit and helper implement the scoped25/28 policy without accepting reverse or earth behavior. These prepared changes are not part of immutable `.3` until a new version is composed and checked.
