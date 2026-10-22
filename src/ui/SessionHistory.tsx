@@ -1,5 +1,6 @@
 import type { SessionAction, SessionSnapshot } from '../session/session';
 import './history.css';
+import { describeDeviceState } from '../session/mechanisms';
 
 type Props = { snapshot: SessionSnapshot; onUndo: () => void; onReset: () => void };
 
@@ -8,6 +9,7 @@ export function SessionHistory({ snapshot, onUndo, onReset }: Props) {
   const sources = new Map(snapshot.model.sources.map(source => [source.id, source.label]));
   function describe(action: SessionAction) {
     if (action.kind === 'source') return `${sources.get(action.sourceId) ?? action.sourceId}: ${action.from === null ? 'Unconfirmed' : action.from ? 'Enabled' : 'Disabled'} → ${action.to ? 'Enabled' : 'Disabled'}`;
+    if (action.kind === 'breaker') return `${assets.get(action.assetId)?.label ?? action.assetId}: ${describeDeviceState(action.from)} → ${describeDeviceState(action.to)}`;
     const asset = assets.get(action.assetId);
     const position = (id: string | null) => id === null ? 'Unconfirmed' : asset?.positions.find(position => position.id === id)?.label ?? id;
     return `${asset?.label ?? action.assetId}: ${position(action.from)} → ${position(action.to)}`;

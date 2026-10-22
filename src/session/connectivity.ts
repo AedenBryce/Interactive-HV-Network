@@ -1,6 +1,7 @@
 import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { indexRoutes } from './routes';
 import { isSupported } from './evidence';
+import { removablePairs } from './mechanisms';
 
 export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string };
 export type ActiveGraph = { terminals: string[]; edges: GraphEdge[] };
@@ -18,7 +19,8 @@ export function buildGraph(model: NetworkModel, devices: DeviceStates, options: 
     const positionPairs = devices[asset.id] === null
       ? options.includeUnconfirmed ? positionRelationships.flatMap(p => p.pairs) : (positionRelationships[0]?.pairs ?? []).filter(pair => positionRelationships.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
       : positionRelationships.find(p => p.id === devices[asset.id])?.pairs ?? [];
-    const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs].map(pair => [pairKey(pair), pair]));
+    const mechanicalPairs = asset.removableBreaker ? removablePairs(asset.removableBreaker.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
+    const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));
     for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
   }
   return { terminals: model.assets.flatMap(a => a.terminals), edges };

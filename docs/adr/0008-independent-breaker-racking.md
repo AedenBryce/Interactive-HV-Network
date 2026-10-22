@@ -1,0 +1,7 @@
+# ADR 0008: Independent breaker contact and racking state
+
+Date: 23 October 2026. Status: implemented locally in the generic session and synthetic fixture; site conversion pending. Owner answers26/29 require separate Open/Close and Rack in/out actions for drawing-shown removable breakers, while later answers select the baseline and local SW411 rules. Represent contact and racking as independent nullable fields on one asset, behind the existing `SimulationSession` seam, so an action changes one field without inventing the other.
+
+Composite position strings would multiply partial-state combinations; a second visible rack-contact asset would introduce a separate identity for part of the same breaker. A private mechanism module instead evaluates the declared main pair and action restrictions, preserving separate earth relationships. Racking requires known Open; contact actions require known Rack in. Other unresolved interlock reviews still apply. Independent null values remain unconfirmed in connectivity, inspection, history and scenario validation.
+
+Extend ADR0007's format1-only decision for new structured-state models: use a new format2 envelope while retaining the format1 reader and format1 saving for legacy-only models. Historical snapshots, their original states and fingerprints remain unchanged; do not migrate them or fill Rack in defaults. Changes to a site model still require a new immutable model version and owner acceptance remains separate. The currently distributed `construction-2026-10-23.1` contains no racking-state conversion.

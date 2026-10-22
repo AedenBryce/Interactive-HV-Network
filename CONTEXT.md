@@ -25,6 +25,12 @@ An interlock whose conditions require the user's confirmation. It is flagged for
 **Starting configuration**:
 The agreed device states and source availability from which a session starts and to which Reset network returns it.
 
+**Contact position**:
+A breaker's Open or Closed contact state, recorded separately from its racking position. An unconfirmed contact position establishes neither state.
+
+**Racking position**:
+A removable breaker's Rack in or Rack out state, recorded separately from its contact position. The source must establish which breakers are removable; an unconfirmed racking position is not Rack in.
+
 **Scenario**:
 A saved set of device states and source availability together with a snapshot of its original network model and model version. It can be reopened or shared as a scenario file without requiring a separate historical model file.
 

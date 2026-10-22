@@ -16,7 +16,7 @@ export const interlockSchema = z.strictObject({
 
 type ModelForInterlockValidation = {
   synthetic: boolean;
-  assets: { id: string; positions: { id: string }[] }[];
+  assets: { id: string; positions: { id: string }[]; removableBreaker?: { mainPair: [string, string] } }[];
   sources: { id: string }[];
   interlocks?: InterlockDefinition;
 };
@@ -35,7 +35,7 @@ export function validateInterlocks(model: ModelForInterlockValidation, error: (m
     } else condition.conditions.forEach(child => checkCondition(child, ruleId));
   };
   for (const review of reviews) {
-    if (!model.assets.some(asset => asset.id === review.assetId && asset.positions.length > 0)) error(`Interlock review references unknown switchable asset ${review.assetId}.`);
+    if (!model.assets.some(asset => asset.id === review.assetId && (asset.positions.length > 0 || asset.removableBreaker))) error(`Interlock review references unknown switchable asset ${review.assetId}.`);
     const hasRules = rules.some(rule => rule.assetId === review.assetId);
     if (review.status === 'confirmed-none' && hasRules) error(`Interlock review for ${review.assetId} confirms no rules but rules are present.`);
     if (review.status === 'confirmed-rules' && !hasRules) error(`Interlock review for ${review.assetId} confirms rules but none are present.`);

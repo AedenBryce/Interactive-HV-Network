@@ -13,6 +13,7 @@ export function InterlockDetails({ status }: { status: SwitchingStatus }) {
   return <section className={`interlock-details${unresolved ? ' unresolved' : ''}`} aria-label="Physical interlocks">
     <h3>{reviewLabels[status.reviewStatus]}</h3>
     <p>{status.note}</p>
+    {status.actions?.some(action => !action.allowed) && <ul>{status.actions.filter(action => !action.allowed).map(action => <li key={`${action.command.kind}:${action.command.value}`}><strong>{action.label}:</strong> {action.reason}</li>)}</ul>}
     {unresolved && <p>Switching controls are disabled pending confirmation.</p>}
     {status.positions.some(position => !position.allowed) && <ul>{status.positions.filter(position => !position.allowed).map(position => <li key={position.id}>
       <strong>{position.id}:</strong> {position.reason}

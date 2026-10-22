@@ -10,10 +10,13 @@ import { evaluateUncertainty } from './uncertainty';
 import type { UncertaintyConnectivity, ConnectionResult } from './uncertainty';
 import { scenarioSchema, canonicalModelPackage } from './scenario';
 import type { ScenarioFile } from './scenario';
+import { breakerCommandSchema, isBreakerState } from './mechanisms';
+import type { BreakerCommand, BreakerState } from './mechanisms';
 
 export type AssetConnectivity = Connectivity & EarthConnectivity & UncertaintyConnectivity;
 export type SessionChange =
   | { kind: 'device'; assetId: string; from: string | null; to: string }
+  | { kind: 'breaker'; assetId: string; command: BreakerCommand; from: BreakerState; to: BreakerState }
   | { kind: 'source'; sourceId: string; from: boolean | null; to: boolean };
 export type SessionAction = SessionChange & { id: number };
 type ScenarioStates = { devices: DeviceStates; sources: SourceStates };
@@ -53,7 +56,7 @@ export class SimulationSession {
     this.#model = modelSchema.parse(model);
     this.#currentModel = this.#model;
     this.#registerPackage(this.#model);
-    this.#devices = { ...this.#model.starting.devices };
+    this.#devices = structuredClone(this.#model.starting.devices);
     this.#sources = { ...this.#model.starting.sources };
   }
 
@@ -65,7 +68,7 @@ export class SimulationSession {
     this.#model = result.data;
     this.#currentModel = result.data;
     this.#mode = 'exploration';
-    this.#devices = { ...result.data.starting.devices };
+    this.#devices = structuredClone(result.data.starting.devices);
     this.#sources = { ...result.data.starting.sources };
     this.#impact = [];
     this.#history = [];
@@ -74,7 +77,7 @@ export class SimulationSession {
   }
 
   saveScenario(): ScenarioFile {
-    return structuredClone({ formatVersion: 1, modelVersion: this.#model.version, model: this.#model, devices: this.#devices, sources: this.#sources });
+    return structuredClone({ formatVersion: this.#model.assets.some(asset => asset.removableBreaker) ? 2 : 1, modelVersion: this.#model.version, model: this.#model, devices: this.#devices, sources: this.#sources });
   }
 
   loadScenario(input: unknown): ActionResult {
@@ -84,7 +87,7 @@ export class SimulationSession {
     if (!registered.ok) return registered;
     this.#model = result.data.model;
     this.#mode = this.#model.id === this.#currentModel.id && this.#model.version === this.#currentModel.version ? 'exploration' : 'view-only';
-    this.#devices = { ...result.data.devices };
+    this.#devices = structuredClone(result.data.devices);
     this.#sources = { ...result.data.sources };
     this.#impact = [];
     this.#history = [];
@@ -101,16 +104,29 @@ export class SimulationSession {
     return { ok: true };
   }
 
-  changeDevice(assetId: string, position: string): ActionResult {
+  changeDevice(assetId: string, position: string | BreakerCommand): ActionResult {
     if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
     const asset = this.#model.assets.find(asset => asset.id === assetId);
+    if (typeof position !== 'string') {
+      const parsed = breakerCommandSchema.safeParse(position); const state = this.#devices[assetId];
+      if (!asset?.removableBreaker || !parsed.success || !isBreakerState(state)) return { ok: false, error: `Unsupported independent breaker command for ${assetId}.` };
+      const command = parsed.data;
+      const option = evaluateInterlocks(this.#model, this.#devices, this.#sources)[assetId].actions!.find(action => action.command.kind === command.kind && action.command.value === command.value)!;
+      if (!option.allowed) return { ok: false, error: option.reason ?? 'Breaker action blocked.' };
+      if (state[command.kind] === command.value) return { ok: true };
+      const next = { ...state, [command.kind]: command.value };
+      this.#acceptChange({ kind: 'breaker', assetId, command, from: structuredClone(state), to: structuredClone(next) }, () => { this.#devices[assetId] = next; });
+      return { ok: true };
+    }
     if (!asset?.positions.some(state => state.id === position)) {
       return { ok: false, error: `Unsupported position ${position} for ${assetId}.` };
     }
     const option = evaluateInterlocks(this.#model, this.#devices, this.#sources)[assetId].positions.find(option => option.id === position)!;
     if (!option.allowed) return { ok: false, error: option.reason ?? 'Switching is blocked by the represented interlock.' };
     if (this.#devices[assetId] === position) return { ok: true };
-    this.#acceptChange({ kind: 'device', assetId, from: this.#devices[assetId], to: position }, () => { this.#devices[assetId] = position; });
+    const from = this.#devices[assetId];
+    if (isBreakerState(from)) return { ok: false, error: `Unsupported discrete position for removable breaker ${assetId}.` };
+    this.#acceptChange({ kind: 'device', assetId, from, to: position }, () => { this.#devices[assetId] = position; });
     return { ok: true };
   }
 
@@ -124,7 +140,7 @@ export class SimulationSession {
 
   #acceptChange(change: SessionChange, apply: () => void) {
     const before = this.snapshot().connectivity;
-    this.#history.push({ action: { ...change, id: this.#nextActionId++ }, before: { devices: { ...this.#devices }, sources: { ...this.#sources } } });
+    this.#history.push({ action: { ...change, id: this.#nextActionId++ }, before: { devices: structuredClone(this.#devices), sources: { ...this.#sources } } });
     apply();
     this.#recordImpact(before);
   }
@@ -134,7 +150,7 @@ export class SimulationSession {
     const previous = this.#history.at(-1);
     if (!previous) return { ok: false, error: 'No accepted action is available to undo.' };
     const before = this.snapshot().connectivity;
-    this.#devices = { ...previous.before.devices };
+    this.#devices = structuredClone(previous.before.devices);
     this.#sources = { ...previous.before.sources };
     this.#history.pop();
     this.#recordImpact(before);
@@ -144,7 +160,7 @@ export class SimulationSession {
   reset(): ActionResult {
     if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
     const before = this.snapshot().connectivity;
-    this.#devices = { ...this.#model.starting.devices };
+    this.#devices = structuredClone(this.#model.starting.devices);
     this.#sources = { ...this.#model.starting.sources };
     this.#history = [];
     this.#nextActionId = 1;
@@ -176,7 +192,10 @@ export class SimulationSession {
     const definite = Object.fromEntries(this.#model.assets.map(asset => [asset.id, { ...sourceConnectivity[asset.id], ...earths.connectivity[asset.id] }]));
     const uncertainty = evaluateUncertainty(this.#model, this.#devices, this.#sources, definite, earths.conflicts);
     const switching = evaluateInterlocks(this.#model, this.#devices, this.#sources);
-    if (this.#mode === 'view-only') for (const status of Object.values(switching)) status.positions = status.positions.map(position => ({ ...position, allowed: false, reason: viewOnlyReason }));
+    if (this.#mode === 'view-only') for (const status of Object.values(switching)) {
+      status.positions = status.positions.map(position => ({ ...position, allowed: false, reason: viewOnlyReason }));
+      if (status.actions) status.actions = status.actions.map(action => ({ ...action, allowed: false, reason: viewOnlyReason }));
+    }
     return structuredClone({
       model: this.#model, devices: this.#devices, sources: this.#sources,
       mode: this.#mode,

@@ -45,3 +45,34 @@ This selects Rack in for removable breakers other than loop feeds. Loop-feed rac
 For question31, the complete proposal was outgoing SW411 feeder breakers at tiers01/02/03/04/13/14/15/16 closed; spare incomers IN01/IN02 open; all SW411 earth switches open, including bus earths. The previously selected IN03/IN04 closed and bus-tie open values were explicitly retained. The owner answered exactly **“Confirm these starting positions”**.
 
 These answers select the remaining SW411 contact/earth baseline. They do not resolve loop-feed racking values, other areas' contact/earth baseline, complete physical interlocks or whole-model acceptance. Answers25–31 remain unapplied to immutable `construction-2026-10-23.1`.
+
+## Individual tie answers32–34
+
+| Question / asset | Exact answer | Selected simulation baseline |
+| --- | --- | --- |
+|32: `sw411:bus-tie:cb`, CB SW411 BT|“Rack out”|Contact Open from answer27; Rack out from answer32.|
+|33: `sw431:sw435:cb`, CB SW435 FD02 at SW431|“CB should be open, and racked out”|Open / Rack out.|
+|34: `sw435:sw431:cb`, CB SW431 FD02 at SW435|“open and racked out”|Open / Rack out.|
+
+Question32 cited `CB-10016-DR-EL-0011.pdf`, rev0, p1 B/3, tier8. Question33 cited that overview, p1 C/3–4, and `11098-07110-EL-DR-2353.pdf`, rev5, p1 C–G/2–3. Question34 cited `CB-10016-DR-EL-0010.pdf`, rev0, p1 A–B/8, and `11098-07110-EL-DR-2354.pdf`, rev9, p1 B–G/2–3. The previously confirmed SW431-P-02 tie and exact named end devices are retained.
+
+These are explicit individual values; they do not depend on assuming whether every graph-cycle member counts as a loop feed. Other loop-feed exceptions still require their own source/owner review. These later selections are not applied to immutable `construction-2026-10-23.1`.
+
+## Answers35–37: symbol categories, baseline and SW411 local rules
+
+- **35, exact answer “Yes, both LV and MV examples”:** for this tool, plug/U-contact symbols on the detailed LV and hopper MV sheets are classified as removable, matching the processing overview's explicit withdrawable legend. The question named CB SW456 IN D (`11098-04400-EL-DR-8021.pdf`, rev7, p1 B–C/2) and Hopper7 MC418 incoming VCB (`CB17OP023C-01006-DR-EL-0002.pdf`, rev2, p1 B–D/4–5). This confirms the depicted symbol categories where the marks actually appear; it does not classify generic CB symbols without them.
+- **36, exact answer “Confirm this baseline proposal”:** in-service feeder breakers/disconnectors Closed; spare feeders Open; all earth switches Open; all motor Forward/Reverse contactors Open (motors stopped). The three confirmed tie breakers remain Open/Rack out; other removable breakers use Rack in except further loop feeds requiring individual confirmation. Where in-service/spare identity remains unconfirmed, retain Unconfirmed. These are teaching-scenario starting values, not live-site states.
+- **37, exact answer “Confirm this local rule set”:** the complete selected rule set below applies to SW411 incoming/outgoing line-earth pairs. It excludes the two bus-earth switches. Unknown prerequisites block the affected action; the previously deferred cross-station key sequence remains excluded.
+
+| SW411 local action | Selected prerequisite |
+| --- | --- |
+| Breaker Open | Rack in |
+| Breaker Close | Rack in and its earth switch Open |
+| Rack out | Breaker Open |
+| Rack in | Breaker Open and its earth switch Open |
+| Earth Open | Allowed |
+| Earth Close | Breaker Open and Rack out |
+
+No additional local condition was supplied in answer37. This is an explicit selected V1 rule set for these pairs, not a generalised rule for every switchgear family. Whole-model acceptance remains separate. The later source classification, baseline and rule selections are not yet applied to immutable `construction-2026-10-23.1`.
+
+Question38 asks separately whether the three retained station feeder breakers and two SW441 HV breakers are removable. Those five cases remain unconfirmed pending that answer.

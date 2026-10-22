@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { interlockSchema, validateInterlocks } from './interlock-model';
 import { claimFields, evidenceRecordSchema, reviewRecordSchema } from './evidence';
 import { presentationSchema, validatePresentation } from './presentation';
+import { deviceStateSchema, isBreakerState } from './mechanisms';
 
 const id = z.string().min(1);
 const pair = z.tuple([id, id]);
@@ -14,6 +15,7 @@ const assetSchema = z.strictObject({
   conductivePairs: z.array(pair),
   sourcePairs: z.array(pair).optional(),
   earthPairs: z.array(pair).optional(),
+  removableBreaker: z.strictObject({ mainPair: pair }).optional(),
   positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
 });
 
@@ -28,7 +30,7 @@ export const modelSchema = z.strictObject({
   boundaries: z.array(z.strictObject({ id, label: id, terminal: id, sourceCoverage: z.enum(['unconfirmed', 'complete']), earthCoverage: z.enum(['unconfirmed', 'complete']), ...claimFields })).optional(),
   interlocks: interlockSchema.optional(),
   presentation: presentationSchema.optional(),
-  starting: z.strictObject({ devices: z.record(id, id.nullable()), sources: z.record(id, z.boolean().nullable()) }),
+  starting: z.strictObject({ devices: z.record(id, deviceStateSchema), sources: z.record(id, z.boolean().nullable()) }),
 }).superRefine((model, context) => {
   const error = (message: string) => context.addIssue({ code: 'custom', message });
   validateInterlocks(model, error);
@@ -64,6 +66,14 @@ export const modelSchema = z.strictObject({
     }
   }
   for (const asset of model.assets) {
+    const state = model.starting.devices[asset.id];
+    if (asset.removableBreaker) {
+      if (asset.kind !== 'breaker' || asset.positions.length) error(`Removable breaker ${asset.id} requires breaker kind and no discrete positions.`);
+      if (!isBreakerState(state)) error(`Removable breaker ${asset.id} requires explicit nullable contact and racking starting states.`);
+      const [a, b] = asset.removableBreaker.mainPair;
+      if (a === b || !asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Removable breaker ${asset.id} requires two distinct owned main terminals.`);
+      if ([...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? [])].some(([x, y]) => x === a && y === b || x === b && y === a)) error(`Removable breaker ${asset.id} main pair cannot also be fixed conducting.`);
+    } else if (isBreakerState(state)) error(`Discrete asset ${asset.id} cannot use independent breaker states.`);
     unique(asset.positions.map(p => p.id), `position in ${asset.id}`);
     for (const [a, b] of [...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? []), ...asset.positions.flatMap(p => [...p.pairs, ...(p.sourcePairs ?? []), ...(p.earthPairs ?? [])])]) {
       if (!asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Relationship in ${asset.id} references an external or missing terminal.`);
@@ -75,7 +85,7 @@ export const modelSchema = z.strictObject({
     if (asset.positions.length && (!Object.hasOwn(model.starting.devices, asset.id) || (model.starting.devices[asset.id] !== null && !asset.positions.some(p => p.id === model.starting.devices[asset.id])))) error(`Missing or unsupported starting position for ${asset.id}.`);
   }
   for (const deviceId of Object.keys(model.starting.devices)) {
-    if (!model.assets.some(a => a.id === deviceId && a.positions.length)) error(`Starting configuration references unknown device ${deviceId}.`);
+    if (!model.assets.some(a => a.id === deviceId && (a.positions.length || a.removableBreaker))) error(`Starting configuration references unknown device ${deviceId}.`);
   }
   for (const source of model.sources) {
     if (!model.assets.find(a => a.id === source.assetId)?.terminals.includes(source.terminal)) error(`Source ${source.id} references an external or missing terminal.`);
