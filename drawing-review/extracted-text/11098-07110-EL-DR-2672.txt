@@ -1,0 +1,315 @@
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+VF HT
+HT531-P-01
+HT
+HT533-P-01
+VF
+TRAIN LOADING MOTOR CONTROL CENTRE
+MC451
+400V, 500A, 50kA FOR 1 Sec
+VF
+7kW
+FEEDER
+REJECTS
+VF533
+3kW
+HOIST
+SERVICE
+HT531
+0.25kW
+HOIST
+SAMPLE
+CHEMICAL
+HT533
+M
+3Ø
+PP501-EM01-P-01
+M
+3Ø
+PP501-EM02-P-01
+M
+3Ø
+PP501-EM03-P-01
+M
+3Ø
+PP501-EM04-P-01
+M
+3Ø
+PP501-FN01-P-01
+M
+3Ø
+PP501-FN02-P-01
+CONTINUED ON 07110-EL-DR-2673
+CONTINUED ON 07110-EL-DR-2658
+VF531-PN01-P-01
+VF532-PN01-P-01
+VF533-PN01-P-01
+7kW
+FEEDER
+CUTTER
+SECONDARY
+VF531
+2kW
+FEEDER
+CUTTER
+TERTIARY
+VF532
+NOTE 2 NOTE 2 NOTE 2
+NOTE 1
+CPHT
+HT501-P-01
+HT
+HT502-P-01
+HT
+HT503-P-01
+HT
+HT504-P-01
+11kW
+COMPRESSOR
+AIR
+CP501
+1.5kW
+(INSIDE)
+LINER HOIST
+BIN 2
+HT504
+1.5kW
+(INSIDE)
+LINER HOIST
+BIN 1
+HT503
+1.5kW
+(OUTSIDE)
+LINER HOIST
+BIN 2
+HT502
+1.5kW
+(OUTSIDE)
+LINER HOIST
+BIN 1
+HT501
+CP501-P-01
+NOTES:
+2.
+1.
+1 PHASE 400V
+EOL USED FOR CURRENT MONITORING ONLY
+DB
+DB451-P-01
+DB
+DB451-P-01
+125A 125A 32A 20A 32A 20A 20A 20A 20A 20A 20A 32A 250A 250A 20A 20A 8A 8A
+TIER 02F-25 TIER 1F-25 TIER 1F-00 TIER 1F-03 TIER 1F-06 TIER 1F-09 TIER 1F-12 TIER 5F-00 TIER 5F-03 TIER 5F-06 TIER 5F-09 TIER 4F-00 TIER 2F-00 TIER 2F-10 TIER 3F-00 TIER 3F-05 TIER 3F-10 TIER 3F-15
+ISOL
+HT531-P-02
+HT532-P-02
+HT501-P-02
+HT502-P-02
+HT503-P-02
+HT504-P-02
+CP501-P-02
+ISOL ISOL ISOL ISOL ISOL ISOL
+2.2kW
+FAN No. 1
+EXCHANGER
+HPUR HEAT
+PP501-FN01
+2.2kW
+FAN No. 2
+EXCHANGER
+HPUR HEAT
+PP501-FN02
+NOTE 2
+NOTE 1
+NOTE 2
+NOTE 1 NOTE 1 NOTE 1 NOTE 1 NOTE 1
+7
+7 7 7 7
+77
+DR-2003
+11098-04500-EL-
+75kW
+PUMP No. 1
+MAIN
+HYDRAULIC
+PP501-PU01
+DR-2004
+11098-04500-EL-
+75kW
+PUMP No. 2
+MAIN
+HYDRAULIC
+PP501-PU02
+5.5kW
+PUMP No. 1
+CIRCULATING
+HYDRAULIC
+PP501-PU03
+5.5kW
+PUMP No. 2
+CIRCULATING
+HYDRAULIC
+PP501-PU04
+B-E05-0102
+11098-CGC011-
+B-E05-0098
+11098-CGC011-
+3. NOTES TO BE REMOVED AFTER CONSTRUCTION. 
+2. CONTACTOR TO BE UPGRADED.
+1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+CONSTRUCTION NOTES:
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+11098-CGC011-B-E05-2658  MC451-TRAIN LOADING-SINGLE LINE DIAGRAM-SHEET 1
+                                                                        
+7DR-EL-0024 
+CB25OP003A-10016-
+50kW
+LIGHTING
+CV112
+DB4514
+DR-EL-0029
+CB25OP003A-10016-
+50kW
+PLATFORM
+DRIVE
+CV112
+DB4513
+7
+CLOUD BREAK INFRASTRUCTURE
+MC451 - TRAIN LOADING
+SINGLE LINE DIAGRAM SHEET 2
+07110-EL-DR-2672 7NTS
+JZ 11/05/07
+RC 11/05/07
+AJ 11/05/07
+RC 11/05/07
+NJ 14/05/07
+GW 16/05/07
+0 11/05/07 ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+1 22/06/07 RE-ISSUED FOR CONSTRUCTION JM BN AJ LB NJ GW
+2 23/08/07 RE-ISSUED FOR CONSTRUCTION WL LB AJ LB NJ NJ
+3 24/10/07 NOTES ADDED, FEEDERS REVISED DGP SH AJ LB NJ NJ
+4 13/11/07 RE-ISSUED FOR CONSTRUCTION JH RP AJ LB NJ NJ
+5 21/02/08 RE-ISSUED FOR CONSTRUCTION JM LB AJ LB NJ NJ
+6 25/09/09 ISSUED FOR AS BUILT LHL BT WL CJT DF AC
+7 13/01/26 ISSUED FOR CONSTRUCTION - CB25OP003A BH LN AC JM KI MG
+11098-CGC011-B-E05-2673  MC451-TRAIN LOADING-SINGLE LINE DIAGRAM-SHEET 3
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                

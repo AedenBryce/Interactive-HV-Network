@@ -1,0 +1,17 @@
+{
+  "id": "T07",
+  "number": 8,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/8",
+  "title": "Undo switching and restore the starting configuration",
+  "blockedBy": [
+    3,
+    5
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    3,
+    5
+  ]
+}

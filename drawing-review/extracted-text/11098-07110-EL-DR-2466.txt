@@ -1,0 +1,280 @@
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+SW423
+CONTINUED ON 07110-EL-DR-2465
+CONTINUED ON 07110-EL-DR-2467
+M
+3Ø
+VF203-EM01-P-01
+M
+3Ø
+VF204-EM01-P-01
+ACS800-01-0070-7
+VS4207
+ACS800-01-0070-7
+VS4208
+M
+3Ø
+VF205-EM01-P-01
+M
+3Ø
+VF206-EM01-P-01
+ACS800-01-0070-7
+VS4209
+ACS800-01-0070-7
+VS4210
+SCREENING VARIABLE SPEED DRIVE SWITCHBOARD
+VS4207-P-01
+VS4208-P-01
+VS4209-P-01
+VS4210-P-0101
+COMMS
+COMMS
+COMMS
+COMMS
+M
+3Ø
+M
+3Ø
+ACS800-01-0070-7
+VS4211
+ACS800-01-0070-7
+VS4212
+VF207-EM01-P-01
+VF208-EM01-P-01
+VS4211-P-01
+VS4212-P-01
+COMMS
+COMMS
+M
+3Ø
+ACS800-01-0070-7
+VS4213
+VF209-EM01-P-01
+VS4213-P-01
+COMMS
+690V, 2500A, 50kA for 1 Sec
+690V, 2500A, 50kA for 1 Sec
+45kW
+VIBRATING FEEDER
+SCALPING SCREEN
+VF203-EM01
+45kW
+VIBRATING FEEDER
+PRODUCT SCREEN
+VF205-EM01
+45kW
+VIBRATING FEEDER
+PRODUCT SCREEN
+VF206-EM01
+45kW
+VIBRATING FEEDER
+PRODUCT SCREEN
+VF207-EM01
+45kW
+VIBRATING FEEDER
+PRODUCT SCREEN
+VF208-EM01
+45kW
+VIBRATING FEEDER
+PRODUCT SCREEN
+VF209-EM01
+ACS800-01-0070-7
+VS4214
+VF210-EM01-P-01
+VS4214-P-01
+COMMS
+M
+3Ø
+45kW
+VIBRATING FEEDER
+PRODUCT FEED
+VF210-EM01
+VS4209-C-01
+VS4211-C-01
+VS4213-C-01
+VS4207-C-01
+VS4210-C-01
+VS4208-C-01
+VS4212-C-01
+VS4214-C-01
+APPLICABLE DOCUMENTS
+SPECIFICATIONS
+STANDARD DRAWINGS
+STANDARD DRAWINGS LIST
+11098-07110-EL-SP-1121 EQUIPMENT INSTALLATION
+TECHNICAL SPECIFICATION FOR ELECTRICAL 
+VS4207-P-03
+VS4208-P-03
+VS4209-P-03
+VS4210-P-03
+VS4211-P-03
+VS4212-P-03
+VS4213-P-03
+VS4214-P-03
+230V AC
+24V DC
+ESR4209
+SAFETY RELAY
+STATUTORY
+ESR4210
+SAFETY RELAY
+STATUTORY
+ESR4211
+SAFETY RELAY
+STATUTORY
+ESR4212
+SAFETY RELAY
+STATUTORY
+ESR4213
+SAFETY RELAY
+STATUTORY
+ESR4214
+SAFETY RELAY
+STATUTORY
+ESR4207
+SAFETY RELAY
+STATUTORY
+ESR4208
+SAFETY RELAY
+STATUTORY
+48V DC
+11098-07110-EL-DR-1000
+09F-08
+TIER
+09F-16
+TIER
+010F-00
+TIER
+010F-08
+TIER
+010F-16
+TIER
+12F-00
+TIER
+12F-08
+TIER
+80A 80A 80A 80A 80A 80A 80A 80A
+PROFIBUS (MP4231)
+PROFIBUS (MP4232)
+PROFIBUS (MP4233)
+TH 07110-EL-DR-4683
+TO MP4233
+VF203-EM01-C-02
+TH 07110-EL-DR-4685
+TO MP4233
+VF204-EM01-C-02
+TH 07110-EL-DR-4687
+TO MP4233
+VF205-EM01-C-02
+TH 07110-EL-DR-4689
+TO MP4233
+VF206-EM01-C-02
+TH 07110-EL-DR-4691
+TO MP4233
+VF207-EM01-C-02
+TH 07110-EL-DR-4693
+TO MP4233
+VF208-EM01-C-02
+TH 07110-EL-DR-4467
+TO MP4231
+VF209-EM01-C-02
+TH 07110-EL-DR-4465
+TO MP4231
+VF210-EM01-C-02
+10F-00
+TIER
+Ph +61 8 6220 2000, www.verbrec.com
+Level 5, 93-95 William Street, Perth, Western Australia 6000
+5
+11098-07110-EL-DR-4683 11098-07110-EL-DR-4685 11098-07110-EL-DR-4687 11098-07110-EL-DR-4689 11098-07110-EL-DR-4691 11098-07110-EL-DR-4693 11098-07110-EL-DR-4467 11098-07110-EL-DR-4465
+45kW
+VIBRATING FEEDER
+PRODUCT SCREEN
+VF204-EM01
+5
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+07110-EL-DR-2465    SW423 - SCREENING SINGLE LINE DIAGRAM - SHEET 1
+                                                                        
+CLOUD BREAK INFRASTRUCTURE
+SW423 - SCREENING
+SINGLE LINE DIAGRAM - SHEET 2
+07110-EL-DR-2466 5N/A
+W. LEONG 2/11/06
+R. COX 2/11/06
+D. PALMER 2/11/06
+L. BRUNN 2/11/06
+J. BILESSURIS 2/11/06
+G. WIESER 2/11/06
+0 02/11/06 ISSUED FOR CONSTRUCTION WL RC DGP LB JB GW
+1 17/11/06 RE-ISSUED FOR CONSTRUCTION WL RC AS LB JB GW
+2 11/05/07 RE-ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+3 21/02/08 RE-ISSUED FOR CONSTRUCTION CV LB AJ LB NJ NJ
+4 19/08/09 ISSUED AS BUILT KW BT SQ CJT DF AC
+5 18/11/25 ISSUED FOR CONSTRUCTION - CB25OP003A JC LN AC JM KI MG
+                                                                                   
+                                                                                   
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        

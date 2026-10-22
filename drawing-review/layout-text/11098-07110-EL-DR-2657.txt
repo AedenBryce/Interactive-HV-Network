@@ -1,0 +1,166 @@
+                   11                                         22                                         33                                         44                                        55                                         66                                         77                                         88                                         99                                        1010                                        1111                                      1212
+
+                                                                                                                                                                                                                          FROM HV SWITCHBOARD
+                                                                                                                                                                                                                                       SW441
+                                                                                                                                                                                                                               07110-EL-DR-2355
+
+
+
+AA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            AA
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                              TRANSFORMER - TF441
+                                                                                                                                                                                                                              22kV/400V
+                                                                                                                                                                                                                              2.0 MVA
+
+
+
+BB                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            BB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                         NEUTRAL BAR                         EARTH BAR           REF DRG:
+          WATER TOWER MOTOR CONTROL CENTRE                                                                                                                                                                                                                                                                                                                                                                     MEN LINK                          07110-EL-DR-1172
+
+
+CC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            CC
+             MC441
+                                                                                                                                                                                                                           3000:1
+
+
+
+                                                                                                                                                                                                                           CB MC441 IN
+                                                                                                                                                                                                                           3000A
+
+
+                                                             400V, 3000A, 50kA FOR 1 Sec
+
+
+                                                                TIER                      TIER                      TIER                     TIER                      TIER                      TIER                      TIER                     TIER                              TIER                                           TIER                                           TIER                                            TIER
+                                                                02F-00                    02F-04                    02F-08                   02F-12                    01F-00                    01F-03                    01F-06                   01F-09                            01F-15                                         1F-15                                          2F-15                                           02F-16
+
+
+
+
+DD                                                             100A                      100A                     50A                       125A                      100A                      100A                     100A                      100A                              630A                                           630A                                          630A                                             125A                                                                                       DD
+
+
+
+
+                        48VDC UPS
+                           DB441B
+
+                       7110-DR-EL-3425                      UP                       UP                        UP
+
+
+                                                        UP441A                    UP441B                    UP441C
+                                                        24V DC                    48V DC                    24V DC
+                                                         7.5kW                     7.5kW                     10kW
+
+                                                        11098-CGC011-B-E05-0050                  11098-CGC011-B-E05-0047
+
+EE                       PROFIBUS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             EE
+                      MARSH. PANEL                                 PROFIBUS                   13
+
+                           MP4411
+                       07110-EL-DR-4553
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            FF
+
+
+
+
+                                                                                                                                                                                                                                                                                       VS4411                                        VS4412                                         VS4413                                                                        13
+                                                                                                                                                                                                                                                                               ACS800-07-0440-3                              ACS800-07-0440-3                               ACS800-07-0440-3
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             APPLICABLE DOCUMENTS
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                DB                                     SPECIFICATIONS
+
+GG                                                                                                                                                                                                                                                                                                                                                                                                                                                                           TECHNICAL SPECIFICATION FOR ELECTRICAL           GG
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 11098-07000-EL-SP-1121      EQUIPMENT INSTALLATION
+                                                                                                                                         DB                       AC                        AC                        WT                        PU                                                                                                                                                                         DB4413
+                                                                                                                                                                                                                                                                                                                                                                                                                    PROCESS WATER
+                                                                                                                                      DB441                     AC4411                   AC4412                     WT101                    PU103                                         M                                             M                                              M                          LIGHTING & SMALL
+                                                                                                                                                                                                                                                                                                                                                                                                                       POWER 50kW                                    STANDARD DRAWINGS
+                                                                                                                                 HV SWRM DB                   HV SWRM                  HV SWRM                        RO                   POTABLE                                        3Ø                                             3Ø                                            3Ø                            11098-CGC011-B-
+                                                                                                                                       50kW                    AC No.1                   AC No.2              DESALINATION                   WATER               TO      RTD                                        TO      RTD                                    TO      RTD                                            E05-0051               07110-EL-DR-1000            STANDARD DRAWINGS LIST
+                                                                                                                               11098-CGC011-B-                   18kW                      18kW                    PLANT                     PUMPS           MP44111               PU101A-EM01                   MP44111          PU101B-EM01                  MP44111           PU101C-EM01
+                                                                                                                                    E05-0051                                                                        17kW                      25kW                              PROCESS WATER                                  PROCESS WATER                                 PROCESS WATER                            VENDOR/DESIGNER DRG No.                                                                        REV:
+                                                                                                                                                                                                                                                                                   PUMP 280kW                                     PUMP 280kW                                    PUMP 280kW
+
+
+    This drawing and all the information This drawing and all the information                                                  7   20/12/07    RE-ISSUED FOR CONSTRUCTION                                    JT    IK   AJ    LB   NJ    NJ   CLIENTCLIENT                                                                                                                                 DRAWNDRAWN      W. LEONG                 27/10/06
+
+          on it is the property ofon it is the property of                                                                     6   13/12/07    RE-ISSUED FOR CONSTRUCTION                                    JT    LB   AJ    LB   NJ    NJ                                                                                                                                                                                                      PILBARA IRON ORE & INFRASTRUCTURE PROJECTPILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTDTHE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                   ENGINEERENGINEERR. COX                   02/11/06
+        It is confidential and is givenIt is confidential and is given                                                        13   09/01/26    ISSUED FOR CONSTRUCTION - CB25OP003A                          JC    SR   AC    JM   KI   MG
+                                                                                                                                                                                                                                                                                                                                                                                           CHECKEDCHECKED  D. PALMER                02/11/06     CLOUD BREAK INFRASTRUCTURE
+HH  to you for a limited purpose and mustto you for a limited purpose and must                                                12   07/09/12    ISSUED FOR AS BUILT                                            -    -     -    -     -    -                                                                                                                                                                                                                                                                                    HH
+     be returned on request. Neither thisbe returned on request. Neither this                                                                                                                                                                                                                                                                                                              LEAD ENGLEAD ENGL. BRUNN                 02/11/06     MC441 - WATER TOWER
+        drawing nor any informationdrawing nor any information                                                                11   29/02/12    ISSUED FOR CONSTRUCTION                                       JMC   PA   MR   PA    CD   PH
+
+    concerning it may be copied, exhibitedconcerning it may be copied, exhibited                                              10   11/09/09    ISSUED FOR AS BUILT                                           YBC   BT   WL   CJT   DF   AC                                                                                                                                                 ENG MGRENG MGR  J. BILESSURIS            02/11/06
+       or furnished to others. Nor mayor furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                            SINGLE LINE DIAGRAM
+    photographs be taken of any article photographs be taken of any article                                                   9    12/03/08    RE-ISSUED FOR CONSTRUCTION                                    PE    IK   AJ    RC   NJ    NJ                                                                                 Team 45 is the integrated project management team of Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                Level 2, Hyatt CentreLevel 2, Hyatt Centre  Tel: +61 8 9266 0111Tel: +61 8 9266 0111Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGRPROJ MGRG. WIESER03/11/06
+      fabricated or assembled from thisfabricated or assembled from this                                                      8    21/02/08    RE-ISSUED FOR CONSTRUCTION                                    JM    LB   AJ    LB   NJ    NJ                                                                                                                                                                                                      PROJECT No:PROJECT No:  DRG No:DRG No:                               REV:REV:
+       drawing without the consent ofdrawing without the consent of                                                                                                                                                                             87 Adelaide Terrace87 Adelaide Terrace      Fax: +61 8 9221 9483Fax: +61 8 9221 9483Team 45 and WorleyParsons act on behalf of and as disclosed agentTeam 45 and WorleyParsons act on behalf of and as disclosed agentSCALESCALE
+    THE PILBARA INFRASTRUCTURE PTY LTDTHE PILBARA INFRASTRUCTURE PTY LTDREF No.REF No. REFERENCESREFERENCES                  REVREV  DATEDATE                          DESCRIPTIONDESCRIPTION                DRNDRNENGENGCHKCHKLELEEMEM PMPM    East Perth  WA  6004  AustraliaEast Perth  WA  6004  AustraliaABN 52 103 096 340ABN 52 103 096 340of The Pilbara Infrastructure.of The Pilbara Infrastructure.NTS                     A1A1        300/11098300/11098           07110-EL-DR-2657                       13
+
+
+                   11                                         22                                         33                                         44                                        55                                         66                                         77                                         88                                         99                                        1010                                        1111                                      1212

@@ -1,0 +1,19 @@
+{
+  "id": "T11",
+  "number": 12,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/12",
+  "title": "Explore the real main switchroom and its review records",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

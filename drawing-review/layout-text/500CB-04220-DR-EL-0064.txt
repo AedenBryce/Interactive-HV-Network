@@ -1,0 +1,179 @@
+            1                                2                                 3                                4                                5                               6                                7                               8                                9                                10                              11                               12
+
+
+                                                                                                                                                                                                                                                                                                                                          NOTES
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                         1. SHUTTLE ISOLATOR KEY (A) INTERLOCK.                    A
+                                                                                                                                                                                                                                                                                                                                             ELECTRICAL KEY (A) INTERLOCK TRIPS
+                                                                                                                                                                                                                                                                                                                                             SHUTTLE EMERGENCY STOP CIRCUIT
+                                                                                                                                                                                                                                                                                                                                             RELEASING KEY (A). KEY (A) FITS
+                                                                                                                                                                                                                                                           SCRUBBING AND SCREENING SS505SCRUBBING AND SCREENING SS505                        MECHANICAL INTERLOCK ALLOWING
+                                                                                                                                                                                                                                                                                                                                             SHUTTLE ISOLATION.
+                                                                                                                                                                                                                                                                 SCRUBBING 690V VSD SWITCHBOARD SW506SCRUBBING 690V VSD SWITCHBOARD SW506
+
+
+
+                                                          STATUTORY                              STATUTORY                               STATUTORY                                       STATUTORY
+                                                        SAFETY RELAY                           SAFETY RELAY                            SAFETY RELAY                                    SAFETY RELAY
+                                                            ESR50612                               ESR50613                               ESR50615                                         ESR50626
+
+
+
+
+
+B                690V, 2500A, 50kA FOR 1 Sec                                                                                                                                                                                                                                                                                                                                                        B
+
+
+
+
+                  690V, 2500A, 50kA FOR 1 Sec
+
+
+                                                 TIER 12F-14                            TIER 12F-25                             TIER 3F-25                                      TIER 3F-03                                   TIER 3F-14
+
+
+                                                                                                                                                                                                                                     6
+
+
+
+                                                 160A                                   160A                                    160A                                            160A                                         160A
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                   C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               24V DC
+
+
+               PROFIBUS MP5061
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                   D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     VS50612                                VS50613                                VS50615                                          VS50626
+                                               ACS800-01-0145-7                        ACS800-01-0145-7                       ACS800-01-0145-7                                 ACS800-11-0100-7
+
+E                                                                                                                                                                                                                                                                                                                                                                                                   E
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                        A   A
+                                                                                                                                                                                            SH213-ISOL01
+                                                                                                                                                                              MI            NOTE 1
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                   F
+
+
+
+
+
+
+
+
+
+
+
+                                                        M                                      M                                       M
+                                                        3Ø                                     3Ø                                     3Ø                                               M
+                                               TH                                     TH                                      TH
+                                                                                                                                                                                       3Ø
+                                                   CV123-EM01                             CV125-EM01                              CV128-EM01                           TH                                                                                                                                                                                     CAUTION
+
+
+G                                                WET SCREENING                          WET SCREENING                          WET SCREENING                               SH213-EM01                                                                                                                                                                                                               G
+                                                   OVERSIZE                               MIDDLINGS                           FINES OVERSIZE                              CRUSHED ORE                                                                                                                                                          SH213 PROJECT DRAWING
+
+                                                    CONVEYOR                               CONVEYOR                               CONVEYOR                            SUPPLY SHUTTLE                                                                                                                                                            MODIFICATIONS TO THIS DRAWING
+                                                                                                                                                                                                                                                                                                                                                      MAY NOT BE COMPLETED
+                                                      90kW                                   90kW                                    90kW                                      75kW                                                                                                                                                          CONFIRM ON SITE BEFORE PROCEEDING
+
+
+                                              500CB-04220-DR-EL-0130                 500CB-04220-DR-EL-0127                  500CB-04220-DR-EL-0103                   500CB-04220-DR-EL-0119
+
+
+
+                                                                                                                                                                                                                                                                                                                     VENDOR/DESIGNER DRG No.                                                 REV:
+                                                                                                                                                                                                                                                                                                                                   005001-2200-1400-SLD-0028                                  3
+
+
+
+
+                                                                                                                                                                                                                                                           STANDARDS                            PROJECT NUMBER                             Fortescue Metals Group Ltd
+                                                                                           6   30.08.24 ISSUED FOR CONSTRUCTION - CB25OP003A                                SR      GG       GG      LN       HS      HS      MG                             CHECK
+                                                                                                                                                                                                                                                            APPROVED                                 500CB           CLOUDBREAK ENHANCEMENT PROJECT
+                                                                                           5   21.10.14 AS BUILT                                                            MR      MK       PW                       DS      MT
+
+H                                                                                          4   17.06.14 ISSUED FOR CONSTRUCTION - TR213 CHANGED TO SH213                   KW       PEB     PEB      AL       MP      MP      VB                                                                                     WET SCRUBBING / SCREENING                                                      H
+                                                                                           3   11.03.13 AS BUILT                                                            SR      DGM     DGM      ZG       AB      AB      MT                                                                 This drawing must not
+                                                                                                                                                                                                                                                                                                be copied or reproducedSW506
+                                                                                           2   29.02.12 RE-ISSUED FOR CONSTRUCTION                                         JMc      MR       MR      PA       CD      PH      NHJ                                                               in any form or used for
+                                                                                                                                                                                                                                                                                                any purpose other thanSINGLE LINE DIAGRAM - SHEET 5
+                                                                                           1   19.12.11 RE-ISSUED FOR CONSTRUCTION                                         JMc      MR       MR      PA       CD      PH      NHJ
+                                                                                                                                                                                                                                                                                               originally intended without
+  500CB-04220-DR-EL-0063      SW506 SINGLE LINE DIAGRAM - SHEET 4                          0    11.10.11ISSUED FOR CONSTRUCTION                                            JMc      MR       MR      PA       IMD     PH      NHJ                                                                 written approval of      SCALE   DRG No:                                                   REV:
+
+                                                                                                                                                                                                                                                                                               Fortescue MetalsGroup LtdA1  NTS
+  REF DRG No.                                            TITLE                            REV   DATE                         DESCRIPTION                                   DRN      CHK     SUP      DES     DAP     PAP      FMG                                              NORTH                                                    500CB-04220-DR-EL-0064                                6
+
+
+
+            1                                2                                 3                                4                                5                               6                                7                               8                                9                                10                              11                               12

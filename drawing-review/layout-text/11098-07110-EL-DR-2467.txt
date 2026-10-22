@@ -1,0 +1,169 @@
+                  1                                        2                                        3                                        4                                        5                                        6                                        7                                        8                                        9                                       10                                        11                                      12
+
+
+                                                                                                                                                      SCREENING VARIABLE SPEED DRIVE SWITCHBOARD                                                                                                                                                                                                                                  NOTES
+
+                                                                                                                                                                                               SW423
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      A
+                                                                                                                                                                                                                                                                                                                                                                                                                                  1.  STATUTORY SAFTEY RELAY ESR4222
+                                                                                                                                                                                                                                                                                                                                                                                                                                      LOCATED IN VS4222.
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                  2.  POWER ISOLATOR FOR SH101 & SH106 HAS A KEY
+                                                                                                                                                                                                                                                                                                                                                                                                                                      SWITCH INTERLOCK TO PREVENT ISOLATOR
+                                                                                                                                                                                                                                                                                                                                                                                                                                      BEING TURNED OFF WITHOUT FIRST OPERATIING
+                                                  STATUTORY                                  STATUTORY                                  STATUTORY                                  STATUTORY                                  STATUTORY                                            STATUTORY                                                STATUTORY                                                                                 THE KEY SWITCH. KEY SWITCH HAS AN
+                                                SAFETY RELAY                               SAFETY RELAY                               SAFETY RELAY                               SAFETY RELAY                               SAFETY RELAY                                         SAFETY RELAY                                            SAFETY RELAY                                                                                 AUXILIARY CONTACT CONNECTED TO THE
+                                                     ESR4215                                    ESR4216                                    ESR4217                                    ESR4218                                    ESR4219                                             ESR4220                                                  ESR4221                                                                                 SH101 & SH106 STATUTORY SAFTEY RELAY
+                                                                                                                                                                                                                                                                                                                                                                                                                                      CIRCUIT TO TRIP THE VSD CONTACTOR.
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                  3.  JUNCTION BOX TO ALLOW DISCONNECTION
+                                                                                                                                                                                                                                                                                                                                                                                                                                      OF BELT FEEDER MOTOR CABLES FOR
+                                                                                                                                                                                                                                                                                                                                                                                                                                      REMOVAL OF FEEDER FOR MAINTENACE
+                                                                                                                                                                                                                                                                                                                                                                                                                                      ACCESS FOR BF201, BF202 AND BF203.
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                  4.  ADDITIONAL HYDRAULIC BRAKE SH104-BR02
+B             690V, 2500A, 50kA FOR 1 Sec                                                                                                                                                                                                                                                                                                                                                                                             SUPPLIED FROM MC422.                                             B
+                                                                                                                                                                                                                                                                                                                                                                                                                                      REFER DRG 07110-EL-DR-2652.
+
+
+
+
+              690V, 2500A, 50kA FOR 1 Sec
+
+
+
+                                            TIER                                  TIER                                        TIER                                      TIER                                        TIER                                                TIER                                                   TIER                                              TIER                  TIER
+                                            12F-16                                12F-24                                      11F-24                                    10F-24                                      011F-00                                             011F-10                                                09F-24                                            05F                   5F
+
+
+
+                                             80A                                   63A                                        63A                                        63A                                        125A                                                 125A                                                   63A                                              500A                  500A
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      C
+
+
+
+
+
+               230V AC
+
+
+               24V DC
+
+               PROFIBUS (MP4231)
+
+               PROFIBUS (MP4232)
+
+               PROFIBUS (MP4233)
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      D
+
+
+
+
+
+
+
+
+              48V DC
+
+
+
+
+
+
+                                          VS4215                                     VS4216                                     VS4217                                     VS4218                                     VS4219                                              VS4220                                                   VS4221                                            VS4222
+                                  ACS800-01-0070-7                           ACS800-01-0050-7                           ACS800-01-0050-7                           ACS800-01-0050-7                           ACS800-01-0120-7                                     ACS800-01-0120-7                                         ACS800-01-0120-7                                  ACS800-07-1060-7
+E                                                                                                                                                                                                                                                                                                                                                                                ESR4222 (NOTE 1)                                                                                                      E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                  TO MC422
+                                                                                                                                                                                                                                                                                                                                              07110-EL-DR-2652
+
+                                                                                                                                                                                                                             SH101-ISOL01                                         SH106-ISOL01
+                                                                                                                                                                                                                             125A AC 21A                                          125A AC 21A
+F                                                                                           BF201-JB01                                 BF202-JB01                                 BF203-JB01                                 (NOTE 2)                                             (NOTE 2)                         NBRA 666                                                                                                                                                                            F
+                                                                                            (NOTE 3)                                   (NOTE 3)                                   (NOTE 3)                                                                                                                          BRAKING                                                                                                      10
+                                                                                                                                                                                                                                                                                                                   CHOPPER                               TO CV104-MP01
+                                                                                                                                                                                                                                                                                                                                                        04400-EL-DR-1002
+                                                                                                                                                                                                                                              TO                                                   TO
+                                                                                                                                                                                                                                DCP       MARSH. PANEL                               DCP       MARSH. PANEL
+                                                                                                                                                                                                                                             MP42114                                              MP42117
+                                                                                                                                                                                                                                         04100-EL-DR-0012                                    04100-EL-DR-3002
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                               Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                               Ph +61 8 6220 2000, www.verbrec.com
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      G
+                                                                                                                                                                                                                                                                                                                  SAFUR90575
+                                             M                                          M                                          M                                          M                                          M                                                    M                                     BRAKING                 M                                                                                           APPLICABLE DOCUMENTS
+                                             3Ø                                         3Ø                                         3Ø                                         3Ø                                         3Ø                                                  3Ø                                    RESISTOR                3Ø
+                                TH                                                                                                                                                                          TH                                                   TH                                                               TH                                            RTD                                                                  SPECIFICATIONS
+                                       VF211-EM01                                 BF201-EM01                                 BF202-EM01                                 BF203-EM01                                  SH101-EM01                                          SH106-EM01                                                   SH104-EM01
+                                   PRODUCT SCREEN                             SCALPING SCREEN                            SCALPING SCREEN                            SCALPING SCREEN                            SCALPING SCREEN                                      PRODUCT SCREEN                                               LUMP STOCKPILE                                                                               11098-07110-EL-SP-1121    TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                  VIBRATING FEEDER                               BELT FEEDER                                BELT FEEDER                                BELT FEEDER                               SHUTTLE HEAD                                         SHUTTLE HEAD                                                SHUTTLE HEAD                                                                                                          EQUIPMENT INSTALLATION
+
+                                           45kW                                       30kW                                       30kW                                       30kW                                       75kW                                                 75kW                                                         37kW                                                                                                    STANDARD DRAWINGS
+                                                                   10                                        10                                                                                                                                                                                                                         (NOTE 4)
+
+                               11098-07110-EL-DR-4469                                                                11098-07110-EL-DR-4695                     11098-07110-EL-DR-4697                     11098-07110-EL-DR-4671                               11098-07110-EL-DR-4673                                        11098-07110-EL-DR-4971                                                                          11098-07110-EL-DR-1000    STANDARD DRAWINGS LIST
+
+
+    This drawing and all the information                                                                                 7   04/11/08    RE-ISSUED FOR CONSTRUCTION                                 KW   BT   AJ    LB   DF   DF   CLIENT                                                                                                                                 DRAWN           W. LEONG               2/11/06
+
+          on it is the property of                                                                                       6   02/04/08    RE-ISSUED FOR CONSTRUCTION                                 AD   RP   AJ    RC   NJ   NJ                                                                                                                                                                                             PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                     ENGINEER        R. COX                 2/11/06
+       It is confidential and is given                                                                                   5   21/02/08    RE-ISSUED FOR CONSTRUCTION                                 CV   LB   AJ    LB   NJ   NJ
+                                                                                                                                                                                                                                                                                                                                                                          CHECKED         D. PALMER              2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                4   19/01/08    RE-ISSUED FOR CONSTRUCTION                                 JM   RP   AJ    LB   NJ   NJ                                                                                                                                                                                                                                                                       H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                 LEAD ENG        L. BRUNN               2/11/06     SW423 - SCREENING
+        drawing nor any information                                                                                      3   27/06/07    SH104 & SH113 MOVED TO SW427                               JT  DBG   AJ    LB   NJ   GW
+
+    concerning it may be copied, exhibited07110-EL-DR-2474    SW243 - SCREENING SINGLE LINE DIAGRAM - SHEET 4           10   18/11/25    ISSUED FOR CONSTRUCTION - CB25OP003A                       JC   LN   AC    JM   KI   MG                                                                                                                                          ENG MGR         J. BILESSURIS          3/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                        SINGLE LINE DIAGRAM - SHEET 3
+    photographs be taken of any article 07110-EL-DR-2466      SW243 - SCREENING SINGLE LINE DIAGRAM - SHEET 2            9   20/08/09    ISSUED FOR AS-BUILT                                        KW   BT   SQ    BT   DF   DF                                                                             Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                     Level 2, Hyatt Centre                                             Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR      G. WIESER              3/11/06
+      fabricated or assembled from this07110-EL-DR-2465       SW243 - SCREENING SINGLE LINE DIAGRAM - SHEET 1            8   27/01/09    SH104 BRAKE, CHOPPER & RESISTOR ADDED. RE-IFC.             KW   BT   RJP   EA   DF   GM                                               Tel: +61 8 9266 0111                                                                                                                          PROJECT No:            DRG No:                                    REV:
+       drawing without the consent of                                                                                                                                                                                                87 Adelaide Terrace                       Fax: +61 8 9221 9483     Team 45 and WorleyParsons act on behalf of and as disclosed agent SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD      REF No.                                 REFERENCES                          REV     DATE                            DESCRIPTION                         DRN   ENG  CHK   LE   EM   PM     East Perth  WA  6004  Australia           ABN 52 103 096 340                         of The Pilbara Infrastructure.                                  N/A                      A1          300/11098                  07110-EL-DR-2467                     10
+
+
+                  1                                        2                                        3                                        4                                        5                                        6                                        7                                        8                                        9                                       10                                        11                                      12

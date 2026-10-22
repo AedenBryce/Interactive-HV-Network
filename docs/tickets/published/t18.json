@@ -1,0 +1,19 @@
+{
+  "id": "T18",
+  "number": 19,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/19",
+  "title": "Explore train-loading supplies through their LV buses",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

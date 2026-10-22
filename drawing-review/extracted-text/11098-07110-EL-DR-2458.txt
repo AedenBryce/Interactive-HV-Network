@@ -1,0 +1,224 @@
+SW437
+CONTINUED ON 07110-EL-DR-2457
+BF305-EM01-P-01
+BF306-EM01-P-01
+VS4317-P-01
+VS4320-P-01
+COMMS
+COMMS
+M
+3~
+BF307-EM02-P-01
+VS4319-P-01
+VS4322-P-01
+COMMS
+COMMS
+M
+3~
+BF307-EM01-P-01
+VS4321-P-01
+COMMS
+M
+3~
+BF308-EM01-P-01
+VS4324-P-01
+COMMS
+VS4323-P-01
+COMMS
+M
+3~
+M
+3~
+CRUSHING No.2 VARIABLE SPEED DRIVE SWITCHBOARD
+690V, 2500A, 50kA FOR 1 Sec
+690V, 2500A, 50kA FOR 1 Sec
+BF305-EM02-P-01
+VS4318-P-01
+COMMS
+M
+3~
+BF305-EM01
+BELT FEEDER
+22kW
+VS4318 - SLAVE
+ACS800-07-0040-7
+BF306-EM01
+BELT FEEDER
+22kW
+BF307-EM02
+BELT FEEDER
+22kW
+VS4324 - SLAVE
+ACS800-07-0040-7
+BF307-EM01
+BELT FEEDER
+22kW
+BF308-EM01
+BELT FEEDER
+22kW
+FO COMMS
+BF305-EM02
+BELT FEEDER
+22kW
+VS4317 - MASTER
+ACS800-07-0040-7
+VS4320 - SLAVE
+ACS800-07-0040-7
+VS4319 - MASTER
+ACS800-07-0040-7
+M
+3~
+BF306-EM02-P-01
+BF306-EM02
+BELT FEEDER
+22kW
+VS4323 - MASTER
+ACS800-07-0040-7
+VS4321 - MASTER
+ACS800-07-0040-7
+VS4322 - SLAVE
+ACS800-07-0040-7
+FO COMMS FO COMMS FO COMMS
+M
+3~
+BF308-EM02-P-01
+BF308-EM02
+BELT FEEDER
+22kW
+VS4317-C-01
+VS4318-C-01
+VS4319-C-01
+VS4320-C-01
+VS4322-C-01
+VS4321-C-01
+VS4324-C-01
+VS4323-C-01
+STATUTORY
+SAFETY RELAY
+ESR4317
+STATUTORY
+SAFETY RELAY
+ESR4321
+STATUTORY
+SAFETY RELAY
+ESR4319
+STATUTORY
+SAFETY RELAY
+ESR434323
+VS4317-P-03
+VS4318-P-03
+VS4319-P-03
+VS4320-P-03
+VS4321-P-03
+VS4322-P-03
+VS4323-P-03
+VS4324-P-03
+PROFIBUS
+24V DC
+M
+3~
+DC301-EM01-P-02
+VS4325
+ACS800-07-0320-7
+VS4325-P-01
+COMMS
+DC301-EM01-C-01
+RTD
+DC301-EM01
+DUST COLLECTOR
+160kW
+VS4325-P-04
+SF VS4324 D
+400A
+230VAC 
+AS BUILT
+DATE: 20 /08 /2009
+CLOUD BREAK INFRASTRUCTURE
+SW437 - CRUSHING No.1
+SINGLE LINE DIAGRAM - SHEET 2
+07110-EL-DR-2458 6N/A
+W. LEONG 2/11/06
+R. COX 2/11/06
+D. PALMER 2/11/06
+L. BRUNN 2/11/06
+J. BILESSURIS 3/11/06
+G. WIESER 3/11/06
+0 02/11/06 ISSUED FOR CONSTRUCTION WL RC DGP LB JB GW
+1 17/11/06 RE-ISSUED FOR CONSTRUCTION WL DG DGP LB JB GW
+2 14/05/07 RE-ISSUED FOR CONSTRUCTION JZ NB AJ NB NJ GW
+3 27/06/07 RE-ISSUED FOR CONSTRUCTION JT RP AJ LB NJ GW
+4 25/01/08 RE-ISSUED FOR CONSTRUCTION JH RP AJ LB NJ NJ
+5 07/02/08 RE-ISSUED FOR CONSTRUCTION JH RP AJ LB NJ NJ
+6 20/08/09 ISSUED FOR AS-BUILT KW BT SQ BT DF DF
+                                                                                   
+  
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+TIER 6F-12 TIER 6F-18 TIER 6F-24 TIER 7F-00 TIER 7F-06 TIER 7F-12 TIER 7F-18 TIER 7F-24 TIER 05F
+SW437-T05F-P-0148V DC
+ESR4325-C-01
+50A50A50A50A50A50A50A50A
+PROFIBUS
+FROM
+MP435211
+DC301-EM01-P-01
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+28/08/2009 2:49:50 PM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2458\Rev_6\11098-07110-EL-DR-2458.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

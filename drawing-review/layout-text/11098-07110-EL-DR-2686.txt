@@ -1,0 +1,208 @@
+                   1                                          2                                          3                                          4                                          5                                          6                                           7                                          8                                          9                                         10                                          11                                        12
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               B
+
+
+
+                                        CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+
+                                       MC434B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                         400V, 1000A, 50kA for 1 Sec                                                                                                                                                                                                                                                                                                                                                                                                                                                           C
+
+
+                                                             TIER                   TIER                  TIER                  TIER                 TIER                  TIER                                                     TIER                                        TIER
+                                                             5F-12                  6F-18                 6F-21                 6F-24                6F-27                 5F-20                                                    5F-25                                       5F-15
+
+
+
+
+                                                             50A                   63A                   63A                   63A                   63A                   2.6A                                                    2.6A                                        2.6A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               D
+
+                                                                                                                                                                               NOTE 1                                                  NOTE 1                                      NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                F
+                                                                  ISOL                  ISOL                  ISOL                  ISOL                  ISOL
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       CONSTRUCTION NOTES:
+                                                          AC                    AC                    AC                    AC                    AC                                                                                                                                                                                                                                                                                                   1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       2. CONTACTOR TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+                                                       AC4342                AC4421               AC4422                AC4423                AC4424              SH102-EM01                                              SH105-EM01                                CV105-EM01
+                                                      AIR CON               LV VSD                LV VSD                LV VSD                LV VSD                 BRAKE                                                   BRAKE                                     BRAKE
+                                                    MCC SWRM                  SWRM                  SWRM                  SWRM                 SWRM
+
+G                                                                           AC No.1               AC No.2               AC No.3               AC No.4                                                                                                                                                                                                                                                                                                                                                                           G
+
+
+                                                        18kW                  22kW                  22kW                  22kW                  22kW                 0.75kW                                                  0.75kW                                    0.75kW
+                                                                                                                                                            CGC011-B-E05-0357                                        CGC011-B-E05-0357                         CGC011-B-E05-0357
+
+                                                                                                                                                                        2                                                        2                                         2                                                                                                                                                                                                         2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Ph +61 8 6220 2000, www.verbrec.com
+
+    This drawing and all the information                                                                                                                                                                                                       CLIENT                                                                                                                                        DRAWN           J.MOGGRIDGE             21/02/08
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                 PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                       ENGINEER        L.BRUNN                 21/02/08
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                                      CHECKED         A.JAMES                 21/02/08      CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                    LEAD ENG        L.BRUNN                 21/02/08      MC434B - CRUSHING AUXILIARIES
+        drawing nor any information
+    concerning it may be copied, exhibited                                                                                     2    05/05/25    ISSUED FOR CONSTRUCTION - CP250P003A                          SR    LN   AC    JM   JM    MG                                                                                                                                                 ENG MGR         N.JAMESON               21/02/08
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                             SINGLE LINE DIAGRAM SHEET 4
+    photographs be taken of any article                                                                                        1    11/09/09    ISSUED FOR AS BUILT                                          YBC    BT   WL   CJT   DF    AC                                                                                 Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                 Level 2, Hyatt Centre                       Tel: +61 8 9266 0111     Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.  PROJ MGR        N.JAMESON               21/02/08
+      fabricated or assembled from this 07110-EL-DR-2669     MC434B - CRUSHING AUXILARIES SLD SHT - 3                          0    21/02/08    ISSUED FOR CONSTRUCTION                                       JM    LB   AJ    LB   NJ    NJ                                                                                                                                                                                                       PROJECT No:             DRG No:                                      REV:
+       drawing without the consent of                                                                                                                                                                                                            87 Adelaide Terrace                         Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent     SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD        REF No.                                  REFERENCES                             REV     DATE                             DESCRIPTION                           DRN   ENG  CHK    LE   EM   PM      East Perth  WA  6004  Australia             ABN 52 103 096 340                           of The Pilbara Infrastructure.                                     NTS                        A1          300/11098                    07110-EL-DR-2686                        2
+
+
+                   1                                          2                                          3                                          4                                          5                                          6                                           7                                          8                                          9                                         10                                          11                                        12

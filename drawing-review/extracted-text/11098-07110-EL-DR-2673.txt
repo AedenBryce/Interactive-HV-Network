@@ -1,0 +1,466 @@
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+VS4511-P-01
+VS4512-P-01
+VS4513-P-01
+VS4514-P-01
+VS4515-P-01
+TRAIN LOADING MOTOR CONTROL CENTRE
+MC451
+VS4514 VS4515
+VS4511-P-03
+VS4511-C-01
+VS4512-C-01
+VS4512-P-03
+VS4513-C-01
+VS4513-P-03
+VS4514-C-01
+VS4514-P-03
+VS4515-C-01
+VS4515-P-03
+M
+3Ø
+M
+3Ø
+M
+3Ø
+5.5kW
+CV533
+CONVEYOR
+SAMPLE
+CS533
+5.5kW
+CV532
+CONVEYOR
+SAMPLE
+CS532
+CONTINUED ON 07110-EL-DR-2672
+NOTES
+ESR4511
+SAFETY RELAY
+STATUTORY
+ESR4512
+SAFETY RELAY
+STATUTORY
+ESR4513
+SAFETY RELAY
+STATUTORY
+ESR4514
+SAFETY RELAY
+STATUTORY
+ESR4515
+SAFETY RELAY
+STATUTORY
+07110-EL-DR-3440
+COMMS
+COMMS
+COMMS
+COMMS
+COMMS
+M
+3Ø
+M
+3Ø
+M
+3Ø
+M
+3Ø
+VS4516-P-01
+VS4516-C-01
+VS4516-P-03
+ESR4516
+SAFETY RELAY
+STATUTORY
+COMMS
+M
+3Ø
+VS4516
+07110-EL-DR-4757
+REFER DRG
+M
+3Ø
+M
+3Ø
+7.5kW
+ 
+FAN
+DUST COLLECTOR
+DC501-EM01
+7.5kW
+ 
+FAN
+DUST COLLECTOR
+DC502-EM01
+M
+1Ø
+NOTE 1
+CS532-EM01-P-01
+CS533-EM01-P-01
+CR531-EM01-P-01
+FN531-EM01-P-01
+DC501-EM01-P-01
+DC502-EM01-P-01
+ACS800-01-0009-3
+VS4511
+ACS800-01-0004-3
+VS4512
+ACS800-01-0003-3
+VS4513
+NOTE 4
+2.2kW
+CUTTER
+SECONDARY
+SC532-EM01
+NOTE 4
+0.75kW
+CUTTER
+TERTIARY
+SC533-EM01
+SC531-EM01-P-01
+SC532-EM01-P-01
+SC533-EM01-P-01
+CS531-EM01-P-01
+SD501-EM01-P-01
+SC531-P-02
+NOTE 2
+SC532-P-02
+NOTE 3 NOTE 3
+SC533-P-02
+REVERSING DRIVE.
+DE-ENERGISE ON DRIVE RUN COMMAND.
+BRAKE COIL 400V AC 1 PHASE (LESS THAN 1A). 
+DE-ENERGISE ON DRIVE RUN COMMAND.
+BRAKE COIL 230V AC 1 PHASE (LESS THAN 1A).
+THIS IS A 230V AC STARTER.
+4.
+3.
+2.
+1.
+PANEL MP451
+PROFIBUS MARSHALLING
+20A 32A 1.4A20A 20A 20A
+TIER 4F-05 TIER 4F-10 TIER 4F-15 TIER 4F-20 TIER 2F-20
+2F-25
+TIER
+MC451B
+20A 8A 8A 20A 8A 20A
+J BOX
+CS532-EM01-P-02
+CS532-EM01-P-03
+J BOX
+CS533-EM01-P-02
+CS533-EM01-P-03
+TIER 6F-00 TIER 6F-05 TIER 6F-10 TIER 6F-15 TIER 6F-20 TIER 6F-25
+DB451A
+24VDC UPS
+J BOX
+CS531-EM01-P-03
+CS531-EM01-P-02
+CS531-EM01-P-02
+J BOX
+HT
+HT532-P-03
+HT532-P-02
+HT532-P-01
+NOTE 1 NOTE 1 NOTE 1 NOTE 1 NOTE 1NOTE 1
+6
+6 6 6 6 6
+11098-CGC011-B-E05-0102
+B-E05-0096
+11098-CGC011-
+0.24kW
+0.064kW
+COOLING FAN
+CUTTER
+PRIMARY
+FN531
+11098-CGC011-B-E05-0102 11098-CGC011-B-E05-0101
+11098-CGC011-B-E05-0101
+5.5kW
+CONVEYOR
+SAMPLE
+CS531-EM01
+11098-CGC011-B-E05-0101
+NOTE 4
+2.2kW
+ELEVATOR
+SAMPLE
+HT532-EM01
+6
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+11098-CGC011-B-E05-2672  MC451-TRAIN LOADING-SINGLE LINE DIAGRAM-SHEET 2
+                                                                        
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+11098-CGC011-B-E05-2658  MC451-TRAIN LOADING-SINGLE LINE DIAGRAM-SHEET 1
+                                                                        
+B-E05-0103
+11098-CGC011-
+11kW
+CRUSHER
+SAMPLE
+CR531
+B-E05-0390
+11098-CGC011-
+NOTE 4
+5.5kW
+CUTTER
+PRIMARY
+SC531-EM01
+B-E05-0100
+11098-CGC011-
+NOTE 4
+5.5kW
+SPLITTER
+PROPORTIONAL
+SD501-EM01
+CLOUD BREAK INFRASTRUCTURE
+MC451 - TRAIN LOADING
+SINGLE LINE DIAGRAM SHEET 3
+07110-EL-DR-2673 6NTS
+JZ 11/05/07
+RC 11/05/07
+AJ 11/05/07
+RC 11/05/07
+NJ 14/05/07
+GW 16/05/07
+0 14/05/07 ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+1 22/06/07 RE-ISSUED FOR CONSTRUCTION JM BN AJ LB NJ GW
+2 23/08/07 RE-ISSUED FOR CONSTRUCTION WL LB AJ LB NJ NJ
+3 24/10/07 DRIVE INFORMATION REVISED DGP SH AJ LB NJ NJ
+4 21/02/08 RE-ISSUED FOR CONSTRUCTION JM LB AJ LB NJ NJ
+5 25/09/09 ISSUED FOR AS BUILT LHL BT WL CJT DF AC
+6 13/01/26 ISSUED FOR CONSTRUCTION - CB25OP003A BH LN AC JM KI MG
+                                                                                   
+                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                
+                                                                        

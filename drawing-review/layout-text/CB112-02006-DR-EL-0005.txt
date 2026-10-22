@@ -1,0 +1,195 @@
+               1                                      2                                         3                                       4                                      5                                       6                                       7                                      8                                       9                                      10                                      11                                      12
+
+
+
+                                                          FROM HV SWITCHBOARD SW435
+                                                                DRG. 07110-EL-DR-2354
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                       SW002                                                                          A
+                                                                                                                                                A01                                                        A02                                                                     A01                                                                    A04                                           6.6kV RING MAIN UNIT
+                                                                                                                                             INCOMER                                                 TF003 FEEDER                                                           TE004 FEEDER                                                           TF002 FEEDER                                         ABB UNIGEAR
+                                                                                                                                                                                                                                                                                                                                                                                                        PE ZS1/ZVC
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                2
+                                                                    1 x 3C 70mm
+                                                                    XLPE 22kV                                                                                                                                   F1                                                                    K202                                                                    F1
+                                                                                                                                                                                                                225A       6.6kV/240VAC                                                                                                                       225A       6.6kV/240VAC
+
+
+
+
+                                                                                                                                                                                                                   VT FUSE                                                                                                                                       VT FUSE
+
+                                                                                                                                                                                                                K101                                                           F101                                                                           K101
+                                                  JB001                                                                                                                                                                                                                        40A
+                                        ABB 22kV HDC-A
+                                       CABLE CONNECTION
+B                                                CABINET                                                                                                                                                 T1               SEL 751            TO PLANT                                                                                                   T1              SEL 751            TO PLANT                                                                                    B
+                                                                                                                                                                                                     150/5A                                  PLC                                                                                                   150/5A                                  PLC
+                                                                                                                                                                                                                           NOTE 1                                                                                                                                        NOTE 1
+                                                                                                                                                          IND.                                                                                                                              IND.
+                                                                                                                                              Q8         LIGHT                                                       IND.                                                       Q8         LIGHT                                                                   IND.
+
+                                                                                                                                                                                                                    LIGHT                                                                                                                                         LIGHT
+                                                                                    2
+                                                                        1 x 3C 70mm                                                                                                                      Q8                                                                                                                                            Q8
+      INTERTRIP TO HV S/B SW435                                         XLPE 22kV
+        VIA HPGR COMMS CUBICLE
+
+
+
+                                                                                                                                                    NOTE 2                                                     NOTE 2                                                                 NOTE 2                                                                 NOTE 2
+                                    JB002
+
+
+                                                               o
+                                                  t°  WINDING t
+
+
+
+                                                           o                TF001
+                                                  t°  OIL t
+                              SEL 751                 LEVEL                 22/6.6kV
+                                                                            4500kVA
+                                                      PRESSURE              7.25%                                                                                                                               1 x 3C 70mm2                                                            1 x 3C 35mm2                                                           1 x 3C 70mm sq.
+
+
+C                        TF001 TRANSFORMER                                                                                                                                                                      XLPE 11kV                                                               XLPE 11kV                                                              XLPE 11kV                                                                                                               C
+                        CONTROL JUNCTION BOX
+                    REFER CB112-02006-DR-EL-0008
+                                                                                                     SW002-P-02
+
+                                                                                                     SW002-P-02
+
+
+
+                                                                                                                  2
+                                                                                                      2 x 3C 70mm
+                                                                                                      XLPE 6.6kV
+                                                                                                                                                                                                                       TF003                                                               TF004                                                                     TF002
+
+                                                                                                                                                                                                                       6.6kV/2305V/2305V                                   MEN             6.6kV/440V                                                                6.6kV/2305V/2305V
+                                                                                                                                                                                                                       1440kVA                                                             500kVA 3.8/4%                                                             1440kVA
+                                                                                                                                                                                                                       720kVA PER WINDING                                  LINK                                                                                      720kVA PER WINDING
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                        16 x 1C 95mm sq.
+
+D                                                                                                                                                                                                                                                                                       MC001-P-01-R1, R2, R3 & R4                                                                                                                                                                     D
+                                                                                                                                                                                                                                                                                        MC001-P-01-W1, W2, W3 & W4                 1 x 3C 95mm sq.                   1 x 3C 95mm sq.
+                                                                                                                                                                                     1 x 3C 95mm sq.                  1 x 3C 95mm sq.                                                   MC001-P-01-B1, B2, B3 & B4                 SC XLPE                           SC XLPE
+                                                                                                                                                                                     SC XLPE                          SC XLPE                                                           MC001-P-01-N1, N2, N3 & N4
+                                                                                                                                                                                     SWA 11kV                         SWA 11kV                                                                                                     SWA 11kV                          SWA 11kV
+
+
+
+
+
+                                                                                                                                                                                                                                                                    MC001
+                                                                                                                                                                                                                                                                    415V MCC            MCCB
+                                                                                                                                                                                   VS-CR005MEB                                                                                          TERASAKI XS1250SE                         VS-CR005MEA
+                                                                                                                                                                                   ABB VSD                                                                                              WITH O/C & E/F                            ABB VSD
+                                                                                                                                                                                   ACS-1000                                                                                                                                       ACS-1000
+
+
+                                                                                                                                                                                                                                                                                      415VAC 3PH. 50Hz
+                                                                                                                                                                                                                                                                                      1200A 50kA/1 sec.
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      E
+                                                                                                                                                                                   VSD INTERNAL                                                                     REF. DRG. CB112-02006-DR-EL-0001 & 0002                       VSD INTERNAL
+                                                                                                                                                                                   FORTRESS KEY                                                                                                                                   FORTRESS KEY
+
+
+                                                                                                                                                                                           DC BUS                                                                                                                                        DC BUS
+                                                                                                                                                                                         EARTHING                                                                                                                                        EARTHING
+                                                                                                                                                                                           SWITCH                                                                                                                                        SWITCH
+
+
+
+
+
+
+                                                                                                                                                                                   SWITCHED                                                                                    1 x 3C 95mm sq.                                    SWITCHED
+                                                                                                                                                                                   OUTLET                                                                                      XLPE SC 22kV                                       OUTLET
+                                                                                                                                                                                   ISOLATOR                                                                                    HDPE                                               ISOLATOR
+                                                                                                                                                                                                                   M                                                                                                              WITH EARTH                     M
+                                                                                                                                                                                   WITH EARTH
+                                                                                                                                                                                   SWITCH                                                                                                                                         SWITCH
+                                                                                                                                                                                                                                                                                                                                                                                                      LEGEND:
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      F
+
+                                                                                                                                                                                                                                                                                                                                                                                                       SEL 751    FEEDER PROTECTION RELAY
+
+
+
+                                                                                                                                                                                        1 x 3C 95mm sq.                                                                                                                               1 x 3C 95mm sq.
+                                                                                                                                                                                        XLPE SC 22kV                                                                                                                                  XLPE SC 22kV
+                                                                                                                                                                                        HDPE                                                                                                                                          HDPE
+                                                                                                                                                                                                                                                                                                                                                                                                      NOTE:
+
+                                                                                                                                                                                                                                                                                                                                                                                                      1.THE SEL 751 PROTECTION RELAY ONLY HAS AN INPUT
+                                                                                                                                                                                                                                                                                                                                                                                                         TO THE PLC WHICH WILL SHUTDOWN TH VSD IN A
+                                                                                                                                                                                                                                                                                                                                                                                                         CONTROLLED SEQUENCE.
+                                                                                                                                                                                                           M                                                                                                                                             M
+                                                                                                                                                                                                          3Ø                                                                                                                                             3Ø
+                                                                                                                                                                                                                                                                                                                                                                                                      2.THE INCOMING SUPPLY CABLES HAVE A CABLE JOINT
+                                                                                                                                                                                                        CR005-MEB                                                                                                                                  CR005-MEA                                             UNDER THE RMU PLATFORM.
+
+G                                                                                                                                                                                                           4000V                                                                                                                                      4000V                                             THE MULTICORE CABLE ARE SPLIT AND CONNECTED                                   G
+                                                                                                                                                                                                            1150kW                                                                                                                                     1150kW                                            TO SINGLE CORE CABLES WHICH GO TO THE ABOVE
+                                                                                                                                                                                                                                                                                                                                                                                                         SWITCHGEAR.
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                       VENDOR/DESIGNER DRG No.                                                                REV:
+                                                                                                                                                                                                                                                                                                                                                                                                                       10255-DE-005
+
+                                                                                                              7    28.01.25   AS FOUND 23.10.23                                                                 AP         CH        MP                                                                                                                       PROJECT NUMBER                                      Fortescue Metals Group Ltd
+                                                                                                              6     10.12.13  AS BUILT                                                                          JAJ       CRD        JAJ       CRD       CRD       CRD
+                                                                                                              5     25.11.13  ISSUED FOR CONSTRUCTION - RMU REPLACEMENT PROJECT                                 JAJ       CRD        JAJ       CRD       CRD       CRD                                                                                              CB112              CLOUDBREAK ORE HANDLING
+
+
+H                                                                                                             4    06.03.12   ISSUED FOR CONSTRUCTION - CB12109                                                 AH         JZ        AH        KR         KR        SD        A0                                                                                                       HPGR CRUSHING                                                                                   H
+                                                                                                              3     08.07.11  AS BUILT                                                                          DJG       RIG        RIG        CD        CD                                                                                                  This drawing must not    SUBSTATION HV POWER SUPPLY
+                                                                                                                                                                                                                                                                                                                                                              be copied or reproduced
+                                                                                                              2     28.01.11  RE-ISSUED FOR CONSTRUCTION                                                        RIG       JAJ        RIG        CD        CD                                                                                                 in any form or used for
+                                                                                                                                                                                                                                                                                                                                                              any purpose other than   SINGLE LINE DIAGRAM
+                                                                                                               1    13.01.11  RE-ISSUED FOR CONSTRUCTION                                                        RIG       JAJ        RIG        CD        CD                                                                                                 originally intended without
+   CB112-02006-DR-EL-0001/2         HPGR 415V MCC SINGLE LINE DIAGRAM - SHEETS 1 & 2                          0     22.11.10  ISSUED FOR CONSTRUCTION                                                           RIG       JAJ                   CD        CD                                                   EPCM ENGINEERS                                   written approval of            SCALE    DRG No:                                                               REV:
+                                                                                                                                                                                                                                                                                                                 ABN 56 354 933 971
+                                                                                                                                                                                                                                                                                                                                                            Fortescue MetalsGroup Ltd
+                                                                                                                                                                                                                                                                                                             Perth     (08) 6313 3200                                                  A1       NTS
+   REF DRG No.                                                       TITLE                                   REV     DATE                               DESCRIPTION                                             DRN       CHK       SUP        DES       DAP       PAP       FMG                             Rockingham(08) 9550 1900   NORTH                                                                  CB112-02006-DR-EL-0005                                          7
+
+
+               1                                      2                                         3                                       4                                      5                                       6                                       7                                      8                                       9                                      10                                      11                                      12

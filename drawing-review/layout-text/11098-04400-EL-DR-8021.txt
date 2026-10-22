@@ -1,0 +1,170 @@
+                   1                                        2                                         3                                         4                                         5                                         6                                         7                                         8                                          9                                        10                                        11                                        12
+
+
+
+                 FROM HV SWITCHBOARD                                                                                                                                              TF456-C-01                                                                                                                                                                                                       FROM HV SWITCHBOARD
+                             SW454                                                                                           FROM HV SWITCHBOARD                                                                                                                                                                                                                                                               SW454
+                     04400-EL-DR-8001                                                                                                               SW454                                                                                                                                                                                                                                              04400-EL-DR-8001
+A                                                                                                                                   04400-EL-DR-8001                                                                                                                                                                                                                                                                                                                                                               A
+                                                                                                                                                                                  TF456-P-01
+
+
+
+                                                                                                                                                                                                                                          TRANSFORMER - TF456
+                                                                                                                                                                                                                                          22kV/690V/690V                                                                                                                                                                                  NOTES
+                                                                                                                                                                                                                                          5MVA
+                                                                                                                                                                                                                                                                                                                                                                                                                                          1.  STATUTORY SAFTEY RELAY LOCATED IN VSD.
+                                                                                                                                                                                                                       SCREEN
+
+
+                                                                                                                            SW456-P-01-1                                                                                                                                                       SW456-P-02-1
+
+                                                                                                                           SW456-P-01-2                                                                                                                                                        SW456-P-02-2
+
+                                                                                                                           SW456-P-01-3                                                                                                                                                        SW456-P-02-3
+
+                                                                                                                           SW456-P-01-4                                                                                                                                                        SW456-P-02-4
+
+                                                                                                                           SW456-P-01-5                                                                                                                                                        SW456-P-02-5
+B                                                                                                                                                      LUMP STOCKPILE VARIABLE SPEED DRIVE SWITCHBOARD                                                                                                                                                                                                                                                                                                             B
+
+                                                  5000:1                                                                                                                                                SW456                                                                                                                                                                              5000:1
+
+                                                         CB SW456 IN D                                                                                                                                                                                                                                                                                                 CB SW456 IN Y
+                                                         2500A                                                                                                                                                                                                                                                                                                                      2500A
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                            STATUTORY
+                                                                                                                                                                                                                                                                          SAFETY RELAY
+                                                                                                                                                                                                                                                                               ESR4563
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  C
+                                                                                                                              690V, 2500A, 50kA FOR 1 Sec
+
+
+
+
+                                                                                                                              690V, 2500A, 50kA FOR 1 Sec
+
+
+                                                                                                 TIER 03F               TIER 3F                                                  TIER 04F              TIER 4F                                                 TIER 06F
+                                    48VDC UPS DB456B
+
+
+
+                                            REFER DRG                                            500A                   500A                                                     500A                  500A                                                    80A
+                                        04400-EL-DR-8023
+
+
+
+                                   230VAC UPS DB456C
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  D
+
+
+                                            REFER DRG
+                                        04400-EL-DR-8024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  E
+                                 ABB VSD MARSHALLING
+                                        PANEL MP4561
+
+
+
+                                                                                                                               TO MC454
+                                            REFER DRG                                                                      04400-EL-DR-8011
+                                        07100-EL-DR-4853
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  7
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ph +61 8 6220 2000, www.verbrec.com
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                         07110-EL-DR-4857      MP4561 SCHEMATIC DIAGRAM SHT 1
+
+                                                                                              VS4561 - MASTER                                                                VS4562 - MASTER                                                                      VS4563                                                                                                                                                                 07110-EL-DR-4841      NETWORK DIAGRAM
+
+F                                                                                             ACS800-07-1060-7                                                                ACS800-07-1160-7                                                            ACS800-01-0070-7                                                                                                                                                                                                                                         F
+                                                                                                 ESR4561 (NOTE 1)                                                                ESR4562 (NOTE 1)                                                                                                                                                                                                                                        04400-EL-DR-8024      DB456C SCHEMATIC DIAGRAM
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                         04400-EL-DR-8023      DB456B SCHEMATIC DIAGRAM
+                                                                                                                             DCP
+
+                                                                                                                                             FIELD                                                                                                                                                                                                                                                                                       04400-EL-DR-8022      DB456A SCHEMATIC DIAGRAM
+                                                                                                                                         MARSH. PANEL
+                                                                                                                                          CV108-MP01                                                                                                                                                                                                                                                                                     04400-EL-DR-8011      MC454 SINGLE LINE DIAGRAM SHT 2                     F
+                                                                                                                                       04400-EL-DR-2001
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                         04400-EL-DR-8001      SW454 SINGLE LINE DIAGRAM
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                         04400-EL-DR-2001      EQUIPMENT & CABLE BLOCK DIAGRAM SHT 1
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                         04400-EL-DR-1001      EQUIPMENT & CABLE BLOCK DIAGRAM SHT 1
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                             REF. No.                         REFERENCES
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  G
+                                                                                                                M          M                                                                                                                                                                                                                                                                                                                       APPLICABLE DOCUMENTS
+
+                                                                                                                3Ø         3Ø        JB                                                                                                                                                                                                                                                                                                                         SPECIFICATIONS
+                                                                                               RTD                                                                                                                                                                                                                                                                                                                                                                 TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                        11098-07000-EL-SP-1121     EQUIPMENT INSTALLATION
+                                                                                                CV108-EM01              CV108-BR01-EM01                                          SPARE VSD                                                                  SPARE VSD
+                                                                                             LUMP STOCKPILE                BRAKE HYD.                                                630kW                                                                      45kW                      7                                                                                                                                                                 STANDARD DRAWINGS
+                                                                                            CV108 CONVEYOR                POWER PACK                                                                                                               11098-CGC011-B-E05-0475
+                                                                                                    630kW                     0.75kW                                                                                                                                                                                                                                                                                                    07110-EL-DR-1000           STANDARD DRAWINGS LIST
+
+
+    This drawing and all the information                                                                                     7   14/11/25   ISSUED FOR CONSTRUCTION - CB25OP003A                         SR   LN    AC   JM   KI    MG   CLIENT                                                                                                                                    DRAWN           J. MOGGRIDGE            23/11/06
+
+          on it is the property of                                                                                          6   17/08/09    ISSUED FOR AS-BUILT                                          KW   BT   SQ    BT   DF    DF                                                                                                                                                                                                 PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                             ENGINEER        R. COX                  26/11/07
+       It is confidential and is given                                                                                      5   24/10/08    CV104 MODIFICATION RE-ISSUED FOR CONSTRUCTION                JH   BT    AJ   LB   DF    DF
+                                                                                                                                                                                                                                                                                                                                                                                   CHECKED         A. JAMES                23/11/06    CLOUD BREAK ORE HANDLING
+H   to you for a limited purpose and must                                                                                   4   28/04/08    RE-ISSUED FOR CONSTRUCTION                                   AD   RP    AJ   LB   DF    TK                                                                                                                                                                                                                                                                             H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                          LEAD ENG        L. BRUNN                26/11/07    SW456 - LUMP STOCKPILE
+        drawing nor any information                                                                                         3   02/04/08    RE-ISSUED FOR CONSTRUCTION                                   AD   RP    AJ   RC   NJ    NJ
+
+    concerning it may be copied, exhibited                                                                                  2   11/03/08    RE-ISSUED FOR CONSTRUCTION                                   PE   EA    AJ   RC   NJ    NJ                                                                                                                                             ENG MGR         N. JAMESON              26/11/07
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                 SINGLE LINE DIAGRAM
+    photographs be taken of any article                                                                                     1   19/01/08    RE-ISSUED FOR CONSTRUCTION                                   JM   RP    AJ   LB   NJ    NJ                                                                               Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                           Level 2, Hyatt Centre                                              Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR        N. JAMESON              26/11/07
+      fabricated or assembled from this04400-EL-DR-8001      SW454 - LUMP STOCKPILE - SINGLE LINE DIAGRAM                   0   23/11/07    ISSUED FOR CONSTRUCTION                                      JM   RC    AJ   LB   NJ    NJ                                                Tel: +61 8 9266 0111                                                                                                                             PROJECT No:             DRG No:                                     REV:
+       drawing without the consent of                                                                                                                                                                                                      87 Adelaide Terrace                        Fax: +61 8 9221 9483     Team 45 and WorleyParsons act on behalf of and as disclosed agent   SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD      REF No.                                  REFERENCES                           REV     DATE                             DESCRIPTION                          DRN   ENG  CHK   LE   EM   PM      East Perth  WA  6004  Australia            ABN 52 103 096 340                          of The Pilbara Infrastructure.                                   NTS                       A1          300/11098                  04400-EL-DR-8021                        7
+
+
+                   1                                        2                                         3                                         4                                         5                                         6                                         7                                         8                                          9                                        10                                        11                                        12

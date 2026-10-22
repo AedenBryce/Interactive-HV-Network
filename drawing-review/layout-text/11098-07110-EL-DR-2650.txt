@@ -1,0 +1,168 @@
+                  1                                       2                                       3                                       4                                       5                                       6                                       7                                        8                                       9                                      10                                       11                                      12
+
+
+                                                                                                                                                                                                                  FROM HV SWITCHBOARD                                                                                                                                                                                  NOTES
+                                                                                                                                                                                                                              SW421                                                                                                   CONSTRUCTION NOTES:
+                                                                                                                                                                                                                      07110-EL-DR-2351                                                                                                1.       MOTOR PROTECTION RELAY TO BE UPGRADED.                                  1.  R&W PHASES PROTECTED BY 63A FUSES,
+                                                                                                                                                                                                                                                                                                                                      2.       CONTACTOR TO BE UPGRADED.                                                   BLUE PHASE IS NOT SUPPLIED TO UP421A OR UP421B
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            A
+                                                                                                                                                                                                                                                                                                                                      3.       NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                       TRANSFORMER - TF421
+B                                                                                                                                                                                                                      22kV/400V                                                                                                                                                                                                                                                             B
+                                                                                                                                                                                                                       2.0 MVA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            C
+
+
+           SCREENING MOTOR CONTROL CENTRE
+
+            MC421
+                                                                                                                                                                                                                  3000:1
+
+
+
+                                                                                                                                                                                                                    CB MC421 IN                              NEUTRAL BAR                       EARTH BAR         REF DRG:
+                                                                                                                                                                                                                    3000A                                                         MEN LINK                       07110-EL-DR-1170
+
+
+
+
+D                                   400V, 3000A, 50kA for 1 Sec                                                                                                                                                                                                                                                                                                                                                                                                                              D
+
+
+                 TIER              TIER              TIER              TIER              TIER               TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER              TIER
+                 02F-00            02F-04            01F-00            01F-03            01F-06             01F-09            01F-12            01F-15            01F-18            01F-21            02F-08            02F-12            02F-16            1F-25             1F-04             1F-07             1F-12             1F-16             4F-25             2F-00             2F-04
+                                                                                                                                                                                                                                                                                                                                          10
+
+
+                  100A              100A              50A               50A               50A               50A               63A               63A               63A               63A               125A              125A              125A              100A               20A               160A              125A              125A              100A              125A              125A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E              UP                UP                                                                                                                                                                                                                                                                                                                                                                                                                                                          E
+
+                                                                                                                                                                                                                                                            NOTE 1
+
+
+            UP421A            UP421B
+            24V DC            48V DC
+             7.5kW             7.5kW
+
+
+
+        11098-CGC011-A-E05-0073
+
+
+                                    10
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            F
+
+                                                                                                                                                                                                                                                                               CN201-ISOL01      CN202-ISOL01
+                                                                                                                                                                                                                                                                               25A AC23          200A AC23
+
+
+
+
+
+
+
+
+
+                                                     ISOL              ISOL              ISOL               ISOL              ISOL              ISOL              ISOL              ISOL
+
+
+
+
+
+                                                                                                                                                                                                                                                          M
+G                                                  AC                AC                AC                AC                AC                AC                AC                AC                DB                DB                DB                                  CN                 CN               MG                MG                 CP                DB                DB                                                                                                   G
+                                                                                                                                                                                                                                                         3Ø
+                                                                                                                                                                                                                                                                                                                                                                                                                                APPLICABLE DOCUMENTS
+                                                AC4211            AC4212            AC4221            AC4222            AC4231            AC4232            AC4233            AC4234             DB421             DB422             DB423          PP201-EM01           CN201             CN202             MG102             MG104              CP201            DB4211            DB4212                                                 SPECIFICATIONS
+                                                   HV                HV                LV                LV             LV VSD            LV VSD            LV VSD            LV VSD               HV                LV             LV VSD          HYDRAULIC              JIB         SEMI-PORTAL        OVERSIZED          PRODUCT              DUST              CV101             CV106
+                                                 SWRM              SWRM              SWRM              SWRM              SWRM              SWRM              SWRM              SWRM              SWRM              SWRM              SWRM              POWER             CRANE             CRANE        TRAMP METAL           MIDDLING        COLLECTOR               DB                DB                                                     TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                                                                                                                                                                                                                                                                                                                     11098-07110-EL-SP-1121    EQUIPMENT INSTALLATION
+                                                AC No.1          AC No.2            AC No.1           AC No.2           AC No.1           AC No.2           AC No.3           AC No.4              DB                DB                DB               PACK               2T              35/3T            MAGNET             TRAMP               AIR              50kW              50kW
+                                                 18kW              18kW              18kW               18kW             22kW              22kW              22kW               22kW              50kW              50kW              50kW              30kW              3kW               90kW              32kW       METAL MAGNET            COMP.                                                                                  STANDARD DRAWINGS
+                                                                                                                                                                                                                                                   11098-CGC011        (FUTURE)          (FUTURE)                               32kW              30kW
+                                                                                                                                                                                             10                                                                                                                                             10                                                                       11098-07110-EL-DR-1000    STANDARD DRAWINGS LIST
+                                                                                                                                                                                                      11098-CGC011-A-E05-0074                      -B-E05-0258                                           11098-CGC011-A-E05-0074
+
+
+    This drawing and all the information                                                                                     718/09/09RE-ISSUED FOR AS-BUILT                                    KW   CJT  SQ   CJT  DF   DF   CLIENT                                                                                                                               DRAWN          W.LEONG                02/11/06
+
+         on it is the property of                                                                                     6    15/01/09   ISSUED FOR AS-BUILT                                       KW   BT   RJP  CJT  DF   GM                                                                                                                                                                                          PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                              ENGINEER       R.COX                  02/11/06
+       It is confidential and is given                                                                                5    21/02/08   RE-ISSUED FOR CONSTRUCTION                                CV   LB   AJ   LB   NJ    NJ
+                                                                                                                                                                                                                                                                                                                                                                   CHECKED        D.PALMER               02/11/06    CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                             4    19/01/08   RE-ISSUED FOR CONSTRUCTION                                JM   RP   AJ   LB   NJ    NJ                                                                                                                                                                                                                                                                 H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                          LEAD ENG       L.BRUNN                02/11/06    MC421 - SCREENING
+        drawing nor any information                                                                                   3   27/06/07    RE-ISSUED FOR CONSTRUCTION                                JT  DBG   AJ   LB   NJ   GW
+
+    concerning it may be copied, exhibited                                                                            10   23/01/26   ISSUED FOR CONSTRUCTION - CB25OP003A                      SR   LN   AC   LN   KI   MG                                                                                                                                        ENG MGR        J.BILESSURIS           02/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                SINGLE LINE DIAGRAM SHEET 1
+    photographs be taken of any article                                                                               9    18/3/13    AS BUILT - NO CHANGE                                      SL  ZGD  DGM   RG   AB   AB                                                                            Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                Level 2, Hyatt Centre                                            Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR    G.WIESER               02/11/06
+     fabricated or assembled from this07110-EL-DR-4273    SCREENING SUBSTATION PROFIBUS & DEVICENET NETWORK           8    29/06/12   ISSUED FOR CONSTRUCTION                                  JMc   PA   MR   PA   CD   PH                                              Tel: +61 8 9266 0111                                                                                                                        PROJECT No:           DRG No:                                   REV:
+       drawing without the consent of                                                                                                                                                                                           87 Adelaide Terrace                      Fax: +61 8 9221 9483    Team 45 and WorleyParsons act on behalf of and as disclosed agent SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD     REF No.                                REFERENCES                          REV    DATE                            DESCRIPTION                        DRN  ENG   CHK  LE   EM   PM     East Perth  WA  6004  Australia          ABN 52 103 096 340                        of The Pilbara Infrastructure.                                 N/A                      A1         300/11098                  07110-EL-DR-2650                     10
+
+
+                  1                                       2                                       3                                       4                                       5                                       6                                       7                                        8                                       9                                      10                                       11                                      12

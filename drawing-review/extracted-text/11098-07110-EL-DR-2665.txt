@@ -1,0 +1,229 @@
+M
+3~
+400V, 1000A, 50kA for 1 Sec
+M
+3~
+M
+3~
+M
+3~
+M
+3~
+CR303 - TERTIARY CRUSHER
+MC434A
+CONTINUED ON 07110-EL-DR-2666
+CONTINUED ON 07110-EL-DR-2664
+FROM MC431
+07110-EL-DR-2654
+CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+DUTY-STANDBY
+HY302-PU01-P-01
+HY302-PU02-P-01
+DUTY-STANDBY
+LU303-PU01-P-01
+LU303-PU02-P-01
+MC434A-P-01/R
+MC434A-P-01/W
+MC434A-P-01/B
+MC434A-P-01/N
+NEUTRAL BAR
+EARTH BAR24V DC DIST. BUS
+DB434AA-P-01
+48V DC DIST. BUS
+DB434AB-P-01
+40A
+FROM UP431A
+07110-EL-DR-3402
+FROM UP431B
+07110-EL-DR-3407
+LU303-HE01-P-01
+LU303-HE02-P-01
+LU303-HE03-P-01
+LU303-HE04-P-01
+LU303-JB01
+LU303-JB01-P-01
+40A
+TH
+HY302-PU01-I-01
+LCS
+8
+HY302-PU01
+HYDRAULIC
+PUMP
+No.1
+ 
+37kW
+TH
+HY302-PU02-I-01
+HY302-PU02-LCS01-C-01
+LCS
+8
+HY302-PU02
+HYDRAULIC
+PUMP
+No.2
+ 
+37kW
+LCS
+8
+TH
+LU303-PU01-I-01
+LU303-PU01-LCS01-C-01
+LCS
+8
+LU303-PU01
+LUBE PUMP
+No.1
+ 
+37kW
+TH
+LU303-PU02-I-01
+LU303-PU02-LCS01-C-01
+LCS
+8
+LU303-PU02
+LUBE PUMP
+No.2
+ 
+37kW
+HY302-PU01-LCS01-C-01
+BL302-LCS01-C-01
+HE303-LCS01-C-01
+LCS
+8 HE303-LCS01
+LU303-HE01
+LUBE HEATER
+No.1
+2kW
+LU303-HE02
+LUBE HEATER
+No.2
+2kW
+LU303-HE03
+LUBE HEATER
+No.3
+2kW
+LU303-HE04
+LUBE HEATER
+No.4
+2kW
+M
+3~
+M
+3~
+LU302-PU01-P-01
+LU302-PU02-P-01
+DUTY-STANDBY
+CR302 - SECONDARY CRUSHER
+LCS
+8
+TH
+LU301-PU01-LCS01-C-01
+LU302-PU01-I-01
+LCS
+8
+TH
+LU301-PU02-LCS01-C-01
+LU302-PU02-I-01
+LU302-PU01
+LUBE PUMP
+No.1
+ 
+37kW
+LU302-PU02
+LUBE PUMP
+No.2
+ 
+37kW
+AS BUILT
+DATE: 11 /09 /2009
+CLOUD BREAK INFRASTRUCTURE
+MC434A - CRUSHING AUXILIARIES
+SINGLE LINE DIAGRAM SHEET 2
+07110-EL-DR-2665 4NTS
+JZ 14/5/07
+RC 14/5/07
+AJ 14/5/07
+RC 14/5/07
+NJ 14/5/07
+GW 16/05/07
+0 11/05/07 ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+1 27/06/07 RE-ISSUED FOR CONSTRUCTION JT RP AJ LB NJ GW
+2 25/01/08 RE-ISSUED FOR CONSTRUCTION JH RP AJ LB NJ NJ
+3 21/02/08 RE-ISSUED FOR CONSTRUCTION JM LB AJ LB NJ NJ
+4 11/09/09 ISSUED FOR AS BUILT YBC BT WL CJT DF AC
+                                                                                   
+                                                                                   
+                                                                                   
+  
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+TIER 03F-00 TIER 03F-05 TIER 03F-15 TIER 03F-20 TIER 03F-25 TIER 02F-10 TIER 02F-00 TIER 02F-05
+MC434A IN
+1250A (ISOLATOR)
+BL302-EM01
+CRUSHER DUST
+SEAL FAN
+1.5kW
+BL302-EM01-P-01
+100A100A32A5A100A100A100A100A
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+9/25/2009 2:33:50 PM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2665\Rev_4\11098-07110-EL-DR-2665.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

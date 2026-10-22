@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+drawings/
+output/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,181 @@
+                    1                                          2                                            3                                           4                                           5                                           6                                           7                                           8                                           9                                           10                                          11                                          12
+
+
+
+
+                                                                                                                         FROM O/D RING MAIN UNIT
+                                                                                                                                       RM 721
+                                                                                                                                07110-EL-DR-2256                     1
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           A
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                               PACKAGE SUBSTATION
+
+                                                                                                                                                                                                                                                                                                                                                                                            SS713
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           B
+                                                                                     SF RM713 IN02                                               SF RM713 IN01
+                                                                                     630A                                                        630A
+
+
+                                                                                     22kV, 630A
+
+
+
+
+
+                                                                                                              CB TF713 FD
+                                                                                                              630A
+
+
+
+
+
+
+                                                                                                                  TF 713
+                                                                                                                  22kV/400V
+                                                                                                                  1.0MVA
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           C
+
+
+                                                                                                                                                               RM713
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           D
+                                                                                                                                                                                                                                                                                                                  PACKAGE SUBSTATION LV SWITCHBOARD
+
+
+                                                                                                                                                                                                                                                                                                                                                                                       SW713
+
+
+
+
+
+                                                                                                              CB SW713 IN
+                                                                                                              1600A
+
+
+
+
+                                                                                                                400V, 2000A
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            E
+
+
+
+
+                                                                                                                                  CB DB7131 FD                            CB DB7132 FD                           CB DB7133 FD                            CB DB7134 FD                            CB SPARE                               CB SPARE                                CB DB7137 FD
+                                                                                                                                  250A                                    250A                                   250A                                    250A                                    250A                                   250A                                    125A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                     DISTRIBUTION                            DISTRIBUTION                           DISTRIBUTION                            DISTRIBUTION                            DISTRIBUTION                           DISTRIBUTION                            DISTRIBUTION
+                                                                                                                          BOARD                                   BOARD                                   BOARD                                  BOARD                                   BOARD                                   BOARD                                  BOARD
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           G
+                                                                                                                          DB7131                                  DB7132                                  DB7133                                 DB7134                                  DB7135                                  DB7136                                 DB7137
+
+
+                                                                                                                    CONSTRUCTION                            CONSTRUCTION                           CONSTRUCTION                            CONSTRUCTION                            CONSTRUCTION                           CONSTRUCTION                            CONSTRUCTION
+                                                                                                                      BUILDINGS 1                            BUILDINGS 2                             BUILDINGS 3                             BUILDINGS 4                            BUILDINGS 5                             BUILDINGS 6                             BUILDINGS 7
+
+
+
+                                                                                                                           100kW                                   100kW                                  100kW                                   100kW                                   100kW                                  100kW                                   100kW                                                                                      APPROVED FOR CONSTRUCTION
+
+
+
+                                                                                                                                                                                                                                                    700kW
+
+
+    This drawing and all the information                                                                                                                                                                                                            CLIENT                                                                                                                                            DRAWN           J.ZHAO                   11/05/07
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                           PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                                ENGINEER        R.COX                    11/05/07
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                                               CHECKED         A.JAMES                  11/05/07      CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                             LEAD ENG        L.BRUNN                  11/05/07      SS713 - TEMPORARY BUILDINGS
+         drawing nor any information
+     concerning it may be copied, exhibited                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                      ENG MGR         N.JAMESON                14/05/07      SINGLE LINE DIAGRAM
+       or furnished to others. Nor may
+    photographs be taken of any article                                                                                           1    21/02/08    RM713 WAS SUPPLIED FROM RM712                                   JM    LB   AJ    LB    NJ   NJ                                                                                    Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                      Level 2, Hyatt Centre                                                  Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.    PROJ MGR        G.WIESER                 14/05/07
+      fabricated or assembled from this                                                                                           0    11/05/07    ISSUED FOR CONSTRUCTION                                         JZ    RC   AJ    LB    NJ   GW                                                   Tel: +61 8 9266 0111                                                                                                                                     PROJECT No:              DRG No:                                       REV:
+       drawing without the consent of                                                                                                                                                                                                                 87 Adelaide Terrace                           Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent       SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD         REF No.                                   REFERENCES                              REV     DATE                              DESCRIPTION                            DRN   ENG   CHK   LE   EM    PM     East Perth  WA  6004  Australia               ABN 52 103 096 340                            of The Pilbara Infrastructure.                                      NA                          A1           300/11098                   07110-EL-DR-2254                          1
+
+
+
+                    1                                          2                                            3                                           4                                           5                                           6                                           7                                           8                                           9                                           10                                          11                                          12

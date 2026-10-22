@@ -1,0 +1,170 @@
+                   1                                           2                                          3                                           4                                          5                                           6                                          7                                           8                                          9                                          10                                          11                                         12
+
+
+
+
+
+                                                                                                                                                                                   FROM MC435
+                                                                                                                                                                               07110-EL-DR-2660
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     B
+
+
+
+
+
+
+
+
+
+
+                                                          MAIN HV SUBSTATION
+
+                                                             MC411
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     C
+
+                                                                                                                  EARTH BAR                       NEUTRAL BAR
+
+                                                                                                                                                                                              CB MC411 IN
+                                                                                                                                                                                              250A
+
+
+                                                                         400V, 500A, 50kA FOR 1 Sec
+
+
+                                                                            TIER 6F-00                         TIER 6F-04                      TIER 6F-16                       TIER 6F-08                       TIER 6F-19                      TIER 6F-22                       TIER 6F-12
+
+
+
+
+
+                                                                            CB UP411A FD                       CB UP411B FD                                                     CB DB411 FD                      CB AC4111 FD                    CB AC4112 FD                     SPARE
+                                                                            100A                               100A                                                             125A                             50A                             50A                              20A
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     D
+
+
+
+
+
+
+
+
+
+
+                                                                         UP                                UP
+
+
+
+
+
+                                                                      UP411A                            UP411B                           SPARE
+                                                                     24V DC                             48V DC                           SPACE
+E                                                                      7.5kW                             7.5kW                                                                                                                                                                                                                                                                                                                                                                                                                        E
+
+
+
+
+                                                                          11098-CGC011-B-E05-0219
+
+                                                                                                               4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                ISOL                            ISOL                                                                                                                                                                                                                                                                                 F
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                           4
+
+
+
+                                                                                                                                                                             DB                              AC                               AC
+
+
+
+                                                                                                                                                                           DB411                           AC4111                          AC4112
+                                                                                                                                                                    MAIL HV SWRM                    MAIN HV SWRM                     MAIN HV SWRM
+                                                                                                                                                                             DB                           AC No.1                         AC No.2                                                                                                                                                                                                                          Level 5, 93-95 William Street, Perth, Western Australia 6000
+G                                                                                                                                                                          50kW                             18kW                            18kW                                                                                                                                                                                                                           Ph +61 8 6220 2000, www.verbrec.com                        G
+
+                                                                                                                                                   4         11098-CGC011-B-E05-0220                                                                                                                                                                                                                                                                               APPLICABLE DOCUMENTS
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                SPECIFICATIONS
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        11098-07000-EL-SP-1121      TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    EQUIPMENT INSTALLATION
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            STANDARD DRAWINGS
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        07510-EL-DR-1000            STANDARD DRAWINGS LIST
+
+
+    This drawing and all the information                                                                                                                                                                                                         CLIENT                                                                                                                                          DRAWN           J. ZHAO                  14/05/07
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                     PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                           ENGINEER        B. NICOL                 14/05/07
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                                                          A. JAMES                              CLOUD BREAK INFRASTRUCTURE
+    to you for a limited purpose and must                                                                                       4    21/05/25    ISSUED FOR CONSTRUCTION - CP25OP003A                           BH    LN   AC    JM    JM   MG                                                                                                                                                   CHECKED                                  14/05/07
+H                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                        LEAD ENG        D. GOYNICH               14/05/07     MC411 MAIN HV SUBSTATION
+         drawing nor any information                                                                                            3    17/08/09    ISSUED FOR AS-BUILT                                            KW    BT   SQ    BT   DF    DF
+
+    concerning it may be copied, exhibited                                                                                      2    19/01/08    RE-ISSUED FOR CONSTRUCTION                                     JM    RP   AJ    LB   NJ    NJ                                                                                                                                                   ENG MGR         N. JAMESON               14/05/07
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                                 SINGLE LINE DIAGRAM
+    photographs be taken of any article                                                                                         1    22/06/07    RE-ISSUED FOR CONSTRUCTION                                     JM    BN   AJ    LB   NJ    GW                                                                                  Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                   Level 2, Hyatt Centre                        Tel: +61 8 9266 0111     Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.   PROJ MGR        G. WIESER                16/05/07
+      fabricated or assembled from this07110-EL-DR-2660        MC435 - SINGLE LINE DIAGRAM - SHEET 1                            0    14/05/07    ISSUED FOR CONSTRUCTION                                        JZ    BN   AJ   DBG   NJ    GW                                                                                                                                                                                                         PROJECT No:             DRG No:                                       REV:
+       drawing without the consent of                                                                                                                                                                                                              87 Adelaide Terrace                          Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent      SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD        REF No.                                   REFERENCES                             REV     DATE                              DESCRIPTION                           DRN   ENG   CHK   LE   EM    PM     East Perth  WA  6004  Australia              ABN 52 103 096 340                           of The Pilbara Infrastructure.                                      NTS                        A1           300/11098                   07110-EL-DR-2678                         4
+
+
+                   1                                           2                                          3                                           4                                          5                                           6                                          7                                           8                                          9                                          10                                          11                                         12

@@ -1,0 +1,182 @@
+             1                                  2                                     3                                  4                                  5                                  6                                  7                                   8                                  9                                  10                                 11                                  12
+
+
+
+                                                                                               FROM HV SWITCHBOARD                                                                            FROM HV SWITCHBOARD                                                                            FROM HV SWITCHBOARD
+                                                                                                         SW505                                                                                          SW505                                                                                          SW505
+                                                                                               500CB-04220-DR-EL-0055                                                                         500CB-04220-DR-EL-0055                                                                         500CB-04220-DR-EL-0055
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                 A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                  B
+                                                                                                                     SCREEN                                                                                         SCREEN                                                                                         SCREEN
+
+
+
+
+
+
+                                                                                                                  TF505A                                                                                         TF505B                                                                                         TF505C
+                                                                                                                  22kV/1.9kV/1.9kV                                                                               22kV/1.9kV/1.9kV                                                                               22kV/1.9kV/1.9kV
+                                                                                                                  1.75MVA                                                                                        1.75MVA                                                                                        1.75MVA
+
+
+
+
+
+
+                        400VAC
+C                                                                                                                                                                                                                                                                                                                                                                                                                                  C
+                         MC508
+
+                  500CB-04220-DR-EL-0047
+
+
+
+
+                        400VAC
+                         MC507
+
+                  500CB-04220-DR-EL-0040                400V AC
+
+
+
+                                                        400V AC
+
+                        230VAC                          230V AC
+                        DB506D
+
+
+D                 500CB-04220-DR-EL-0047                PROFIBUS                                                                                                                                                                                                                                                                                                                                                                   D
+
+
+
+                       PROFIBUS
+                    MARSH. PANEL
+                         MP5051
+                  500CB-04200-DR-EL-0152
+
+
+
+
+
+                                                          VS50501                                                                                        VS50502                                                                                        VS50503
+                                                          ACS1013-A3-R                                                                                   ACS1013-A3-R                                                                                   ACS1013-A3-R
+                                                          ESR50501                                                                                       ESR50502                                                                                       ESR50503
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                  E
+
+
+
+
+
+
+
+                                                                                       DC BUS                                                                                         DC BUS                                                               4                         DC BUS
+                                                                                       EARTHING                                                                                       EARTHING                                                                                       EARTHING
+                                                                                       SWITCH                                                                                         SWITCH                                                                                         SWITCH
+
+
+
+          HV SWITCHROOM - SR505
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                  F
+
+
+
+
+
+
+
+
+
+                                                                                                            M                                                                                              M                                                                                              M
+                                                                                                           3Ø                                                                                             3Ø                                                                                             3Ø
+
+                                                                                                   RTD                                                                                            RTD                                                                                            RTD
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                  G
+                                                                                                       SB214-EM01                                                                                     SB215-EM01                                                                                     SB216-EM01
+                                                                                                     SCRUBBER No.1                                                                                 SCRUBBER No.2                                                                                  SCRUBBER No.3
+
+
+                                                                                                         1600kW                                                                                         1600kW                                                                                         1600kW
+
+
+
+                                                                                         REFER ABB VENDOR DRG. 3BHS355813E01                                                            REFER ABB VENDOR DRG. 3BHS355813E01                                                            REFER ABB VENDOR DRG. 3BHS355813E01
+
+
+
+                                                                                                                                                                                                                                                                                                                                             VENDOR/DESIGNER DRG No.                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                            005001-2200-1400-SLD-0044                                       3
+
+
+
+
+                                                                                                                                                                                                                                                                               STANDARDS                               PROJECT NUMBER                                Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                 CHECK
+                                                                                                                                                                                                                                                                                APPROVED
+                                                                                                                                                                                                                                                                                                                            500CB            CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                 4    28.01.25 AS FOUND 23.10.23                                                        AP        CH       MP                                                                                                                               WET SCRUBBING / SCREENING                                                             H
+                                                                                                  3    18.03.13 AS BUILT - NO CHANGE                                                     SR       DGM      DGM       ZG       AB       AB       MT                                                                      This drawing must notSW505 VSD DRIVES
+                                                                                                                                                                                                                                                                                                                       be copied or reproduced
+                                                                                                  2    23.12.11 RE-ISSUED FOR CONSTRUCTION                                               JMc      MR        MR       PA       CD       PH       NHJ                                                                    in any form or used for
+                                                                                                                                                                                                                                                                                                                       any purpose other thanSINGLE LINE DIAGRAM - SHEET 1
+                                                                                                  1    19.12.11 RE-ISSUED FOR CONSTRUCTION                                               JMc      MR        MR       PA       CD       PH       NHJ                                                                   originally intended without
+                                                                                                  0    10.10.11 ISSUED FOR CONSTRUCTION                                                  JMc      MR        MR       PA       IMD      PH       NHJ                                                                      written approval of        SCALE    DRG No:                                                       REV:
+                                                                                                                                                                                                                                                                                                                      Fortescue MetalsGroup Ltd
+   REF DRG No.                                               TITLE                               REV    DATE                           DESCRIPTION                                       DRN      CHK      SUP      DES      DAP      PAP      FMG                                                  NORTH                                     A1     NTS          500CB-04220-DR-EL-0042                                    4
+
+
+
+             1                                  2                                     3                                  4                                  5                                  6                                  7                                   8                                  9                                  10                                 11                                  12

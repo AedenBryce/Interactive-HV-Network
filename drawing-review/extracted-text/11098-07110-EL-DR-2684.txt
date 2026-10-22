@@ -1,0 +1,241 @@
+  
+A1
+1
+A
+B
+C
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIM E$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+Tel: +61 8 9266 0111Fax: +61 8 9221 9483ABN 52 103 096 340
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG
+005001-4230-1400-SLD-0052
+VENDOR/DESIGNER DRG No.
+8B
+REV:
+   
+   
+ 
+CLOUD BREAK ORE HANDLING
+MC430 - DESANDS MODULE 3
+SINGLE LINE DIAGRAM SHEET 2
+07110-EL-DR-2684N.T.S.
+J. ZHAO 06/02/08
+E. ABRAHAM 06/02/08
+A. JAMES 06/02/08
+L. BRUNN 06/02/08
+N. JAMESON 06/02/08
+N. JAMESON 06/02/08
+8                   
+5 09/12/11 JMc PA MR PA CD PH
+JMc PA MR PA CD PH
+7 13/09/12 JMc DGM DGM PA CD AB
+07110-EL-DR-2683 MC430 - DESAND SINGLE LINE DIAGRAM SHEET 1
+                
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                      
+                                                                      
+6 RE-ISSUED FOR CONSTRUCTION
+RE-ISSUED FOR CONSTRUCTION
+RE-ISSUED FOR CONSTRUCTION
+29/02/12
+     AS BUILT - NO CHANGE SR ZG DGM ZG AB AB18/03/13
+3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+2. CONTACTOR TO BE UPGRADED.
+1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+CONSTRUCTION NOTES:
+NOTE 1 NOTE 1 NOTE 1
+NOTE 2
+NOTE 1 NOTE 1 NOTE 1 NOTE 1
+Ph +61 8 6220 2000, www.verbrec.com
+Level 5, 93-95 William Street, Perth, Western Australia 6000
+MV UF SB -
+RE-ISSUED FOR CONSTRUCTION
+                                                        9 06/06/14 ISSUED FOR CONSTRUCTION   MS LL AW JSP CSE DSO
+19/08/1410 MS LL AW JSP CSE DSO
+12121212121212 12
+12
+12
+11
+DB
+4F-00
+32A
+MC430-PU571-DB01-P01
+BOARD
+DESANDS DISTRIBUTION
+PU571A-DB01
+CB23W M053H-02018-DR-EL-0022
+12 14/01/26 JC SR AC LN KI MG
+RE-ISSUED FOR CONSTRUCTION SV TM
+ISSUED FOR CONSTRUCTION
+18/11/25
+DESAND MOTOR CONTROL CENTRE
+CONTINUED FROM 07110-EL-DR-2683 (SHEET 1)
+MC430
+M
+3Ø
+M
+3Ø
+M
+3Ø
+M
+3Ø
+PP233-EM01-P-01
+M
+3Ø
+PP233-HX01-P-01
+400V, 3000A, 50kA FOR 1 Sec
+SP234-EM01-P-01SP234-EM01-P-02
+SP235-EM01-P-01SP235-EM01-P-02
+SP236-EM01-P-01SP236-EM01-P-02
+15kW
+(MODULE 3)
+PREP SCREEN
+PUMP
+FLOOR DRAIN
+SP234-EM01
+15kW
+DEW ATERING
+PUMP
+FLOOR DRAIN
+SP235-EM01
+15kW
+FLOOR PUMP
+AREA
+SPIRALS
+SP236-EM01
+3F-00
+3F-05
+3F-10
+2F-00
+3F-15
+50A
+50A
+50A
+32A
+4A
+1kW
+EXCHANGER
+HEAT
+PP233-HX01
+11kW
+PACK
+POW ER
+HYDRAULIC
+PP233-EM01
+M
+3Ø
+PP236-EM01-P-01
+CF237 & CF238
+FOR CLASSIFIERS
+POW ER PACK
+HYDRAULIC
+PP236-EM01
+11kW
+SPARE
+32A
+1F-25
+2F-20
+125A
+NOTE 1NOTE 1
+M
+3Ø
+2F-15
+100A
+SN242-EM01-C-01
+37kW
+ 
+TH
+01F-24
+01F-27
+20A
+20A
+FRFR
+FR236-P-01
+FR232-P-01
+SN242-EM01-P-01
+SN242-EM01-D01-P-01
+SN242-EM01-C-02
+(MOD 4)
+SCREEN
+DEW ATERING
+SN242-EM01
+(MOD 4)
+FILTER No.1
+FR236 INLINE
+(MOD 4)
+FILTER No.2
+FR232 INLINE
+AIR COMP No.2
+DESAND
+CP232
+500CB-04230-DR-EL-0045
+HYDRAULIC OIL COOLER
+UPFLOW  CLASSIFIERS
+HX236
+CP232-P-01
+CP
+DB4305-P-01
+55kW
+DB HX
+0.75kW
+HX236-P-01
+1F-20
+125A
+02F-20
+125A
+3F-25
+2.6A
+500CB-00000-ST-EL-0020
+500CB-00000-ST-EL-0020
+11098-CGC011-B-E05-0496
+11098-CGC011-B-E05-0496
+11098-CGC011-B-E05-0499
+11098-CGC011-B-E05-0495
+11098-CGC011-B-E05-0513
+PROCESS AREA DB
+DB4305
+11098-CGC011-B-E05-0496
+500CB-00000-ST-EL-0020

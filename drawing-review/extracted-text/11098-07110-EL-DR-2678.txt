@@ -1,0 +1,144 @@
+125A
+CB DB411 FD
+50A
+CB AC4111 FD
+50A
+CB AC4112 FD
+DB
+100A
+CB UP411B FD
+UP UP
+MC411
+400V, 500A, 50kA FOR 1 Sec
+250A
+CB MC411 IN
+MC411-P-01
+DB411-P-01
+100A
+CB UP411A FD
+APPLICABLE DOCUMENTS
+SPECIFICATIONS
+STANDARD DRAWINGS
+07510-EL-DR-1000 STANDARD DRAWINGS LIST
+11098-07000-EL-SP-1121 EQUIPMENT INSTALLATION
+TECHNICAL SPECIFICATION FOR ELECTRICAL 
+MAIN HV SUBSTATION
+AC
+AC4111-P-01
+AC
+AC4112-P-01
+07110-EL-DR-2660
+FROM MC435
+18kW
+AC No.1
+MAIN HV SWRM
+AC4111
+18kW
+AC No.2
+MAIN HV SWRM
+AC4112
+NEUTRAL BAREARTH BAR
+TIER 6F-00 TIER 6F-04 TIER 6F-16 TIER 6F-08 TIER 6F-19 TIER 6F-22 TIER 6F-12
+SPACE
+SPARE
+20A
+SPARE
+ISOL ISOL
+11098-CGC011-B-E05-0220
+50kW
+DB
+MAIL HV SWRM
+DB411
+4
+Ph +61 8 6220 2000, www.verbrec.com
+Level 5, 93-95 William Street, Perth, Western Australia 6000
+4
+07110-EL-DR-2660 MC435 - SINGLE LINE DIAGRAM - SHEET 1
+7.5kW
+48V DC
+UP411B
+7.5kW
+24V DC
+UP411A
+11098-CGC011-B-E05-0219
+4
+CLOUD BREAK INFRASTRUCTURE
+MC411 MAIN HV SUBSTATION
+SINGLE LINE DIAGRAM
+07110-EL-DR-2678 4NTS
+J. ZHAO 14/05/07
+B. NICOL 14/05/07
+A. JAMES 14/05/07
+D. GOYNICH 14/05/07
+N. JAMESON 14/05/07
+G. WIESER 16/05/07
+0 14/05/07 ISSUED FOR CONSTRUCTION JZ BN AJ DBG NJ GW
+1 22/06/07 RE-ISSUED FOR CONSTRUCTION JM BN AJ LB NJ GW
+2 19/01/08 RE-ISSUED FOR CONSTRUCTION JM RP AJ LB NJ NJ
+3 17/08/09 ISSUED FOR AS-BUILT KW BT SQ BT DF DF
+4 21/05/25 ISSUED FOR CONSTRUCTION - CP25OP003A BH LN AC JM JM MG
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                        
+                                                                        
+                                                                        
+                
+                                                                        
+                                                                        
+                                                                        
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG

@@ -1,0 +1,19 @@
+{
+  "id": "T10",
+  "number": 11,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/11",
+  "title": "Open older model versions as view-only scenarios",
+  "blockedBy": [
+    8,
+    9,
+    10
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    8,
+    9,
+    10
+  ]
+}

@@ -1,0 +1,110 @@
+400V, 2000A
+SS714
+PACKAGE SUBSTATION
+CB SW714 IN
+1600A
+TF 714
+22kV/400V
+1.0MVA
+CB TF714 FD
+630A
+RM714
+22kV, 630A
+SF RM714 IN02
+630A
+SF RM714 IN01
+630A
+FROM HV SWITCHBOARD
+SW426
+07110-EL-DR-2357
+SS714-P-01
+SW714-P-01
+SW714
+RING MAIN UNIT
+LV SWITCHBOARD
+AS BUILT
+DATE: 25 /09 /2009
+800A 800A32A 250A 250A
+ 
+250A 250A
+CLOUD BREAK INFRASTRUCTURE
+SS714 - LABORATORY BUILDINGS
+SINGLE LINE DIAGRAM
+07110-EL-DR-2255 1NA
+J.ZHAO 26/11/07
+R.COX 26/11/07
+A.JAMES 26/11/07
+L.BRUNN 26/11/07
+N.JAMESON 26/11/07
+N.JAMESON 26/11/07
+0 26/11/07 ISSUED FOR CONSTRUCTION JZ RC AJ LB NJ NJ
+1 25/09/09 ISSUED FOR AS BUILT LHL BT WL CJT DF AC
+                            
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+07110-EL-DR-2350 MINE POWER DISTRIBUTION SINGLE LINE DIAGRAM
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+9/26/2009 4:39:50 PM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2255\Rev_1\11098-07110-EL-DR-2255.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

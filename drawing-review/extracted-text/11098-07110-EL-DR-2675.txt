@@ -1,0 +1,32 @@
+11A
+12
+11A
+DB
+TIER
+1F-16
+32A
+12
+12
+PU371A-DB01 
+CSSS FIRE
+PUMP SKID 
+DB
+32A FDR 
+(CB23WM053H-02018 -
+DR-EL-0013)
+TBC
+       -                                                      -     -    -     -     -     -
+MC453-PU371A-DB01-
+P01
+18.11.25
+13
+28.11.25
+13
+ISSUED FOR CONSTRUCTION
+MV
+SV
+SV
+UF
+SB
+TM
+13

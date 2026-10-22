@@ -1,0 +1,17 @@
+{
+  "id": "T09",
+  "number": 10,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/10",
+  "title": "Save, share and reopen self-contained scenarios",
+  "blockedBy": [
+    6,
+    7
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7
+  ]
+}

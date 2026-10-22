@@ -1,0 +1,226 @@
+SW432
+CB SW432 IN   CONT
+CB SW432 IN   CONT
+SW432-C-01
+SW432-C-02
+SW432-C-04
+SW432-C-03
+TF432-P-01
+TF432-C-01
+TRANSFORMER - TF432
+22kV/690V/690V
+5MVA
+M
+3~
+CR301-EM01-P-02
+M
+3~
+CR302-EM01-P-02
+M
+3~
+CR303-EM01-P-02
+M
+3~
+CR304-EM01-P-02
+FROM HV SWITCHBOARD
+SW431
+07110-EL-DR-2353
+CB SW432 IN D
+2500A
+FROM HV SWITCHBOARD
+SW431
+07110-EL-DR-2353
+CB SW432 IN Y
+2500A
+FROM HV SWITCHBOARD
+SW431
+07110-EL-DR-2353
+VS4301-P-01
+VS4301-P-02
+VS4301
+ACS800-07-1500-7
+VS4302-P-01
+VS4302-P-02
+VS4302
+ACS800-07-1500-7
+VS4303
+ACS800-07-1500-7
+VS4303-P-01
+VS4303-P-02
+VS4304
+ACS800-07-1500-7
+VS4304-P-02
+VS4304-P-01
+SCREEN
+5000:15000:1
+PHASE CT'S
+PHASE CT'S
+COMMS
+COMMS
+COMMS
+COMMS
+CR304-EM01-C-02
+CR303-EM01-C-02
+CR302-EM01-C-02
+CR301-EM01-C-02
+RTDRTDRTDRTD
+CRUSHING No.1 VARIABLE SPEED DRIVE SWITCHBOARD 1
+SW432-P-01-1 SW432-P-02-1
+SW432-P-01-2
+SW432-P-01-3
+SW432-P-01-4
+SW432-P-01-5
+SW432-P-02-2
+SW432-P-02-3
+SW432-P-02-4
+SW432-P-02-5
+CR301-EM01-P-01-1
+CR302-EM01-P-01-1
+CR303-EM01-P-01-1
+CR304-EM01-P-01-1
+CR304-EM01-P-01-2
+CR304-EM01-P-01-3
+CR303-EM01-P-01-2
+CR303-EM01-P-01-3
+CR302-EM01-P-01-2
+CR302-EM01-P-01-3
+CR301-EM01-P-01-2
+CR301-EM01-P-01-3
+690V, 2500A, 50kA for 1 Sec
+690V, 2500A, 50kA for 1 Sec
+CR301-EM01
+SECONDARY CRUSHER
+750kW
+CR302-EM01
+SECONDARY CRUSHER
+750kW
+CR303-EM01
+TERTIARY CRUSHER
+750kW
+CR304-EM01
+TERTIARY CRUSHER
+750kW
+230VAC UPS
+DB432C
+07110-EL-DR-3411
+07110-EL-DR-4504
+PROFIBUS
+MARSH. PANEL
+MP4321
+VS4301-P-04
+VS4302-P-04
+VS4303-P-04
+VS4304-P-04
+ESR4301 (NOTE 1) ESR4302 (NOTE 1) ESR4303 (NOTE 1) ESR4304 (NOTE 1)
+AS BUILT
+DATE: 17 /08 /2009
+CLOUD BREAK INFRASTRUCTURE
+SW432 - CRUSHING No.1
+SINGLE LINE DIAGRAM
+07110-EL-DR-2455 5NTS
+W. LEONG 2/11/06
+R. COX 2/11/06
+D. PALMER 2/11/06
+L. BRUNN 2/11/06
+J. BILESSURIS 3/11/06
+G. WIESER 3/11/06
+0 02/11/06 ISSUED FOR CONSTRUCTION WL RC DGP LB JB GW
+1 17/11/06 RE-ISSUED FOR CONSTRUCTION WL RC AS LB JB GW
+2 11/05/07 RE-ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+3 25/01/08 RE-ISSEUD FOR CONSTUCTION JH RP AJ LB NJ NJ
+4 21/02/08 RE-ISSUED FOR CONSTRUCTION CV LB AJ LB NJ NJ
+5 17/08/09 ISSUED FOR AS-BUILT KW BT SQ BT DF DF
+                                                                                   
+                                                                                   
+  
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+07110-EL-DR-3408
+48VDC UPS
+DB432B
+SW432-T03F-P-01
+SW432-T04F-P-01
+SW432-T05F-P-01
+SW432-T06F-P-01
+ESR4301-C-01
+ESR4302-C-01
+ESR4303-C-01
+ESR4304-C-01
+RTD
+TIER 03F TIER 3F TIER 04F TIER 4F TIER 05F TIER 5F TIER 06F TIER 6F
+SPARE SPACE
+2 x 500A
+1000A 1000A 1000A 1000A 1000A 1000A 1000A 1000A
+2 x 500A 2 x 500A 2 x 500A 2 x 500A 2 x 500A 2 x 500A 2 x 500A
+07110-EL-DR-4521
+PROFIBUS
+MARSH. PANEL
+MP4322
+FROM
+MP43111
+FROM
+MP43511
+FROM
+MP43112
+FROM
+MP43113
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+28/08/2009 2:48:56 PM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2455\Rev_5\11098-07110-EL-DR-2455.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

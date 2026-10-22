@@ -1,0 +1,197 @@
+                   1                                         2                                          3                                          4                                         5                                          6                                          7                                         8                                          9                                         10                                         11                                        12
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                     CONSTRUCTION NOTES:
+                                                                                                                                                                                                                                                                                                                                                                     1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                     2. CONTACTOR TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                     3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                        DESAND MOTOR CONTROL CENTRE
+
+                         MC430
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           C
+
+
+
+
+
+
+
+                    400V, 3000A, 50kA FOR 1 Sec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           D
+
+
+
+                                                                                                                                         NOTE 2
+
+
+
+
+
+
+                                     NOTE 1                     NOTE 1                     NOTE 1                 NOTE 1                 NOTE 1                NOTE 1                                                              NOTE 1               NOTE 1                                                                            NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           F
+
+
+                             M                           M                          M                      M                                            M                     FR                     FR                     M                    M                             CP                       DB                        HX                        DB
+                             3Ø                         3Ø                          3Ø                    3Ø                                    TH     3Ø                                                                  3Ø                   3Ø
+
+
+                                                                                                         11kW                                         37kW                                                                                                                   55kW                                              0.75kW
+
+
+
+
+
+
+                                        12                      12                          12                              12                                12                                                                    12                   12                                                                                   12
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                 12
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           G
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                                                                                                    VENDOR/DESIGNER DRG No.                                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     005001-4230-1400-SLD-0052                                     8B
+
+    This drawing and all the information                                                                                      7   13/09/12    RE-ISSUED FOR CONSTRUCTION                                    JMc  DGM  DGM   PA    CD   AB   CLIENT                                                                                                                                       DRAWN           J. ZHAO                 06/02/08
+
+          on it is the property of                                                                                            6   29/02/12    RE-ISSUED FOR CONSTRUCTION                                    JMc  PA    MR   PA    CD   PH                                                                                                                                                                                                     PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                   ENGINEER        E. ABRAHAM              06/02/08
+        It is confidential and is given                                                                                       5    09/12/11   RE-ISSUED FOR CONSTRUCTION                                    JMc  PA    MR   PA    CD   PH
+                                                                                                                                                                                                                                                                                                                                                                                         CHECKED         A. JAMES                06/02/08     CLOUD BREAK ORE HANDLING
+H   to you for a limited purpose and must                                                                                    12   14/01/26    ISSUED FOR CONSTRUCTION                                       JC   SR    AC   LN    KI   MG                                                                                                                                                                                                                                                                                  H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                LEAD ENG        L. BRUNN                06/02/08     MC430 - DESANDS MODULE 3
+        drawing nor any information                                                                                          11    18/11/25   RE-ISSUED FOR CONSTRUCTION                                    MV   UF    SV   SB    -    TM
+
+    concerning it may be copied, exhibited                                                                                   10   19/08/14    RE-ISSUED FOR CONSTRUCTION                                    MS    LL   AW   JSP  CSE  DSO                                                                                                                                                ENG MGR         N. JAMESON              06/02/08
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                        SINGLE LINE DIAGRAM SHEET 2
+                                                                                                                      9           06/06/14    ISSUED FOR CONSTRUCTION                                       MS    LL   AW   JSP  CSE  DSO                                                                                 Team 45 is the integrated project management team of
+     photographs be taken of any article                                                                                                                                                                                                      Level 2, Hyatt Centre                                                                                                                      PROJ MGR        N. JAMESON              06/02/08
+      fabricated or assembled from this07110-EL-DR-2683       MC430 - DESAND SINGLE LINE DIAGRAM SHEET 1                      8   18/03/13                AS BUILT - NO CHANGE                              SR   ZG   DGM   ZG   AB    AB                                                                          Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.                                                      PROJECT No:             DRG No:                                      REV:
+       drawing without the consent of                                                                                                                                                                                                         87 Adelaide Terrace                    Tel: +61 8 9266 0111Fax: +61 8 9221 9483ABN 52 103 096 340Team 45 and WorleyParsons act on behalf of and as disclosed agentSCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                  REFERENCES                            REV     DATE                              DESCRIPTION                          DRN   ENG  CHK   LE    EM   PM     East Perth  WA  6004  Australia                                                          of The Pilbara Infrastructure.                                    N.T.S.                     A1            300/11098                 07110-EL-DR-2684                       12
+
+
+                   1                                         2                                          3                                          4                                         5                                          6                                          7                                         8                                          9                                         10                                         11                                        12

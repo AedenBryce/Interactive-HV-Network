@@ -1,0 +1,116 @@
+RM721
+22kV, 630A
+630A
+CB RM721 IN02
+RM712-P-01
+RM721-P-01
+RMU-RC001-P-01
+07110-EL-DR-5151
+SW411
+FROM MAIN HV SWITCHBOARD
+RING MAIN UNIT
+OUTDOOR
+07110-EL-DR-2252
+RING MAIN UNIT RM712
+TO SS712
+RM713-P-01
+REF DRG 07110-EL-DR-2254
+RM713
+HV SWITCHBOARD
+TO WORKSHOP SS713
+630A
+ISOL RM721 IN01
+630A
+ISOL RM713 
+1x3C 70mm` XLPE/SW A/TERMIITE
+1x3C 70mm` XLPE/SW A/TERMIITE
+1x3C 120mm` XLPE/SW A/TERMIITE
+1x3C 120mm` XLPE/SW A/TERMIITE
+VENDOR DRG 0701-19026-E100
+RM412
+HV SWITCHBOARD
+TO DUMP POCKET SS412
+630A
+CB RM412
+3
+CLOUD BREAK INFRASTRUCTURE
+RM721 - OUTDOOR RING MAIN UNIT
+SINGLE LINE DIAGRAM
+07110-EL-DR-2256 3NA
+J.ZHAO 26/11/07
+R.COX 26/11/07
+A.JAMES 26/11/07
+L.BRUNN 26/11/07
+N.JAMESON 26/11/07
+N.JAMESON 26/11/07
+0 26/11/07 ISSUED FOR CONSTRUCTION JZ RC AJ LB NJ NJ
+1 03/06/09 RM751 RENAMED TO RM721 - RE-ISSUED FOR CONSTRUCTION KW RH CTE CJT DF BP
+2 25/09/09 ISSUED FOR AS BUILT LHL BT WL CJT DF AC
+3 28/01/25 AS FOUND 23.10.23 AP MP CH          
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+07110-EL-DR-2350 MINE POWER DISTRIBUTION SINGLE LINE DIAGRAM
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG

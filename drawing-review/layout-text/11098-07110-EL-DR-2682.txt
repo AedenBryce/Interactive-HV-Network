@@ -1,0 +1,179 @@
+                   1                                           2                                           3                                           4                                          5                                           6                                           7                                           8                                           9                                          10                                          11                                          12
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        B
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                     CRUSHING No.2 MOTOR CONTROL CENTRE
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        C
+                                                                                                                                                         MC435
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                        400V, 3000A, 50kA for 1 Sec
+
+
+
+                                                                                                                                                                                                TIER 2F-00              TIER 2F-05           TIER 3F-00            TIER 3F-05             TIER 01F-27            TIER 3F-10
+
+
+
+
+D                                                                                                                                                                                                CB DB4353 FD          CB DB4354 FD           CB DB4355 FD          CB DB4356 FD          CBWH111 FD             CB DB4357 FD                                                                                                                                                                                                            D
+                                                                                                                                                                                                 125A                  125A                   125A                  125A                  50A                    125A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                             JB    JB4357
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                             DB                     DB                    DB                    DB                    WH                     DB
+
+
+
+
+G                                                                                                                                                                                         DB4353                DB4354                 DB4355                DB4356                  WH111                DB4357                                                                                                                                                                                                                         G
+
+                                                                                                                                                                                           CV102                  CV105                 CV107                 CV107               TAKE UP                  CV111
+                                                                                                                                                                                             DB                     DB                    DB            SMALL POWER                 WINCH                    DB                                                                                                                                                                              3
+                                                                                                                                                                                                                                                                DB
+                                                                                                                                                                                            50kW                  50kW                  50kW                   25kW                  11kW                  50kW
+
+
+                                                                                                                                                                                           11098-                11098-                 11098-                11098-                     3                 11098-
+                                                                                                                                                                                        CGC011-B-              CGC011-B-             CGC011-B-             CGC011-B-                                    CGC011-B-
+                                                                                                                                                                                         E05-0063              E05-0063               E05-0063              E05-0063                                     E05-0063                                                                                                                                                                        Level 5, 93-95 William Street, Perth, Western Australia 6000
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Ph +61 8 6220 2000, www.verbrec.com
+
+    This drawing and all the information                                                                                                                                                                                                           CLIENT                                                                                                                                          DRAWN            R BULLEY                12/02/08
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                        PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                             ENGINEER         R PUNSHON               12/02/08
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                                                             A JAMES                               CLOUD BREAK INFRASTRUCTURE
+    to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                          CHECKED                                  12/02/08
+H                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                          LEAD ENG         L BRUNN                 12/02/08      MC435 - CRUSHING No.2
+         drawing nor any information                                                                                             3    18/07/25    ISSUED FOR CONSTRUCTION - CB25OP003A                    BH           LN    AC   JM    JM   MG
+
+    concerning it may be copied, exhibited                                                                                       2    04/03/16    ISSUED FOR CONSTRUCTION - STACKER UPGRADE                                                                                                                                                                                                        ENG MGR          N JAMESON               12/02/08
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                                    SINGLE LINE DIAGRAM - SHEET 2
+    photographs be taken of any article                                                                                          1    11/09/09    ISSUED FOR AS BUILT                                            YBC   BT   WL    CJT   DF   AC                                                                                   Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                     Level 2, Hyatt Centre                        Tel: +61 8 9266 0111     Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.   PROJ MGR         N JAMESON               12/02/08
+      fabricated or assembled from this07110-EL-DR-2660        MC435 - SINGLE LINE DIAGRAM - SHEET 1                             0    12/02/08    ISSUED FOR CONSTRUCTION                                        RB    RP    AJ   LB    NJ    NJ                                                                                                                                                                                                          PROJECT No:             DRG No:                                       REV:
+       drawing without the consent of                                                                                                                                                                                                                87 Adelaide Terrace                          Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent      SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD        REF No.                                    REFERENCES                             REV     DATE                              DESCRIPTION                            DRN  ENG   CHK   LE    EM   PM      East Perth  WA  6004  Australia              ABN 52 103 096 340                            of The Pilbara Infrastructure.                                      NTS                        A1          300/11098                    07110-EL-DR-2682                         3
+
+
+                   1                                           2                                           3                                           4                                          5                                           6                                           7                                           8                                           9                                          10                                          11                                          12

@@ -1,0 +1,173 @@
+             1                                  2                                     3                                  4                                  5                                  6                                  7                                   8                                  9                                  10                                 11                                  12
+
+
+
+            FROM HV SWITCHBOARD                                                                                                                                 TF443-C-01                                                                                                                                                                                                                      FROM HV SWITCHBOARD
+                     SW426                                                                                        FROM HV SWITCHBOARD                                                                                                                                                                                                                                                                     SW426
+               07110-EL-DR-2357                                                                                                       SW426                                                                                                                                                                                                                                                         07110-EL-DR-2357
+
+A                                                                                                                        07110-EL-DR-2357                                                                                                                                                                                                                                                                                         A
+                                                                                                                                                                TF443-P-01
+
+
+                                                                                                                                                                                                              TRANSFORMER - TF443
+                                                                                                                                                                                                              22kV/0.72/0.72 kV
+                                                                                                                                                                                                              5 MVA
+
+                                                                                                                                                                                              SCREEN
+
+
+
+                                                                                          SW443-P-01-1                                                                                                                                                                  SW443-P-02-1
+
+                                                                                          SW443-P-01-2                                                                                                                                                                  SW443-P-02-2
+
+                                                                                          SW443-P-01-3                                                                                                                                                                  SW443-P-02-3
+
+                                                                                          SW443-P-01-4                                                                                                                                                                  SW443-P-02-4
+
+
+B                                                                                                                                                               DESAND SUBSTATION SS443                                                                                                                                                                                                                                            B
+
+
+                                        5000:1                                                                                                   DESAND AND WATER  690V VSD SWITCHBOARD SW443                                                                                                                                                                                           5000:1
+
+
+
+                                            CB SW443 IN D                                                                                                                                                                                                                                                                                                               CB SW443 IN Y
+                                            2500A                                                                                                                                                                                                                                                                                                                                  2500A
+
+
+
+
+                                                                                                                                                                                                                                                                                                                              STATUTORY                              STATUTORY
+                                                                                                                                                                                                                                                                                                                           SAFETY RELAY                            SAFETY RELAY
+                                                                                                                                                                                                                                                                                                                               ESR44307                                ESR44308
+
+
+
+C                                           690V, 2500A, 50kA FOR 1 Sec                                                                                                                                                                                                                                                                                                                                                            C
+
+
+                                                                       TIER YY-Y                                                                         TIER YY-Y                               TIER YY-Y                                                                      TIER YY-Y
+
+
+                      690V, 2500A, 50kA FOR 1 Sec
+
+
+                                                                                             TIER YY-Y            TIER YY-Y                                                                                                             TIER YY-Y                                                                    TIER 10F-03                            TIER 10F-08
+
+
+
+                                                                       500A                 500A                  500A                                   500A                                    500A                                                                                                                50A     5                              50A     5
+                                                                                                                                                                                                                                        315A                                    315A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                  D
+
+
+                                               230V AC
+
+
+                                               48V DC
+
+               230VAC UPS                      24V DC
+                  DB443C
+
+            500CB-04230-DR-EL-0123                  PROFIBUS MP4431
+
+
+
+                48VDC UPS
+                  DB443B
+
+
+
+E           500CB-04230-DR-EL-0122                                                                                                                                                                                                                                                                                                                                                                                                 E
+
+
+
+               24VDC UPS
+                 DB443A
+
+
+           500CB-04230-DR-EL-0121                                          VS44301                                 VS44302                                VS44303                                 VS44304                                VS44305                                VS44306
+                                                                      ACS800-07-1160-7                       ACS800-07-0610-7                        ACS800-07-0610-7                       ACS800-07-0610-7                      ACS800-07-0320-7                        ACS800-07-0320-7                              VS44307                                VS44308
+                                                                           ESR44301                               ESR44302                                ESR44303                               ESR44304                               ESR44305                                ESR44306                         ACS800-01-0040-7                        ACS800-01-0040-7
+                                                                                         NOTE 1                                 NOTE 1                                  NOTE 1                                 NOTE 1                                  NOTE 1                                  NOTE 1
+                PROFIBUS
+             MARSH. PANEL
+                 MP4431
+           500CB-04230-DR-IN-0181
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                  F
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               M                                       M                                      M                                       M                                      M                                       M                                       M                                      M
+                                                                              3Ø                                      3Ø                                      3Ø                                     3Ø                                      3Ø                                     3Ø                                      3Ø                                      3Ø
+                                                                      RTD                                     RTD                                    RTD                                     RTD                                    RTD                                     RTD
+
+                                                                         PU022-EM01                              PU291-EM01                              PU292-EM01                             PU293-EM01                             PU289-EM01                             PU290-EM01                              PU298-EM01                             PU299-EM01                       5
+G                                                                      PROCESS WATER                                LINE 2                                  LINE 2                                 LINE 2                           THICKENER No.2                          THICKENER No.2                         SCRUBBER AREA                          SCRUBBER AREA                                                            G
+       APPROVED FOR CONSTRUCTION                                          PUMP No.8                                STAGE 1                                STAGE 2                                 STAGE 3                             FEED PUMP 1                            FEED PUMP 2                            GLAND WATER                            GLAND WATER
+
+                                                                                                               TAILINGS PUMP                           TAILINGS PUMP                          TAILINGS PUMP                                                                                                           PUMP No.5                               PUMP No.6
+         NOTES                                                               710kW                                  400kW                                   400kW                                  400kW                                  185kW                                   185kW                                   22kW                                    22kW
+
+
+         1.   STATUTORY SAFETY RELAY IS LOCATED IN VSD.               500CB-04230-DR-EL-0094                 500CB-04230-DR-EL-0069                  500CB-04230-DR-EL-0071                 500CB-04230-DR-EL-0073                500CB-04230-DR-EL-0150                  500CB-04230-DR-EL-0152                 500CB-04230-DR-EL-0201                  500CB-04230-DR-EL-0202             Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                            Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                             VENDOR/DESIGNER DRG No.                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                                 1159-04230-DR-EL-0147                                     4A
+
+
+
+
+                                                                                                                                                                                                                                                                               STANDARDS                               PROJECT NUMBER                                Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                 CHECK
+                                                                                                                                                                                                                                                                                APPROVED
+                                                                                                  5   22.04.25  ISSUED FOR CONSTRUCTION - CB25OP003A                                     BH        LN       AC       JM       JM       DR       MG                                                                          500CB            CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                 4    14.03.14 ISSUED FOR CONSTRUCTION                                                  JT       PW        JT       PW       INH      INH      MT                                                                                           DE-SANDS PLANT                                                                        H
+                                                                                                  3    18.03.13 AS BUILT - NO CHANGE                                                     SR       DGM      DGM       ZG       AB       AB       MT                                                                      This drawing must notSW443
+                                                                                                                                                                                                                                                                                                                       be copied or reproduced
+   500CB-04230-DR-EL-0209       SW443 SINGLE LINE DIAGRAM - SHEET 2                               2    23.01.12 RE-ISSUED FOR CONSTRUCTION                                               JMc      MR        MR       PA       CD       PH       GA                          ABN 52 008 992 884                         in any form or used for
+                                                                                                                                                                                                                                                                                                                       any purpose other thanSINGLE LINE DIAGRAM
+   500CB-04230-DR-EL-0148       SW443 SINGLE LINE DIAGRAM - SHEET 1                               1    16.12.11 RE-ISSUED FOR CONSTRUCTION                                               JMc      MR        MR       PA       CD       PH       DS                                                                    originally intended without
+   500CB-02005-DR-EL-0931       SW440 SINGLE LINE DIAGRAM - SHEET 2                               0    10.10.11 ISSUED FOR CONSTRUCTION                                                  JMc      MR        MR       PA       IM       PH       NHJ                                                                      written approval of        SCALE    DRG No:                                                       REV:
+                                                                                                                                                                                                                                                                                                                      Fortescue MetalsGroup Ltd
+   REF DRG No.                                               TITLE                               REV    DATE                           DESCRIPTION                                       DRN      CHK      SUP      DES       DAP     PAP      FMG                                                  NORTH                                     A1      NTS         500CB-04230-DR-EL-0147                                    5
+
+
+
+             1                                  2                                     3                                  4                                  5                                  6                                  7                                   8                                  9                                  10                                 11                                  12

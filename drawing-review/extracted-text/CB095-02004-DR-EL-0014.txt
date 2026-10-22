@@ -1,0 +1,132 @@
+1 
+' 
+' 
+D 
+' 
+F 
+• 
+I I I l I • I ' I ' , I I • I 10 I 11 I 
+22kV SUPPLY CABLE 
+REF DRG 11098-07110-EL-DR-2350 
+,---------- ---~ 
+I D., TRANSFORMER - TF414 : 
+I 22kV/400V I 
+I 2.0 HVA I 
+I 
+'--1-------- ------
+..------------------------ ~;:.----- ---- ,___--- -------------- -- - --------
+CRUSHING MCC414 
+3P, 415V, 50Hz, 3200A, 65kA FOR 1s 
+24VDC 
+POWER SUPPlY 
+I 
+13 
+~b CFS 
+~ 125A 
+I 
+COMMS CABINET SWITCHROOM 
+240VAC FOR l&SP DB 
+FANS SUPPlY, 
+COMMS & 24VOC SUPPlY 
+GPOS 
+3 
+3 
+MCCB 
+M 
+3111 
+250kW 
+AFOOSA 
+PRIMARY APRON FEEDER 
+1518-00-SD-016 
+3 I) 
+l ..... --l 
+3 .-------, 
+~ 
+I> I I> ~~ 
+I~ST r-i 
+SIS y 
+HCC NEUTRAl BAR 
+I 
+HEN LINK 
+1-:.:.:HC~C..::E;:;:.AR::.,:T~H..::B::;:A.:.:.R --1 REF DRG 11098-07110-EL-DR-1172 
+~ 
+3 
+-fill]----@ 
+MCCB MCCB 
+M M 
+3\f 3!11 
+250kW 55kW 
+AFOOSB SN001 
+PRIMARY APRON FEEDER SCAlPING GRIZZlY 
+1518-00-SD-016 SCREEN 1 
+1518-00-SD-017 
+' ~ 
+1 3 1 3 1 3 1 3 1 3 ............ 
+* * * ~ MCCB * MCCB MCCB MCCB MCCB 100A 100A MCCB 
+../- ../- ../-
+--- - ·,T---- r---- r-----..'r--- r--<"""----
+M M M 
+3111 3111 3111 
+55kW 15kW 0.37kW 
+SN002 AF005-D101 GP01 
+SCALPING GRIZZlY DRIBBlE CONVEYOR PRIMARY CRUSHER 
+SCREEN 2 1518-00-SD-015 GREASE PUMP 
+1518-00-SD-018 1518-00-SD-020 
+M I RB001 I 3tl 
+2.2kW 53kW 
+HP01 RB001 EAST 
+HYDRAULIC PUMP ROCK BREAKER 
+FOR CR001 {YORAUliC UNIT 
+1518-00-SD-022 
+l RB002 I 
+53kW 
+RB002 WEST 
+ROCK BREAKER ~ ~ 
+HYDRAUliC UNIT ~ 
+AS BUlL T 
+DATE • 23/03/2012 
+II 
+.,.., ' c; 
+C> 
+' --' 
+~ 
+' 0:: 
+'7 
+-.3 
+g 
+""' '7 .,.., 
+g; 
+E! 
+z 
+C) 
+8 
+::::> D 
+:;;;: 
+1-
+z 
+C) 
+'-' 
+-
+' 
+~~~~~------------~~~ VENDOR/DESIGNER DRG No. I R£v, 
+- •r-------+--------------------1-~---+-------------------------------+---4--4-~~-~-~--~~ 'I! 
+~ 
+4 23.0'1.12 I AS auUit - CSI4S AH JI AH IK IK Sll LB 
+'.06.11 ~PPROY£0 FOR fONSTRU( liON AG ZG SM ZG SM 51 
+- [REF DRG No. TITLE REV DATE otSlR I ~ II UN DRN (HK SUP DES DAP PAP FMG 
+PROJECT NUMBER Fnrt"<r"~ Metal s Croup Ltd 
+~ 
+(8095 1518 FMG CLOUDBREAK OVERSIZE REDUCTION 
+CRUSHING 
+" This drawing must not MOTOR CONTROL CENTER - MCC414 
+ABN 52 001!1972 88' btcop iedarr•produud 
+in anr forru or ustd for SINGLE LINE DIAGRAM 
+amet!l 
+anr purpose ather than 
+or•ginanr intended withcut 
+I IORG No I R4Y· •rilttn appro~ol of 
+NORTH 
+fo rtncu a Htlatsc.roup ltd 
+A1 CB095-02004-DR-EL-0014 
+I ' , I • I • I 10 I 11 I 11 
+~~----·-------~~----·------~~--------· ----~~------·------~~------'------L------------L------------~----~----~----------~------~----~----~----~----~----~ 

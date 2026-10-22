@@ -1,0 +1,210 @@
+             1                                  2                                     3                                  4                                   5                                  6                                   7                                  8                                  9                                   10                                 11                                  12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                    A
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                          SCRUBBING AND SCREENING SS505
+
+
+                                                                                                                                                                                                                                                                                      SCRUBBING 690V VSD SWITCHBOARD SW506
+
+
+
+
+
+
+
+
+B                                                                   STATUTORY                                                                           STATUTORY                                 STATUTORY                                                                                                                                                                                                                          B
+                                                                  SAFETY RELAY                                                                        SAFETY RELAY                              SAFETY RELAY
+                                                                      ESR50624                                                                            ESR50628                                  ESR50629
+
+
+                690V, 2500A, 50kA FOR 1 Sec
+
+
+
+
+                 690V, 2500A, 50kA FOR 1 Sec
+
+
+                                                          TIER 11F-03                                   TIER 11F-14                            TIER 12F-03                                TIER 12F-08
+
+
+                                                                                                                                                                                                3
+
+
+
+
+
+C                                                         160A                                          160A                                   25A                                        25A                                                                                                                                                                                                                                        C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 230V AC
+
+
+                 48V DC
+
+
+
+
+D                24V DC                                                                                                                                                                                                                                                                                                                                                                                                              D
+
+
+                 PROFIBUS MP5061
+
+
+                 PROFIBUS MP5062
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                    E
+
+                                                      VS50624 - MASTER              FO COMMS     VS50625 - SLAVE                                  VS50628                                    VS50629
+                                                       ACS800-01-0145-7                           ACS800-01-0145-7                          ACS800-01-0020-7                          ACS800-01-0020-7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                    F
+
+
+
+
+
+
+
+                                                                  M                                         M                                          M                                         M
+                                                                  3Ø                                        3Ø                                        3Ø                                         3Ø
+                                                        TH                                         TH
+
+                                                            CV216-EM01                                CV216-EM02                                PU020-EM01                                 PU021-EM01
+
+
+G                                                            SCRUBBER                                  SCRUBBER                              SCRUBBER AREA                             SCRUBBER AREA                                                                                                                                                                                                                                 G
+                                                             No.3 FEED                                 No.3 FEED                              GLAND WATER                                GLAND WATER
+                                                            CONVEYOR                                   CONVEYOR                                  PUMP No.1                                 PUMP No.2
+
+
+                                                                90kW                                      90kW                                       11kW                                      11kW
+
+
+                                                       500CB-04220-DR-EL-0098                    500CB-04220-DR-EL-0099                     500CB-04220-DR-EL-0175                    500CB-04220-DR-EL-0176
+
+
+
+                                                                                                                                                                                                                                                                                                                                               VENDOR/DESIGNER DRG No.                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                              005001-2200-1400-SLD-0027                                       2
+
+
+
+
+                                                                                                                                                                                                                                                                                 STANDARDS                               PROJECT NUMBER                                Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                  CHECK
+                                                                                                                                                                                                                                                                                 APPROVED                                     500CB            CLOUDBREAK ENHANCEMENT PROJECT
+
+
+
+H                                                                                                                                                                                                                                                                                                                                              WET SCRUBBING / SCREENING                                                             H
+                                                                                                   3   30.08.24 ISSUED FOR CONSTRUCTION - CB25OP003A                                      SR       GG        GG       LN       HS       HS       MG                                                                      This drawing must not
+                                                                                                                                                                                                                                                                                                                        be copied or reproducedSW506
+                                                                                                   2   11.03.13 AS BUILT                                                                  SR       DGM      DGM       ZG       AB       AB       MT                                                                     in any form or used for
+                                                                                                                                                                                                                                                                                                                         any purpose other thanSINGLE LINE DIAGRAM - SHEET 4
+   500CB-04220-DR-EL-0064       SW506 SINGLE LINE DIAGRAM - SHEET 5                                1    19.11.11RE-ISSUED FOR CONSTRUCTION                                                JMc      MR        MR       PA       CD       PH       NHJ
+                                                                                                                                                                                                                                                                                                                       originally intended without
+   500CB-04220-DR-EL-0062       SW506 SINGLE LINE DIAGRAM - SHEET 3                                0    10.10.11ISSUED FOR CONSTRUCTION                                                   JMc      MR        MR       PA       IMD      PH       NHJ                                                                      written approval of         SCALE    DRG No:                                                       REV:
+
+                                                                                                                                                                                                                                                                                                                       Fortescue MetalsGroup LtdA1     NTS
+   REF DRG No.                                                TITLE                               REV   DATE                            DESCRIPTION                                       DRN      CHK      SUP      DES       DAP     PAP       FMG                                                 NORTH                                                          500CB-04220-DR-EL-0063                                    3
+
+
+
+             1                                  2                                     3                                  4                                   5                                  6                                   7                                  8                                  9                                   10                                 11                                  12

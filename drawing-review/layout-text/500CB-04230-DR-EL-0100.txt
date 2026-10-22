@@ -1,0 +1,225 @@
+              1                                      2                                        3                                      4                                      5                                      6                                      7                                     8                                      9                                      10                                     11                                     12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                            A
+                                                                                                                                                                         FROM MC428
+                                                                                                                                                                  DESANDS THICKENER
+                                                                                                                                                            REFER DRG 07110-EL-DR-2676
+
+
+
+
+
+
+
+
+
+            DESAND SUBSTATION SR428
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                            B
+            400V MOTOR CONTROL CENTER MC428C
+
+
+
+
+
+
+                                                                                                                                                                                   400A                                                                                                                                                                                   5
+
+
+
+
+
+                  400V, 400A, 63kA FOR 1 Sec
+
+
+                             TIER 2F-07              TIER 2F-11             TIER 2F-15             TIER 2F-19             TIER 1F-07                                     TIER 1F-11             TIER 1F-15             TIER 3F-07              TIER 3F-11             TIER 3F-15             TIER 3F-19             TIER 3F-23
+
+
+                                                                                                                                                                                                                                                                                                                                5
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                            C
+                             50A                    50A                    50A                    50A                    125A                                           50A                    50A                     20A                    20A                    20A                    20A                     5A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                NOTE 1                 NOTE 1                  NOTE 1                 NOTE 1                                                                NOTE 1                 NOTE 1                 NOTE 1                  NOTE 1                 NOTE 1                 NOTE 1                 NOTE 1
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                            D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                            E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          M                      M                       M                      M                      DB                                             M                                             M                       M                      M                      M                      M
+
+
+F                        3Ø                      3Ø                     3Ø                     3Ø                                                                    3Ø                                             3Ø                     3Ø                     3Ø                     3Ø                      3Ø                                                                                                                                                          F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                           CONSTRUCTION NOTES:
+                                                                                                                                                                                                                                                                                                                                                                                                           1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                                                           2. CONTACTOR TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                                                           3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                            G
+
+
+                                                                                                                                                                                                                                                                                                                  5                                                                                                                     5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                                                               VENDOR/DESIGNER DRG No.                                                               REV:
+                                                                                                                                                                                                                                                                                                                                                                                                                            -                                         -
+
+
+
+
+                                                                                                                                                                                                                                                                                                           STANDARDS                                   PROJECT NUMBER                                     Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                                             CHECK
+                                                                                                                                                                                                                                                                                                           APPROVED
+                                                                                                                                                                                                                                                                                                                                                             500CB             CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                           5    25.03.25  ISSUED FOR CONSTRUCTION - CP25OP003A                                             SR        LN         AC        JM        JM       DR         MG                                                                                                    DE-SANDS PLANT                                                                                H
+                                                                                                            3    06.01.16  REVISED FOR FLOC PLANT UPGRADE - ISSUED FOR  CONSTRUCTION                        TR        CR         BG        CR        NH       NH                                                                                       This drawing must not   MC428C
+                                                                                                                                                                                                                                                                                                        ABN 52 008 992 884                             be copied or reproduced
+                                                                                                            2    11.03.13  AS BUILT - NO CHANGE                                                             SR        DGM       DGM        ZG        AB       AB         MT                                                                            in any form or used for
+                                                                                                                                                                                                                                                                                                                                                       any purpose other than  SINGLE LINE DIAGRAM
+   07110-EL-DR-2676                  MC428 - DESANDS THICKENER SINGLE LINE DIAGRAM - SHT 1                  1    09.12.11  RE-ISSUED FOR CONSTRUCTION                                                       JMc       MR        MR         PA        CD       PH         DS                                                                           originally intended without
+   07110-EL-DR-2677                  MC428 - DESANDS THICKENER SINGLE LINE DIAGRAM - SHT 2                  0     11.10.11 ISSUED FOR CONSTRUCTION                                                          JMc       MR        MR         PA        IM       PH         NH                                                                              written approval of           SCALE     DRG No:                                                             REV:
+                                                                                                                                                                                                                                                                                                                                                      Fortescue MetalsGroup Ltd
+   REF DRG No.                                                      TITLE                                  REV    DATE                               DESCRIPTION                                            DRN       CHK       SUP       DES       DAP       PAP       FMG                                                       NORTH                                         A1       1:1           500CB-04230-DR-EL-0100                                         5
+
+
+
+              1                                      2                                        3                                      4                                      5                                      6                                      7                                     8                                      9                                      10                                     11                                     12

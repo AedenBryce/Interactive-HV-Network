@@ -1,0 +1,225 @@
+              1                                    2                                       3                                     4                                    5                                     6                                     7                                    8                                     9                                    10                                    11                                   12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                             A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                              B
+
+
+
+
+
+
+                          WET SCREENING & SCRUBBING SUBSTATION SS505
+
+                          400V MOTOR CONTROL CENTER MC507
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                              C
+
+
+
+
+                            MAIN BUS - 400V, 3000A. 63kA FOR 1 SEC
+
+
+
+
+
+
+                                                                                                                                                        CB
+                                        CB                          CB                          CB                          CB                          GB215      CB                                      CB                          CB                          CB                          CB
+                                        SN214                       SN224                       PP215A                      PP215B                      DOL 100A   BR215                                   PU311                       PU312                       PU313                       PU314
+                                        DOL 250A                    DOL 250A                    DOL 2.6A                    DOL 2.6A                               DOL 2.0A                                DOL 20A                     DOL 20A                     DOL 5A                      DOL 5A
+
+
+                                                                                                                                                                                                                                                                                                                                                                  DEVICENET
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                              D
+
+
+                            NOTE 2                      NOTE 2
+
+
+
+
+                            NOTE 1                      NOTE 1                      NOTE 1                      NOTE 1                      NOTE 1                                             NOTE 1                      NOTE 1                      NOTE 1                      NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                              E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                              F
+
+
+                                    M                            M                           M                           M                           M                      M                           M                           M                           M                           M
+                                    3Ø                          3Ø                          3Ø                           3Ø                          3Ø                    3Ø                          3Ø                          3Ø                           3Ø                          3Ø
+                                             TH                          TH
+
+                                  75kW                         75kW                       0.75kW                      0.75kW                       30kW                  0.5kW                       7.5kW                       7.5kW                       1.5kW                       1.5kW
+
+
+
+
+
+                                                                                                                                                                                                                       6                           6                           6                           6
+                                                                                                                                                                                                                                                                                                                                                                                          CONSTRUCTION NOTES:
+                                                                                                                                                                                                                                                                                                                                                                                          1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                                          2. CONTACTOR TO BE UPGRADED.
+G                                                                                                                                                                                                                                                                                                                                                                                         3. NOTES TO BE REMOVED AFTER CONSTRUCTION.                           G
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                6
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                       Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                       Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                                                   VENDOR/DESIGNER DRG No.                                                            REV:
+                                                                                                                                                                                                                                                                                                                                                                                    005001-2200-1400-SLD-0011                                           5
+
+
+
+
+                                                                                                                                                                                                                                                                                                 STANDARDS                                  PROJECT NUMBER                                   Fortescue Metals Group Ltd
+                                                                                                         6    08.11.24 ISSUED FOR CONSTRUCTION - CB25OP003                                            SR       GG        GG        LN        DR       DR        MG                                 CHECK
+                                                                                                                                                                                                                                                                                                  APPROVED
+                                                                                                         5    11.03.13 AS BUILT - NO CHANGE                                                           SR       DGM       DGM       ZG        AB       AB        MT                                                                               500CB             CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                        4    13.09.12 RE-ISSUED FOR CONSTRUCTION                                                    JMc       DGM       DGM       PA        CD       AB                                                                                                           WET SCRUBBING / SCREENING                                                                   H
+   500CB-00000-CS-EL-0002         ELECTRICAL CABLE SCHEDULE                                              3    11.04.12 RE-ISSUED FOR CONSTRUCTION                                                     LC       MR        MR        PA        CD       PH        DS                                                                          This drawing must not  MC507
+                                                                                                                                                                                                                                                                                                                                            be copied or reproduced
+   500CB-04220-DR-IN-0308         SR507 PROFIBUS & DEVICENET TERMINATION DIAGRAM                         2   29.02.12  RE-ISSUED FOR CONSTRUCTION                                                    JMc       MR        MR        PA        CD       PH        NHJ                                                                         in any form or used for
+                                                                                                                                                                                                                                                                                                                                            any purpose other than SINGLE LINE DIAGRAM - SHEET 3
+   500CB-04220-DR-EL-0039         MC507 SINGLE LINE DIAGRAM SHEET 4                                      1    13.01.12 RE-ISSUED FOR CONSTRUCTION                                                    JMc       MR        MR        PA        CD       PH        NHJ                                                                        originally intended without
+   500CB-04220-DR-EL-0037         MC507 SINGLE LINE DIAGRAM SHEET 2                                      0    10.10.11 ISSUED FOR CONSTRUCTION                                                       JMc       MR        MR        PA        IMD      PH        NHJ                                                                           written approval of          SCALE    DRG No:                                                           REV:
+                                                                                                                                                                                                                                                                                                                                           Fortescue MetalsGroup Ltd
+   REF DRG No.                                                   TITLE                                  REV    DATE                             DESCRIPTION                                          DRN       CHK       SUP       DES      DAP       PAP      FMG                                                      NORTH                                       A1      NTS           500CB-04220-DR-EL-0038                                        6
+
+
+
+              1                                    2                                       3                                     4                                    5                                     6                                     7                                    8                                     9                                    10                                    11                                   12

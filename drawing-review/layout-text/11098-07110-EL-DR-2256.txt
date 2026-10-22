@@ -1,0 +1,191 @@
+                   1                                          2                                          3                                          4                                          5                                          6                                          7                                          8                                          9                                         10                                         11                                         12
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              B
+
+
+                                                                                                                                                      TO SS712                                                                                             FROM MAIN HV SWITCHBOARD
+                                                                                                                                            RING MAIN UNIT RM712                                                                                                            SW411
+                                                                                                                                                07110-EL-DR-2252                                                                                                    07110-EL-DR-5151
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              C
+
+                                                                                                                                                                                                                                                                                                                      OUTDOOR
+                                                                                                                                                                                                                                                                                                         RING MAIN UNIT
+
+                                                                                                                                                                                                                                                                                                                           RM721
+
+
+                                                                                                                                                              CB RM721 IN02                                                                                                       ISOL RM721 IN01
+                                                                                                                                                              630A                                                                                                                630A
+
+
+
+                                                                                                                                                                                                                      22kV, 630A
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              D
+
+
+                                                                                                                                                                                                CB RM412                                           ISOL RM713
+                                                                                                                                                                                                630A                                               630A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              E
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                              3
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              F
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                            TO DUMP POCKET SS412                                  TO WORKSHOP SS713
+                                                                                                                                                                                 HV SWITCHBOARD                                      HV SWITCHBOARD
+                                                                                                                                                                                         RM412                                               RM713
+                                                                                                                                                                         VENDOR DRG 0701-19026-E100                           REF DRG 07110-EL-DR-2254
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              G
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    This drawing and all the information                                                                                                                                                                                                      CLIENT                                                                                                                                        DRAWN           J.ZHAO                  26/11/07
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                               PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                      ENGINEER        R.COX                   26/11/07
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                                                     A.JAMES                              CLOUD BREAK INFRASTRUCTURE
+    to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                   CHECKED                                 26/11/07
+H                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                   LEAD ENG        L.BRUNN                 26/11/07     RM721 - OUTDOOR RING MAIN UNIT
+        drawing nor any information                                                                                            3   28/01/25     AS FOUND 23.10.23                                             AP   MP    CH
+
+    concerning it may be copied, exhibited                                                                                     2   25/09/09     ISSUED FOR AS BUILT                                          LHL   BT   WL   CJT   DF    AC                                                                                                                                                 ENG MGR         N.JAMESON               26/11/07
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                           SINGLE LINE DIAGRAM
+    photographs be taken of any article                                                                                        1   03/06/09     RM751 RENAMED TO RM721 - RE-ISSUED FOR CONSTRUCTION          KW    RH   CTE  CJT   DF    BP                                                                                 Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                Level 2, Hyatt Centre                       Tel: +61 8 9266 0111     Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.  PROJ MGR        N.JAMESON               26/11/07
+      fabricated or assembled from this07110-EL-DR-2350       MINE POWER DISTRIBUTION SINGLE LINE DIAGRAM                      0   26/11/07     ISSUED FOR CONSTRUCTION                                       JZ   RC   AJ    LB   NJ    NJ                                                                                                                                                                                                      PROJECT No:             DRG No:                                      REV:
+       drawing without the consent of                                                                                                                                                                                                           87 Adelaide Terrace                         Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent     SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                   REFERENCES                            REV     DATE                              DESCRIPTION                           DRN  ENG   CHK   LE   EM    PM     East Perth  WA  6004  Australia             ABN 52 103 096 340                           of The Pilbara Infrastructure.                                     NA                         A1          300/11098                   07110-EL-DR-2256                        3
+
+
+                   1                                          2                                          3                                          4                                          5                                          6                                          7                                          8                                          9                                         10                                         11                                         12

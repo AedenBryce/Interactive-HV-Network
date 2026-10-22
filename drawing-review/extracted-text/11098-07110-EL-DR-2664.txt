@@ -1,0 +1,201 @@
+MC434A
+M
+3~
+M
+3~
+400V, 1000A, 50kA for 1 Sec
+M
+3~
+M
+3~
+CR301 - SECONDARY CRUSHER CR302 - SECONDARY CRUSHER
+M
+3~
+CONTINUED ON 07110-EL-DR-2665
+CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+LU301-PU01-P-01
+LU301-PU02-P-01
+DUTY-STANDBY
+HY301-PU02-P-01
+DUTY-STANDBY
+LU301-PU01
+LUBE PUMP
+No.1
+37kW
+LU301-PU02
+LUBE PUMP
+No.2
+37kW
+HY301-PU01
+HYDRAULIC
+PUMP
+No.1
+37kW
+HY301-PU02
+HYDRAULIC
+PUMP
+No.2
+37kW
+LU301-HE01-P-01
+LU301-HE02-P-01
+LU301-HE03-P-01
+LU301-HE04-P-01
+LU301-JB01-P-01
+LU301-JB01
+HY301-PU01-P-01
+LU302-HE01-P-01
+LU302-HE02-P-01
+LU302-HE03-P-01
+LU302-HE04-P-01
+LU302-JB01
+LU302-JB01-P-01
+LCS
+8
+LU301-PU02-LCS01-C-01
+TH TH
+LCS
+8
+TH
+LCS
+8
+LCS
+8
+TH
+LCS
+8
+HY301-PU01-LCS01-C-01
+LU301-PU01-I-01
+LU301-PU01-LCS01-C-01
+LU301-PU02-I-01
+LU301-HE01
+LUBE HEATER
+No.1
+2kW
+LU301-HE02
+LUBE HEATER
+No.2
+2kW
+LU301-HE03
+LUBE HEATER
+No.3
+2kW
+LU301-HE04
+LUBE HEATER
+No.4
+2kW
+HY301-PU01-I-01
+HY301-PU02-I-01
+HY301-PU02-LCS01-C-01
+BL301-LCS01-C-01
+HE301-LCS01-C-01
+LCS
+8 HE301-LCS01
+LCS
+8 HE302-LCS01
+HE302-LCS01-C-01
+LU302-HE01
+LUBE HEATER
+No.1
+2kW
+LU302-HE02
+LUBE HEATER
+No.2
+2kW
+LU302-HE03
+LUBE HEATER
+No.3
+2kW
+LU302-HE04
+LUBE HEATER
+No.4
+2kW
+AS BUILT
+DATE: 11 /09 /2009
+TIER 04F-00 TIER 04F-05 TIER 04F-10 TIER 04F-15 TIER 04F-20 TIER 04F-25 TIER 03F-10
+CLOUD BREAK INFRASTRUCTURE
+MC434A - CRUSHING AUXILIARIES
+SINGLE LINE DIAGRAM SHEET 1
+07110-EL-DR-2664 3NTS
+JZ 11/5/07
+RC 11/5/07
+AJ 11/5/07
+RC 11/5/07
+NJ 14/5/07
+GW 16/05/07
+0 11/05/07 ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+1 25/01/08 RE-ISSUED FOR CONSTRUCTION JH RP AJ LB NJ NJ
+2 21/02/08 RE-ISSUED FOR CONSTRUCTION CV LB AJ LB NJ NJ
+3 11/09/09 ISSUED FOR AS BUILT YBC BT WL CJT DF AC
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+  
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+100A 100A 32A 100A 100A 5A 32A
+BL301-EM01
+CRUSHER DUST
+SEAL FAN
+1.5kW
+BL301-EM01-P-01
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+9/25/2009 2:32:13 PM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2664\Rev_3\11098-07110-EL-DR-2664.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

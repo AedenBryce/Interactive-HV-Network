@@ -1,0 +1,179 @@
+                         1                                  2                                     3                                  4                                   5                                  6                                   7                                  8                                  9                                   10                                 11                                  12
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               LEGEND
+
+
+
+               PROJ. REF. No.W_APD07060
+
+
+            A                                                                                                                                                                                                                                                                                                                                                                                                                                    A
+                                                                                                                                                                                                                                                                                                                                                                                                          SURGE ARRESTOR
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                          HV CABLE CONNECTION
+                                                                                                                                                                                                                                                                                                                                                                                                          TO OVERHEAD LINE
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                          POWER POLE AND
+                                                                                                                                                                                                                                                                                                                                                                                                          OVERHEAD LINE
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                          UNDERGROUND CABLE
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                          TRANSFORMER
+
+
+            B                                                                                                                                                                                                                                                                                                                                                                                                                                    B
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                          RECLOSER
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                          AIR BREAK SWITCH
+
+
+
+                                                                                                                                     FUTURE FEED                                                                                             AMR LINE                                                                                                                                                     FUSED AIR BREAK
+                                                                                                                                                                                                                                                                                                                                                                                                          SWITCH
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                               GENERAL NOTES
+
+
+            C                                                                                                                                        POLE 4A                                                                                                                                                                                                                                                                                     C
+                                                                          CLOUDBREAK                                                                                                                                                                                                                                                                                                            1.  ALL OVERHEAD HV LINES ARE
+                                                                     POWER STATION                       POLE 1                                           POLE                                                                                                                                                                                                                                      PHOSPHORUS (37/7.25 AAAC/1120).
+                              11kV MAIN SWITCHBOARD                                                                       POLE 2               POLE 3         4        POLE 8        POLE 9     POLE 36       POLE 37   POLE 49       POLE 50     POLE 70
+                                                                    NOTE 5                                                                                                                                                                                                                                                                                                                      2.  ALL OPGW CONDUCTORS ARE 72SMF
+                                       SR-002 PANEL F4                                                                                                                                                                                                                                                                                                                                              (72G652-67, O.D. 11.1mm).
+                                         REFER DRAWING:                                     NOTE 3                                                    NOTE 3                  NOTE 3                   NOTE 3                   NOTE 3
+                        500CBC0002-13015-DR-EL-0001                                                                                                                                                                                                                                                                                                                                             3.  UG CABLING OF:
+                                                                      TF04       Z=8%                                                                                                                                                                                                                                                                                                                - 1x3C 500sqmm Al XLPE/PVC CABLE
+                                                                    11/33kV                          RECLOSER                                                                                                                                                                                                                                                                                          WITH 120sqmm EARTH IN D.N. 225mm
+                                                                    GND TX                                                                                                                                                                                                                                                                                                                             HDPE CONDUIT
+                                                                   15/20MVA                                                                                                                                                                                                                                                                                                                          - 72 SMF FIBRE OPTIC IN D.N. 110mm
+                                                                     YNd11                                                                                                                                                                                                                                                                                                                             HDPE CONDUIT
+
+                                                                                                                                                                                                                                                                                                                                                                                                4.  ALL ROAD CROSSINGS SHALL BE
+                                                                                                                                                                                                                                                                                                                                                                                                    UNDERGROUND. LOCATION TO BE
+                                                                                                                                                                                                                                                                                                                                                                                                    CONFIRMED BY UG CROSSING DETAIL
+                                                                                                                                                                                                                                                                                                                                                                                                    DRAWING CB21OP055B-10016-DR-EL-0088.
+
+
+            D                                                                                                                                                                                                                                                                                                                                                                                   5.  CABLES AS PER FMG CABLE SCHEDULE             D
+                                                                                                                                                                                                                                      POLE 49-38-1                                                                                                                                                  CB21OP055B-10016-DR-EL-0010.
+
+                                                                                                                                                                                                                                           AMR/IOP                                                                                                      TO POLE 284B-1
+                                                                                                                                                                                                                                        TIE-IN POLE                                                                                                     BIGGE SP1 LINE
+                                                                                                                                                                                                                                                                                                                                                        REFER DRAWING:
+                                                                                                                                                                                                                                                                                                                                                        CB22OP050B-10018-DR-EL-0032
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                       FUTURE
+                                                                                                                                                                                                                                                                          FEED
+
+
+
+
+                                                                                                                                                                                                                                                                                  POLE
+            E                                                                                                                                                                                                                                                                     214-2                                                                                                                                                          E
+
+
+                                                                                                                                                                                                                                                                                                                                     POLE
+                                                                                                                                                                                                                                                                                                                                     272-1
+
+                                                                                                                                                                                                                                                                                  POLE
+                                                                                                                                                                                                                                                                                  214-1
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                       POLE        POLE              POLE            POLE       POLE            POLE           POLE            POLE
+                                                                                                                                                                                                                                                                        202          214              215             227         272            284            286             287
+                                                                                                                                                                                                                                               POLE                                                                                                                                        END OF LINE
+                                                                                                                                                                                                                                                201
+                                                                                                                                                                                                                                                               NOTE 3                        NOTE 3
+                                                                                                                                                                                                                                                                                                                                                                   80A
+
+
+
+
+
+
+            F                                                                                                                                                                                                                                                                                                                                                                                                                                    F
+
+                                                                                                                                                                                                                                                                                                                POLE
+                                                                                                                                                                                                                                                                                                                227-1
+
+
+                                                                                                                                                                                                                                                                                                                                                                         3C 70 sqmm
+                                                                                                                                                                                                                                                                                                                                                                         Cu XLPE
+
+                                                                                                                                                                                                                                                                                                                                                                   SUPPLY TO RMU420 (HOPPER 10)
+                                                                                                                                                                                                                                                                                                                                                                   REFER DRAWING:
+                                                                                                                                                                                                                                             IOP LINE                                                                                                              520CBC0007-2130-DR-EL-0003
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                  TO POLE 227-2                                         TO POLE 284A-1
+                                                                                                                                                                                                                                                                                                    NORFOLK LINE                                        BIGGE SP1 AND SP2 LINE
+            G                                                                                                                                                                                                                                                                                    REFER DRAWING:                                         REFER DRAWING:                                                                           G
+                                                                                                                                                                                                                                                                                CB22OP050B-10018-DR-EL-0032                                             CB22OP050B-10018-DR-EL-0032
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                           VENDOR/DESIGNER DRG No.                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                                        CB21OP055B-10016-DR-EL-0089                                       0
+
+                                                                                                                                                                                                                                                                                                                                     PROJECT NUMBER                                Fortescue Metals Group Ltd
+                                                                                                                                                                                                                                                                                                                                     CB21OP055B            FMG BIGGE
+
+
+            H                                                                                                                                                                                                                                                                                                                                              CLOUDBREAK 33kV POWERLINE                                                             H
+                                                                                                                                                                                                                                                                                                                                     This drawing must not
+                                                                                                                                                                                                                                                                                                                                     be copied or reproducedGENERAL ARRANGEMENT
+               10016-DR-EL-0010              TF-04 LV POWER AND CONTROL CABLE SCHEDULE                                                                                                                                                                                                                                              in any form or used for
+                                                                                                                                                                                                                                                                                                                                     any purpose other thanSINGLE LINE DIAGRAM
+               10016-DR-EL-0088              UG CABLE CROSSING DETAILS                                                                                                                                                                                                                                                              originally intended without
+               10016-SC-EL-0001 TO 0002      POLE AND CABLE SCHEDULE - SHEET 1 TO 2                            0   10.06.22  ISSUED FOR CONSTRUCTION                                                                                                                                                                                  written approval of         SCALE    DRG No:                                                       REV:
+                                                                                                                                                                                                                                                                                                                                   Fortescue MetalsGroup Ltd
+               REF DRG No.                                                TITLE                               REV   DATE                            DESCRIPTION                                       DRN      CHK      SUP       DES      DAP     PAP       FMG                                                  NORTH                                    A1       1:1    CB21OP055B-10016-DR-EL-0089                                    0
+
+
+
+                         1                                  2                                     3                                  4                                   5                                  6                                   7                                  8                                  9                                   10                                 11                                  12
+
+
+CB21OP055B-10016-DR-EL-0089_0 - Single Line Diagram.dgn 6/10/2022 10:27:35 AM

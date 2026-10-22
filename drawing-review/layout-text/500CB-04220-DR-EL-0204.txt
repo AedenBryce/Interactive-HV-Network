@@ -1,0 +1,187 @@
+             1                                  2                                    3                                  4                                  5                                 6                                  7                                  8                                  9                                  10                                 11                                 12
+
+                                                                                                                                                                                                                                                                                                                                           NOTES
+
+
+                                                                                                                                                                                                                                                                                                                                           1. CONTROL PANEL TO COMPLY WITH SPECIFICATION
+
+A                                                                                                                                                                                                                                                                                                                                             100-SP-EL-0006.                                                                  A
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                  400V SUPPLY FROM MC508
+                                                                                                             REF DRG 500CB-04220-DR-EL-0044
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                              B
+                                   COOLING WATER PUMPS CONTROL PANEL CL201-MP01
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                   ISO305                                                              NEUTRAL BAR                     EARTH BAR
+                                                                                                                                   125A
+
+
+
+                                                                                                                                         2A
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                              C
+
+
+
+                                                                                    CB330                           CB380                          Q313                           Q317                            Q321
+                                                                                    PU-209A                         PU-209B                        10A                            10A                             10A
+                                                                                    50A                             50A
+
+
+
+
+                                                                                                                                              LIGHT                           GPO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                              D
+
+
+
+                                                                                                                                                                                                                                    AC201
+                                                                                                                                                                                                                            A/C     CL201-MP01
+                                                                                                                                                                                                                                    AIR CONDITIONER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                              E
+
+
+
+
+
+
+
+                                                                                 M                              M
+                                                                                3Ø                              3Ø
+
+
+                                                                               7.5kW                          7.5kW
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                              F
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                             APPROVED FOR CONSTRUCTION
+G                                                                                                                                                                                                                                                                                                                                                                                                                              G
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                  DESIGN | CONSTRUCT | COMMISSION
+
+                                                                                                                                                                                                                                                                                                                                          VENDOR/DESIGNER DRG No.VENDOR/DESIGNER DRG No.                               REV:
+                                                                                                                                                                                                                                                                                                                                                               15650-100-SLD-EL-001                                     0
+
+                                                                                                                                                                                                                                                                                                                    PROJECT NUMBER                                Fortescue Metals Group Ltd
+                                                                                                                                                                                                                                                                                                                     CB19OP051A           CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                                                                                                                                                                                                                                                         WET SCREENING AND SCRUBBING                                                          H
+                                                                                                                                                                                                                                                                                                                     This drawing must not
+                                                                                                                                                                                                                                                                                                                    be copied or reproducedCOOLING WATER PUMPS CONTROL PANEL CL201-MP01
+   02059-DR-EL-0005             CONTROL PANEL CL201-MP01 TERMINATION DIAGRAM SHEET 1                                                                                                                                                                                                                                in any form or used for
+                                                                                                                                                                                                                                                                                                                    any purpose other thanSINGLE LINE DIAGRAM
+   02059-DR-EL-0001             CONTROL PANEL CL201-MP01 SCHEMATIC DIAGRAM SHEET 1
+                                                                                                                                                                                                                                                                                                                   originally intended without
+   500CB-04220-DR-EL-0205       CONTROL PANEL CL201-MP01 GENERAL ARRANGEMENT SHEET 1             0    21.06.19 ISSUED FOR CONSTRUCTION                                                 AOD       TR       TR       BB       ST       ST                                                                               written approval of        SCALE    DRG No:                                                      REV:
+
+                                                                                                                                                                                                                                                                          primerogroup.com.au  | DESIGN | CONSTRUCT | COMMISSION
+                                                                                                                                                                                                                                                                                                                   Fortescue MetalsGroup Ltd
+   REF DRG No.                                               TITLE                              REV    DATE                           DESCRIPTION                                      DRN      CHK      SUP      DES      DAP      PAP      FMG                                                 NORTH                                     A1     NTS          500CB-04220-DR-EL-0204                                   0
+
+
+
+             1                                  2                                    3                                  4                                  5                                 6                                  7                                  8                                  9                                  10                                 11                                 12

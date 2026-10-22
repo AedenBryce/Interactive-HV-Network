@@ -1,0 +1,19 @@
+{
+  "id": "T23",
+  "number": 24,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/24",
+  "title": "Explore the supplied mine and camp distribution",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}
