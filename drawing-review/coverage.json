@@ -1,0 +1,1846 @@
+{
+  "method": "Explicit first source tables from area reviews; no inferred area allocation or topology acceptance",
+  "source_count": 141,
+  "unique_sha256_count": 140,
+  "files_with_explicit_review_source_row": 83,
+  "unmatched_source_rows": [],
+  "drawings": [
+    {
+      "path": "drawings/Asset Drawing Repo/11098-04400-EL-DR-8001.pdf",
+      "sha256": "f44e004c4eea37b4b04ccd9ba6573860c91ce41de87929f3c6052ac0654c371f",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S01",
+          "source_table_row": "| SW-S01 | `11098-04400-EL-DR-8001.pdf` | 5; 28/01/25; AS FOUND 23.10.23 | 1 | SW454 HV SLD; supply and outgoing main-power routes B-G, bus C-D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-04400-EL-DR-8021.pdf",
+      "sha256": "613682209e4520cd1a989593d96ff51fb0d1909c97c027a3ba46be3b715253fd",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S02",
+          "source_table_row": "| SW-S02 | `11098-04400-EL-DR-8021.pdf` | 7; 14/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | SW456; TF456 and two incomers/buses A-D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2252.pdf",
+      "sha256": "39d2bc3b5727f825cba2f3eecc6a35f6d3bc16857253f1594eed87285e454e20",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2253.pdf",
+      "sha256": "f8981d690da6ea8d5f19b8ffd5b076e375485cad9109286274f6b75aa35c9fc2",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D30",
+          "source_table_row": "| D30 | [11098-07110-EL-DR-2253.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2253.pdf) | 3 | Cross-area SW426 source-reference conflict and explicit TF712/LV disconnection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2254.pdf",
+      "sha256": "b25cebed21a6b61d2d8ec5d654d79156947c35dd2a643eac16c771a958be25f2",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2255.pdf",
+      "sha256": "5fba7ea53b05f164243f1d06c2002d4c6252c34924918b6f20e5862622764b1d",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D03",
+          "source_table_row": "| D03 | [11098-07110-EL-DR-2255.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2255.pdf) | 1 | RM714 and TF714 through SW714 LV bus |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2256.pdf",
+      "sha256": "568825012b850cf550ba63d29e834880a6e6bfe3eba646fedb23222c42d57ec1",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2257.pdf",
+      "sha256": "56710b0ae050c79d813b0ad06058217283b2003a1415d331459b58e77b5192e3",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2350.pdf",
+      "sha256": "758316a53d6c34d9d5273dbc77e4556753bfc2fcbe9e951745b0aec6693c2b08",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S13",
+          "source_table_row": "| C1-S13 | `11098-07110-EL-DR-2350.pdf` | 16, 31/05/16; as-built | 1 | Earlier mine distribution overview; SS431/transformers in C-E, columns 5-8; raster source |"
+        },
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S11",
+          "source_table_row": "| C2-S11 | `11098-07110-EL-DR-2350.pdf` | 16 / 31/05/16 / as-built | Earlier mine overview: SW435 and downstream branches in C-F / 1-5; raster source |"
+        },
+        {
+          "review": "drawing-review/areas/sw411-review.md",
+          "source_id": "W4",
+          "source_table_row": "| W4 | [11098-07110-EL-DR-2350.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2350.pdf) | Project rev 16, 31 May 2016; vendor drawing field separately says rev 14 | Page 1; top SW411 diagram, bottom-right title/revision blocks |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2351.pdf",
+      "sha256": "e73a10adb477c9f9e58ab3f4432fd288e14e02578ba7273eacbab7508fcb8725",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S01",
+          "source_table_row": "| SC-S01 | `11098-07110-EL-DR-2351.pdf` | 5, 28/01/25, AS FOUND 23.10.23 | 1 | Complete SW421 HV SLD; incoming route A-C / 1-2; bus C / 1-10; bus earth and transformer feeders C-G / 3-8; spare bays at left and right |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2352.pdf",
+      "sha256": "caccfe8785454cea4cc7b1af6a6d6ac7f4a6db541d0b8b0ee83990df0445e6f3",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D01",
+          "source_table_row": "| D01 | [11098-07110-EL-DR-2352.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2352.pdf) | 9 | HV incomer, bus, bus earth and feeder topology |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2353.pdf",
+      "sha256": "d20b1d7d16a839d1c568851486333d4e1164d4c7156c262a26bbaf65b13f783f",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S01",
+          "source_table_row": "| C1-S01 | `11098-07110-EL-DR-2353.pdf` | 5, 28/01/25; entry says AS FOUND 23.10.23 | 1 | Complete SW431 HV SLD; main topology is rows B-G, columns 1-10 |"
+        },
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S03",
+          "source_table_row": "| C2-S03 | `11098-07110-EL-DR-2353.pdf` | 5 / 28/01/25 / AS FOUND 23.10.23 | Opposite end of SW431/SW435 link, rows C-G / 2-3 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2354.pdf",
+      "sha256": "8f827d1afd19da9b4483924af7a3b7eced4c86f61f0693c9222038cf82fa5749",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S02",
+          "source_table_row": "| C1-S02 | `11098-07110-EL-DR-2354.pdf` | 9, 28/01/25; entry says AS FOUND 23.10.23 | 1 | SW435 HV SLD; SW431 interface is tier 2, rows B-G, columns 2-3 |"
+        },
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S01",
+          "source_table_row": "| C2-S01 | `11098-07110-EL-DR-2354.pdf` | 9 / 28/01/25 / AS FOUND 23.10.23 | Complete SW435 HV SLD, rows A-G, columns 1-11 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2355.pdf",
+      "sha256": "b2213432220a34a34f6d6d834cee1421328f833616d4f7120995f6196f726d21",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2356.pdf",
+      "sha256": "057d1484e47799f5b3ebefa13c9e380b8c2a5278d52b375c510bfc5f798ca56e",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2357.pdf",
+      "sha256": "2f919874b1608c4c3ba4f4d52536a4edf47d1319cee9a570b0e54c4b376519dd",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D02",
+          "source_table_row": "| D02 | [11098-07110-EL-DR-2357.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2357.pdf) | 6 | Same HV bus continuation, remaining feeders and laboratory interface |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2361.pdf",
+      "sha256": "24539924a40399ba5c0f35ab6389d7349fc99965b20010433b7bf856f29ae767",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D31",
+          "source_table_row": "| D31 | [11098-07110-EL-DR-2361.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2361.pdf) | 8 | Communications only; alias CB RM714 FD, not a power connection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2455.pdf",
+      "sha256": "f777fec27aefdbe5568be395dc1ace4c8026f99bde1a29a4205b7bf7abafe654",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S03",
+          "source_table_row": "| C1-S03 | `11098-07110-EL-DR-2455.pdf` | 5, 17/08/09; issued for as-built | 1 | SW432; transformer and two incomers/buses in rows A-C, columns 1-10 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2456.pdf",
+      "sha256": "d850369193921c430b7e45a7e1e9d526f43d7297745000ac54cd66cc9d1fbb86",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S06",
+          "source_table_row": "| C2-S06 | `11098-07110-EL-DR-2456.pdf` | 5 / 17/08/09 / issued for as-built | SW433 transformer/incomers and dual bars, rows A-C / 1-10 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2457.pdf",
+      "sha256": "f781061919b2c130b5f6dff7f4da809e385abf236cff6d38b0d9795f3dfb0806",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S04",
+          "source_table_row": "| C1-S04 | `11098-07110-EL-DR-2457.pdf` | 7, 08/01/26; issued for construction, CB25OP003A | 1 | SW437 sheet 1; incoming transformer/buses in A-C; notes at A-B, columns 11-12 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2458.pdf",
+      "sha256": "cf8a71cfa1cc4f44f84b12be0cddd93de534ba92eb84ef9a6af252c7bd0606ef",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S05",
+          "source_table_row": "| C1-S05 | `11098-07110-EL-DR-2458.pdf` | 6, 20/08/09; issued for as-built | 1 | SW437 sheet 2; continuation of the same two LV bars, rows B-C |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2459.pdf",
+      "sha256": "d32f19e9e20e6cfc6df224c8ce38e362d6d40ea9d4c5f49750792b0ad7ba473a",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S06",
+          "source_table_row": "| C1-S06 | `11098-07110-EL-DR-2459.pdf` | 7, 04/03/16; issued for construction, stacker upgrade | 1 | SW442 sheet 1; transformer/incomers/buses in A-C, columns 1-10; raster source |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2460.pdf",
+      "sha256": "65acdea584359b3eb9796c756ac7079ad59f7f4628fbdfd71fa88a2bb112adab",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2463.pdf",
+      "sha256": "1c365b40ed1ab5e96a18e566773fcb3f2e4127d2c3938685059914dd145fa8ea",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D07",
+          "source_table_row": "| D07 | [11098-07110-EL-DR-2463.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2463.pdf) | 11 | TF427 and separate delta/star LV incomers/buses; outgoing VSD circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2464.pdf",
+      "sha256": "a37cd0f4d4edf79b577c9849044db479bac280009fb5f0b420aabceb28b8d9c9",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D08",
+          "source_table_row": "| D08 | [11098-07110-EL-DR-2464.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2464.pdf) | 13 | LV bus continuation; downstream SH131 key-switch note recorded outside endpoint scope |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465 (2).pdf",
+      "sha256": "32250465eab4a6ec8b5ca14cfb4169911eb7a2cd6c3ce2d2649451da87fa143b",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465.pdf",
+      "sha256": "32250465eab4a6ec8b5ca14cfb4169911eb7a2cd6c3ce2d2649451da87fa143b",
+      "page_count": 1,
+      "disposition": "Byte-identical duplicate; not counted as an independent topology review",
+      "duplicate_of": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2465 (2).pdf",
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S02",
+          "source_table_row": "| SC-S02 | `11098-07110-EL-DR-2465.pdf` | 7, 28/10/25, ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | SW423 sheet 1; TF423 A / 5-6; left D incomer A-C / 1-2, right Y incomer A-C / 9-10; two LV bars C / 1-10 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2466.pdf",
+      "sha256": "07566cd60b17d4e4d1f5ffcdc7be29bdcb506cae51e53d03289bd41cc3961ba2",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S03",
+          "source_table_row": "| SC-S03 | `11098-07110-EL-DR-2466.pdf` | 5, 18/11/25, ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | SW423 sheet 2; two 690 V bar continuations C / 1-10; arrows to 2465 and 2467 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2467.pdf",
+      "sha256": "4406b420b4b673aa3a486502cf04f4caa9a2fe1f8be705dfa171b4a1f25b08bb",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S04",
+          "source_table_row": "| SC-S04 | `11098-07110-EL-DR-2467.pdf` | 10, 18/11/25, ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | SW423 sheet 3; two bar continuations B-C / 1-10; notes 1-4 A-B / 11-12; outgoing SH101/SH106 equipment F-G |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2468.pdf",
+      "sha256": "6c0f68aa569740dd94c084f4cb184d28c926527791018a3fe7d6a12cdac0385b",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S07",
+          "source_table_row": "| C2-S07 | `11098-07110-EL-DR-2468.pdf` | 5 / 12/08/09 / issued for as-built | SW453 sheet 1: transformer/incomers and dual bars, A-C / 1-10 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2469.pdf",
+      "sha256": "f052bab00a8c417697ad6eee25d604d574f0a7918bf22190a0d82741de309457",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S08",
+          "source_table_row": "| C2-S08 | `11098-07110-EL-DR-2469.pdf` | 6 / 18/11/25 / issued for construction | SW453 sheet 2: same bars continue from 2468 in row C |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2470.pdf",
+      "sha256": "b0e4bc080ee423ea5720fe2a80e3b75a78e92261b544eb928ecd289dd75f21da",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S07",
+          "source_table_row": "| C1-S07 | `11098-07110-EL-DR-2470.pdf` | 6, 04/02/16; issued for construction, stacker upgrade | 1 | SW442 sheet 2; same two LV bars continue across row C; raster source |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2471.pdf",
+      "sha256": "c079fe729ba65ceaef7716004a75c5e84b6ea0691ff6cc9f401ebad0a5a1d414",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2474.pdf",
+      "sha256": "d8bd570eabb1bada7b2041c7e30f06d355bb2d23ffd286571b202d45f8c76bd0",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S05",
+          "source_table_row": "| SC-S05 | `11098-07110-EL-DR-2474.pdf` | 4, 20/08/09, ISSUED FOR AS-BUILT | 1 | SW423 sheet 4; two LV bars B-C, ending near column 7; continuation arrow from 2467 at left |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2481.pdf",
+      "sha256": "85076c0292b3ba7b48294bd3e6077ef18049ae37498bf6ffcb2b3edc3e65df64",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D13",
+          "source_table_row": "| D13 | [11098-07110-EL-DR-2481.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2481.pdf) | 7 | TF429 and separate delta/star LV incomers/buses |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2482.pdf",
+      "sha256": "7b8ba8d818fb3679b1305c04e4d7a4c5422194f49e0ce586a32a049f0cfe26bd",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D14",
+          "source_table_row": "| D14 | [11098-07110-EL-DR-2482.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2482.pdf) | 9 | LV bus continuation; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2483.pdf",
+      "sha256": "d960c6a5dc7798b8d5d19b80dc8155b753b4cefb29c83e534e0140d360642792",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D16",
+          "source_table_row": "| D16 | [11098-07110-EL-DR-2483.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2483.pdf) | 12 | TF439 and separate delta/star LV incomers/buses |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2650.pdf",
+      "sha256": "6205ad6998829b722ac9ba75e521d6d0a0aa567f559737f0d3187d2b179e16da",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S06",
+          "source_table_row": "| SC-S06 | `11098-07110-EL-DR-2650.pdf` | 10, 23/01/26, ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | MC421 sheet 1; TF421 A-C / 5-6; incomer C-D / 5; neutral/MEN branch C-D / 6-8; 400 V bar D / 1-10 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2652.pdf",
+      "sha256": "b4abbe0d3a19ba863809c2e49f378f83fe74448fd8ae2e538a77aab1218c3fb8",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S07",
+          "source_table_row": "| SC-S07 | `11098-07110-EL-DR-2652.pdf` | 10, 23/01/26, ISSUED FOR CONSTRUCTION - CB25OP003A | 1 | MC422; TF422 A-C / 5-6; incomer C-D / 5; neutral/MEN branch C-D / 6-8; 400 V bar D / 1-12 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2653.pdf",
+      "sha256": "e4f312fca6b07c11b2c2bc312871861c5a2bf2178826237e5b180c1ef22e1dc3",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D04",
+          "source_table_row": "| D04 | [11098-07110-EL-DR-2653.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2653.pdf) | 14 | TF426 and MC426 incomer/final LV bus; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2654.pdf",
+      "sha256": "b314e347521e04af8147f92ca5332c2acf661445005d416a59a781ac0906b658",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S08",
+          "source_table_row": "| C1-S08 | `11098-07110-EL-DR-2654.pdf` | 7, 14/11/25; issued for review, CB25OP003A | 1 | MC431 sheet 1; TF431 and incomer in A-D, columns 4-6; main bar in row D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2657.pdf",
+      "sha256": "d047fbfa28bf5ecd0166edf7a85ef4dc149c6792f5d2bb0bf1feb9a7b7347d4d",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2658.pdf",
+      "sha256": "171d5286b8df997b56d50a3d1ab660e19126b32ffa48aa7ca3eeb92e23245dc3",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2660.pdf",
+      "sha256": "e079497fc4051d3731cb307628838c0e040982076123b89a34592dc217914d86",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S04",
+          "source_table_row": "| C2-S04 | `11098-07110-EL-DR-2660.pdf` | 7 / 18/07/25 / issued for construction, CB25OP003A | MC435 sheet 1: TF435 and incoming breaker at A-D / 4-6; phase bar row D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2662.pdf",
+      "sha256": "ff1a988f076a80cc121646980093ef5b66427f1eb0da58ad3658ce922a16e59d",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D05",
+          "source_table_row": "| D05 | [11098-07110-EL-DR-2662.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2662.pdf) | 12 | Continuation of same LV bus; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2663.pdf",
+      "sha256": "8de1eb8bf8ddc97969f84b5c6ec8c9978d41a87ed5b318694042893274760a6a",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D06",
+          "source_table_row": "| D06 | [11098-07110-EL-DR-2663.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2663.pdf) | 10 | Continuation of same LV bus; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2664.pdf",
+      "sha256": "6b1bfb79206a424cfe7cee7d6132f48b2f9fa301401f6f8114cb640162f0c6b4",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2665.pdf",
+      "sha256": "bb70adf1632d32299ca0ac344d023339a209bcf5089a0805ae32c51d0d84d116",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2666.pdf",
+      "sha256": "c929714968f73c8bd2725850cbbaaa2fe01c0d97c9dbbf6a4a056195cf749990",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2667.pdf",
+      "sha256": "0b4427463df36d7910afa700c32cbaeabb5d9979c41f7f2d311d8c0c9e139a88",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2668.pdf",
+      "sha256": "0fa1228a98378034c0f66ce6c0698986281a8c320ffa3d2cc3319c2900e1b6b7",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2669.pdf",
+      "sha256": "d94feac75235bf9e37c8394a117bf55cc97781b0cf69b4696c9cc007e64daf97",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2670.pdf",
+      "sha256": "cf873b8f24b5c4959d61a2167f10b2d58fe58c174969b053adc7d43f92562615",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S09",
+          "source_table_row": "| C1-S09 | `11098-07110-EL-DR-2670.pdf` | 7, 14/11/25; issued for construction, CB25OP003A | 1 | MC431 sheet 2; same 400 V bar continues in row D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2671.pdf",
+      "sha256": "0cbe8fb08ae9f52c286ffe3d28ec97bb34fc4d54ad2e4ce9cd2ee940ecadd2f8",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S08",
+          "source_table_row": "| SC-S08 | `11098-07110-EL-DR-2671.pdf` | 5B, 10/02/26, RE-ISSUED FOR REVIEW - CB25OP003A | 1 | MC421 sheet 2; same 400 V bar D / 1-10, continuation from 2650; revision block at lower left |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2672.pdf",
+      "sha256": "35739531874cc56d8bf00bff9b7d8976f65d7d97d8fccd87029a4ef247e01ee3",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2673.pdf",
+      "sha256": "9a63c09601c4ae393f259381c0088392b3968b1ca0b040bab441820617a7ca8a",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2675.pdf",
+      "sha256": "e277d18f3761cf275054aaea4e02323c5ccde763cdaf5d25532416b810e5bfb3",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2676.pdf",
+      "sha256": "411ee75d8b4b4711d633eedc1a8d23950a3a1676c51a799c6d590074af038ca1",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D10",
+          "source_table_row": "| D10 | [11098-07110-EL-DR-2676.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2676.pdf) | 11 | TF428, CB MC428A IN and final MC428A bus |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2677.pdf",
+      "sha256": "f253a1bb54cfd5ab12f3b594f5fb3f25a2de4648c8088b23713ab0cff4fda5b3",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D11",
+          "source_table_row": "| D11 | [11098-07110-EL-DR-2677.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2677.pdf) | 11 | MC428A continuation; MC428B LV extension beyond first LV bus excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2678.pdf",
+      "sha256": "69f54a96e4b51779dbdd88879da3723fee39a14d9c48a824f31e92b50f5fcdf4",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2679.pdf",
+      "sha256": "ea6eb217f4d080b3f5f8f6b0e5a6b5b436dc48e1f11af7f74835387a71b8f339",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2682.pdf",
+      "sha256": "9774b1d5189410b85c9c4f6ed1a2a5804db0fd3bbcf7ef4548a37919caf31f8f",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S05",
+          "source_table_row": "| C2-S05 | `11098-07110-EL-DR-2682.pdf` | 3 / 18/07/25 / issued for construction, CB25OP003A | MC435 sheet 2: continuation from 2660 in rows C-D / 4-9 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2683.pdf",
+      "sha256": "e7247e47c6b1f75246761eacb8599f586cbacb993bfe98abd569fbb72d04384d",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D18",
+          "source_table_row": "| D18 | [11098-07110-EL-DR-2683.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2683.pdf) | 8 | TF430 and MC430 incomer/final LV bus |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2684.pdf",
+      "sha256": "03a68a76d03845a1ebe33fa37d4094476d17b12fe61398e029c30ea061478ab6",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D19",
+          "source_table_row": "| D19 | [11098-07110-EL-DR-2684.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-2684.pdf) | 12 | Same LV bus continuation; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2685.pdf",
+      "sha256": "e6aa7fc04ca602caffa2b158ae4fd5eb7a1b9066be6fe65acecd6e1f63b94ec7",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2686.pdf",
+      "sha256": "1eb4967fc7eed1072cd25300d1ab23014c69a320bce17b362c14b191b0031708",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S12",
+          "source_table_row": "| C1-S12 | `11098-07110-EL-DR-5151.pdf` | 7, 28/01/25; entry says AS FOUND 23.10.23 | 1 | Main switchroom; SW431 feeder tier 13, rows D-G, columns 8-9 |"
+        },
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S02",
+          "source_table_row": "| C2-S02 | `11098-07110-EL-DR-5151.pdf` | 7 / 28/01/25 / AS FOUND 23.10.23 | SW411-to-SW435 feeder tier 4, rows D-G / 3-4 |"
+        },
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S10",
+          "source_table_row": "| SC-S10 | `11098-07110-EL-DR-5151.pdf` | 7, 28/01/25, AS FOUND 23.10.23 | 1 | SW411 tier 15 SW421 feeder D-G / 10-11; source connections above the main bar; note 3 at upper right |"
+        },
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S25",
+          "source_table_row": "| SW-S25 | `11098-07110-EL-DR-5151.pdf` | 7; 28/01/25; AS FOUND 23.10.23 | 1 | SW411 SW454 feeder tier1, D-G / 1-2 |"
+        },
+        {
+          "review": "drawing-review/areas/sw411-review.md",
+          "source_id": "W1",
+          "source_table_row": "| W1 | [11098-07110-EL-DR-5151.pdf](../../drawings/Asset%20Drawing%20Repo/11098-07110-EL-DR-5151.pdf) | Project rev 7, 28 January 2025, revision description `AS FOUND 23.10.23` | Page 1; upper source diagram, central SW411 diagram, lower feeder destinations, upper-right notes |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0036.pdf",
+      "sha256": "f2f6a00930057cf7338077665430bb024787e67a20ec08e5f3eaac04a8867358",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S05",
+          "source_table_row": "| SW-S05 | `500CB-04220-DR-EL-0036.pdf` | 3; 11/3/13 handwritten; AS BUILT | 1 | MC507 sheet1; continued 400V bar C-D; outgoing circuits only; raster |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0037.pdf",
+      "sha256": "28b2d3d013dcff46cff95b8d8cf5f57286e4b818fa4d0596a26e960f4d0519d6",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S06",
+          "source_table_row": "| SW-S06 | `500CB-04220-DR-EL-0037.pdf` | 5; 08.11.24; ISSUED FOR CONSTRUCTION | 1 | MC507 sheet2; TF507 A-C / 5-7; LV incomer and neutral/MEN C-D; main bar D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0038.pdf",
+      "sha256": "95e79b3688475d0c5af48f5e40d24894346afae40f44b1597d6269c5384a1508",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S07",
+          "source_table_row": "| SW-S07 | `500CB-04220-DR-EL-0038.pdf` | 6; 08.11.24; ISSUED FOR CONSTRUCTION | 1 | MC507 sheet3; same main bar C-D, outgoing circuits |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0039.pdf",
+      "sha256": "321d602fde7fb5d46fb6d96738f0bb734e7c2eb088945772dcee8c46456040f4",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S08",
+          "source_table_row": "| SW-S08 | `500CB-04220-DR-EL-0039.pdf` | 4; 08.11.24; ISSUED FOR CONSTRUCTION | 1 | MC507 sheet4; same main bar C-D, outgoing circuits |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0040.pdf",
+      "sha256": "4867895e9a41ba98c3e36254c1fe563a3a235f4096e01842b997a45ffcb2fb59",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S10",
+          "source_table_row": "| SW-S10 | `500CB-04220-DR-EL-0040.pdf` | 8; 08.11.24; ISSUED FOR CONSTRUCTION | 1 | MC507 sheet6; main bar ends at right; outgoing circuits and drive auxiliaries |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0041.pdf",
+      "sha256": "1705b3160086f5d7d39a4cac3c651ad5b1545dfac259978e36343307d65a14f9",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S09",
+          "source_table_row": "| SW-S09 | `500CB-04220-DR-EL-0041.pdf` | 5; 08.11.24; ISSUED FOR CONSTRUCTION | 1 | MC507 sheet5; same main bar C-D, outgoing circuits |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0042.pdf",
+      "sha256": "982ff7e7dda4edc56953362b5f58a0ecd7e07dbb24bce4be0d5e7676d5f996c7",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S11",
+          "source_table_row": "| SW-S11 | `500CB-04220-DR-EL-0042.pdf` | 4; 28.01.25; AS FOUND 23.10.23 | 1 | TF505A/B/C A-C; VS50501/502/503 drive internals and DC bus earthing switches D-F |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0044.pdf",
+      "sha256": "4483b1beb7bbb8500f62ce082ba6221ad51b330a44fd0e2e9efa4327361d58ce",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S12",
+          "source_table_row": "| SW-S12 | `500CB-04220-DR-EL-0044.pdf` | 5; 21.06.19; ISSUED FOR CONSTRUCTION | 1 | MC508 sheet1; same 400V main bar C-D and outgoing circuits |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0045.pdf",
+      "sha256": "06dcba15256d404fb16b5ccd3613c377a83ea551e486623f5365ff2d6c765e01",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S13",
+          "source_table_row": "| SW-S13 | `500CB-04220-DR-EL-0045.pdf` | 9; 14.10.24; ISSUED FOR CONSTRUCTION | 1 | MC508 sheet2; TF508 A-C / 5-7; LV incomer and neutral/MEN C-D; main bar D |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0046.pdf",
+      "sha256": "d955ee52b385a96f10d2e631bd44fb23936010c954513af87878a7c73fd9bdc2",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S14",
+          "source_table_row": "| SW-S14 | `500CB-04220-DR-EL-0046.pdf` | 5; 11.11.24; ISSUED FOR CONSTRUCTION | 1 | MC508 sheet3; same main bar C-D, outgoing circuits |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0047.pdf",
+      "sha256": "81b985b4f3ef75ebc55e5c8966d84392f76ab17f5a63b97d2df4bc5b209576dd",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S15",
+          "source_table_row": "| SW-S15 | `500CB-04220-DR-EL-0047.pdf` | 8; 11.11.24; ISSUED FOR CONSTRUCTION | 1 | MC508 sheet4; same main bar ends at right; outgoing circuits/auxiliaries |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0052.pdf",
+      "sha256": "9915f90b47ebc62ead3a20a327b03830446cb3b15e52606653781d4e38eae2b7",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S16",
+          "source_table_row": "| SW-S16 | `500CB-04220-DR-EL-0052.pdf` | 2; 11/3/13 handwritten; AS BUILT | 1 | SR507 earthing SLD; equipment bonds and MC507 earth bar, not the phase bar; raster |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0053.pdf",
+      "sha256": "172cfd2b202aa6bce9cdc0dbc0e1c7dbb197f833dc1ad10f1b842ee134bb55e2",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S17",
+          "source_table_row": "| SW-S17 | `500CB-04220-DR-EL-0053.pdf` | 3; 11/3/13 handwritten; AS BUILT | 1 | SR508 earthing SLD; equipment bonds and MC508 earth bar, not the phase bar; raster |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0054.pdf",
+      "sha256": "ebd57576330302395e3d3203bab51dfcf897e0fa24866d092f27673babc6ce65",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S03",
+          "source_table_row": "| SW-S03 | `500CB-04220-DR-EL-0054.pdf` | 3; 28.01.25; AS FOUND 23.10.24 | 1 | SW505 sheet1; incomer and bus earth B-E / 1-4; TF506-508 feeders C-G / 5-10 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0055.pdf",
+      "sha256": "fc5481bf78b95dedf2908a3ee0d8d6ca28c230d45d31c3f402cc08b6208ad7e8",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S04",
+          "source_table_row": "| SW-S04 | `500CB-04220-DR-EL-0055.pdf` | 3; 25.01.25; AS FOUND 23.10.23 | 1 | SW505 sheet2; continuous 22kV bar C; TF505A/B/C feeders D-G / 2-8; inching-drive interlock arrows F |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0060.pdf",
+      "sha256": "99b1afa8d426026bd89a2d14fd6774dbc68c552c37ea336facfad3e25557e5ad",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S18",
+          "source_table_row": "| SW-S18 | `500CB-04220-DR-EL-0060.pdf` | 2; 11/3/13 handwritten; AS BUILT | 1 | SW506 sheet1; TF506 A / 5-7; D/Y incomers and two 690 V bars B-C; raster |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0061.pdf",
+      "sha256": "b33547a01228e2606f6a377040b2fef6a2ccb155651c76dd859074ae9771f4dd",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S19",
+          "source_table_row": "| SW-S19 | `500CB-04220-DR-EL-0061.pdf` | 5; 11.10.25; CV214-EM01 & CV214-EM02 MOTOR UPGRADE TO 110 kW | 1 | SW506 sheet2; separate D/Y bar continuations B-C; SH213 project caution lower right |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0062.pdf",
+      "sha256": "e47c26fa052d0276b976e400aa6067f377726fb99f3dd64da1eb405b3e93bf6d",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S20",
+          "source_table_row": "| SW-S20 | `500CB-04220-DR-EL-0062.pdf` | 3; 14.10.20 in revision row; stamp 14/10/2024; AS BUILT; dates differ | 1 | SW506 sheet3; separate D/Y bar continuations B-C; revision/date discrepancy |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0063.pdf",
+      "sha256": "133652a221d636af08cf500b4c8f0b330cda3d491dc62c66ff2cad3ffa004ee3",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S21",
+          "source_table_row": "| SW-S21 | `500CB-04220-DR-EL-0063.pdf` | 3A in title; red revision row 4; 09.05.26 red row 4; prior row 3 30.08.24; Redline CV215-EM01 & CV215-EM02 MOTOR UPGRADE TO 110 kW; prior IFC | 1 | SW506 sheet4; D/Y bar continuations B-C; title/revision discrepancy |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0064.pdf",
+      "sha256": "2f98000079dba7fcc3bf67a07dd7a7e5e0be0a4f882cf2111659b822bd88bafd",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S22",
+          "source_table_row": "| SW-S22 | `500CB-04220-DR-EL-0064.pdf` | 6; 30.08.24; ISSUED FOR CONSTRUCTION | 1 | SW506 sheet5; two 690 V bars end at right; note1 shuttle keyinterlock A / 11-12 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0204.pdf",
+      "sha256": "5de508562280f7f926dff510f51825d8a2b177fd9129bf143e6d1520f7020f86",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S23",
+          "source_table_row": "| SW-S23 | `500CB-04220-DR-EL-0204.pdf` | 0; 21.06.19; ISSUED FOR CONSTRUCTION | 1 | CL201-MP01 cooling-water panel from MC508; downstream of 400 V bus |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0097.pdf",
+      "sha256": "38bfa7573923141b0df2c494371dee4b67c7f6152782172bfa7672319d454b0e",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D24",
+          "source_table_row": "| D24 | [500CB-04230-DR-EL-0097.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0097.pdf) | C | Physical layout/equipment list, not a primary connectivity source |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0100.pdf",
+      "sha256": "867d6f3744c246f3dad4bfb0d788a00bb4615c0019391e71a23d787e0e93baca",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D12",
+          "source_table_row": "| D12 | [500CB-04230-DR-EL-0100.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0100.pdf) | 5 | LV extension from MC428; beyond final first LV endpoint |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0142.pdf",
+      "sha256": "a15c6d45daac1b36cea13d7a291a8c75290e0bbaec983f38478db77f63fbeabc",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D09",
+          "source_table_row": "| D09 | [500CB-04230-DR-EL-0142.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0142.pdf) | 6 | Same LV bus continuation; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0143.pdf",
+      "sha256": "3919b3f8d8aead7f4937c397e816662d883d336fd27e98cb8e9b903589191cf1",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D15",
+          "source_table_row": "| D15 | [500CB-04230-DR-EL-0143.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0143.pdf) | 3 | LV bus continuation; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0145.pdf",
+      "sha256": "dabad75414d54dd836aa25e9eb0a4cf1f17f0573961f6bb4d9b145ec2db03328",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D17",
+          "source_table_row": "| D17 | [500CB-04230-DR-EL-0145.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0145.pdf) | 7 | LV bus continuation; outgoing LV circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0146.pdf",
+      "sha256": "74d367e6b52ec94a7e5e89ba8a659f76cd3496803350a27deff3f039e3b745ff",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D20",
+          "source_table_row": "| D20 | [500CB-04230-DR-EL-0146.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0146.pdf) | 4 | TF440 and separate delta/star LV incomers/buses |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0147.pdf",
+      "sha256": "869f2f7245208e3c11d7c38911b20a74441dcafeb8fc211d819e0ba7a84f39a8",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D21",
+          "source_table_row": "| D21 | [500CB-04230-DR-EL-0147.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0147.pdf) | 5 | TF443 and separate delta/star LV incomers/buses |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0148.pdf",
+      "sha256": "b4c817e1cd91b17999fe1843fbfac9cb22d1b72cef65b027ed0246dd61b3e037",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D25",
+          "source_table_row": "| D25 | [500CB-04230-DR-EL-0148.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0148.pdf) | 2 | Protective earth/bonding reference; no inferred phase-earth through connection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0149.pdf",
+      "sha256": "2ae8a71d16dce47e030750dc5d86b5808d94d46d3c27e5d2d2b3e04ba92a7e0f",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D26",
+          "source_table_row": "| D26 | [500CB-04230-DR-EL-0149.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0149.pdf) | 3 | Protective earth/bonding reference; no inferred phase-earth through connection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0198.pdf",
+      "sha256": "9a290d49a5f19b25901aeb78f0bc8c9c82cda0efff8ff3d41f83888c9e345965",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D23",
+          "source_table_row": "| D23 | [500CB-04230-DR-EL-0198.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0198.pdf) | 1 | Auxiliary 400 V extension from MC426 beyond first LV endpoint |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0209.pdf",
+      "sha256": "2cad2cc5453b0ea68f8b2047f844ac84a407fa75a87b86ae1aeade7978e3617f",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D22",
+          "source_table_row": "| D22 | [500CB-04230-DR-EL-0209.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0209.pdf) | 2 | LV bus continuation; outgoing/future drive circuits excluded |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0933.pdf",
+      "sha256": "554a79546f88f4cbef87b41781b7bae1d5a016d1d8f93d235cb872c8bfe78f2e",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D27",
+          "source_table_row": "| D27 | [500CB-04230-DR-EL-0933.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0933.pdf) | 1 | Protective earth additions; no inferred phase-earth through connection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0936.pdf",
+      "sha256": "727448c03e74225d0157da5383a1bb584412ada3cc59525820d1fda116180959",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D28",
+          "source_table_row": "| D28 | [500CB-04230-DR-EL-0936.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0936.pdf) | 2 | Protective earth additions; no inferred phase-earth through connection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0937.pdf",
+      "sha256": "56861444e8587a43c037270134e1cf5cefd91a51f6e6d4f59c5b0103d6ee0bbe",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D29",
+          "source_table_row": "| D29 | [500CB-04230-DR-EL-0937.pdf](../../drawings/Asset%20Drawing%20Repo/500CB-04230-DR-EL-0937.pdf) | 2 | Protective earth additions; no inferred phase-earth through connection |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CB-07100-DR-EL-0022.pdf",
+      "sha256": "3efaa58f284c257386f4ac31645156e4ffa4481621c721312bd39cf9898f71a5",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/500CBC0002-13015-DR-EL-0001.pdf",
+      "sha256": "8b1a170a446450bf2d5ed3e6ff0e7ddee94f9bbeb10988f4aac58f61f4a72df7",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/power-station-review.md",
+          "source_id": "PS1",
+          "source_table_row": "| PS1 | `500CBC0002-13015-DR-EL-0001.pdf`, **Cloudbreak power station power distribution single line diagram** | 3, 18 July 2022, entry \"UPDATED AS PER REDLINES\" | Page 1; SB01 in rows A-C; tie in C-E; SB02 in E-G; title/history in H |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/520CBC0007-2130-DR-EL-0003.pdf",
+      "sha256": "d6f3cd896c228f9dd8f0947260f32417db4873ee6e75a9074fb7eb7838f073ca",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/520CBC0007-2130-DR-EL-0004.pdf",
+      "sha256": "79f55c7302450c6efd9db5aefaee303004d7bf6f9b22eaaa82a865db5c698df1",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0001.pdf",
+      "sha256": "7c4d73cab218170c24b46d9dc8d6014ee675523794278748dc4d594bd51b7560",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0002.002.pdf",
+      "sha256": "6f0d75196119508f2258d302e8092248bb344e440b71da1a185d6daf92e22cab",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.001.pdf",
+      "sha256": "d4a1199cd1c22661d4119f37da747d088315a9a896f56e50c2ce6d3942d71a2a",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.002.pdf",
+      "sha256": "70f032132819d6c66b1c1ba46589f07dbf26e7f841fd6a873e256165efc964d5",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.003.pdf",
+      "sha256": "4b052f0a6bcde7a618ec522b66dfc946d1937b51712518872dc3a6b78d21e7f1",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0003.004.pdf",
+      "sha256": "903897e805cb04d9f9cf248f1f972479e9f6b14b5a787b7ae90775c9a0b2b058",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0004.pdf",
+      "sha256": "b456480c13831f2ba916862ac46a57e538f71ab2b3e22d388b0ce9dd94ec115e",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0005.pdf",
+      "sha256": "84ca8f231e34b00ec99a96d262df60662dd4849014fb253c6d219c9417cffb2e",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0010.pdf",
+      "sha256": "cd77222ad84e15a9ca13d2120994db03be9765ed1a923595bc17bacca4a2795f",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S11",
+          "source_table_row": "| C1-S11 | `CB-10016-DR-EL-0010.pdf` | 0, 27/10/25 | 1 | OPF overview sheet 1; SW435/SR435 panel at upper right, A-C, columns 7-12 |"
+        },
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S10",
+          "source_table_row": "| C2-S10 | `CB-10016-DR-EL-0010.pdf` | 0 / 27/10/25 / issued for use, site verification and comments amended | OPF overview sheet 1: SW435 at upper right; SW002/HPGR at middle right |"
+        },
+        {
+          "review": "drawing-review/areas/stockpile-wet-plant-review.md",
+          "source_id": "SW-S24",
+          "source_table_row": "| SW-S24 | `CB-10016-DR-EL-0010.pdf` | 0; 27.10.25; ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025 | 1 | Overview; SW454 panel C-E / 1-4; SW505 panel E-G / 1-4; SW411 feeder B / 1 |"
+        },
+        {
+          "review": "drawing-review/areas/sw411-review.md",
+          "source_id": "W2",
+          "source_table_row": "| W2 | [CB-10016-DR-EL-0010.pdf](../../drawings/Asset%20Drawing%20Repo/CB-10016-DR-EL-0010.pdf) | Rev 0, 27 October 2025 | Page 1; upper-left SW411 Bus A, lower-left notes; overview sheet 1 of 2 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-1-review.md",
+          "source_id": "C1-S10",
+          "source_table_row": "| C1-S10 | `CB-10016-DR-EL-0011.pdf` | 0, 27/10/25 | 1 | OPF overview sheet 2; SW431/SS431 panel in B-D, columns 3-6; main feeder at upper left/middle |"
+        },
+        {
+          "review": "drawing-review/areas/desands-laboratory-review.md",
+          "source_id": "D00",
+          "source_table_row": "| D00 | [CB-10016-DR-EL-0011.pdf](../../drawings/Asset%20Drawing%20Repo/CB-10016-DR-EL-0011.pdf) | 0 | Overview index and Desands/laboratory comparison; not isolation authority |"
+        },
+        {
+          "review": "drawing-review/areas/screening-review.md",
+          "source_id": "SC-S09",
+          "source_table_row": "| SC-S09 | `CB-10016-DR-EL-0011.pdf` | 0, 27/10/25; revision entry says ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp dated 27/10/2025 | 1 | Overview sheet 2; SW411 tier 15 feeder B / 5; SS421 panel E-G / 6-8; overview-use notes lower left |"
+        },
+        {
+          "review": "drawing-review/areas/sw411-review.md",
+          "source_id": "W3",
+          "source_table_row": "| W3 | [CB-10016-DR-EL-0011.pdf](../../drawings/Asset%20Drawing%20Repo/CB-10016-DR-EL-0011.pdf) | Rev 0, 27 October 2025 | Page 1; upper-left SW411 Bus B, lower-left notes; overview sheet 2 of 2 |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB095-02004-DR-EL-0014.pdf",
+      "sha256": "3a09026e0ff79e40cd435f83bc7d706b7608855966b21c64745fd435c95d88eb",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB095-02004-DR-EL-0015.pdf",
+      "sha256": "609f3b71783a723eb2f441d57b46a713a9aa2838b87f3ee1a57a4ad9e7b0a0bb",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB112-02006-DR-EL-0005.pdf",
+      "sha256": "cf0a90d1084d427c995a8ebe20406d29e61fefbcb478d2fe455a5563acb82939",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/crushing-2-hpgr-review.md",
+          "source_id": "C2-S09",
+          "source_table_row": "| C2-S09 | `CB112-02006-DR-EL-0005.pdf` | 7 / 28.01.25 / AS FOUND 23.10.23 | Complete HPGR HV supply SLD: JB001/TF001 left; SW002 top; TF003/004/002 and drives/MCC below |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0044.pdf",
+      "sha256": "2557e6b469fd787807e0c0157b37e781a912fd416f232f6fcee35f31d24813f6",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0045.pdf",
+      "sha256": "3a7531b638c94ae8fb76c014568f750619a1fb6d5149dbf28722e9694b38b1bd",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0046.pdf",
+      "sha256": "115a5350686bba9cb463ca7e99b8e34956280eea2955a5afa8dc728d99caa2a8",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB17OP023A-04057-DR-EL-0004.pdf",
+      "sha256": "4f4d4f95c4429a45587642444c285ddf47a084b0f63e1974a5a9a7d7b341ee7f",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0001.pdf",
+      "sha256": "2fafa3bd57d8706a0c7ad592b3f961bbc2f3d91915cb04224df573fe088f09d8",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0002.pdf",
+      "sha256": "464bcb180e36cc61f2db002cace3c4c27260fd0a5c7261d3ed50b66f32e6c1e6",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0003.pdf",
+      "sha256": "1bc5dccbb140bc863d8e99ae60fb775fa9b88c553e3b9d6a1e6ca05129a89166",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0004.pdf",
+      "sha256": "1143b7931bf8843f76b03a0965d8e1ae4d3d70bd242406435d712ba7ed7a3434",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0041.pdf",
+      "sha256": "eb7f9cc260f112110bd92626251afe0790c9e70980612aed5cd7c6a85eb2c172",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0001.pdf",
+      "sha256": "829c088a3e21390201c627495f5d98e9633c91974894d07657911099bec2ed4e",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0002.pdf",
+      "sha256": "7ede7a5edfa8c7cb42a07d0557c544e6d4b073eef192c8aaaf0480a49d32370a",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0003.pdf",
+      "sha256": "508bad1e6a9d24762dd083fac9c55723c21b89cc23224f359205002ed77785f2",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0004.pdf",
+      "sha256": "6bfb649b99c5d08f96277b5acd85630d6215cc840f536165bd0c531dac9c3c71",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0005.pdf",
+      "sha256": "af5b30aa11f9dc96329c0ae012f62c930d5a04dbfde303bf6adb0dee18116df3",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0001.pdf",
+      "sha256": "faa247739343fd032d5388dc6103a3ee0453c531397a65b22da3d6b40a0531b6",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0002.pdf",
+      "sha256": "cda8f95b922210ae75f0d2e05016a12e05151c51336a8e7b725be71a5ded21da",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0003.pdf",
+      "sha256": "b827f108461f1b0bad2cdb0798f1331f9a2a184dc852555b9fbeb9cfc2fe5353",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0004.pdf",
+      "sha256": "04117257c37d9e0e1a00ad87556c357252279d0f2c1f36b2578b5db9a5b20843",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0005.pdf",
+      "sha256": "00c543d446144b86f3ef48f66000cfd8ed8c9925ceef232f8cfd63f59065eb26",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0153.pdf",
+      "sha256": "1b7e98827f544c532fa071433b49dfbbbafd83e40e17b8ddd54f1fe2f27277f8",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CB21OP055B-10016-DR-EL-0089.pdf",
+      "sha256": "a29fa147e05e9d13b40fee274bfe97134a97ed788f2c54581b3861a4af260aa9",
+      "page_count": 1,
+      "disposition": "Source table recorded; see cited review for inspected scope and limitations",
+      "duplicate_of": null,
+      "area_review_sources": [
+        {
+          "review": "drawing-review/areas/power-station-review.md",
+          "source_id": "PL1",
+          "source_table_row": "| PL1 | `CB21OP055B-10016-DR-EL-0089.pdf`, **Cloudbreak 33 kV powerline general arrangement single line diagram** | 0, 10 June 2022, \"ISSUED FOR CONSTRUCTION\" | Page 1; AMR line in C-D; IOP line in E-G; legend/notes in A-D at right; title/history in H |"
+        }
+      ],
+      "model_acceptance": "Unconfirmed"
+    },
+    {
+      "path": "drawings/Asset Drawing Repo/CBC0012-02004-DR-EL-0007.pdf",
+      "sha256": "2601c813a839c2a3d9752721e0a217485b36d3668cf7ef5d23f743a2fd8baf50",
+      "page_count": 1,
+      "disposition": "Awaiting visual classification and topology review",
+      "duplicate_of": null,
+      "area_review_sources": [],
+      "model_acceptance": "Unconfirmed"
+    }
+  ]
+}

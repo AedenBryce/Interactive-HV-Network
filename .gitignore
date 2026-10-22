@@ -8,6 +8,7 @@ __pycache__/
 *.pyc
 drawings/
 output/
+tmp/
 test-results/
 playwright-report/
 .env
