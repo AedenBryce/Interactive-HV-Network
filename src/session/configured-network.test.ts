@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, preConfigurationNetworkModel } from '../models/site/current-network';
+import { ownerConfiguredNetworkModel, preConfigurationNetworkModel } from '../models/site/current-network';
 import { contactPosition } from './mechanisms';
 
-describe('current owner-configured whole network', () => {
+describe('immutable first owner-configured whole network', () => {
   it('distributes the selected baseline and local controls as a new format2 package while preserving the old package', () => {
     const old = new SimulationSession(preConfigurationNetworkModel).saveScenario();
-    const session = new SimulationSession(currentNetworkModel); const snapshot = session.snapshot();
+    const session = new SimulationSession(ownerConfiguredNetworkModel); const snapshot = session.snapshot();
     expect(snapshot.model.version).toBe('construction-2026-10-23.2');
     expect(session.saveScenario().formatVersion).toBe(2);
     expect(snapshot.model.assets).toHaveLength(680);

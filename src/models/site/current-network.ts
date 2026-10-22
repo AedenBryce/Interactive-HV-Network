@@ -13,14 +13,20 @@ import { withOwnerSw411Feeds } from './owner-sw411-feeds';
 import { withOwnerRemovableBreakers } from './owner-removable-breakers';
 import { withOwnerSw411LocalRules } from './owner-sw411-local-rules';
 import { withOwnerStartingConfiguration } from './owner-starting-configuration';
+import { withCurrentConfigurationNotes } from './configuration-review-notes';
+import { withOwnerAdditionalInterlocks } from './owner-additional-interlocks';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
 export const preConfigurationNetworkModel = buildCurrentNetworkModel();
 const configuredVersion = 'construction-2026-10-23.2';
-export const currentNetworkModel = withOwnerStartingConfiguration(
+export const ownerConfiguredNetworkModel = withOwnerStartingConfiguration(
   withOwnerSw411LocalRules(withOwnerRemovableBreakers(preConfigurationNetworkModel, configuredVersion), configuredVersion),
   configuredVersion,
+);
+const interlockVersion = 'construction-2026-10-23.3';
+export const currentNetworkModel = withOwnerAdditionalInterlocks(
+  withCurrentConfigurationNotes(ownerConfiguredNetworkModel, interlockVersion), interlockVersion,
 );
 
 function buildCurrentNetworkModel() {
