@@ -1,0 +1,692 @@
+{
+  "reviewDate": "2026-10-23",
+  "modelId": "site-whole-network",
+  "modelVersion": "construction-2026-10-23.6",
+  "status": "Unconfirmed; proposed teaching policy only",
+  "proposal": "Treat exactly these series fuse paths as intact fixed phase conductors in V1, without fuse removal/blown actions. This would select simulation continuity, not establish actual fuse condition, ratings, installed identities, earth paths or operational permission.",
+  "count": 31,
+  "assets": [
+    {
+      "assetId": "hpgr:sw002:a02:f1",
+      "label": "A02 F1 · 225 A continuity unconfirmed",
+      "conductivePairs": [
+        [
+          "hpgr:sw002:a02:f1:a",
+          "hpgr:sw002:a02:f1:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF003-FUSE"
+      ],
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 6, F1"
+        }
+      ]
+    },
+    {
+      "assetId": "hpgr:sw002:a04:f1",
+      "label": "A04 F1 · 225 A continuity unconfirmed",
+      "conductivePairs": [
+        [
+          "hpgr:sw002:a04:f1:a",
+          "hpgr:sw002:a04:f1:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF002-FUSE"
+      ],
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 9, F1"
+        }
+      ]
+    },
+    {
+      "assetId": "hpgr:sw002:tf004:f101",
+      "label": "TF004 feeder · F101 40 A continuity unconfirmed",
+      "conductivePairs": [
+        [
+          "hpgr:sw002:tf004:f101:a",
+          "hpgr:sw002:tf004:f101:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF004-F101"
+      ],
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 7-8, F101"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:mc507:phase-fuse",
+      "label": "3000 A phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "sw505:mc507:phase-fuse:in",
+          "sw505:mc507:phase-fuse:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-MC507-PHASE-FUSE"
+      ],
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0037.pdf",
+          "revision": "5 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 5-8, phase fuse arrangement above incoming breaker"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:mc508:phase-fuse",
+      "label": "3000 A phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "sw505:mc508:phase-fuse:in",
+          "sw505:mc508:phase-fuse:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-MC508-PHASE-FUSE"
+      ],
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0045.pdf",
+          "revision": "9 (14.10.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 5-8, phase fuse arrangement above incoming breaker"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:mc417:m1:rc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h1:mc417:m1:rc:fuse:a",
+          "wh:h1:mc417:m1:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h1:mc417:m1:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:mc417:m1:fc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h1:mc417:m1:fc:fuse:a",
+          "wh:h1:mc417:m1:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h1:mc417:m1:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:mc417:m2:rc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h1:mc417:m2:rc:fuse:a",
+          "wh:h1:mc417:m2:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h1:mc417:m2:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:mc417:m2:fc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h1:mc417:m2:fc:fuse:a",
+          "wh:h1:mc417:m2:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h1:mc417:m2:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:mc418:m1:rc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h7:mc418:m1:rc:fuse:a",
+          "wh:h7:mc418:m1:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h7:mc418:m1:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:mc418:m1:fc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h7:mc418:m1:fc:fuse:a",
+          "wh:h7:mc418:m1:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h7:mc418:m1:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:mc418:m2:rc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h7:mc418:m2:rc:fuse:a",
+          "wh:h7:mc418:m2:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h7:mc418:m2:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:mc418:m2:fc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h7:mc418:m2:fc:fuse:a",
+          "wh:h7:mc418:m2:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h7:mc418:m2:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:mc419:m1:rc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h9:mc419:m1:rc:fuse:a",
+          "wh:h9:mc419:m1:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h9:mc419:m1:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:mc419:m1:fc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h9:mc419:m1:fc:fuse:a",
+          "wh:h9:mc419:m1:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h9:mc419:m1:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:mc419:m2:rc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h9:mc419:m2:rc:fuse:a",
+          "wh:h9:mc419:m2:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h9:mc419:m2:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:mc419:m2:fc:fuse",
+      "label": "Phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h9:mc419:m2:fc:fuse:a",
+          "wh:h9:mc419:m2:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h9:mc419:m2:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 7-11, fused FC/RC paths"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:f1",
+      "label": "F1\n800 A fuse · condition unconfirmed",
+      "conductivePairs": [
+        [
+          "rm412:f1:in",
+          "rm412:f1:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SV-RM412-F1"
+      ],
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 1-3, F1 800A fuse"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:f2",
+      "label": "F2\n800 A fuse · condition unconfirmed",
+      "conductivePairs": [
+        [
+          "rm412:f2:in",
+          "rm412:f2:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SV-RM412-F2"
+      ],
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 1-3, F2 800A fuse"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:mc420:motor-01:rc:fuse",
+      "label": "Tier1 · fuse200A",
+      "conductivePairs": [
+        [
+          "rm420:mc420:motor-01:rc:fuse:in",
+          "rm420:mc420:motor-01:rc:fuse:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "H10-MOTOR-01-rc-FUSE"
+      ],
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0004.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-C / 7-8, tier1 FUS200A"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:mc420:motor-01:fc:fuse",
+      "label": "Tier2 · fuse200A",
+      "conductivePairs": [
+        [
+          "rm420:mc420:motor-01:fc:fuse:in",
+          "rm420:mc420:motor-01:fc:fuse:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "H10-MOTOR-01-fc-FUSE"
+      ],
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0004.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-C / 7-8, tier2 FUS200A"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:mc420:motor-02:rc:fuse",
+      "label": "Tier3 · fuse200A",
+      "conductivePairs": [
+        [
+          "rm420:mc420:motor-02:rc:fuse:in",
+          "rm420:mc420:motor-02:rc:fuse:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "H10-MOTOR-02-rc-FUSE"
+      ],
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0004.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-C / 9-11, tier3 FUS200A"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:mc420:motor-02:fc:fuse",
+      "label": "Tier4 · fuse200A",
+      "conductivePairs": [
+        [
+          "rm420:mc420:motor-02:fc:fuse:in",
+          "rm420:mc420:motor-02:fc:fuse:out"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "H10-MOTOR-02-fc-FUSE"
+      ],
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0004.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-C / 9-11, tier4 FUS200A"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h3:mc416:m1:rc:fuse",
+      "label": "RC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h3:mc416:m1:rc:fuse:a",
+          "wh:h3:mc416:m1:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h3:mc416:m1:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0166",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: B-D / 7-8, tiers 2/3, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h3:mc416:m1:fc:fuse",
+      "label": "FC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h3:mc416:m1:fc:fuse:a",
+          "wh:h3:mc416:m1:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h3:mc416:m1:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0166",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: B-D / 7-8, tiers 2/3, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h3:mc416:m2:rc:fuse",
+      "label": "RC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h3:mc416:m2:rc:fuse:a",
+          "wh:h3:mc416:m2:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h3:mc416:m2:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0166",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: B-D / 10-11, tiers 4/5, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h3:mc416:m2:fc:fuse",
+      "label": "FC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h3:mc416:m2:fc:fuse:a",
+          "wh:h3:mc416:m2:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h3:mc416:m2:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0166",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: B-D / 10-11, tiers 4/5, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h8:mc416:m1:rc:fuse",
+      "label": "RC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h8:mc416:m1:rc:fuse:a",
+          "wh:h8:mc416:m1:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h8:mc416:m1:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023D-01006-DR-EL-0002",
+          "revision": "2 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 7-8, tiers 2/3, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h8:mc416:m1:fc:fuse",
+      "label": "FC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h8:mc416:m1:fc:fuse:a",
+          "wh:h8:mc416:m1:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h8:mc416:m1:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023D-01006-DR-EL-0002",
+          "revision": "2 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 7-8, tiers 2/3, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h8:mc416:m2:rc:fuse",
+      "label": "RC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h8:mc416:m2:rc:fuse:a",
+          "wh:h8:mc416:m2:rc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h8:mc416:m2:rc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023D-01006-DR-EL-0002",
+          "revision": "2 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 10-11, tiers 4/5, 100A phase fuses"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h8:mc416:m2:fc:fuse",
+      "label": "FC phase fuse\nContinuity unconfirmed",
+      "conductivePairs": [
+        [
+          "wh:h8:mc416:m2:fc:fuse:a",
+          "wh:h8:mc416:m2:fc:fuse:b"
+        ]
+      ],
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "wh:h8:mc416:m2:fc:fuse:continuity"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023D-01006-DR-EL-0002",
+          "revision": "2 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 10-11, tiers 4/5, 100A phase fuses"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Remaining HPGR and RM412 mechanism questions
 
+**Historical preparation record.** Owner answers62–70 subsequently select all named mechanisms and complete V1 local profiles. See [the exact decisions](owner-interlocks-review.md) and immutable `construction-2026-10-23.6`. The unanswered-mechanism wording below records the earlier source review; it is not a request to repeat those owner decisions. Converter transfer, stored energy/discharge, fuse condition, source/earth claims and unrelated tag/rating discrepancies remain separate.
+
 Read-only review of committed2398a2c and existing source-review captures,23October2026. These are construction associations and drawing references, not physical action permissions. Owner49 defers only the named key/door/inching sequences. Complete local profiles remain **Unconfirmed**.
 
 ## HPGR — P10
