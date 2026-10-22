@@ -2,7 +2,7 @@
 
 A local browser application for understanding represented network connections and downstream switching impacts.
 
-**Current models: synthetic demonstrations only.** The site network has not been implemented or accepted. Source drawings are being reviewed separately. The application reports connectivity, without electrical calculations or operational isolation authorisation.
+**Current models: synthetic demonstrations, 13 provisional site areas and an assembled whole-network construction.** The construction is available for inspection; remaining discrepancies, starting configuration and owner acceptance remain open. The application reports connectivity, without electrical calculations or operational isolation authorisation.
 
 ## Run locally
 
@@ -17,7 +17,7 @@ Open the local URL printed by Vite, normally `http://127.0.0.1:5173/`.
 
 Select CB-01 on the diagram or in the asset list. Choose **Open**, then select **LV bus**: its source connectivity becomes **No source connection**. Close CB-01 to restore the represented connection. Selection also works with Tab and Enter. These fixture positions are fictional software examples, not installed-equipment evidence.
 
-Use **Demonstration model** to explore additional examples. Changing demonstration model starts its configuration again.
+Use **Model** to select an example or site construction area. Changing the model starts its recorded configuration again.
 
 - **Synthetic alternate supplies:** open CB-01 and inspect the LV bus. Source B supplies it through the bus tie or loop link. Select a source-path explanation to highlight it. Select Source B to disable its availability; device positions are retained. Inspect **Last action impacts** for changes to connectivity and routes. The listed paths are examples; the route-change calculation also accounts for alternate paths that are not the displayed example.
 - **Synthetic earth connections:** open CB-01, close ES-01 and inspect the LV bus. Its earth connection is shown independently of its source connection. Closing CB-01 while ES-01 remains closed reports a source-to-earth conflict. This fictional fixture does not define a prohibiting interlock. The separate LV bus does not receive a source through a shared earth group.
@@ -27,6 +27,16 @@ Use **Demonstration model** to explore additional examples. Changing demonstrati
 - **Synthetic positions and windings:** set the device to Isolated and inspect LV bus A. Disable both fictional sources before selecting Earthed. Inspect the transformer's explicitly declared source-transfer and earth-continuity relationships. LV bus B has no transfer represented in this fixture.
 
 Use the diagram's overview/detail buttons and cross-view connection links to navigate. Drag or use the pan controls; zoom with the buttons or use **Fit view**. Focus the diagram for arrow keys, +/− and Home. Navigation does not change the electrical scenario.
+
+## Inspect the site construction models
+
+Select **Whole network · construction / owner review pending** to inspect the assembled package. Its overview has 13 area cards that open detailed views. Use **Find view** to filter its 123 views; **Clear view search** restores the list. The [construction guide](docs/whole-network-construction.md) records cross-area joins and scoped owner confirmations. The [owner review packet](docs/model-owner-review.md) records remaining decisions.
+
+Separate area packages include SW411, the station/33 kV line, Crushing 1, Crushing 2/HPGR, Screening, Desands/laboratory, Stockpile/wet plant, Train loading, CV006, Western hoppers, Services, Hopper10 and Mine/camp. Select an area, open a detail view and select an asset to inspect its identity, drawing aliases, source references and open questions. Long view lists scroll within their navigation panel. Separate areas retain their original drawing interpretations; owner corrections recorded in the assembled package do not rewrite those historical area packages.
+
+These packages are labelled **Site model under construction — Not owner accepted**. Actual starting positions and source availability remain unconfirmed. Unresolved physical interlocks disable the affected switching controls. Missing LV endpoints, disputed source connections and transformer relationships remain visible review matters; they are not silently treated as accepted connections or disconnected equipment. The synthetic examples demonstrate switching while those installed-network facts await confirmation.
+
+The [implementation progress](docs/implementation-progress.md) records the completed area slices and remaining whole-network acceptance work. The [drawing coverage register](drawing-review/coverage.md) records dispositions for all 141 supplied PDFs; that count does not establish installed-network correctness.
 
 The development server binds to the local machine. There is no backend, account, external API or PDF dependency in the application.
 

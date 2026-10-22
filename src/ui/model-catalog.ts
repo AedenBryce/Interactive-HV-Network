@@ -16,6 +16,7 @@ import { westernHoppersModel } from '../models/site/western-hoppers';
 import { hopper10Model } from '../models/site/hopper-10';
 import { mineCampModel } from '../models/site/mine-camp';
 import { servicesModel } from '../models/site/services';
+import { wholeNetworkModel } from '../models/site/whole-network';
 import { singleSupplyLayout, alternateLayout, earthLayout } from './diagram';
 import type { DiagramLayout, DiagramPresentation, DiagramView } from './diagram';
 import type { NetworkModel } from '../session/model';
@@ -71,4 +72,4 @@ diagramPresentations[relationshipsFixture.id] = { overviewId: 'overview', views:
 // Adding diagram organisation creates a distinct immutable package version.
 export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture, relationshipsFixture].map(model => ({ ...model, version: `${model.version}-presentation.1`, presentation: diagramPresentations[model.id] }));
 
-export const models: NetworkModel[] = [...demonstrations, sw411Model, powerStationModel, crushing1Model, crushing2HpgrModel, screeningModel, desandsLaboratoryModel, stockpileWetPlantModel, trainLoadingModel, cv006Model, westernHoppersModel, servicesModel, hopper10Model, mineCampModel];
+export const models: NetworkModel[] = [...demonstrations, wholeNetworkModel, sw411Model, powerStationModel, crushing1Model, crushing2HpgrModel, screeningModel, desandsLaboratoryModel, stockpileWetPlantModel, trainLoadingModel, cv006Model, westernHoppersModel, servicesModel, hopper10Model, mineCampModel];
