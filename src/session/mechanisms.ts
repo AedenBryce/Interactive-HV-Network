@@ -17,12 +17,13 @@ export const isIndependentState = (state: DeviceState | undefined): state is Ind
 export const isBreakerState = isIndependentState;
 
 type MechanismDeclaration = { mainPair: [string, string] };
-export type RemovableMechanismFields = { removableBreaker?: MechanismDeclaration; removableContactor?: MechanismDeclaration };
-export type RemovableMechanism = MechanismDeclaration & { kind: 'breaker' | 'contactor' };
+export type RemovableMechanismFields = { removableBreaker?: MechanismDeclaration; removableContactor?: MechanismDeclaration; removableDisconnector?: MechanismDeclaration };
+export type RemovableMechanism = MechanismDeclaration & { kind: 'breaker' | 'contactor' | 'disconnector' };
 
 export function getRemovableMechanism(asset: RemovableMechanismFields | undefined): RemovableMechanism | undefined {
   if (asset?.removableBreaker) return { kind: 'breaker', ...asset.removableBreaker };
   if (asset?.removableContactor) return { kind: 'contactor', ...asset.removableContactor };
+  if (asset?.removableDisconnector) return { kind: 'disconnector', ...asset.removableDisconnector };
   return undefined;
 }
 

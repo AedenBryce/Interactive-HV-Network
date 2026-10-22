@@ -40,7 +40,7 @@ Whole-network V1 acceptance remains required. Synthetic examples and area slices
 | T24 | [#25 - Assemble the whole network and obtain model acceptance](https://github.com/AedenBryce/Interactive-HV-Network/issues/25) | Explore one connected whole-network model, review the accumulated discrepancies step by step and establish the owner-approved starting configuration and model version. | [#12](https://github.com/AedenBryce/Interactive-HV-Network/issues/12), [#13](https://github.com/AedenBryce/Interactive-HV-Network/issues/13), [#14](https://github.com/AedenBryce/Interactive-HV-Network/issues/14), [#15](https://github.com/AedenBryce/Interactive-HV-Network/issues/15), [#16](https://github.com/AedenBryce/Interactive-HV-Network/issues/16), [#17](https://github.com/AedenBryce/Interactive-HV-Network/issues/17), [#18](https://github.com/AedenBryce/Interactive-HV-Network/issues/18), [#19](https://github.com/AedenBryce/Interactive-HV-Network/issues/19), [#20](https://github.com/AedenBryce/Interactive-HV-Network/issues/20), [#21](https://github.com/AedenBryce/Interactive-HV-Network/issues/21), [#22](https://github.com/AedenBryce/Interactive-HV-Network/issues/22), [#23](https://github.com/AedenBryce/Interactive-HV-Network/issues/23), [#24](https://github.com/AedenBryce/Interactive-HV-Network/issues/24) |
 | T25 | [#26 - Deliver the accepted whole-network local application](https://github.com/AedenBryce/Interactive-HV-Network/issues/26) | Launch the local V1 with the accepted whole-network model and use switching, impacts, navigation, history and versioned scenario files without requiring the PDFs. | [#11](https://github.com/AedenBryce/Interactive-HV-Network/issues/11), [#25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25) |
 
-## Verification
+## Publication verification —22 October2026
 
 - All 25 issue bodies match the approved ticket criteria and published blocking references.
 - All 25 issues are open and labelled ready-for-agent.
@@ -49,3 +49,9 @@ Whole-network V1 acceptance remains required. Synthetic examples and area slices
 - Parent #1 has no native blocking or blocked-by relationship after verification.
 
 Machine-readable verification: [publication manifest](publication.json). Original approved drafts remain under drafts/ for reference; GitHub issues contain the published blocker issue numbers.
+
+## Current tracker status —23 October2026
+
+Read-only GitHub issue fetches confirm #2–#24 are closed, each with all published checklist items checked. #25 remains open with four checked and four unchecked criteria; #26 remains open with seven unchecked criteria. These are tracker states, not whole-model acceptance evidence. The publication statements above retain their original date.
+
+Current outstanding work is complete agreed coverage, remaining owner decisions, whole-diagram review, explicit immutable acceptance and delivery of that accepted model. See the [delivery verification record](../delivery-verification.md) and [implementation progress](../implementation-progress.md). The final full-suite run remains reserved until delivery is ready.

@@ -22,6 +22,10 @@ import { withOwnerHopperLocalProfiles } from './owner-hopper-local-profiles';
 import { withOwnerDriveLocalProfiles } from './owner-drive-local-profiles';
 import { withOwnerRmuThreePositionProfiles } from './owner-rmu-three-position-profiles';
 import { withOwnerRm714DriveOutputProfiles } from './owner-rm714-drive-output-profiles';
+import { withOwnerRmuSeparatedProfiles } from './owner-rmu-separated-profiles';
+import { withOwnerFixedRmuProfiles } from './owner-fixed-rmu-profiles';
+import { withOwnerHpgrLocalProfiles } from './owner-hpgr-local-profiles';
+import { withOwnerFinalControlProfiles } from './owner-final-control-profiles';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -43,8 +47,17 @@ export const expandedProfilesNetworkModel = withExpandedMechanismNotes(
   ), expandedVersion), expandedVersion), expandedVersion,
 );
 const rmuVersion = 'construction-2026-10-23.5';
-export const currentNetworkModel = withOwnerRm714DriveOutputProfiles(
+export const rmuProfilesNetworkModel = withOwnerRm714DriveOutputProfiles(
   withOwnerRmuThreePositionProfiles(expandedProfilesNetworkModel, rmuVersion), rmuVersion,
+);
+// Intermediate compositions are private. Only the final immutable package is distributed.
+export const currentNetworkModel = withOwnerFinalControlProfiles(
+  withOwnerFixedRmuProfiles(
+    withOwnerHpgrLocalProfiles(
+      withOwnerRmuSeparatedProfiles(rmuProfilesNetworkModel, 'construction-2026-10-23.6-stage1'),
+      'construction-2026-10-23.6-stage2',
+    ), 'construction-2026-10-23.6-stage3',
+  ), 'construction-2026-10-23.6',
 );
 
 function buildCurrentNetworkModel() {

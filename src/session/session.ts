@@ -16,7 +16,7 @@ import type { IndependentCommand, IndependentState } from './mechanisms';
 export type AssetConnectivity = Connectivity & EarthConnectivity & UncertaintyConnectivity;
 export type SessionChange =
   | { kind: 'device'; assetId: string; from: string | null; to: string }
-  | { kind: 'breaker' | 'contactor'; assetId: string; command: IndependentCommand; from: IndependentState; to: IndependentState }
+  | { kind: 'breaker' | 'contactor' | 'disconnector'; assetId: string; command: IndependentCommand; from: IndependentState; to: IndependentState }
   | { kind: 'source'; sourceId: string; from: boolean | null; to: boolean };
 export type SessionAction = SessionChange & { id: number };
 type ScenarioStates = { devices: DeviceStates; sources: SourceStates };
@@ -113,7 +113,7 @@ export class SimulationSession {
       if (!mechanism || !parsed.success || !isIndependentState(state)) return { ok: false, error: `Unsupported independent ${mechanism?.kind ?? 'breaker'} command for ${assetId}.` };
       const command = parsed.data;
       const option = evaluateInterlocks(this.#model, this.#devices, this.#sources)[assetId].actions!.find(action => action.command.kind === command.kind && action.command.value === command.value)!;
-      if (!option.allowed) return { ok: false, error: option.reason ?? `${mechanism.kind === 'breaker' ? 'Breaker' : 'Contactor'} action blocked.` };
+      if (!option.allowed) return { ok: false, error: option.reason ?? 'Switching is blocked by the represented interlock.' };
       if (state[command.kind] === command.value) return { ok: true };
       const next = { ...state, [command.kind]: command.value };
       this.#acceptChange({ kind: mechanism.kind, assetId, command, from: structuredClone(state), to: structuredClone(next) }, () => { this.#devices[assetId] = next; });

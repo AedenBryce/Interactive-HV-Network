@@ -36,7 +36,7 @@ export function validateInterlocks(model: ModelForInterlockValidation, error: (m
     if (condition.kind === 'device') {
       if ('position' in condition) {
         if (!isPosition(condition.assetId, condition.position)) error(`Interlock ${ruleId} references an unknown device or position: ${condition.assetId}/${condition.position}.`);
-      } else if (!model.assets.some(asset => asset.id === condition.assetId && getRemovableMechanism(asset))) error(`Interlock ${ruleId} axis predicate requires a removable breaker or contactor: ${condition.assetId}/${condition.axis}.`);
+      } else if (!model.assets.some(asset => asset.id === condition.assetId && getRemovableMechanism(asset))) error(`Interlock ${ruleId} axis predicate requires a removable mechanism: ${condition.assetId}/${condition.axis}.`);
     } else if (condition.kind === 'source') {
       if (!model.sources.some(source => source.id === condition.sourceId)) error(`Interlock ${ruleId} references unknown source ${condition.sourceId}.`);
     } else condition.conditions.forEach(child => checkCondition(child, ruleId));
@@ -51,7 +51,7 @@ export function validateInterlocks(model: ModelForInterlockValidation, error: (m
   for (const rule of rules) {
     if ('position' in rule) {
       if (!isPosition(rule.assetId, rule.position)) error(`Interlock ${rule.id} references an unknown target device or position.`);
-    } else if (!model.assets.some(asset => asset.id === rule.assetId && getRemovableMechanism(asset))) error(`Interlock ${rule.id} command target requires a removable breaker or contactor.`);
+    } else if (!model.assets.some(asset => asset.id === rule.assetId && getRemovableMechanism(asset))) error(`Interlock ${rule.id} command target requires a removable mechanism.`);
     if (!reviews.some(review => review.assetId === rule.assetId)) error(`Interlock ${rule.id} has no review record.`);
     if (!model.synthetic && rule.evidence.length === 0) error(`Interlock ${rule.id} requires evidence.`);
     checkCondition(rule.require, rule.id);

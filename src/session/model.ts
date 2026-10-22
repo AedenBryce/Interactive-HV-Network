@@ -18,6 +18,7 @@ const assetSchema = z.strictObject({
   earthPairs: z.array(pair).optional(),
   removableBreaker: z.strictObject({ mainPair: pair }).optional(),
   removableContactor: z.strictObject({ mainPair: pair }).optional(),
+  removableDisconnector: z.strictObject({ mainPair: pair }).optional(),
   positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
 });
 
@@ -70,7 +71,7 @@ export const modelSchema = z.strictObject({
   }
   for (const asset of model.assets) {
     const mechanism = getRemovableMechanism(asset);
-    if (asset.removableBreaker && asset.removableContactor) error(`Asset ${asset.id} cannot declare both removable breaker and contactor mechanisms.`);
+    if ([asset.removableBreaker, asset.removableContactor, asset.removableDisconnector].filter(Boolean).length > 1) error(`Asset ${asset.id} cannot declare multiple removable mechanisms.`);
     if (asset.sourceArcs !== undefined && (asset.positions.length > 0 || mechanism)) error(`Source arcs in ${asset.id} require a fixed asset without positions or a removable mechanism.`);
     for (const arc of asset.sourceArcs ?? []) {
       if (arc.from === arc.to || !asset.terminals.includes(arc.from) || !asset.terminals.includes(arc.to)) error(`Source arc ${arc.id} requires two distinct owned terminals in ${asset.id}.`);

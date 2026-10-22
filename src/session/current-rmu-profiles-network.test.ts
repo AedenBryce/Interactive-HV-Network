@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, expandedProfilesNetworkModel } from '../models/site/current-network';
+import { rmuProfilesNetworkModel as currentNetworkModel, expandedProfilesNetworkModel } from '../models/site/current-network';
 
 describe('current RMU and drive-output profile package', () => {
   it('composes only the additional selected reviews while retaining baseline and relationship claims', () => {
