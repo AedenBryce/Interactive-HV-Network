@@ -16,6 +16,8 @@ The follow-up scope answer below resolves the separately documented RM718 and wa
 
 ## Follow-up owner answers — 22 October 2026
 
+This table records the first follow-up answers and the questions they left open at that stage. The later endpoint clarification and water-source correction below supersede those pending entry/source/cable questions. Current remaining questions concern tags/document equivalence, retained physical mechanisms/interlocks, winding policies and the starting configuration.
+
 | Topic | Exact owner answer | Confirmed and unresolved |
 | --- | --- | --- |
 | RM713 connection | “RM721 does still feed RM713 and it is still connected at both ends. It connect at RM713 to SF RM713 IN01” | Confirms the current RM721 → SF RM713 IN01 route and both cable ends connected. The question asked about the former **RM712 IN01** route; this answer names **RM721**, so that former RM712 cable status remains **Unconfirmed** and has been asked separately. |
@@ -47,13 +49,13 @@ Source context: `11098-07110-EL-DR-2354.pdf`, revision9, page1 C–G/6 (tier5) a
 - `11098-07110-EL-DR-2256.pdf`, revision 3, page 1 C–D/4–7: RM721 IN02 names SS712/RM712 but prints reference2252. The supplied2252 identifies RM711, not RM712. The owner confirms the remote switch, without correcting the document reference or confirming a cable tag.
 - `11098-07110-EL-DR-2253.pdf`, revision 3, page 1 A–C/1–3: SF RM712 IN02 is drawn with SW426/2352 as its source. The new owner answer establishes RM721 at this input. Retain the former printed SW426 description as disputed source evidence; it does not establish a second simultaneous incoming cable.
 
-## Remaining connection questions
+## Historical connection questions and their dispositions
 
-1. Present status and end connection of the former RM712 IN01 → RM713 route. `11098-07110-EL-DR-2254.pdf`, revision 1, page 1 A–E/2–9 names RM721 as RM713's source and records “RM713 WAS SUPPLIED FROM RM712”.
-2. Current installed status of the explicitly disconnected TF712 LV cable and separate DG1/DG7 changeover supply to SW712. `11098-07110-EL-DR-2253.pdf`, revision 3, page 1 A–E/2–8.
+1. Former RM712 IN01 → RM713 route: **resolved** by “nothing is connected.” at RM712 IN01. RM721's separate cable to SF RM713 IN01 is confirmed at both ends. Original source difference: `11098-07110-EL-DR-2254.pdf`, revision 1, page 1 A–E/2–9.
+2. TF712 disconnected-cable/DG question: **resolved for connection and scope** by the direct SW712 incomer answer and exclusion of the MCS/DG assembly. Original source difference: `11098-07110-EL-DR-2253.pdf`, revision 3, page 1 A–E/2–8. No current MCS matrix or excluded-DG availability review is requested.
 3. RM721-to-RM712 cable tag and wrong-reference correction remain **Unconfirmed**. They do not invalidate the owner's explicit remote-switch answer.
 
-The RM712 changeover contact matrix, device positions, generator availability, transformer source/earth relationships and complete physical interlocks remain **Unconfirmed**. No new baseline or switching permission follows from the three answers.
+Retained device positions, source availability, transformer source/earth relationships and complete physical interlocks remain **Unconfirmed**. Excluded MCS/DG details are historical only. No baseline or switching permission follows from the connection answers.
 
 ## Historical `.15` implementation record
 
