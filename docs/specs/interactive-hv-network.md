@@ -26,7 +26,7 @@ The owner then selected this exact upstream cut:
 
 Retain SB01 F4 / TF11, SB02 F1 / TF12 and SB02 F4 / western TF04 from their feeder-breaker inputs. The separate SB01 spare transformer also labelled TF04 is excluded. This amendment supersedes station coverage requirements for the other feeders, including their station-side DB01/DB01B and TF03/village feeder details. It does not accept equipment states, source availability, winding relationships or physical interlocks.
 
-**Unconfirmed:** whether the mine-services and village/camp downstream networks are excluded from V1 or retained behind external boundaries. This question is pending with the owner; do not infer its answer from the upstream cut. Independently documented cross-boundary connections require explicit treatment. Historical construction `.11` precedes this boundary amendment. Current `.13` applies the confirmed station cut; downstream mine/camp remains provisionally represented pending the separate scope answer. Whole-network acceptance means acceptance within the owner's confirmed scope and remains pending.
+**Unconfirmed:** whether the mine-services and village/camp downstream networks are excluded from V1 or retained behind external boundaries. This question is pending with the owner; do not infer its answer from the upstream cut. Independently documented cross-boundary connections require explicit treatment. Historical construction `.11` precedes this boundary amendment. Current `.14` retains the station cut introduced in `.13`; downstream mine/camp remains provisionally represented pending the separate scope answer. Whole-network acceptance means acceptance within the owner's confirmed scope and remains pending.
 
 ## User Stories
 

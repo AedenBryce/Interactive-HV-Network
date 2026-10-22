@@ -236,3 +236,22 @@ The saved current package contains 900 assets, 895 connections, 510 null control
 - **Spec:** no actionable implementation defects in that increment. Review confirmed that unresolved downstream scope, baseline and owner acceptance remain gates. Separate historical area packages do not expand the current whole-model boundary.
 
 #25 and #26 remain open. No whole-model acceptance or agreed starting configuration has been recorded. No remote push, PR or GPT Site deployment is claimed.
+
+
+## Received MC413 detail (`.14`, #25 still open)
+
+Commit `db7a756` refines the existing MC413 endpoint from a successfully downloaded and visually inspected original PIMS source: `00151-CB-02006-DR-EL-1001`, revision 11, 14.11.25 IFC, one PDF page. Root and a separate source reviewer checked the complete page, incoming detail and PDF hash. The [source review](../drawing-review/supplemental/mc413-detail-review.md) records provenance, exact regions and the distinction between the principal revision, vendor revision and outgoing MC413A reference. The supplied 2350 overview was revisited for comparison; it is not a new original-source disposition. The original 141-file inventory remains unchanged.
+
+The page depicts CB MC413 IN 3000 A and the first 400 V / 3000 A / 50 kA for 1 sec phase bar. **Inference:** these captions and ratings are provisionally attached to existing MC413 assets. **Unconfirmed:** upstream RC001 / ref 2350 versus the RM413 detail, shortened/longer 1001 document-reference equivalence, installed revision precedence, complete positions/interlocks and winding policies. `SV-MC413-INSTALLED` stays open; `SV-Q08` no longer asks for an unavailable 1001 page. All existing electrical connections, transformer relationships, sources, earths, null states and unresolved interlocks are preserved. MC413A remains beyond the first-LV boundary.
+
+Current `.14` adds only evidence/review/caption refinement and one view, `supplemental/mc413-lv`: 128 views total. Its 900 assets, 895 connections, 510 null controls, 8 null sources and 350 coverage boundaries are unchanged from `.13`. The station scope is unchanged. Mine/camp disposition, baseline and model acceptance remain pending.
+
+### Checks and review
+
+- Two new public-session tests first failed against the no-op helper, then passed. Combined with seven current-package checks, all 9 targeted tests pass. They check unchanged electrical data/baseline, blocked controls, original-package preservation, navigation and self-contained historical scenarios.
+- Typecheck/production build pass: 753.61 kB application chunk / 220.76 kB gzip, with Vite's size advisory. The whole-goal full suite remains reserved for final delivery.
+- Chrome production preview at 1704 × 1214 displayed `.14`, the source-scoped MC413 detail, retained upstream navigation and disabled Open/Close controls. No warning/error console entries were returned. Saving produced an 8,291,581-byte self-contained scenario. Reopening that matching file reported restoration with reset enabled. No PDF is read by the runtime application.
+- **Standards:** no new hard violations or actionable Fowler heuristics in `7b50e40..db7a756`, within `d753765...db7a756`. The existing optional historical P3 remains.
+- **Spec:** no actionable findings in this increment. Source-supported printed content is distinguished from provisional installed binding; unresolved acceptance/configuration gates remain open.
+
+#25 and #26 remain open. This increment made source/endpoint-review progress; it did not accept the installed model or answer the pending mine/camp scope question.
