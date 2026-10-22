@@ -14,6 +14,20 @@ Sessions start from the agreed starting configuration and support undo and reset
 
 V1 acceptance requires the whole network and the owner's model acceptance. Incremental implementation does not reduce that scope.
 
+## Owner scope amendment — 22 October 2026
+
+The owner narrowed the station coverage after reviewing the proposed village connection:
+
+> Not relevant for the scope of this tool. The only feeders from SB01 and SB02 that are required are the ones from TF11, TF12 and TF-04. That should be the battery limits.
+
+The owner then selected this exact upstream cut:
+
+> At its SB01/SB02 feeder breaker, retaining that feeder and transformer but excluding station buses, generators and other feeders
+
+Retain SB01 F4 / TF11, SB02 F1 / TF12 and SB02 F4 / western TF04 from their feeder-breaker inputs. The separate SB01 spare transformer also labelled TF04 is excluded. This amendment supersedes station coverage requirements for the other feeders, including their station-side DB01/DB01B and TF03/village feeder details. It does not accept equipment states, source availability, winding relationships or physical interlocks.
+
+**Unconfirmed:** whether the mine-services and village/camp downstream networks are excluded from V1 or retained behind external boundaries. This question is pending with the owner; do not infer its answer from the upstream cut. Independently documented cross-boundary connections require explicit treatment. Current construction `.11` precedes this boundary amendment; applying it requires a new immutable package version. Whole-network acceptance means acceptance within the owner's confirmed scope and remains pending.
+
 ## User Stories
 
 1. As a network user, I want to see the whole modelled network, so that I can understand how its areas connect.

@@ -192,3 +192,26 @@ No actionable missing behavior, incorrect implementation or scope creep in the s
 
 Review summary: Standards 0 new hard/heuristic findings, 1 existing optional P3; Spec 0 actionable findings. GitHub #25 has four checked and four unchecked criteria and remains open. #26 remains open. No model acceptance, final delivery completion, remote push or production GPT Site deployment is claimed.
 
+
+## Further endpoint details, contactors and scoped owner decisions (`.11`)
+
+Commit `90b5663` records `site-whole-network` / `construction-2026-10-22.11`. Five additional visually inspected source pages extend Hopper 3/8 MV, Hopper 8 LV, Hopper 10 MC420A LV and CV006 MC410A. The source registers distinguish indexed captures from verified local PDFs and do not claim a successful original download or portal-byte equivalence where unconfirmed. These supplements are separate from the original 141-file inventory. Runtime exploration continues to use no PDFs.
+
+- Hopper 3 and Hopper 8 each retain separate source-scoped incoming devices, cable-side incoming earths and two motor groups with parallel fused RC/FC phase paths and independent maintenance earths. Their 6.6/6.9 kV discrepancy, fuse conditions and complete key/interlock mapping remain open.
+- MC420A now includes ACB01 MAIN SWITCH 2000 A and the first 415 VAC / 2600 A phase bar. MC410A now includes its 630 A incomer and first 415 V / 630 A phase bar, preserving the TF410B 433 V / 415 V discrepancy. The former runtime MC410A→MC410B bypass and outgoing MC410B circuit are excluded; historical packages and evidence remain intact. Removal rejects a source attached to excluded equipment or a retained interlock depending on it.
+- The schema and inspector now support **Contactor**. Exactly 24 evidenced RC/FC assets in the current clone receive this classification. Their terminals, conductive candidates, unknown positions and unresolved interlock reviews are preserved; historical area packages retain their original classification.
+- Owner response 7, exactly “confirmed”, records the current SW431-P-02 tie with CB SW435 FD02 at SW431 and CB SW431 FD02 at SW435. Response 8, exactly “It does”, confirms SB01 F1 through TF03 currently supplies RM711/the mine-services 22 kV line. Both records retain their full question context, owner/date and source references. These scoped confirmations do not accept states, source availability, complete interlocks, study overlaps or the whole model.
+
+The saved browser `.11` scenario verifies 1,007 assets, 580 null controls, 28 null sources, 365 coverage boundaries, 1,006 connections and 135 views. Its 17 cross-area joins comprise 9 supported, 2 provisional and 6 owner-confirmed; the 2 owner-confirmed selected 33 kV primary links are separate. All global acceptance/configuration gates remain open.
+
+### Checks
+
+Twenty targeted checks across the current package, western extension, Hopper 10 LV, CV006 LV and contactor session files passed together with one worker. The owner-feed regression first failed on the absent confirmation and then passed. Typecheck/production build passed: 739.72 kB minified application chunk, 217.36 kB gzip, with Vite's size advisory. The whole-goal full suite remains reserved for final delivery.
+
+Chrome at 1704 × 1214 on the built-only production preview verified the contactor inspector/blocked controls and Hopper 3 motor, Hopper 8 LV, MC420A and MC410A details. A matching `.11` scenario (9,167,858 bytes) reopened with “Scenario opened. Connectivity restored.” and reset enabled. Historical `.8` reopened against `.11` with both versions shown, view-only status and source changes/undo/reset disabled. Start current model restored `.11`. No warning/error console entries were returned. Large-model browser commands sometimes exceeded their initial response timeout; subsequent focused DOM reads confirmed the resulting state without restarting the server or repeating the action.
+
+### Review and subsequent scope amendment
+
+Separate Standards and Spec reviews of `d753765...90b5663` each identified the stale `.8` owner packet/current inventory as one P2 documentation finding; neither identified an electrical implementation defect in this increment. The existing optional P3 repeated-assignment cleanup in historical `.4` remains unchanged. The owner packet and construction guide are being corrected before the next review target is issued.
+
+The owner subsequently limited station coverage to TF11, TF12 and western TF04, beginning at their SB01/SB02 feeder breakers and retaining those feeders/transformers while excluding station buses, generators and other feeders. See the [scope amendment](specs/interactive-hv-network.md#owner-scope-amendment--22-october-2026). `.11` is the pre-amendment snapshot. Downstream mine/camp exclusion versus retention behind boundaries remains **Unconfirmed**, with a required question pending. The TF03 feeding fact remains recorded historically; it does not override the newer scope instruction. Station DB01/DB01B details are no longer active station-coverage requests under the amended scope. Boundary implementation requires a new immutable version. #25 and #26 remain open; no accepted baseline or whole-model acceptance is claimed.

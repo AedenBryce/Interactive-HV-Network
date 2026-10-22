@@ -4,6 +4,8 @@ A local browser application for understanding represented network connections an
 
 **Current models: synthetic demonstrations, 13 provisional site areas and an assembled whole-network construction.** The construction is available for inspection; remaining discrepancies, starting configuration and owner acceptance remain open. The application reports connectivity, without electrical calculations or operational isolation authorisation.
 
+**Pending scope change:** the owner states: “The only feeders from SB01 and SB02 that are required are the ones from TF11, TF12 and TF-04. That should be the battery limits.” This supersedes the earlier requirement for the other station feeders; DB01/DB01B and other excluded station feeders are no longer active detail requests. Current `.11` still contains the prior boundary. The owner has confirmed a cut at each retained SB01/SB02 feeder breaker, retaining the feeder and transformer while excluding station buses, generators and other feeders. Whether downstream mine/camp remains included is still unconfirmed; no answer is inferred. See the [scope amendment](docs/specs/interactive-hv-network.md#owner-scope-amendment--22-october-2026). `.11` is a prior-scope construction snapshot, not the final scope acceptance target.
+
 ## Run locally
 
 Prerequisites: Node.js 24 and pnpm 11. The dependency lockfile records the installed versions.
@@ -30,7 +32,11 @@ Use the diagram's overview/detail buttons and cross-view connection links to nav
 
 ## Inspect the site construction models
 
-Select **Whole network · construction / owner review pending** to inspect the assembled package. Its overview has 13 area cards that open detailed views. Use **Find view** to filter its 126 views; **Clear view search** restores the list. The [construction guide](docs/whole-network-construction.md) records cross-area joins, supplemental LV endpoints and scoped owner confirmations. The [owner review packet](docs/model-owner-review.md) records remaining decisions.
+Select **Whole network · construction / owner review pending** to inspect the assembled package. Its overview has 13 area cards that open detailed views. Use **Find view** to filter its 135 views; **Clear view search** restores the list. The [construction guide](docs/whole-network-construction.md) records cross-area joins, supplemental LV endpoints and scoped owner confirmations. The [owner review packet](docs/model-owner-review.md) records remaining decisions.
+
+Current package: **`site-whole-network` / `construction-2026-10-22.11`**, commit `90b5663`. The saved-package inventory is 1007 assets, 1006 connections, 580 controls with null starting positions, 28 sources with null availability, 365 coverage boundaries and 135 views. Its 17 cross-area joins comprise 9 supported drawing relationships, 2 provisional and 6 owner-confirmed; 2 owner-confirmed internal primary33 links are separate. The 24 explicitly depicted RC/FC phase devices are classified as contactors in this current package; historical area and `.4` snapshots retain their original classifications. Counts describe software content, not installed coverage or acceptance.
+
+Received supplemental pages now depict Hopper3 MV, Hopper8 MV/LV, Hopper10 MC420A LV and CV006 MC410A through its first LV bar. See the [western](drawing-review/supplemental/western-endpoints-review.md), [Hopper10](drawing-review/supplemental/hopper10-lv-review.md) and [MC410A](drawing-review/supplemental/cv006-lv-review.md) reviews for exact source and provenance limits. MC410B is downstream of MC410A's first LV bar and is excluded from current runtime phase connectivity; its source evidence remains retained.
 
 Separate area packages include SW411, the station/33 kV line, Crushing 1, Crushing 2/HPGR, Screening, Desands/laboratory, Stockpile/wet plant, Train loading, CV006, Western hoppers, Services, Hopper10 and Mine/camp. Select an area, open a detail view and select an asset to inspect its identity, drawing aliases, source references and open questions. Long view lists scroll within their navigation panel. Separate areas retain their original drawing interpretations; owner corrections recorded in the assembled package do not rewrite those historical area packages.
 

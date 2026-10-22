@@ -2,15 +2,17 @@
 
 The package is ready for software exploration and owner review. **It is not an accepted installed-network model or an isolation instruction.** GitHub #25's owner acceptance and coverage gates remain open.
 
-## Current review package: `.8`
+## Current inspection snapshot: `.11`
 
-`currentNetworkModel` in `src/models/site/current-network.ts` exports **`site-whole-network` / `construction-2026-10-22.8`**. It calls `withSupplementalEndpoints` on the immutable `.4` assembly described below. `.4` remains a separate historical package; it did not contain the new supplemental endpoint assets. Saved `.4` scenarios retain their original snapshots and open view-only against current `.8`.
+`currentNetworkModel` in `src/models/site/current-network.ts` exports **`site-whole-network` / `construction-2026-10-22.11`**, commit **`90b5663`**. It clones the immutable historical `.4` assembly through the supplemental endpoint, western-detail, Hopper10 LV and MC410A extensions, retaining eight scoped owner decisions. Saved older scenarios retain their original snapshots and open view-only against current `.11`.
 
-Versions `.5`, `.6` and `.7` were intermediate UI-QA packages introducing the supplemental endpoints and refining captions. Current `.8` retains those changes and adds the sixth scoped owner decision, confirming the tier 16 cable tag. Saved `.5`/`.6`/`.7` scenarios retain their original snapshots; none of these packages has whole-network owner acceptance.
+**Scope amendment pending implementation.** The owner states: “The only feeders from SB01 and SB02 that are required are the ones from TF11, TF12 and TF-04. That should be the battery limits.” The owner has also confirmed that each retained feed begins at its SB01/SB02 feeder breaker, retaining the feeder and transformer and excluding station buses, generators and other feeders. See the [exact scope amendment](specs/interactive-hv-network.md#owner-scope-amendment--22-october-2026). DB01/DB01B and other excluded station feeders are no longer active detail requests. **Unconfirmed:** whether downstream mine-services and village/camp remain included behind external boundaries. `.11` precedes this amendment and still contains the prior boundary; it is not the final scope acceptance target. No downstream answer is inferred.
 
-The written `.8` package contains **969 assets, 562 controls, 28 sources, 361 coverage boundaries and 126 views**, with 13 orientation regions. Its 17 cross-area joins retain the `.4` classification: 9 supported drawing relationships, 4 provisional and 4 owner-confirmed, plus 2 separate owner-confirmed internal primary33 links. The five original scoped owner decisions are retained, with a sixth cable-tag decision added by the current wrapper. These counts and confirmations do not establish whole-network acceptance.
+The saved `.11` package contains **1007 assets, 1006 connections, 580 controls with null starting positions, 28 sources with null availability, 365 coverage boundaries and 135 views**, with 13 orientation regions. Its 17 cross-area joins comprise **9 supported drawing relationships, 2 provisional and 6 owner-confirmed**, plus 2 separate owner-confirmed internal primary33 links. The 24 explicit RC/FC phase devices are classified as contactors in current `.11` only; historical area/`.4` kinds remain unchanged. No classification changes topology, states or interlock permissions. These counts describe software inventory, not installed-network coverage or acceptance.
 
-### Supplemental endpoint delta
+Historical `.5`/`.6`/`.7` were endpoint/caption QA packages. Historical `.8` contained 969 assets, 562 controls, 28 sources, 361 boundaries and 126 views, with the sixth cable-tag decision. The seventh tie and eighth mine-feed confirmations, together with five further source pages, are retained in `.11`. Historical packages remain unchanged and none has whole-network owner acceptance.
+
+### First supplemental endpoint delta — retained from historical `.8`
 
 The [supplemental source review](../drawing-review/supplemental/endpoint-sources-review.md) records exact source/indexed filenames, document IDs, revisions, inspected regions and fingerprints. These supplemental records do not add to or recount the original 141-PDF intake. SW455 and Hopper3 were reviewed from image-bearing full-page sources; their original PDFs were not downloaded and original-PDF hashes are unconfirmed. MC454 uses downloaded `11098-04400-EL-DR-8010_6_IFC_02.pdf`.
 
@@ -24,15 +26,33 @@ The extension adds four incomers, four final LV bars, eight links and three deta
 
 **Unconfirmed:** installed precedence, current arrangements, supported physical position sets, complete interlocks and transformer source/backfeed/earth policies. Inference: the extension connects the supplemental endpoints through the matching existing source-scoped transformer-output interfaces, subject to cross-document installed-identity review. Existing provisional source pairs and unknown winding/earth coverage remain explicit. Neutral/MEN, screen-earth and control references do not create phase-bus earth links. Outgoing LV circuits remain outside the represented endpoint boundary.
 
+### Five further received pages represented in `.11`
+
+These are supplemental source pages, not additions to or recounts of the original 141-PDF inventory. Receipt closes the specific missing-page questions, not installed identity, revision precedence or electrical-policy questions.
+
+| Exact source / locator | Current depiction and remaining review |
+| --- | --- |
+| `CB16OP038A-02006-DR-EL-0166`, rev1, p1 A / 2–11, B–F / 4–11, G / 1–7 notes5/6; handwritten date unconfirmed | Hopper3 MC416 MV bar, incoming VCB, cable-side earth and separate RC/FC motor routes. |
+| `CB17OP023D-01006-DR-EL-0002`, rev2, 28.01.25 AS FOUND 23.10.23, p1 same MV regions | Separate Hopper8 MC416 MV equipment and SZ008 motor identities. No merge with similarly named Hopper3 SS416 equipment. |
+| `CB17OP023D-01006-DR-EL-0003`, rev1, 20.09.18 AS BUILT, p1 A–C / 8–10 and C–D / 1–11 | Hopper8 TF416A continuation → MCCB630A → first MC416A 415VAC/630A bar. |
+| `520CBC0007-2130-DR-EL-0005`, rev1, 20.01.22 AS BUILT, p1 A–B / 9–10 and C–D / 1–12 | TF420B continuation → ACB01 main switch2000A → first MC420A415VAC/2600A bar. Evidence **EP-H10-LV-ENDPOINT**; **EP-H10-LV-INSTALLED/H10-Q03** remain open for installed/revision/position/interlock scope. |
+| `520CBC0003-2140-DR-EL-0002`, rev6, 08.04.22 AS BUILT, p1 A–B / 4–5, C–D / 4–5 and D / 1–12 | TF410B → MC410A CB630A → first415V/630A bar. Evidence **CV-MC410A-ENDPOINT**; **CV-MC410A-INSTALLED/CV-R06/CV-R11** retain installed/reference,433V versus415V, position/interlock and policy scope. |
+
+See [western source review](../drawing-review/supplemental/western-endpoints-review.md), [Hopper10 LV review](../drawing-review/supplemental/hopper10-lv-review.md) and [MC410A review](../drawing-review/supplemental/cv006-lv-review.md). Hopper3 MV has a retained original PDF and independently checked hash. Hopper8 MV/LV and Hopper10 LV were verified from retained indexed full-page captures; original-PDF downloads/hashes remain unconfirmed. MC410A's local PDF content/revision/hash were verified, but its timed-out download attempt and portal/local byte equivalence remain unconfirmed. These distinctions are preserved in the linked source records.
+
+**WH-Q07, WX-INSTALLED, WX-WINDINGS and WX-FUSES** retain installed identities,6.9/6.6kV labels, complete Ronis/key mapping, fuse condition and independent winding/earth policies. The partial note5/6 key conditions do not supply a full truth table. All actual added control states remain null and blocked. No supplemental page confirms switching permission.
+
+**First-LV boundary at MC410A:** current `.11` adds `rm410:mc410a:cb` and `rm410:mc410a:bus`. The downstream MC410B breaker/bar and MC410A→MC410B outgoing placeholder are removed from current runtime phase connectivity. Historical `.4`/area sources and MC410B/MEN evidence remain retained; MEN is not phase earth. This is the agreed first-bus boundary, not a claim that MC410B equipment was physically removed.
+
 ### Current Hopper 10 titles
 
-The `.8` wrapper labels `hopper-10/rmu` **Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed**, and `hopper-10/transformers` **Hopper 10 · Selected 33 kV inputs / MC420A gap**. This reflects the existing owner confirmations without presenting the current source or selected primary wiring as unanswered; MC420A coverage, winding policies, device states and interlocks remain unresolved.
+Current `hopper-10/rmu` is **Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed**; `hopper-10/transformers` is **Hopper 10 · Selected 33 kV inputs / MC420A LV**. The new `supplemental/hopper10-lv` depicts the received first LV endpoint. Winding policies, installed source equivalence, device states and interlocks remain unconfirmed.
 
 ## Historical `.4` base and retained construction history
 
-`wholeNetworkModel` in `src/models/site/whole-network.ts` exports `site-whole-network`, version `construction-2026-10-22.4`. It composes the 13 real area packages without changing those packages: SW411, power station/33 kV, Crushing 1, Crushing 2/HPGR, Screening, Desands/laboratory, stockpile/wet plant, train loading, CV006, western hoppers, services, Hopper 10, and mine/camp. The shared join treatment and five owner decisions below originate in this base and are retained in `.8`. The supplemental endpoints were introduced in intermediate `.5` and retained in current `.8`; historical `.4` is unchanged.
+`wholeNetworkModel` in `src/models/site/whole-network.ts` exports `site-whole-network`, version `construction-2026-10-22.4`. It composes the 13 real area packages without changing those packages: SW411, power station/33 kV, Crushing 1, Crushing 2/HPGR, Screening, Desands/laboratory, stockpile/wet plant, train loading, CV006, western hoppers, services, Hopper 10, and mine/camp. The shared join treatment and five owner decisions below originate in this base and are retained in current `.11`. The first supplemental endpoints were introduced in intermediate `.5` and retained in historical `.8`; historical `.4` is unchanged.
 
-The historical `.4` construction contains 961 assets, 558 controls, 28 sources and 357 explicit coverage boundaries. Every actual starting control state and source availability remains null in both versions. All controls retain unresolved physical-interlock reviews. The source does not confirm that switching is permitted. Five narrowly scoped owner decisions below confirm particular connections, roles or canonical tags; they do not constitute whole-network acceptance.
+The historical `.4` construction contains 961 assets, 558 controls, 28 sources and 357 explicit coverage boundaries. Every actual starting control state and source availability remains null in both historical `.4` and current `.11`. All controls retain unresolved physical-interlock reviews. The source does not confirm that switching is permitted. Five narrowly scoped owner decisions below confirm particular connections, roles or canonical tags; they do not constitute whole-network acceptance.
 
 Software provenance records `WN-AREA-<area>` retain each included model identity and version. They are package metadata, not drawing evidence or owner confirmation. Any change to the imported packages, joins, evidence, presentation, baseline or interlocks requires a new whole-network version before distribution; see ADR 0007.
 
@@ -40,7 +60,7 @@ Station and SW411 both used review IDs R001, R003 and R005. These are now `stati
 
 ## Interface treatment
 
-Both `.4` and `.8` have these 17 cross-area joins. Each is `whole:join:<name>`. Nine are supported drawing relationships, four remain provisional and four have scoped owner confirmation. Owner-confirmed primary-input links are separate internal connections. Evidence contains the exact original document, revision, page and drawing region. Supported means depicted by the sources; owner confirmation and remaining open questions are recorded separately.
+Historical `.4` and current `.11` retain these 17 cross-area joins. Each is `whole:join:<name>`. Historical `.4` had 9 supported, 4 provisional and 4 owner-confirmed joins; the two subsequent confirmations below make current `.11` 9 supported, 2 provisional and 6 owner-confirmed. The table describes current `.11`. Owner-confirmed primary-input links are separate internal connections. Evidence contains the exact original document, revision, page and drawing region. Supported means depicted by the sources; owner confirmation and remaining open questions are recorded separately.
 
 | Join name | Construction endpoints | Treatment |
 | --- | --- | --- |
@@ -50,7 +70,7 @@ Both `.4` and `.8` have these 17 cross-area joins. Each is `whole:join:<name>`. 
 | sw431 | SW411 tier13 ↔ SW431 incoming | Supported depicted SW431-P-01 |
 | sw426 | SW411 tier14 ↔ SW426 incoming | Supported depicted SW426-P-01 |
 | sw421 | SW411 tier15 ↔ SW421 incoming | Supported depicted SW421-P-01 |
-| crushing-tie | SW431 ↔ SW435, SW431-P-02 | Inference: provisional reconciliation; preserve both end breakers and earth switches, C1-R03/C2-R11 |
+| crushing-tie | SW431 ↔ SW435, SW431-P-02 | Owner-confirmed current cable and named end connections; WN-CRUSHING-TIE. Both end assemblies retained; remaining C1-R03/C2-R11 scope open |
 | hopper1 | RM413 IN02 double-boot side ↔ RM417 SW01 | Supported depicted SS417-RM417-P01; RM413A remains on the cable-facing side of IN02 |
 | hopper8 | RM406 CB03/SW04 ↔ Hopper8 HV416 | Supported depicted route; not Hopper3's identically printed SS416 |
 | hopper9 | RM410 CB03/SW04 cable-end marker ↔ RM419 SW01 | Supported depicted route through actual western equipment |
@@ -58,7 +78,7 @@ Both `.4` and `.8` have these 17 cross-area joins. Each is `whole:join:<name>`. 
 | rm721 | SW411 tier16 ↔ RM721 incoming | Inference: route remains provisional; canonical CB/ES model tags and RM721-P-01 cable tag are owner-confirmed, physical identity and whole-route acceptance remain open |
 | tf11-in03 | Station SB01 F4 / TF11 / line2 ↔ SW411 IN03 | Owner-confirmed assignment; actual supply availability remains unconfirmed |
 | tf12-in04 | Station SB02 F1 / TF12 / line1 ↔ SW411 IN04 | Owner-confirmed assignment; original overview SB01 text retained as drawing evidence |
-| mine-tf03 | Station SB01 F1 / TF03 ↔ RM711 source interface | Inference: candidate; exact reference equivalence and study identities/ratings remain open |
+| mine-tf03 | Station SB01 F1 / TF03 ↔ RM711 source interface | Owner-confirmed current route; WN-MINE-TF03-FEED. Exact reference equivalence and study identities/ratings remain open; future inclusion awaits scope clarification |
 | village | Station SB01 F3 ↔ camp/RM732 source interface | Inference: candidate; PS1 ref6160 versus supplied camp ref2349 equivalence is unconfirmed |
 | hopper10-tf04 | `line33:hopper-10:interface:port` ↔ `rm420:interface:pole286:port` | Owner-confirmed current TF04 33 kV feed; WN-H10-TF04-SOURCE |
 
@@ -113,6 +133,22 @@ On **2026-10-22**, **Project owner (conversation)** stated exactly: **“your as
 
 Source references remain `11098-07110-EL-DR-5151.pdf`, rev7, p1 D–G / 11–12, with printed SW454-P-01, and `11098-07110-EL-DR-2256.pdf`, rev3, p1 B–D / 6–7, with RM721-P-01. Original SW454-P-01 aliases/evidence remain traceable. The cable tag is no longer an unanswered question. Physical-nameplate inspection, whole-route acceptance, actual states, availability, complete physical interlocks and baseline remain **Unconfirmed**. R002, SV-Q01 and WN-JOIN-rm721 remain partially open, and the join remains provisional.
 
+### Seventh scoped decision: Crushing 1 / Crushing 2 tie
+
+On **2026-10-22**, **Project owner (conversation)** answered exactly **“confirmed”** to the full question recorded in **WN-CRUSHING-TIE**:
+
+> Next connection to confirm: is SW431-P-02 the current tie between Crushing 1 SW431 and Crushing 2 SW435, with CB SW435 FD02 at the SW431 end and CB SW431 FD02 at the SW435 end? Sources:11098-07110-EL-DR-2353.pdf rev5 p1 C-G/2-3,2354rev9p1 B-G/2-3. Please correct any detail or say unconfirmed.
+
+This confirms `whole:join:crushing-tie`, between `sw431:interface:sw435:port` and `sw435:interface:sw431:port`, with the cable and named end connections in that question. Both end breaker/earth assemblies remain represented. It does not resolve C1-R03's disputed overview document reference or C2-R11's remaining configuration, fuse continuity, racking, interlocks and null baseline.
+
+### Eighth scoped decision: station TF03 / mine feed
+
+On **2026-10-22**, **Project owner (conversation)** answered exactly **“It does”** to the full question recorded in **WN-MINE-TF03-FEED**:
+
+> Does station SB01 feeder F1, through TF03, currently supply RM711/the mine-services 22 kV line? The construction currently treats this as unconfirmed. Sources: 500CBC0002-13015-DR-EL-0001.pdf rev 3, page 1 B–D (SB01 F1/TF03), and 11098-07110-EL-DR-2252.pdf rev 5, page 1 A–C/1–3 (RM711 incoming). Please confirm the current arrangement, correct it, or say “unconfirmed”.
+
+This confirms `whole:join:mine-tf03`, linking `station:sb01:f1:interface` and `mine:interface:station-tf03`. The separate study marker remains unjoined. Exact reference equivalence, study SS711B/TF717 overlap and ratings, source availability, states, winding policies and complete interlocks remain **Unconfirmed**. The subsequent battery-limit instruction does not erase this recorded feeding fact; whether its downstream area remains in the next runtime scope awaits clarification.
+
 CV006's `rm410:interface:rm419` is retained as a cable-end/reference asset with empty conductive/source/earth pairs. Its `rm410:rm419-through-rm418` bypass is removed. Western's existing `wh:h9-to-h7:cable` provides the actual represented RM419 SW02 → RM418 SW01 continuation; it is not duplicated.
 
 SW454→SW505 and SW426→RM714 are already internal area connections. TF453/SW453 remains owned by the SW435 power branch; train-loading control/CT references do not create another power feed. Hopper3 and Hopper8 retain distinct scoped SS416/TF416/TF416A identities, and RM418's conflicting CB/transformer aliases remain visible.
@@ -128,11 +164,11 @@ SW454→SW505 and SW426→RM714 are already internal area connections. TF453/SW4
 - Mine study/overlap markers, RM718 pole-top and water/OPF1 source mappings remain unresolved. No laboratory/sewage TF714 identity merge is made.
 - Norfolk/Bigge and other external/future interfaces remain boundaries. The supplemental Farwest source is available for reconciliation; its topology is not silently incorporated into this package.
 
-Historical `.4` retained missing-detail interfaces at MC454/MC455, SW455 D/Y and Hopper3 MC416A. Current `.8` depicts MC454, SW455 D/Y and Hopper3 MC416A from the supplemental sources above; their installed/interlock/policy reviews remain open, and MC455 is an outgoing branch beyond MC454's first LV bar. The current source gaps still include future MC436, Hopper3 MV MC416 / -0166, Hopper8 MC416/MC416A / CB17OP023D -0002/-0003, Hopper10 MC420A, station DB01/DB01B and other unresolved continuations. Converter AC boundaries remain separate; neither DC buses nor neutral/MEN references create phase-transfer shortcuts. This list is not coverage acceptance; use the coverage register, supplemental records and all area reviews together.
+Historical `.4` retained missing-detail interfaces at MC454/MC455, SW455 D/Y, Hopper3 MC416A, Hopper3 MV, Hopper8 MV/LV, Hopper10 MC420A and MC410A. Current `.11` depicts the received endpoints and MV branches documented above; their installed/interlock/policy reviews remain open. MC455 and MC410B are outgoing branches beyond the respective first LV bars and are not additional current runtime endpoints. Future MC436 and other unresolved continuations remain review matters. Station DB01/DB01B and other excluded feeder details are no longer active requests under the confirmed scope amendment, even though `.11` has not yet been pruned. Mine/camp disposition remains pending. Converter AC boundaries stay separate; neither DC buses nor neutral/MEN references create phase-transfer shortcuts. Use the coverage register, supplemental records and area reviews together; this is not coverage acceptance.
 
 ## Navigate and review
 
-The orientation view has 13 separated, labelled area cards. Click a card to open that area's overview. Historical `.4` retains 121 original area views, adds the orientation and a separate former-line reference view: 123 views total. Current `.8` adds the three supplemental endpoint detail views for 126 total. Card bounds/targets persist in scenarios. Symbols sit below the large headings. Original detail coordinates are retained, with added cross-area stubs, the explicit former-line presentation changes and `.8` supplemental navigation described above.
+The orientation view has 13 separated, labelled area cards. Click a card to open that area's overview. Historical `.4` retains 121 original area views, adds the orientation and a separate former-line reference view: 123 views total. Historical `.8` added three supplemental endpoint detail views for 126 total. Current `.11` contains 135 views: the first three supplemental LV views, seven western MV/motor/LV views, Hopper10 LV and MC410A LV are included. Card bounds/targets persist in scenarios. Symbols sit below the large headings. Original detail coordinates are retained, with added cross-area stubs, the explicit former-line presentation changes and the supplemental navigation described above.
 
 The orientation also shows declared cross-area cable joins and omits internal switching detail. Cards, coordinates and proximity create no electrical connection.
 
@@ -144,7 +180,7 @@ The open `WN-OWNER-ACCEPTANCE` review requires the owner to:
 
 1. Resolve each material interface/identity discrepancy or explicitly decide its model boundary and treatment. Retain the decision and cited evidence rather than selecting drawing precedence silently.
 2. Account for every supplied PDF by reviewed in-scope content, explicit reference/duplicate relationship, or documented disposition. Intake totals and software tests do not establish coverage.
-3. Confirm scope through every final LV bus, including each missing endpoint, converter boundary and external/future continuation.
+3. Apply the confirmed station feeder-breaker battery limit under a new immutable version, obtain the still-pending downstream mine/camp disposition, and confirm coverage through each included final LV bus, converter boundary and external/future continuation. Excluded station feeders do not require owner re-approval.
 4. Review the complete diagram, supported position sets, actual interlocks, sources and proposed starting configuration. Drawing poses, study states and revision stamps are not baseline confirmation.
 5. Explicitly accept the immutable whole-network version and starting configuration. All acceptance remains pending in this package.
 
