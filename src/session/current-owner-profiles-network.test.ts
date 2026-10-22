@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, ownerConfiguredNetworkModel } from '../models/site/current-network';
+import { expandedProfilesNetworkModel as currentNetworkModel, ownerConfiguredNetworkModel } from '../models/site/current-network';
 import { withCurrentConfigurationNotes } from '../models/site/configuration-review-notes';
 import { withOwnerAdditionalInterlocks } from '../models/site/owner-additional-interlocks';
 
-describe('current owner-selected source and local-profile package', () => {
+describe('immutable owner-selected .4 source and local-profile package', () => {
   it('distributes the selected profiles, source claims and independent contactor baseline together', () => {
     const session = new SimulationSession(currentNetworkModel);
     const snapshot = session.snapshot();

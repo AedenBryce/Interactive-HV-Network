@@ -1,6 +1,6 @@
 # ADR0009: Scoped source-transfer claims
 
-Date:23 October2026. Status: implemented in the generic session; site conversion pending.
+Date:23 October2026. Status: implemented in the generic session and scoped site policy in `construction-2026-10-23.4` (code2398a2c). Reverse/alternate-input and independent earth behavior remain Unconfirmed.
 
 Owner answers25/28 select forward transformer source behavior while other equipment metadata, installed winding binding, reverse transfer and earth behavior remain Unconfirmed. The audited construction terminal roles have their own source references. A coarse provisional equipment claim must not be promoted merely to apply the selected source relationship.
 

@@ -20,6 +20,8 @@ import { withOwnerTransformerTransfers } from './owner-transformer-transfers';
 import { withOwnerBusEarthLvProfiles } from './owner-bus-earth-lv-profiles';
 import { withOwnerHopperLocalProfiles } from './owner-hopper-local-profiles';
 import { withOwnerDriveLocalProfiles } from './owner-drive-local-profiles';
+import { withOwnerRmuThreePositionProfiles } from './owner-rmu-three-position-profiles';
+import { withOwnerRm714DriveOutputProfiles } from './owner-rm714-drive-output-profiles';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -35,10 +37,14 @@ export const interlockReviewedNetworkModel = withOwnerAdditionalInterlocks(
 );
 const expandedVersion = 'construction-2026-10-23.4';
 const keyScopedNetworkModel = withOwnerKeySequenceDeferral(interlockReviewedNetworkModel, expandedVersion);
-export const currentNetworkModel = withExpandedMechanismNotes(
+export const expandedProfilesNetworkModel = withExpandedMechanismNotes(
   withOwnerDriveLocalProfiles(withOwnerHopperLocalProfiles(withOwnerBusEarthLvProfiles(
     withOwnerTransformerTransfers(keyScopedNetworkModel, expandedVersion), expandedVersion,
   ), expandedVersion), expandedVersion), expandedVersion,
+);
+const rmuVersion = 'construction-2026-10-23.5';
+export const currentNetworkModel = withOwnerRm714DriveOutputProfiles(
+  withOwnerRmuThreePositionProfiles(expandedProfilesNetworkModel, rmuVersion), rmuVersion,
 );
 
 function buildCurrentNetworkModel() {
