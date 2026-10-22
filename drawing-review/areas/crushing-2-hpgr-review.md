@@ -1,5 +1,7 @@
 # Crushing No. 2 / SW435 / HPGR source review
 
+**Later owner decisions, 22 October 2026:** C2-R01: “TF436 is a spare cubicle. Nothing installed”, in response to the installed downstream TF436/MC436 versus spare question. No downstream TF436/MC436 endpoint is required; exact cubicle hardware/state/interlocks remain unconfirmed. C2-R02: “Yes, installed and connected”, in response to whether TF453/SW453 is installed and connected to SW435 tier8. Installed/connected status is confirmed; baseline and interlocks remain separate. Original FUTURE/SPARE source descriptions below remain historical evidence. See the [exact decision record](../supplemental/owner-scope-connections-review.md).
+
 Reviewed: 22 October 2026. Preparation for GitHub #15. **Source preparation only. No runtime model, installed configuration, baseline or interlock review has been accepted.**
 
 Full pages and detailed crops were visually inspected after rendering the PDFs. Text searches identified candidate documents; power connectivity below was checked visually. All listed PDFs contain one page. Source IDs below always refer to page 1; printed grid regions and equipment headings identify the relevant location.

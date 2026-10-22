@@ -8,17 +8,17 @@ describe('current whole-network review package', () => {
     const original = JSON.stringify(wholeNetworkModel);
     const session = new SimulationSession(currentNetworkModel);
     const snapshot = session.snapshot();
-    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.15', synthetic: false });
+    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.16', synthetic: false });
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/rmu')?.label).toBe('Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed');
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/transformers')?.label).toBe('Hopper 10 · Selected 33 kV inputs / MC420A LV');
     for (const id of ['sw455:bus-d', 'sw455:bus-y', 'wh:h3:mc416a:bus', 'mc454:bus']) expect(snapshot.model.assets.some(asset => asset.id === id)).toBe(true);
-    expect(snapshot.model.presentation!.views).toHaveLength(93);
-    expect(snapshot.model.assets).toHaveLength(695);
-    expect(snapshot.model.connections).toHaveLength(691);
-    expect(snapshot.model.sources).toHaveLength(5);
-    expect(snapshot.model.earths).toHaveLength(142);
-    expect(snapshot.model.boundaries).toHaveLength(317);
-    expect(Object.keys(snapshot.devices)).toHaveLength(368);
+    expect(snapshot.model.presentation!.views).toHaveLength(91);
+    expect(snapshot.model.assets).toHaveLength(680);
+    expect(snapshot.model.connections).toHaveLength(677);
+    expect(snapshot.model.sources).toHaveLength(3);
+    expect(snapshot.model.earths).toHaveLength(139);
+    expect(snapshot.model.boundaries).toHaveLength(312);
+    expect(Object.keys(snapshot.devices)).toHaveLength(360);
     expect(Object.values(snapshot.switching).every(control => control.positions.every(position => !position.allowed))).toBe(true);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/mc454-lv')?.layout.labelOffsets!['sw454:interface:mc454-mc455']).toEqual([170, 10]);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/hopper3-lv')?.layout.labelOffsets!['wh:h3:mc416a:interface']).toEqual([170, 10]);
@@ -118,7 +118,7 @@ describe('current whole-network review package', () => {
     expect(wholeNetworkModel.evidence!.some(record => record.id === id)).toBe(false);
   });
 
-  it('applies the station and mine/camp scope decisions while retaining Services and separately reviewed water/railcar branches', () => {
+  it('applies station/mine/camp/railcar scope exclusions while retaining Services and the confirmed water branch', () => {
     const { model, devices, sources } = new SimulationSession(currentNetworkModel).saveScenario();
     expect(model.assets.some(asset => asset.id === 'station:sb01:bus')).toBe(false);
     expect(model.assets.some(asset => asset.id === 'station:sb02:bus')).toBe(false);
@@ -134,12 +134,12 @@ describe('current whole-network review package', () => {
     }
     expect(model.assets.some(asset => asset.id === 'mine:interface:station-tf03')).toBe(false);
     expect(model.assets.some(asset => asset.id === 'camp:interface:station-village')).toBe(false);
-    expect(model.assets.some(asset => asset.id === 'mine:rm718:bus')).toBe(true);
+    expect(model.assets.some(asset => asset.id === 'mine:rm718:bus')).toBe(false);
     expect(model.assets.some(asset => asset.id === 'mine:sw441:bus')).toBe(true);
     expect(model.connections.some(connection => ['whole:join:mine-tf03', 'whole:join:village'].includes(connection.id))).toBe(false);
     expect(model.sources.filter(source => source.id.startsWith('camp:dg'))).toHaveLength(0);
-    expect(model.sources.some(source => source.id === 'rm712:dg1:supply')).toBe(true);
-    expect(model.sources.some(source => source.id === 'rm712:dg7:supply')).toBe(true);
+    expect(model.sources.some(source => source.id === 'rm712:dg1:supply')).toBe(false);
+    expect(model.sources.some(source => source.id === 'rm712:dg7:supply')).toBe(false);
     expect(model.reviews!.find(review => review.id === 'WN-OWNER-ACCEPTANCE')?.status).toBe('open');
   });
 
@@ -150,7 +150,7 @@ describe('current whole-network review package', () => {
     expect(model.reviews!.find(review => review.id === 'SV-MC413-INSTALLED')).toMatchObject({ status: 'open', question: expect.stringContaining('RC001') });
     expect(model.presentation!.views.some(view => view.id === 'supplemental/mc413-lv')).toBe(true);
     expect(model.assets.some(asset => asset.id.includes('mc413a'))).toBe(false);
-    expect(model.sources).toHaveLength(5);
+    expect(model.sources).toHaveLength(3);
     expect(devices['rm413:mc413:cb']).toBeNull();
   });
 

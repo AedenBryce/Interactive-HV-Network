@@ -2,17 +2,19 @@
 
 The package is ready for software exploration and owner review. **It is not an accepted installed-network model or an isolation instruction.** GitHub #25's owner acceptance and coverage gates remain open.
 
-## Current inspection snapshot: `.15`
+## Current inspection snapshot: `.16`
 
-`currentNetworkModel` exports **`site-whole-network` / `construction-2026-10-22.15`**. The [latest owner decision record](../drawing-review/supplemental/owner-scope-connections-review.md) records exact answers, retained uncertainty and software checks. It supersedes historical scope/connection descriptions below.
+`currentNetworkModel` exports **`site-whole-network` / `construction-2026-10-22.16`**. The [latest owner decision record](../drawing-review/supplemental/owner-scope-connections-review.md) records exact answers, retained uncertainty, inventory and software checks. It supersedes historical scope/connection descriptions below.
 
-- Mine-services RM711/study continuations and village/camp are excluded. Separately documented RM718 unloading and SW441 water branches remain provisional pending their explicit scope answer; their software grouping does not decide scope.
+- Mine-services RM711/study continuations, village/camp and RM718 unloading are excluded. SW441/TF441/MC441 water-tower/process-water is included. MC431A is downstream of MC431 and excluded beyond the first LV bus.
 - The TF04→Hopper10 route remains. Seven other line branches stop at abstract takeoff markers with unknown external source/backfeed and earth coverage. No supplemental Farwest downstream topology is added.
 - `owner:join:rm721-rm712` connects RM721 IN02 cable terminal `rm721:in02:b` to SF RM712 IN02 terminal `rm712:in02:a`. Cable tag/reference corrections remain unconfirmed. Former SW426 labels are disputed historical markers with no second supply joined.
-- Current software inventory: **695 assets, 691 connections, 368 null controls, 5 null sources, 142 earth terminations, 317 coverage boundaries and 93 views**, with 13 orientation regions and 24 contactors. All actual controls remain blocked pending physical-interlock review. Counts are not installed coverage or acceptance.
-- The five null sources are the three abstract TF11/TF12/TF04 feeder inputs and separate Services DG1/DG7. Camp and station generator details are excluded. Older saved snapshots retain their own immutable models and open view-only against `.15`.
+- RM721's cable to SF RM713 IN01 is owner-confirmed at both ends. Nothing is attached externally at RM712 IN01; no switch state follows from that answer. TF712's LV cables connect to the SW712 incomer input, retaining that breaker in series. The MCS/DG alternative assembly is outside this model's scope; this does not assert physical removal.
+- The corrected water supply is TF12 → OPF1-7 pole spur → WT1-CB → SW441 IN01. The new junction splits the existing TF12→SW411 IN04 line; both the water branch and SW411 continuation remain represented. Earlier TF712 source wording is superseded history, not a second supply.
+- TF436 is a spare cubicle with no installed downstream branch; internal device hardware/interlocks remain unconfirmed. TF453/SW453 is installed and connected to SW435 tier8. The first-bus/transformer details and actual states remain subject to their separate reviews.
+- The three null sources are abstract TF11/TF12/TF04 feeder inputs. Camp, station generator and Services MCS/DG details are excluded from the current whole model. All retained actual controls remain null and blocked pending physical-interlock review. Older snapshots retain their original models and open view-only against `.16`. Inventory counts in the decision record describe software, not installed coverage or acceptance.
 
-The historical details below describe earlier increments. Current scope excludes mine-services/camp and non-Hopper10 33 kV branch detail even where a historical source package contains those assets. Owner acceptance remains pending.
+The historical details below describe earlier increments. Current scope excludes mine-services/camp/RM718, non-Hopper10 33 kV branch detail and the MCS/DG assembly even where a historical source package contains those assets. Owner acceptance remains pending.
 
 ## Historical `.14` snapshot and retained details
 
@@ -188,8 +190,8 @@ SW454→SW505 and SW426→RM714 are already internal area connections. TF453/SW4
 - SW411 IN01/IN02: no incoming external source is represented at these confirmed spare interfaces. Earth coverage and device states remain unconfirmed.
 - RM721→RM712: current `.15` has the owner-confirmed IN02-to-IN02 cable join. Wrong2252 reference and cable tag remain unconfirmed.
 - SW426/RM712: the owner identifies RM721 as the current RM712 IN02 connection. Earlier SW426 labels remain disputed historical references, with no second supply or missing-bay requirement. The laboratory SS714 feeder remains separate.
-- TF712→SW712: the explicit removed/disconnected cable gap remains. DG1/DG7 inputs and the unresolved changeover matrix are preserved.
-- Mine study/overlap markers, RM718 pole-top and water/OPF1 source mappings remain unresolved. No laboratory/sewage TF714 identity merge is made.
+- TF712→SW712: current `.16` uses the owner-confirmed incomer connection. The older gap/DG/MCS depiction remains historical; the alternative assembly is excluded from this model.
+- Mine/camp/RM718 detail is excluded. Current `.16` includes water via the owner-corrected TF12/OPF1-7/WT1 route. Historical study overlaps do not create extra joins or a laboratory/sewage TF714 identity merge.
 - Norfolk/Bigge and other external/future interfaces remain boundaries. The supplemental Farwest source is available for reconciliation; its topology is not silently incorporated into this package.
 
 Historical `.4` retained missing-detail interfaces at MC454/MC455, SW455 D/Y, Hopper3 MC416A, Hopper3 MV, Hopper8 MV/LV, Hopper10 MC420A and MC410A. Current `.14` depicts the received endpoints and MV branches documented above; their installed/interlock/policy reviews remain open. MC455 and MC410B are outgoing branches beyond the respective first LV bars and are not additional current runtime endpoints. Future MC436 and other unresolved continuations remain review matters. Station DB01/DB01B and other excluded feeder details are no longer active requests under the confirmed scope amendment, and are removed from current `.14`. Mine/camp disposition remains pending. Converter AC boundaries stay separate; neither DC buses nor neutral/MEN references create phase-transfer shortcuts. Use the coverage register, supplemental records and area reviews together; this is not coverage acceptance.
@@ -208,7 +210,7 @@ The open `WN-OWNER-ACCEPTANCE` review requires the owner to:
 
 1. Resolve each material interface/identity discrepancy or explicitly decide its model boundary and treatment. Retain the decision and cited evidence rather than selecting drawing precedence silently.
 2. Account for every supplied PDF by reviewed in-scope content, explicit reference/duplicate relationship, or documented disposition. Intake totals and software tests do not establish coverage.
-3. Retain the implemented station and downstream exclusions, obtain the separate RM718/water scope decision, and confirm coverage through each included final LV bus, converter boundary and external continuation. Excluded station/mine-services/camp and non-Hopper10 branch details do not require approval for V1.
+3. Retain the implemented station/downstream exclusions and the confirmed water inclusion/supply. Confirm coverage through each included final LV bus, converter boundary and external continuation. Excluded station/mine-services/camp/RM718, MCS/DG and non-Hopper10 branch details do not require approval for V1.
 4. Review the complete diagram, supported position sets, actual interlocks, sources and proposed starting configuration. Drawing poses, study states and revision stamps are not baseline confirmation.
 5. Explicitly accept the immutable whole-network version and starting configuration. All acceptance remains pending in this package.
 

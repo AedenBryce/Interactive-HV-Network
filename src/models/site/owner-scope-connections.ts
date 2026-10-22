@@ -99,13 +99,13 @@ function connectRm712(model: NetworkModel) {
   }
 }
 
-function recordDecision(model: NetworkModel, id: string, answer: string, summary: string) {
+export function recordDecision(model: NetworkModel, id: string, answer: string, summary: string) {
   const confirmation = { by: 'Project owner (conversation)', date: '2026-10-22', decision: answer };
   (model.evidence ??= []).push({ id, status: 'owner-confirmed', confirmation, summary, references: [ownerReference] });
   (model.reviews ??= []).push({ id, status: 'resolved', question: summary, evidenceIds: [id], resolution: confirmation });
 }
 
-function removeAssets(model: NetworkModel, removed: Set<string>, scopeId: string) {
+export function removeAssets(model: NetworkModel, removed: Set<string>, scopeId: string) {
   const terminals = new Set(model.assets.filter(asset => removed.has(asset.id)).flatMap(asset => asset.terminals));
   const sources = new Set(model.sources.filter(source => removed.has(source.assetId)).map(source => source.id));
   function dependency(condition: InterlockCondition): boolean {
@@ -134,7 +134,7 @@ function removeAssets(model: NetworkModel, removed: Set<string>, scopeId: string
   });
 }
 
-function tidyPresentation(model: NetworkModel) {
+export function tidyPresentation(model: NetworkModel) {
   const presentation = model.presentation!;
   const assets = new Set(model.assets.map(asset => asset.id));
   const terminals = new Set(model.assets.flatMap(asset => asset.terminals));

@@ -12,7 +12,34 @@ Recorded 22 October 2026. Source: **Project owner (conversation)**, in response 
 
 Model scope exclusion does not establish physical disconnection, removal or lack of external influence. Preserve historical packages and source descriptions. Any crossing to retained equipment needs an explicit coverage boundary rather than an invented disconnected or complete-coverage result.
 
-**Unconfirmed scope edge:** this repository's mine/camp source package also contains RM718/TF718/SW718 (railcar/fuel unloading) and SW441/TF441/MC441 (water tower/process water), each with a separately documented source interface. The owner has been asked whether these two branches are also excluded. Do not use their `mine:` software namespace as confirmation of that answer; retain those branches provisionally until it is received.
+The follow-up scope answer below resolves the separately documented RM718 and water branches. Their `mine:` software namespace was not treated as scope evidence while that answer was pending.
+
+## Follow-up owner answers — 22 October 2026
+
+| Topic | Exact owner answer | Confirmed and unresolved |
+| --- | --- | --- |
+| RM713 connection | “RM721 does still feed RM713 and it is still connected at both ends. It connect at RM713 to SF RM713 IN01” | Confirms the current RM721 → SF RM713 IN01 route and both cable ends connected. The question asked about the former **RM712 IN01** route; this answer names **RM721**, so that former RM712 cable status remains **Unconfirmed** and has been asked separately. |
+| TF712 LV cable | “TF712 LV cables are currently connected to SW712.” | Confirms the installed TF712-to-SW712 cable connection. Exact SW712 terminal relative to its incomer/changeover, current DG1/DG7 connections and changeover contact matrix remain **Unconfirmed**. The old disconnected-cable annotation is disputed historical evidence, not a current physical-gap claim. Do not invent a direct incomer bypass while the exact endpoint is pending. |
+| MC431A | “MC431A is an LV switchboard that is fed from MC431. Not required for this tool.” | Confirms MC431A is downstream of MC431 and excluded beyond the first LV bus. This resolves C1-R01 identity/scope; other TF432 bay, rating, revision, baseline and interlock questions remain separate. |
+| RM718 and water scope | “RM718/TF718/SW718 excluded. SW441/TF441/MC441 should be included” | Exclude RM718 railcar/fuel-unloading detail. Include the water-tower/process-water branch through its first MC441 LV bus. Its current supply identity remains **Unconfirmed** and has been asked explicitly. |
+
+These follow-up decisions were received against `.15` and are implemented in immutable `.16`. The `.15` inventory below is the earlier implementation record, not the final scope after these additional answers.
+
+### Further endpoint clarification — 22 October 2026
+
+- **SF RM712 IN01:** the owner answered exactly “nothing is connected.” to the question about its current cable/far end. No external cable is attached in the model. Its switch position and physical earth/interlock conditions remain unconfirmed; an empty input is not a confirmed open switch.
+- **TF712 LV termination:** the owner answered exactly “a the SW712 incomer. Ignore changeover switch for this”. Connect the TF712 LV cable at the existing SW712 incomer input. The changeover/DG alternative-supply assembly is excluded from this model's representation; this does not assert that it has been physically removed. No actual switch state or interlock condition is accepted.
+- **Water supply route:** the owner answered exactly “This is fed from a spur off TF712. It branches off that main line, goes through WT1-CB Recloser, then to the SW441 IN01 CB”. This confirms WT1-CB → SW441 IN01. **Unconfirmed:** whether the upstream spur leaves the RM721–RM712 cable, RM712 bus, TF712 feeder or another exact junction. That point has been asked explicitly; no upstream join is inferred from “off TF712”.
+
+The earlier entry-point and former-RM712-IN01 questions above are historical stages of the interview. These later answers supersede them only to the stated extent. Current physical interlocks and starting configuration remain open.
+
+### Corrected water source and Crushing 2 status — 22 October 2026
+
+- **Water-source correction:** “aplogies, i made a mistake, it is fed from TF12, not TF712. It branches offat OPF1-7 Pole”. This supersedes the TF712 attribution in the preceding answer. The confirmed named route is **TF12 → OPF1-7 pole spur → WT1-CB → SW441 IN01**. No connection from TF712 to the water branch is to be created. The earlier wording remains a superseded owner record; it is not a second supply. Device states, complete interlocks and any unrepresented intermediate equipment remain unconfirmed.
+- **SW435 tier 5:** “TF436 is a spare cubicle. Nothing installed”, answering whether it has an installed TF436/MC436 branch or is an unused spare with no downstream transformer/cable. Treat it as a spare with no installed downstream TF436/MC436 branch. The answer does not separately identify any physical breaker/earth-switch mechanism or state inside the cubicle; do not enable an assumed control or construct a future LV endpoint.
+- **TF453/SW453:** “Yes, installed and connected”, answering whether TF453 and SW453 are installed and connected to SW435 tier 8. This resolves present installed/connected status, superseding the source's FUTURE wording for that scoped branch. It does not accept the baseline or physical interlocks.
+
+Source context: `11098-07110-EL-DR-2354.pdf`, revision9, page1 C–G/6 (tier5) and C–G/10–11 (tier8); `CB-10016-DR-EL-0010.pdf`, revision0, tier5 SPARE FD; `11098-07110-EL-DR-2468.pdf`, revision5, page1 A–C/1–10, TF453/SW453. Water-source context: `11098-07110-EL-DR-2355.pdf`, revision7, page1 A–C/4, incoming cable/reference. The named TF12/OPF1-7 route is confirmed by the owner conversation, not by a silently corrected drawing.
 
 ## Source differences retained
 
@@ -28,7 +55,7 @@ Model scope exclusion does not establish physical disconnection, removal or lack
 
 The RM712 changeover contact matrix, device positions, generator availability, transformer source/earth relationships and complete physical interlocks remain **Unconfirmed**. No new baseline or switching permission follows from the three answers.
 
-## Implementation record
+## Historical `.15` implementation record
 
 The answers were received against inspection snapshot `site-whole-network` / `construction-2026-10-22.14`. Updated immutable version **`construction-2026-10-22.15`** applies them through `withOwnerScopeConnections` in `src/models/site/owner-scope-connections.ts`, composed by `current-network.ts`. Historical area packages and `.4` remain unchanged.
 
@@ -40,3 +67,13 @@ Current software inventory: **695 assets, 691 connections, 368 null controls, 5 
 - Every retained actual control state and source availability remains null; unresolved physical-interlock reviews remain blocked. No source/earth transformer rule is newly accepted.
 
 **Software checks:** 10 focused public-session tests passed across `owner-scope-connections.test.ts` and `current-network.test.ts`; typecheck and production build passed. Build advisory: application chunk765.38 kB, gzip223.91 kB. Browser review at1704×1214 confirmed `.15`, RM721→RM712 and reciprocal navigation, SF RM712 IN02 identity and disabled Open/Close. The full suite remains reserved for whole-goal final delivery. Whole-network acceptance and the starting configuration remain pending.
+
+## Current `.16` implementation record
+
+`withOwnerFollowups` in `src/models/site/owner-followups.ts`, composed by `current-network.ts`, applies the follow-up decisions to a clone. Current **`site-whole-network` / `construction-2026-10-22.16`** contains **680 assets,677 connections,360 null/blocked controls,3 null sources,139 earth terminations,312 coverage boundaries and91 views**, with13 orientation regions and24 contactors. These are software counts, not installed acceptance.
+
+RM718 and the MCS/DG alternative assembly are excluded. Water remains included. `owner:tf12:opf1-7` is a connectivity junction on the existing TF12→SW411 IN04 line, with the spur continuing through WT1-CB to SW441 IN01. It does not invent a switch. The new `supplemental/water-tf12-source` view supplies upstream/water navigation. The mistaken TF712 source statement remains superseded history; no such spur is present.
+
+The existing RM721→SF RM713 IN01 cable is owner-confirmed at both ends. RM712 IN01's old external reference-cable edge is removed; source-input coverage is complete for no external cable, while internal earth/state/interlock coverage remains unconfirmed. `owner:tf712-sw712-incoming` joins the TF712 cable end to the existing SW712 incoming-breaker input, retaining that breaker in series. Historical source captions and models are preserved. MC431A is resolved as excluded downstream LV; TF436 is a spare with no installed downstream branch, while cubicle hardware remains unconfirmed; TF453/SW453 installed/connected status is resolved independently of its actual control states.
+
+All retained actual states and source availabilities remain null and physical-interlock reviews remain unresolved. Typecheck and production build pass (781.16kB JavaScript /227.97kB gzip; Vite size advisory). Focused session checks and the final review result are recorded in the implementation progress log. The full suite remains reserved for whole-goal final delivery. No whole-model or starting-configuration acceptance is claimed.

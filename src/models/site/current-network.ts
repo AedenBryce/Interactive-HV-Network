@@ -6,13 +6,14 @@ import { withCv006Lv } from './cv006-lv-extension';
 import { withStationBatteryLimits } from './station-battery-limits';
 import { withMc413Detail } from './mc413-detail';
 import { withOwnerScopeConnections } from './owner-scope-connections';
+import { withOwnerFollowups } from './owner-followups';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
 export const currentNetworkModel = buildCurrentNetworkModel();
 
 function buildCurrentNetworkModel() {
-  const version = 'construction-2026-10-22.15';
+  const version = 'construction-2026-10-22.16';
   const model = withSupplementalEndpoints(wholeNetworkModel, version);
 
   for (const view of model.presentation!.views) {
@@ -112,5 +113,5 @@ function buildCurrentNetworkModel() {
     if (!asset || !asset.evidenceIds?.length) throw new Error(`Contactor classification requires the evidenced phase asset ${id}.`);
     asset.kind = 'contactor';
   }
-  return withOwnerScopeConnections(withMc413Detail(withStationBatteryLimits(detailed, version), version), version);
+  return withOwnerFollowups(withOwnerScopeConnections(withMc413Detail(withStationBatteryLimits(detailed, version), version), version), version);
 }

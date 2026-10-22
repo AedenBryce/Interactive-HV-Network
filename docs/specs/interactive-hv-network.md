@@ -36,6 +36,12 @@ The owner also limited the TF-04 33 kV representation:
 
 Retain the TF-04 route to Hopper 10 and show the other line branches at their takeoff points only. Norfolk, Bigge, Farwest dewatering/pond and other non-Hopper-10 downstream branch detail is outside V1. Mine-services and village/camp are excluded. These are model scope decisions, not statements that the excluded equipment has been disconnected or removed. Independently documented crossings into retained equipment require explicit boundary treatment. The [decision record](../../drawing-review/supplemental/owner-scope-connections-review.md) retains exact answers and implementation status. Historical `.11` precedes the station amendment; `.14` precedes these additional downstream exclusions. Whole-network acceptance within the confirmed scope remains pending.
 
+The owner then clarified the mixed-area branches explicitly:
+
+> RM718/TF718/SW718 excluded. SW441/TF441/MC441 should be included
+
+Retain the water-tower/process-water branch through MC441's first LV bus. The owner subsequently corrected its supply route explicitly: “aplogies, i made a mistake, it is fed from TF12, not TF712. It branches offat OPF1-7 Pole”, following the WT1-CB → SW441 IN01 description. Retain TF12 → OPF1-7 spur → WT1-CB → SW441 IN01. The earlier TF712 attribution is superseded, not an additional supply. Exclude the RM718 railcar/fuel-unloading branch. The owner also confirms: “MC431A is an LV switchboard that is fed from MC431. Not required for this tool.” MC431A is outside the first-MC431-bus boundary.
+
 ## User Stories
 
 1. As a network user, I want to see the whole modelled network, so that I can understand how its areas connect.

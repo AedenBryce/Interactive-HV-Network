@@ -72,6 +72,8 @@ Outgoing LV drives, motors, UPS circuits, MCC outgoing distribution, subordinate
 
 ## Discrepancies retained for step-by-step owner review
 
+**Later owner answer, 22 October 2026, C1-R01:** “MC431A is an LV switchboard that is fed from MC431. Not required for this tool.” MC431A is therefore excluded downstream of the first MC431 LV bus; it is not an active missing-endpoint request. The original discrepancy below is preserved as historical context. C1-R02–R08 remain separate reviews. See the [owner decision record](../supplemental/owner-scope-connections-review.md).
+
 | Local ID | Evidence difference | Construction consequence / unresolved decision |
 | --- | --- | --- |
 | C1-R01 | C1-S10, p1, below TF431, labels both `MC431` and `MC431A`. C1-S08, p1, only identifies the MC431 incoming phase bus; C1-S09 is its continuation. A repository text search finds `MC431A` only in C1-S10, which is not proof that raster drawings contain no other reference. | **Unconfirmed:** identity, existence and supply route of MC431A. Do not silently drop or invent a second directly supplied endpoint. Preserve an unresolved coverage record pending further evidence/owner confirmation. |
