@@ -3,7 +3,7 @@ import { SimulationSession } from '../session/session';
 import type { Asset } from '../session/model';
 import { Symbol } from './Symbol';
 import { NetworkDiagram } from './NetworkDiagram';
-import { demonstrations } from './model-catalog';
+import { models } from './model-catalog';
 import { fallbackPresentation } from '../session/presentation';
 import { EarthDetails } from './EarthDetails';
 import { InterlockDetails } from './InterlockDetails';
@@ -13,10 +13,10 @@ import { SessionHistory } from './SessionHistory';
 import { RelationshipDetails } from './RelationshipDetails';
 import { ScenarioControls } from './ScenarioControls';
 
-const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch' };
+const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 
 export function App() {
-  const [session] = useState(() => new SimulationSession(demonstrations[0]));
+  const [session] = useState(() => new SimulationSession(models[0]));
   const [snapshot, setSnapshot] = useState(() => session.snapshot());
   const [selectedId, setSelectedId] = useState('cb-01');
   const [message, setMessage] = useState('');
@@ -33,7 +33,7 @@ export function App() {
   function selectAsset(id: string) { setSelectedId(id); setTraceKey(null); inspector.current?.scrollTo({ top: 0 }); }
 
   function selectModel(id: string) {
-    const result = session.loadModel(demonstrations.find(model => model.id === id));
+    const result = session.loadModel(models.find(model => model.id === id));
     if (result.ok) { const next = session.snapshot(); setSnapshot(next); setSelectedId(next.model.assets.find(item => item.positions.length)?.id ?? next.model.assets[0].id); setTraceKey(null); setMessage(''); inspector.current?.scrollTo({ top: 0 }); }
     else setMessage(result.error);
   }
@@ -74,9 +74,9 @@ export function App() {
       <aside className="network-rail" aria-label="Network model">
         <h2>Network model</h2>
         <p className="model-name">{snapshot.model.name}<br /><span className="version">{snapshot.model.version}</span></p>
-        <p className="model-note">{snapshot.model.synthetic ? <>Demonstration model.<br />Not the site network.</> : <>Site model.<br />Review evidence and acceptance status.</>}</p>
+        <p className="model-note">{snapshot.model.synthetic ? <>Demonstration model.<br /> Not the site network.</> : <>Site model under construction.<br /> Not owner accepted.</>}</p>
         {snapshot.mode === 'view-only' && <p className="model-note">View only: {snapshot.model.version}<br />Current: {snapshot.currentModel.version}</p>}
-        <label className="model-picker">Demonstration model<select value={snapshot.currentModel.id} onChange={event => selectModel(event.target.value)}>{demonstrations.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label>
+        <label className="model-picker">Model<select aria-label="Model" value={snapshot.currentModel.id} onChange={event => selectModel(event.target.value)}>{models.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label>
         <ScenarioControls snapshot={snapshot} onSave={() => session.saveScenario()} onLoad={loadScenario} onError={setMessage} onReturn={() => selectModel(snapshot.currentModel.id)} />
         <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={() => selectAsset(item.id)}>
           <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></svg><span>{item.label}</span>
@@ -88,7 +88,8 @@ export function App() {
       <aside ref={inspector} className="inspector" aria-label="Asset details">
         <h2>Asset details</h2>
         <div className="asset-heading"><svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={asset.kind} open={currentPosition?.id === 'open'} unknown={asset.positions.length > 0 && snapshot.devices[asset.id] === null} /></svg><div><h3>{asset.label}</h3><p>{kindLabels[asset.kind]}</p></div></div>
-        <dl className="identity-rows"><div><dt>Identity</dt><dd>{asset.id === 'cb-01' ? 'CB-01' : asset.id}</dd></div><div><dt>State</dt><dd>{asset.positions.length && snapshot.devices[asset.id] === null ? 'Unconfirmed' : currentPosition?.label ?? 'Fixed connection'}</dd></div><div><dt>Source connectivity</dt><dd>{connectivity.sourceStatus === 'unconfirmed' ? 'Unconfirmed' : connectivity.sourceStatus === 'connected' ? 'Connected' : 'No source connection'}</dd></div></dl>
+        <dl className="identity-rows"><div><dt>Identity</dt><dd>{asset.id === 'cb-01' ? 'CB-01' : asset.id}</dd></div><div><dt>State</dt><dd>{asset.positions.length && snapshot.devices[asset.id] === null ? 'Unconfirmed' : currentPosition?.label ?? 'No position modelled'}</dd></div><div><dt>Source connectivity</dt><dd>{connectivity.sourceStatus === 'unconfirmed' ? 'Unconfirmed' : connectivity.sourceStatus === 'connected' ? 'Connected' : 'No source connection'}</dd></div></dl>
+        {asset.aliases?.length ? <p>Drawing aliases: {asset.aliases.join('; ')}</p> : null}
         {asset.positions.length > 0 && <section className="switch-controls" aria-label="Switching controls"><h3>Set intended state</h3><div className="state-buttons">{asset.positions.map(position => { const option = switching.positions.find(option => option.id === position.id)!; return <button key={position.id} title={option.reason} onClick={() => changePosition(position.id)} disabled={currentPosition?.id === position.id || !option.allowed}>{position.id === 'closed' ? 'Close' : position.label}</button>; })}</div><p>Changing this device updates the represented connections.</p><InterlockDetails status={switching} /></section>}
         {snapshot.model.sources.filter(source => source.assetId === asset.id).map(source => <section className="switch-controls" key={source.id} aria-label={`${source.label} availability`}><h3>Source availability</h3><p>{snapshot.sources[source.id] === null ? 'Unconfirmed' : snapshot.sources[source.id] ? 'Enabled' : 'Disabled'}</p><div className="state-buttons"><button aria-label={`Enable ${source.label}`} disabled={snapshot.mode === 'view-only' || snapshot.sources[source.id] === true} onClick={() => changeSource(source.id, true)}>Enable</button><button aria-label={`Disable ${source.label}`} disabled={snapshot.mode === 'view-only' || snapshot.sources[source.id] === false} onClick={() => changeSource(source.id, false)}>Disable</button></div></section>)}
         {snapshot.model.earths?.length ? <EarthDetails model={snapshot.model} connectivity={snapshot.connectivity[asset.id]} /> : null}
