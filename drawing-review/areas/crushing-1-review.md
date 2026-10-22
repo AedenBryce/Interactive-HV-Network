@@ -72,6 +72,8 @@ Outgoing LV drives, motors, UPS circuits, MCC outgoing distribution, subordinate
 
 ## Discrepancies retained for step-by-step owner review
 
+**Later owner answer, 22 October 2026, C1-R02:** “Tier 5”, answering the TF432 feeder tier3/tier5 discrepancy at SW431. Tier5 is the owner-confirmed canonical display; the original detailed tier3 callout remains historical evidence. This does not change connectivity, states or interlocks. See the [identity decision record](../supplemental/owner-identities-review.md).
+
 **Later owner answer, 22 October 2026, C1-R01:** “MC431A is an LV switchboard that is fed from MC431. Not required for this tool.” MC431A is therefore excluded downstream of the first MC431 LV bus; it is not an active missing-endpoint request. The original discrepancy below is preserved as historical context. C1-R02–R08 remain separate reviews. See the [owner decision record](../supplemental/owner-scope-connections-review.md).
 
 | Local ID | Evidence difference | Construction consequence / unresolved decision |

@@ -8,7 +8,7 @@ describe('current whole-network review package', () => {
     const original = JSON.stringify(wholeNetworkModel);
     const session = new SimulationSession(currentNetworkModel);
     const snapshot = session.snapshot();
-    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.16', synthetic: false });
+    expect(snapshot.model).toMatchObject({ id: 'site-whole-network', version: 'construction-2026-10-22.17', synthetic: false });
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/rmu')?.label).toBe('Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed');
     expect(snapshot.model.presentation!.views.find(view => view.id === 'hopper-10/transformers')?.label).toBe('Hopper 10 · Selected 33 kV inputs / MC420A LV');
     for (const id of ['sw455:bus-d', 'sw455:bus-y', 'wh:h3:mc416a:bus', 'mc454:bus']) expect(snapshot.model.assets.some(asset => asset.id === id)).toBe(true);
@@ -17,7 +17,7 @@ describe('current whole-network review package', () => {
     expect(snapshot.model.connections).toHaveLength(677);
     expect(snapshot.model.sources).toHaveLength(3);
     expect(snapshot.model.earths).toHaveLength(139);
-    expect(snapshot.model.boundaries).toHaveLength(312);
+    expect(snapshot.model.boundaries).toHaveLength(313);
     expect(Object.keys(snapshot.devices)).toHaveLength(360);
     expect(Object.values(snapshot.switching).every(control => control.positions.every(position => !position.allowed))).toBe(true);
     expect(snapshot.model.presentation!.views.find(view => view.id === 'supplemental/mc454-lv')?.layout.labelOffsets!['sw454:interface:mc454-mc455']).toEqual([170, 10]);

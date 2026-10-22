@@ -1,5 +1,9 @@
 # Crushing No. 2 / SW435 / HPGR source review
 
+**Further owner answers13/15, 22 October 2026:** the TF436 spare cubicle has a breaker and earth switch, with no outgoing cables or downstream feed. MC001 and MC438 are names for the same TF004-fed HPGR LV board; one endpoint is retained. Actual positions, full interlocks and the other voltage/bay/reference questions remain open. See the [exact identity/hardware decisions](../supplemental/owner-identities-review.md).
+
+**Additional source received:** indexed full-page captures of `CB112-02006-DR-EL-0008`, printed revision4, Sheet1, were visually reviewed. The original intake still does not contain that exact PDF. Its transformer control/alarm/trip terminations do not establish complete installed key/interlock conditions. See [provenance and limits](../supplemental/hpgr-control-review.md). The original comparisons below are retained as source-review history.
+
 **Later owner decisions, 22 October 2026:** C2-R01: “TF436 is a spare cubicle. Nothing installed”, in response to the installed downstream TF436/MC436 versus spare question. No downstream TF436/MC436 endpoint is required; exact cubicle hardware/state/interlocks remain unconfirmed. C2-R02: “Yes, installed and connected”, in response to whether TF453/SW453 is installed and connected to SW435 tier8. Installed/connected status is confirmed; baseline and interlocks remain separate. Original FUTURE/SPARE source descriptions below remain historical evidence. See the [exact decision record](../supplemental/owner-scope-connections-review.md).
 
 Reviewed: 22 October 2026. Preparation for GitHub #15. **Source preparation only. No runtime model, installed configuration, baseline or interlock review has been accepted.**

@@ -2,6 +2,8 @@
 
 Recorded 22 October 2026. Source: **Project owner (conversation)**, in response to the three explicit clarification questions. These decisions refine the construction model; they do not accept the whole model, device states, source availability or physical interlocks.
 
+**Later increment:** current `.17` adds the TF436 hardware, TF432 tier5 and MC001/MC438 identity confirmations. See the [latest identity record](owner-identities-review.md). The `.15`/`.16` sections below are historical implementation records; their pending hardware/tier/board questions are superseded to the stated extent. Answer16's RM413 fork confirmation is recorded for the next increment, not applied to `.17`.
+
 ## Confirmed decisions
 
 | Decision | Exact owner answer | Confirmed scope |
@@ -70,7 +72,7 @@ Current software inventory: **695 assets, 691 connections, 368 null controls, 5 
 
 **Software checks:** 10 focused public-session tests passed across `owner-scope-connections.test.ts` and `current-network.test.ts`; typecheck and production build passed. Build advisory: application chunk765.38 kB, gzip223.91 kB. Browser review at1704×1214 confirmed `.15`, RM721→RM712 and reciprocal navigation, SF RM712 IN02 identity and disabled Open/Close. The full suite remains reserved for whole-goal final delivery. Whole-network acceptance and the starting configuration remain pending.
 
-## Current `.16` implementation record
+## Historical `.16` implementation record
 
 `withOwnerFollowups` in `src/models/site/owner-followups.ts`, composed by `current-network.ts`, applies the follow-up decisions to a clone. Current **`site-whole-network` / `construction-2026-10-22.16`** contains **680 assets,677 connections,360 null/blocked controls,3 null sources,139 earth terminations,312 coverage boundaries and91 views**, with13 orientation regions and24 contactors. These are software counts, not installed acceptance.
 
