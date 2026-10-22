@@ -179,6 +179,15 @@ V1 acceptance also requires complete agreed network coverage through final LV bu
 - Automatic migration of an older scenario onto a different current model.
 - Production GPT Site deployment in the initial local application deliverable.
 
+## Owner clarifications — 23 October 2026
+
+- **Scoped key-interlock deferral (answer24):** the owner confirms key interlocks exist between SW411 IN03/IN04 and upstream TF11/TF12 station feeder assemblies, and explicitly asks to defer them from the present educational simulation. Their complete installed conditions remain unconfirmed. This defers the cross-station key relationship asked about, not every key system in the network. Other represented physical interlocks and unresolved position/mechanism reviews remain subject to the original requirements. [Exact answer and model treatment](../../drawing-review/supplemental/owner-sw411-feeds-review.md).
+- **Transformer simulation assumption (answers25/28):** primary source connectivity should produce secondary source connectivity. An external ring supply on the secondary must remain visibly source-connected when the normal primary feed is open. Reverse transfer onto the primary is not explicitly confirmed; no complete physical winding/earth verification or operational safe/unsafe declaration is inferred.
+- **Removable breaker actions (answers26/29):** every breaker shown by its source as removable needs separate **Open/Close** and **Rack in/Rack out** actions. This applies across the included network, not just SW411. Rack in/out requires the breaker open; Open/Close is blocked while racked out. Device eligibility requires source review; contact position and racking position must remain distinct in state, connectivity, history and scenarios, including independent unknown values.
+- **Partial simulation baseline (answer27):** TF11, TF12 and TF04 supplies available; SW411 IN03/IN04 contacts closed; SW411 bus-tie contact open. Other device states, racking positions, earth states and whole-model acceptance remain unconfirmed. These are selected simulation starting values, not live-site telemetry.
+
+The [configuration record](../../drawing-review/supplemental/owner-configuration-review.md) preserves exact answers25–29 and remaining uncertainty. Those later requirements are not applied to immutable `construction-2026-10-23.1`; they require a subsequent increment.
+
 ## Further Notes
 
 - **Status:** specification prepared from the owner's confirmed product design and approved testing boundary. The implementation design above remains an explicit proposal; unresolved installed-network facts require source review and owner confirmation.

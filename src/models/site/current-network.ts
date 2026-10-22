@@ -9,13 +9,14 @@ import { withOwnerScopeConnections } from './owner-scope-connections';
 import { withOwnerFollowups } from './owner-followups';
 import { withOwnerIdentityCorrections } from './owner-identities';
 import { withOwnerRouteConfirmations } from './owner-routes';
+import { withOwnerSw411Feeds } from './owner-sw411-feeds';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
 export const currentNetworkModel = buildCurrentNetworkModel();
 
 function buildCurrentNetworkModel() {
-  const version = 'construction-2026-10-22.18';
+  const version = 'construction-2026-10-23.1';
   const model = withSupplementalEndpoints(wholeNetworkModel, version);
 
   for (const view of model.presentation!.views) {
@@ -120,5 +121,6 @@ function buildCurrentNetworkModel() {
   const scoped = withOwnerScopeConnections(mc413Detailed, version);
   const followedUp = withOwnerFollowups(scoped, version);
   const identities = withOwnerIdentityCorrections(followedUp, version);
-  return withOwnerRouteConfirmations(identities, version);
+  const routes = withOwnerRouteConfirmations(identities, version);
+  return withOwnerSw411Feeds(routes, version);
 }
