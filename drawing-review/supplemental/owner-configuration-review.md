@@ -34,4 +34,14 @@ The selected V1 rules therefore require an open breaker for Rack in/out and bloc
 
 Removable-device source review and a representation supporting independent Open/Close and Rack in/out actions are required before implementing answer26. Remaining racking and other baseline values are unconfirmed. A model-boundary decision for cross-station keys in answer24 remains separate from these position/mechanism questions. Whole-network acceptance is still pending.
 
-Questions30–31 ask for the selected racking baseline and the remaining SW411 contact/earth starting values. They are pending; no default value is inferred from those proposals.
+## Baseline follow-up answers30–31
+
+For question30, asking whether all drawing-confirmed removable breakers should start Rack in, the owner answered exactly:
+
+> ALl racked in unless there is a loop feed, in which case you can ask me what state individually.
+
+This selects Rack in for removable breakers other than loop feeds. Loop-feed racking positions require individual owner confirmation. Which breakers the sources show as removable, and which cases need the loop-feed exception, must be established before applying the default; no loop-feed position is silently assigned.
+
+For question31, the complete proposal was outgoing SW411 feeder breakers at tiers01/02/03/04/13/14/15/16 closed; spare incomers IN01/IN02 open; all SW411 earth switches open, including bus earths. The previously selected IN03/IN04 closed and bus-tie open values were explicitly retained. The owner answered exactly **“Confirm these starting positions”**.
+
+These answers select the remaining SW411 contact/earth baseline. They do not resolve loop-feed racking values, other areas' contact/earth baseline, complete physical interlocks or whole-model acceptance. Answers25–31 remain unapplied to immutable `construction-2026-10-23.1`.

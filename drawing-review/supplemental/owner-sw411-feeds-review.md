@@ -32,7 +32,7 @@ This model-boundary decision also requires the next immutable version. The affec
 
 ## Applied package
 
-Answers22–24 are applied together in `site-whole-network` / `construction-2026-10-23.1` through `withOwnerSw411Feeds` in `src/models/site/owner-sw411-feeds.ts`. Immutable `.18` remains unchanged.
+Answers22–24 are applied together in `site-whole-network` / `construction-2026-10-23.1`, code commit `f5beb4b`, through `withOwnerSw411Feeds` in `src/models/site/owner-sw411-feeds.ts`. Immutable `.18` remains unchanged.
 
 Runtime records are `WN-SW411-FEEDS-01-02-04`, `WN-SW411-FEEDS-13-14-15` and `WN-CROSS-STATION-KEY-DEFERRAL`, each dated23 October2026. The helper checks the six existing join IDs and terminal pairs before confirming them; it adds or remaps none. The eight affected CB/ES interlock reviews retain their unresolved statuses and add the explicit key-scope deferral. Other controls' reviews, actual positions, source availability, transformer relationships and interlock rules are unchanged.
 
