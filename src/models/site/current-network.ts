@@ -3,8 +3,8 @@ import { withSupplementalEndpoints } from './endpoint-extensions';
 
 // Each distributed construction is an immutable package. Keep the reviewed .4
 // assembly intact while adding separately cited endpoint details, caption
-// refinements and the subsequent scoped tier16 cable-tag owner decision.
-export const currentNetworkModel = withSupplementalEndpoints(wholeNetworkModel, 'construction-2026-10-22.8');
+// refinements and subsequent scoped owner decisions.
+export const currentNetworkModel = withSupplementalEndpoints(wholeNetworkModel, 'construction-2026-10-22.9');
 
 for (const view of currentNetworkModel.presentation!.views) {
   if (view.id === 'hopper-10/rmu') view.label = 'Hopper 10 · RM420 switchgear · TF04 33 kV feed confirmed';
@@ -42,3 +42,32 @@ for (const id of ['R002', 'SV-Q01', 'WN-JOIN-rm721']) {
   review.evidenceIds.push(cableDecisionId);
 }
 currentNetworkModel.evidence!.find(record => record.id === 'WN-JOIN-rm721')!.summary = 'Reciprocal SW411 tier16 / RM721 drawing route remains provisional pending whole-route acceptance. Owner decisions confirm CB RM721 FD01, ES RM721 FD 01 and cable tag RM721-P-01. Original SW454 labels remain drawing evidence; actual positions, availability, complete physical interlocks and nameplate inspection remain unconfirmed.';
+
+const tieDecisionId = 'WN-CRUSHING-TIE';
+const tieQuestion = 'Next connection to confirm: is SW431-P-02 the current tie between Crushing 1 SW431 and Crushing 2 SW435, with CB SW435 FD02 at the SW431 end and CB SW431 FD02 at the SW435 end? Sources:11098-07110-EL-DR-2353.pdf rev5 p1 C-G/2-3,2354rev9p1 B-G/2-3. Please correct any detail or say unconfirmed.';
+const tieDecision = { by: 'Project owner (conversation)', date: '2026-10-22', decision: 'confirmed' };
+currentNetworkModel.evidence!.push({
+  id: tieDecisionId, status: 'owner-confirmed', confirmation: tieDecision,
+  summary: `Owner answered exactly "confirmed" to: ${tieQuestion} This confirms the current SW431-P-02 cable and its named end connections only. The disputed drawing reference, device states, physical interlocks, source availability and whole-model acceptance remain unconfirmed.`,
+  references: [
+    { document: '11098-07110-EL-DR-2353.pdf', revision: '5 (28.01.25; AS FOUND 23.10.23)', page: 1, clause: 'C-G / 2-3, SW435 feeder at SW431, CB SW435 FD02 and SW431-P-02' },
+    { document: '11098-07110-EL-DR-2354.pdf', revision: '9 (28.01.25; AS FOUND 23.10.23)', page: 1, clause: 'B-G / 2-3, SW431 feeder at SW435, CB SW431 FD02 and SW431-P-02' },
+  ],
+});
+currentNetworkModel.reviews!.push({ id: tieDecisionId, status: 'resolved', question: tieQuestion, evidenceIds: [tieDecisionId], resolution: tieDecision });
+const crushingTie = currentNetworkModel.connections.find(connection => connection.id === 'whole:join:crushing-tie')!;
+crushingTie.knowledge = 'owner-confirmed';
+crushingTie.evidenceIds!.push(tieDecisionId); crushingTie.reviewIds!.push(tieDecisionId);
+const crushingTieReview = currentNetworkModel.reviews!.find(review => review.id === 'WN-JOIN-crushing-tie')!;
+crushingTieReview.status = 'resolved'; crushingTieReview.resolution = tieDecision;
+crushingTieReview.question = `${tieQuestion} Resolution is scoped to the current cable and named end connections; device states, physical interlocks and disputed document-reference identity remain separate reviews.`;
+crushingTieReview.evidenceIds.push(tieDecisionId);
+for (const id of ['C1-CROSS-TIE', 'C2-SW431-LINK', 'WN-JOIN-crushing-tie']) {
+  currentNetworkModel.evidence!.find(record => record.id === id)!.summary = 'Drawing references for SW431-P-02 between CB SW435 FD02 at SW431 and CB SW431 FD02 at SW435. The current cable and named end connections are owner-confirmed by WN-CRUSHING-TIE. The disputed overview document reference, device states, complete physical interlocks and source availability remain unconfirmed; original drawing references are retained.';
+}
+const crushing1Review = currentNetworkModel.reviews!.find(review => review.id === 'C1-R03')!;
+crushing1Review.question = 'The current SW431-P-02 tie and named end connections are owner-confirmed by WN-CRUSHING-TIE. Remaining unresolved: the overview reference 500CBC0002-13015-DR-EL-2353 and its document identity. Device states and complete physical interlocks remain separate open reviews.';
+crushing1Review.evidenceIds.push(tieDecisionId);
+const crushing2Review = currentNetworkModel.reviews!.find(review => review.id === 'C2-R11')!;
+crushing2Review.question = 'The current SW431-P-02 tie and named end connections are owner-confirmed by WN-CRUSHING-TIE. Remaining unresolved: installed configuration beyond that scoped tie confirmation, normal states, fuse continuity, withdrawal/racking states and physical interlocks. All represented control baselines remain null and blocked.';
+crushing2Review.evidenceIds.push(tieDecisionId);
