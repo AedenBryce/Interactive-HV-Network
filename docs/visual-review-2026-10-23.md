@@ -58,3 +58,8 @@ Popup-fit followup fa44130 keeps the compact menu inside the scrollbar-excluding
 ## Larger text and green/red lines
 
 65564b5 enlarges diagram names/states and popup text, with matching reserved geometry. Connected lines use bright green#39ff14; established no-source paths red#ff3b3b. Uncertainty/conflict/trace indicators remain separate. Build/browser geometry and computed-colour checks pass; both review axes0findings. No tests run. Current package is output/hv-network-v10-legibility-review.zip; exact hashes/proof are in delivery-verification.md. Model, baseline and remaining acceptance status are unchanged.
+
+
+## Separated trees and explicit selector earth contacts
+
+b0ae27a adds wider subtree spacing, common bus-level routing, SW411 IN01/IN02 above the buses and card clearance around orange highlights. All19 combined selectors show the recorded main/earth contacts rather than a floating ground symbol;120 standalone earth switches remain. The .10 model, starting states, rules and evidence are unchanged. Build, extracted-preview browser/geometry checks and both independent review axes pass. No tests run. Current package is `output/hv-network-v10-selector-review.zip`; [delivery verification](delivery-verification.md#separated-feeder-trees-and-combined-earthing-selectors) records hashes, interactions, proof and limits. Owner acceptance/final suite/tickets25/26 remain pending.

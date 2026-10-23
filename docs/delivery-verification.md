@@ -2,7 +2,7 @@
 
 ## Current evidence
 
-The current renderer is65564b5, enlarging whole-network labels and using bright green/red for established source-connected/no-source paths. Current archive: `output/hv-network-v10-legibility-review.zip` (810,671bytes; SHA256 `A05EDAEC03146A7F5513D12709C199CA01A7DED1F9005A26AC66509DEE1543F1`). Its extracted three-file `www` folder is served at127.0.0.1:4174. Earlier records remain historical evidence. Whole-model acceptance remains pending.
+The current renderer isb0ae27a, adding separated feeder trees, above-bus SW411 spare incomers and explicit combined-selector earth contacts. Current archive: `output/hv-network-v10-selector-review.zip` (811,694bytes; SHA256 `7826AFEE9AD95E16C136618A8B3CED2E93EE263678246EEEBF2C1EFC201538CF`). Its extracted three-file `www` folder is served at127.0.0.1:4174. Earlier records remain historical evidence. Whole-model acceptance remains pending.
 
 Verified23October2026 against immutable `construction-2026-10-23.10`, implementation57a2ee9. The current whole-model review is pending; the owner's confirmed Section1 and preference for whole-tool visual review are recorded in [the walkthrough](v10-walkthrough.md).
 
@@ -113,3 +113,16 @@ Owner requested larger text and bright green/red for energised/isolated lines. C
 Typecheck/production build passes222modules,1,795.63kB JS/358.43kB gzip,20.89kB CSS; existing size advisory remains. No tests added/run. In-app browser computed styles confirm name20px, state17px, connected rgb(57,255,20), disconnected rgb(255,59,59). All677 external routes and internal leads retain0diagonals,0label hits/overlaps and0unrelated collinear overlaps. Native popup/readability and an Open SW411 IN01 with green upstream/red line-side were inspected. Proof outside repo: hv-larger-text-colours.png and hv-green-red-lines.png in the task visualization folder. Standards and Spec reviews9563dc6...65564b5 each report0 actionable findings.
 
 Current package output/hv-network-v10-legibility-review.zip (810,671bytes; SHA256 A05EDAEC03146A7F5513D12709C199CA01A7DED1F9005A26AC66509DEE1543F1) passes ZIP integrity/all manifest hashes. Exactly the current index.html and its two referenced CSS/JS files are extracted to tmp/legibility-review-extracted/www. Manifest presentation65564b5/electrical57a2ee9; original scenario fingerprint unchanged. Earlier archives remain preserved; owner review, final full suite and tickets25/26 remain pending.
+
+
+## Separated feeder trees and combined earthing selectors
+
+Presentation b0ae27a addresses the owner's box-clearance, earth-symbol and subtree/incomer layout feedback. Device cards start24 drawing units left of the orange impact outline. Wider leaf spacing and480-unit gaps between branched sibling subtrees separate neighbouring trees; bus branches share their actual bus level instead of parallel horizontal channels. SW411 IN01 and IN02 are600 drawing units above their respective buses. Their selected Open/Rack in states remain unchanged.
+
+All19 combined Service/Isolated/Earthed selectors derive their main, common and earth terminal roles from recorded contact matrices. Their glyphs show main Closed/earth Open in Service, both Open in Isolated, and main Open/earth Closed in Earthed. The earth contact remains part of that single selector, with its existing action rules. This does not add independent controls or installed-equipment claims. All120 standalone earth-switch glyphs remain present. Parent metadata and external coverage question marks remain separately Unconfirmed.
+
+`pnpm build` passed (existing bundle-size advisory). In-app browser checks at1600x1000 against the extracted archive verified page identity, meaningful app content, no framework overlay and no warning/error entries. All677 connectors remained orthogonal, with0 label intersections, label overlaps or unrelated collinear overlaps. Internal equipment leads had0 diagonals, label intersections or unrelated overlaps. All19 selectors showed Closed main/Open earth at the baseline. RM406-SW01's popup blocked direct Service→Earthed, allowed Service→Isolated→Earthed, showed the selected earth path/source-to-earth conflict, and returned through Isolated to Service. Final packaged preview was reloaded to baseline; the SW411 IN01 above-bus view was reopened. Other viewports and every device's interaction sequence were not re-exercised in this increment. No tests added/run.
+
+Independent Standards and Spec reviews of0a9ca19...b0ae27a each reported0 actionable findings. The immutable model/scenario was not edited. Packaged scenario remains8,382,404bytes, SHA256 `D9F5EE5DF69AC5A3FE8846AF215F4D1FEA651B9B2881F7655707490A3DE4436D`. ZIP integrity and every payload checksum passed. Exact production files are recorded in the archive manifest. Earlier archives remain preserved.
+
+Screenshot evidence is in the task visualization folder: `hv-selector-service.png`, `hv-separated-feeder-trees.png`, `hv-sw411-incomers-above-bus.png`. Whole-model owner acceptance, final suite and tickets25/26 remain pending.
