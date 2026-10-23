@@ -10,6 +10,7 @@ import { diagramGeometry } from './diagram-geometry';
 import { continuousNetwork } from './continuous-network';
 import { hasDeviceCard, isDrive, isFuse } from './equipment-appearance';
 import { currentAssetLabel } from './review-updates';
+import { threePositionContacts } from './ThreePositionSymbol';
 import './navigation.css';
 
 type Props = { snapshot: SessionSnapshot; selectedId: string; tracedPath?: SourcePath; presentation: DiagramPresentation; onSelectAsset: (id: string, element?: Element) => void };
@@ -173,7 +174,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
           const [x, y] = view.layout.assets[item.id];
           const label = geometry.labels.get(item.id)!;
           return <g key={item.id} data-asset-id={item.id} transform={`translate(${x},${y})`} role="button" tabIndex={0} data-selectable="true" aria-label={`Select ${item.label} on diagram`} aria-pressed={item.id === selectedId} className="diagram-asset" onClick={event => onSelectAsset(item.id, event.currentTarget)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id, event.currentTarget); } }}>
-            {hasDeviceCard(item) ? <rect className="device-card" x="-48" y="-60" width={label.x - x + label.width + 60} height={Math.max(120, label.y - y + label.height + 72)} rx="6" /> : <path className="label-leader" d={`M45 0 H${label.x - x - 6}`} />}
+            {hasDeviceCard(item) ? <rect className="device-card" x="-72" y="-60" width={label.x - x + label.width + 84} height={Math.max(threePositionContacts(item) ? 210 : 120, label.y - y + label.height + 72)} rx="6" /> : <path className="label-leader" d={`M45 0 H${label.x - x - 6}`} />}
             {changedAssets.has(item.id) && <rect x="-48" y="-48" width="96" height="96" rx="8" className="impact-outline" />}
             <title>{item.label}</title>
             <rect x="-38" y="-38" width="76" height="76" rx="6" className={item.id === selectedId ? 'selection active' : 'selection'} />

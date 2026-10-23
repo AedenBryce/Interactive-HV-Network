@@ -1,6 +1,7 @@
 import type { Asset, NetworkModel } from '../session/model';
 import type { DiagramView } from '../session/presentation';
 import { isDrive, isFuse, isMotor } from './equipment-appearance';
+import { threePositionGeometry } from './ThreePositionSymbol';
 
 export type Point = [number, number];
 export type Box = { x: number; y: number; width: number; height: number };
@@ -175,7 +176,8 @@ export function equipmentPorts(asset: Asset, layout: DiagramView['layout']) {
   const point = (terminal: string): Point => [layout.terminals[terminal][0] - cx, layout.terminals[terminal][1] - cy];
   const transverse = (terminal: string) => { const [x, y] = point(terminal); return rotation === 90 ? -x : rotation === -90 ? x : rotation === 180 ? -y : y; };
   const secondaryOrder = asset.terminals.slice(1).toSorted((a, b) => transverse(a) - transverse(b));
-  const ports: Point[] = asset.kind === 'bus' ? [] : asset.kind === 'transformer'
+  const selector = threePositionGeometry(asset, layout);
+  const ports: Point[] = selector ? selector.ports : asset.kind === 'bus' ? [] : asset.kind === 'transformer'
     ? asset.terminals.map((terminal, index) => rotate(index === 0 ? [-33, 0] : [33, (secondaryOrder.indexOf(terminal) - (asset.terminals.length - 2) / 2) * 24]))
     : isMotor(asset) ? [[0, -30]]
     : isDrive(asset) ? asset.terminals.map(terminal => /:ac-(?:star|d)$/.test(terminal) ? [-22, -40] : /:ac-(?:delta|y)$/.test(terminal) ? [22, -40] : terminal.endsWith(':dc') ? [34, 0] : [0, 40])
