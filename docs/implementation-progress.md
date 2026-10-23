@@ -519,3 +519,12 @@ Owner requests one huge overview containing all modeled assets, with lines conti
 Typecheck/build pass218modules,1,782.46kB JS/354.19kB gzip,18.71kB CSS(existing advisory). No tests added/run. Final browser geometry:684/677,0diagonals/labelhits/labeloverlaps/unrelatedcollinearoverlaps/internalleadcollisions. Search CB SW435 IN01 finds spaced printed tag; Open changes current only,Reset restores. Desktop1440x1000 and native357px layouts checked; no native page overflow or console errors. Final independent Standards and Spec reviews each0actionablefindings. Detailed reference/QA limits and evidence are in delivery-verification.md.
 
 Portable review output/hv-network-v10-continuous-dark-review.zip(805,817bytes,SHA256 24F547C2AB379C9A5EBF47A0D4A54EA68168085C2DC207BD9EAA3AB16BBCC3B6) passes ZIP/manifest hashes; extracted three-file www serves4174 and starts with684assets/677connections. Prior archives, original scenario and all electrical claims/baselines remain unchanged. Owner acceptance, final full suite and tickets25/26 remain pending.
+
+
+## Downward supply tree — supersedes the area grid
+
+The owner rejected the area grid and requested a tree working downward. Commits57ca464/bc157df derive657 tree links and20 alternate links from the unchanged .10 model, with three supply roots at the top and earth controls beside their terminals. The example HTML was read statically after the browser blocked file://; its different network data was not imported.
+
+A browser-saved model is structurally identical to the frozen .10 scenario, including233 owner-confirmed evidence records,362 starting states/local profiles and three Open/Rack out ties. The UI separates connection-record uncertainty from source/earth coverage and clarifies superseded construction labels while retaining originals. No unknown electrical or installation claim is promoted.
+
+Build and native in-app browser checks pass; all684 assets/677 connections remain, with0diagonal connectors, label hits/overlaps or unrelated collinear overlaps. Both independent review axes have0 remaining actionable findings after sharing geometry helpers. No tests added/run for this increment. Current archive is output/hv-network-v10-downward-tree-review.zip; extracted preview remains at127.0.0.1:4174. Exact artifact hashes, preservation comparison, reference limitations and screenshot proof are recorded in [delivery verification](delivery-verification.md#downward-supply-tree--supersedes-the-area-grid). Earlier archives are preserved; owner acceptance, final suite and tickets25/26 remain pending.
