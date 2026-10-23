@@ -13,7 +13,7 @@ import { withOwnerSw411Feeds } from './owner-sw411-feeds';
 import { withOwnerRemovableBreakers } from './owner-removable-breakers';
 import { withOwnerSw411LocalRules } from './owner-sw411-local-rules';
 import { withOwnerStartingConfiguration } from './owner-starting-configuration';
-import { withCurrentConfigurationNotes, withExpandedMechanismNotes } from './configuration-review-notes';
+import { withCurrentConfigurationNotes, withExpandedMechanismNotes, withLatestConfigurationNotes } from './configuration-review-notes';
 import { withOwnerAdditionalInterlocks } from './owner-additional-interlocks';
 import { withOwnerKeySequenceDeferral } from './owner-key-sequence-deferral';
 import { withOwnerTransformerTransfers } from './owner-transformer-transfers';
@@ -30,6 +30,8 @@ import { withOwnerFuseContinuity } from './owner-fuse-continuity';
 import { withOwnerMvDriveScope } from './owner-mv-drive-scope';
 import { withOwnerMvConverterTransfers } from './owner-mv-converter-transfers';
 import { withOwnerHpgrOutletProfiles } from './owner-hpgr-outlet-profiles';
+import { withOwnerNetworkContinuations } from './owner-network-continuations';
+import { withOwnerDropTowerBranch } from './owner-drop-tower-branch';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -63,13 +65,19 @@ export const completeControlsNetworkModel = withOwnerFinalControlProfiles(
     ), 'construction-2026-10-23.6-stage3',
   ), 'construction-2026-10-23.6',
 );
-export const currentNetworkModel = withOwnerHpgrOutletProfiles(
+export const electricalPolicyNetworkModel = withOwnerHpgrOutletProfiles(
   withOwnerMvConverterTransfers(
     withOwnerMvDriveScope(
       withOwnerFuseContinuity(completeControlsNetworkModel, 'construction-2026-10-23.7-stage1'),
       'construction-2026-10-23.7-stage2',
     ), 'construction-2026-10-23.7-stage3',
   ), 'construction-2026-10-23.7',
+);
+export const currentNetworkModel = withLatestConfigurationNotes(
+  withOwnerDropTowerBranch(
+    withOwnerNetworkContinuations(electricalPolicyNetworkModel, 'construction-2026-10-23.8-stage1'),
+    'construction-2026-10-23.8-stage2',
+  ), 'construction-2026-10-23.8',
 );
 
 function buildCurrentNetworkModel() {

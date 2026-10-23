@@ -44,6 +44,10 @@ Retain the water-tower/process-water branch through MC441's first LV bus. The ow
 
 ## User Stories
 
+### Owner scope exception —23 October2026: Drop Tower
+
+Answer83 initially included Drop Tower through its final LV bus. Answer86 confirmed CV006 pole17/17-1 as the studyP18 → P18-1 ABS → P18-8 fused ABS → P18-8 TF route. Answer87 then explicitly revised the endpoint: “not relevant. just have the final point be the Drop tower Transformer for V1”. Include the HV route and transformer, ending at that transformer; exclude the downstream LV/changeover board and its incoming/alternate-supply detail. This is an explicit exception to the usual final-LV-bus endpoint. Answer88 separately selects the two HV ABS baselines/profiles; answer89's selected downstream LV-fuse continuity does not extend the87 boundary. See [the scoped decision record](../../drawing-review/supplemental/owner-network-continuations-review.md).
+
 1. As a network user, I want to see the whole modelled network, so that I can understand how its areas connect.
 2. As a network user, I want a network overview, so that I can orient myself before inspecting individual equipment.
 3. As a network user, I want to navigate to detailed substation views, so that I can examine local switching arrangements.

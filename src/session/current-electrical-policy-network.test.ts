@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, completeControlsNetworkModel } from '../models/site/current-network';
+import { electricalPolicyNetworkModel as currentNetworkModel, completeControlsNetworkModel } from '../models/site/current-network';
 
 describe('immutable .7 selected fuse/converter/outlet package', () => {
   it('integrates the selected electrical policies and preserves the separate unaccepted equipment/coverage claims', () => {

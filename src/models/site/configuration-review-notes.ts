@@ -77,3 +77,37 @@ export function withExpandedMechanismNotes(base: NetworkModel, version: string):
   }
   return model;
 }
+
+export function withLatestConfigurationNotes(base: NetworkModel, version: string): NetworkModel {
+  const id = 'WN-CURRENT-CONFIGURATION-INVENTORY';
+  if (!version.trim() || version === base.version) throw new Error('Current configuration inventory requires a new immutable version.');
+  if (base.evidence?.some(record => record.id === id)) throw new Error('Current configuration inventory already applied.');
+  const selections = ['WN-FUSE-CONTINUITY', 'WN-MV-DRIVE-SCOPE', 'WN-MV-CONVERTER-FORWARD-POLICY', 'WN-HPGR-OUTLET-PROFILE', 'WN-DROP-TOWER-SCOPE'];
+  if (selections.some(id => !base.evidence?.some(record => record.id === id && record.status === 'owner-confirmed'))) throw new Error('Review required: latest configuration selections are missing.');
+  const model = { ...structuredClone(base), version };
+  const contacts = Object.values(model.starting.devices).map(state => isIndependentState(state) ? state.contact : state);
+  const summary = `Current teaching configuration:${contacts.filter(state => state !== null).length} selected contact positions,${contacts.filter(state => state === null).length} contacts Unconfirmed,${model.assets.filter(asset => getRemovableMechanism(asset)).length} independent racking positions,${Object.values(model.starting.sources).filter(state => state === true).length} available abstract supplies. All${model.interlocks!.reviews.filter(review => review.status !== 'unresolved').length} local control profiles are selected;${model.interlocks!.reviews.filter(review => review.status === 'unresolved').length} remain unresolved. Selected fuse/converter/outlet/Drop Tower decisions are scoped; actual site status, independent earth/reverse behavior, external coverage and whole-model acceptance remain separate.`;
+  const references = [{ document: `Software model package ${model.id}`, revision: version, clause: 'Counted from this immutable package: starting contact/racking/source values and local control review statuses. Software inventory, not installed equipment acceptance.' }];
+  (model.evidence ??= []).push({ id, status: 'supported', references, summary });
+  const qualify = (text: string) => `${summary}\nHistorical configuration descriptions (prior counts superseded above): ${text}`;
+  for (const review of model.reviews ?? []) if (review.question.includes('Current expanded teaching configuration:')) {
+    review.question = qualify(review.question); review.evidenceIds = [...new Set([...review.evidenceIds, id, ...selections])];
+  }
+  for (const record of model.evidence) if (record.id !== id && record.summary.includes('Current expanded teaching configuration:')) {
+    record.summary = qualify(record.summary); record.references.push(...references);
+  }
+  for (const review of model.interlocks?.reviews ?? []) if (review.note.includes('Current expanded teaching configuration:')) {
+    review.note = qualify(review.note); review.evidence.push(...references);
+  }
+  for (const reviewId of ['C2-R10', 'SW-R06']) {
+    const review = model.reviews?.find(record => record.id === reviewId);
+    if (!review) throw new Error(`Review required: inherited converter scope review ${reviewId} missing.`);
+    review.question = `Selected V1 converter/motor scope and forward AC→DC→output behavior are recorded by owner79/80 for HPGR MEB/MEA and SW505 VS50501/02/03. Owner82 selects the two HPGR outlet profiles. Remaining physical metadata, reverse/earth behavior, ratings and whole-model acceptance remain separate; this broad review stays open. Historical construction question: ${review.question}`;
+    review.evidenceIds = [...new Set([...review.evidenceIds, ...selections.slice(1, 4)])];
+  }
+  const cv = model.reviews?.find(record => record.id === 'CV-R11');
+  if (!cv) throw new Error('Review required: inherited CV006 coverage question missing.');
+  cv.question = `Drop Tower is included through the transformer under owner86/87; its LV/changeover equipment is excluded. Other CV006 aliases, earth/external coverage and retained drawing discrepancies remain separately unresolved. Historical construction question: ${cv.question}`;
+  cv.evidenceIds = [...new Set([...cv.evidenceIds, 'WN-DROP-TOWER-ROUTE', 'WN-DROP-TOWER-SCOPE'])];
+  return model;
+}
