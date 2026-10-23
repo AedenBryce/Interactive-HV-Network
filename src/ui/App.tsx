@@ -59,7 +59,9 @@ export function App() {
     setSelectedId(id); setTraceKey(null); inspector.current?.scrollTo({ top: 0 });
     popupOrigin.current = element ?? null;
     const rect = element?.getBoundingClientRect();
-    setPopup({ id, x: Math.max(12, Math.min(innerWidth - 352, rect ? rect.right + 8 : innerWidth / 2 - 170)), y: Math.max(12, Math.min(innerHeight - 430, rect?.top ?? 80)) });
+    const width = document.documentElement.clientWidth;
+    const popupWidth = Math.min(340, width - 24);
+    setPopup({ id, x: Math.max(12, Math.min(width - popupWidth - 12, rect ? rect.right + 8 : (width - popupWidth) / 2)), y: Math.max(12, Math.min(innerHeight - 430, rect?.top ?? 80)) });
   }
 
   function updateSession(action: () => void) {

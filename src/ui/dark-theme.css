@@ -64,7 +64,7 @@ body, .app { background: #0b1017; }
 .winding-labels text { fill: #bed0e3; font-size: 20px; }
 .canvas-area rect { stroke: #526a82; stroke-width: 1.5; }
 .canvas-area text { fill: #c4d5e6; font-size: 30px; paint-order: stroke; stroke: #0b111a; stroke-width: 9px; }
-.asset-actions { position: fixed; z-index: 20; width: min(340px, calc(100vw - 24px)); max-height: min(410px, calc(100vh - 24px)); overflow: auto; padding: 14px; border: 1px solid #6a8aa7; border-radius: 9px; color: #d8e2ef; background: #172433; box-shadow: 0 12px 36px #000b; font-size: 13px; }
+.asset-actions { position: fixed; z-index: 20; width: min(340px, calc(100% - 24px)); max-height: min(410px, calc(100vh - 24px)); overflow: auto; padding: 14px; border: 1px solid #6a8aa7; border-radius: 9px; color: #d8e2ef; background: #172433; box-shadow: 0 12px 36px #000b; font-size: 13px; }
 .asset-actions:focus { outline: 2px solid #73c9f1; outline-offset: 2px; }
 .asset-actions-heading { display: flex; gap: 12px; justify-content: space-between; align-items: start; }
 .asset-actions h3 { margin: 0; font-size: 16px; }
