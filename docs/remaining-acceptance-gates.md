@@ -1,6 +1,6 @@
 # Remaining whole-network acceptance gates
 
-Verified against GitHub issues25/26 on23October2026; updated for current construction `.10`. This checklist identifies required evidence; it does not confer owner acceptance or replace the GitHub criteria.
+Verified against GitHub issues25/26 on23October2026; updated for current construction `.10`. This checklist identifies required evidence; it does not confer owner acceptance or replace the GitHub criteria. The [current owner packet](v10-owner-review.md) consolidates the specific version, scope, baseline and retained unknowns for the outstanding decision.
 
 ## Network acceptance — issue25
 
@@ -21,9 +21,9 @@ Owner83–89 add the Drop Tower branch ending at its transformer (explicit excep
 | --- | --- | --- |
 | Reproducible startup and packaged agreed model | README development/production commands, lockfile and built construction package | Package the specific accepted model and baseline after issue25 is satisfied. |
 | Integrated navigation/actions/impacts/paths/history | Focused session tests and production browser demonstrations, recorded by increment | Demonstrate required flows on the final accepted package. |
-| Matching and historical scenario files | Actual `.9` matching reopen and `.8` view-only reopen, with Undo/Reset disabled | Repeat against the final accepted version; retain the scenario and exact identity. |
-| No runtime PDFs or historical model file dependency | Isolated three-file `.5` package browser check, plus self-contained scenario checks | Repeat startup and exploration with the final accepted build alone. |
-| Meaningful tests and browser checks | Focused tests, typecheck/build and independent Standards/Spec review for `.9` | Run the full suite once at the whole goal's end, as the implement skill requires; record final browser results and limitations. |
+| Matching and historical scenario files | Actual `.10` matching reopen and `.9` view-only reopen, with Undo/Reset disabled | Retain or repeat against the final accepted version; retain the scenario and exact identity. |
+| No runtime PDFs or historical model file dependency | Isolated three-file `.10` package browser startup/exploration and self-contained scenario checks | Confirm final accepted delivery uses this verified package, or repeat for a changed build. |
+| Meaningful tests and browser checks |65 focused checks, typecheck/build and independent Standards/Spec review for `.10` | Run the full suite once at the whole goal's end, as the implement skill requires; record final browser results and limitations. |
 | Entire accepted scope and owner acceptance | Acceptance packet exists | Obtain and record owner acceptance; neither tests nor this checklist substitute for it. |
 | Scope limits retained | Local browser application; no electrical calculations, live equipment integration, editor or Sites deployment | Confirm those limits in the final delivery record. |
 

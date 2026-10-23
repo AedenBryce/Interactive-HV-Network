@@ -10,6 +10,8 @@ A local browser application for understanding represented network connections an
 
 Current version **`construction-2026-10-23.10`** applies owner97–99: seven removable main-contact relationships,30 represented wire paths and18 existing modeled ground destinations. All677 wires are selected/supported except seven excluded33kV takeoff-marker links. Equipment metadata, external coverage and unresolved reverse/earth-transfer behavior remain separate. [Exact decisions](drawing-review/supplemental/owner-remaining-electrical-decisions.md). `contactNetworkModel` preserves `.9`.
 
+Use the [version .10 review packet](docs/v10-owner-review.md) to review the whole agreed scope, baseline and retained unknowns. Whole-model owner acceptance remains pending.
+
 Owner90–96 confirm TF406B's CB02/SW03 feeding route, the continuous MC451/MC451B bus section, and six separate LV AC endpoints at VS4061/VS4101/RM413A. Seventeen selector matrices and24 binary contact matrices have narrowly selected contact paths;105 scoped position claims preserve unrelated equipment knowledge. Six incoming/ring selectors earth the external cable side, leaving the bus side disconnected. Existing baselines and local rules are unchanged. [Decisions and exact source refs](drawing-review/supplemental/owner-contact-path-decisions.md).
 
 Drop Tower is included from the CV006 pole17/17-1 branch through the two confirmed HV ABS controls to P18-8 TF, which is the explicit V1 endpoint. Its LV/changeover equipment is excluded by owner87. RM713 IN02, RM714 IN02 and RM417 SW02 have no external cables; their installed controls, selected positions and local profiles remain. See [owner83–89 decisions](drawing-review/supplemental/owner-network-continuations-review.md).
