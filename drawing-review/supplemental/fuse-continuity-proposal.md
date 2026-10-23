@@ -1,6 +1,8 @@
-# V1 series fuse continuity selection — pending
+# V1 series fuse continuity selection — original proposal
 
-This is a proposed teaching-model policy, not a claim about actual fuse condition. It was extracted from immutable `site-whole-network` / `construction-2026-10-23.6` on23October2026. The [exact31-asset inventory](fuse-continuity-proposal.json) retains IDs, terminal pairs and original document/revision/page/region references. No model change has been applied.
+Owner78 subsequently selected this proposal: **“Use this fixed intact-fuse model for all31”**. See [the decision and its limits](owner-electrical-policy-review.md). The frozen JSON remains the original pre-selection audit; its pending status describes that historical proposal, not current `.7`.
+
+This teaching-model policy does not claim actual fuse condition. It was extracted from immutable `site-whole-network` / `construction-2026-10-23.6` on23October2026. The [exact31-asset inventory](fuse-continuity-proposal.json) retains IDs, terminal pairs and original document/revision/page/region references.
 
 | Area | Exact fuse identities | Count |
 | --- | --- | ---: |

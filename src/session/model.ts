@@ -19,7 +19,7 @@ const assetSchema = z.strictObject({
   removableBreaker: z.strictObject({ mainPair: pair }).optional(),
   removableContactor: z.strictObject({ mainPair: pair }).optional(),
   removableDisconnector: z.strictObject({ mainPair: pair }).optional(),
-  positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional() })),
+  positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional(), supportScope: z.literal('relationship').optional(), ...claimFields })),
 });
 
 export const modelSchema = z.strictObject({
@@ -53,7 +53,7 @@ export const modelSchema = z.strictObject({
   unique((model.reviews ?? []).map(record => record.id), 'review identity');
   unique((model.boundaries ?? []).map(boundary => boundary.id), 'boundary identity');
   for (const boundary of model.boundaries ?? []) if (!terminals.includes(boundary.terminal)) error(`Boundary ${boundary.id} references missing terminal ${boundary.terminal}.`);
-  for (const claim of [...model.assets, ...model.assets.flatMap(asset => asset.sourceArcs ?? []), ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
+  for (const claim of [...model.assets, ...model.assets.flatMap(asset => [...(asset.sourceArcs ?? []), ...asset.positions]), ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
     for (const evidenceId of claim.evidenceIds ?? []) if (!model.evidence?.some(record => record.id === evidenceId)) error(`${claim.id} references missing evidence ${evidenceId}.`);
     for (const reviewId of claim.reviewIds ?? []) if (!model.reviews?.some(record => record.id === reviewId)) error(`${claim.id} references missing review ${reviewId}.`);
     if (!model.synthetic && (claim.knowledge === 'supported' || claim.knowledge === 'owner-confirmed') && !claim.evidenceIds?.length) error(`Supported fact ${claim.id} requires evidence.`);
@@ -86,6 +86,7 @@ export const modelSchema = z.strictObject({
       if ([...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? [])].some(([x, y]) => x === a && y === b || x === b && y === a)) error(`Removable ${mechanism.kind} ${asset.id} main pair cannot also be fixed conducting.`);
     } else if (isIndependentState(state)) error(`Discrete asset ${asset.id} cannot use independent contact/racking states.`);
     unique(asset.positions.map(p => p.id), `position in ${asset.id}`);
+    for (const position of asset.positions) if (position.supportScope === 'relationship' && (position.knowledge === undefined || !position.evidenceIds?.length)) error(`Relationship-scoped position ${asset.id}/${position.id} requires explicit knowledge and linked evidence.`);
     for (const [a, b] of [...asset.conductivePairs, ...(asset.sourcePairs ?? []), ...(asset.earthPairs ?? []), ...asset.positions.flatMap(p => [...p.pairs, ...(p.sourcePairs ?? []), ...(p.earthPairs ?? [])])]) {
       if (!asset.terminals.includes(a) || !asset.terminals.includes(b)) error(`Relationship in ${asset.id} references an external or missing terminal.`);
     }

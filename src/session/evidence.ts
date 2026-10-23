@@ -25,6 +25,12 @@ export function isSupported(model: { synthetic: boolean }, claim: { knowledge?: 
   return claim.knowledge === 'supported' || claim.knowledge === 'owner-confirmed' || (model.synthetic && claim.knowledge === undefined);
 }
 
-export function isSourceArcSupported(model: { synthetic: boolean }, asset: { knowledge?: z.infer<typeof knowledgeSchema> }, arc: { knowledge?: z.infer<typeof knowledgeSchema>; supportScope?: 'relationship' }) {
-  return isSupported(model, arc) && (arc.supportScope === 'relationship' || isSupported(model, asset));
+export function isRelationshipSupported(model: { synthetic: boolean }, asset: { knowledge?: z.infer<typeof knowledgeSchema> }, relationship: { knowledge?: z.infer<typeof knowledgeSchema>; supportScope?: 'relationship' }) {
+  return isSupported(model, relationship) && (relationship.supportScope === 'relationship' || isSupported(model, asset));
+}
+
+export const isSourceArcSupported = isRelationshipSupported;
+
+export function isPositionSupported(model: { synthetic: boolean }, asset: { knowledge?: z.infer<typeof knowledgeSchema> }, position: { knowledge?: z.infer<typeof knowledgeSchema>; supportScope?: 'relationship' }) {
+  return position.knowledge === undefined && position.supportScope === undefined ? isSupported(model, asset) : isRelationshipSupported(model, asset, position);
 }

@@ -1,6 +1,6 @@
 import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { indexSourceQueries } from './source-query';
-import { isSourceArcSupported, isSupported } from './evidence';
+import { isPositionSupported, isSourceArcSupported, isSupported } from './evidence';
 import { getRemovableMechanism, removablePairs } from './mechanisms';
 
 export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string; directed?: true; sourceArcId?: string };
@@ -12,18 +12,20 @@ export type Connectivity = { sourceIds: string[]; terminalSources: Record<string
 export function buildGraph(model: NetworkModel, devices: DeviceStates, options: { includeUnconfirmed?: boolean; channel?: 'source' | 'earth' } = {}): ActiveGraph {
   const edges: GraphEdge[] = model.connections.filter(c => options.includeUnconfirmed || isSupported(model, c)).map(c => ({ id: `connection:${c.id}`, from: c.from, to: c.to, connectionId: c.id }));
   for (const asset of model.assets) {
-    if (options.includeUnconfirmed || isSupported(model, asset)) {
-      const pairKey = (pair: [string, string]) => JSON.stringify([...pair].sort());
-      const channelPairs = (item: { sourcePairs?: [string, string][]; earthPairs?: [string, string][] }) => (options.channel === 'earth' ? item.earthPairs : item.sourcePairs) ?? [];
-      const positionRelationships = asset.positions.map(position => ({ id: position.id, pairs: [...position.pairs, ...channelPairs(position)] }));
-      const positionPairs = devices[asset.id] === null
-        ? options.includeUnconfirmed ? positionRelationships.flatMap(p => p.pairs) : (positionRelationships[0]?.pairs ?? []).filter(pair => positionRelationships.every(p => p.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
-        : positionRelationships.find(p => p.id === devices[asset.id])?.pairs ?? [];
-      const mechanism = getRemovableMechanism(asset);
-      const mechanicalPairs = mechanism ? removablePairs(mechanism.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
-      const pairs = new Map([...asset.conductivePairs, ...channelPairs(asset), ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));
-      for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
-    }
+    const pairKey = (pair: [string, string]) => JSON.stringify([...pair].sort());
+    const channelPairs = (item: { sourcePairs?: [string, string][]; earthPairs?: [string, string][] }) => (options.channel === 'earth' ? item.earthPairs : item.sourcePairs) ?? [];
+    const positionRelationships = asset.positions.map(position => ({ id: position.id, pairs: [...position.pairs, ...channelPairs(position)], supported: isPositionSupported(model, asset, position) }));
+    const activePosition = positionRelationships.find(position => position.id === devices[asset.id]);
+    const positionPairs = devices[asset.id] === null
+      ? options.includeUnconfirmed ? positionRelationships.flatMap(position => position.pairs) : (positionRelationships[0]?.pairs ?? []).filter(pair => positionRelationships.every(position => position.supported && position.pairs.some(candidate => pairKey(candidate) === pairKey(pair))))
+      : activePosition && (options.includeUnconfirmed || activePosition.supported) ? activePosition.pairs : [];
+    const parentIncluded = options.includeUnconfirmed || isSupported(model, asset);
+    const mechanism = getRemovableMechanism(asset);
+    const mechanicalPairs = parentIncluded && mechanism ? removablePairs(mechanism.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
+    const fixedPairs = parentIncluded ? [...asset.conductivePairs, ...channelPairs(asset)] : [];
+    // Retain legacy fixed/position/mechanism insertion order for historical path examples.
+    const pairs = new Map([...fixedPairs, ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));
+    for (const [key, [from, to]] of pairs) edges.push({ id: `asset:${JSON.stringify([asset.id, key])}`, from, to, assetId: asset.id });
     if (options.channel !== 'earth') for (const arc of asset.sourceArcs ?? []) {
       if (options.includeUnconfirmed || isSourceArcSupported(model, asset, arc)) edges.push({ id: `source-arc:${JSON.stringify([asset.id, arc.id, arc.from, arc.to])}`, from: arc.from, to: arc.to, assetId: asset.id, directed: true, sourceArcId: arc.id });
     }

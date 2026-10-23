@@ -26,6 +26,10 @@ import { withOwnerRmuSeparatedProfiles } from './owner-rmu-separated-profiles';
 import { withOwnerFixedRmuProfiles } from './owner-fixed-rmu-profiles';
 import { withOwnerHpgrLocalProfiles } from './owner-hpgr-local-profiles';
 import { withOwnerFinalControlProfiles } from './owner-final-control-profiles';
+import { withOwnerFuseContinuity } from './owner-fuse-continuity';
+import { withOwnerMvDriveScope } from './owner-mv-drive-scope';
+import { withOwnerMvConverterTransfers } from './owner-mv-converter-transfers';
+import { withOwnerHpgrOutletProfiles } from './owner-hpgr-outlet-profiles';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -51,13 +55,21 @@ export const rmuProfilesNetworkModel = withOwnerRm714DriveOutputProfiles(
   withOwnerRmuThreePositionProfiles(expandedProfilesNetworkModel, rmuVersion), rmuVersion,
 );
 // Intermediate compositions are private. Only the final immutable package is distributed.
-export const currentNetworkModel = withOwnerFinalControlProfiles(
+export const completeControlsNetworkModel = withOwnerFinalControlProfiles(
   withOwnerFixedRmuProfiles(
     withOwnerHpgrLocalProfiles(
       withOwnerRmuSeparatedProfiles(rmuProfilesNetworkModel, 'construction-2026-10-23.6-stage1'),
       'construction-2026-10-23.6-stage2',
     ), 'construction-2026-10-23.6-stage3',
   ), 'construction-2026-10-23.6',
+);
+export const currentNetworkModel = withOwnerHpgrOutletProfiles(
+  withOwnerMvConverterTransfers(
+    withOwnerMvDriveScope(
+      withOwnerFuseContinuity(completeControlsNetworkModel, 'construction-2026-10-23.7-stage1'),
+      'construction-2026-10-23.7-stage2',
+    ), 'construction-2026-10-23.7-stage3',
+  ), 'construction-2026-10-23.7',
 );
 
 function buildCurrentNetworkModel() {

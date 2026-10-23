@@ -1,17 +1,17 @@
 # Remaining whole-network acceptance gates
 
-Verified against GitHub issues25/26 and local commit `675b781` on23October2026. This checklist identifies required evidence; it does not confer owner acceptance or replace the GitHub criteria.
+Verified against GitHub issues25/26 on23October2026; updated for current construction `.7`. This checklist identifies required evidence; it does not confer owner acceptance or replace the GitHub criteria.
 
 ## Network acceptance — issue25
 
 | Required decision | Current evidence | Still required |
 | --- | --- | --- |
 | Complete agreed network through final LV buses |13 area packages combined into one model; original141-PDF dispositions and supplemental endpoint records; station/downstream scope decisions recorded | Owner review of remaining endpoint/converter/external-boundary treatment and included paths. Intake counts and structural checks do not prove installed coverage. |
-| Whole diagram, connections, sources, states and interlocks | Current `.6` contains358 selected local profiles,148 mechanisms, all starting positions and3 selected available supplies; decisions through77 | Whole-diagram/electrical-relationship review and explicit acceptance. Local-action approval is a separate claim. |
-| Material ambiguity resolution or explicit model treatment | Scoped owner resolutions retained with evidence;31-fuse proposal prepared; converter-transfer scope question pending | Resolve or explicitly select treatment for remaining electrical claims, endpoints, external coverage and material aliases/voltage descriptions. No drawing-date precedence is assumed. |
+| Whole diagram, connections, sources, states and interlocks | Current `.7` contains360 selected local profiles,148 mechanisms, all starting positions and3 selected available supplies; decisions through82 | Whole-diagram/electrical-relationship review and explicit acceptance. Local-action approval is a separate claim. |
+| Material ambiguity resolution or explicit model treatment | Scoped owner resolutions retained;31-fuse continuity, five converter/motor scopes and forward-transfer rules, and two HPGR outlet profiles selected through82 | Resolve or explicitly select treatment for remaining electrical claims, endpoints, external coverage and material aliases/voltage descriptions. No drawing-date precedence is assumed. |
 | Immutable model and baseline acceptance | Current construction ID/version and reproducible scenario; old versions preserved | Named owner, date and explicit acceptance of a specific final version, included scope, baseline and retained unknowns. `WN-OWNER-ACCEPTANCE` remains open. |
 
-Current questions78–79 cover exactly the [31 series fuses](../drawing-review/supplemental/fuse-continuity-proposal.md) and scope of five MV converter/motor branches. They do not supply a converter truth table, accept unrelated electrical relationships or establish operational permission.
+Answers78–82 select the exact [31 series fuse paths](../drawing-review/supplemental/fuse-continuity-proposal.md), five MV converter/motor scopes, simplified forward transfer and two complete HPGR outlet profiles. The [decision record](../drawing-review/supplemental/owner-electrical-policy-review.md) retains their limits; unrelated electrical relationships and operational permission are not accepted.
 
 ## Local delivery — issue26
 

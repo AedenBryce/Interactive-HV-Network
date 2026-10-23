@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
 import { isIndependentState } from './mechanisms';
-import { currentNetworkModel, rmuProfilesNetworkModel } from '../models/site/current-network';
+import { completeControlsNetworkModel as currentNetworkModel, rmuProfilesNetworkModel } from '../models/site/current-network';
 
 describe('immutable .6 owner-selected complete local controls package', () => {
   it('distributes every selected local profile and baseline while leaving whole-network acceptance open', () => {
