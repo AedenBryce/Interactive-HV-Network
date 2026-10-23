@@ -537,3 +537,8 @@ Owner's next visual feedback is implemented in e8dfad5/2fc1e4e: upright earth-sw
 Build and final extracted-package browser checks pass; external/internal geometry audits are0 for diagonal/label/collinear conflicts. Popup switching/racking guards and map/search/list entry paths were exercised. Both independent review axes report0 remaining findings. No tests added/run. Current package is output/hv-network-v10-equipment-review.zip, served at127.0.0.1:4174. [Delivery verification](delivery-verification.md#equipment-actions-and-grouped-motor-drive-layout) records exact hashes, screenshot proof, reference fidelity and limitations. Earlier packages are preserved; whole-model owner acceptance/final suite/tickets25/26 remain pending.
 
 Popup-fit followup fa44130 keeps the compact menu inside the scrollbar-excluding viewport (native357px; popupx12..344.8px). Final archive/header/manifest identities are updated in delivery-verification.md; both independent rechecks report0 remaining findings.
+
+
+## Larger text and green/red lines
+
+65564b5 enlarges diagram names/states and popup text, with matching reserved geometry. Connected lines use bright green#39ff14; established no-source paths red#ff3b3b. Uncertainty/conflict/trace indicators remain separate. Build/browser geometry and computed-colour checks pass; both review axes0findings. No tests run. Current package is output/hv-network-v10-legibility-review.zip; exact hashes/proof are in delivery-verification.md. Model, baseline and remaining acceptance status are unchanged.
