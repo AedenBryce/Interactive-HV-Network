@@ -40,7 +40,7 @@ export function App() {
   const changedState = hasState && (isIndependentState(deviceState) && isIndependentState(startingState)
     ? deviceState.contact !== startingState.contact || deviceState.racking !== startingState.racking
     : deviceState !== startingState);
-  const historicalModel = !snapshot.model.synthetic && (snapshot.model.id !== defaultModel.id || snapshot.model.version !== defaultModel.version);
+  const differentModel = !snapshot.model.synthetic && (snapshot.model.id !== defaultModel.id || snapshot.model.version !== defaultModel.version);
   const paths = snapshot.connectivity[asset.id].paths;
   const tracedPath = paths.find(path => `${path.sourceId}:${path.terminalId}` === traceKey);
   const labels = new Map(snapshot.model.assets.map(item => [item.id, item.label]));
@@ -111,10 +111,10 @@ export function App() {
       <aside className="network-rail" aria-label="Network model">
         <h2>Network model</h2>
         <p className="model-name">{snapshot.model.name}<br /><span className="version">{snapshot.model.version}</span></p>
-        <p className="model-note">{snapshot.model.synthetic ? <>Demonstration model.<br /> Not the site network.</> : historicalModel ? <>Historical model snapshot.<br /> Earlier states and interlock reviews; not the current V1 whole network.</> : <>Current V1 whole network.<br /> Owner visual review pending.</>}</p>
+        <p className="model-note">{snapshot.model.synthetic ? <>Demonstration model.<br /> Not the site network.</> : differentModel ? <>Different model snapshot.<br /> Uses its recorded states and interlock reviews; not the current V1 whole network.</> : <>Current V1 whole network.<br /> Owner visual review pending.</>}</p>
         {snapshot.mode === 'view-only' && <p className="model-note">View only: {snapshot.model.version}<br />Current: {snapshot.currentModel.version}</p>}
         <label className="model-picker">Model<select aria-label="Model" value={snapshot.currentModel.id} onChange={event => selectModel(event.target.value)}>{modelGroups.map(group => <optgroup key={group.label} label={group.label}>{group.models.map(model => <option key={model.id} value={model.id}>{model.id === defaultModel.id || model.synthetic ? model.name : `Historical · ${model.name}`}</option>)}</optgroup>)}</select></label>
-        {historicalModel && <button className="current-model-button" onClick={() => selectModel(defaultModel.id)}>Open current whole network</button>}
+        {differentModel && <button className="current-model-button" onClick={() => selectModel(defaultModel.id)}>Open current whole network</button>}
         <ScenarioControls snapshot={snapshot} onSave={() => session.saveScenario()} onLoad={loadScenario} onError={setMessage} onReturn={() => selectModel(snapshot.currentModel.id)} />
         <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={() => selectAsset(item.id)}>
           <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={contactPosition(snapshot.devices[item.id]) === 'open'} unknown={(item.positions.length > 0 || !!getRemovableMechanism(item)) && contactPosition(snapshot.devices[item.id]) === null} /></svg><span>{item.label}{getRemovableMechanism(item) && <small style={{ display: 'block' }}>{describeDeviceState(snapshot.devices[item.id])}</small>}</span>
