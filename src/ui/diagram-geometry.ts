@@ -102,6 +102,8 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
   const symbolBoxes = assets.map(asset => { const [x, y] = layout.assets[asset.id]; return { id: asset.id, x: x - 38, y: y - 38, width: 76, height: 76 }; });
   const terminalBoxes = [...new Set(connections.flatMap(link => [link.from, link.to]))].map(id => { const [x, y] = layout.terminals[id]; return { x: x - 10, y: y - 10, width: 20, height: 20 }; });
   const hints = new Map(connections.map(link => [link.id, orthogonalPoints([layout.terminals[link.from], ...(source.layout.bends?.[link.id] ?? []).map(point), layout.terminals[link.to]])]));
+  const leadHints = assets.flatMap(asset => { const [x, y] = layout.assets[asset.id]; return equipmentPorts(asset, layout).ports.map((port, index) => ({ terminal: asset.terminals[index], points: orthogonalPoints([layout.terminals[asset.terminals[index]], [x + port[0], y + port[1]]]) })); });
+  const labelPaths = [...hints.values(), ...leadHints.map(hint => hint.points)];
   const labels = new Map<string, AssetLabel>();
   for (const asset of assets) {
     const hasState = !!(asset.positions.length || asset.removableBreaker || asset.removableContactor || asset.removableDisconnector);
@@ -113,13 +115,13 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
       candidates.push({ x: x + distance, y: y - height / 2, width, height }, { x: x - distance - width, y: y - height / 2, width, height }, { x: x - width / 2, y: y + distance, width, height }, { x: x - width / 2, y: y - distance - height, width, height });
     }
     const score = (box: Box) => 1e6 * [...symbolBoxes, ...terminalBoxes, ...labels.values()].filter(other => overlaps(box, other)).length
-      + 1000 * [...hints.values()].filter(points => points.some((p, index) => index && cutsBox(points[index - 1], p, box))).length
+      + 1000 * labelPaths.filter(points => points.some((p, index) => index && cutsBox(points[index - 1], p, box))).length
       + Math.abs(box.x + width / 2 - x) + Math.abs(box.y + height / 2 - y);
     let box = candidates[0]; let bestScore = score(box);
     for (const candidate of candidates.slice(1)) { const value = score(candidate); if (value < bestScore) { box = candidate; bestScore = value; } }
     labels.set(asset.id, { ...box, lines });
   }
-  const routed: Segment[] = []; const routes = new Map<string, Point[]>();
+  const routed: Segment[] = leadHints.flatMap(hint => hint.points.slice(1).map((point, index) => ({ from: hint.points[index], to: point, terminals: [hint.terminal] }))); const routes = new Map<string, Point[]>();
   for (const link of connections) {
     const from = layout.terminals[link.from]; const to = layout.terminals[link.to];
     const own = new Set([owners.get(link.from), owners.get(link.to)]);
@@ -159,8 +161,29 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
   return { view, assets, connections, owners, labels, routes };
 }
 
-export function equipmentRotation(asset: Asset, terminals: Record<string, Point>) {
+export function equipmentRotation(asset: Asset, terminals: Record<string, Point>, center: Point) {
+  if (asset.kind === 'transformer') { const input = terminals[asset.terminals[0]]; const dx = input[0] - center[0]; const dy = input[1] - center[1]; return Math.abs(dx) >= Math.abs(dy) ? dx > 0 ? 180 : 0 : dy > 0 ? -90 : 90; }
   if (asset.terminals.length < 2) return 0;
   const from = terminals[asset.terminals[0]]; const to = terminals[asset.terminals[1]];
   return Math.abs(to[0] - from[0]) >= Math.abs(to[1] - from[1]) ? to[0] >= from[0] ? 0 : 180 : to[1] >= from[1] ? 90 : -90;
+}
+
+export function equipmentPorts(asset: Asset, layout: DiagramView['layout']) {
+  const [cx, cy] = layout.assets[asset.id]; const rotation = equipmentRotation(asset, layout.terminals, [cx, cy]);
+  const rotate = ([x, y]: Point): Point => rotation === 90 ? [-y, x] : rotation === -90 ? [y, -x] : rotation === 180 ? [-x, -y] : [x, y];
+  const point = (terminal: string): Point => [layout.terminals[terminal][0] - cx, layout.terminals[terminal][1] - cy];
+  const transverse = (terminal: string) => { const [x, y] = point(terminal); return rotation === 90 ? -x : rotation === -90 ? x : rotation === 180 ? -y : y; };
+  const secondaryOrder = asset.terminals.slice(1).toSorted((a, b) => transverse(a) - transverse(b));
+  const ports: Point[] = asset.kind === 'bus' ? [] : asset.kind === 'transformer'
+    ? asset.terminals.map((terminal, index) => rotate(index === 0 ? [-33, 0] : [33, (secondaryOrder.indexOf(terminal) - (asset.terminals.length - 2) / 2) * 24]))
+    : asset.kind === 'interface' ? asset.terminals.map(terminal => {
+      const [x, y] = point(terminal);
+      if (!x && !y) return asset.terminals.length === 1 ? [0, 0] : [18, 0];
+      if (Math.abs(x) >= Math.abs(y)) { const py = y / Math.abs(x) * 12; return [Math.sign(x) * Math.sqrt(18 ** 2 - py ** 2), py]; }
+      const px = x / Math.abs(y) * 12; return [px, Math.sign(y) * Math.sqrt(18 ** 2 - px ** 2)];
+    })
+    : asset.kind === 'earth-switch' ? [rotate([-30, 0]), rotate([30, 0])]
+    : asset.kind === 'source' && asset.terminals.length === 1 ? [[30, 0]]
+    : asset.terminals.slice(0, 2).map((_, index) => rotate([index ? 30 : -30, 0]));
+  return { rotation, ports };
 }
