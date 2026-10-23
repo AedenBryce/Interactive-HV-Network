@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, electricalPolicyNetworkModel } from '../models/site/current-network';
+import { continuationNetworkModel as currentNetworkModel, electricalPolicyNetworkModel } from '../models/site/current-network';
 
 describe('immutable .8 continuation package', () => {
   it('distributes the two Drop Tower controls and scoped unused-terminal decisions without whole-model acceptance', () => {

@@ -32,6 +32,10 @@ import { withOwnerMvConverterTransfers } from './owner-mv-converter-transfers';
 import { withOwnerHpgrOutletProfiles } from './owner-hpgr-outlet-profiles';
 import { withOwnerNetworkContinuations } from './owner-network-continuations';
 import { withOwnerDropTowerBranch } from './owner-drop-tower-branch';
+import { withOwnerTf406bRoute } from './owner-tf406b-route';
+import { withOwnerLvEndpointScope } from './owner-lv-endpoint-scope';
+import { withOwnerSelectorContacts } from './owner-selector-contacts';
+import { withOwnerBinaryAcContacts } from './owner-binary-ac-contacts';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -73,11 +77,19 @@ export const electricalPolicyNetworkModel = withOwnerHpgrOutletProfiles(
     ), 'construction-2026-10-23.7-stage3',
   ), 'construction-2026-10-23.7',
 );
-export const currentNetworkModel = withLatestConfigurationNotes(
+export const continuationNetworkModel = withLatestConfigurationNotes(
   withOwnerDropTowerBranch(
     withOwnerNetworkContinuations(electricalPolicyNetworkModel, 'construction-2026-10-23.8-stage1'),
     'construction-2026-10-23.8-stage2',
   ), 'construction-2026-10-23.8',
+);
+export const currentNetworkModel = withOwnerBinaryAcContacts(
+  withOwnerSelectorContacts(
+    withOwnerLvEndpointScope(
+      withOwnerTf406bRoute(continuationNetworkModel, 'construction-2026-10-23.9-stage1'),
+      'construction-2026-10-23.9-stage2',
+    ), 'construction-2026-10-23.9-stage3',
+  ), 'construction-2026-10-23.9',
 );
 
 function buildCurrentNetworkModel() {
