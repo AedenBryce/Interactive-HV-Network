@@ -1,5 +1,7 @@
 # Selected transformer source-transfer policy
 
+**Current `.8` extension:** owner86 identifies Drop Tower P18-8 TF and its primary/secondary route; owner87 ends V1 at that transformer. The separate guarded Drop Tower helper applies this same25/28 teaching policy to its explicitly named HV/LV terminals. Current totals are61 transformers/176 directed claims:86 selected forward and90 unresolved reverse/alternate-input claims. The original60-transformer audit below remains unchanged for historical provenance; it does not include this later branch. See [owner83–89 decisions](owner-network-continuations-review.md).
+
 The owner selected primary-to-secondary source connectivity in answers25 and28 on23 October2026. An externally supplied secondary must remain visible. Reverse transfer onto the primary remains **Unconfirmed**. The exact answers are preserved by `withOwnerTransformerTransfers` in its model evidence. This is a teaching-model rule, not an installed winding or isolation-safety finding.
 
 ## Exact construction mapping

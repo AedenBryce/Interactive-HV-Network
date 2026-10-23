@@ -21,9 +21,9 @@ Owner83–89 add the Drop Tower branch ending at its transformer (explicit excep
 | --- | --- | --- |
 | Reproducible startup and packaged agreed model | README development/production commands, lockfile and built construction package | Package the specific accepted model and baseline after issue25 is satisfied. |
 | Integrated navigation/actions/impacts/paths/history | Focused session tests and production browser demonstrations, recorded by increment | Demonstrate required flows on the final accepted package. |
-| Matching and historical scenario files | Actual `.7` matching reopen and `.6` view-only reopen, with Undo/Reset disabled | Repeat against the final accepted version; retain the scenario and exact identity. |
+| Matching and historical scenario files | Actual `.8` matching reopen and `.7` view-only reopen, with Undo/Reset disabled | Repeat against the final accepted version; retain the scenario and exact identity. |
 | No runtime PDFs or historical model file dependency | Isolated three-file `.5` package browser check, plus self-contained scenario checks | Repeat startup and exploration with the final accepted build alone. |
-| Meaningful tests and browser checks | Focused tests, typecheck/build and independent Standards/Spec review for `.7` | Run the full suite once at the whole goal's end, as the implement skill requires; record final browser results and limitations. |
+| Meaningful tests and browser checks | Focused tests, typecheck/build and independent Standards/Spec review for `.8` | Run the full suite once at the whole goal's end, as the implement skill requires; record final browser results and limitations. |
 | Entire accepted scope and owner acceptance | Acceptance packet exists | Obtain and record owner acceptance; neither tests nor this checklist substitute for it. |
 | Scope limits retained | Local browser application; no electrical calculations, live equipment integration, editor or Sites deployment | Confirm those limits in the final delivery record. |
 

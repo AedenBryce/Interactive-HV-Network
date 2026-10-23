@@ -11,7 +11,7 @@ Sources checked:
 - `CB19OP001B-04057-DR-EL-0001.pdf`, rev6 (28 January2025, AS FOUND23 October2023), p1 A–B/8–10: a branch from pole17 through pole17-1, labelled DROP TOWER LV WORKSHOP. It does not depict the transformer or final LV bus.
 - `CB-10016-DR-EL-0003.004.pdf`, rev0 (2 May2018, AS BUILT), p1 C–E/5: P18 takeoff → P18-1 ABS → P18-2 → P18-8 10A FUSE ABS → P18-8 TF,22kV/400V,315kVA →400A symbol/LV cable → DROP TOWER CHANGEOVER SWITCHBOARD. The whole page and a rotated detailed crop were inspected. No board internal switching, alternate incoming supply or final bus contact arrangement is shown.
 
-**Unconfirmed:** equivalence between pole17/17-1 and the older P18 branch, current transformer/board identities, present connections and the board's internal arrangement. The source does not confirm these. Questions86–87 ask the owner for the present route and LV entry/alternate supply. No electrical join or new switching permission is inferred from answer83 alone. PIMS searches did not supply an independent detailed board sheet.
+**Unconfirmed at answer83, before the later answers below:** equivalence between pole17/17-1 and the older P18 branch, current transformer/board identities, present connections and the board's internal arrangement. The source does not confirm these. Questions86–87 subsequently resolve the route and revise the modeled endpoint below. No electrical join or new switching permission is inferred from answer83 alone. PIMS searches did not supply an independent detailed board sheet.
 
 ### Answer86 — current branch identity
 

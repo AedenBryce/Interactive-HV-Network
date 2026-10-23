@@ -10,6 +10,8 @@ The representation of the whole network built together from the supplied drawing
 **LV bus endpoint**:
 A final low-voltage bus at the boundary of the network model. Outgoing LV circuits are outside that boundary.
 
+Owner87 selects an explicit V1 exception for Drop Tower: its final point is the Drop Tower transformer. The downstream LV fuse, cable and changeover board are outside that branch's modeled boundary. This does not assert that excluded equipment or alternate supplies are absent.
+
 **Drawing discrepancy**:
 A difference between drawings that needs the user's confirmation during model construction. A best guess may be used provisionally, with the unresolved issue highlighted for step-by-step review.
 
