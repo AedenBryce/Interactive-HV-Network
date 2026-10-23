@@ -31,3 +31,7 @@ A magnified transformer review found secondary-lead ordering/orientation issues 
 ## Current state and review wording
 
 The later status cleanup4242ef0 is now the current renderer and portable copy: output/hv-network-v10-status-review.zip(801,999bytes,SHA256 0CD331343151C16AAAB9A1697F3F16FF1A543771FBCDE68366601527E851ABEB). The state/review checks are recorded in delivery-verification.md. It adds explicit current/starting states, current-model startup, historical selector groups and21 scoped notes with original construction wording retained. Underlying .10 model content is unchanged. This supersedes the current-preview/archive references above while preserving those prior artifacts as history.
+
+## Continuous dark canvas requested by owner
+
+Current presentation54422a0 replaces the whole-network orientation/detail-page navigation with one dark canvas containing all684assets and677connections. The13area groupings and24isolated references preserve every identity; actual SW435 and all other details are present directly. Asset search, area focus, Locate and enlarged wheel zoom operate on the same canvas. Existing electrical model/scenario remain immutable. The supplied incorrect JPEG contributes layout direction only. Build/browser/review checks and reference-inspection limitations are recorded in delivery-verification.md. Latest portable copy: output/hv-network-v10-continuous-dark-review.zip(805,817bytes,SHA256 24F547C2AB379C9A5EBF47A0D4A54EA68168085C2DC207BD9EAA3AB16BBCC3B6). All older visual/status archives remain history.
