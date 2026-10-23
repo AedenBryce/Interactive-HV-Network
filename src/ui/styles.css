@@ -31,7 +31,6 @@ h3 { font-size: 16px; font-weight: 650; }
 .wire { stroke-width: 5; fill: none; stroke-linejoin: round; }
 .wire.connected { stroke: var(--connected); }
 .wire.disconnected { stroke: var(--disconnected); }
-.wire.earthed { }
 .wire.traced { stroke: #3864d5; stroke-width: 7; }
 .wire.unconfirmed-source { stroke: #aa761c; }
 .wire.uncertainty-outline { stroke: #aa761c; stroke-width: 10; opacity: .7; }
