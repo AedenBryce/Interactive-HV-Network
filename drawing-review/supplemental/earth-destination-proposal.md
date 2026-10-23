@@ -1,5 +1,7 @@
 # Proposed modeled earth destinations
 
+**Decision recorded:** owner99 answered “correct”. Applied in immutable `.10`; the original proposal and JSON remain unchanged. See [decision scope and limits](owner-remaining-electrical-decisions.md).
+
 Question99 proposes selecting these18 existing earth-terminal destinations in the V1 teaching model. This does not establish actual field bonding, resistance, ratings or installation. No new termination, phase-earth winding link, common earth connection between different phase buses or external source is added. Keep existing groups, terminals, position/action restrictions, external coverage and unknown transformer/converter/fuse earth behavior. Original exact references are in [the frozen inventory](earth-destination-proposal.json).
 
 | Existing modeled destination | Identity | Terminal |

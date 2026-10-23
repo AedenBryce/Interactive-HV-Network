@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SimulationSession } from './session';
-import { currentNetworkModel, continuationNetworkModel } from '../models/site/current-network';
+import { contactNetworkModel as currentNetworkModel, continuationNetworkModel } from '../models/site/current-network';
 
 describe('immutable .9 route/scope/selector package', () => {
   it('integrates confirmed90–96 while preserving separate claims and .8', () => {

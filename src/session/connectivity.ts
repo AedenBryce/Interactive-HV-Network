@@ -1,6 +1,6 @@
 import type { NetworkModel, SourceStates, DeviceStates } from './model';
 import { indexSourceQueries } from './source-query';
-import { isPositionSupported, isSourceArcSupported, isSupported } from './evidence';
+import { isMechanismSupported, isPositionSupported, isSourceArcSupported, isSupported } from './evidence';
 import { getRemovableMechanism, removablePairs } from './mechanisms';
 
 export type GraphEdge = { id: string; from: string; to: string; connectionId?: string; assetId?: string; directed?: true; sourceArcId?: string };
@@ -21,7 +21,7 @@ export function buildGraph(model: NetworkModel, devices: DeviceStates, options: 
       : activePosition && (options.includeUnconfirmed || activePosition.supported) ? activePosition.pairs : [];
     const parentIncluded = options.includeUnconfirmed || isSupported(model, asset);
     const mechanism = getRemovableMechanism(asset);
-    const mechanicalPairs = parentIncluded && mechanism ? removablePairs(mechanism.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
+    const mechanicalPairs = mechanism && (options.includeUnconfirmed || isMechanismSupported(model, asset, mechanism)) ? removablePairs(mechanism.mainPair, devices[asset.id], options.includeUnconfirmed ?? false) : [];
     const fixedPairs = parentIncluded ? [...asset.conductivePairs, ...channelPairs(asset)] : [];
     // Retain legacy fixed/position/mechanism insertion order for historical path examples.
     const pairs = new Map([...fixedPairs, ...positionPairs, ...mechanicalPairs].map(pair => [pairKey(pair), pair]));

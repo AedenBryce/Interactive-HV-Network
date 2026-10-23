@@ -1,14 +1,14 @@
 # Remaining whole-network acceptance gates
 
-Verified against GitHub issues25/26 on23October2026; updated for current construction `.9`. This checklist identifies required evidence; it does not confer owner acceptance or replace the GitHub criteria.
+Verified against GitHub issues25/26 on23October2026; updated for current construction `.10`. This checklist identifies required evidence; it does not confer owner acceptance or replace the GitHub criteria.
 
 ## Network acceptance — issue25
 
 | Required decision | Current evidence | Still required |
 | --- | --- | --- |
 | Complete agreed network through final LV buses |13 area packages combined into one model; original141-PDF dispositions and supplemental endpoint records; station/downstream scope decisions recorded | Owner review of remaining endpoint/converter/external-boundary treatment and included paths. Intake counts and structural checks do not prove installed coverage. |
-| Whole diagram, connections, sources, states and interlocks | Current `.9` contains362 selected local profiles,148 mechanisms, all starting positions and3 selected available supplies; decisions through96 | Whole-diagram/electrical-relationship review and explicit acceptance. Local-action approval is a separate claim. |
-| Material ambiguity resolution or explicit model treatment | Scoped owner resolutions retained;31-fuse continuity, five converter/motor scopes and forward-transfer rules, and two HPGR outlet profiles selected through82 | Resolve or explicitly select treatment for remaining electrical claims, endpoints, external coverage and material aliases/voltage descriptions. No drawing-date precedence is assumed. |
+| Whole diagram, connections, sources, states and interlocks | Current `.10` contains362 selected local profiles,148 mechanisms, all starting positions and3 selected available supplies; decisions through99 | Whole-diagram/electrical-relationship review and explicit acceptance. Local-action approval is a separate claim. |
+| Material ambiguity resolution or explicit model treatment | Scoped owner resolutions retained;31-fuse continuity, five converter/motor scopes and forward-transfer rules, and two HPGR outlet profiles selected through82 | Owner97–99 select remaining represented main/wire/ground relationships; obtain whole-model acceptance of explicitly retained transfer/coverage/metadata unknowns. No drawing-date precedence is assumed. |
 | Immutable model and baseline acceptance | Current construction ID/version and reproducible scenario; old versions preserved | Named owner, date and explicit acceptance of a specific final version, included scope, baseline and retained unknowns. `WN-OWNER-ACCEPTANCE` remains open. |
 
 Answers78–82 select the exact [31 series fuse paths](../drawing-review/supplemental/fuse-continuity-proposal.md), five MV converter/motor scopes, simplified forward transfer and two complete HPGR outlet profiles. The [decision record](../drawing-review/supplemental/owner-electrical-policy-review.md) retains their limits; unrelated electrical relationships and operational permission are not accepted.
@@ -21,9 +21,9 @@ Owner83–89 add the Drop Tower branch ending at its transformer (explicit excep
 | --- | --- | --- |
 | Reproducible startup and packaged agreed model | README development/production commands, lockfile and built construction package | Package the specific accepted model and baseline after issue25 is satisfied. |
 | Integrated navigation/actions/impacts/paths/history | Focused session tests and production browser demonstrations, recorded by increment | Demonstrate required flows on the final accepted package. |
-| Matching and historical scenario files | Actual `.8` matching reopen and `.7` view-only reopen, with Undo/Reset disabled | Repeat against the final accepted version; retain the scenario and exact identity. |
+| Matching and historical scenario files | Actual `.9` matching reopen and `.8` view-only reopen, with Undo/Reset disabled | Repeat against the final accepted version; retain the scenario and exact identity. |
 | No runtime PDFs or historical model file dependency | Isolated three-file `.5` package browser check, plus self-contained scenario checks | Repeat startup and exploration with the final accepted build alone. |
-| Meaningful tests and browser checks | Focused tests, typecheck/build and independent Standards/Spec review for `.8` | Run the full suite once at the whole goal's end, as the implement skill requires; record final browser results and limitations. |
+| Meaningful tests and browser checks | Focused tests, typecheck/build and independent Standards/Spec review for `.9` | Run the full suite once at the whole goal's end, as the implement skill requires; record final browser results and limitations. |
 | Entire accepted scope and owner acceptance | Acceptance packet exists | Obtain and record owner acceptance; neither tests nor this checklist substitute for it. |
 | Scope limits retained | Local browser application; no electrical calculations, live equipment integration, editor or Sites deployment | Confirm those limits in the final delivery record. |
 

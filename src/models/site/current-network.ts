@@ -36,6 +36,7 @@ import { withOwnerTf406bRoute } from './owner-tf406b-route';
 import { withOwnerLvEndpointScope } from './owner-lv-endpoint-scope';
 import { withOwnerSelectorContacts } from './owner-selector-contacts';
 import { withOwnerBinaryAcContacts } from './owner-binary-ac-contacts';
+import { withOwnerRemainingElectricalClaims } from './owner-remaining-electrical-claims';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -83,7 +84,7 @@ export const continuationNetworkModel = withLatestConfigurationNotes(
     'construction-2026-10-23.8-stage2',
   ), 'construction-2026-10-23.8',
 );
-export const currentNetworkModel = withOwnerBinaryAcContacts(
+export const contactNetworkModel = withOwnerBinaryAcContacts(
   withOwnerSelectorContacts(
     withOwnerLvEndpointScope(
       withOwnerTf406bRoute(continuationNetworkModel, 'construction-2026-10-23.9-stage1'),
@@ -91,6 +92,7 @@ export const currentNetworkModel = withOwnerBinaryAcContacts(
     ), 'construction-2026-10-23.9-stage3',
   ), 'construction-2026-10-23.9',
 );
+export const currentNetworkModel = withOwnerRemainingElectricalClaims(contactNetworkModel, 'construction-2026-10-23.10');
 
 function buildCurrentNetworkModel() {
   const version = 'construction-2026-10-23.1';

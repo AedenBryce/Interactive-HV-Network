@@ -1,5 +1,7 @@
 # Remaining mechanism and wire model proposal
 
+**Decision recorded:** owner97 answered “confirmed”;98 answered “correct”. Applied in immutable `.10`; the original proposal and JSON remain unchanged. See [decision scope and limits](owner-remaining-electrical-decisions.md).
+
 Prepared against immutable `.8`; source references and exact stable IDs are in [the frozen inventory](remaining-mechanism-wire-proposal.json). These are proposed teaching-model selections, not field verification or operational permissions.
 
 ## Question97 —seven removable main-contact relationships

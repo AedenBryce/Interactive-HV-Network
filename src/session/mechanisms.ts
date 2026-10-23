@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { claimFields } from './evidence';
 
 export const independentStateSchema = z.strictObject({ contact: z.enum(['open', 'closed']).nullable(), racking: z.enum(['in', 'out']).nullable() });
 export const breakerStateSchema = independentStateSchema;
@@ -16,7 +17,8 @@ export type BreakerCommand = IndependentCommand;
 export const isIndependentState = (state: DeviceState | undefined): state is IndependentState => typeof state === 'object' && state !== null;
 export const isBreakerState = isIndependentState;
 
-type MechanismDeclaration = { mainPair: [string, string] };
+export const removableMechanismSchema = z.strictObject({ mainPair: z.tuple([z.string().min(1), z.string().min(1)]), supportScope: z.literal('relationship').optional(), ...claimFields });
+type MechanismDeclaration = z.infer<typeof removableMechanismSchema>;
 export type RemovableMechanismFields = { removableBreaker?: MechanismDeclaration; removableContactor?: MechanismDeclaration; removableDisconnector?: MechanismDeclaration };
 export type RemovableMechanism = MechanismDeclaration & { kind: 'breaker' | 'contactor' | 'disconnector' };
 

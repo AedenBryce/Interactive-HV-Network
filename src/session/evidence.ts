@@ -34,3 +34,5 @@ export const isSourceArcSupported = isRelationshipSupported;
 export function isPositionSupported(model: { synthetic: boolean }, asset: { knowledge?: z.infer<typeof knowledgeSchema> }, position: { knowledge?: z.infer<typeof knowledgeSchema>; supportScope?: 'relationship' }) {
   return position.knowledge === undefined && position.supportScope === undefined ? isSupported(model, asset) : isRelationshipSupported(model, asset, position);
 }
+
+export const isMechanismSupported = isPositionSupported;

@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { interlockSchema, validateInterlocks } from './interlock-model';
 import { claimFields, evidenceRecordSchema, reviewRecordSchema } from './evidence';
 import { presentationSchema, validatePresentation } from './presentation';
-import { deviceStateSchema, getRemovableMechanism, isIndependentState } from './mechanisms';
+import { deviceStateSchema, getRemovableMechanism, isIndependentState, removableMechanismSchema } from './mechanisms';
 
 const id = z.string().min(1);
 const pair = z.tuple([id, id]);
@@ -16,9 +16,9 @@ const assetSchema = z.strictObject({
   sourcePairs: z.array(pair).optional(),
   sourceArcs: z.array(z.strictObject({ id, from: id, to: id, supportScope: z.literal('relationship').optional(), ...claimFields })).optional(),
   earthPairs: z.array(pair).optional(),
-  removableBreaker: z.strictObject({ mainPair: pair }).optional(),
-  removableContactor: z.strictObject({ mainPair: pair }).optional(),
-  removableDisconnector: z.strictObject({ mainPair: pair }).optional(),
+  removableBreaker: removableMechanismSchema.optional(),
+  removableContactor: removableMechanismSchema.optional(),
+  removableDisconnector: removableMechanismSchema.optional(),
   positions: z.array(z.strictObject({ id, label: z.string().min(1), pairs: z.array(pair), sourcePairs: z.array(pair).optional(), earthPairs: z.array(pair).optional(), supportScope: z.literal('relationship').optional(), ...claimFields })),
 });
 
@@ -53,7 +53,8 @@ export const modelSchema = z.strictObject({
   unique((model.reviews ?? []).map(record => record.id), 'review identity');
   unique((model.boundaries ?? []).map(boundary => boundary.id), 'boundary identity');
   for (const boundary of model.boundaries ?? []) if (!terminals.includes(boundary.terminal)) error(`Boundary ${boundary.id} references missing terminal ${boundary.terminal}.`);
-  for (const claim of [...model.assets, ...model.assets.flatMap(asset => [...(asset.sourceArcs ?? []), ...asset.positions]), ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
+  const mechanismClaims = model.assets.flatMap(asset => { const mechanism = getRemovableMechanism(asset); return mechanism ? [{ id: `${asset.id}:main-pair`, ...mechanism }] : []; });
+  for (const claim of [...model.assets, ...model.assets.flatMap(asset => [...(asset.sourceArcs ?? []), ...asset.positions]), ...mechanismClaims, ...model.connections, ...model.sources, ...(model.earths ?? []), ...(model.boundaries ?? [])]) {
     for (const evidenceId of claim.evidenceIds ?? []) if (!model.evidence?.some(record => record.id === evidenceId)) error(`${claim.id} references missing evidence ${evidenceId}.`);
     for (const reviewId of claim.reviewIds ?? []) if (!model.reviews?.some(record => record.id === reviewId)) error(`${claim.id} references missing review ${reviewId}.`);
     if (!model.synthetic && (claim.knowledge === 'supported' || claim.knowledge === 'owner-confirmed') && !claim.evidenceIds?.length) error(`Supported fact ${claim.id} requires evidence.`);
@@ -79,6 +80,7 @@ export const modelSchema = z.strictObject({
     }
     const state = model.starting.devices[asset.id];
     if (mechanism) {
+      if (mechanism.supportScope === 'relationship' && (mechanism.knowledge === undefined || !mechanism.evidenceIds?.length)) error(`Relationship-scoped removable main pair ${asset.id} requires explicit knowledge and linked evidence.`);
       if (asset.kind !== mechanism.kind || asset.positions.length) error(`Removable ${mechanism.kind} ${asset.id} requires ${mechanism.kind} kind and no discrete positions.`);
       if (!isIndependentState(state)) error(`Removable ${mechanism.kind} ${asset.id} requires explicit nullable contact and racking starting states.`);
       const [a, b] = mechanism.mainPair;
