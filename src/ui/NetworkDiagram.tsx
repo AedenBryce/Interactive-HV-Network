@@ -44,7 +44,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
   const labels = new Map(snapshot.model.assets.map(asset => [asset.id, asset.label]));
   const selectedVisible = visible.has(selectedId);
   const zoomPercent = Math.round(fitCamera.width / camera.width * 100);
-  const maxZoom = continuous ? Math.max(16, fitCamera.width / 500) : 16;
+  const maxZoom = continuous ? Math.max(16, fitCamera.width / 300) : 16;
 
   useEffect(() => {
     const svg = svgRef.current;
@@ -98,7 +98,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
     if (!points.length) return;
     const left = Math.min(...points.map(point => point[0])) - 150;
     const top = Math.min(...points.map(point => point[1])) - 150;
-    const width = Math.max(1000, Math.max(...points.map(point => point[0])) - left + 400);
+    const width = Math.max(500, Math.max(...points.map(point => point[0])) - left + 400);
     const height = Math.max(500, Math.max(...points.map(point => point[1])) - top + 250);
     focusBox(left, top, width, height);
   }
