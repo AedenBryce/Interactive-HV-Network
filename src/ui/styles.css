@@ -18,6 +18,7 @@ h3 { font-size: 16px; font-weight: 650; }
 .model-note { color: #526279; font-size: 14px; margin: 0 8px 24px; }
 .model-picker { display: block; font-size: 13px; color: #526279; margin: 0 8px 18px; }
 .model-picker select { width: 100%; margin-top: 6px; padding: 8px 6px; font: inherit; color: #102640; background: white; border: 1px solid var(--border); border-radius: 5px; }
+.current-model-button { margin: 0 8px 16px; padding: 8px; border: 1px solid var(--border); border-radius: 5px; color: #102640; background: white; }
 .asset-list { border-top: 1px solid var(--border); padding-top: 12px; }
 .asset-row { display: flex; align-items: center; width: 100%; border: 0; background: transparent; text-align: left; gap: 20px; color: #102640; padding: 10px 8px; border-radius: 6px; font-weight: 600; }
 .asset-row:hover, .asset-row.selected { background: #e7edf3; }
@@ -68,6 +69,11 @@ dd { margin: 0; font-weight: 600; text-align: right; overflow-wrap: anywhere; }
 .state-buttons button:hover:not(:disabled) { background: #174565; }
 .state-buttons button:disabled { background: #e3e7ed; border-color: #d3dce6; color: #748196; }
 .switch-controls p, .action-message { color: #526279; font-size: 14px; }
+.state-baseline-note { margin-top: 10px; color: #526279; font-size: 13px; }
+.state-buttons button[aria-pressed=true] { border: 2px solid #00796e; background: #e4f4ef; color: #095a50; }
+.model-review-status { margin-top: 20px; padding: 12px; border: 1px solid #c7ded6; border-radius: 6px; background: #f1f8f5; font-size: 13px; }
+.model-review-status p { margin-top: 6px; }
+.model-review-status.pending { border-color: #dfcba6; background: #fff8e8; }
 .action-message { margin-top: 18px; }
 .source-paths, .impact-list { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
 .source-paths p { font-size: 13px; color: #526279; margin: 8px 0; }

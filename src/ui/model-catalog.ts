@@ -74,4 +74,10 @@ diagramPresentations[relationshipsFixture.id] = { overviewId: 'overview', views:
 // Adding diagram organisation creates a distinct immutable package version.
 export const demonstrations: NetworkModel[] = [singleSupply, alternateSupplies, earthFixture, interlockFixture, uncertaintyFixture, relationshipsFixture].map(model => ({ ...model, version: `${model.version}-presentation.1`, presentation: diagramPresentations[model.id] }));
 
-export const models: NetworkModel[] = [...demonstrations, removableBreakerModel, directedSourceModel, currentNetworkModel, sw411Model, powerStationModel, crushing1Model, crushing2HpgrModel, screeningModel, desandsLaboratoryModel, stockpileWetPlantModel, trainLoadingModel, cv006Model, westernHoppersModel, servicesModel, hopper10Model, mineCampModel];
+export const defaultModel = currentNetworkModel;
+export const modelGroups: { label: string; models: NetworkModel[] }[] = [
+  { label: 'Current V1 whole network', models: [currentNetworkModel] },
+  { label: 'Demonstrations · fictional networks', models: [...demonstrations, removableBreakerModel, directedSourceModel] },
+  { label: 'Historical area construction · earlier states and reviews', models: [sw411Model, powerStationModel, crushing1Model, crushing2HpgrModel, screeningModel, desandsLaboratoryModel, stockpileWetPlantModel, trainLoadingModel, cv006Model, westernHoppersModel, servicesModel, hopper10Model, mineCampModel] },
+];
+export const models = modelGroups.flatMap(group => group.models);
