@@ -6,21 +6,36 @@ import type { DiagramPresentation } from './diagram';
 import { EquipmentSymbol } from './EquipmentSymbol';
 import { isIndependentState } from '../session/mechanisms';
 import { diagramGeometry } from './diagram-geometry';
+import { continuousNetwork } from './continuous-network';
 import './navigation.css';
 
 type Props = { snapshot: SessionSnapshot; selectedId: string; tracedPath?: SourcePath; presentation: DiagramPresentation; onSelectAsset: (id: string) => void };
 type Camera = { x: number; y: number; width: number; height: number };
+const searchable = (value: string) => value.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
 
 export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation, onSelectAsset }: Props) {
   const [viewId, setViewId] = useState(presentation.overviewId);
   const [viewSearch, setViewSearch] = useState('');
+  const [assetSearch, setAssetSearch] = useState('');
+  const continuous = snapshot.model.id === 'site-whole-network' && !!snapshot.model.presentation?.views.find(item => item.id === snapshot.model.presentation?.overviewId)?.regions?.length;
   const matchingViews = presentation.views.filter(item => item.label.toLowerCase().includes(viewSearch.trim().toLowerCase()));
   const sourceView = presentation.views.find(item => item.id === viewId)!;
   // Session packages are immutable by ID/version; switching changes no coordinates.
-  const geometry = useMemo(() => diagramGeometry(snapshot.model, sourceView), [snapshot.model.id, snapshot.model.version, sourceView.id]);
+  const geometry: ReturnType<typeof diagramGeometry> & Partial<Pick<ReturnType<typeof continuousNetwork>, 'panels' | 'referenceTop' | 'referenceLabel'>> = useMemo(() => continuous ? continuousNetwork(snapshot.model) : diagramGeometry(snapshot.model, sourceView), [snapshot.model.id, snapshot.model.version, sourceView.id]);
   const { view, assets, connections } = geometry;
+  const matchingAssets = useMemo(() => {
+    const query = searchable(assetSearch);
+    return query ? assets.filter(asset => [asset.label, asset.id, ...(asset.aliases ?? [])].some(value => searchable(value).includes(query))).slice(0, 12) : [];
+  }, [assets, assetSearch]);
   const [cameraOverride, setCamera] = useState<Camera | null>(null);
-  const camera = cameraOverride ?? { x: view.bounds[0], y: view.bounds[1], width: view.bounds[2], height: view.bounds[3] };
+  const [viewport, setViewport] = useState({ width: 1000, height: 700 });
+  const fitCamera = useMemo(() => {
+    const [x, y, width, height] = view.bounds;
+    const ratio = viewport.width / viewport.height;
+    const fittedWidth = Math.max(width, height * ratio); const fittedHeight = fittedWidth / ratio;
+    return { x: x + (width - fittedWidth) / 2, y: y + (height - fittedHeight) / 2, width: fittedWidth, height: fittedHeight };
+  }, [view.bounds, viewport]);
+  const camera = cameraOverride ?? fitCamera;
   const drag = useRef<{ pointerId: number; x: number; y: number; camera: Camera } | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const visible = new Set(view.assetIds);
@@ -28,7 +43,21 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
   const changedAssets = new Set(snapshot.impact.map(item => item.assetId));
   const labels = new Map(snapshot.model.assets.map(asset => [asset.id, asset.label]));
   const selectedVisible = visible.has(selectedId);
-  const zoomPercent = Math.round(view.bounds[2] / camera.width * 100);
+  const zoomPercent = Math.round(fitCamera.width / camera.width * 100);
+  const maxZoom = continuous ? Math.max(16, fitCamera.width / 500) : 16;
+
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const observer = new ResizeObserver(entries => {
+      const { width, height } = entries[0].contentRect;
+      if (width > 0 && height > 0) {
+        setCamera(previous => previous ? { ...previous, height: previous.width * height / width, y: previous.y + (previous.height - previous.width * height / width) / 2 } : null);
+        setViewport({ width, height });
+      }
+    });
+    observer.observe(svg); return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const svg = svgRef.current;
@@ -38,27 +67,46 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
       const rect = svg.getBoundingClientRect();
       const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? rect.height : 1);
       setCamera(previous => {
-        const base = previous ?? { x: view.bounds[0], y: view.bounds[1], width: view.bounds[2], height: view.bounds[3] };
+        const base = previous ?? fitCamera;
         const scale = Math.min(rect.width / base.width, rect.height / base.height);
         const ax = Math.max(0, Math.min(1, (event.clientX - rect.left - (rect.width - base.width * scale) / 2) / (base.width * scale)));
         const ay = Math.max(0, Math.min(1, (event.clientY - rect.top - (rect.height - base.height * scale) / 2) / (base.height * scale)));
-        const width = Math.max(view.bounds[2] / 16, Math.min(view.bounds[2] * 4, base.width * Math.exp(Math.max(-240, Math.min(240, delta)) * .002)));
-        const height = width * view.bounds[3] / view.bounds[2];
+        const width = Math.max(fitCamera.width / maxZoom, Math.min(fitCamera.width * 4, base.width * Math.exp(Math.max(-240, Math.min(240, delta)) * .002)));
+        const height = width * viewport.height / viewport.width;
         return { x: base.x + (base.width - width) * ax, y: base.y + (base.height - height) * ay, width, height };
       });
     };
     // Wheel over the map zooms instead of scrolling the page; cancellation requires a non-passive listener.
     svg.addEventListener('wheel', wheel, { passive: false });
     return () => svg.removeEventListener('wheel', wheel);
-  }, [view.bounds]);
+  }, [fitCamera, maxZoom, viewport]);
 
   function navigate(id: string) { setViewId(id); setCamera(null); }
   function zoom(factor: number) {
-    const width = Math.max(view.bounds[2] / 16, Math.min(view.bounds[2] * 4, camera.width * factor));
-    const height = width * view.bounds[3] / view.bounds[2];
+    const width = Math.max(fitCamera.width / maxZoom, Math.min(fitCamera.width * 4, camera.width * factor));
+    const height = width * viewport.height / viewport.width;
     setCamera({ x: camera.x + (camera.width - width) / 2, y: camera.y + (camera.height - height) / 2, width, height });
   }
   function pan(dx: number, dy: number) { setCamera({ ...camera, x: camera.x + dx * camera.width, y: camera.y + dy * camera.height }); }
+  function focusBox(left: number, top: number, width: number, height: number) {
+    const fittedWidth = Math.max(width, height * viewport.width / viewport.height);
+    const fittedHeight = fittedWidth * viewport.height / viewport.width;
+    setCamera({ x: left + (width - fittedWidth) / 2, y: top + (height - fittedHeight) / 2, width: fittedWidth, height: fittedHeight });
+  }
+  function focusAssets(ids: string[]) {
+    const points = ids.map(id => view.layout.assets[id]).filter(Boolean);
+    if (!points.length) return;
+    const left = Math.min(...points.map(point => point[0])) - 150;
+    const top = Math.min(...points.map(point => point[1])) - 150;
+    const width = Math.max(1000, Math.max(...points.map(point => point[0])) - left + 400);
+    const height = Math.max(500, Math.max(...points.map(point => point[1])) - top + 250);
+    focusBox(left, top, width, height);
+  }
+  function focusArea(id: string) {
+    const region = presentation.views.find(item => item.id === presentation.overviewId)?.regions?.find(item => item.targetViewId === id);
+    const panel = geometry.panels?.find(item => item.id === region?.id);
+    if (panel) focusBox(panel.x - 100, panel.y - 100, panel.width + 200, panel.height + 200);
+  }
   function keyboard(event: KeyboardEvent<SVGSVGElement>) {
     if (event.target !== event.currentTarget) return;
     const actions: Record<string, () => void> = { ArrowLeft: () => pan(-.1, 0), ArrowRight: () => pan(.1, 0), ArrowUp: () => pan(0, -.1), ArrowDown: () => pan(0, .1), '+': () => zoom(.8), '=': () => zoom(.8), '-': () => zoom(1.25), Home: () => setCamera(null) };
@@ -79,11 +127,16 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
   }
 
   return <main className="diagram-panel interactive-diagram">
-    <div className="panel-heading"><h2>Single-line diagram</h2><p>{snapshot.model.name}</p></div>
-    {presentation.views.length > 12 && <div className="view-search"><label>Find view<input aria-label="Find network view" value={viewSearch} onChange={event => setViewSearch(event.target.value)} placeholder="Area or view name" /></label>{viewSearch && <button onClick={() => setViewSearch('')}>Clear view search</button>}<span>{matchingViews.length} of {presentation.views.length} views</span></div>}
-    <nav className="view-navigation" aria-label="Network views">{matchingViews.map(item => <button key={item.id} aria-current={item.id === viewId ? 'page' : undefined} onClick={() => navigate(item.id)}>{item.label}</button>)}{!matchingViews.length && <p>No matching views. Clear the search to see all views.</p>}</nav>
+    <div className="panel-heading"><h2>{continuous ? 'Whole network' : 'Single-line diagram'}</h2><p>{continuous ? `${assets.length} assets · ${connections.length} connections · one continuous canvas` : snapshot.model.name}</p></div>
+    {continuous ? <div className="canvas-navigation">
+      <label>Find asset<input aria-label="Find asset on whole network" value={assetSearch} onChange={event => setAssetSearch(event.target.value)} placeholder="Asset tag or name" /></label>
+      <label>Zoom to area<select aria-label="Zoom to network area" defaultValue="" onChange={event => { focusArea(event.target.value); event.target.value = ''; }}><option value="" disabled>Choose area</option>{presentation.views.find(item => item.id === presentation.overviewId)?.regions?.map(region => <option key={region.id} value={region.targetViewId}>{region.label.replaceAll('\n', ' · ')}</option>)}</select></label>
+      <button onClick={() => focusAssets([selectedId])}>Locate selected</button>
+      {assetSearch.trim() && <div className="asset-search-results" aria-label="Matching network assets">{matchingAssets.map(asset => <button key={asset.id} onClick={() => { onSelectAsset(asset.id); focusAssets([asset.id]); setAssetSearch(''); }}>{asset.label}</button>)}{!matchingAssets.length && <p>No matching assets.</p>}</div>}
+    </div> : <>{presentation.views.length > 12 && <div className="view-search"><label>Find view<input aria-label="Find network view" value={viewSearch} onChange={event => setViewSearch(event.target.value)} placeholder="Area or view name" /></label>{viewSearch && <button onClick={() => setViewSearch('')}>Clear view search</button>}<span>{matchingViews.length} of {presentation.views.length} views</span></div>}
+    <nav className="view-navigation" aria-label="Network views">{matchingViews.map(item => <button key={item.id} aria-current={item.id === viewId ? 'page' : undefined} onClick={() => navigate(item.id)}>{item.label}</button>)}{!matchingViews.length && <p>No matching views. Clear the search to see all views.</p>}</nav></>}
     <div className="diagram-toolbar" aria-label="Diagram navigation">
-      <div className="zoom-controls"><button aria-label="Zoom out" onClick={() => zoom(1.25)} disabled={zoomPercent <= 25}>−</button><output aria-label="Diagram zoom">{zoomPercent}%</output><button aria-label="Zoom in" onClick={() => zoom(.8)} disabled={zoomPercent >= 1600}>+</button><button onClick={() => setCamera(null)}>Fit view</button></div>
+      <div className="zoom-controls"><button aria-label="Zoom out" onClick={() => zoom(1.25)} disabled={zoomPercent <= 25}>−</button><output aria-label="Diagram zoom">{zoomPercent}%</output><button aria-label="Zoom in" onClick={() => zoom(.8)} disabled={zoomPercent >= Math.round(maxZoom * 100)}>+</button><button onClick={() => setCamera(null)}>Fit view</button></div>
       <div className="pan-controls" aria-label="Pan diagram"><button aria-label="Pan left" onClick={() => pan(-.1, 0)}>←</button><button aria-label="Pan up" onClick={() => pan(0, -.1)}>↑</button><button aria-label="Pan down" onClick={() => pan(0, .1)}>↓</button><button aria-label="Pan right" onClick={() => pan(.1, 0)}>→</button></div>
     </div>
     <p className="navigation-help">Scroll over the diagram to zoom. Drag to pan. Keyboard: arrow keys, +/−, Home to fit.</p>
@@ -91,6 +144,8 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
     <div className="diagram-surface">
       <svg ref={svgRef} className="network-diagram" viewBox={`${camera.x} ${camera.y} ${camera.width} ${camera.height}`} aria-label={`${view.label} single-line diagram`} tabIndex={0} onKeyDown={keyboard} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerCancel={() => { drag.current = null; }}>
         <title>{view.label} single-line diagram</title>
+        {geometry.panels?.map(panel => <g key={panel.id} className="canvas-area"><rect x={panel.x} y={panel.y} width={panel.width} height={panel.height} rx="16" /><text x={panel.x + 100} y={panel.y + 75}>{panel.label}</text></g>)}
+        {typeof geometry.referenceTop === 'number' && <text className="reference-heading" x={view.bounds[0] + 150} y={geometry.referenceTop - 150}>{geometry.referenceLabel}</text>}
         {view.regions?.map(region => {
           const [x, y, width, height] = region.bounds;
           const fontSize = Math.min(width / 12, height / 8);
@@ -108,7 +163,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
         })}
         {assets.map(item => {
           const [x, y] = view.layout.assets[item.id];
-          return <g key={item.id} transform={`translate(${x},${y})`} role="button" tabIndex={0} data-selectable="true" aria-label={`Select ${item.label} on diagram`} aria-pressed={item.id === selectedId} className="diagram-asset" onClick={() => onSelectAsset(item.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id); } }}>
+          return <g key={item.id} data-asset-id={item.id} transform={`translate(${x},${y})`} role="button" tabIndex={0} data-selectable="true" aria-label={`Select ${item.label} on diagram`} aria-pressed={item.id === selectedId} className="diagram-asset" onClick={() => onSelectAsset(item.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id); } }}>
             {changedAssets.has(item.id) && <rect x="-48" y="-48" width="96" height="96" rx="8" className="impact-outline" />}
             <title>{item.label}</title>
             <rect x="-38" y="-38" width="76" height="76" rx="6" className={item.id === selectedId ? 'selection active' : 'selection'} />

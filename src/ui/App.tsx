@@ -25,7 +25,7 @@ export function App() {
   const [message, setMessage] = useState('');
   const [traceKey, setTraceKey] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [detailsCollapsed, setDetailsCollapsed] = useState(false);
+  const [detailsCollapsed, setDetailsCollapsed] = useState(true);
   const pending = useRef(false);
   const inspector = useRef<HTMLElement>(null);
   const asset = snapshot.model.assets.find(asset => asset.id === selectedId)!;

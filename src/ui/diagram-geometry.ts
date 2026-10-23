@@ -8,7 +8,7 @@ export type AssetLabel = Box & { lines: string[] };
 const gap = 12;
 const overlaps = (a: Box, b: Box) => a.x < b.x + b.width + gap && a.x + a.width + gap > b.x && a.y < b.y + b.height + gap && a.y + a.height + gap > b.y;
 
-function labelLines(label: string) {
+export function labelLines(label: string) {
   const lines: string[] = [];
   for (const section of label.split(/ · |\n/)) {
     let line = '';
