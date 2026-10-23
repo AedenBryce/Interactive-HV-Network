@@ -133,7 +133,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
     setCamera({ ...start.camera, x: start.camera.x - (event.clientX - start.x) / scale, y: start.camera.y - (event.clientY - start.y) / scale });
   }
 
-  return <main className="diagram-panel interactive-diagram">
+  return <main className={`diagram-panel interactive-diagram${continuous ? ' whole-network' : ''}`}>
     <div className="panel-heading"><h2>{continuous ? 'Whole network · supply tree' : 'Single-line diagram'}</h2><p>{continuous ? `${assets.length} assets · ${connections.length} connections · supplies at the top, feeders downward` : snapshot.model.name}</p></div>
     {continuous ? <div className="canvas-navigation">
       <label>Find asset<input aria-label="Find asset on whole network" value={assetSearch} onChange={event => setAssetSearch(event.target.value)} placeholder="Asset tag or name" /></label>
@@ -186,7 +186,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
           const state = snapshot.devices[item.id];
           return <g key={`label:${item.id}`} className={`asset-label${hasDeviceCard(item) ? ' card-label' : ''}`} role="button" tabIndex={0} data-selectable="true" aria-label={`Inspect ${item.label} label`} onClick={event => onSelectAsset(item.id, event.currentTarget)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id, event.currentTarget); } }}>
             <title>{item.label}</title><rect x={label.x} y={label.y} width={label.width} height={label.height} rx="4" />
-            <text x={label.x + label.width / 2} y={label.y + 21} textAnchor="middle">{label.lines.map((line, index) => <tspan key={index} x={label.x + label.width / 2} dy={index ? 21 : 0}>{line}</tspan>)}</text>
+            <text x={label.x + label.width / 2} y={label.y + (continuous ? 24 : 21)} textAnchor="middle">{label.lines.map((line, index) => <tspan key={index} x={label.x + label.width / 2} dy={index ? continuous ? 25 : 21 : 0}>{line}</tspan>)}</text>
             {state !== undefined && <text x={label.x + label.width / 2} y={label.y + label.height - 6} textAnchor="middle" className="position-label">{isIndependentState(state) ? `${state.contact ?? '?'} · Rack ${state.racking ?? '?'}` : state ?? 'Unconfirmed'}</text>}
             {state === undefined && isFuse(item) && <title>Closed · intact fixed fuse in the selected V1 model.</title>}
           </g>;

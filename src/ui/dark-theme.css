@@ -1,4 +1,4 @@
-:root { color-scheme: dark; color: #d8e2ef; background: #0b1017; --border: #2b3848; --connected: #55d6b1; --disconnected: #728197; --surface: #141d29; --muted: #9baec5; }
+:root { color-scheme: dark; color: #d8e2ef; background: #0b1017; --border: #2b3848; --connected: #39ff14; --disconnected: #ff3b3b; --surface: #141d29; --muted: #9baec5; }
 body, .app { background: #0b1017; }
 .app-header, .inspector, .diagram-panel, .legend { background: var(--surface); }
 .app-header span, .model-note, .model-picker, .panel-heading p, .legend, dt, .asset-heading p, .switch-controls p, .action-message, .state-baseline-note, footer, .navigation-help, .view-search { color: var(--muted); }
@@ -75,3 +75,10 @@ body, .app { background: #0b1017; }
 .asset-actions details { margin: 10px 0; color: #acbfd2; }
 .popup-details { width: 100%; padding: 8px; border: 1px solid #486079; background: #243447; color: #d8e2ef; border-radius: 5px; }
 .asset-actions .state-buttons button { font-size: 13px; padding: 9px 7px; white-space: nowrap; }
+.whole-network .asset-label text { font-size: 20px; }
+.whole-network .network-diagram text.position-label { font-size: 17px; }
+.asset-actions { font-size: 14px; }
+.asset-actions h3 { font-size: 18px; }
+.asset-actions .popup-identity { font-size: 12px; }
+.asset-actions .state-buttons button { font-size: 14px; }
+.wire.earthed.disconnected:not(.unconfirmed-source):not(.conflict):not(.traced) { stroke: var(--disconnected); }

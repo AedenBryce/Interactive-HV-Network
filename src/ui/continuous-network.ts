@@ -91,14 +91,14 @@ export function continuousNetwork(model: NetworkModel) {
     const incoming = adjacent.get(asset.id)!.find(peer => peer.link === parentLink.get(asset.id))?.terminal;
     const lower = asset.terminals.filter(t => t !== incoming);
     for (const terminal of asset.terminals) {
-      layout.terminals[terminal] = asset.kind === 'bus' ? [x, y] : terminal === incoming ? [x, y - 100] : [x + (lower.indexOf(terminal) - (lower.length - 1) / 2) * 70, y + 100];
+      layout.terminals[terminal] = asset.kind === 'bus' ? [x, y] : terminal === incoming ? [x, y - 120] : [x + (lower.indexOf(terminal) - (lower.length - 1) / 2) * 70, y + 120];
     }
   }
   const labels = new Map<string, AssetLabel>();
   for (const asset of assets) {
     const lines = labelLines(compactEquipmentLabel(asset, currentAssetLabel(model, asset))); const [x, y] = layout.assets[asset.id]; const state = !!(asset.positions.length || getRemovableMechanism(asset));
     const earthOwner = earthParents.get(asset.id);
-    labels.set(asset.id, { x: x + (earthOwner ? 55 : 110), y: y + (earthOwner ? -25 : -35), width: Math.max(state ? 150 : 0, ...lines.map(line => line.length * 9 + 14)), height: lines.length * 21 + 10 + (state ? 20 : 0), lines });
+    labels.set(asset.id, { x: x + (earthOwner ? 55 : 110), y: y + (earthOwner ? -25 : -35), width: Math.max(state ? 170 : 0, ...lines.map(line => line.length * 10.5 + 14)), height: lines.length * 25 + 10 + (state ? 24 : 0), lines });
   }
   const routes = new Map<string, Point[]>(); const occupied: Segment[] = [];
   const remember = (id: string, points: Point[]) => {
