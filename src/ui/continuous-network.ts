@@ -1,18 +1,9 @@
 import type { NetworkModel } from '../session/model';
 import type { DiagramView } from '../session/presentation';
 import { contactPosition, getRemovableMechanism, isIndependentState } from '../session/mechanisms';
-import { clearRoute, labelLines, orthogonalPoints } from './diagram-geometry';
-import type { AssetLabel, Box, Point } from './diagram-geometry';
+import { clearRoute, cutsBox, labelLines, orthogonalPoints, sharedLength } from './diagram-geometry';
+import type { AssetLabel, Point, Segment } from './diagram-geometry';
 import { currentAssetLabel } from './review-updates';
-
-type Segment = { from: Point; to: Point; terminals: string[] };
-const cuts = (a: Point, b: Point, box: Box) => a[0] === b[0]
-  ? a[0] > box.x && a[0] < box.x + box.width && Math.max(a[1], b[1]) > box.y && Math.min(a[1], b[1]) < box.y + box.height
-  : a[1] > box.y && a[1] < box.y + box.height && Math.max(a[0], b[0]) > box.x && Math.min(a[0], b[0]) < box.x + box.width;
-const shared = (a: Point, b: Point, s: Segment) => a[0] === b[0] && s.from[0] === s.to[0] && a[0] === s.from[0]
-  ? Math.max(0, Math.min(Math.max(a[1], b[1]), Math.max(s.from[1], s.to[1])) - Math.max(Math.min(a[1], b[1]), Math.min(s.from[1], s.to[1])))
-  : a[1] === b[1] && s.from[1] === s.to[1] && a[1] === s.from[1]
-    ? Math.max(0, Math.min(Math.max(a[0], b[0]), Math.max(s.from[0], s.to[0])) - Math.max(Math.min(a[0], b[0]), Math.min(s.from[0], s.to[0]))) : 0;
 
 // Rendering forest only. The immutable model supplies every terminal/connection.
 // Agreed starting states prefer the main drawing backbone; live switching never
@@ -133,9 +124,9 @@ export function continuousNetwork(model: NetworkModel) {
     const candidates = [orthogonalPoints([from, to])];
     for (const x of [left + 100, right - 100, from[0] - 100, from[0] + 100, to[0] - 100, to[0] + 100]) candidates.push(orthogonalPoints([from, [x, from[1]], [x, to[1]], to]));
     for (const y of [top + 100, bottom - 100, (from[1] + to[1]) / 2]) candidates.push(orthogonalPoints([from, [from[0], y], [to[0], y], to]));
-    const score = (points: Point[]) => points.slice(1).reduce((cost, p, i) => cost + Math.abs(p[0] - points[i][0]) + Math.abs(p[1] - points[i][1]) + obstacles.filter(box => cuts(points[i], p, box)).length * 1e8 + others.reduce((sum, s) => sum + shared(points[i], p, s) * 200, 0), 0);
+    const score = (points: Point[]) => points.slice(1).reduce((cost, p, i) => cost + Math.abs(p[0] - points[i][0]) + Math.abs(p[1] - points[i][1]) + obstacles.filter(box => cutsBox(points[i], p, box)).length * 1e8 + others.reduce((sum, s) => sum + sharedLength(points[i], p, s) * 200, 0), 0);
     let route = candidates.reduce((best, route) => score(route) < score(best) ? route : best);
-    if (score(route) >= 1e8 || route.some((p, i) => i && others.some(s => shared(route[i - 1], p, s) > 0))) { const alternative = clearRoute(from, to, obstacles, others); if (alternative && score(alternative) < score(route)) route = alternative; }
+    if (score(route) >= 1e8 || route.some((p, i) => i && others.some(s => sharedLength(route[i - 1], p, s) > 0))) { const alternative = clearRoute(from, to, obstacles, others); if (alternative && score(alternative) < score(route)) route = alternative; }
     remember(link.id, route);
   }
   const points = [...Object.values(layout.assets), ...[...routes.values()].flat()];

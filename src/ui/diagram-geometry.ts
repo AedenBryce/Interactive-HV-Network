@@ -3,7 +3,7 @@ import type { DiagramView } from '../session/presentation';
 
 export type Point = [number, number];
 export type Box = { x: number; y: number; width: number; height: number };
-type Segment = { from: Point; to: Point; terminals: string[] };
+export type Segment = { from: Point; to: Point; terminals: string[] };
 export type AssetLabel = Box & { lines: string[] };
 const gap = 12;
 const overlaps = (a: Box, b: Box) => a.x < b.x + b.width + gap && a.x + a.width + gap > b.x && a.y < b.y + b.height + gap && a.y + a.height + gap > b.y;
@@ -34,13 +34,13 @@ export function orthogonalPoints(points: Point[]): Point[] {
   ));
 }
 
-function cutsBox(from: Point, to: Point, box: Box) {
+export function cutsBox(from: Point, to: Point, box: Box) {
   return from[0] === to[0]
     ? from[0] > box.x && from[0] < box.x + box.width && Math.max(from[1], to[1]) > box.y && Math.min(from[1], to[1]) < box.y + box.height
     : from[1] > box.y && from[1] < box.y + box.height && Math.max(from[0], to[0]) > box.x && Math.min(from[0], to[0]) < box.x + box.width;
 }
 
-function sharedLength(a: Point, b: Point, segment: Segment) {
+export function sharedLength(a: Point, b: Point, segment: Segment) {
   if (a[0] === b[0] && segment.from[0] === segment.to[0] && a[0] === segment.from[0]) return Math.max(0, Math.min(Math.max(a[1], b[1]), Math.max(segment.from[1], segment.to[1])) - Math.max(Math.min(a[1], b[1]), Math.min(segment.from[1], segment.to[1])));
   if (a[1] === b[1] && segment.from[1] === segment.to[1] && a[1] === segment.from[1]) return Math.max(0, Math.min(Math.max(a[0], b[0]), Math.max(segment.from[0], segment.to[0])) - Math.max(Math.min(a[0], b[0]), Math.min(segment.from[0], segment.to[0])));
   return 0;
