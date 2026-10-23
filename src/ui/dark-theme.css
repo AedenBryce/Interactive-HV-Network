@@ -53,3 +53,25 @@ body, .app { background: #0b1017; }
 .history-controls button:hover:not(:disabled) { background: #294056; }
 @media (max-width: 800px) { .network-rail { max-height: 140px; } .panel-heading { padding: 12px 16px 8px; } .panel-heading h2 { font-size: 21px; } .panel-heading p { font-size: 12px; } }
 @media (max-width: 800px) { .canvas-navigation label { flex: 1 1 130px; min-width: 0; } .canvas-navigation input, .canvas-navigation select { width: 100%; } .canvas-navigation { gap: 8px; } }
+.device-card { fill: #101b27; stroke: #486079; stroke-width: 1.5; }
+.diagram-asset:hover .device-card, .diagram-asset[aria-pressed=true] .device-card { stroke: #73c9f1; stroke-width: 2.5; }
+.asset-label.card-label rect { fill: transparent; }
+.label-leader { fill: none; stroke: #637d96; stroke-width: 1.5; }
+.motor-symbol circle, .drive-symbol rect, .drive-symbol path, .fuse-symbol rect, .fuse-symbol path { fill: #101b27; stroke: currentColor; stroke-width: 3; }
+.drive-symbol path, .fuse-symbol path { fill: none; }
+.motor-symbol text { fill: currentColor; font-size: 30px; font-weight: 600; }
+.drive-symbol text { fill: currentColor; font-size: 15px; }
+.winding-labels text { fill: #bed0e3; font-size: 20px; }
+.canvas-area rect { stroke: #526a82; stroke-width: 1.5; }
+.canvas-area text { fill: #c4d5e6; font-size: 30px; paint-order: stroke; stroke: #0b111a; stroke-width: 9px; }
+.asset-actions { position: fixed; z-index: 20; width: min(340px, calc(100vw - 24px)); max-height: min(410px, calc(100vh - 24px)); overflow: auto; padding: 14px; border: 1px solid #6a8aa7; border-radius: 9px; color: #d8e2ef; background: #172433; box-shadow: 0 12px 36px #000b; font-size: 13px; }
+.asset-actions:focus { outline: 2px solid #73c9f1; outline-offset: 2px; }
+.asset-actions-heading { display: flex; gap: 12px; justify-content: space-between; align-items: start; }
+.asset-actions h3 { margin: 0; font-size: 16px; }
+.asset-actions p { margin: 8px 0; }
+.asset-actions .popup-identity { color: #9baec5; overflow-wrap: anywhere; font-size: 11px; }
+.asset-actions-heading button { background: transparent; border: 0; color: #d8e2ef; font-size: 22px; line-height: 20px; cursor: pointer; }
+.asset-actions .state-buttons { margin: 12px 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.asset-actions details { margin: 10px 0; color: #acbfd2; }
+.popup-details { width: 100%; padding: 8px; border: 1px solid #486079; background: #243447; color: #d8e2ef; border-radius: 5px; }
+.asset-actions .state-buttons button { font-size: 13px; padding: 9px 7px; white-space: nowrap; }

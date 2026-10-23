@@ -1,6 +1,7 @@
 import type { Asset, NetworkModel } from '../session/model';
 import { isSourceArcSupported } from '../session/evidence';
 import { modelControlStatus } from './ModelReviewStatus';
+import { isFuse } from './equipment-appearance';
 
 const startingReviews = new Set(['sw411:R005', 'station:R005', 'C1-R06', 'C1-R07', 'C2-R11', 'SC-R05', 'SW-R09', 'TL-R07', 'CV-R10', 'WH-Q12', 'SV-Q12', 'H10-Q07']);
 const interlockReviews = new Set(['sw411:R003', 'station:R003', 'PL-IDS-INTERLOCKS', 'SC-R02', 'SC-R03', 'SW-R07', 'TL-R05', 'CV-R09', 'WH-Q08']);
@@ -9,6 +10,8 @@ const interlockReviews = new Set(['sw411:R003', 'station:R003', 'PL-IDS-INTERLOC
 // verification. The frozen original label remains available in evidence details.
 export function currentAssetLabel(model: NetworkModel, asset: Asset) {
   if (model.id !== 'site-whole-network' || model.version !== 'construction-2026-10-23.10') return asset.label;
+  if (isFuse(asset)) return asset.label.replace(/\s*actual condition unconfirmed/gi, '').replace(/Intact in teaching model/gi, 'Closed · intact fuse');
+  if (['sw411:tier-03:cb', 'sw411:tier-03:es', 'wh:h7:rm418:sw01:es'].includes(asset.id)) return asset.label.replace('unconfirmed', 'tag unconfirmed');
   if (asset.kind === 'transformer' && asset.sourceArcs?.some(arc => arc.id.includes(':forward-') && isSourceArcSupported(model, asset, arc))) {
     return asset.label.replace(/Transfer unconfirmed/gi, 'Primary→secondary model selected');
   }

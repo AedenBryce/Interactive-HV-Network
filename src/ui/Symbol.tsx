@@ -8,6 +8,6 @@ export function Symbol({ kind, open = false, unknown = false, rotation = 0, wind
     {(kind === 'breaker' || kind === 'contactor' || kind === 'disconnector') && <><path d="M-30 0 H-12 M12 0 H30" /><circle cx="12" r="2.5" />{kind === 'breaker' && <path d="M-17-5 L-7 5 M-17 5 L-7-5" />}{kind === 'contactor' && <path d="M-12-7 V7" />}<path d={open ? 'M12 0 L-8-20' : 'M12 0 H-12'} /></>}
     {kind === 'transformer' && <><circle cx="-12" r="21" />{Array.from({ length: Math.max(1, windings - 1) }, (_, index) => <circle key={index} cx="12" cy={(index - (Math.max(1, windings - 1) - 1) / 2) * 24} r="21" />)}</>}
     {kind === 'bus' && <path strokeWidth="5" d="M0-30 V30" />}
-    {kind === 'earth-switch' && <><path d="M0-30 V-12 M0 12 V20" /><circle cy="12" r="2.5" /><path d={open ? 'M0 12 L-18-8' : 'M0 12 V-12'} /><path d="M-20 20 H20 M-13 27 H13 M-5 34 H5" /></>}
+    {kind === 'earth-switch' && <><path d="M-30-30 H0 V-12 M0 12 V25" /><circle cy="-12" r="2.5" /><path d={open ? 'M0-12 L18 8' : 'M0-12 V12'} /><path d="M-20 25 H20 M-13 32 H13 M-5 39 H5" /></>}
   </g>;
 }

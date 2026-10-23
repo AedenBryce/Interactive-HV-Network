@@ -1,5 +1,6 @@
 import type { Asset, NetworkModel } from '../session/model';
 import type { DiagramView } from '../session/presentation';
+import { isDrive, isFuse, isMotor } from './equipment-appearance';
 
 export type Point = [number, number];
 export type Box = { x: number; y: number; width: number; height: number };
@@ -176,13 +177,16 @@ export function equipmentPorts(asset: Asset, layout: DiagramView['layout']) {
   const secondaryOrder = asset.terminals.slice(1).toSorted((a, b) => transverse(a) - transverse(b));
   const ports: Point[] = asset.kind === 'bus' ? [] : asset.kind === 'transformer'
     ? asset.terminals.map((terminal, index) => rotate(index === 0 ? [-33, 0] : [33, (secondaryOrder.indexOf(terminal) - (asset.terminals.length - 2) / 2) * 24]))
+    : isMotor(asset) ? [[0, -30]]
+    : isDrive(asset) ? asset.terminals.map(terminal => /:ac-(?:star|d)$/.test(terminal) ? [-22, -40] : /:ac-(?:delta|y)$/.test(terminal) ? [22, -40] : terminal.endsWith(':dc') ? [34, 0] : [0, 40])
+    : isFuse(asset) ? [[0, -30], [0, 30]]
     : asset.kind === 'interface' ? asset.terminals.map(terminal => {
       const [x, y] = point(terminal);
       if (!x && !y) return asset.terminals.length === 1 ? [0, 0] : [18, 0];
       if (Math.abs(x) >= Math.abs(y)) { const py = y / Math.abs(x) * 12; return [Math.sign(x) * Math.sqrt(18 ** 2 - py ** 2), py]; }
       const px = x / Math.abs(y) * 12; return [px, Math.sign(y) * Math.sqrt(18 ** 2 - px ** 2)];
     })
-    : asset.kind === 'earth-switch' ? [rotate([-30, 0]), rotate([30, 0])]
+    : asset.kind === 'earth-switch' ? [[-30, -30], [0, 39]]
     : asset.kind === 'source' && asset.terminals.length === 1 ? [[30, 0]]
     : asset.terminals.slice(0, 2).map((_, index) => rotate([index ? 30 : -30, 0]));
   return { rotation, ports };

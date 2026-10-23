@@ -4,6 +4,9 @@ import { contactPosition, getRemovableMechanism, isIndependentState } from '../s
 import { clearRoute, cutsBox, labelLines, orthogonalPoints, sharedLength } from './diagram-geometry';
 import type { AssetLabel, Point, Segment } from './diagram-geometry';
 import { currentAssetLabel } from './review-updates';
+import { compactEquipmentLabel, isDrive, isMotor, isMotorJunction } from './equipment-appearance';
+import { layoutDriveAssemblies, layoutMotorAssemblies } from './assembly-layout';
+import { switchroomFrames } from './switchroom-frames';
 
 // Rendering forest only. The immutable model supplies every terminal/connection.
 // Agreed starting states prefer the main drawing backbone; live switching never
@@ -49,22 +52,25 @@ export function continuousNetwork(model: NetworkModel) {
     return pin(a) - pin(b) || Number(isOpen(a)) - Number(isOpen(b));
   });
   const widths = new Map<string, number>();
-  function measure(id: string): number { const width = Math.max(420, children.get(id)!.reduce((sum, child) => sum + measure(child), 0)); widths.set(id, width); return width; }
+  function measure(id: string): number { const width = Math.max(520, children.get(id)!.reduce((sum, child) => sum + measure(child), 0)); widths.set(id, width); return width; }
   const layout: DiagramView['layout'] = { assets: {}, terminals: {}, rotations: {} };
   function place(id: string, left: number, y: number) {
     const kids = children.get(id)!; let cursor = left;
-    for (const child of kids) { place(child, cursor, y + 440); cursor += widths.get(child)!; }
-    layout.assets[id] = [kids.length ? (layout.assets[kids[0]][0] + layout.assets[kids.at(-1)!][0]) / 2 : left + 210, y];
+    for (const child of kids) { place(child, cursor, y + 600); cursor += widths.get(child)!; }
+    layout.assets[id] = [kids.length ? (layout.assets[kids[0]][0] + layout.assets[kids.at(-1)!][0]) / 2 : left + 260, y];
   }
   let cursor = 100;
   for (const root of roots) { measure(root); place(root, cursor, 120); cursor += widths.get(root)! + 840; }
+  const merges = layoutMotorAssemblies(model, layout);
+  layoutDriveAssemblies(model, layout);
+  const hiddenIds = new Set(assets.filter(isMotorJunction).map(asset => asset.id));
   for (const [id, owner] of earthParents) {
     const [x, y] = layout.assets[owner];
     const ownerLink = adjacent.get(owner)!.find(peer => peer.id === id)!;
     const incoming = adjacent.get(owner)!.find(peer => peer.link === parentLink.get(owner))?.terminal;
     const siblings = [...earthParents].filter(([, main]) => main === owner).map(([earth]) => earth);
     const index = siblings.indexOf(id);
-    layout.assets[id] = [x + 70, y + (ownerLink.terminal === incoming ? -1 : 1) * (120 + index * 140)];
+    layout.assets[id] = [x + 170, y + (!hiddenIds.has(owner) && ownerLink.terminal === incoming ? -1 : 1) * (200 + index * 200)];
     visited.add(id); treeEdgeIds.add(adjacent.get(id)![0].link);
   }
   const mainBottom = Math.max(...Object.values(layout.assets).map(p => p[1])) + 600;
@@ -75,36 +81,51 @@ export function continuousNetwork(model: NetworkModel) {
     if (asset.kind === 'bus') layout.rotations![asset.id] = 90;
     if (earthParents.has(asset.id)) {
       const input = adjacent.get(asset.id)![0].terminal;
-      asset.terminals.forEach(t => { layout.terminals[t] = [x + (t === input ? -40 : 40), y]; }); continue;
+      asset.terminals.forEach(t => { layout.terminals[t] = t === input ? [x - 60, y - 30] : [x, y + 45]; }); continue;
+    }
+    if (hiddenIds.has(asset.id)) { asset.terminals.forEach(t => { layout.terminals[t] = [x, y]; }); continue; }
+    if (isMotor(asset)) { asset.terminals.forEach(t => { layout.terminals[t] = [x, y - 70]; }); continue; }
+    if (isDrive(asset)) {
+      asset.terminals.forEach(t => { layout.terminals[t] = /:ac-(?:star|d)$/.test(t) ? [x - 35, y - 100] : /:ac-(?:delta|y)$/.test(t) ? [x + 35, y - 100] : t.endsWith(':dc') ? [x + 70, y] : [x, y + 100]; }); continue;
     }
     const incoming = adjacent.get(asset.id)!.find(peer => peer.link === parentLink.get(asset.id))?.terminal;
     const lower = asset.terminals.filter(t => t !== incoming);
     for (const terminal of asset.terminals) {
-      layout.terminals[terminal] = asset.kind === 'bus' ? [x, y] : terminal === incoming ? [x, y - 54] : [x + (lower.indexOf(terminal) - (lower.length - 1) / 2) * 70, y + 54];
+      layout.terminals[terminal] = asset.kind === 'bus' ? [x, y] : terminal === incoming ? [x, y - 100] : [x + (lower.indexOf(terminal) - (lower.length - 1) / 2) * 70, y + 100];
     }
   }
   const labels = new Map<string, AssetLabel>();
   for (const asset of assets) {
-    const lines = labelLines(currentAssetLabel(model, asset)); const [x, y] = layout.assets[asset.id]; const state = !!(asset.positions.length || getRemovableMechanism(asset));
+    const lines = labelLines(compactEquipmentLabel(asset, currentAssetLabel(model, asset))); const [x, y] = layout.assets[asset.id]; const state = !!(asset.positions.length || getRemovableMechanism(asset));
     const earthOwner = earthParents.get(asset.id);
-    labels.set(asset.id, { x: x + (earthOwner ? 40 : 110), y: y + (earthOwner && y > layout.assets[earthOwner][1] ? 5 : -35), width: Math.max(state ? 150 : 0, ...lines.map(line => line.length * 9 + 14)), height: lines.length * 21 + 10 + (state ? 20 : 0), lines });
+    labels.set(asset.id, { x: x + (earthOwner ? 55 : 110), y: y + (earthOwner ? -25 : -35), width: Math.max(state ? 150 : 0, ...lines.map(line => line.length * 9 + 14)), height: lines.length * 21 + 10 + (state ? 20 : 0), lines });
   }
   const routes = new Map<string, Point[]>(); const occupied: Segment[] = [];
   const remember = (id: string, points: Point[]) => {
     routes.set(id, points); const link = model.connections.find(link => link.id === id)!;
     points.slice(1).forEach((p, i) => occupied.push({ from: points[i], to: p, terminals: [link.from, link.to] }));
   };
-  for (const link of model.connections.filter(link => treeEdgeIds.has(link.id))) {
+  const mergeLinks = new Set(model.connections.filter(link => {
+    const a = owners.get(link.from)!; const b = owners.get(link.to)!;
+    return merges.get(a)?.controls.includes(b) || merges.get(b)?.controls.includes(a);
+  }).map(link => link.id));
+  for (const link of model.connections.filter(link => treeEdgeIds.has(link.id) || mergeLinks.has(link.id))) {
     const from = layout.terminals[link.from]; const to = layout.terminals[link.to]; const a = owners.get(link.from)!; const b = owners.get(link.to)!;
     if (earthParents.has(a) || earthParents.has(b)) {
       const earth = earthParents.has(a) ? a : b;
       const start = earth === a ? to : from; const end = earth === a ? from : to;
-      const points = orthogonalPoints([start, [start[0], layout.assets[earth][1]], end]);
+      const points = orthogonalPoints([start, [start[0], end[1]], end]);
       remember(link.id, earth === a ? points.reverse() : points); continue;
+    }
+    if (mergeLinks.has(link.id)) {
+      const merge = merges.get(a) ?? merges.get(b)!; const targetFirst = merges.has(a);
+      const start = targetFirst ? to : from; const end = targetFirst ? from : to;
+      const points = orthogonalPoints([start, [start[0], merge.y], [merge.x, merge.y], end]);
+      remember(link.id, targetFirst ? points.reverse() : points); continue;
     }
     const upper = parent.get(b) === a ? a : b;
     const terminal = upper === a ? link.from : link.to;
-    const channel = layout.assets[upper][1] + 110 + byId.get(upper)!.terminals.indexOf(terminal) * 8;
+    const channel = layout.assets[upper][1] + 140 + byId.get(upper)!.terminals.indexOf(terminal) * 12;
     const incoming = adjacent.get(upper)!.find(peer => peer.link === parentLink.get(upper))?.terminal;
     if (terminal === incoming && byId.get(upper)!.kind !== 'bus') {
       // A same-terminal continuation must leave beside the symbol. Passing down
@@ -115,11 +136,11 @@ export function continuousNetwork(model: NetworkModel) {
     } else remember(link.id, orthogonalPoints([from, [from[0], channel], [to[0], channel], to]));
   }
   const symbols = assets.map(asset => { const [x, y] = layout.assets[asset.id]; return { id: asset.id, x: x - 38, y: y - 38, width: 76, height: 76 }; });
-  for (const link of model.connections.filter(link => !treeEdgeIds.has(link.id))) {
+  for (const link of model.connections.filter(link => !treeEdgeIds.has(link.id) && !mergeLinks.has(link.id))) {
     const from = layout.terminals[link.from]; const to = layout.terminals[link.to]; const own = new Set([owners.get(link.from), owners.get(link.to)]);
     const left = Math.min(from[0], to[0]) - 400; const right = Math.max(from[0], to[0]) + 400;
     const top = Math.min(from[1], to[1]) - 400; const bottom = Math.max(from[1], to[1]) + 400;
-    const obstacles = [...symbols.filter(box => !own.has(box.id)), ...labels.values()].filter(box => box.x + box.width >= left && box.x <= right && box.y + box.height >= top && box.y <= bottom).map(box => ({ x: box.x - 10, y: box.y - 10, width: box.width + 20, height: box.height + 20 }));
+    const obstacles = [...symbols.filter(box => !own.has(box.id) && !hiddenIds.has(box.id)), ...assets.filter(asset => !hiddenIds.has(asset.id)).map(asset => labels.get(asset.id)!)].filter(box => box.x + box.width >= left && box.x <= right && box.y + box.height >= top && box.y <= bottom).map(box => ({ x: box.x - 10, y: box.y - 10, width: box.width + 20, height: box.height + 20 }));
     const others = occupied.filter(s => !s.terminals.includes(link.from) && !s.terminals.includes(link.to) && Math.max(s.from[0], s.to[0]) >= left && Math.min(s.from[0], s.to[0]) <= right && Math.max(s.from[1], s.to[1]) >= top && Math.min(s.from[1], s.to[1]) <= bottom);
     const candidates = [orthogonalPoints([from, to])];
     for (const x of [left + 100, right - 100, from[0] - 100, from[0] + 100, to[0] - 100, to[0] + 100]) candidates.push(orthogonalPoints([from, [x, from[1]], [x, to[1]], to]));
@@ -134,5 +155,5 @@ export function continuousNetwork(model: NetworkModel) {
   const maxX = Math.max(...points.map(p => p[0]), ...[...labels.values()].map(label => label.x + label.width)) + 100;
   const maxY = Math.max(...points.map(p => p[1]), ...[...labels.values()].map(label => label.y + label.height)) + 150;
   const view: DiagramView = { id: 'continuous-network', label: 'Whole network · downward supply tree', assetIds: assets.map(asset => asset.id), layout, bounds: [minX, minY, maxX - minX, maxY - minY] };
-  return { view, assets, connections: model.connections, owners, labels, routes, panels: [] as { id: string; label: string; x: number; y: number; width: number; height: number }[], referenceTop: references.length ? mainBottom : undefined, referenceLabel: 'Drawing references without network connections', referenceIds: references.map(asset => asset.id), treeEdgeIds };
+  return { view, assets, connections: model.connections, owners, labels, routes, panels: switchroomFrames(model, layout, labels), hiddenIds, referenceTop: references.length ? mainBottom : undefined, referenceLabel: 'Drawing references without network connections', referenceIds: references.map(asset => asset.id), treeEdgeIds };
 }

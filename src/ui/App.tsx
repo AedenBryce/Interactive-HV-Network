@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { SimulationSession } from '../session/session';
 import type { Asset } from '../session/model';
 import { Symbol } from './Symbol';
@@ -16,6 +16,8 @@ import { contactPosition, describeDeviceState, getRemovableMechanism, isIndepend
 import type { IndependentCommand } from '../session/mechanisms';
 import { ModelReviewStatus } from './ModelReviewStatus';
 import { currentAssetLabel } from './review-updates';
+import { AssetActions } from './AssetActions';
+import { isMotorJunction } from './equipment-appearance';
 
 const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', contactor: 'Contactor', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 
@@ -27,6 +29,13 @@ export function App() {
   const [traceKey, setTraceKey] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [detailsCollapsed, setDetailsCollapsed] = useState(true);
+  const [popup, setPopup] = useState<{ id: string; x: number; y: number } | null>(null);
+  const popupOrigin = useRef<Element | null>(null);
+  const closeActions = useCallback(() => {
+    setPopup(null);
+    const target = popupOrigin.current?.isConnected ? popupOrigin.current : document.querySelector('.diagram-asset[aria-pressed="true"]') ?? document.querySelector('.network-diagram');
+    if (target instanceof SVGElement || target instanceof HTMLElement) target.focus();
+  }, []);
   const pending = useRef(false);
   const inspector = useRef<HTMLElement>(null);
   const asset = snapshot.model.assets.find(asset => asset.id === selectedId)!;
@@ -46,7 +55,12 @@ export function App() {
   const tracedPath = paths.find(path => `${path.sourceId}:${path.terminalId}` === traceKey);
   const labels = new Map(snapshot.model.assets.map(item => [item.id, item.label]));
 
-  function selectAsset(id: string) { setSelectedId(id); setTraceKey(null); inspector.current?.scrollTo({ top: 0 }); }
+  function selectAsset(id: string, element?: Element) {
+    setSelectedId(id); setTraceKey(null); inspector.current?.scrollTo({ top: 0 });
+    popupOrigin.current = element ?? null;
+    const rect = element?.getBoundingClientRect();
+    setPopup({ id, x: Math.max(12, Math.min(innerWidth - 352, rect ? rect.right + 8 : innerWidth / 2 - 170)), y: Math.max(12, Math.min(innerHeight - 430, rect?.top ?? 80)) });
+  }
 
   function updateSession(action: () => void) {
     if (pending.current) return;
@@ -60,6 +74,7 @@ export function App() {
   }
 
   function selectModel(id: string) {
+    setPopup(null);
     updateSession(() => {
       const result = session.loadModel(models.find(model => model.id === id));
       if (result.ok) { const next = session.snapshot(); setSnapshot(next); setSelectedId(next.model.assets.find(item => item.positions.length || getRemovableMechanism(item))?.id ?? next.model.assets[0].id); setTraceKey(null); setMessage(''); inspector.current?.scrollTo({ top: 0 }); }
@@ -76,12 +91,17 @@ export function App() {
   }
 
   function changePosition(position: string | IndependentCommand) {
+    changeAssetPosition(asset.id, position);
+  }
+
+  function changeAssetPosition(id: string, position: string | IndependentCommand) {
     updateSession(() => {
-      const result = session.changeDevice(asset.id, position);
+      const target = snapshot.model.assets.find(item => item.id === id)!;
+      const result = session.changeDevice(id, position);
       if (result.ok) {
         setSnapshot(session.snapshot());
-        const label = typeof position === 'string' ? asset.positions.find(p => p.id === position)?.label : switching.actions?.find(action => action.command.kind === position.kind && action.command.value === position.value)?.label;
-        setMessage(`${asset.label}: ${label}. Connectivity updated.`);
+        const label = typeof position === 'string' ? target.positions.find(p => p.id === position)?.label : snapshot.switching[id].actions?.find(action => action.command.kind === position.kind && action.command.value === position.value)?.label;
+        setMessage(`${target.label}: ${label}. Connectivity updated.`);
       } else setMessage(result.error);
     });
   }
@@ -95,6 +115,7 @@ export function App() {
   }
 
   function loadScenario(input: unknown) {
+    setPopup(null);
     updateSession(() => {
       const result = session.loadScenario(input);
       if (result.ok) {
@@ -117,12 +138,14 @@ export function App() {
         <label className="model-picker">Model<select aria-label="Model" value={snapshot.currentModel.id} onChange={event => selectModel(event.target.value)}>{modelGroups.map(group => <optgroup key={group.label} label={group.label}>{group.models.map(model => <option key={model.id} value={model.id}>{model.id === defaultModel.id || model.synthetic ? model.name : `Historical · ${model.name}`}</option>)}</optgroup>)}</select></label>
         {differentModel && <button className="current-model-button" onClick={() => selectModel(defaultModel.id)}>Open current whole network</button>}
         <ScenarioControls snapshot={snapshot} onSave={() => session.saveScenario()} onLoad={loadScenario} onError={setMessage} onReturn={() => selectModel(snapshot.currentModel.id)} />
-        <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={() => selectAsset(item.id)}>
+        <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.filter(item => snapshot.model.id !== 'site-whole-network' || !isMotorJunction(item)).map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={event => selectAsset(item.id, event.currentTarget)}>
           <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={contactPosition(snapshot.devices[item.id]) === 'open'} unknown={(item.positions.length > 0 || !!getRemovableMechanism(item)) && contactPosition(snapshot.devices[item.id]) === null} /></svg><span>{currentAssetLabel(snapshot.model, item)}{getRemovableMechanism(item) && <small style={{ display: 'block' }}>{describeDeviceState(snapshot.devices[item.id])}</small>}</span>
         </button>)}</nav>
       </aside>
 
       <NetworkDiagram key={`${snapshot.model.id}:${snapshot.model.version}`} snapshot={snapshot} selectedId={selectedId} tracedPath={tracedPath} presentation={snapshot.model.presentation ?? fallbackPresentation(snapshot.model)} onSelectAsset={selectAsset} />
+
+      {popup && <AssetActions snapshot={snapshot} assetId={popup.id} anchor={popup} onChange={changeAssetPosition} onSource={changeSource} onClose={closeActions} onDetails={() => { setDetailsCollapsed(false); setPopup(null); }} />}
 
       {detailsCollapsed && <div className="inspector-rail"><button aria-label="Show asset details" aria-controls="asset-details" aria-expanded={false} onClick={() => setDetailsCollapsed(false)}>‹</button></div>}
       <aside ref={inspector} id="asset-details" className="inspector" aria-label="Asset details" hidden={detailsCollapsed}>
