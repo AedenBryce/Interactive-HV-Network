@@ -5,6 +5,7 @@ import type { SourcePath } from '../session/connectivity';
 import type { DiagramPresentation } from './diagram';
 import { EquipmentSymbol } from './EquipmentSymbol';
 import { isIndependentState } from '../session/mechanisms';
+import { isSupported } from '../session/evidence';
 import { diagramGeometry } from './diagram-geometry';
 import { continuousNetwork } from './continuous-network';
 import './navigation.css';
@@ -21,7 +22,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
   const matchingViews = presentation.views.filter(item => item.label.toLowerCase().includes(viewSearch.trim().toLowerCase()));
   const sourceView = presentation.views.find(item => item.id === viewId)!;
   // Session packages are immutable by ID/version; switching changes no coordinates.
-  const geometry: ReturnType<typeof diagramGeometry> & Partial<Pick<ReturnType<typeof continuousNetwork>, 'panels' | 'referenceTop' | 'referenceLabel'>> = useMemo(() => continuous ? continuousNetwork(snapshot.model) : diagramGeometry(snapshot.model, sourceView), [snapshot.model.id, snapshot.model.version, sourceView.id]);
+  const geometry: ReturnType<typeof diagramGeometry> & Partial<Pick<ReturnType<typeof continuousNetwork>, 'panels' | 'referenceTop' | 'referenceLabel' | 'referenceIds' | 'treeEdgeIds'>> = useMemo(() => continuous ? continuousNetwork(snapshot.model) : diagramGeometry(snapshot.model, sourceView), [snapshot.model.id, snapshot.model.version, sourceView.id]);
   const { view, assets, connections } = geometry;
   const matchingAssets = useMemo(() => {
     const query = searchable(assetSearch);
@@ -106,6 +107,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
     const region = presentation.views.find(item => item.id === presentation.overviewId)?.regions?.find(item => item.targetViewId === id);
     const panel = geometry.panels?.find(item => item.id === region?.id);
     if (panel) focusBox(panel.x - 100, panel.y - 100, panel.width + 200, panel.height + 200);
+    else focusAssets(presentation.views.find(item => item.id === id)?.assetIds.filter(assetId => !geometry.referenceIds?.includes(assetId)) ?? []);
   }
   function keyboard(event: KeyboardEvent<SVGSVGElement>) {
     if (event.target !== event.currentTarget) return;
@@ -127,7 +129,7 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
   }
 
   return <main className="diagram-panel interactive-diagram">
-    <div className="panel-heading"><h2>{continuous ? 'Whole network' : 'Single-line diagram'}</h2><p>{continuous ? `${assets.length} assets · ${connections.length} connections · one continuous canvas` : snapshot.model.name}</p></div>
+    <div className="panel-heading"><h2>{continuous ? 'Whole network · supply tree' : 'Single-line diagram'}</h2><p>{continuous ? `${assets.length} assets · ${connections.length} connections · supplies at the top, feeders downward` : snapshot.model.name}</p></div>
     {continuous ? <div className="canvas-navigation">
       <label>Find asset<input aria-label="Find asset on whole network" value={assetSearch} onChange={event => setAssetSearch(event.target.value)} placeholder="Asset tag or name" /></label>
       <label>Zoom to area<select aria-label="Zoom to network area" defaultValue="" onChange={event => { focusArea(event.target.value); event.target.value = ''; }}><option value="" disabled>Choose area</option>{presentation.views.find(item => item.id === presentation.overviewId)?.regions?.map(region => <option key={region.id} value={region.targetViewId}>{region.label.replaceAll('\n', ' · ')}</option>)}</select></label>
@@ -159,7 +161,8 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
           const points = geometry.routes.get(connection.id)!.map(point => point.join(',')).join(' ');
           const conflict = snapshot.conflicts.some(item => item.connectionIds.includes(connection.id));
           const result = snapshot.connectionResults[connection.id];
-          return <g key={connection.id} data-connection-id={connection.id} data-from={connection.from} data-to={connection.to}><title>{connection.id}{result.unconfirmed ? ' — Unconfirmed information' : ''}</title>{removedEdges.has(`connection:${connection.id}`) && <polyline points={points} className="wire change-outline" />}{result.unconfirmed && <polyline points={points} className="wire uncertainty-outline" />}<polyline points={points} className={`wire ${result.sourceStatus === 'connected' ? 'connected' : 'disconnected'} ${result.earthStatus === 'connected' ? 'earthed' : ''} ${result.sourceStatus === 'unconfirmed' && result.earthStatus !== 'connected' ? 'unconfirmed-source' : ''} ${conflict ? 'conflict' : ''} ${tracedPath?.connectionIds.includes(connection.id) ? 'traced' : ''}`} /></g>;
+          const unconfirmedConnection = !isSupported(snapshot.model, connection);
+          return <g key={connection.id} data-connection-id={connection.id} data-from={connection.from} data-to={connection.to} data-tree-edge={geometry.treeEdgeIds?.has(connection.id)}><title>{connection.id}{unconfirmedConnection ? ' — Connection record unconfirmed' : ' — Connection record supported'}; source: {result.sourceStatus}; earth: {result.earthStatus}</title>{removedEdges.has(`connection:${connection.id}`) && <polyline points={points} className="wire change-outline" />}{unconfirmedConnection && <polyline points={points} className="wire uncertainty-outline" />}<polyline points={points} className={`wire ${result.sourceStatus === 'connected' ? 'connected' : 'disconnected'} ${result.earthStatus === 'connected' ? 'earthed' : ''} ${result.sourceStatus === 'unconfirmed' && result.earthStatus !== 'connected' ? 'unconfirmed-source' : ''} ${conflict ? 'conflict' : ''} ${tracedPath?.connectionIds.includes(connection.id) ? 'traced' : ''}`} /></g>;
         })}
         {assets.map(item => {
           const [x, y] = view.layout.assets[item.id];
@@ -187,6 +190,6 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
       </svg>
     </div>
     {!!view.boundaries?.length && <section className="boundary-list" aria-label="Connections beyond this view"><h3>Connections beyond this view</h3>{view.boundaries.map(boundary => <button key={boundary.connectionId} onClick={() => navigate(boundary.targetViewId)}><strong>{boundary.connectionId}</strong><span>→ {labels.get(boundary.remoteAssetId)} · {presentation.views.find(item => item.id === boundary.targetViewId)?.label}</span></button>)}</section>}
-    <div className="legend" aria-label="Diagram legend"><span><i className="dot connected" />Source connected</span><span><i className="dot disconnected" />No source connection</span>{snapshot.model.earths?.length ? <span><i className="dot earth-dot" />Earth connected</span> : null}{Object.values(snapshot.connectionResults).some(result => result.unconfirmed) && <span><i className="dot unconfirmed-dot" />Amber outline: Unconfirmed information</span>}{snapshot.model.assets.some(asset => asset.sourceArcs?.length) && <span>Winding transfer and earth relationships: inspect Asset details</span>}{snapshot.conflicts.length > 0 && <span><i className="dot conflict-dot" />Source-to-earth conflict</span>}{snapshot.impact.length > 0 && <span><i className="dot impact-dot" />Changed path or asset</span>}{tracedPath && <span><i className="dot trace-dot" />Selected supply path</span>}</div>
+    <div className="legend" aria-label="Diagram legend"><span><i className="dot connected" />Source connected</span><span><i className="dot disconnected" />No source connection</span>{snapshot.model.earths?.length ? <span><i className="dot earth-dot" />Earth connected</span> : null}{connections.some(connection => !isSupported(snapshot.model, connection)) && <span><i className="dot unconfirmed-dot" />Amber outline: connection record unconfirmed</span>}<span>? badge: external source/earth coverage unconfirmed</span>{snapshot.model.assets.some(asset => asset.sourceArcs?.length) && <span>Winding transfer and earth relationships: inspect Asset details</span>}{snapshot.conflicts.length > 0 && <span><i className="dot conflict-dot" />Source-to-earth conflict</span>}{snapshot.impact.length > 0 && <span><i className="dot impact-dot" />Changed path or asset</span>}{tracedPath && <span><i className="dot trace-dot" />Selected supply path</span>}</div>
   </main>;
 }

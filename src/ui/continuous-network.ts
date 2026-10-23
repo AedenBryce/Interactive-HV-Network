@@ -1,136 +1,147 @@
 import type { NetworkModel } from '../session/model';
 import type { DiagramView } from '../session/presentation';
-import { getRemovableMechanism } from '../session/mechanisms';
-import { labelLines, orthogonalPoints } from './diagram-geometry';
-import type { AssetLabel, Point } from './diagram-geometry';
+import { contactPosition, getRemovableMechanism, isIndependentState } from '../session/mechanisms';
+import { clearRoute, labelLines, orthogonalPoints } from './diagram-geometry';
+import type { AssetLabel, Box, Point } from './diagram-geometry';
+import { currentAssetLabel } from './review-updates';
 
-// Source-area membership and a drawing forest organise existing identities only.
-// Neither the forest nor its continuous routes add an electrical relationship.
+type Segment = { from: Point; to: Point; terminals: string[] };
+const cuts = (a: Point, b: Point, box: Box) => a[0] === b[0]
+  ? a[0] > box.x && a[0] < box.x + box.width && Math.max(a[1], b[1]) > box.y && Math.min(a[1], b[1]) < box.y + box.height
+  : a[1] > box.y && a[1] < box.y + box.height && Math.max(a[0], b[0]) > box.x && Math.min(a[0], b[0]) < box.x + box.width;
+const shared = (a: Point, b: Point, s: Segment) => a[0] === b[0] && s.from[0] === s.to[0] && a[0] === s.from[0]
+  ? Math.max(0, Math.min(Math.max(a[1], b[1]), Math.max(s.from[1], s.to[1])) - Math.max(Math.min(a[1], b[1]), Math.min(s.from[1], s.to[1])))
+  : a[1] === b[1] && s.from[1] === s.to[1] && a[1] === s.from[1]
+    ? Math.max(0, Math.min(Math.max(a[0], b[0]), Math.max(s.from[0], s.to[0])) - Math.max(Math.min(a[0], b[0]), Math.min(s.from[0], s.to[0]))) : 0;
+
+// Rendering forest only. The immutable model supplies every terminal/connection.
+// Agreed starting states prefer the main drawing backbone; live switching never
+// changes this layout. Earth switches remain attached side branches, not roots.
 export function continuousNetwork(model: NetworkModel) {
   const assets = model.assets;
   const byId = new Map(assets.map(asset => [asset.id, asset]));
-  const owners = new Map(assets.flatMap(asset => asset.terminals.map(terminal => [terminal, asset.id] as const)));
-  const adjacent = new Map(assets.map(asset => [asset.id, [] as { assetId: string; connectionId: string; terminal: string }[]]));
-  const terminalLinks = new Map<string, string[]>();
+  const owners = new Map(assets.flatMap(asset => asset.terminals.map(t => [t, asset.id] as const)));
+  const adjacent = new Map(assets.map(asset => [asset.id, [] as { id: string; link: string; terminal: string }[]]));
   for (const link of model.connections) {
     const a = owners.get(link.from)!; const b = owners.get(link.to)!;
     if (a === b) continue;
-    adjacent.get(a)!.push({ assetId: b, connectionId: link.id, terminal: link.from });
-    adjacent.get(b)!.push({ assetId: a, connectionId: link.id, terminal: link.to });
-    for (const [terminal, peer] of [[link.from, b], [link.to, a]]) terminalLinks.set(terminal, [...(terminalLinks.get(terminal) ?? []), peer]);
+    adjacent.get(a)!.push({ id: b, link: link.id, terminal: link.from });
+    adjacent.get(b)!.push({ id: a, link: link.id, terminal: link.to });
   }
-  // Distance is a drawing-order preference, independent of switching/source state.
-  const sourceOrder = new Map(model.sources.map(source => [source.assetId, 0]));
-  const sourceQueue = [...sourceOrder.keys()];
-  for (let i = 0; i < sourceQueue.length; i++) for (const peer of adjacent.get(sourceQueue[i])!) if (!sourceOrder.has(peer.assetId)) {
-    sourceOrder.set(peer.assetId, sourceOrder.get(sourceQueue[i])! + 1); sourceQueue.push(peer.assetId);
-  }
-  const original = model.presentation!;
-  const regions = original.views.find(view => view.id === original.overviewId)!.regions ?? [];
-  const group = new Map<string, string>();
-  for (const asset of assets) {
-    let best = 0;
-    for (const region of regions) {
-      const prefix = region.targetViewId.split('/')[0] + '/';
-      const score = original.views.filter(view => view.id.startsWith(prefix) && view.assetIds.includes(asset.id)).length;
-      if (score > best) { best = score; group.set(asset.id, region.id); }
-    }
-  }
-  for (let pass = 0; pass < assets.length; pass++) {
-    let changed = false;
-    for (const asset of assets) if (!group.has(asset.id)) {
-      const peer = adjacent.get(asset.id)!.find(item => group.has(item.assetId));
-      if (peer) { group.set(asset.id, group.get(peer.assetId)!); changed = true; }
-    }
-    if (!changed) break;
-  }
-  const layout: DiagramView['layout'] = { assets: {}, terminals: {}, rotations: {} };
-  const treeEdges = new Set<string>();
-  const local = new Map<string, { width: number; height: number; points: Record<string, Point> }>();
-  for (const region of regions) {
-    const members = assets.filter(asset => group.get(asset.id) === region.id && adjacent.get(asset.id)!.length);
-    const pending = new Set(members.map(asset => asset.id));
-    const points: Record<string, Point> = {};
-    let left = 200; let bottom = 0; let top = 0; let widest = 0;
-    const subgroup = (id: string) => region.id === 'western' ? /^wh:(h\d+):/.exec(id)?.[1] ?? id : region.id;
-    const roots = members.map(asset => asset.id).sort((a, b) => (sourceOrder.get(a) ?? Infinity) - (sourceOrder.get(b) ?? Infinity));
-    for (const root of roots) {
-      if (!pending.has(root)) continue;
-      const children = new Map<string, string[]>(); const depth = new Map([[root, 0]]); const queue = [root]; pending.delete(root);
-      for (let i = 0; i < queue.length; i++) {
-        const id = queue[i]; children.set(id, []);
-        const neighbors = [...adjacent.get(id)!].sort((a, b) => byId.get(id)!.terminals.indexOf(a.terminal) - byId.get(id)!.terminals.indexOf(b.terminal));
-        for (const peer of neighbors) if (pending.has(peer.assetId) && subgroup(peer.assetId) === subgroup(root)) {
-          pending.delete(peer.assetId); children.get(id)!.push(peer.assetId); depth.set(peer.assetId, depth.get(id)! + 1); queue.push(peer.assetId); treeEdges.add(peer.connectionId);
-        }
+  const earthParents = new Map(assets.filter(a => a.kind === 'earth-switch' && adjacent.get(a.id)!.length === 1).map(a => [a.id, adjacent.get(a.id)![0].id]));
+  const children = new Map(assets.map(a => [a.id, [] as string[]]));
+  const parent = new Map<string, string>(); const parentLink = new Map<string, string>();
+  const roots = [...new Set(model.sources.map(source => source.assetId))];
+  const visited = new Set(roots); const treeEdgeIds = new Set<string>();
+  const isOpen = (id: string) => {
+    const asset = byId.get(id)!; const state = model.starting.devices[id];
+    if (!asset.positions.length && !getRemovableMechanism(asset)) return false;
+    return isIndependentState(state) ? state.contact !== 'closed' || state.racking !== 'in' : !['closed', 'service'].includes(String(contactPosition(state)));
+  };
+  function traverse(preferred: boolean) {
+    const queue = [...visited];
+    for (let i = 0; i < queue.length; i++) {
+      const id = queue[i];
+      for (const peer of adjacent.get(id)!) {
+        if (visited.has(peer.id) || earthParents.has(peer.id) || preferred && (isOpen(id) || isOpen(peer.id))) continue;
+        visited.add(peer.id); parent.set(peer.id, id); parentLink.set(peer.id, peer.link); treeEdgeIds.add(peer.link);
+        children.get(id)!.push(peer.id); queue.push(peer.id);
       }
-      const widths = new Map<string, number>();
-      function measure(id: string): number { const width = Math.max(500, children.get(id)!.reduce((sum, child) => sum + measure(child), 0)); widths.set(id, width); return width; }
-      function place(id: string, x: number) { points[id] = [x + widths.get(id)! / 2, top + 200 + depth.get(id)! * 360]; for (const child of children.get(id)!) { place(child, x); x += widths.get(child)!; } }
-      measure(root);
-      if (region.id === 'western' && left > 200 && left + widths.get(root)! > 12000) { left = 200; top = Math.ceil((bottom + 360) / 360) * 360; }
-      place(root, left); left += widths.get(root)! + 500; widest = Math.max(widest, left); bottom = Math.max(bottom, ...Object.values(points).map(point => point[1]));
     }
-    local.set(region.id, { width: widest + 300, height: Math.ceil((bottom + 300) / 360) * 360, points });
   }
-  const columns = [...new Set(regions.map(region => region.bounds[0]))].sort((a, b) => a - b);
-  const rows = [...new Set(regions.map(region => region.bounds[1]))].sort((a, b) => a - b);
-  const columnWidths = columns.map(column => Math.max(2000, ...regions.filter(region => region.bounds[0] === column).map(region => local.get(region.id)!.width)) + 720);
-  const rowHeights = rows.map(row => Math.max(1080, ...regions.filter(region => region.bounds[1] === row).map(region => local.get(region.id)!.height)) + 720);
-  const panels = regions.map(region => {
-    const x = columnWidths.slice(0, columns.indexOf(region.bounds[0])).reduce((sum, width) => sum + width, 0);
-    const y = rowHeights.slice(0, rows.indexOf(region.bounds[1])).reduce((sum, height) => sum + height, 0);
-    const tile = local.get(region.id)!;
-    for (const [id, point] of Object.entries(tile.points)) layout.assets[id] = [x + point[0], y + point[1]];
-    return { id: region.id, label: region.label.replaceAll('\n', ' · '), x, y, width: tile.width, height: tile.height };
+  traverse(true); traverse(false);
+  for (const asset of assets) if (!visited.has(asset.id) && !earthParents.has(asset.id) && adjacent.get(asset.id)!.length) {
+    roots.push(asset.id); visited.add(asset.id); traverse(false);
+  }
+  for (const asset of assets) children.get(asset.id)!.sort((a, b) => {
+    const pin = (id: string) => asset.terminals.indexOf(adjacent.get(asset.id)!.find(peer => peer.id === id)!.terminal);
+    return pin(a) - pin(b) || Number(isOpen(a)) - Number(isOpen(b));
   });
-  const mainBottom = rowHeights.reduce((sum, height) => sum + height, 0);
-  const mainWidth = columnWidths.reduce((sum, width) => sum + width, 0);
-  const references = assets.filter(asset => !layout.assets[asset.id]);
-  references.forEach((asset, index) => { layout.assets[asset.id] = [250 + index % 16 * 500, mainBottom + 200 + Math.floor(index / 16) * 360]; });
+  const widths = new Map<string, number>();
+  function measure(id: string): number { const width = Math.max(420, children.get(id)!.reduce((sum, child) => sum + measure(child), 0)); widths.set(id, width); return width; }
+  const layout: DiagramView['layout'] = { assets: {}, terminals: {}, rotations: {} };
+  function place(id: string, left: number, y: number) {
+    const kids = children.get(id)!; let cursor = left;
+    for (const child of kids) { place(child, cursor, y + 440); cursor += widths.get(child)!; }
+    layout.assets[id] = [kids.length ? (layout.assets[kids[0]][0] + layout.assets[kids.at(-1)!][0]) / 2 : left + 210, y];
+  }
+  let cursor = 100;
+  for (const root of roots) { measure(root); place(root, cursor, 120); cursor += widths.get(root)! + 840; }
+  for (const [id, owner] of earthParents) {
+    const [x, y] = layout.assets[owner];
+    const ownerLink = adjacent.get(owner)!.find(peer => peer.id === id)!;
+    const incoming = adjacent.get(owner)!.find(peer => peer.link === parentLink.get(owner))?.terminal;
+    const siblings = [...earthParents].filter(([, main]) => main === owner).map(([earth]) => earth);
+    const index = siblings.indexOf(id);
+    layout.assets[id] = [x + 70, y + (ownerLink.terminal === incoming ? -1 : 1) * (120 + index * 140)];
+    visited.add(id); treeEdgeIds.add(adjacent.get(id)![0].link);
+  }
+  const mainBottom = Math.max(...Object.values(layout.assets).map(p => p[1])) + 600;
+  const references = assets.filter(asset => !visited.has(asset.id));
+  references.forEach((asset, i) => { layout.assets[asset.id] = [310 + i % 16 * 420, mainBottom + Math.floor(i / 16) * 320]; });
   for (const asset of assets) {
     const [x, y] = layout.assets[asset.id];
     if (asset.kind === 'bus') layout.rotations![asset.id] = 90;
-    const above: string[] = []; const below: string[] = [];
-    for (const terminal of asset.terminals) ((terminalLinks.get(terminal) ?? []).some(id => layout.assets[id][1] < y) ? above : below).push(terminal);
-    if (asset.terminals.length === 2 && (!above.length || !below.length)) { above.splice(0, above.length, asset.terminals[0]); below.splice(0, below.length, asset.terminals[1]); }
-    for (const [side, terminals] of [[-1, above], [1, below]] as const) terminals.forEach((terminal, index) => {
-      layout.terminals[terminal] = asset.kind === 'bus' ? [x, y] : [x + (index - (terminals.length - 1) / 2) * 70, y + side * 54];
-    });
+    if (earthParents.has(asset.id)) {
+      const input = adjacent.get(asset.id)![0].terminal;
+      asset.terminals.forEach(t => { layout.terminals[t] = [x + (t === input ? -40 : 40), y]; }); continue;
+    }
+    const incoming = adjacent.get(asset.id)!.find(peer => peer.link === parentLink.get(asset.id))?.terminal;
+    const lower = asset.terminals.filter(t => t !== incoming);
+    for (const terminal of asset.terminals) {
+      layout.terminals[terminal] = asset.kind === 'bus' ? [x, y] : terminal === incoming ? [x, y - 54] : [x + (lower.indexOf(terminal) - (lower.length - 1) / 2) * 70, y + 54];
+    }
   }
   const labels = new Map<string, AssetLabel>();
   for (const asset of assets) {
-    const lines = labelLines(asset.label); const [x, y] = layout.assets[asset.id]; const state = !!(asset.positions.length || getRemovableMechanism(asset));
-    labels.set(asset.id, { x: x + 110, y: y - 35, width: Math.max(state ? 150 : 0, ...lines.map(line => line.length * 9 + 14)), height: lines.length * 21 + 10 + (state ? 20 : 0), lines });
+    const lines = labelLines(currentAssetLabel(model, asset)); const [x, y] = layout.assets[asset.id]; const state = !!(asset.positions.length || getRemovableMechanism(asset));
+    const earthOwner = earthParents.get(asset.id);
+    labels.set(asset.id, { x: x + (earthOwner ? 40 : 110), y: y + (earthOwner && y > layout.assets[earthOwner][1] ? 5 : -35), width: Math.max(state ? 150 : 0, ...lines.map(line => line.length * 9 + 14)), height: lines.length * 21 + 10 + (state ? 20 : 0), lines });
   }
-  function endpoint(terminal: string, channel: number): Point[] {
-    const point = layout.terminals[terminal]; const asset = byId.get(owners.get(terminal)!)!; const [x, y] = layout.assets[asset.id];
-    if ((point[1] - y) * (channel - y) >= 0) return [point, [point[0], channel]];
-    const offset = asset.terminals.indexOf(terminal) * 10;
-    const stub = point[1] + Math.sign(point[1] - y) * (10 + offset);
-    return [point, [point[0], stub], [x - 105 - offset, stub], [x - 105 - offset, channel]];
-  }
-  const routes = new Map<string, Point[]>();
-  const crossLinks = model.connections.filter(link => !treeEdges.has(link.id));
-  for (const link of model.connections) {
-    const a = owners.get(link.from)!; const b = owners.get(link.to)!; const from = layout.terminals[link.from]; const to = layout.terminals[link.to];
-    if (treeEdges.has(link.id)) {
-      const upper = layout.assets[a][1] < layout.assets[b][1] ? a : b;
-      const terminal = upper === a ? link.from : link.to;
-      const channel = layout.assets[upper][1] + 175 + byId.get(upper)!.terminals.indexOf(terminal) * 8;
-      routes.set(link.id, orthogonalPoints([...endpoint(link.from, channel), ...endpoint(link.to, channel).reverse()]));
-    } else {
-      const index = crossLinks.indexOf(link); const gutter = mainWidth + 120 + index * 24;
-      const channel = (id: string, point: Point) => layout.assets[id][1] + (point[1] < layout.assets[id][1] ? -1 : 1) * (125 + index * 35 / Math.max(1, crossLinks.length));
-      const start = channel(a, from); const end = channel(b, to);
-      routes.set(link.id, orthogonalPoints([...endpoint(link.from, start), [gutter, start], [gutter, end], ...endpoint(link.to, end).reverse()]));
+  const routes = new Map<string, Point[]>(); const occupied: Segment[] = [];
+  const remember = (id: string, points: Point[]) => {
+    routes.set(id, points); const link = model.connections.find(link => link.id === id)!;
+    points.slice(1).forEach((p, i) => occupied.push({ from: points[i], to: p, terminals: [link.from, link.to] }));
+  };
+  for (const link of model.connections.filter(link => treeEdgeIds.has(link.id))) {
+    const from = layout.terminals[link.from]; const to = layout.terminals[link.to]; const a = owners.get(link.from)!; const b = owners.get(link.to)!;
+    if (earthParents.has(a) || earthParents.has(b)) {
+      const earth = earthParents.has(a) ? a : b;
+      const start = earth === a ? to : from; const end = earth === a ? from : to;
+      const points = orthogonalPoints([start, [start[0], layout.assets[earth][1]], end]);
+      remember(link.id, earth === a ? points.reverse() : points); continue;
     }
+    const upper = parent.get(b) === a ? a : b;
+    const terminal = upper === a ? link.from : link.to;
+    const channel = layout.assets[upper][1] + 110 + byId.get(upper)!.terminals.indexOf(terminal) * 8;
+    const incoming = adjacent.get(upper)!.find(peer => peer.link === parentLink.get(upper))?.terminal;
+    if (terminal === incoming && byId.get(upper)!.kind !== 'bus') {
+      // A same-terminal continuation must leave beside the symbol. Passing down
+      // its centre could visually join a different, independent terminal.
+      const start = upper === a ? from : to; const end = upper === a ? to : from;
+      const points = orthogonalPoints([start, [start[0] - 90, start[1]], [start[0] - 90, channel], [end[0], channel], end]);
+      remember(link.id, upper === a ? points : points.reverse());
+    } else remember(link.id, orthogonalPoints([from, [from[0], channel], [to[0], channel], to]));
+  }
+  const symbols = assets.map(asset => { const [x, y] = layout.assets[asset.id]; return { id: asset.id, x: x - 38, y: y - 38, width: 76, height: 76 }; });
+  for (const link of model.connections.filter(link => !treeEdgeIds.has(link.id))) {
+    const from = layout.terminals[link.from]; const to = layout.terminals[link.to]; const own = new Set([owners.get(link.from), owners.get(link.to)]);
+    const left = Math.min(from[0], to[0]) - 400; const right = Math.max(from[0], to[0]) + 400;
+    const top = Math.min(from[1], to[1]) - 400; const bottom = Math.max(from[1], to[1]) + 400;
+    const obstacles = [...symbols.filter(box => !own.has(box.id)), ...labels.values()].filter(box => box.x + box.width >= left && box.x <= right && box.y + box.height >= top && box.y <= bottom).map(box => ({ x: box.x - 10, y: box.y - 10, width: box.width + 20, height: box.height + 20 }));
+    const others = occupied.filter(s => !s.terminals.includes(link.from) && !s.terminals.includes(link.to) && Math.max(s.from[0], s.to[0]) >= left && Math.min(s.from[0], s.to[0]) <= right && Math.max(s.from[1], s.to[1]) >= top && Math.min(s.from[1], s.to[1]) <= bottom);
+    const candidates = [orthogonalPoints([from, to])];
+    for (const x of [left + 100, right - 100, from[0] - 100, from[0] + 100, to[0] - 100, to[0] + 100]) candidates.push(orthogonalPoints([from, [x, from[1]], [x, to[1]], to]));
+    for (const y of [top + 100, bottom - 100, (from[1] + to[1]) / 2]) candidates.push(orthogonalPoints([from, [from[0], y], [to[0], y], to]));
+    const score = (points: Point[]) => points.slice(1).reduce((cost, p, i) => cost + Math.abs(p[0] - points[i][0]) + Math.abs(p[1] - points[i][1]) + obstacles.filter(box => cuts(points[i], p, box)).length * 1e8 + others.reduce((sum, s) => sum + shared(points[i], p, s) * 200, 0), 0);
+    let route = candidates.reduce((best, route) => score(route) < score(best) ? route : best);
+    if (score(route) >= 1e8 || route.some((p, i) => i && others.some(s => shared(route[i - 1], p, s) > 0))) { const alternative = clearRoute(from, to, obstacles, others); if (alternative && score(alternative) < score(route)) route = alternative; }
+    remember(link.id, route);
   }
   const points = [...Object.values(layout.assets), ...[...routes.values()].flat()];
-  const minX = Math.min(...points.map(point => point[0])) - 100; const minY = Math.min(...points.map(point => point[1])) - 150;
-  const maxX = Math.max(mainWidth, ...points.map(point => point[0]), ...[...labels.values()].map(label => label.x + label.width)) + 100;
-  const maxY = Math.max(...points.map(point => point[1])) + 200;
-  const view: DiagramView = { id: 'continuous-network', label: 'Whole network · continuous diagram', assetIds: assets.map(asset => asset.id), layout, bounds: [minX, minY, maxX - minX, maxY - minY] };
-  const referenceLabel = references.every(asset => !adjacent.get(asset.id)!.length) ? 'References without a model connection' : 'Ungrouped model assets and references';
-  return { view, assets, connections: model.connections, owners, labels, routes, panels, referenceTop: references.length ? mainBottom : undefined, referenceLabel };
+  const minX = Math.min(...points.map(p => p[0])) - 100; const minY = Math.min(...points.map(p => p[1])) - 150;
+  const maxX = Math.max(...points.map(p => p[0]), ...[...labels.values()].map(label => label.x + label.width)) + 100;
+  const maxY = Math.max(...points.map(p => p[1]), ...[...labels.values()].map(label => label.y + label.height)) + 150;
+  const view: DiagramView = { id: 'continuous-network', label: 'Whole network · downward supply tree', assetIds: assets.map(asset => asset.id), layout, bounds: [minX, minY, maxX - minX, maxY - minY] };
+  return { view, assets, connections: model.connections, owners, labels, routes, panels: [] as { id: string; label: string; x: number; y: number; width: number; height: number }[], referenceTop: references.length ? mainBottom : undefined, referenceLabel: 'Drawing references without network connections', referenceIds: references.map(asset => asset.id), treeEdgeIds };
 }

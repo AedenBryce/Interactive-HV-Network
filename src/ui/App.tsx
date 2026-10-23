@@ -15,6 +15,7 @@ import { ScenarioControls } from './ScenarioControls';
 import { contactPosition, describeDeviceState, getRemovableMechanism, isIndependentState } from '../session/mechanisms';
 import type { IndependentCommand } from '../session/mechanisms';
 import { ModelReviewStatus } from './ModelReviewStatus';
+import { currentAssetLabel } from './review-updates';
 
 const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', contactor: 'Contactor', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 
@@ -117,7 +118,7 @@ export function App() {
         {differentModel && <button className="current-model-button" onClick={() => selectModel(defaultModel.id)}>Open current whole network</button>}
         <ScenarioControls snapshot={snapshot} onSave={() => session.saveScenario()} onLoad={loadScenario} onError={setMessage} onReturn={() => selectModel(snapshot.currentModel.id)} />
         <nav className="asset-list" aria-label="Assets">{snapshot.model.assets.map(item => <button key={item.id} className={selectedId === item.id ? 'asset-row selected' : 'asset-row'} aria-label={`Select ${item.label}`} aria-pressed={selectedId === item.id} onClick={() => selectAsset(item.id)}>
-          <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={contactPosition(snapshot.devices[item.id]) === 'open'} unknown={(item.positions.length > 0 || !!getRemovableMechanism(item)) && contactPosition(snapshot.devices[item.id]) === null} /></svg><span>{item.label}{getRemovableMechanism(item) && <small style={{ display: 'block' }}>{describeDeviceState(snapshot.devices[item.id])}</small>}</span>
+          <svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={item.kind} open={contactPosition(snapshot.devices[item.id]) === 'open'} unknown={(item.positions.length > 0 || !!getRemovableMechanism(item)) && contactPosition(snapshot.devices[item.id]) === null} /></svg><span>{currentAssetLabel(snapshot.model, item)}{getRemovableMechanism(item) && <small style={{ display: 'block' }}>{describeDeviceState(snapshot.devices[item.id])}</small>}</span>
         </button>)}</nav>
       </aside>
 
@@ -126,7 +127,7 @@ export function App() {
       {detailsCollapsed && <div className="inspector-rail"><button aria-label="Show asset details" aria-controls="asset-details" aria-expanded={false} onClick={() => setDetailsCollapsed(false)}>‹</button></div>}
       <aside ref={inspector} id="asset-details" className="inspector" aria-label="Asset details" hidden={detailsCollapsed}>
         <div className="inspector-header"><h2>Asset details</h2><button aria-label="Minimise asset details" aria-controls="asset-details" aria-expanded={true} onClick={() => setDetailsCollapsed(true)}>›</button></div>
-        <div className="asset-heading"><svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={asset.kind} open={contactPosition(snapshot.devices[asset.id]) === 'open'} unknown={(asset.positions.length > 0 || !!mechanism) && contactPosition(snapshot.devices[asset.id]) === null} /></svg><div><h3>{asset.label}</h3><p>{kindLabels[asset.kind]}</p></div></div>
+        <div className="asset-heading"><svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={asset.kind} open={contactPosition(snapshot.devices[asset.id]) === 'open'} unknown={(asset.positions.length > 0 || !!mechanism) && contactPosition(snapshot.devices[asset.id]) === null} /></svg><div><h3>{currentAssetLabel(snapshot.model, asset)}</h3><p>{kindLabels[asset.kind]}</p></div></div>
         <dl className="identity-rows"><div><dt>Identity</dt><dd>{asset.id === 'cb-01' ? 'CB-01' : asset.id}</dd></div><div><dt>Current state</dt><dd>{hasState ? stateLabel(snapshot.devices[asset.id]) : 'No position modelled'}</dd></div>{hasState && <div><dt>Starting state</dt><dd>{stateLabel(startingState)}</dd></div>}<div><dt>Source connectivity</dt><dd>{connectivity.sourceStatus === 'unconfirmed' ? 'Unconfirmed' : connectivity.sourceStatus === 'connected' ? 'Connected' : 'No source connection'}</dd></div></dl>
         {hasState && <p className="state-baseline-note">{changedState ? 'Changed from starting state.' : 'At starting state.'} Reset network restores the starting configuration.</p>}
         {!snapshot.model.synthetic && <ModelReviewStatus model={snapshot.model} />}

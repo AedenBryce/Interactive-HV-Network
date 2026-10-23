@@ -52,7 +52,7 @@ function crossing(a: Point, b: Point, segment: Segment) {
   return false;
 }
 
-function clearRoute(from: Point, to: Point, obstacles: Box[], occupied: Segment[]): Point[] | undefined {
+export function clearRoute(from: Point, to: Point, obstacles: Box[], occupied: Segment[]): Point[] | undefined {
   const xs = [...new Set([from[0], to[0], ...obstacles.flatMap(box => [box.x, box.x + box.width]), ...occupied.flatMap(segment => [segment.from[0] - 16, segment.from[0] + 16, segment.to[0] - 16, segment.to[0] + 16])])].sort((a, b) => a - b);
   const ys = [...new Set([from[1], to[1], ...obstacles.flatMap(box => [box.y, box.y + box.height]), ...occupied.flatMap(segment => [segment.from[1] - 16, segment.from[1] + 16, segment.to[1] - 16, segment.to[1] + 16])])].sort((a, b) => a - b);
   const id = (p: Point) => xs.indexOf(p[0]) * ys.length + ys.indexOf(p[1]);
