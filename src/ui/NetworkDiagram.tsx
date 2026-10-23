@@ -1,11 +1,11 @@
-import { useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { KeyboardEvent, PointerEvent } from 'react';
 import type { SessionSnapshot } from '../session/session';
 import type { SourcePath } from '../session/connectivity';
 import type { DiagramPresentation } from './diagram';
-import { Symbol } from './Symbol';
-import { RelationshipsSymbol } from './RelationshipsSymbol';
-import { getRemovableMechanism } from '../session/mechanisms';
+import { EquipmentSymbol } from './EquipmentSymbol';
+import { isIndependentState } from '../session/mechanisms';
+import { diagramGeometry } from './diagram-geometry';
 import './navigation.css';
 
 type Props = { snapshot: SessionSnapshot; selectedId: string; tracedPath?: SourcePath; presentation: DiagramPresentation; onSelectAsset: (id: string) => void };
@@ -15,23 +15,46 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
   const [viewId, setViewId] = useState(presentation.overviewId);
   const [viewSearch, setViewSearch] = useState('');
   const matchingViews = presentation.views.filter(item => item.label.toLowerCase().includes(viewSearch.trim().toLowerCase()));
-  const view = presentation.views.find(item => item.id === viewId)!;
+  const sourceView = presentation.views.find(item => item.id === viewId)!;
+  // Session packages are immutable by ID/version; switching changes no coordinates.
+  const geometry = useMemo(() => diagramGeometry(snapshot.model, sourceView), [snapshot.model.id, snapshot.model.version, sourceView.id]);
+  const { view, assets, connections } = geometry;
   const [cameraOverride, setCamera] = useState<Camera | null>(null);
   const camera = cameraOverride ?? { x: view.bounds[0], y: view.bounds[1], width: view.bounds[2], height: view.bounds[3] };
   const drag = useRef<{ pointerId: number; x: number; y: number; camera: Camera } | null>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
   const visible = new Set(view.assetIds);
-  const assets = snapshot.model.assets.filter(asset => visible.has(asset.id));
-  const terminalOwners = new Map(snapshot.model.assets.flatMap(asset => asset.terminals.map(terminal => [terminal, asset.id] as const)));
-  const connections = snapshot.model.connections.filter(connection => visible.has(terminalOwners.get(connection.from)!) && visible.has(terminalOwners.get(connection.to)!) || view.boundaries?.some(boundary => boundary.connectionId === connection.id));
   const removedEdges = new Set(snapshot.impact.flatMap(item => item.before.routeEdgeIds.filter(id => !item.after.routeEdgeIds.includes(id))));
   const changedAssets = new Set(snapshot.impact.map(item => item.assetId));
   const labels = new Map(snapshot.model.assets.map(asset => [asset.id, asset.label]));
   const selectedVisible = visible.has(selectedId);
   const zoomPercent = Math.round(view.bounds[2] / camera.width * 100);
 
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const wheel = (event: WheelEvent) => {
+      event.preventDefault();
+      const rect = svg.getBoundingClientRect();
+      const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? rect.height : 1);
+      setCamera(previous => {
+        const base = previous ?? { x: view.bounds[0], y: view.bounds[1], width: view.bounds[2], height: view.bounds[3] };
+        const scale = Math.min(rect.width / base.width, rect.height / base.height);
+        const ax = Math.max(0, Math.min(1, (event.clientX - rect.left - (rect.width - base.width * scale) / 2) / (base.width * scale)));
+        const ay = Math.max(0, Math.min(1, (event.clientY - rect.top - (rect.height - base.height * scale) / 2) / (base.height * scale)));
+        const width = Math.max(view.bounds[2] / 16, Math.min(view.bounds[2] * 4, base.width * Math.exp(Math.max(-240, Math.min(240, delta)) * .002)));
+        const height = width * view.bounds[3] / view.bounds[2];
+        return { x: base.x + (base.width - width) * ax, y: base.y + (base.height - height) * ay, width, height };
+      });
+    };
+    // Wheel over the map zooms instead of scrolling the page; cancellation requires a non-passive listener.
+    svg.addEventListener('wheel', wheel, { passive: false });
+    return () => svg.removeEventListener('wheel', wheel);
+  }, [view.bounds]);
+
   function navigate(id: string) { setViewId(id); setCamera(null); }
   function zoom(factor: number) {
-    const width = Math.max(view.bounds[2] / 4, Math.min(view.bounds[2] * 4, camera.width * factor));
+    const width = Math.max(view.bounds[2] / 16, Math.min(view.bounds[2] * 4, camera.width * factor));
     const height = width * view.bounds[3] / view.bounds[2];
     setCamera({ x: camera.x + (camera.width - width) / 2, y: camera.y + (camera.height - height) / 2, width, height });
   }
@@ -60,13 +83,13 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
     {presentation.views.length > 12 && <div className="view-search"><label>Find view<input aria-label="Find network view" value={viewSearch} onChange={event => setViewSearch(event.target.value)} placeholder="Area or view name" /></label>{viewSearch && <button onClick={() => setViewSearch('')}>Clear view search</button>}<span>{matchingViews.length} of {presentation.views.length} views</span></div>}
     <nav className="view-navigation" aria-label="Network views">{matchingViews.map(item => <button key={item.id} aria-current={item.id === viewId ? 'page' : undefined} onClick={() => navigate(item.id)}>{item.label}</button>)}{!matchingViews.length && <p>No matching views. Clear the search to see all views.</p>}</nav>
     <div className="diagram-toolbar" aria-label="Diagram navigation">
-      <div className="zoom-controls"><button aria-label="Zoom out" onClick={() => zoom(1.25)} disabled={zoomPercent <= 25}>−</button><output aria-label="Diagram zoom">{zoomPercent}%</output><button aria-label="Zoom in" onClick={() => zoom(.8)} disabled={zoomPercent >= 400}>+</button><button onClick={() => setCamera(null)}>Fit view</button></div>
+      <div className="zoom-controls"><button aria-label="Zoom out" onClick={() => zoom(1.25)} disabled={zoomPercent <= 25}>−</button><output aria-label="Diagram zoom">{zoomPercent}%</output><button aria-label="Zoom in" onClick={() => zoom(.8)} disabled={zoomPercent >= 1600}>+</button><button onClick={() => setCamera(null)}>Fit view</button></div>
       <div className="pan-controls" aria-label="Pan diagram"><button aria-label="Pan left" onClick={() => pan(-.1, 0)}>←</button><button aria-label="Pan up" onClick={() => pan(0, -.1)}>↑</button><button aria-label="Pan down" onClick={() => pan(0, .1)}>↓</button><button aria-label="Pan right" onClick={() => pan(.1, 0)}>→</button></div>
     </div>
-    <p className="navigation-help">Drag the canvas to pan. Focus the diagram and use arrow keys, +/− or Home to fit.</p>
+    <p className="navigation-help">Scroll over the diagram to zoom. Drag to pan. Keyboard: arrow keys, +/−, Home to fit.</p>
     {!selectedVisible && <div className="outside-selection"><span>{labels.get(selectedId)} is outside this view. Its inspection and paths remain active.</span><button onClick={() => navigate(presentation.views.find(item => item.id !== presentation.overviewId && item.assetIds.includes(selectedId))?.id ?? presentation.overviewId)}>Show selected asset</button></div>}
     <div className="diagram-surface">
-      <svg className="network-diagram" viewBox={`${camera.x} ${camera.y} ${camera.width} ${camera.height}`} aria-label={`${view.label} single-line diagram`} tabIndex={0} onKeyDown={keyboard} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerCancel={() => { drag.current = null; }}>
+      <svg ref={svgRef} className="network-diagram" viewBox={`${camera.x} ${camera.y} ${camera.width} ${camera.height}`} aria-label={`${view.label} single-line diagram`} tabIndex={0} onKeyDown={keyboard} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerCancel={() => { drag.current = null; }}>
         <title>{view.label} single-line diagram</title>
         {view.regions?.map(region => {
           const [x, y, width, height] = region.bounds;
@@ -78,32 +101,37 @@ export function NetworkDiagram({ snapshot, selectedId, tracedPath, presentation,
           </g>;
         })}
         {connections.map(connection => {
-          const [x1, y1] = view.layout.terminals[connection.from];
-          const [x2, y2] = view.layout.terminals[connection.to];
-          const points = [[x1, y1], ...(view.layout.bends?.[connection.id] ?? []), [x2, y2]].map(point => point.join(',')).join(' ');
+          const points = geometry.routes.get(connection.id)!.map(point => point.join(',')).join(' ');
           const conflict = snapshot.conflicts.some(item => item.connectionIds.includes(connection.id));
           const result = snapshot.connectionResults[connection.id];
-          return <g key={connection.id}><title>{connection.id}{result.unconfirmed ? ' — Unconfirmed information' : ''}</title>{removedEdges.has(`connection:${connection.id}`) && <polyline points={points} className="wire change-outline" />}{result.unconfirmed && <polyline points={points} className="wire uncertainty-outline" />}<polyline points={points} className={`wire ${result.sourceStatus === 'connected' ? 'connected' : 'disconnected'} ${result.earthStatus === 'connected' ? 'earthed' : ''} ${result.sourceStatus === 'unconfirmed' && result.earthStatus !== 'connected' ? 'unconfirmed-source' : ''} ${conflict ? 'conflict' : ''} ${tracedPath?.connectionIds.includes(connection.id) ? 'traced' : ''}`} /></g>;
+          return <g key={connection.id} data-connection-id={connection.id} data-from={connection.from} data-to={connection.to}><title>{connection.id}{result.unconfirmed ? ' — Unconfirmed information' : ''}</title>{removedEdges.has(`connection:${connection.id}`) && <polyline points={points} className="wire change-outline" />}{result.unconfirmed && <polyline points={points} className="wire uncertainty-outline" />}<polyline points={points} className={`wire ${result.sourceStatus === 'connected' ? 'connected' : 'disconnected'} ${result.earthStatus === 'connected' ? 'earthed' : ''} ${result.sourceStatus === 'unconfirmed' && result.earthStatus !== 'connected' ? 'unconfirmed-source' : ''} ${conflict ? 'conflict' : ''} ${tracedPath?.connectionIds.includes(connection.id) ? 'traced' : ''}`} /></g>;
         })}
         {assets.map(item => {
           const [x, y] = view.layout.assets[item.id];
           return <g key={item.id} transform={`translate(${x},${y})`} role="button" tabIndex={0} data-selectable="true" aria-label={`Select ${item.label} on diagram`} aria-pressed={item.id === selectedId} className="diagram-asset" onClick={() => onSelectAsset(item.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id); } }}>
             {changedAssets.has(item.id) && <rect x="-48" y="-48" width="96" height="96" rx="8" className="impact-outline" />}
-            <rect x="-45" y="-45" width="90" height="90" rx="6" className={item.id === selectedId ? 'selection active' : 'selection'} />
-            {getRemovableMechanism(item) || item.sourcePairs || item.sourceArcs?.length || item.earthPairs || item.positions.some(position => position.sourcePairs || position.earthPairs || position.supportScope)
-              ? <RelationshipsSymbol asset={item} positionId={snapshot.devices[item.id]} layout={view.layout} model={snapshot.model} />
-              : <g transform={`rotate(${view.layout.rotations?.[item.id] ?? 0})`}><Symbol kind={item.kind} rotation={view.layout.rotations?.[item.id] ?? 0} open={snapshot.devices[item.id] === 'open'} unknown={item.positions.length > 0 && snapshot.devices[item.id] === null} /></g>}
-            <text x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} y={view.layout.labelOffsets?.[item.id]?.[1] ?? 65} textAnchor="middle">{item.label.split(/ · |\n/).map((line, index) => <tspan key={index} x={view.layout.labelOffsets?.[item.id]?.[0] ?? 0} dy={index === 0 ? 0 : 20}>{line}</tspan>)}</text>
+            <title>{item.label}</title>
+            <rect x="-38" y="-38" width="76" height="76" rx="6" className={item.id === selectedId ? 'selection active' : 'selection'} />
+            <EquipmentSymbol asset={item} state={snapshot.devices[item.id]} layout={view.layout} />
           </g>;
         })}
-        {(snapshot.model.boundaries ?? []).filter(boundary => visible.has(terminalOwners.get(boundary.terminal)!) && (boundary.sourceCoverage === 'unconfirmed' || boundary.earthCoverage === 'unconfirmed')).map(boundary => {
-          const [x, y] = view.layout.terminals[boundary.terminal];
-          return <g key={`coverage:${boundary.id}`} transform={`translate(${x},${y})`} role="button" tabIndex={0} data-selectable="true" className="unconfirmed-boundary" aria-label={`Inspect unconfirmed boundary ${boundary.label}`} onClick={() => onSelectAsset(terminalOwners.get(boundary.terminal)!)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(terminalOwners.get(boundary.terminal)!); } }}><title>Unconfirmed off-page coverage: {boundary.label}</title><path d="M0 0 H60" /><circle cx="60" r="12" /><text x="60" y="5" textAnchor="middle">?</text></g>;
+        {assets.map(item => {
+          const label = geometry.labels.get(item.id)!;
+          const state = snapshot.devices[item.id];
+          return <g key={`label:${item.id}`} className="asset-label" role="button" tabIndex={0} data-selectable="true" aria-label={`Inspect ${item.label} label`} onClick={() => onSelectAsset(item.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(item.id); } }}>
+            <title>{item.label}</title><rect x={label.x} y={label.y} width={label.width} height={label.height} rx="4" />
+            <text x={label.x + label.width / 2} y={label.y + 21} textAnchor="middle">{label.lines.map((line, index) => <tspan key={index} x={label.x + label.width / 2} dy={index ? 21 : 0}>{line}</tspan>)}</text>
+            {state !== undefined && <text x={label.x + label.width / 2} y={label.y + label.height - 6} textAnchor="middle" className="position-label">{isIndependentState(state) ? `${state.contact ?? '?'} · Rack ${state.racking ?? '?'}` : state ?? 'Unconfirmed'}</text>}
+          </g>;
+        })}
+        {assets.filter(asset => snapshot.model.boundaries?.some(boundary => asset.terminals.includes(boundary.terminal) && (boundary.sourceCoverage === 'unconfirmed' || boundary.earthCoverage === 'unconfirmed'))).map(asset => {
+          const [x, y] = view.layout.assets[asset.id];
+          return <g key={`coverage:${asset.id}`} transform={`translate(${x + 34},${y - 34})`} role="button" tabIndex={0} data-selectable="true" className="unconfirmed-boundary" aria-label={`Inspect unconfirmed coverage for ${asset.label}`} onClick={() => onSelectAsset(asset.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelectAsset(asset.id); } }}><title>Unconfirmed external source or earth coverage; inspect Asset details for exact boundaries.</title><circle r="10" /><text y="5" textAnchor="middle">?</text></g>;
         })}
         {view.boundaries?.map(boundary => <g key={boundary.connectionId} data-selectable="true" role="button" tabIndex={0} className="boundary-port" aria-label={`Follow ${boundary.connectionId} to ${labels.get(boundary.remoteAssetId)}`} transform={`translate(${boundary.position.join(',')})`} onClick={() => navigate(boundary.targetViewId)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); navigate(boundary.targetViewId); } }}><title>{boundary.connectionId} → {labels.get(boundary.remoteAssetId)}</title><circle r="12" /><text textAnchor="middle" y="5">↗</text></g>)}
       </svg>
     </div>
     {!!view.boundaries?.length && <section className="boundary-list" aria-label="Connections beyond this view"><h3>Connections beyond this view</h3>{view.boundaries.map(boundary => <button key={boundary.connectionId} onClick={() => navigate(boundary.targetViewId)}><strong>{boundary.connectionId}</strong><span>→ {labels.get(boundary.remoteAssetId)} · {presentation.views.find(item => item.id === boundary.targetViewId)?.label}</span></button>)}</section>}
-    <div className="legend" aria-label="Diagram legend"><span><i className="dot connected" />Source connected</span><span><i className="dot disconnected" />No source connection</span>{snapshot.model.earths?.length ? <span><i className="dot earth-dot" />Earth connected (dashed)</span> : null}{snapshot.model.assets.some(asset => asset.sourcePairs || asset.earthPairs || asset.sourceArcs?.length) && <span>Inside equipment: violet = declared source transfer; blue dashes = declared earth relationship</span>}{snapshot.model.assets.some(asset => asset.sourceArcs?.length) && <span>Arrowheads show declared source-transfer direction; amber dashes retain unconfirmed claims</span>}{Object.values(snapshot.connectionResults).some(result => result.unconfirmed) && <span><i className="dot unconfirmed-dot" />Unconfirmed (amber dashes)</span>}{snapshot.conflicts.length > 0 && <span><i className="dot conflict-dot" />Source-to-earth conflict</span>}{snapshot.impact.length > 0 && <span><i className="dot impact-dot" />Changed path or asset</span>}{tracedPath && <span><i className="dot trace-dot" />Selected supply path</span>}</div>
+    <div className="legend" aria-label="Diagram legend"><span><i className="dot connected" />Source connected</span><span><i className="dot disconnected" />No source connection</span>{snapshot.model.earths?.length ? <span><i className="dot earth-dot" />Earth connected</span> : null}{Object.values(snapshot.connectionResults).some(result => result.unconfirmed) && <span><i className="dot unconfirmed-dot" />Amber outline: Unconfirmed information</span>}{snapshot.model.assets.some(asset => asset.sourceArcs?.length) && <span>Winding transfer and earth relationships: inspect Asset details</span>}{snapshot.conflicts.length > 0 && <span><i className="dot conflict-dot" />Source-to-earth conflict</span>}{snapshot.impact.length > 0 && <span><i className="dot impact-dot" />Changed path or asset</span>}{tracedPath && <span><i className="dot trace-dot" />Selected supply path</span>}</div>
   </main>;
 }

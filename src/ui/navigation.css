@@ -26,7 +26,7 @@
 @media (max-width: 800px) { .interactive-diagram.diagram-panel { height: 640px; } .interactive-diagram .network-diagram { min-width: 0; } .outside-selection { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 800px) { .interactive-diagram .diagram-asset text { font-size: 28px; } }
 .relationship-source { stroke: #7d53b3; stroke-width: 5; }
-.relationship-earth { stroke: #4278a8; stroke-width: 3; stroke-dasharray: 5 4; }
+.relationship-earth { stroke: #4278a8; stroke-width: 3; }
 .relationship-terminal { fill: white; stroke: #38475b; stroke-width: 2; }
 .network-diagram text.position-label { font-size: 14px; fill: #536377; }
 .diagram-region { cursor: pointer; }

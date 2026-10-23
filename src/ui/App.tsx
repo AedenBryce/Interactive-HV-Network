@@ -24,6 +24,7 @@ export function App() {
   const [message, setMessage] = useState('');
   const [traceKey, setTraceKey] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [detailsCollapsed, setDetailsCollapsed] = useState(false);
   const pending = useRef(false);
   const inspector = useRef<HTMLElement>(null);
   const asset = snapshot.model.assets.find(asset => asset.id === selectedId)!;
@@ -97,7 +98,7 @@ export function App() {
 
   return <div className="app">
     <header className="app-header"><h1>HV Network</h1><span role="status" aria-live="polite">{busy ? 'Updating network…' : 'Local simulation'}</span></header>
-    <div className="workspace" inert={busy} aria-busy={busy}>
+    <div className={`workspace${detailsCollapsed ? ' details-collapsed' : ''}`} inert={busy} aria-busy={busy}>
       <aside className="network-rail" aria-label="Network model">
         <h2>Network model</h2>
         <p className="model-name">{snapshot.model.name}<br /><span className="version">{snapshot.model.version}</span></p>
@@ -112,8 +113,9 @@ export function App() {
 
       <NetworkDiagram key={`${snapshot.model.id}:${snapshot.model.version}`} snapshot={snapshot} selectedId={selectedId} tracedPath={tracedPath} presentation={snapshot.model.presentation ?? fallbackPresentation(snapshot.model)} onSelectAsset={selectAsset} />
 
-      <aside ref={inspector} className="inspector" aria-label="Asset details">
-        <h2>Asset details</h2>
+      {detailsCollapsed && <div className="inspector-rail"><button aria-label="Show asset details" aria-controls="asset-details" aria-expanded={false} onClick={() => setDetailsCollapsed(false)}>‹</button></div>}
+      <aside ref={inspector} id="asset-details" className="inspector" aria-label="Asset details" hidden={detailsCollapsed}>
+        <div className="inspector-header"><h2>Asset details</h2><button aria-label="Minimise asset details" aria-controls="asset-details" aria-expanded={true} onClick={() => setDetailsCollapsed(true)}>›</button></div>
         <div className="asset-heading"><svg viewBox="-38 -38 76 76" aria-hidden="true"><Symbol kind={asset.kind} open={contactPosition(snapshot.devices[asset.id]) === 'open'} unknown={(asset.positions.length > 0 || !!mechanism) && contactPosition(snapshot.devices[asset.id]) === null} /></svg><div><h3>{asset.label}</h3><p>{kindLabels[asset.kind]}</p></div></div>
         <dl className="identity-rows"><div><dt>Identity</dt><dd>{asset.id === 'cb-01' ? 'CB-01' : asset.id}</dd></div><div><dt>State</dt><dd>{mechanism ? describeDeviceState(snapshot.devices[asset.id]) : asset.positions.length && snapshot.devices[asset.id] === null ? 'Unconfirmed' : currentPosition?.label ?? 'No position modelled'}</dd></div><div><dt>Source connectivity</dt><dd>{connectivity.sourceStatus === 'unconfirmed' ? 'Unconfirmed' : connectivity.sourceStatus === 'connected' ? 'Connected' : 'No source connection'}</dd></div></dl>
         {asset.aliases?.length ? <p>Drawing aliases: {asset.aliases.join('; ')}</p> : null}
