@@ -2,9 +2,11 @@
 
 ## Current evidence
 
-Verified23October2026 against immutable `construction-2026-10-23.10`, implementation57a2ee9. The current whole-model review is pending; the owner's guided walkthrough choice and unconfirmed Section1 are recorded in [the walkthrough](v10-walkthrough.md).
+The current renderer is789cf16, applying the owner's visual feedback to the unchanged `.10` electrical package. The [visual change record](visual-review-2026-10-23.md) records checks and the updated `output/hv-network-v10-visual-review-v2.zip` (800,439bytes; SHA256 `86EC1178B8DF8909654E60C82B1B18203D583BDFF388233E519A7476D162DBDB`). That ZIP was extracted and its three-file `www` folder is now served at127.0.0.1:4174. Startup and whole-model selection pass. The records below retain the original `.10` renderer/archive evidence; they do not identify the newer visual JavaScript bundle. Model acceptance remains pending.
 
-The isolated `tmp/delivery-v10` folder contains only these production files, served locally at127.0.0.1:4174:
+Verified23October2026 against immutable `construction-2026-10-23.10`, implementation57a2ee9. The current whole-model review is pending; the owner's confirmed Section1 and preference for whole-tool visual review are recorded in [the walkthrough](v10-walkthrough.md).
+
+The original isolated `tmp/delivery-v10` folder contained these production files; the current preview instead serves the v2 visual archive described above:
 
 | File | Bytes | SHA256 |
 | --- | ---: | --- |
@@ -12,11 +14,11 @@ The isolated `tmp/delivery-v10` folder contains only these production files, ser
 | assets/index-D-Oih6Pk.css |13,126| D6A60C468404369FC4ABFE7A254A7DF0248B4F09E2291849CF346C0E142ABC05 |
 | assets/index-BdyJkv-T.js |1,763,805| A6195D789A859531CA6772F1243233F1CCF6829BE0D82447BE1A4D68EA8357E1 |
 
-Current browser evidence is recorded in [implementation progress](implementation-progress.md): startup without PDFs/repository sources, laboratory LV supply interruption and racking guards, Undo/Reset, actual matching `.10` restore, and original `.9` view-only restore with Undo/Reset disabled. Browser warning/error entries were empty. The live server handle was polled again after the walkthrough began: it remains running; its request log contains successful HTML,CSS,JavaScript requests and favicon404, with no PDF or model-file request.
+Original electrical-browser evidence is recorded in [implementation progress](implementation-progress.md): startup without PDFs/repository sources, laboratory LV supply interruption and racking guards, Undo/Reset, actual matching `.10` restore, and original `.9` view-only restore with Undo/Reset disabled. Browser warning/error entries were empty. The live server handle was polled again after the walkthrough began: it remains running; its request log contains successful HTML,CSS,JavaScript requests and favicon404, with no PDF or model-file request.
 
 The local review archive `output/hv-network-v10-review.zip` is797,511bytes, SHA256 `5520826AF4D6E6D5FB8902B22789D38005286E700B8156E45AE36B7EF70C00BA`. It contains the same three production files under `www/`, the actual self-contained `.10` baseline scenario, standalone startup/review instructions and a per-file SHA256 manifest. ZIP integrity and every manifest payload hash were checked. The scenario fingerprint remains `D9F5EE5DF69AC5A3FE8846AF215F4D1FEA651B9B2881F7655707490A3DE4436D` (8,382,404bytes). Python3.12.10 is installed on the preparation PC; instructions serve the extracted `www` folder on loopback port4186 with Python's standard HTTP server. Those packaged files match the isolated build already exercised; the extracted archive itself has not been launched separately.
 
-This is a **review copy**, not accepted final delivery. Full-suite verification, complete walkthrough, explicit immutable-version acceptance and final ticket closure remain pending. No model or acceptance status was rewritten while packaging. Narrow/mobile remains unverified.
+This is a **review copy**, not accepted final delivery. Full-suite verification, complete owner visual review, explicit immutable-version acceptance and final ticket closure remain pending. No model or acceptance status was rewritten while packaging. The updated renderer has been checked at the native narrow in-app viewport and1280×900; other browsers/viewports remain unverified.
 
 ## Historical .5 evidence
 
@@ -44,3 +46,7 @@ These observations confirm those tested runtime operations work from the three-f
 ## Remaining delivery gates
 
 Complete agreed network coverage and discrepancy review, select a final immutable model, obtain whole-model acceptance, and repeat delivery checks against that accepted package. The full test suite remains reserved for the end of the whole goal. Current focused verification does not close tickets25 or26.
+
+## Visual review v2 package
+
+The v2 archive passes ZIP integrity and every manifest payload hash. It extracts into tmp/visual-review-v2-extracted; its www folder has exactly index.html(466bytes),assets/index-Br_6-Djt.js(1,770,575bytes) and assets/index-CPijND68.css(13,883bytes). The final preview serves only that folder. Scenario bytes and fingerprint remain unchanged. The earlier original and first visual archives remain preserved. The visual record covers92views/1,512 external routes and internal equipment leads, panel collapse, wheel zoom, symbol state changes and console checks. No whole-model acceptance or full-suite result is implied.
