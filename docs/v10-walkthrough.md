@@ -6,7 +6,7 @@ Model: `site-whole-network` / `construction-2026-10-23.10`, implementation57a2ee
 
 ## Section1 — station feeds and SW411
 
-**Status: presented for owner review; no section acceptance recorded.** The table describes the current model, not a live-site state report. IDs/endpoints and baseline values were read from the saved immutable scenario. Browser inspection confirms Bus A's established TF11 path and Bus B's established TF12 path, with no accepted switching actions in session history.
+**Status: owner confirmed Section1 on23October2026.** Exact answer: **“Section 1 is correct; continue”** to the question covering the listed station/SW411 scope, connections and teaching baseline. Confirmation is limited to this section; whole-model acceptance remains pending. The table describes the current model, not a live-site state report. IDs/endpoints and baseline values were read from the saved immutable scenario. Browser inspection confirms Bus A's established TF11 path and Bus B's established TF12 path, with no accepted switching actions in session history.
 
 | Represented route | Selected baseline |
 | --- | --- |
@@ -26,4 +26,6 @@ All eight outgoing SW411 feeder breakers start Closed/Rack in; SW411 earth switc
 
 Provenance: the embedded model's `sw411:*:bus-link` and `sw411:tie-to-bus-*` connections; `starting.devices` and `starting.sources`; owner route/scope records linked by [model-owner-review](model-owner-review.md); [configuration decisions](../drawing-review/supplemental/owner-configuration-review.md), especially answers27/30–32/36–37. Original drawing references remain in the embedded evidence. Parent metadata, reverse/earth transfers and external coverage are not resolved by this walkthrough. Any correction requires a new immutable model version rather than rewriting `.10`.
 
-Next owner decision: identify corrections to this section, or confirm that this section represents the intended V1 scope, connections and starting configuration. Whole-network acceptance remains pending after any section confirmation; subsequent areas are listed in the review packet.
+## Review approach changed
+
+23October2026, owner stated exactly: **“Might be easier for me to visually look at the whole tool later and review it that way rather than going through 1 by 1”**. Stop section-by-section questions. Keep Section1 confirmed; do not infer acceptance of other sections or the whole model. No Section2 confirmation is requested. Leave the whole-network overview and portable review copy available for the owner's independent visual review, then collect corrections together or explicit whole-model acceptance of a named immutable version and baseline. The model and its retained unknowns are unchanged.
