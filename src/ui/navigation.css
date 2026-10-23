@@ -23,7 +23,7 @@
 .boundary-list h3 { font-size: 12px; color: #526279; margin-bottom: 5px; }
 .boundary-list button { display: block; padding: 4px 0; text-align: left; background: transparent; border: 0; color: #102640; font-size: 12px; }
 .boundary-list button span { display: block; color: #526279; }
-@media (max-width: 800px) { .interactive-diagram.diagram-panel { height: 640px; } .interactive-diagram .network-diagram { min-width: 0; } .outside-selection { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 800px) { .interactive-diagram.diagram-panel { height: 900px; } .interactive-diagram .network-diagram { min-width: 0; } .outside-selection { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 800px) { .interactive-diagram .diagram-asset text { font-size: 28px; } }
 .network-diagram text.position-label { font-size: 14px; fill: #536377; }
 .diagram-region { cursor: pointer; }
