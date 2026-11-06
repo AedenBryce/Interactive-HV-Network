@@ -1,0 +1,214 @@
+                      1                                               2                                                3                                                4                                                5                                                6                                                7                                                8                                                9                                               10                                               11                                               12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    B
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                         CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+
+                                                                                                                                                                    MC434A
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    C
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                TIER 01F-25                 TIER 05F-26                   TIER 02F-25
+
+
+
+
+
+
+                                                                                                                                                                                125A                         50A                          8A
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    E
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                       JB         JUNCTION BOX
+                                                                                                                                                                                                                                                  JB401C
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     F
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                              ISOL
+
+
+
+
+
+
+                                                                                                                                                                            DB                           AC                            DB
+
+
+
+                                                                                                                                                                         DB434                        AC4341                       JB401D
+                                                                                                                                                                    DISTRIBUTION                     AIR CON                 SLEWING DRIVE
+G                                                                                                                                                                        BOARD                     MCC SWRM                  JUNCTION BOX                                                                                                                                                                                                                                                                                                                                                            G
+
+                                                                                                                                                                                                                             JB401D BOGEY
+                                                                                                                                                                          50kW                          18kW                 WHEEL BRAKES
+                                                                                                                                                                                                                                     22kW
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           AS BUILT
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        DATE:    11  /09   /2009
+
+
+
+
+
+
+
+
+     This drawing and all the information                                                                                                                                                                                                                                      CLIENT                                                                                                                                                           DRAWN              J HARTMAN                  21/02/08
+
+           on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                                                                          PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                                                                          ENGINEER           R PERT                     21/02/08
+
+         It is confidential and is given                                                                                                                                                                                                                                                                                                                                                                                                        CHECKED            L BROWN                    21/02/08       CLOUD BREAK INFRASTRUCTURE
+H    to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           H
+      be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                                                                      LEAD ENG           L BROWN                    21/02/08       MC434A - CRUSHING AUXILIARIES
+          drawing nor any information
+     concerning it may be copied, exhibited                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                ENG MGR            N JAMESON                  21/02/08       SINGLE LINE DIAGRAM SHEET 4
+        or furnished to others. Nor may
+     photographs be taken of any article                                                                                                        1     11/09/09     ISSUED FOR AS BUILT                                                   YBC    BT    WL    CJT    DF    AC                                                                                             Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                                               Level 2, Hyatt Centre                                                          Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.           PROJ MGR           N JAMESON                  21/02/08
+       fabricated or assembled from this                                                                                                        0    21/02/08      ISSUED FOR CONSTRUCTION                                                JM    LB    AJ     LB    NJ    NJ                                                        Tel: +61 8 9266 0111                                                                                                                                                      PROJECT No:                 DRG No:                                            REV:
+        drawing without the consent of                                                                                                                                                                                                                                           87 Adelaide Terrace                               Fax: +61 8 9221 9483          Team 45 and WorleyParsons act on behalf of and as disclosed agent              SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD              REF No.                                        REFERENCES                                  REV      DATE                                  DESCRIPTION                                DRN   ENG    CHK    LE    EM    PM      East Perth  WA  6004  Australia                   ABN 52 103 096 340                                  of The Pilbara Infrastructure.                                              NTS                           A1            300/11098                       07110-EL-DR-2685                              1
+
+
+
+                      1                                               2                                                3                                                4                                                5                                                6                                                7                                                8                                                9                                               10                                               11                                               12

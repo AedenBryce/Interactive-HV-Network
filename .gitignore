@@ -1,0 +1,21 @@
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+drawings/
+output/
+tmp/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+
+# Local drawing-viewer installer/extraction and binary fallback archives
+.oda_extract/
+ODAViewer.msi
+docs/layout-versions/**/*.zip

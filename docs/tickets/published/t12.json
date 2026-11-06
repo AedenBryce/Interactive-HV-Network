@@ -1,0 +1,19 @@
+{
+  "id": "T12",
+  "number": 13,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/13",
+  "title": "Explore the power station and 33 kV supply interfaces",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

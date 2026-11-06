@@ -1,0 +1,197 @@
+PACKAGE SUBSTATION LV SWITCHBOARD
+SEWAGE
+TREATMENT
+PLANT
+SS712
+PACKAGE SUBSTATION
+SW712
+SW712-DB07-P-01
+CB SW712 IN
+1600A
+CB TF712 FD
+630A
+RM713-P-01
+RM712-P-01
+RM712
+SF RM712 IN01
+630A
+SF RM712 IN02
+630A
+22kV, 630A
+3
+TF 712
+22kV/415V (NO LOAD)
+1.0MVA
+400V (FULL LOAD), 2000A
+FROM DESAND SWITCHBOARD
+SW426
+07110-EL-DR-2352
+DB712L1-P-01
+DB712L2-P-01
+CB DB7128 FD
+32A
+CB DB7129 FD
+32A
+TO RING MAIN UNIT
+RMU713
+07110-EL-DR-2254
+DISTRIBUTION
+BOARD
+DB712L1
+LIGHTING
+DISTRIBUTION
+BOARD
+DB712L2
+LIGHTING
+APPROVED FOR CONSTRUCTION
+CB
+630A
+-
+DB7134 DB7133 DB7132 DB7131 FUTURETMDBSPARE
+CB
+400A
+CB
+160A
+CB 
+250A
+CB
+400A
+CB
+250A
+CB
+400A
+CTMDB-1
+CTMDB-2
+CDB-7134
+CDB-7133
+CDB-7132
+CDB-7131
+2 x 4C+E 120mm`
+1 x 4C+E 120mm`
+1 x 4C+E 120mm`
+1 x 4C+E 120mm`
+1 x 4C+E 120mm`
+C45 OFFICE CRIB SHEDS
+ROWS 1 & 2
+CRIB SHEDS
+ROWS 3 & 4
+CRIB SHEDS
+ROW 5 & OFFICES
+DB7121 DB7122
+TEAM 45
+ANNEX
+TEAM 45
+OFFICE
+CDB-7122
+1 x 4C+E 120mm`
+CDB-7121
+1 x 4C+E 120mm`
+CMCS-E
+CMCS-N
+CMCS-B
+CMCS-W
+CMCS-R
+120mm` EARTH
+4 x 1C 500mm`
+MCSDG1 (6207)
+CDG1-E
+CDG1-N
+CDG1-B
+CDG1-W
+CDG1-R
+120mm` EARTH
+4 x 1C 500mm`
+CDG7-E
+CDG7-N
+CDG7-B
+CDG7-W
+CDG7-R
+120mm` EARTH
+4 x 1C 500mm`
+DG7 (6206)
+SW712-P-01
+CABLES DISCONNECTED AND
+PULLED OUT OF MAIN DISTRIBUTION BOARD
+MAIN CHANGEOVER
+SWITCH
+CLOUD BREAK INFRASTRUCTURE
+SS712 - MINE SERVICES
+SINGLE LINE DIAGRAM
+07110-EL-DR-2253 3N/A
+W. LEONG 2/11/06
+R. COX 2/11/06
+D. PALMER 2/11/06
+L. BRUNN 2/11/06
+J. BILESSURIS 3/11/06
+G. WIESER 3/11/06
+0 02/11/06 ISSUED FOR CONSTRUCTION WL RC DGP LB JB GW
+1 06/12/06 RE-ISSUED FOR CONSTRUCTION DGP LB AJ LB JB GW
+2 11/05/07 RE-ISSUED FOR CONSTRUCTION JZ RC AJ RC NJ GW
+3 22/02/08 RE-ISSUED FOR CONSTRUCTION JM LB AJ LB NJ NJ
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+07110-EL-DR-0026 ADMINISTRATION BUILDING SINGLE LINE DIAGRAM
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+22/02/2008 11:51:29 AM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2253\Rev_3\11098-07110-EL-DR-2253.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

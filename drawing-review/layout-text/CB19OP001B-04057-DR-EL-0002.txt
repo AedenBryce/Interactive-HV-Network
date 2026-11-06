@@ -1,0 +1,191 @@
+               11                                       22                                          33                                      44                                       55                                       66                                       77                                       88                                       99                                       1010                                     1111                                     1212
+
+
+
+
+
+                                                                                                                                                                        SUPPLY VIA
+                                                                                                                                                                        POLE 57 (NOTE 1)                         4
+                                                                                                                                                                        CB19OP001B-04057-DR-EL-0001
+
+
+
+
+AA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     AA
+
+                                                                                                                                                   RM418-RM406-P1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                           2
+                                             RM406 KIOSK                                                                                              70mm   3C
+                                                                                                                                                      XLPE SCN
+
+
+
+                                                                                                                                      3
+
+
+
+                                                                                                                                            RM406-
+                                                                                                                                            SW01
+                                                                                                                                            630A
+                                                                                                                                           3
+
+BB                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     BB
+                                                        22kV 630a 16kA FOR 3SEC
+
+
+
+
+                                                                                                                    RM406-CB03 STATUS AND REMOTE OPEN/CLOSE SIGNALS
+                                                                                                                                     CB19OP001B-04057-DR-EL-0215 AND 217
+
+                                                                                                        RM406-CB02 STATUS AND REMOTE OPEN/CLOSE SIGNALS
+                                                                                                                        CB19OP001B-04057-DR-EL-0215 AND 217                                                                                  3                                                                                                   3                                                                                                  3
+
+                                                                                            RM406-CB01 STATUS AND REMOTE OPEN/CLOSE SIGNALS
+                                                                                                            CB19OP001B-04057-DR-EL-0215 AND 217                                                                                                                                                                                                   RM406-                                                                                              RM406-CB03
+                                                                                                                                                                                                                                               RM406-
+                                                                               RM406-SW01 STATUS AND REMOTE OPEN/CLOSE SIGNALS                                                                                                                 CB01                                                                                               CB02                                                                                                630A
+                                                                                                CB19OP001B-04057-DR-EL-0215 AND 217
+                                                                                                                                                                                                                                               630A                                                                                               630A
+
+                                                                                                                                                                                                                                         3                                                                                                  3                                                                                                   3
+
+
+
+
+CC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     CC
+                                                                                                                                                                                                                                               RM406-                                                                                             RM406-                                                                                              RM406-SW04
+                                                                                                                                                                                                                                               SW02                                                                                               SW03                                                                                                630A
+                                                                                                                                                                                                                                               630A                                                                                               630A
+
+
+
+
+                                                                                                                                                                                                              SEL751A                                                                                            SEL751A                                                                                             SEL751A
+
+
+
+             TO RM406-PN01
+         REMOTE CONTROL PANEL                    RM406-PLC4060 PLC CABINET                                                           RM406 LV COMPARTMENT
+            REF. VENDOR DWG
+
+
+
+
+
+
+
+
+DD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     DD
+
+
+
+
+
+
+
+
+                                                      2               2          2        2         2          2
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                             HOPPER 008
+                                                                                                                                                                                                                                                                                                                                                                                                                                    CB17OP023C-04057-DR-EL-0001
+
+                                                                                                                                                                                                                                                                                                  TF406B
+                                                                                                                                                                                                                                    5.0MVA                                                                                                                                                                             4
+                                                                                                                                                                                                                                    22kV/720V/720V
+                                                                                                                                                                                                                                    ONAN
+                                                                                                                                                                                                                                    DYN11
+EE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     EE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                 24VDC SUPPLY TO RM406
+      48VDC SUPPLY FROM SR406-BTC01                                                                            CB19OP001B-04057-DR-EL-0218
+      CB19OP001B-04057-DR-EL-0218
+
+
+
+
+                                                                                                                                                                                                                                VSD                                                                                                          MCC
+FF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     FF
+                                                                                                                                                                                                                                                                                                                                                                                                                                               NOTE
+                                                                                                                                                                                              TF406A-JB01                   CV006-VS4061                                                                   TF406B-JB01                  CV006-MC406A
+                                                                                                                                                                                                                    CB19OP001B-04057-DR-EL-0232                                                                                 CB19OP023D-04057-DR-EL-0003
+                                                                                                                                                                                                                                                                                                                                                                                                        1.     HOPPER 007 PREVIOUSLY CONNECTED TO RM418-SW01
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           4
+
+
+                                                                                                              48VDC SUPPLIES TO RM406
+                                                                                                             CB19OP001B-04057-DR-EL-0218                                                                                                                                                                                                                                                                2.     DESIGN AND SHOP DRAWING NUMBER PREFIXES
+
+                                                                                                                                                                                                                                                                                                                                                                                                               WITH 'A' DENOTES CB17OP023A PREVIOUS PROJECT
+                                                                                                                                                                                                                                                                                                                                                                                                               NUMBER 'B' DENOTES CB19OP001B CURRENT
+                                                                                                                                                                                                                    TF406A-JB01-I1                                                  TF406B-JB01-I1                                                                                                             PROJECT NUMBER.
+
+
+                                                                  TF406A, TF406B SR406-FIP01 RMU TRIPS
+                                                                       FROM PLC4061 COMMS CABINET
+                                                                       CB19OP001B-04057-DR-EL-0245
+
+GG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     GG
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      Phone 1300 135 466
+                                                                                                                                                                                                                            TF406A/TF406B ALARMS AND TRIP RELAY SIGNALS FROM PLC4061 COMMS CABINET                                                                                                                                                    Email: info@emtek.com.au
+                                                                                                                                                                                                                                                 CB19OP001B-04057-DR-EL-0241 AND 242
+                                                                                                                                                                                                                                                                  AND                                                                                                                                                                                 Website: www.emtek.com.au
+                                                                                                                                                                                                                            24VDC FROM SR406-DB4062 24VDC DIST. CENTRE (LOCATED INSIDE PLC4061 COMMS                                                                                                                                                   ACN 602 820 968
+                                                                                                                                                                                                                                                                CABINET)
+                                                                                                                                                                                                                                                      CB19OP001B-04057-DR-EL-0250
+                                                                                                                                                                                                                                                                                                                                                                                                   VENDOR/DESIGNER DRG No.VENDOR/DESIGNER DRG No.                                             REV:REV:
+
+
+
+
+   B-04057-DR-EL-0250                SR406-DB4062 24VDC DISTRIBUTION CENTRE                                                                                                                                                                                                                                                                                               PROJECT NUMBERPROJECT NUMBER                         Fortescue Metals Group LtdFortescue Metals Group Ltd
+   B-04057-DR-EL-0242                SR406-PLC4061 DIGITAL INPUT MODULE 2 TERMINATION DIAGRAM
+   B-04057-DR-EL-0241                SR406-PLC4061 DIGITAL INPUT MODULE 1 TERMINATION DIAGRAM                                                                                                                                                                                                                                                                              CB19OP001B              CLOUDBREAK WESTERN CRUSHING
+
+
+HH B-04057-DR-EL-0232                CV006-VS4061 690V MULTI-DRIVE TERMINATION DIAGRAM                            4    28.01.25   AS FOUND 23.10.23                                                                    AP         CH         MP                                                                                                                                                    OVERLAND CONVEYOR CV006                                                                             HH
+   B-04057-DR-EL-0218                RM406-MP02 REMOTE I/O PANEL MARSHALLING TB TERMINATIONS                      3    24.11.20   AS BUILT                                                                             TC         JH         JH         TC        JH        JH                                                                                            This drawing must notThis drawing must notCV006 HEAD END RM406
+                                                                                                                                                                                                                                                                                                                                                                          be copied or reproducedbe copied or reproduced
+   B-04057-DR-EL-0217                RM406-MP02 REMOTE I/O PANEL D.O. MODULE 1 TERMINATIONS                       2    24.02.20   UPDATED WITH VENDOR INFO                                                             TC         JH         JH         TC        TZ        JH                                                                                                                                                                                                                SINGLE LINE DIAGRAMin any form or used forin any form or used for
+   B-04057-DR-EL-0215                RM406-MP02 REMOTE I/O PANEL D.I. MODULE 1 TERMINATIONS                       1    30.01.20   REISSUED FOR CONSTRUCTION                                                            TZ         JH         JH        TZ         JH        JH                                                                                            any purpose other thanany purpose other than
+                                                                                                                                                                                                                                                                                                                                                                        originally intended withoutoriginally intended without
+   B-04057-DR-EL-0003                MC406A MOTOR CONROL CENTRE SINGLE LINE                                       0    26.09.19   ISSUED FOR CONSTRUCTION                                                              TC         JH         JH         TC        TZ        JH                                                                                              written approval ofwritten approval ofSCALESCALEDRG No:DRG No:                                                    REV:REV:
+                                                                                                                                                                                                                                                                                                                                                                        Fortescue MetalsGroup LtdFortescue MetalsGroup Ltd
+   REF DRG No.REF DRG No.                                              TITLETITLE                                REVREV  DATEDATE                            DESCRIPTIONDESCRIPTION                                    DRNDRN     CHKCHK    SUPSUP     DESDES     DAPDAP    PAPPAP    FMGFMG                                                        NORTHNORTH                                      A1A1     NTS      CB19OP001B-04057-DR-EL-0002                                              4
+
+
+
+               11                                       22                                          33                                      44                                       55                                       66                                       77                                       88                                       99                                       1010                                     1111                                     1212

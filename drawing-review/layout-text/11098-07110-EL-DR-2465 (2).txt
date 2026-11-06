@@ -1,0 +1,155 @@
+                 1                                      2                                      3                                       4                                      5                                      6                                      7                                      8                                      9                                      10                                     11                                     12
+
+
+
+              FROM HV SWITCHBOARD                                                                                                                                                                                                                                                                                                                                      FROM HV SWITCHBOARD                   NOTES:
+                                                                                                                 FROM HV SWITCHBOARD                                TF423-C-01
+                         SW421                                                                                                          SW421                                                                                                                                                                                                                                     SW421
+                  07110-EL-DR-2351                                                                                        07110-EL-DR-2351                          TF423-P-01                                                                                                                                                                                             07110-EL-DR-2351                  1.    REFER TO SCHEMATIC DIAGRAM FOR
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                A
+                                                                                                                                                                                                                                                                                                                                                                                                                   CONTROL DETAILS.
+
+
+                                                                                                                                                                                                                      TRANSFORMER - TF423
+                                                                                                                                                                                                      SCREEN          22kV/690V/690V
+
+                                                                                                                 SW423-P-01-1                                                                                         5MVA                                               SW423-P-02-1
+
+                                                                                                                 SW423-P-01-2                                                                                                                                            SW423-P-02-2
+
+                                                                                                                 SW423-P-01-3                                                                                                                                            SW423-P-02-3
+
+                                                                                                                 SW423-P-01-4                                                                                                                                            SW423-P-02-4
+
+                                                                                                                 SW423-P-01-5                                                                                                                                            SW423-P-02-5
+
+
+
+                                             5000:1                                                                                    SCREENING VARIABLE SPEED DRIVE SWITCHBOARD - SW423                                                                                                                                                                         5000:1
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                B
+
+                                                  CB SW423 IN D                                                                                                                                                                                                                                                                                 CB SW423 IN Y
+                                                  2500A                                                                                                                                                                                                                                                                                                      2500A
+
+
+
+                                                                                            STATUTORY                                                                                                             STATUTORY                                                                          STATUTORY                           STATUTORY
+                                                                                         SAFETY RELAY                                                                                                           SAFETY RELAY                                                                       SAFETY RELAY                        SAFETY RELAY
+                                                                                              ESR4201                                                                                                                ESR4203                                                                           ESR4205                              ESR4206
+
+
+
+
+                                                                                                                                         690V, 2500A, 50kA FOR 1 Sec
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 C
+                                                                                                                                         690V, 2500A, 50kA FOR 1 Sec
+
+
+                                                  TIER                       TIER                           TIER                       TIER                           TIER                       TIER                           TIER                       TIER                            TIER                                         TIER
+                                                  07F                         7F                            08F                         8F                            03F                         3F                            04F                         4F                             11F-00                                       09F-00
+
+                230VAC UPS                         500A                      500A                            500A                      500A                            500A                      500A                            500A                       500A                           80A                                          80A
+                   DB423C1
+
+
+                07110-EL-DR-3350
+
+
+                 24VDC UPS
+                   DB423A
+
+                07110-EL-DR-3342
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                D
+
+                48V DC UPS
+                   DB 423B
+                                                                                    230V AC                                                                                                                                                                                                                                                                             230V AC
+                07110-EL-DR-3347
+                                                                                    24V DC                                                                                                                                                                                                                                                                              24V DC
+
+                  PROFIBUS                                                          PROFIBUS                                                                                                                                                                                                                                                                            PROFIBUS (MP4231)
+
+               MARSH. PANEL                                                         PROFIBUS                                                                                                                                                                                                                                                                            PROFIBUS (MP4232)
+                   MP4231                                                                                                                                                                                                                                                                                                                                               PROFIBUS (MP4233)
+                07110-EL-DR-4454
+
+
+                                                                                                                                                                                                                                                                                                                                                                         PROFIBUS
+                  PROFIBUS                                                                                                                                                                                                                                                                                                                                            MARSH. PANEL
+E              MARSH. PANEL                                                                                                                                                                                                                                                                                                                                               MP4233                                                                                                  E
+                   MP4232                                                                                                                                                                                                                                                                                                                                              07110-EL-DR-4705
+                07110-EL-DR-4455
+                                                                                                                                                                                                                                                                                                                                                                              48V DC
+
+
+
+
+
+                                                   VS4201 - MASTER                    FO COMMS                VS4202 - SLAVE                                          VS4203 - MASTER                      FO COMMS               VS4204 - SLAVE                                                 VS4205                                        VS4206
+                                                   ACS800-07-1060-7                                          ACS800-07-1060-7                                         ACS800-07-1060-7                                           ACS800-07-1060-7                                         ACS800-01-0070-7                              ACS800-01-0070-7
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 F
+                                                                                                                                                                                                                                                                                                                                                                                                               7
+                                                                                  TO FIELD                                                  TO FIELD                                                   TO FIELD                                                 TO FIELD
+                                                                               MARSH. PANEL                                              MARSH. PANEL                                               MARSH. PANEL                                              MARSH. PANEL
+                                                                                  MP42115                                                    MP42115                                                   MP42117                                                   MP42117
+                                                                              04100-EL-DR-0011                                          04100-EL-DR-0011                                           04100-EL-DR-3002                                         04100-EL-DR-3002
+
+
+
+
+
+
+                                                                    DCP                                                       DCP                                                        DCP                                                       DCP
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                             Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                             Ph +61 8 6220 2000, www.verbrec.com
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 G
+                                                                                                                                                                                                                                                                                                                                                                                                                      APPLICABLE DOCUMENTS
+                                                              M                    J/BOX                                M                    J/BOX                                 M                    J/BOX                                M                   J/BOX                              M                                             M
+                                                              3Ø                                                        3Ø                                                         3Ø                                                       3Ø                                                      3Ø                                            3Ø                                                                              SPECIFICATIONS
+
+                                             RTD                                                       RTD                                                        RTD                                                      RTD                                                          TH    VF201-EM01                             TH     VF202-EM01                                                                               TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                          WINDING        CV101-EM01                                 WINDING        CV101-EM02                                  WINDING       CV106-EM01                                 WINDING       CV106-EM02                                                                                                                                                           11098-07000-EL-SP-1121    EQUIPMENT INSTALLATION
+                                            TEMP    SCALPING SCREEN                                   TEMP     SCALPING SCREEN                                   TEMP    PRODUCT SCREEN                                   TEMP     PRODUCT SCREEN                                         SCALPING SCREEN                               SCALPING SCREEN
+                                                     FEED CONVEYOR                                              FEED CONVEYOR                                             FEED CONVEYOR                                             FEED CONVEYOR                                         VIBRATING FEEDER                              VIBRATING FEEDER                                                                      STANDARD DRAWINGS
+                                                            630kW                                                     630kW                                                     630kW                                                     630kW                                                   45kW                                          45kW                 7
+                                                                                                                                                                                                                                                                                       11098-07110-EL-DR-4473                       11098-07110-EL-DR-4681                                                 07110-EL-DR-1000          STANDARD DRAWINGS LIST
+
+
+    This drawing and all the information                                                                                     728/10/25ISSUED FOR CONSTRUCTION - CB25OP003A                  JC  LN   AC   JM   KI   MG   CLIENT                                                                                                                           DRAWN          W. LEONG              2/11/06
+
+         on it is the property of                                                                                  6    19/08/09   ISSUED FOR AS-BUILT                                     KW   BT   SQ   CJT  DF   AC                                                                                                                                                                                     PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                     ENGINEER       R. COX                2/11/06
+       It is confidential and is given                                                                             5    04/11/08   RE-ISSUED FOR CONSTRUCTION                              KW   BT   AJ   LB   DF   DF
+                                                                                                                                                                                                                                                                                                                                                          CHECKED        D. PALMER             2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                          4   27/02/08    RE-ISSUED FOR CONSTRUCTION                              CV   LB   AJ   LB   NJ   NJ                                                                                                                                                                                                                                                            H
+    be returned on request. Neither this                                                                                                                                                                                                                                                                                                                  LEAD ENG       L. BRUNN              2/11/06     SW423 - SCREENING
+        drawing nor any information                                                                                3    23/01/08   RE-ISSUED FOR CONSTRUCTION                              JH   LB   AJ   LB   NJ   NJ
+
+    concerning it may be copied, exhibited                                                                         2    11/05/07   RE-ISSUED FOR CONSTRUCTION                              JZ   RC   AJ   RC   NJ   GW                                                                                                                                    ENG MGR        J. BILESSURIS         3/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                      SINGLE LINE DIAGRAM - SHEET 1
+    photographs be taken of any article                                                                            1    17/11/06   RE-ISSUED FOR CONSTRUCTION                              WL   RC   AS   LB   JB   GW                                                                          Team 45 is the integrated project management team of
+                                                                                                                                                                                                                           Level 2, Hyatt Centre                                          Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR  G. WIESER             3/11/06
+     fabricated or assembled from this07110-EL-DR-2466     SW423 - SCREENING SINGLE LINE DIAGRAM - SHEET 2         0    02/11/06   ISSUED FOR CONSTRUCTION                                 WL   RC   DGP  LB   JB   GW                                             Tel: +61 8 9266 0111                                                                                                                    PROJECT No:           DRG No:                                  REV:
+      drawing without the consent of                                                                                                                                                                                       87 Adelaide Terrace                     Fax: +61 8 9221 9483   Team 45 and WorleyParsons act on behalf of and as disclosed agentSCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD    REF No.                               REFERENCES                         REV    DATE                           DESCRIPTION                        DRN  ENG  CHK  LE   EM   PM     East Perth  WA  6004  Australia         ABN 52 103 096 340                       of The Pilbara Infrastructure.                               N/A                     A1         300/11098                 07110-EL-DR-2465                     7
+
+
+                 1                                      2                                      3                                       4                                      5                                      6                                      7                                      8                                      9                                      10                                     11                                     12

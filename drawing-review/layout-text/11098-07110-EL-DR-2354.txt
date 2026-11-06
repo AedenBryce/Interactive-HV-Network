@@ -1,0 +1,190 @@
+             1                                   2                                     3                                   4                                   5                                   6                                   7                                   8                                   9                                   10                                  11                                  12
+
+                                                                                                                                                                                                                                                                                                               NOTES:                                                        LEGEND:
+                                              FROM                                                                                                                                                                                                                                                             1.    48V DC SUPPLIES FROM LOCAL DISTRIBUTION                 87B  = BUS ZONE DIFFERENTIAL RELAY SYSTEM
+                                  HV SWITCHBOARD SW411                                                                                                                                                                                                                                                               BOARD DB 435B
+                                       07110-EL-DR-5151                                                                                                                                                                                                                                                                                                                      87T  = TRANSFORMER DIFFERENTIAL RELAY SYSTEM
+
+
+A                                                                                                                                                                                                                                                                                                                                                                            86   = LOCKOUT RELAY                                          A
+                                                                                                                                                                                                                                                                                                               2.    SURGE ARRESTOR ADDED ON 22/5/2014
+                                                                                                                                                                                                                                                                                                                     INSIDE SWITCHBOARD                                      50   = INSTANTANIOUS OVERCURRENT OR RATE OF
+                                                                                                                                                                                                                                                                                                                                                                                    RISE RELAY
+                                                                                                                                                                                                                                                                                                                                                                             51   = AC TIME OVERCURRENT RELAY
+                                                                                                                                                                                                                                                                                                                                                                             50G  = GROUND INSTANTANEOUS OVERCURRENT OR
+
+                                                                                                                                                                                                                              NS4357-F-01                TO MC435 COMMS CABINET                                                                                                     RATE OF RISE RELAY
+                                                                                                                                                                                                                                                         07110-EL-DR-4289                                                                                                    51G  = GROUND AC TIME OVERCURRENT RELAY
+                                                                                                                                                                                                                              NS4357-F-02
+
+                                                                                                                                                                                                                                                                                                                                  TO FOBOT F4359                                      FIBRE OPTIC CABLE/PATCH LEAD
+
+                                                                                                                                                                                                                                                                                                            FD438-F-01            MC435 COMMS CABINET
+                                                                                                                                                                                                                                                         TO DB435A                                                                07110-EL-DR-4289
+                                                                                                                                                                                                                           SW435-COMM-P-01               07110-EL-DR-3400                                                                                                             ARRESTOR
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                  CRUSHING No.2 HV SWITCHBOARD - SW435                                                                    B
+
+
+   SW435 INCOMER                                                         SW431 FEEDER                     TF435 FEEDER                                          BUS EARTH                                            TF436 FEEDER          TF433 FEEDER                                                 HPGR FEEDER (TF001)                            TF453 FEEDER
+   TIER 1                9                             ES SW435 IN 01    TIER 2                           TIER 3                       9                        TIER 4                                               TIER 5                TIER 6                                                       TIER 7                                         TIER 8
+
+
+
+
+
+                     SEL 351A                 600:1                                                                                                                                    MOXA 405A
+
+
+                        86
+
+
+                        50
+                                               CB SW435 IN 01                                                                                                                        5110       6110                                                                                                    2C / MM
+                        51                     630A                                                                                                                                                                                                                                                     PATCH
+
+
+
+                        50G
+
+C                                                                                                                                                                                      SEL 2030                                                                                                                                                                                                                                            C
+                        51G
+
+
+
+
+                                 Q63
+
+                                                                                                                                                                                                                                                                                                                                                                  22kV, 630A, 25kA 3 Sec
+
+
+
+
+
+
+
+
+                                                                                                                                                                                  22kV       110V
+
+
+
+
+
+                                           +48VDC (PROTECTION)
+
+
+D    COMMS                                                                                                                                                                                                                                                                                                                                                                                                                                 D
+
+
+     +48VDC (TRIP)
+
+
+
+
+
+
+                                                                                    CB SW431 FD 02                                            CB TF435 FD                                                                 CB TF436 FD                                          CB TF433 FD                                          CB HPGR FD                                             CB TF453 FD
+                                                                                    630A                                                      630A                                                                        630A                                                 630A                                                 630A                                                   630A
+
+
+
+                                                                                                                        86                                                                         86                                                   86                                                    86                                                     86
+                                                                                                                                                                            ES
+                                                            86                                                          50                                                  SW435                  50                                                   50                                                    50                                                     50
+
+
+                                                            50                                                          51                                                                          51                                                  51                                                    51                    ES                               51
+                                                                                    ES SW431 FD 02                                            ES TF435 FD                                                                ES TF436 FD                                           ES TF433 FD                                          HPGR FD                                                ES TF453 FD
+
+
+
+E                                                           51                                                          50G                                                                        50G                                                 50G                                                   50G                                                    50G                                                                    E
+
+
+                                                            50G                                                         51G                                                                        51G                                                 51G                                                   51G                                                    51G
+
+
+                                                            51G                                                         87T                                                                        87T                                                 87T                                                   87T                                                    87T
+
+
+                                                           SEL 351A                 600:1                            SEL 387A                 100:1                                             SEL 387A                  100:1                       SEL 387E                  200:1                      SEL 387E                 200:1                         SEL 387E                 200:1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                          F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                    9
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                          G
+
+                                                                                                          MC435                     TF435                                             MC436                    TF436                        SW433    SW433           TF433                                                TF001                        SW453     SW453             TF453
+
+                  FROM DB435B
+          REF DRG 07110-EL-DR-3405                                     SW431 - FEEDER 02                          TF435 22kV/400V                                                                  FUTURE                                       TF433 22kV/690V/690V                                                        HPGR SWITCHYARD                 TF453 22kV/690V/690V
+
+                                                                         HV SUBSTATION                        MC435 - CRUSHING No.2                                                          TF436 22kV/400V                                   SW433 - CRUSHING No. 2                                                      22kV JUNCTION BOX                    SW453 (FUTURE)
+                                                                         07110-EL-DR-2353                         07110-EL-DR-2660                                                        MC436 - CRUSHING No.2                                     07110-EL-DR-2456                                                    CB112-02066-DR-EL-00005                07110-EL-DR-2468
+
+                                                                                                                                                                                                                                                                                                                                                    VENDOR/DESIGNER DRG No.                                                        REV:
+                                                                                                                                                                                                                                                                                                                                                                                  13007-DE-001
+
+                                                                                                    9    28.01.25 AS FOUND 23.10.23                                                          AP        CH                MP                                                                                                   PROJECT NUMBER                                 Fortescue Metals Group Ltd
+                                                                                                    8    04.11.14 AS BUILT                                                                  ASM                 VS                                                                  VS
+                                                                                                    7    17.10.13 ISSUED FOR CONSTRUCTION -  RMU REPLACEMENT PROJECT                         JAJ      CRD       JAJ      CRD      CRD      CRD                                                                                                      PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+
+H                                                                                                   6    06.08.09 ISSUED FOR AS BUILT                                                        KW       SQ        BT                 BT       DF       DF                                                                                             CLOUD BREAK INFRASTRUCTURE                                                             H
+   07000-EL-DR-2360              HV PROTECTION SCHEMATIC DIAGRAM                                    5    04.03.09 RE-ISSUED FOR CONSTRUCTION                                                 RJP      KW        BT                CJT       DF       DF                                                                       This drawing must not SW435 - CRUSHING NO.2
+                                                                                                                                                                                                                                                                                                                             be copied or reproduced
+   07110-EL-DR-2370              MINE MAIN EARTHING SINGLE LINE DIAGRAM                             4    11.12.08 ISSUED FOR AS BUILT                                                        RJP      KW        BT                CJT       DF       GM                                                                      in any form or used for
+                                                                                                                                                                                                                                                                                                                             any purpose other than SINGLE LINE DIAGRAM
+   07110-EL-DR-2360              MINE POWER DISTRIBUTION PROTECTION SINGLE LINE DIAGRAM             3    21.02.08 RE-ISSUED FOR CONSTRUCTION                                                 JM        AJ       LB                 LB       NJ       NJ                                                                     originally intended without
+   07110-EL-DR-2350              MINE POWER DISTRIBUTION SINGLE LINE DIAGRAM                        2    14.05.07 RE-ISSUED FOR CONSTRUCTION                                                 JZ        AJ       NB                DBS       NJ       GW                                                                        written approval of          SCALE   DRG No:                                                        REV:
+                                                                                                                                                                                                                                                                                                                            Fortescue MetalsGroup Ltd
+   REF DRG No.                                                 TITLE                               REV    DATE                            DESCRIPTION                                       DRN       CHK      SUP       DES      DAP      PAP      FMG                                                   NORTH                                      A1      1:1                 07110-EL-DR-2354                                    9
+
+
+
+             1                                   2                                     3                                   4                                   5                                   6                                   7                                   8                                   9                                   10                                  11                                  12

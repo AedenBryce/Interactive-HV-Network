@@ -1,0 +1,358 @@
+{
+  "area": "Stockpile SW454 / wet plant SW505",
+  "issue": 18,
+  "reviewDate": "2026-10-22",
+  "status": "source-review-only-unaccepted",
+  "narrative": "drawing-review/areas/stockpile-wet-plant-review.md",
+  "coverage": {
+    "distinctFilesVisuallyInspectedThisReview": 25,
+    "distinctPagesVisuallyInspectedThisReview": 25,
+    "supplied04220FilesInspected": 21,
+    "previousInitialReviewIdsRevisited": {
+      "SW-S24": "S1",
+      "SW-S25": "S3"
+    },
+    "globalCoverageCountUpdated": false
+  },
+  "sources": [
+    {
+      "id": "SW-S01",
+      "path": "drawings/Asset Drawing Repo/11098-04400-EL-DR-8001.pdf",
+      "sha256": "f44e004c4eea37b4b04ccd9ba6573860c91ce41de87929f3c6052ac0654c371f",
+      "printedRevision": "5",
+      "printedDate": "28/01/25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW454 HV SLD; supply and outgoing main-power routes B-G, bus C-D"
+    },
+    {
+      "id": "SW-S02",
+      "path": "drawings/Asset Drawing Repo/11098-04400-EL-DR-8021.pdf",
+      "sha256": "613682209e4520cd1a989593d96ff51fb0d1909c97c027a3ba46be3b715253fd",
+      "printedRevision": "7",
+      "printedDate": "14/11/25",
+      "printedStatus": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW456; TF456 and two incomers/buses A-D"
+    },
+    {
+      "id": "SW-S03",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0054.pdf",
+      "sha256": "ebd57576330302395e3d3203bab51dfcf897e0fa24866d092f27673babc6ce65",
+      "printedRevision": "3",
+      "printedDate": "28.01.25",
+      "printedStatus": "AS FOUND 23.10.24",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW505 sheet1; incomer and bus earth B-E / 1-4; TF506-508 feeders C-G / 5-10"
+    },
+    {
+      "id": "SW-S04",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0055.pdf",
+      "sha256": "fc5481bf78b95dedf2908a3ee0d8d6ca28c230d45d31c3f402cc08b6208ad7e8",
+      "printedRevision": "3",
+      "printedDate": "25.01.25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW505 sheet2; continuous 22kV bar C; TF505A/B/C feeders D-G / 2-8; inching-drive interlock arrows F"
+    },
+    {
+      "id": "SW-S05",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0036.pdf",
+      "sha256": "f2f6a00930057cf7338077665430bb024787e67a20ec08e5f3eaac04a8867358",
+      "printedRevision": "3",
+      "printedDate": "11/3/13 handwritten",
+      "printedStatus": "AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC507 sheet1; continued 400V bar C-D; outgoing circuits only; raster"
+    },
+    {
+      "id": "SW-S06",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0037.pdf",
+      "sha256": "28b2d3d013dcff46cff95b8d8cf5f57286e4b818fa4d0596a26e960f4d0519d6",
+      "printedRevision": "5",
+      "printedDate": "08.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC507 sheet2; TF507 A-C / 5-7; LV incomer and neutral/MEN C-D; main bar D"
+    },
+    {
+      "id": "SW-S07",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0038.pdf",
+      "sha256": "95e79b3688475d0c5af48f5e40d24894346afae40f44b1597d6269c5384a1508",
+      "printedRevision": "6",
+      "printedDate": "08.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC507 sheet3; same main bar C-D, outgoing circuits"
+    },
+    {
+      "id": "SW-S08",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0039.pdf",
+      "sha256": "321d602fde7fb5d46fb6d96738f0bb734e7c2eb088945772dcee8c46456040f4",
+      "printedRevision": "4",
+      "printedDate": "08.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC507 sheet4; same main bar C-D, outgoing circuits"
+    },
+    {
+      "id": "SW-S09",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0041.pdf",
+      "sha256": "1705b3160086f5d7d39a4cac3c651ad5b1545dfac259978e36343307d65a14f9",
+      "printedRevision": "5",
+      "printedDate": "08.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC507 sheet5; same main bar C-D, outgoing circuits"
+    },
+    {
+      "id": "SW-S10",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0040.pdf",
+      "sha256": "4867895e9a41ba98c3e36254c1fe563a3a235f4096e01842b997a45ffcb2fb59",
+      "printedRevision": "8",
+      "printedDate": "08.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC507 sheet6; main bar ends at right; outgoing circuits and drive auxiliaries"
+    },
+    {
+      "id": "SW-S11",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0042.pdf",
+      "sha256": "982ff7e7dda4edc56953362b5f58a0ecd7e07dbb24bce4be0d5e7676d5f996c7",
+      "printedRevision": "4",
+      "printedDate": "28.01.25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "TF505A/B/C A-C; VS50501/502/503 drive internals and DC bus earthing switches D-F"
+    },
+    {
+      "id": "SW-S12",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0044.pdf",
+      "sha256": "4483b1beb7bbb8500f62ce082ba6221ad51b330a44fd0e2e9efa4327361d58ce",
+      "printedRevision": "5",
+      "printedDate": "21.06.19",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC508 sheet1; same 400V main bar C-D and outgoing circuits"
+    },
+    {
+      "id": "SW-S13",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0045.pdf",
+      "sha256": "06dcba15256d404fb16b5ccd3613c377a83ea551e486623f5365ff2d6c765e01",
+      "printedRevision": "9",
+      "printedDate": "14.10.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC508 sheet2; TF508 A-C / 5-7; LV incomer and neutral/MEN C-D; main bar D"
+    },
+    {
+      "id": "SW-S14",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0046.pdf",
+      "sha256": "d955ee52b385a96f10d2e631bd44fb23936010c954513af87878a7c73fd9bdc2",
+      "printedRevision": "5",
+      "printedDate": "11.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC508 sheet3; same main bar C-D, outgoing circuits"
+    },
+    {
+      "id": "SW-S15",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0047.pdf",
+      "sha256": "81b985b4f3ef75ebc55e5c8966d84392f76ab17f5a63b97d2df4bc5b209576dd",
+      "printedRevision": "8",
+      "printedDate": "11.11.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC508 sheet4; same main bar ends at right; outgoing circuits/auxiliaries"
+    },
+    {
+      "id": "SW-S16",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0052.pdf",
+      "sha256": "9915f90b47ebc62ead3a20a327b03830446cb3b15e52606653781d4e38eae2b7",
+      "printedRevision": "2",
+      "printedDate": "11/3/13 handwritten",
+      "printedStatus": "AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SR507 earthing SLD; equipment bonds and MC507 earth bar, not the phase bar; raster"
+    },
+    {
+      "id": "SW-S17",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0053.pdf",
+      "sha256": "172cfd2b202aa6bce9cdc0dbc0e1c7dbb197f833dc1ad10f1b842ee134bb55e2",
+      "printedRevision": "3",
+      "printedDate": "11/3/13 handwritten",
+      "printedStatus": "AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SR508 earthing SLD; equipment bonds and MC508 earth bar, not the phase bar; raster"
+    },
+    {
+      "id": "SW-S18",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0060.pdf",
+      "sha256": "99b1afa8d426026bd89a2d14fd6774dbc68c552c37ea336facfad3e25557e5ad",
+      "printedRevision": "2",
+      "printedDate": "11/3/13 handwritten",
+      "printedStatus": "AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW506 sheet1; TF506 A / 5-7; D/Y incomers and two 690 V bars B-C; raster"
+    },
+    {
+      "id": "SW-S19",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0061.pdf",
+      "sha256": "b33547a01228e2606f6a377040b2fef6a2ccb155651c76dd859074ae9771f4dd",
+      "printedRevision": "5",
+      "printedDate": "11.10.25",
+      "printedStatus": "CV214-EM01 & CV214-EM02 MOTOR UPGRADE TO 110 kW",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW506 sheet2; separate D/Y bar continuations B-C; SH213 project caution lower right"
+    },
+    {
+      "id": "SW-S20",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0062.pdf",
+      "sha256": "e47c26fa052d0276b976e400aa6067f377726fb99f3dd64da1eb405b3e93bf6d",
+      "printedRevision": "3",
+      "printedDate": "14.10.20 in revision row; stamp 14/10/2024",
+      "printedStatus": "AS BUILT; dates differ",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW506 sheet3; separate D/Y bar continuations B-C; revision/date discrepancy"
+    },
+    {
+      "id": "SW-S21",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0063.pdf",
+      "sha256": "133652a221d636af08cf500b4c8f0b330cda3d491dc62c66ff2cad3ffa004ee3",
+      "printedRevision": "3A in title; red revision row 4",
+      "printedDate": "09.05.26 red row 4; prior row 3 30.08.24",
+      "printedStatus": "Redline CV215-EM01 & CV215-EM02 MOTOR UPGRADE TO 110 kW; prior IFC",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW506 sheet4; D/Y bar continuations B-C; title/revision discrepancy"
+    },
+    {
+      "id": "SW-S22",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0064.pdf",
+      "sha256": "2f98000079dba7fcc3bf67a07dd7a7e5e0be0a4f882cf2111659b822bd88bafd",
+      "printedRevision": "6",
+      "printedDate": "30.08.24",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW506 sheet5; two 690 V bars end at right; note1 shuttle keyinterlock A / 11-12"
+    },
+    {
+      "id": "SW-S23",
+      "path": "drawings/Asset Drawing Repo/500CB-04220-DR-EL-0204.pdf",
+      "sha256": "5de508562280f7f926dff510f51825d8a2b177fd9129bf143e6d1520f7020f86",
+      "printedRevision": "0",
+      "printedDate": "21.06.19",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "CL201-MP01 cooling-water panel from MC508; downstream of 400 V bus"
+    },
+    {
+      "id": "SW-S24",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0010.pdf",
+      "sha256": "cd77222ad84e15a9ca13d2120994db03be9765ed1a923595bc17bacca4a2795f",
+      "printedRevision": "0",
+      "printedDate": "27.10.25",
+      "printedStatus": "ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Overview; SW454 panel C-E / 1-4; SW505 panel E-G / 1-4; SW411 feeder B / 1"
+    },
+    {
+      "id": "SW-S25",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "printedRevision": "7",
+      "printedDate": "28/01/25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW411 SW454 feeder tier1, D-G / 1-2"
+    }
+  ],
+  "openReviewIds": [
+    "SW-R01",
+    "SW-R02",
+    "SW-R03",
+    "SW-R04",
+    "SW-R05",
+    "SW-R06",
+    "SW-R07",
+    "SW-R08",
+    "SW-R09",
+    "SW-R10"
+  ],
+  "runtimeModelCreated": false,
+  "ownerAcceptance": false
+}

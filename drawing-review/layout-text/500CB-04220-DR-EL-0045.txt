@@ -1,0 +1,217 @@
+             1                                  2                                   3                                  4                                  5                                  6                                  7                                 8                                  9                                  10                                 11                                12
+
+
+                                                                                                                                                                                  FROM HV SWITCHBOARD
+                                                                                                                                                                                           SW505
+                                                                                                                                                                                 500CB-04220-DR-EL-0054                                                                                                                                                        NOTES
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                            A
+
+                                                                                                                                                                                                                                                                                                                                                               1.   FAULT CURRENT LIMITING FUSES
+                                                                                                                                                                                                                                                                                                                                                                    TYPE FERRAZ SHAWMUT A4BQ3000
+
+                                                                                                                                                                                                                                                                                                                                                               2.   SCREENED FLEXIBLE CABLE TO BE USED
+                                                                                                                                                                                                                                                                                                                                                                    FROM DE-CONTACTOR TO MOTOR.
+
+
+                                                                                                                                                                                                                                                                                                                                                               3.   THERMAL MAGNETIC MCCB.
+
+
+
+
+
+                                                                                                                                                                                                    TRANSFORMER - TF508                                                                                                                                        CONSTRUCTION NOTES
+                                                                                                                                                                                                    22kV/400V
+B                                                                                                                                                                                                                                                                                                                                                                                                                            B
+                                                                                                                                                                                                    2.0 MVA                                                                                                                                                    1. MOTOR PROTECTION RELAY TO BE
+
+                                                                                                                                                                                                                                                                                                                                                                 UPGRADED.
+
+
+                                                                                                                                                                                                                                                                                                                                                               2. NOTES TO BE REMOVED AFTER
+                                                                                                                                                                                                                                                                                                                                                                 CONSTRUCTION.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                            C
+                        WET SCREENING & SCRUBBING SUBSTATION SS505
+
+                        400V MOTOR CONTROL CENTER MC508
+                                                                                                                                                                                                 3000:1
+
+
+                                                                                    COMMS DEVICENET                                                                                                                                                    100:1
+                                                                                    TO MP5081                                                                                                    CB MC508 IN
+                                                         DN5081-C-02                                                                                                                             3000A
+                                                                                    500CB-04220-DR-IN-0303                                                                                                                      NEUTRAL BAR      MEN LINK       EARTH BAR
+
+
+                                                                                                                                                                                                                                                                                          MAIN BUS - 400V, 3000A. 63kA FOR 1 SEC
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                            D
+
+
+                              CB                         CB                   CB                                        CB                   CB                        CB                   CB                  CB                   CB                   CB                   CB                   CB                   CB
+                       SH213-BK01                        PP216B               GB216      CB                             SPARE                SH213-PU01                PP213C               HE213               HE214                HE215                HE216                HE217                HE218                BF225
+                         DOL 16A                         DOL 2.6A             DOL 100A   BR216                          DOL 2.6A             DOL 2.6A                  DOL 2.6A             DOL 5A              DOL 5A               DOL 5A               DOL 5A               DOL 5A               DOL 5A               DOL 20A
+                        NOTE 3                                                           DOL 2.0A
+
+                                                                                                                                                                                                                                                                                                                                      DEVICENET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                        NOTE 1              NOTE 1               NOTE 1                                                         NOTE 1                    NOTE 1               NOTE 1               NOTE 1              NOTE 1               NOTE 1               NOTE 1               NOTE 1               NOTE 1                                                                                                          E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                            F
+
+
+
+
+
+
+                                     NOTE 2.                                                                                                  NOTE 2.
+                                                                                                                                                                                                                                                                                                                                                                                     CAUTION
+                                                                                                                                                                                                                                                                                                                                                                     SH213 PROJECT DRAWING
+                                                       M                   M                    M                                         M                         M                                                                                                                                                 M                                               MODIFICATIONS TO THIS DRAWING
+                                                      3Ø                   3Ø                   3Ø                                        3Ø                        3Ø                                                                                                                                               3Ø                                                     MAY NOT BE COMPLETED
+                              0.16kW                                                                                                                                                  1.5kW                1.5kW                1.5kW                1.5kW                1.5kW               1.5kW                  4kW                                           CONFIRM ON SITE BEFORE PROCEEDING
+                                 1Ø                0.75kW                30kW                 0.5kW                                    0.25kW                    0.75kW
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                            G
+                                                                                                                                                                                                        9                   9                    9                    9                    9                    9                   9                                                        9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                     Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                     Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                         VENDOR/DESIGNER DRG No.                                                      REV:
+                                                                                                                                                                                                                                                                                                                                                                                 -                                     -
+
+                                                                                                 9   14.10.24 ISSUED FOR CONSTRUCTION - CB250P003                                      SR       GG       GG       LN       HS       HS       MG                                                                    PROJECT NUMBER                                Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                            STANDARDS
+                                                                                                 6   21.10.14 AS BUILT                                                                 MR       MK       PW                         DS       MT                              CHECK
+                                                                                                                                                                                                                                                                            APPROVED
+                                                                                                 5   17.06.14 ISSUED FOR CONSTRUCTION - SH213-PU01&SH213-BK01 ADDED,PP213A-EM01 SPARE  KW      PEB       PEB      AL       MP       MP       VB                                                                         500CB            CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                4   18.03.13 AS BUILT - NO CHANGE                                                     SR      DGM      DGM       ZG       AB       AB       MT                                                                                          WET SCRUBBING / SCREENING                                                           H
+                                                                                                 3   05.04.12 RE-ISSUED FOR CONSTRUCTION                                              LFC       MR       MR       PA       CD       PH       NHJ                                                                    This drawing must notMC508
+                                                                                                                                                                                                                                                                                                                   be copied or reproduced
+                                                                                                 2   29.02.12 RE-ISSUED FOR CONSTRUCTION                                              JMc       MR       MR       PA       CD       PH       NHJ                                                                   in any form or used for
+                                                                                                                                                                                                                                                                                                                   any purpose other thanSINGLE LINE DIAGRAM - SHEET 2
+   500CB-04220-DR-EL-0046       MC508 SINGLE LINE DIAGRAM SHEET 3                                1    13.01.11RE-ISSUED FOR CONSTRUCTION                                              JMc       MR       MR       PA       CD       PH       NHJ                                                                  originally intended without
+   500CB-04220-DR-EL-0044       MC508 SINGLE LINE DIAGRAM SHEET 1                                0    10.10.11ISSUED FOR CONSTRUCTION                                                 JMc       MR       MR       PA       IMD      PH       NHJ                                                                     written approval of        SCALE   DRG No:                                                       REV:
+                                                                                                                                                                                                                                                                                                                  Fortescue MetalsGroup Ltd
+   REF DRG No.                                              TITLE                               REV   DATE                           DESCRIPTION                                      DRN      CHK      SUP       DES      DAP     PAP      FMG                                                 NORTH                                    A1      NTS          500CB-04220-DR-EL-0045                                   9
+
+
+
+             1                                  2                                   3                                  4                                  5                                  6                                  7                                 8                                  9                                  10                                 11                                12

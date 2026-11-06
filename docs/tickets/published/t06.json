@@ -1,0 +1,15 @@
+{
+  "id": "T06",
+  "number": 7,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/7",
+  "title": "Explore explicit equipment positions and winding relationships",
+  "blockedBy": [
+    5
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    5
+  ]
+}

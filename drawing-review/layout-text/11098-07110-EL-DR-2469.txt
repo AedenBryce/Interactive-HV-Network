@@ -1,0 +1,240 @@
+                           1                                          2                                          3                                          4                                          5                                           6                                          7                                          8                                          9                                         10                                          11                                         12
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       NOTES:
+
+        A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                A
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        1. STATUTORY SAFETY RELAY
+              RP20180.236                                                                                                                                                                                                                                                                                                                                                                                                                                                 FOR EACH APRON FEEDER
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          LOCATED IN MASTER VSD.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        B                                                                                                                              TRAIN LOADING VARIABLE SPEED DRIVE SWITCHBOARD                                                                                                                                                                                                                                                                                                                                                    B
+
+                                                                                                                                                                                        SW453
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                C
+
+
+
+                                                        690V, 2500A, 50kA for 1 Sec
+
+
+
+
+                                                        690V, 2500A, 50kA for 1 Sec
+
+
+                                                                                                                      TIER 4F                                                          TIER 5F                                                          TIER 7F                                            TIER 8F                                                          TIER 6F
+
+
+
+
+                                                                                                                      500A                                                             500A                                                             315A                                               400A                                                             250A
+
+
+
+
+        D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                D
+
+
+
+
+
+
+
+                                                               230V AC
+
+                                                               48V DC
+
+
+                                                               PROFIBUS
+
+
+
+
+
+
+
+        E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                VS4537 - MASTER                         FO COMMS                  VS4538 - SLAVE                                                                                                                                                                              VS4541
+                                                                                                                ACS800-07-0440-7                                                 ACS800-07-0440-7                                                                                                                                                                     ACS800-07-0260-7
+                                                                                                                  ESR4537 NOTE 1                                                                                                                                                                                                                                             ESR4541
+
+
+        F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                F
+
+
+
+                                                                                                                                                                                                                                                                                                                                                 TO MP4532
+                                                                                                                                                                                                                                                                                                                                                 07110-EL-DR-4738
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        G                                                                                                                           M                                                                M                                                                                                                                                                                      M                                                                                                                                            G
+
+                                                                                                                                    3�                                                               3�                                                                                                                                                                                    3�                                                                          APPLICABLE DOCUMENTS
+                                                                                                                   RTD                                                             RTD                                                                                                                                                                                  TH
+                                                                                                                             AF404-EM01                                                       AF404-EM02                                   PU971A-MCP971                                       PU371A-MCP371                  6                                            FN401-EM01                                                                                               SPECIFICATIONS
+
+                                                                                                                               SV FINES                                                         SV FINES                                      REF DRG:                                             REF DRG:                                                       STOCKPILE VENTILATION                                                                    11098-07110-EL-SP-1121      TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                           APRON FEEDER                                                     APRON FEEDER                        CB23WM053H-02018-DR-EL-0001                        CB23WM053H-02018-DR-EL-0010                                                                  FAN                                                                                                    EQUIPMENT INSTALLATION
+                                                                                                                                 315kW                                                            315kW                            TLO ELECTRIC FIRE PUMP                       CRUSHING, SCREENING & SCRUBBING                                                                160kW                                                                                           STANDARD DRAWINGS
+                                                                                                                                                                                                                                          CONTROL PANEL                        ELECTRIC FIRE PUMP CONTROL PANEL
+                                                                                                                                                                                                                                                 200kW                                              315kW                                                                                                                                                  11098-07110-EL-DR-1000      STANDARD DRAWINGS LIST
+
+
+
+            This drawing and all the information                                                                                                                                                                                                       CLIENT                                                                                                                                        DRAWN           W. LEONG                 2/11/06
+
+                  on it is the property of                                                                                             6    18/11/25    ISSUED FOR CONSTRUCTION                                       MV    UF   SV    SB   TM    TM                                                                                                                                                                                                       PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+            THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                       ENGINEER        R. COX                   2/11/06
+                It is confidential and is given                                                                                        5    13/08/09    ISSUED FOR AS-BUILT                                           KW    BT   SQ    BT   DF    DF
+                                                                                                                                                                                                                                                                                                                                                                                                     CHECKED         D. PALMER                2/11/06      CLOUD BREAK INFRASTRUCTURE
+        H   to you for a limited purpose and must                                                                                      4    08/11/07    RE-ISSUED FOR CONSTRUCTION                                    PA    RP   AJ    LB   NJ   GW                                                                                                                                                                                                                                                                                      H
+             be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                    LEAD ENG        L. BRUNN                 2/11/06      SW453 - STOCKPILING APRON FEEDERS
+                drawing nor any information                                                                                            3    22/06/07    FN401-EM01 ADDED                                              JM    BN   AJ    LB   NJ   GW
+
+            concerning it may be copied, exhibited                                                                                     2    11/05/07    RE-ISSUED FOR CONSTRUCTION                                    JZ    RC   AJ    RC   NJ   GW                                                                                                                                                  ENG MGR         J. BILESSURIS            3/11/06
+               or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                             SINGLE LINE DIAGRAM - SHEET 2
+            photographs be taken of any article                                                                                        1    17/11/06    RE-ISSUED FOR CONSTRUCTION                                    DGP   RC   AS    LB   JB   GW                                                                                  Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                         Level 2, Hyatt Centre                       Tel: +61 8 9266 0111     Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.  PROJ MGR        G. WIESER                3/11/06
+              fabricated or assembled from this                                                                                        0    02/11/06    ISSUED FOR CONSTRUCTION                                       WL    RC  DGP    LB   JB   GW                                                                                                                                                                                                        PROJECT No:             DRG No:                                      REV:
+               drawing without the consent of                                                                                                                                                                                                            87 Adelaide Terrace                         Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent     SCALE
+            THE PILBARA INFRASTRUCTURE PTY LTD        REF No.                                  REFERENCES                             REV     DATE                             DESCRIPTION                            DRN  ENG   CHK   LE   EM    PM     East Perth  WA  6004  Australia             ABN 52 103 096 340                           of The Pilbara Infrastructure.                                     NTS                        A1          300/11098                    07110-EL-DR-2469                         6
+
+
+                           1                                          2                                          3                                          4                                          5                                           6                                          7                                          8                                          9                                         10                                          11                                         12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11098-07110-EL-DR-2469_5.dgn 17/11/2025 2:17:46 PM P:\BGER\PER\RP20180.236 CB FIREWATER DISTRIBUTION AND SUPPLY UPGRADE - FMG\5 CADD\2 DRG\8 EL\01. TLO & Vaults\11098-07110-EL-DR-2469_5.dgn

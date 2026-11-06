@@ -1,0 +1,195 @@
+             1                                   2                                    3                                   4                                  5                                   6                                  7                                   8                                  9                                   10                                 11                                  12
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                        NOTES
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                     A
+
+                   DESAND SUBSTATION SR429
+
+
+
+                   SWITCHBOARD SW429
+
+
+
+
+
+
+
+
+
+                                                                         STATUTORY                                 STATUTORY                                  STATUTORY                                 STATUTORY
+                                                                      SAFETY RELAY                               SAFETY RELAY                               SAFETY RELAY                              SAFETY RELAY
+
+B                                                                          ESR42915                                  ESR42916                                   ESR42917                                  ESR42920                                                                                                                                                                                                                    B
+
+
+                    690V, 2500A, 50kA for 1 Sec
+
+
+
+
+                     690V, 2500A, 50kA for 1 Sec
+
+
+                                                                TIER 10F-04                                TIER 10F-10                               TIER 10F-20                                TIER 08F-24
+
+
+
+
+
+
+
+
+                                                                50A                                       125A                                       125A                                       16A
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                     C
+
+
+
+
+
+
+                                                                                               NOTE 2                                     NOTE 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 24V DC
+
+
+
+D                                             PROFIBUS MP4293                                                                                                                                                                                                                                                                                                                                                                         D
+
+
+
+
+
+
+
+
+
+
+
+
+                     PROFIBUS
+                  MARSH. PANEL
+                      MP4293
+
+                500CB-04230-DR-IN-0067
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                     E
+                                                                   VS42915                                    VS42916                                   VS42917                                    VS42920
+                                                            ACS800-01-0040-7                           ACS800-01-0120-7                           ACS800-01-0120-7                           ACS800-01-0011-7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                     F
+
+
+
+
+
+
+                                                                        M                                         M                                          M                                         M
+                                                                       3Ø                                         3Ø                                        3Ø                                         3Ø
+
+                                                                                                        TH                                         TH                                                                                                                                                                                                                      CONSTRUCTION NOTES:
+
+                                                                                                                                                                                                                                                                                                                                                                           1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+                                                                 PU256-EM01                                 PU259-EM01                                PU260-EM01                                 PU296-EM01                                                                                                                                                                2. CONTACTOR TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                           3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+                                                                GLAND SEAL                               THICKENER No.2                            THICKENER No.2                             THICKENER No.2
+                                                              WATER PUMP 4                            UNDERFLOW PUMP 1                          UNDERFLOW PUMP 2                                FLOCCULANT
+G                                                                                                                                                                                              DOSING PUMP                                                                                                                                                                                                                            G
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                    3
+                                                                     22kW                                       75kW                                      75kW                                        4kW
+
+
+                                                            500CB-04230-DR-EL-0062                     500CB-04230-DR-EL-0154                     500CB-04230-DR-EL-0156                    500CB-04230-DR-EL-0161
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                           Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                           Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                                VENDOR/DESIGNER DRG No.                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                                                         -                                      -
+
+
+
+                                                                                                                                                                                                                                                                                 STANDARDS                                PROJECT NUMBER                                Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                   CHECK
+                                                                                                                                                                                                                                                                                  APPROVED                                                      CLOUDBREAK ENHANCEMENT PROJECT
+
+
+
+H                                                                                                                                                                                                                                                                                                                                               DE-SANDS PLANT                                                                        H
+                                                                                                   3   12.03.25  ISSUED FOR CONSTRUCATION  - CB25OP003A                                    SR       LN       AC        JM       JM       DR       MG                                                                      This drawing must not SW429
+                                                                                                                                                                                                                                                                               ABN 52 008 992 884                         be copied or reproduced
+                                                                                                   2    18.03.13 AS BUILT - NO CHANGE                                                      SR      DGM       DGM       ZG       AB       AB       MT                                                                     in any form or used for
+                                                                                                                                                                                                                                                                                                                          any purpose other thanSINGLE LINE DIAGRAM - SHEET 3
+   11098-07110-EL-DR-2481        SW429 SINGLE LINE DIAGRAM SHEET 1                                 1    09.12.11 RE-ISSUED FOR CONSTRUCTION                                               JMc       MR       MR        PA       CD       PH       DS                                                                     originally intended without
+   11098-07110-EL-DR-2482        SW429 SINGLE LINE DIAGRAM SHEET 2                                 0    10.10.11 ISSUED FOR CONSTRUCTION                                                  JMc       MR       MR        PA       IM       PH       NHJ                                                                      written approval of         SCALE    DRG No:                                                       REV:
+                                                                                                                                                                                                                                                                                                                        Fortescue MetalsGroup Ltd
+   REF DRG No.                                                TITLE                               REV    DATE                           DESCRIPTION                                       DRN       CHK      SUP      DES      DAP      PAP      FMG                                                  NORTH                                      A1      1:1         500CB-04230-DR-EL-0143                                     3
+
+
+
+             1                                   2                                    3                                   4                                  5                                   6                                  7                                   8                                  9                                   10                                 11                                  12

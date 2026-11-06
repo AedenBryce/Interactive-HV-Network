@@ -1,0 +1,192 @@
+            1                                  2                                   3                                 4                                 5                                 6                                 7                                 8                                 9                                 10                                 11                                12
+
+                                                                                                                                                                                                                                                                                                                          CONSTRUCTION NOTES                          NOTES
+
+
+                                                                                                                                                                                                                                                                                                                          1. CONTACTOR TO BE UPGRADED.                1.   STATUTORY SAFETY RELAY IS LOCATED IN VSD.
+
+                                                                                                                                                                                                                                                                                                                          2. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                    A
+                  DESANDING VARIABLE SPEED DRIVE SWITCHBOARD
+
+
+
+                  SWITCHBOARD SW439
+
+
+
+
+
+
+
+
+
+                                                       STATUTORY                             STATUTORY                              STATUTORY                              STATUTORY                                                                                                                                                  STATUTORY                              STATUTORY
+                                                    SAFETY RELAY                           SAFETY RELAY                           SAFETY RELAY                           SAFETY RELAY                                                                                                                                               SAFETY RELAY                           SAFETY RELAY
+
+B                                                       ESR43906                               ESR43907                               ESR43908                               ESR43909                                                                                                                                                   ESR43913                               ESR43914                              B
+
+
+
+                   690V, 2500A, 50kA for 1 Sec
+
+
+                                                                                                                                                                                                         TIER 04F-00                            TIER 08F-00                            TIER 09F-00                            TIER 06F-20
+
+
+                    690V, 2500A, 50kA for 1 Sec
+
+
+                                              TIER 9F-24                             TIER 6F-00                             TIER 6F-10                             TIER 6F-20                                                 TIER 4F-00                             TIER 7F-00                             TIER 8F-00                                               TIER 9F-00
+
+
+
+
+
+                                              63A                                    125A                                   125A                                   125A                                                                                                                                                       125A                                   125A
+
+
+
+
+C                                                                                                                                                                                                        500A                 500A              500A                 500A              500A                500A                                                                                                      C
+
+
+
+
+
+
+
+
+
+                                                                                   NOTE 1                                 NOTE 1                                 NOTE 1                                                                                                                                                     NOTE 1                                 NOTE 1
+
+
+
+                230V AC
+
+
+
+                48V DC
+
+
+                24V DC
+
+
+                PROFIBUS MP4391
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+
+
+
+
+
+
+
+              PROFIBUS
+           MARSH. PANEL
+               MP4392
+         500CB-04230-DR-IN-0071
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                            VS43910                                VS43911                               VS43912                                                                                                                    E
+                                                 VS43906                                VS43907                                VS43908                                VS43909                         ACS800-07-1160-7                       ACS800-07-1160-7                       ACS800-07-1160-7                             VS43913                                VS43914
+                                           ACS800-01-0060-7                       ACS800-01-0120-7                       ACS800-01-0120-7                      ACS800-01-0120-7                             ESR43910                               ESR43911                               ESR43912                         ACS800-01-0120-7                       ACS800-01-0120-7
+                                                                                                                                                                                                                          NOTE 1                                 NOTE 1                                 NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                    F
+
+
+
+
+
+
+                                                                                            M                                      M                                      M                                      M                                      M                                     M                                      M                                      M
+                                                                                            3Ø                                     3Ø                                    3Ø                                     3Ø                                     3Ø                                     3Ø                                     3Ø                                     3Ø
+                                                                                   TH                                     TH                                     TH                                     RTD                                    RTD                                    RTD                                   TH                                     TH
+
+                                                  SPARE                               PU272-EM01                             PU282-EM01                             PU283-EM01                            PU286-EM01                             PU287-EM01                             PU288-EM01                             PU236-EM01                             PU238-EM01
+                                                                                         SPIRAL                                 SPIRAL                                 SPIRAL                               MODULE 2                              MODULE 3                               MODULE 4                             DEWATERING                             DEWATERING
+                                                                                      CONS PUMP                              CONS PUMP                             TAILS PUMP                               CYCLONE                                CYCLONE                                CYCLONE                            SCREEN PUMP                            SCREEN PUMP
+
+G                                                                                     (MODULE 3)                             (MODULE 4)                             (MODULE 4)                             FEED PUMP                              FEED PUMP                             FEED PUMP                              (MODULE 3)                             (MODULE 4)                                     G
+
+                                                                                          90kW                                   90kW                                   75kW                                  650kW                                  650kW                                 650kW                                   90kW           6                       90kW          6
+
+
+
+                                                                                  500CB-04230-DR-EL-0139                500CB-04230-DR-EL-0140                 500CB-04230-DR-EL-0141                 500CB-04230-DR-EL-0081                 500CB-04230-DR-EL-0083                 500CB-04230-DR-EL-0085                500CB-04230-DR-EL-0056                 500CB-04230-DR-EL-0053
+                              6
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                  VENDOR/DESIGNER DRG No.                                                     REV:
+
+
+
+   Level 5, 93-95 William Street, Perth, Western Australia 6000
+   Ph +61 8 6220 2000, www.verbrec.com                                                                                                                                                                                                                                                                                                                                    -                                    -
+
+
+
+
+                                                                                                                                                                                                                                                                       STANDARDS                             PROJECT NUMBER                               Fortescue Metals Group Ltd
+                                                                                               6   06.03.25 ISSUED FOR CONSTRUCTION - CB25OP003A                                   SR       LN       AC       JM       JM      DR       MG                              CHECK
+                                                                                                                                                                                                                                                                       APPROVED
+                                                                                               5   14.03.14 ISSUED FOR CONSTRUCTION                                                JT       PW       JT       PW       INH     INH      MT                                                                                        CLOUDBREAK ENHANCEMENT PROJECT
+
+H                                                                                              4   18.03.13 AS BUILT - NO CHANGE                                                   SR       DGM      DGM      ZG       AB      AB       MT                                                                                        DE-SANDS PLANT                                                                     H
+                                                                                               3   04.05.12 RE-ISSUED FOR CONSTRUCTION                                             JMc      DGM      DGM      ZG       CD      PH       DS                                                                    This drawing must notSW439
+                                                                                                                                                                                                                                                                    ABN 52 008 992 884                       be copied or reproduced
+                                                                                               2   23.01.12 RE-ISSUED FOR CONSTRUCTION                                             JMc      MR       MR      PAS       CD      PH       DS                                                                   in any form or used for
+                                                                                                                                                                                                                                                                                                             any purpose other thanSINGLE LINE DIAGRAM - SHEET 2
+                                                                                               1    16.12.11RE-ISSUED FOR CONSTRUCTION                                             JMc      MR       MR       PA       CD      PH       DS                                                                  originally intended without
+   11098-07110-EL-DR-2483      SW439 - DESAND MODULE 3 SLD - SHEET 1                           0    10.10.11ISSUED FOR CONSTRUCTION                                                JMc      MR       MR       PA       IM      PH       NHJ                                                                    written approval of        SCALE   DRG No:                                                     REV:
+                                                                                                                                                                                                                                                                                                            Fortescue MetalsGroup Ltd
+   REF DRG No.                                             TITLE                              REV   DATE                           DESCRIPTION                                     DRN      CHK      SUP      DES     DAP      PAP      FMG                                                NORTH                                   A1      1:1         500CB-04230-DR-EL-0145                                  6
+
+
+
+            1                                  2                                   3                                 4                                 5                                 6                                 7                                 8                                 9                                 10                                 11                                12

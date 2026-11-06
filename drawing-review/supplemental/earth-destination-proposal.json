@@ -1,0 +1,467 @@
+{
+  "modelId": "site-whole-network",
+  "modelVersion": "construction-2026-10-23.8",
+  "reviewDate": "2026-10-23",
+  "earths": [
+    {
+      "id": "sw431:sw435:es:termination",
+      "label": "ES SW435 FD 02 earth termination",
+      "terminal": "sw431:sw435:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C1-CROSS-TIE"
+      ],
+      "reviewIds": [
+        "C1-R03",
+        "C1-R07"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, SW435 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-G / 2-3, tier 2 SW431 feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 2 and SW431 off-page arrow"
+        }
+      ]
+    },
+    {
+      "id": "sw435:tf453:hv-es:termination",
+      "label": "ES TF453 FD earth termination",
+      "terminal": "sw435:tf453:hv-es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF453-FEEDER"
+      ],
+      "reviewIds": [
+        "C2-R02",
+        "C2-R03",
+        "C2-R08",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF453 feeder/destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C transformer/incomer power routes"
+        }
+      ]
+    },
+    {
+      "id": "sw435:tf436:hv-es:termination",
+      "label": "ES TF436 FD / spare unconfirmed earth termination",
+      "terminal": "sw435:tf436:hv-es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF436-FUTURE"
+      ],
+      "reviewIds": [
+        "C2-R01",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 6, tier 5 and FUTURE destination"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 5 SPARE FD"
+        },
+        {
+          "document": "11098-07110-EL-DR-2350.pdf",
+          "revision": "16 (31/05/16)",
+          "page": 1,
+          "clause": "Drawing region: SW435 future MC436 branch"
+        }
+      ]
+    },
+    {
+      "id": "sw426:ss714:es:termination",
+      "label": "ES SS714 FD earth termination",
+      "terminal": "sw426:ss714:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:in01:es:termination",
+      "label": "RM714 IN01 earth · unconfirmed earth termination",
+      "terminal": "rm714:in01:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB-EARTH"
+      ],
+      "reviewIds": [
+        "DES-Q02",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 ring devices and transformer feeder earth symbols"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: SF RM714 IN01/IN02 and CB TF714 FD without corresponding earth symbols"
+        }
+      ]
+    },
+    {
+      "id": "rm714:in02:es:termination",
+      "label": "RM714 IN02 earth · unconfirmed earth termination",
+      "terminal": "rm714:in02:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB-EARTH"
+      ],
+      "reviewIds": [
+        "DES-Q02",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 ring devices and transformer feeder earth symbols"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: SF RM714 IN01/IN02 and CB TF714 FD without corresponding earth symbols"
+        }
+      ]
+    },
+    {
+      "id": "rm714:tf714:es:termination",
+      "label": "TF714 feeder earth · unconfirmed earth termination",
+      "terminal": "rm714:tf714:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB-EARTH"
+      ],
+      "reviewIds": [
+        "DES-Q02",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 ring devices and transformer feeder earth symbols"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: SF RM714 IN01/IN02 and CB TF714 FD without corresponding earth symbols"
+        }
+      ]
+    },
+    {
+      "id": "sw505:bus:es:termination",
+      "label": "ES SWXXX / ES SW505\nBus earth · tag unconfirmed earth termination",
+      "terminal": "sw505:bus:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-SW505-BUS-EARTH"
+      ],
+      "reviewIds": [
+        "SW-R01",
+        "SW-R02",
+        "SW-R07"
+      ],
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 3-4, tier2 bus-earth column"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: SW505 tier2 ES SW505"
+        }
+      ]
+    },
+    {
+      "id": "rm406:sw01:earth-termination",
+      "label": "RM406-SW01\nIncoming depicted earth contact",
+      "terminal": "rm406:sw01:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm406:sw01:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm406:sw02:earth-termination",
+      "label": "RM406-SW02 depicted earth contact",
+      "terminal": "rm406:sw02:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm406:sw02:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm406:sw03:earth-termination",
+      "label": "RM406-SW03 depicted earth contact",
+      "terminal": "rm406:sw03:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm406:sw03:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm406:sw04:earth-termination",
+      "label": "RM406-SW04 depicted earth contact",
+      "terminal": "rm406:sw04:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm406:sw04:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm410:sw01:earth-termination",
+      "label": "RM410-SW01\nIncoming depicted earth contact",
+      "terminal": "rm410:sw01:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm410:sw01:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm410:sw02:earth-termination",
+      "label": "RM410-SW02 depicted earth contact",
+      "terminal": "rm410:sw02:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm410:sw02:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm410:sw03:earth-termination",
+      "label": "RM410-SW03 depicted earth contact",
+      "terminal": "rm410:sw03:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm410:sw03:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "rm410:sw04:earth-termination",
+      "label": "RM410-SW04 depicted earth contact",
+      "terminal": "rm410:sw04:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "rm410:sw04:contact-interpretation"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R09"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw01:es:earth",
+      "label": "RM418 ES01 · unconfirmed termination",
+      "terminal": "wh:h7:rm418:sw01:es:b",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "WH-H7-IN01-EARTH"
+      ],
+      "reviewIds": [
+        "WH-POSITIONS",
+        "WH-Q02",
+        "WH-Q12"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 ES01"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-B / 6, incomingSW01 contact without earth glyph"
+        }
+      ]
+    },
+    {
+      "id": "rm413a:es-q8:lower:termination",
+      "label": "Lower ES-Q8 depicted earth contact",
+      "terminal": "rm413a:es-q8:lower:earth",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SV-RM413A-LOWER-INTERPRETATION"
+      ],
+      "reviewIds": [
+        "SV-Q09",
+        "SV-Q12"
+      ],
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 4-6, lower switching/earth symbol below Q1 and above TF413A"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM413A SW TF413A SW-01/ES aliases"
+        }
+      ]
+    }
+  ]
+}

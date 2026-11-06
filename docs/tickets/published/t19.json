@@ -1,0 +1,19 @@
+{
+  "id": "T19",
+  "number": 20,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/20",
+  "title": "Explore CV006 head-end and tail-end supplies",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

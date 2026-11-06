@@ -1,0 +1,19 @@
+{
+  "id": "T22",
+  "number": 23,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/23",
+  "title": "Explore the Hopper 10 supply and endpoint buses",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

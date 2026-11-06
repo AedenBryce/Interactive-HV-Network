@@ -1,0 +1,181 @@
+                  1                                        2                                         3                                        4                                        5                                         6                                        7                                        8                                        9                                        10                                        11                                       12
+
+
+
+                                                                                                                                                                 FROM                                                                                                                                                                                                                                                             NOTES:
+                                                                                                                                                     600A CIRCUIT BREAKER
+                                                                                                                                                              REF DRG
+
+A                                                                                                                                                       07110-EL-DR-2349                                                                                                                                                                                                                                                          1.    48V DC SUPPLIES FROM LOCAL                                         A
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                        DISTRIBUTION BOARD DB 441B
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                  LEGEND:
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                  87T   =  TRANSFORMER DIFFERENTIAL RELAY SYSTEM
+                                                                                                                                                                                                                                                                                                                                                                                                                                  86    =  LOCKOUT RELAY
+                                                                                                                                                                                                                                                                                                                                                                                                                                  50    =  INSTANTANIOUS OVERCURRENT OR RATE OF
+                                                                                                                                                                                                                                                                                                                                                                                                                                           RISE RELAY
+                                                                                                                                                                                                                                                                                                                                                                                                                                  51    =  AC TIME OVERCURRENT RELAY
+B                                                         WATER TOWER HV SWITCHBOARD                                                                                                                                                                                                                                                                                                                                              50G   =  GROUND INSTANTANIOUS OVERCURRENT OR                             B
+                                                                                                                                                                                                                                                                                                                                                                                                                                           RATE OF RISE RELAY
+                                                           SW441 INCOMER                                                                                                                        BUS EARTH                                                     TF441 FEEDER                                                                                                                                                        51G   =  GROUND AC TIME OVERCURRENT RELAY
+
+                                                                                                                                                                           ES SW441 IN 01
+
+
+
+
+                                                                                                                                    SEL 351A                     600:1
+
+
+                                                                                                                                         86
+
+
+                                                                                                                                         50
+                                                                                                                                                                 CB SW441 IN 01
+                                                                                                                                         51                      630A
+
+
+                                                                                                                                        50G
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          C
+                                                                                                                                         51G
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                    22kV, 630A, 25kA 3 Sec
+
+
+
+
+
+
+                                                                                                                                                                                                           22kV        110V
+
+
+
+
+
+
+
+                                                                                                    +48VDC (PROTECTION)
+D                                                                                                                 COMMS                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+                                                                                                                 +48VDC (TRIP)
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                               CB TF441 FD
+                                                                                                                                                                                                                                                                                                               630A
+                                                                                    SEL 2030
+
+                                                                                                                                                                                                                                                                                   86
+                                                                                                                                                                                                     ES SW441
+
+                                                                                                                                                                                                                                                                                   50
+                                                                                 5110        6110
+                                                                                                                                                                                                                                                                                   51                          ES TF441 FD
+
+
+E                                                                                                                                                                                                                                                                                 50G                                                                                                                                                                                                                      E
+
+                                                                                   MOXA 405A
+                                                                                                                                                                                                                                                                                  51G
+
+
+                                                                                                                                                                                                                                                                                  87T
+
+
+                                                                                                                                                                                                                                                                                  SEL 387A                     100:1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          G
+
+                                                                            TO MC441                        TO DB441A                             TO DB441B                                                                                                           MC441                        TF441
+
+                                                                        COMMS CABINET                   07110-EL-DR-3420                     07110-EL-DR-3425
+                                                                       07110-EL-DR-4291                                                                                                                                                                                       TF441 22kV/400V
+
+                                                                                                                                                                                                                                                                          MC441 - WATER TOWER
+                                                                                                                                                                                                                                                                              07110-EL-DR-2657
+
+
+
+
+
+
+
+
+    This drawing and all the information                                                                                     728/01/25    AS FOUND 23.10.23                                          AP    MP   CH                   CLIENT                                                                                                                                  DRAWN          R. TITREN               2/11/06
+
+          on it is the property of                                                                                        6   06/08/09    ISSUED FOR AS-BUILT                                        KW   CJT   SQ   CJT  DF    DF                                                                                                                                                                                              PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                        ENGINEER       R. COX                  2/11/06
+       It is confidential and is given                                                                                    5   21/02/08    RE-ISSUED FOR CONSTRUCTION                                 JM    LB   AJ   LB   NJ    NJ
+                                                                                                                                                                                                                                                                                                                                                                             CHECKED        D. PALMER               2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                 4   25/09/07    CIRCUIT BREAKER RATING REVISED                             JZ   GW    AJ   LB   NJ    NJ                                                                                                                                                                                                                                                                         H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                    LEAD ENG       L. BRUNN                2/11/06     SW441 - WATER TOWER
+        drawing nor any information                                                                                       3   22/08/07    CABLE INFORMATION ADDED                                    JZ   GW    AJ   RC   LB    LB
+
+    concerning it may be copied, exhibited                                                                                2   11/05/07    RE-ISSUED FOR CONSTRUCTION                                 JZ    RC   AJ   RC   NJ   GW                                                                                                                                            ENG MGR        J. BILESSURIS           3/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                           SINGLE LINE DIAGRAM
+    photographs be taken of any article 07000-EL-DR-2360    HV PROTECTION, SCHEMATIC DIAGRAM                              1   17/11/06    RE-ISSUED FOR CONSTRUCTION                                 WL    DG  DGP   LB   JB   GW                                                                               Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                       Level 2, Hyatt Centre                     Tel: +61 8 9266 0111    Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR      G. WIESER               3/11/06
+      fabricated or assembled from this07110-EL-DR-2349     MINE OFP & CLOUD BREAK CAMP POWER SLD                         0   02/11/06    ISSUED FOR CONSTRUCTION                                    RT    RC  DGP   LB   JB   GW                                                                                                                                                                                               PROJECT No:            DRG No:                                    REV:
+       drawing without the consent of                                                                                                                                                                                                  87 Adelaide Terrace                       Fax: +61 8 9221 9483     Team 45 and WorleyParsons act on behalf of and as disclosed agent  SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                REFERENCES                           REV     DATE                            DESCRIPTION                          DRN  ENG  CHK   LE   EM    PM     East Perth  WA  6004  Australia           ABN 52 103 096 340                         of The Pilbara Infrastructure.                                  N/A                       A1          300/11098                  07110-EL-DR-2355                       7
+
+
+                  1                                        2                                         3                                        4                                        5                                         6                                        7                                        8                                        9                                        10                                        11                                       12

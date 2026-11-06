@@ -1,0 +1,534 @@
+{
+  "status": "Source evidence only; not a runtime model or owner acceptance",
+  "reviewDate": "2026-10-22",
+  "scope": "SW426 through first LV buses plus laboratory RM714 interface; outgoing LV circuits excluded",
+  "sources": [
+    {
+      "ref": "D00",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "projectRevision": "0",
+      "page": 1,
+      "title": "OPF overview sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Overview index and Desands/laboratory comparison; not isolation authority"
+    },
+    {
+      "ref": "D01",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2352.pdf",
+      "sha256": "caccfe8785454cea4cc7b1af6a6d6ac7f4a6db541d0b8b0ee83990df0445e6f3",
+      "projectRevision": "9",
+      "page": 1,
+      "title": "SW426 Desand SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "HV incomer, bus, bus earth and feeder topology"
+    },
+    {
+      "ref": "D02",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2357.pdf",
+      "sha256": "2f919874b1608c4c3ba4f4d52536a4edf47d1319cee9a570b0e54c4b376519dd",
+      "projectRevision": "6",
+      "page": 1,
+      "title": "SW426 Desanding SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Same HV bus continuation, remaining feeders and laboratory interface"
+    },
+    {
+      "ref": "D03",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2255.pdf",
+      "sha256": "5fba7ea53b05f164243f1d06c2002d4c6252c34924918b6f20e5862622764b1d",
+      "projectRevision": "1",
+      "page": 1,
+      "title": "SS714 Laboratory buildings SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "RM714 and TF714 through SW714 LV bus"
+    },
+    {
+      "ref": "D04",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2653.pdf",
+      "sha256": "e4f312fca6b07c11b2c2bc312871861c5a2bf2178826237e5b180c1ef22e1dc3",
+      "projectRevision": "14",
+      "page": 1,
+      "title": "MC426 Desand modules 1 and 2 SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF426 and MC426 incomer/final LV bus; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D05",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2662.pdf",
+      "sha256": "ff1a988f076a80cc121646980093ef5b66427f1eb0da58ad3658ce922a16e59d",
+      "projectRevision": "12",
+      "page": 1,
+      "title": "MC426 Desand modules 1 and 2 SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Continuation of same LV bus; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D06",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2663.pdf",
+      "sha256": "8de1eb8bf8ddc97969f84b5c6ec8c9978d41a87ed5b318694042893274760a6a",
+      "projectRevision": "10",
+      "page": 1,
+      "title": "MC426 Desand modules 1 and 2 SLD sheet 3",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Continuation of same LV bus; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D07",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2463.pdf",
+      "sha256": "1c365b40ed1ab5e96a18e566773fcb3f2e4127d2c3938685059914dd145fa8ea",
+      "projectRevision": "11",
+      "page": 1,
+      "title": "SW427 Desand modules 1 and 2 SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF427 and separate delta/star LV incomers/buses; outgoing VSD circuits excluded"
+    },
+    {
+      "ref": "D08",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2464.pdf",
+      "sha256": "a37cd0f4d4edf79b577c9849044db479bac280009fb5f0b420aabceb28b8d9c9",
+      "projectRevision": "13",
+      "page": 1,
+      "title": "SW427 Desand modules 1 and 2 SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "LV bus continuation; downstream SH131 key-switch note recorded outside endpoint scope"
+    },
+    {
+      "ref": "D09",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0142.pdf",
+      "sha256": "a15c6d45daac1b36cea13d7a291a8c75290e0bbaec983f38478db77f63fbeabc",
+      "projectRevision": "6",
+      "page": 1,
+      "title": "SW427 SLD sheet 3",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Same LV bus continuation; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D10",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2676.pdf",
+      "sha256": "411ee75d8b4b4711d633eedc1a8d23950a3a1676c51a799c6d590074af038ca1",
+      "projectRevision": "11",
+      "page": 1,
+      "title": "MC428 Desands thickener SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF428, CB MC428A IN and final MC428A bus"
+    },
+    {
+      "ref": "D11",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2677.pdf",
+      "sha256": "f253a1bb54cfd5ab12f3b594f5fb3f25a2de4648c8088b23713ab0cff4fda5b3",
+      "projectRevision": "11",
+      "page": 1,
+      "title": "MC428 Desands thickener SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "MC428A continuation; MC428B LV extension beyond first LV bus excluded"
+    },
+    {
+      "ref": "D12",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0100.pdf",
+      "sha256": "867d6f3744c246f3dad4bfb0d788a00bb4615c0019391e71a23d787e0e93baca",
+      "projectRevision": "5",
+      "page": 1,
+      "title": "MC428C SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "LV extension from MC428; beyond final first LV endpoint"
+    },
+    {
+      "ref": "D13",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2481.pdf",
+      "sha256": "85076c0292b3ba7b48294bd3e6077ef18049ae37498bf6ffcb2b3edc3e65df64",
+      "projectRevision": "7",
+      "page": 1,
+      "title": "SW429 Desands thickener SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF429 and separate delta/star LV incomers/buses"
+    },
+    {
+      "ref": "D14",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2482.pdf",
+      "sha256": "7b8ba8d818fb3679b1305c04e4d7a4c5422194f49e0ce586a32a049f0cfe26bd",
+      "projectRevision": "9",
+      "page": 1,
+      "title": "SW429 Desands thickener SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "LV bus continuation; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D15",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0143.pdf",
+      "sha256": "3919b3f8d8aead7f4937c397e816662d883d336fd27e98cb8e9b903589191cf1",
+      "projectRevision": "3",
+      "page": 1,
+      "title": "SW429 SLD sheet 3",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "LV bus continuation; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D16",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2483.pdf",
+      "sha256": "d960c6a5dc7798b8d5d19b80dc8155b753b4cefb29c83e534e0140d360642792",
+      "projectRevision": "12",
+      "page": 1,
+      "title": "SW439 Desand module 3 SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF439 and separate delta/star LV incomers/buses"
+    },
+    {
+      "ref": "D17",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0145.pdf",
+      "sha256": "dabad75414d54dd836aa25e9eb0a4cf1f17f0573961f6bb4d9b145ec2db03328",
+      "projectRevision": "7",
+      "page": 1,
+      "title": "SW439 SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "LV bus continuation; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D18",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2683.pdf",
+      "sha256": "e7247e47c6b1f75246761eacb8599f586cbacb993bfe98abd569fbb72d04384d",
+      "projectRevision": "8",
+      "page": 1,
+      "title": "MC430 Desand module 3 SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF430 and MC430 incomer/final LV bus"
+    },
+    {
+      "ref": "D19",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2684.pdf",
+      "sha256": "03a68a76d03845a1ebe33fa37d4094476d17b12fe61398e029c30ea061478ab6",
+      "projectRevision": "12",
+      "page": 1,
+      "title": "MC430 Desand module 3 SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Same LV bus continuation; outgoing LV circuits excluded"
+    },
+    {
+      "ref": "D20",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0146.pdf",
+      "sha256": "74d367e6b52ec94a7e5e89ba8a659f76cd3496803350a27deff3f039e3b745ff",
+      "projectRevision": "4",
+      "page": 1,
+      "title": "SW440 SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF440 and separate delta/star LV incomers/buses"
+    },
+    {
+      "ref": "D21",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0147.pdf",
+      "sha256": "869f2f7245208e3c11d7c38911b20a74441dcafeb8fc211d819e0ba7a84f39a8",
+      "projectRevision": "5",
+      "page": 1,
+      "title": "SW443 SLD sheet 1",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "TF443 and separate delta/star LV incomers/buses"
+    },
+    {
+      "ref": "D22",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0209.pdf",
+      "sha256": "2cad2cc5453b0ea68f8b2047f844ac84a407fa75a87b86ae1aeade7978e3617f",
+      "projectRevision": "2",
+      "page": 1,
+      "title": "SW443 SLD sheet 2",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "LV bus continuation; outgoing/future drive circuits excluded"
+    },
+    {
+      "ref": "D23",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0198.pdf",
+      "sha256": "9a290d49a5f19b25901aeb78f0bc8c9c82cda0efff8ff3d41f83888c9e345965",
+      "projectRevision": "1",
+      "page": 1,
+      "title": "MC443 SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Auxiliary 400 V extension from MC426 beyond first LV endpoint"
+    },
+    {
+      "ref": "D24",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0097.pdf",
+      "sha256": "38bfa7573923141b0df2c494371dee4b67c7f6152782172bfa7672319d454b0e",
+      "projectRevision": "C",
+      "page": 1,
+      "title": "VSD switchroom SR443 electrical layout",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Physical layout/equipment list, not a primary connectivity source"
+    },
+    {
+      "ref": "D25",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0148.pdf",
+      "sha256": "b4c817e1cd91b17999fe1843fbfac9cb22d1b72cef65b027ed0246dd61b3e037",
+      "projectRevision": "2",
+      "page": 1,
+      "title": "Switchroom SR440 earthing SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Protective earth/bonding reference; no inferred phase-earth through connection"
+    },
+    {
+      "ref": "D26",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0149.pdf",
+      "sha256": "2ae8a71d16dce47e030750dc5d86b5808d94d46d3c27e5d2d2b3e04ba92a7e0f",
+      "projectRevision": "3",
+      "page": 1,
+      "title": "Switchroom SR443 earthing SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Protective earth/bonding reference; no inferred phase-earth through connection"
+    },
+    {
+      "ref": "D27",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0933.pdf",
+      "sha256": "554a79546f88f4cbef87b41781b7bae1d5a016d1d8f93d235cb872c8bfe78f2e",
+      "projectRevision": "1",
+      "page": 1,
+      "title": "Switchroom SR427 earthing SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Protective earth additions; no inferred phase-earth through connection"
+    },
+    {
+      "ref": "D28",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0936.pdf",
+      "sha256": "727448c03e74225d0157da5383a1bb584412ada3cc59525820d1fda116180959",
+      "projectRevision": "2",
+      "page": 1,
+      "title": "Switchroom SR430 earthing SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Protective earth additions; no inferred phase-earth through connection"
+    },
+    {
+      "ref": "D29",
+      "path": "drawings/Asset Drawing Repo/500CB-04230-DR-EL-0937.pdf",
+      "sha256": "56861444e8587a43c037270134e1cf5cefd91a51f6e6d4f59c5b0103d6ee0bbe",
+      "projectRevision": "2",
+      "page": 1,
+      "title": "Switchroom SR439 earthing SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Protective earth additions; no inferred phase-earth through connection"
+    },
+    {
+      "ref": "D30",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2253.pdf",
+      "sha256": "f8981d690da6ea8d5f19b8ffd5b076e375485cad9109286274f6b75aa35c9fc2",
+      "projectRevision": "3",
+      "page": 1,
+      "title": "SS712 Mine services SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Cross-area SW426 source-reference conflict and explicit TF712/LV disconnection"
+    },
+    {
+      "ref": "D31",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2361.pdf",
+      "sha256": "24539924a40399ba5c0f35ab6389d7349fc99965b20010433b7bf856f29ae767",
+      "projectRevision": "8",
+      "page": 1,
+      "title": "HV protection communications network SLD",
+      "review": "Full page visually inspected; necessary in-scope detail crops inspected",
+      "disposition": "Communications only; alias CB RM714 FD, not a power connection"
+    }
+  ],
+  "hvBus": {
+    "id": "SW426",
+    "incomer": "CB SW426 IN 01",
+    "incomerEarth": "ES SW426 IN 01",
+    "incomingEarthBranchSide": "Incoming-line side of breaker",
+    "incomingCable": "SW426-P-01",
+    "upstreamDrawing": "07110-EL-DR-5151",
+    "busEarth": "ES SW426",
+    "busEarthTier": 3,
+    "sheets": [
+      "D01",
+      "D02"
+    ],
+    "continuation": "One depicted electrical bus continues across the sheet boundary; no depicted bus tie at that boundary"
+  },
+  "transformerBranches": [
+    {
+      "tier": 0,
+      "hvBreaker": "CB TF440 FD",
+      "hvEarthSwitch": "ES TF440 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF440",
+      "printedVoltage": "D01: 22kV/690V/690V; D20: 22kV/0.72/0.72kV",
+      "lvBoard": "SW440",
+      "lvIncomers": [
+        "CB SW440 IN D",
+        "CB SW440 IN Y"
+      ],
+      "lvBusEvidence": "D20",
+      "hvEvidence": "D01",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 2,
+      "hvBreaker": "CB TF426 FD",
+      "hvEarthSwitch": "ES TF426 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF426",
+      "printedVoltage": "22kV/400V",
+      "lvBoard": "MC426",
+      "lvIncomers": [
+        "CB MC426 IN"
+      ],
+      "lvBusEvidence": "D04",
+      "hvEvidence": "D01",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 4,
+      "hvBreaker": "CB TF428 FD",
+      "hvEarthSwitch": "ES TF428 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF428",
+      "printedVoltage": "22kV/400V",
+      "lvBoard": "MC428 / MC428A",
+      "lvIncomers": [
+        "CB MC428A IN"
+      ],
+      "lvBusEvidence": "D10",
+      "hvEvidence": "D01",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 5,
+      "hvBreaker": "CB TF427 FD",
+      "hvEarthSwitch": "ES TF427 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF427",
+      "printedVoltage": "22kV/690V/690V",
+      "lvBoard": "SW427",
+      "lvIncomers": [
+        "CB SW427 IN D",
+        "CB SW427 IN Y"
+      ],
+      "lvBusEvidence": "D07",
+      "hvEvidence": "D01",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 6,
+      "hvBreaker": "CB TF429 FD",
+      "hvEarthSwitch": "ES TF429 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF429",
+      "printedVoltage": "22kV/690V/690V",
+      "lvBoard": "SW429",
+      "lvIncomers": [
+        "CB SW429 IN D",
+        "CB SW429 IN Y"
+      ],
+      "lvBusEvidence": "D13",
+      "hvEvidence": "D02",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 7,
+      "hvBreaker": "CB TF439 FD",
+      "hvEarthSwitch": "ES TF439 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF439",
+      "printedVoltage": "22kV/690V/690V",
+      "lvBoard": "SW439",
+      "lvIncomers": [
+        "CB SW439 IN D",
+        "CB SW439 IN Y"
+      ],
+      "lvBusEvidence": "D16",
+      "hvEvidence": "D02",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 8,
+      "hvBreaker": "CB TF430 FD",
+      "hvEarthSwitch": "ES TF430 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF430",
+      "printedVoltage": "22kV/400V",
+      "lvBoard": "MC430",
+      "lvIncomers": [
+        "CB MC430 IN"
+      ],
+      "lvBusEvidence": "D18",
+      "hvEvidence": "D02",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    },
+    {
+      "tier": 10,
+      "hvBreaker": "CB TF443 FD",
+      "hvEarthSwitch": "ES TF443 FD",
+      "hvEarthBranchSide": "Outgoing-transformer cable side of HV breaker",
+      "transformer": "TF443",
+      "printedVoltage": "D02: 22kV/690V/690V; D21: 22kV/0.72/0.72kV",
+      "lvBoard": "SW443",
+      "lvIncomers": [
+        "CB SW443 IN D",
+        "CB SW443 IN Y"
+      ],
+      "lvBusEvidence": "D21",
+      "hvEvidence": "D02",
+      "reverseTransfer": "Unconfirmed",
+      "earthTransfer": "Unconfirmed",
+      "initialStates": null
+    }
+  ],
+  "laboratory": {
+    "hvEvidence": "D02 tier9",
+    "hvBreaker": "CB SS714 FD",
+    "hvEarthSwitch": "ES SS714 FD",
+    "cableLabelUpstream": "RM714-P-01",
+    "cableLabelDownstream": "SS714-P-01",
+    "downstreamEvidence": "D03 upper-left",
+    "ringMainUnit": "RM714",
+    "incomingLabelsDetail": [
+      "SF RM714 IN01",
+      "SF RM714 IN02"
+    ],
+    "incomingLabelsOverview": [
+      "SW RM714 IN01",
+      "SW RM714 IN02"
+    ],
+    "transformerFeeder": "CB TF714 FD",
+    "transformer": "TF714",
+    "transformerVoltage": "22kV/400V",
+    "lvIncomer": "CB SW714 IN",
+    "endpointDetail": "SW714 400V bus",
+    "endpointOverview": "MC714",
+    "extraIncomerConnection": "Unconfirmed; D03 IN02 shows a stub without a named external destination",
+    "earthCoverage": "Unconfirmed: D00 shows incoming/transformer feeder earth branches omitted from D03"
+  },
+  "crossAreaSourceConflict": {
+    "ref": "D30",
+    "sourceNote": "FROM DESAND SWITCHBOARD SW426 / 07110-EL-DR-2352",
+    "incoming": "SF RM712 IN02",
+    "otherConnection": "TO RING MAIN UNIT RM713 / 07110-EL-DR-2254",
+    "unresolved": "The reviewed SW426 sheets have no outgoing bay explicitly labelled RM712; exact present connection is unconfirmed",
+    "explicitLvDisconnection": "D30 says cables disconnected and pulled out of main distribution board between TF712 and SW712",
+    "lvGeneratorLabels": [
+      "DG1 (6207)",
+      "DG7 (6206)"
+    ],
+    "changeoverLabel": "MCS"
+  },
+  "interpretationBoundary": "Depicted source supply does not independently establish universal reverse winding transfer, transformer earth transfer or neutral-to-phase paths. Source/earth policies and normal states require confirmation.",
+  "localReviewQuestions": [
+    "DES-Q01 RM712 source route/bay and present commissioning",
+    "DES-Q02 RM714 earth device coverage differs across overview/detail",
+    "DES-Q03 SS714/RM714 cable and SW714/MC714 identity aliases",
+    "DES-Q04 TF440/TF443 690V vs720V transformer label differences",
+    "DES-Q05 MC428/MC428A and subsequent LV extensions; preserve endpoint boundary",
+    "DES-Q06 TF429 Stage2 commissioning and all baseline states unconfirmed",
+    "DES-Q07 cross-reference0148 describes SW443 SLD but supplied0148 is SR440 earth sheet",
+    "DES-Q08 physical interlock coverage, three-position/withdrawal details and transformer transfer policies unconfirmed"
+  ]
+}

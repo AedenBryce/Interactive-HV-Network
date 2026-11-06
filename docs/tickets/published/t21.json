@@ -1,0 +1,19 @@
+{
+  "id": "T21",
+  "number": 22,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/22",
+  "title": "Explore services, workshop and conveyor supply areas",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

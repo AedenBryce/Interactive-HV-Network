@@ -1,0 +1,1305 @@
+{
+  "reviewDate": "2026-10-23",
+  "modelId": "site-whole-network",
+  "modelVersion": "construction-2026-10-23.8",
+  "mechanisms": [
+    {
+      "assetId": "sw431:sw435:cb",
+      "label": "CB SW435 FD 02",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "sw431:sw435:cb:a",
+          "sw431:sw435:cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, SW435 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-G / 2-3, tier 2 SW431 feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 2 and SW431 off-page arrow"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/2025)",
+          "page": 1,
+          "clause": "C-D/3-6; SW431 tiers1,2,4,5,6,7"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer26: For all breakers that show they are removable, There should be an action for Open/Close and also Rack in/Rack out.. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:tf453:hv-cb",
+      "label": "CB TF453 FD",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "sw435:tf453:hv-cb:a",
+          "sw435:tf453:hv-cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF453 feeder/destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C transformer/incomer power routes"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/2025)",
+          "page": 1,
+          "clause": "A-B/7-12; SW435 tiers1,2,3,5,6,7,8"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer26: For all breakers that show they are removable, There should be an action for Open/Close and also Rack in/Rack out.. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:sw453:d:cb",
+      "label": "CB SW453 IN D",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "sw435:sw453:d:cb:a",
+          "sw435:sw453:d:cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "11098-07110-EL-DR-2469.pdf",
+          "revision": "6 (18/11/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C, continuation of same D/Y phase bars"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer35: Yes, both LV and MV examples. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:sw453:y:cb",
+      "label": "CB SW453 IN Y",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "sw435:sw453:y:cb:a",
+          "sw435:sw453:y:cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "11098-07110-EL-DR-2469.pdf",
+          "revision": "6 (18/11/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C, continuation of same D/Y phase bars"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer35: Yes, both LV and MV examples. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:ss714:cb",
+      "label": "CB SS714 FD",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "sw426:ss714:cb:a",
+          "sw426:ss714:cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/2025)",
+          "page": 1,
+          "clause": "E-F/1-6; SW426 tiers0,1,2,4-10"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer26: For all breakers that show they are removable, There should be an action for Open/Close and also Rack in/Rack out.. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    },
+    {
+      "assetId": "rm714:sw714:in:cb",
+      "label": "CB SW714 IN",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "rm714:sw714:in:cb:a",
+          "rm714:sw714:in:cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1 (25/09/2009; ISSUED FOR AS-BUILT)",
+          "page": 1,
+          "clause": "D-E/3; CB SW714 IN, 1600 A"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer35: Yes, both LV and MV examples. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:mc413:cb",
+      "label": "CB MC413 IN\n3000 A printed · supply route confirmed",
+      "field": "removableBreaker",
+      "declaration": {
+        "mainPair": [
+          "rm413:mc413:cb:a",
+          "rm413:mc413:cb:b"
+        ]
+      },
+      "knowledge": "provisional",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 2-3, MC413 incoming/bar and missing 1001 reference"
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11 (14.11.25; IFC)",
+          "page": 1,
+          "clause": "A-B / 4-6, FROM 22kV RING MAIN UNIT RC001 / reference 11098-07110-EL-DR-2350 and TF413; C-D / 4-5, CB MC413 IN 3000 A; D / 1-11, 400 V / 3000 A / 50 kA for 1 sec phase bar; H / 8-12, title/revision 11."
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11 (14.11.25; IFC)",
+          "page": 1,
+          "clause": "A-B / 4-6, FROM 22kV RING MAIN UNIT RC001 / reference 11098-07110-EL-DR-2350 and TF413; C-D / 4-5, CB MC413 IN 3000 A; D / 1-11, 400 V / 3000 A / 50 kA for 1 sec phase bar; H / 8-12, title/revision 11."
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11 (14.11.25; IFC)",
+          "page": 1,
+          "clause": "A-B/4-5: RC001/reference2350 and TF413; current source binding corrected by owner, historical cause unconfirmed."
+        },
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-E/2-4: RM413 TF413 feeder, transformer and MC413 route."
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11",
+          "page": 1,
+          "clause": "C-D/4-5"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Answer35: Yes, both LV and MV examples. Full question and scope: drawing-review/supplemental/owner-configuration-review.md."
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "line33:station-to-recloser",
+      "from": "station:sb02:f4:transformer:output",
+      "to": "line33:pole-1-recloser:in",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "PL-STATION-ALIAS"
+      ],
+      "reviewIds": [
+        "PS-SB02-SR002",
+        "PS-DUPLICATE-TF04"
+      ],
+      "references": [
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10/06/2022; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C, station origin SR-002 PANEL F4 / TF04"
+        }
+      ]
+    },
+    {
+      "id": "sw431:sw435:bus-link",
+      "from": "sw431:bus:bar",
+      "to": "sw431:sw435:cb:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C1-CROSS-TIE"
+      ],
+      "reviewIds": [
+        "C1-R03",
+        "C1-R07"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, SW435 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-G / 2-3, tier 2 SW431 feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 2 and SW431 off-page arrow"
+        }
+      ]
+    },
+    {
+      "id": "sw431:sw435:es:branch",
+      "from": "sw431:sw435:cb:b",
+      "to": "sw431:sw435:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C1-CROSS-TIE"
+      ],
+      "reviewIds": [
+        "C1-R03",
+        "C1-R07"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, SW435 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-G / 2-3, tier 2 SW431 feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 2 and SW431 off-page arrow"
+        }
+      ]
+    },
+    {
+      "id": "sw431:cross-link:cable-SW431-P-02",
+      "from": "sw431:sw435:cb:b",
+      "to": "sw431:interface:sw435:port",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C1-CROSS-TIE"
+      ],
+      "reviewIds": [
+        "C1-R03",
+        "C1-R07"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, SW435 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-G / 2-3, tier 2 SW431 feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 2 and SW431 off-page arrow"
+        }
+      ]
+    },
+    {
+      "id": "sw435:cross-link:cable-SW431-P-02",
+      "from": "sw435:sw431:cb:b",
+      "to": "sw435:interface:sw431:port",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-SW431-LINK"
+      ],
+      "reviewIds": [
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, tier 2 SW431 link"
+        },
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, opposite SW435 feeder"
+        }
+      ]
+    },
+    {
+      "id": "sw435:tf453:hv-es:branch",
+      "from": "sw435:tf453:hv-cb:b",
+      "to": "sw435:tf453:hv-es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF453-FEEDER"
+      ],
+      "reviewIds": [
+        "C2-R02",
+        "C2-R03",
+        "C2-R08",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF453 feeder/destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C transformer/incomer power routes"
+        }
+      ]
+    },
+    {
+      "id": "sw435:tf436:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:tf436:hv-cb:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF436-FUTURE"
+      ],
+      "reviewIds": [
+        "C2-R01",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 6, tier 5 and FUTURE destination"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 5 SPARE FD"
+        },
+        {
+          "document": "11098-07110-EL-DR-2350.pdf",
+          "revision": "16 (31/05/16)",
+          "page": 1,
+          "clause": "Drawing region: SW435 future MC436 branch"
+        }
+      ]
+    },
+    {
+      "id": "sw435:tf436:hv-es:branch",
+      "from": "sw435:tf436:hv-cb:b",
+      "to": "sw435:tf436:hv-es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-TF436-FUTURE"
+      ],
+      "reviewIds": [
+        "C2-R01",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 6, tier 5 and FUTURE destination"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW435 tier 5 SPARE FD"
+        },
+        {
+          "document": "11098-07110-EL-DR-2350.pdf",
+          "revision": "16 (31/05/16)",
+          "page": 1,
+          "clause": "Drawing region: SW435 future MC436 branch"
+        }
+      ]
+    },
+    {
+      "id": "hpgr:mc001:cb:winding-cable",
+      "from": "hpgr:tf004:lv",
+      "to": "hpgr:mc001:cb:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-HPGR-MCC"
+      ],
+      "reviewIds": [
+        "C2-R06",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 7-8, TF004/MCCB/MC001 bar"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW002 TF004 output to MC438"
+        }
+      ]
+    },
+    {
+      "id": "hpgr:mc001:cb:bus-link",
+      "from": "hpgr:mc001:cb:b",
+      "to": "hpgr:mc001:bus:bar",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "C2-HPGR-MCC"
+      ],
+      "reviewIds": [
+        "C2-R06",
+        "C2-R11"
+      ],
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 7-8, TF004/MCCB/MC001 bar"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW002 TF004 output to MC438"
+        }
+      ]
+    },
+    {
+      "id": "sw426:ss714:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:ss714:cb:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "sw426:ss714:es:branch",
+      "from": "sw426:ss714:cb:b",
+      "to": "sw426:ss714:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "sw426:laboratory:cable",
+      "from": "sw426:ss714:cb:b",
+      "to": "rm714:in01:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:in01:bus-link",
+      "from": "rm714:in01:b",
+      "to": "rm714:bus:bar",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:in02:bus-link",
+      "from": "rm714:in02:b",
+      "to": "rm714:bus:bar",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:in01:es:branch",
+      "from": "rm714:in01:a",
+      "to": "rm714:in01:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB-EARTH"
+      ],
+      "reviewIds": [
+        "DES-Q02",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 ring devices and transformer feeder earth symbols"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: SF RM714 IN01/IN02 and CB TF714 FD without corresponding earth symbols"
+        }
+      ]
+    },
+    {
+      "id": "rm714:in02:es:branch",
+      "from": "rm714:in02:a",
+      "to": "rm714:in02:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB-EARTH"
+      ],
+      "reviewIds": [
+        "DES-Q02",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 ring devices and transformer feeder earth symbols"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: SF RM714 IN01/IN02 and CB TF714 FD without corresponding earth symbols"
+        }
+      ]
+    },
+    {
+      "id": "rm714:tf714:bus-link",
+      "from": "rm714:bus:bar",
+      "to": "rm714:tf714:cb:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:tf714:es:branch",
+      "from": "rm714:tf714:cb:b",
+      "to": "rm714:tf714:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB-EARTH"
+      ],
+      "reviewIds": [
+        "DES-Q02",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 ring devices and transformer feeder earth symbols"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: SF RM714 IN01/IN02 and CB TF714 FD without corresponding earth symbols"
+        }
+      ]
+    },
+    {
+      "id": "rm714:tf714:cable",
+      "from": "rm714:tf714:cb:b",
+      "to": "rm714:tf714:hv",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:sw714:cable",
+      "from": "rm714:tf714:lv",
+      "to": "rm714:sw714:in:cb:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "rm714:sw714:bus-link",
+      "from": "rm714:sw714:in:cb:b",
+      "to": "rm714:sw714:bus:bar",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "DES-LAB"
+      ],
+      "reviewIds": [
+        "DES-Q03",
+        "DES-Q08"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "id": "sw505:bus:es:branch",
+      "from": "sw505:bus:bar",
+      "to": "sw505:bus:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-SW505-BUS-EARTH"
+      ],
+      "reviewIds": [
+        "SW-R01",
+        "SW-R02",
+        "SW-R07"
+      ],
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 3-4, tier2 bus-earth column"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: SW505 tier2 ES SW505"
+        }
+      ]
+    },
+    {
+      "id": "sw454:interface:mc454-mc455:winding-1",
+      "from": "sw454:tf454:lv",
+      "to": "sw454:interface:mc454-mc455:port",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-TF454-MISSING-LV"
+      ],
+      "reviewIds": [
+        "SW-R01",
+        "SW-R04"
+      ],
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, TF454 → MC454 reference 8010"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 1-4, TF454 and MC454 / MC455"
+        },
+        {
+          "document": "11098-04400-EL-DR-8010",
+          "revision": "6",
+          "page": 1,
+          "clause": "Printed 04400-EL-DR-8010; A-B / 3-5 SW454 reference and TF454 22kV/400V 2MVA; C-D / 3-5 CB MC454 IN 3000A; D / 1-10 phase bar printed400V500A50kA1sec; H / 12 revision6 IFC 19/11/25. Separate neutral/MEN is not phase continuity."
+        }
+      ]
+    },
+    {
+      "id": "sw454:interface:sw455:winding-1",
+      "from": "sw454:tf455:lv-d",
+      "to": "sw454:interface:sw455:d",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-TF455-MISSING-LV"
+      ],
+      "reviewIds": [
+        "SW-R01",
+        "SW-R05"
+      ],
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 5-6, TF455 → SW455 reference 8020"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 1-4, TF455 and SW455"
+        },
+        {
+          "document": "11098-04400-EL-DR-8020",
+          "revision": "3",
+          "page": 1,
+          "clause": "Printed 04400-EL-DR-8020; A-B / 4-9 TF455; B-C / 2,10 CB SW455 IN D/Y; C-D / 1-10 separate 690V 2500A phase bars; H / 12 revision3; AS BUILT 17/08/2009."
+        }
+      ]
+    },
+    {
+      "id": "sw454:interface:sw455:winding-2",
+      "from": "sw454:tf455:lv-y",
+      "to": "sw454:interface:sw455:y",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SW-TF455-MISSING-LV"
+      ],
+      "reviewIds": [
+        "SW-R01",
+        "SW-R05"
+      ],
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 5-6, TF455 → SW455 reference 8020"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 1-4, TF455 and SW455"
+        },
+        {
+          "document": "11098-04400-EL-DR-8020",
+          "revision": "3",
+          "page": 1,
+          "clause": "Printed 04400-EL-DR-8020; A-B / 4-9 TF455; B-C / 2,10 CB SW455 IN D/Y; C-D / 1-10 separate 690V 2500A phase bars; H / 12 revision3; AS BUILT 17/08/2009."
+        }
+      ]
+    },
+    {
+      "id": "rm410:tf410b-mc410a",
+      "from": "rm410:tf410b:lv",
+      "to": "rm410:interface:mc410a:input",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "CV-MC410A-MISSING",
+        "CV-MC410A-ENDPOINT"
+      ],
+      "reviewIds": [
+        "CV-R10",
+        "CV-R06",
+        "CV-R11"
+      ],
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-5, TF410B→MC410A→MC410B"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 8-9, MC410A output and source references"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0005.pdf",
+          "revision": "2A redline / underlying 2 (11.01.22 / underlying 27.08.21; UPDATED TIER NUMBER AND MCCB SIZE; AS BUILT changes-as-marked)",
+          "page": 1,
+          "clause": "Drawing region: A / 5-7, FROM MC410A / reference 0079"
+        },
+        {
+          "document": "520CBC0003-2140-DR-EL-0002",
+          "revision": "6 (08.04.22; AS BUILT)",
+          "page": 1,
+          "clause": "A-B / 4-5 FROM 22kV RING MAIN UNIT RM410-SW03, ref CB19OP001B-04057-DR-EL-0001, TF410B 22kV/415V 500kVA Dyn11; C-D / 4-5 MC410A CB 630A; D / 1-12 phase bar 415V630A63kA1Sec; C-D / 5-8 separate neutral/MEN/earth; H revision6 08.04.22 AS BUILT."
+        },
+        {
+          "document": "520CBC0003-2140-DR-EL-0002",
+          "revision": "6 (08.04.22; AS BUILT)",
+          "page": 1,
+          "clause": "A-B / 4-5 FROM 22kV RING MAIN UNIT RM410-SW03, ref CB19OP001B-04057-DR-EL-0001, TF410B 22kV/415V 500kVA Dyn11; C-D / 4-5 MC410A CB 630A; D / 1-12 phase bar 415V630A63kA1Sec; C-D / 5-8 separate neutral/MEN/earth; H revision6 08.04.22 AS BUILT."
+        }
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw01:es:branch",
+      "from": "wh:h7:rm418:sw01:a",
+      "to": "wh:h7:rm418:sw01:es:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "WH-H7-IN01-EARTH"
+      ],
+      "reviewIds": [
+        "WH-POSITIONS",
+        "WH-Q02",
+        "WH-Q12"
+      ],
+      "references": [
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 ES01"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-B / 6, incomingSW01 contact without earth glyph"
+        }
+      ]
+    },
+    {
+      "id": "rm721:cable-RM721-P-01",
+      "from": "services:interface:sw411:port",
+      "to": "rm721:in01:a",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "SV-R002",
+        "WN-SW411-TIER16-TAGS",
+        "WN-SW411-TIER16-CABLE"
+      ],
+      "reviewIds": [
+        "SV-Q01",
+        "SV-Q12"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-G / 11-12, tier16"
+        },
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 6-7, incoming"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: A-B / 7-12, RM721 feeder names"
+        },
+        {
+          "document": "11098-07110-EL-DR-2350.pdf",
+          "revision": "16 (31.05.16; AS BUILT FOR CB16OP003)",
+          "page": 1,
+          "clause": "Drawing region: A-B / 10-11, RM721 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 11-12, tier16 RM721 destination with printed SW454 CB/ES/cable labels"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25)",
+          "page": 1,
+          "clause": "Upper-left SW411 tier16 CB/ES RM721 labels"
+        },
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-D / 6-7, reciprocal RM721 incoming and RM721-P-01 cable tag"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 11-12, tier16 RM721 destination with printed SW454-P-01 cable label"
+        },
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-D / 6-7, reciprocal RM721 incoming from SW411 and RM721-P-01 cable tag"
+        }
+      ]
+    },
+    {
+      "id": "whole:join:rm721",
+      "from": "sw411:tier-16:interface:port",
+      "to": "services:interface:sw411:port",
+      "knowledge": "provisional",
+      "evidenceIds": [
+        "WN-JOIN-rm721",
+        "WN-SW411-TIER16-CABLE"
+      ],
+      "reviewIds": [
+        "WN-JOIN-rm721",
+        "WN-SW411-TIER16-CABLE"
+      ],
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 11-12, tier16 RM721 destination and SW454 aliases"
+        },
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-D / 6-7, FROM SW411 / RM721-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 11-12, tier16 RM721 destination with printed SW454-P-01 cable label"
+        },
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-D / 6-7, reciprocal RM721 incoming from SW411 and RM721-P-01 cable tag"
+        }
+      ]
+    }
+  ]
+}

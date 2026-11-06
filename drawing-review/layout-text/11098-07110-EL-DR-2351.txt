@@ -1,0 +1,178 @@
+                  1                                       2                                        3                                       4                                        5                                       6                                        7                                        8                                       9                                       10                                       11                                      12
+
+
+                                                                 FROM
+                                                    HV SWITCHBOARD SW411                                                                                                                                                                                                                                                                                                                                                  NOTES:
+                                                         07110-EL-DR-5151
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                          1.    48V DC SUPPLIES FROM LOCAL                                       A
+                                                                                                                                                                                                                                                                                                                                                                                                                                 DISTRIBUTION BOARD DB421B
+
+
+
+
+
+
+                                                                                                                                                                       NS4217-F-02                                                                                                                                                                                                                                        LEGEND:
+                                                                                                                                                                                                      TO MC421 COMMS CABINET
+
+                                                                                                                                                                       NS4217-F-01                    07110-EL-DR-4282
+                                                                                                                                                                                                                                                                                                                                                                                                                           87B  =  BUS ZONE DIFFERENTIAL RELAY SYSTEM
+                                                                                                                                                                                                                                                                                                                                                                                                                           87T  =  TRANSFORMER DIFFERENTIAL RELAY SYSTEM
+                                                                                                                                                                                                      TO DB421A                                                                                                                                                                                                            86   =  LOCKOUT RELAY
+
+                                                                                                                                                                     SW421-COMM-P-01                                                                                                                                                                                                                                       50   =  INSTANTANIOUS OVERCURRENT OR RATE OF
+                                                                                                                                                                                                      07110-EL-DR-3340                                                                                                                                                                                                             RISE RELAY
+                                                                                                                                                                                                                                                                                                                               SCREENING HV SWITCHBOARD - SW421                                                            51   =  AC TIME OVERCURRENT RELAY
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 B
+                  SW421 INCOMER                                                                          BUS EARTH                                                  MC421 FEEDER                                MC422 FEEDER                                                 SW423 FEEDER                                                SPARE                                                                             50G  =  GROUND INSTANTANIOUS OVERCURRENT OR
+           5      TIER 1                                                                                 TIER 3                                                     TIER 4                                      TIER 5                                                       TIER 6                                                      TIER 7                                                                                    RATE OF RISE RELAY
+
+                                                                           ES SW421 IN 01                                                                                                                                                                                                                                                                                                                                  51G  =  GROUND AC TIME OVERCURRENT RELAY
+
+
+                                     SEL 351A                     600:1
+                                                                                                                           MOXA 405A
+                                           86
+
+
+                                           50
+                                                                  CB SW421 IN 01                                         5110        6110
+                                           51                     630A
+
+
+                                          50G
+
+
+                                          51G                                                                                SEL 2030
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 C
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                            22kV, 630A, 25kA 3 Sec
+
+
+
+
+
+
+
+
+
+                                                                                                                                     22kV       110V
+
+
+
+
+                                  +48VDC (PROTECTION)
+
+                  COMMS
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 D
+                  +48VDC (TRIP)
+
+
+
+                  SPARE
+                  TIER 2      5                                                      CB SPARE FD                                                                                            CB TF421 FD                                                  CB TF422 FD                                                  CB TF423 FD                                                 CB SPARE FD
+                                                                                     630A                                                                                                   630A                                                         630A                                                         630A                                                        630A
+
+
+
+                                                                                                                                                                   86                                                           86                                                           8686                                                        8686
+                                                                                                                               ES SW421
+                                                            86                                                                                                     50                                                           50                                                           5050                                                        5050
+
+
+                                                            50                       ES SPARE FD                                                                   51                       ES TF421 FD                         51                       ES TF422 FD                         5151                    ES TF423 FD                         5151                     ES SPARE FD
+
+
+                                                            51                                                                                                    50G                                                          50G                                                          50G50G                                                       50G50G
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 E
+                                                           50G                                                                                                     51G                                                         51G                                                          51G51G                                                       51G51G
+
+
+                                                           51G                                                                                                    87T                                                          87T                                                          87T87T                                                       87T87T
+
+
+                                                        SEL 351A                     600:1                                                                      SEL 387A                    100:1                           SEL 387A                     100:1                           SEL 387ESEL 387E             200:1                           SEL 387ESEL 387E            200:1
+
+
+                                                            5
+
+
+
+                                                                  SPARE                                                                                                                                                                                                                                                                                         SPARE
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 G
+                     TO DB421B                                                                                                                      MC421                       TF421                            MC422                       TF422                           SW423SW423 SW423SW423      TF423TF423
+                07110-EL-DR-3345                                                                                                                                                                                                                                                                                                                                                                                                    APPLICABLE DOCUMENTS
+
+                                                                                                                                                            TF421 22kV/400V                                              TF422 22kV/400V                                          TF423 22kV/690V/690V                                                                                                                                          SPECIFICATIONS
+
+                                                                                                                                                           MC421 - SCREENING                                            MC422 - SCREENING                                            SW423 - SCREENING                                                                                                                   11098-07110-EL-SP-1121    TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                                                        07110-EL-DR-2650, 2671                                           07110-EL-DR-2652                                     07110-EL-DR-2465, 2466, 2467                                                                                                                                         EQUIPMENT INSTALLATION
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                            STANDARD DRAWINGS
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                         11098-07110-EL-DR-1000    STANDARD DRAWINGS LIST
+
+
+
+    This drawing and all the information                                                                                                                                                                                         CLIENT                                                                                                                               DRAWN          R. TITREN               2/11/06
+         on it is the property of                                                                                                                                                                                                                                                                                                                                                                                        PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                 ENGINEER       R. COX                  2/11/06
+       It is confidential and is given                                                                                  5   28/01/25   AS FOUND 23.10.23                                          AP   MP   CH
+                                                                                                                                                                                                                                                                                                                                                                      CHECKED        D. PALMER               2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                              4    05/08/09   ISSUED FOR AS-BUILT                                        KW   BT   SQ   BT   DF    DF                                                                                                                                                                                                                                                                    H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                             LEAD ENG       L. BRUNN                2/11/06     SW421 - SCREENING
+        drawing nor any information 07000-EL-DR-2360       HV PROTECTION, SCHEMATIC DIAGRAM                            3    21/02/08   RE-ISSUED FOR CONSTRUCTION                                 JM   LB   AJ   LB    NJ   NJ
+
+    concerning it may be copied, exhibited07110-EL-DR-2370 MINE MAIN EARTHING, SINGLE LINE DIAGRAM                     2    11/05/07   RE-ISSUED FOR CONSTRUCTION                                 JZ   RC   AJ   RC    NJ  GW                                                                                                                                         ENG MGR        J. BILESSURIS           3/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                    SINGLE LINE DIAGRAM
+    photographs be taken of any article 07110-EL-DR-2360   MINE POWER DISTRIBUTION PROTECTION, SINGLE LINE DIAGRAM      1   17/11/06   RE-ISSUED FOR CONSTRUCTION                                 WL   RC   AS   LB    JB  GW                                                                             Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                  Level 2, Hyatt Centre                     Tel: +61 8 9266 0111    Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR    G. WIESER              03/11/06
+     fabricated or assembled from this07110-EL-DR-2350     MINE POWER DISTRIBUTION, SINGLE LINE DIAGRAM                0    02/11/06   ISSUED FOR CONSTRUCTION                                    RT   RC  DGP   LB    JB  GW                                                                                                                                                                                            PROJECT No:           DRG No:                                    REV:
+       drawing without the consent of                                                                                                                                                                                             87 Adelaide Terrace                       Fax: +61 8 9221 9483    Team 45 and WorleyParsons act on behalf of and as disclosed agent SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD      REF No.                                REFERENCES                          REV     DATE                           DESCRIPTION                         DRN  ENG   CHK  LE   EM   PM     East Perth  WA  6004  Australia           ABN 52 103 096 340                        of The Pilbara Infrastructure.                                 N/A                       A1         300/11098                   07110-EL-DR-2351                     5
+
+
+                  1                                       2                                        3                                       4                                        5                                       6                                        7                                        8                                       9                                       10                                       11                                      12

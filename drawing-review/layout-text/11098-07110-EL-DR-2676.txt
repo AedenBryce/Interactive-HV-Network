@@ -1,0 +1,167 @@
+                   1                                           2                                          3                                           4                                                                                                                                                                                                                        9                                          10                                          11                                         12
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                        CONSTRUCTION NOTES:
+                                                                                                                                                                                                                       FROM HV SWITCHBOARD                                                                                                                                                                              1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+                                                                                                                                                                                                                                    SW426                                                                                                                                                                               2. CONTACTOR TO BE UPGRADED.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                        3. NOTES TO BE REMOVED AFTER CONSTRUCTION.                                   Ph +61 8 6220 2000, www.verbrec.com
+                                                                                                                                                                                                                            07110-EL-DR-2352
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    A
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                           TRANSFORMER - TF428
+B                                                                                                                                                                                                                          22kV/400V                                                                                                                                                                                                                                                                                                 B
+                                                                                                                                                                                                                           2.0 MVA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     C
+
+
+          THICKENER MOTOR CONTROL CENTRE
+
+           MC428A
+                                                                                                                                                                                                                       3000:1
+                                                                                                                                                                                                                                                                                NEUTRAL BAR                          EARTH BAR           REF DRG:
+                                                                                                                                                                                                                                                                                                       MEN LINK                          07110-EL-DR-1172
+
+                                                                                                                                                                                                                        CB MC428A IN
+                                                                                                                                                                                                                        3000A
+
+
+             400V, 3000A, 50kA FOR 1 Sec                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             D
+
+
+
+
+         24VDC UPS
+           DB428A
+
+       07110-EL-DR-3486
+
+
+
+         48VDC UPS
+           DB428B
+                                            UP           UP
+       07110-EL-DR-3487
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     E
+
+
+                                                                                                                                                                                                                                                                                                                          NOTE 1          NOTE 1            NOTE 1             NOTE 1            NOTE 1            NOTE 1              NOTE 1           NOTE 1            NOTE 1           NOTE 1            NOTE 1
+
+
+                                  UP428A            UP428B
+                                    15kW              15kW
+
+
+                                 11098-CGC011      11098-CGC011
+                                 -B-E05-0403      -B-E05-0403
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     F
+
+
+
+
+
+
+
+
+
+
+                                                                                          ISOL                ISOL                ISOL               ISOL                ISOL               ISOL
+                                                                                           63A                63A                 63A                63A                 63A                 63A
+
+
+
+
+                                                                                                                                                                                                                                                                                                                        M                M                M                 M                 M                 M                  M                M                M                 M                M                            G
+                                                                      UP           AC                 AC                  AC                 AC                  AC                 AC             DB           DB                                 DB            DB           DB           DB           DB             3Ø               3Ø               3Ø                3Ø                 3Ø                3Ø                3Ø               3Ø                3Ø               3Ø                3Ø
+
+
+
+
+                                                                    UP429C       AC4281             AC4282              AC4291             AC4292              AC4293             AC4294         DB428        DB429              MC428C           DB4281       DB4301       DB4285      DB4302        DB4284       PP234-EM01       PP235-EM01       PU275-EM01        HT231-EMO1         SP239-EM01        SP240-EM01        TH231-EM01       TH231-EM02        TH231-EM03       TH231-EM04        TH231-EM05
+                                                                     10kW         SW428             SW428              LV VSD              LV VSD              LV VSD             LV VSD           HV           LV            (EXTENSION)       THICKENER     PROCESS        FLOC       PROCESS        PILOT        BF231/232          BF233         FLOCCULANT        FLOCCULANT        FLOCCULANT         THICKENER          THICKENER        THICKENER        THICKENER         THICKENER        THICKENER
+                                                                                 AC No.1            AC No.2             SWRM                SWRM                SWRM               SWRM          SWRM         SWRM                                 AREA         AREA       STORAGE       AREA         PLANT        HYD POWER        HYD POWER         TRANSFER            PLANT              AREA              AREA              RAKE             RAKE              RAKE             RAKE           RAKE LIFT
+                                                                                  18kW               18kW               AC No.1            AC No.2            AC No.3             AC No.4          DB           DB                                  DB         SOUTH         SHED        NORTH        FEEDER       PACK PUMP        PACK PUMP           PUMP            BAG HOIST            SUMP              SUMP              DRIVE            DRIVE             DRIVE            DRIVE              2kW
+                                                                                                                         22kW               22kW                22kW               22kW           50kW         50kW                                50kW          DB          25KW         DB                          7.5kW            7.5kW            15kW               1kW               PUMP              PUMP              7.5kW            7.5kW            7.5kW             7.5kW          (REVERSING)
+                                                11                                                                                                                                                                                                              50kW                     40kW                                                                                                15kW              15kW
+
+
+                                                                  11098-CGC011                                                                                                               11098-CGC01111098-CGC011        500CB-04230     11098-CGC01111098-CGC011    11098-CGC011  11098-CGC01111098-CGC011     11098-CGC011    11098-CGC011     11098-CGC011      11098-CGC011       11098-CGC011      11098-CGC011      11098-CGC011     11098-CGC011      11098-CGC011     11098-CGC011      11098-CGC011
+                                                                 -B-E05-0405                                                                                                                 -B-E05-0404-B-E05-0404          -DR-EL-0100     -B-E05-0404-B-E05-0404      -B-E05-0406   -B-E05-0407   -B-E05-0408    -B-E05-0437     -B-E05-0437      -B-E05-0436        -B-E05-0113       -B-E05-0438       -B-E05-0438       -B-E05-0410      -B-E05-0535       -B-E05-0536      -B-E05-0537       -B-E05-0409
+
+
+    This drawing and all the information                                                                                        7    15/08/08    RE-ISSUED FOR CONSTRUCTION                                     JM   EA    AJ    LB   DF    TK   CLIENT                                                                                                                                         DRAWN            C.VASILE                22/01/08
+
+         on it is the property of                                                                                               6    16/06/08    RE-ISSUED FOR CONST. DEVICENET DRG 07110-EL-DR-4781            KW   EA    AJ    LB   DF    DF                                                                                                                                                                                                        PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                           ENGINEER         E.ABRAHAM               22/01/08
+       It is confidential and is given                                                                                          5    06/06/08    RE-ISSUED FOR CONSTRUCTION                                     JM   EA    AJ    LB   DF    DF
+                                                                                                                                                                                                                                                                                                                                                                                                CHECKED          A.JAMES                 22/01/08     CLOUD BREAK INFRASTRUCTURE
+H  to you for a limited purpose and must                                                                                        4    06/05/08    ISSUED FOR CONSTRUCTION                                        MD   EA    AJ    LB   DF    DF                                                                                                                                                                                                                                                                                       H
+    be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                        LEAD ENG         L.BRUNN                 22/01/08     MC428 DESANDS THICKENER
+        drawing nor any information                                -                                                            11   21/03/25    ISSUED FOR CONSTRUCTION - CB25OP003A                           SR   LN    AC    JM   JM   MG
+
+    concerning it may be copied, exhibited04230-DR-EL-0100              MC428C - DESANDS PLANT SINGLE LINE DIAGRAM              10   18/03/13    AS BUILT - NO CHANGE                                           SR   ZG   DGM    ZG  AB    AB                                                                                                                                                   ENG MGR          N.JAMESON               22/01/08
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                           Team 45 is the integrated project management team of                                                                  SINGLE LINE DIAGRAM - SHEET 1
+    photographs be taken of any article 07110-EL-DR-4781       MC428 - DESAND PROFIBUS & DEVICENET NETWORK                      9    11/10/11    ADOPTED FOR CEPT - ISSUED FOR CONSTRUCTION                     JMc  PA    MR    PA   IM   PH                                                                                                                                                   PROJ MGR         N.JAMESON               22/01/08
+     fabricated or assembled from this                                                                                                                                                                                                             Level 2, Hyatt Centre                                                 Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.                                                        PROJECT No:              DRG No:                                      REV:
+                                       07110-EL-DR-2677        MC428 - DESANDS THICKENER SINGLE LINE DIAGRAM - SHT 2            8    11/09/09    ISSUED FOR AS BUILT                                           YBC   BT    WL   CJT   DF    AC     87 Adelaide Terrace                                                   Team 45 and WorleyParsons act on behalf of and as disclosed agent
+      drawing without the consent of                                                                                                                                                                                                                                                                                                                                                            SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD         REF No.                                   REFERENCES                             REV     DATE                              DESCRIPTION                           DRN   ENG  CHK    LE   EM   PM      East Perth  WA  6004  Australia   Tel: +61 8 9266 0111Fax: +61 8 9221 9483ABN 52 103 096 340of The Pilbara Infrastructure.                                    N/A                        A1            300/11098                  07110-EL-DR-2676                        11
+
+
+                   1                                           2                                          3                                           4                                          5                                           6                                          7                                           8                                          9                                          10                                          11                                         12

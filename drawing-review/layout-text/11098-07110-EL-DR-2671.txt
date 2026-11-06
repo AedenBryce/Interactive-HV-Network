@@ -1,0 +1,180 @@
+                  1                                        2                                       3                                        4                                        5                                        6                                        7                                        8                                       9                                        10                                       11                                      12
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                             CONSTRUCTION NOTES:
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                            1.   MOTOR PROTECTION RELAY TO BE UPGRADED.                             A
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                             2.   CONTACTOR TO BE UPGRADED.
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                             3.   NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    C
+
+
+                   SCREENING MOTOR CONTROL CENTER
+
+                      MC421
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                         400V, 3000A, 50kA for 1 Sec                                                                                                                                                                                                                                                                                                                                                                                                                                                D
+
+                               TIER               TIER              TIER               TIER              TIER              TIER                   TIER               TIER                      TIER                       TIER                   TIER               TIER                TIER                  TIER                       TIER                       TIER                      TIER
+                               02F-20             02F-24            2F-08              2F-12             2F-16             2F-16                  3F-00              3F-04                     3F-08                      3F-12                  3F-20              3F-25               4F-00                 4F-04                      4F-08                      4F-12                     4F-20
+                                                                                                                                                                           5A                         5A                        5A                                                                                   5A                         5A                        5A                         5A
+
+
+
+                               50A                 50A               125A              125A               125A              125A                   5A                5A                         5A                        5A                      5A                5A                   5A                    5A                         8A                        8A                         100A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    E
+
+                                                                                                                                                  NOTE 1             NOTE 1                    NOTE 1                     NOTE 1                 NOTE 1             NOTE 1              NOTE 1                NOTE 1                     NOTE 1                     NOTE 1                    NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                       5B
+F                                                                                                                                                                                                                                                                                                                                                                                                                              5B                                                                    F
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                            M
+                            UP                 WH                 DB                DB                DB                 DB                                                                                                                                                                                                                                                                 3Ø                               Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                             Ph +61 8 6220 2000, www.verbrec.com
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    G
+                         UP423C              WH113             DB4213            DB4214             DB4215             MG104              SPARE                SPARE                      SPARE                     SPARE                   SPARE              SPARE               SPARE                 SPARE                      SPARE                     SPARE                      SP201                                         APPLICABLE DOCUMENTS
+                         230V AC           TAKE UP           SCREENING         SCREENING        CV101 SMALL          MAGNET                                                                                                                                                                                                                                                       SCREENING AREA
+                                             WINCH            LIGHTING      SMALL POWER             POWER                                                                                                                                                                                                                                                                                FLOOR                                                     SPECIFICATIONS
+                                                                  DB                DB                DB                                                                                                                                                                                                                                                                                 PUMP
+                                                                                                                                                                                                                                                                                                                                                                                          30kW                              11098-07110-EL-SP-1121    TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      EQUIPMENT INSTALLATION
+                           10kW               11kW              50kW              50kW               50kW              32kW
+                     11098-CGC011-                                                                                                   11098-CGC011       CB25OP003A-10016          CB25OP003A-10016           CB25OP003A-10016           11098-CGC011        11098-CGC011       11098-CGC011       CB25OP003A-10016          CB25OP003A-10016           CB25OP003A-10016          CB25OP003A-10016                                              STANDARD DRAWINGS
+                      B-E05-0257         5B                                                                                           -B-E050076           -DR-EL-0007                -DR-EL-0008               -DR-EL-0009             -B-E050076          -B-E050076          -B-E050076           -DR-EL-0010                -DR-EL-0011               -DR-EL-0012                -DR-EL-0013
+
+                                                                                                                                                                                                                                                                                                                                                                                                                            11098-07110-EL-DR-1000    STANDARD DRAWINGS LIST
+
+
+    This drawing and all the information                                                                                                                                                                                          CLIENT                                                                                                                                 DRAWN          J. ZHAO                11/05/07
+
+         on it is the property of                                                                                       5B   10/02/26   RE-ISSUED FOR  REVIEW - CB25OP003A                         SR   LN    AC   LN   KI   MG                                                                                                                                                                                            PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                    ENGINEER       R. COX                 11/05/07
+       It is confidential and is given                                                                                  5A         28/10/25ISSUED FOR  REVIEW - CB25OP003A                         JC   LN    AC   LN   KI   MG
+                                                                                                                                                                                                                                                                                                                                                                         CHECKED        J. ANTONY              11/05/07    CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                               4    18/09/09   RE-ISSUED FOR AS-BUILT                                     KW   CJT  SQ   CJT   DF   DF                                                                                                                                                                                                                                                                      H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                LEAD ENG       R. COX                 11/05/07    MC421 - SCREENING
+        drawing nor any information                                                                                     3    15/01/09   ISSUED FOR AS-BUILT                                        KW   BT   RJP  CJT   DF   GM
+
+    concerning it may be copied, exhibited                                                                              2    21/02/08   RE-ISSUED FOR CONSTRUCTION                                 CV   LB    AJ   LB   NJ   NJ                                                                                                                                          ENG MGR        N. JAMESON             14/05/07
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                      SINGLE LINE DIAGRAM SHEET 2
+    photographs be taken of any article 07110-EL-DR-2650      MC421 - SCREENING - SLD - SHEET 1                         1   22/06/07    UP423C FD ADDED FROM MC422 & WH113 FD ADDED                JM   BN    AJ   LB   NJ   GW                                                                             Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                    Level 2, Hyatt Centre                     Tel: +61 8 9266 0111    Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR     G. WIESER              16/05/07
+      fabricated or assembled from this07110-EL-DR-4273       SCREENING SUBSTATION PROFIBUS & DEVICENET NETWORK         0    11/05/07   ISSUED FOR CONSTRUCTION                                    JZ   RC    AJ   RC   NJ   GW                                                                                                                                                                                            PROJECT No:            DRG No:                                    REV:
+       drawing without the consent of                                                                                                                                                                                               87 Adelaide Terrace                       Fax: +61 8 9221 9483    Team 45 and WorleyParsons act on behalf of and as disclosed agent  SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD      REF No.                                REFERENCES                           REV     DATE                           DESCRIPTION                         DRN   ENG  CHK   LE   EM   PM     East Perth  WA  6004  Australia           ABN 52 103 096 340                        of The Pilbara Infrastructure.                                  N/A                      A1                                      07110-EL-DR-2671                    5B
+
+
+                  1                                        2                                       3                                        4                                        5                                        6                                        7                                        8                                       9                                        10                                       11                                      12

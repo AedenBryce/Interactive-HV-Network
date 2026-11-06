@@ -1,0 +1,19 @@
+{
+  "id": "T17",
+  "number": 18,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/18",
+  "title": "Explore lump stockpile and wet-scrubbing supplies",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

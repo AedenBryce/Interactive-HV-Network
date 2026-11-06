@@ -1,0 +1,165 @@
+                 1                                     2                                     3                                     4                                     5                                     6                                     7                                     8                                     9                                    10                                     11                                   12
+                                                                                                                                                                                                                                                                                                                                                                                                          APPLICABLE DOCUMENTS
+                                                                                                                                                                                                   FROM HV SWITCHBOARD
+                                                                                                                                                                                                             SW421                                                                                                                                                                                                    SPECIFICATIONS
+                                                                                                                                                                                                       07110-EL-DR-2351
+                                                                                                                                                                                                                                                                                                                                                                                                11098-07000-EL-SP-1121  TECHNICAL SPECIFICATION FOR ELECTRICAL
+A                                                                                                                                                                                                                                                                                                                                                                                                                       EQUIPMENT INSTALLATION                      A
+
+                                                                                                                                                                                                                                                                                                                                                                                                                  STANDARD DRAWINGS
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                07110-EL-DR-1000        STANDARD DRAWINGS LIST
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                 CONSTRUCTION NOTES:
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                 1.  MOTOR PROTECTION RELAY TO BE UPGRADED.
+
+                                                                                                                                                                                                                                                                                                                                                                                                 2.  CONTACTOR TO BE UPGRADED.
+                                                                                                                                                                                                      TRANSFORMER - TF422
+B                                                                                                                                                                                                     22kV/400V                                                                                                                                                                                  3.  NOTES TO BE REMOVED AFTER CONSTRUCTION.                        B
+                                                                                                                                                                                                      2.0 MVA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                   C
+
+
+    SCREENING MOTOR CONTROL CENTRE
+
+      MC422
+                                                                                                                                                                                                  3000 : 1
+
+
+
+
+                                                                                                                                                                                                   CB MC422 IN                            NEUTRAL BAR                     EARTH BAR         REF DRG:
+                                                                                                                                                                                                   3000A                                                      MEN LINK                      07110-EL-DR-1172
+
+
+
+
+D                       400V, 3000A, 50kA for 1 Sec                                                                                                                                                                                                                                                                                                                                                                                                                 D
+
+              TIER                TIER                   TIER                TIER                   TIER             TIER             TIER             TIER             TIER             TIER             TIER             TIER             TIER             TIER              TIER             TIER             TIER             TIER              TIER             TIER            TIER              TIER             TIER             TIER        TIER
+              4F-00               4F-05                  4F-15               4F-10                  4F-20            4F-25            1F-20            02F-00           02F-10           02F-20           01F-00           01F-10           01F-20           1F-00             2F-00            2F-10            2F-20            3F-00             3F-05            3F-10           3F-15             3F-20            3F-25            1F-10       1F-15
+
+
+
+             2.6A                  2.6A                 2.6A                 2.6A                  2.6A             2.6A              250A             250A             250A             250A             250A             250A             250A             250A             250A              250A             250A             2.6A             2.6A             2.6A             2.6A              2.6A             2.6A             125A        125A
+
+
+
+
+
+
+
+
+
+                                                                                                                                     NOTE 2           NOTE 2           NOTE 2           NOTE 2           NOTE 2           NOTE 2           NOTE 2           NOTE 2           NOTE 2            NOTE 2           NOTE 2
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                   E
+            NOTE 1                NOTE 1               NOTE 1               NOTE 1                NOTE 1           NOTE 1            NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1            NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1           NOTE 1            NOTE 1           NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                   F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                      DB          DB
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                   G
+          M                     M                                                               M                 M                M                M                M                 M                M                M                M                M                M                M                M                M                M                M                 M
+          3Ø                    3Ø                                                              3Ø               3Ø                3Ø               3Ø               3Ø               3Ø               3Ø               3Ø               3Ø               3Ø                3Ø               3Ø               3Ø               3Ø               3Ø               3Ø               3Ø                                               DB4221       DB4222
+                                                                                                                           TH               TH               TH               TH               TH                TH               TH               TH               TH               TH               TH                                                                                                                            CV104        CV113
+
+     CV104-EM01           CV113-EM01            SH113-EM01         SH104-EM01             SH104-BR02        SH113-BR02           SN201            SN202            SN203            SN204            SN205            SN206            SN207            SN208            SN209             SN210            SN211         CV101-EM01       CV101-EM02       CV106-EM01       CV106-EM02        SH101-EM01      SH106-EM01           SP DB       SP DB
+        BRAKE                BRAKE                 BRAKE              BRAKE                LOW SPEED        LOW SPEED          SCALPING         SCALPING         SCALPING         PRODUCT          PRODUCT          PRODUCT          PRODUCT           PRODUCT          PRODUCT          PRODUCT          PRODUCT           BRAKE             BRAKE            BRAKE            BRAKE            BRAKE            BRAKE             50kW         50kW
+       0.75kW                0.75kW                0.75kW             0.75kW                  BRAKE            BRAKE            SCREEN           SCREEN           SCREEN           SCREEN           SCREEN           SCREEN           SCREEN            SCREEN           SCREEN           SCREEN           SCREEN           0.75kW           0.75kW           0.75kW           0.75kW            0.75kW           0.75kW
+    CB25OP003A-           CB25OP003A-          CB25OP003A-          CB25OP003A-              0.75kW           0.75kW             75kW             75kW             75kW             75kW              75kW             75kW             75kW             75kW             75kW             75kW             75kW         CB25OP003A-      CB25OP003A-      CB25OP003A-CB25OP003A-             CB25OP003A-      CB25OP003A-
+         10016                 10016                10016                10016            11098-07110-     11098-07110-     11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-11098-CGC011-                                                   10016            10016            10016            10016             10016            10016            11098-CGC011-            10
+    -DR-EL-0020           -DR-EL-0021          -DR-EL-0022          -DR-EL-0022           EL-DR-2692        EL-DR-2693       A-E05-0079       A-E05-0080        A-E05-0081      A-E05-0082        A-E05-0083       A-E05-0084       A-E05-0085       A-E05-0086       A-E05-0087       A-E05-0088       A-E05-0089       -DR-EL-0014       -DR-EL-0015      -DR-EL-0016      -DR-EL-0017      -DR-EL-0018      -DR-EL-0019             A-E05-0078
+
+
+    This drawing and all the information                                                                                     704/11/08RE-ISSUED FOR CONSTRUCTION                     KW    BT  AJ   LB   DF   DF   CLIENT                                                                                                                       DRAWN         W.LEONG               27/10/06
+
+         on it is the property of                                                                               6   02/04/08   RE-ISSUED FOR CONSTRUCTION                             AD   RP  AJ   LB   NJ   NJ                                                                                                                                                                               PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                           ENGINEER      R.COX                 02/11/06
+       It is confidential and is given                                                                          5   21/02/08   RE-ISSUED FOR CONSTRUCTION                             CV   LB  AJ   LB   NJ   NJ
+                                                                                                                                                                                                                                                                                                                                                CHECKED       D.PALMER              02/11/06   CLOUD BREAK INFRASTRUCTURE
+H  to you for a limited purpose and must                                                                        4   19/01/08   ADDITIONAL BRAKES & DISTRIBUTION BOARDS - IFC          JM   RP  AJ   LB   NJ   NJ                                                                                                                                                                                                                                                    H
+    be returned on request. Neither this                                                                                                                                                                                                                                                                                                                      L.BRUNN
+       drawing nor any information                                                                              3   27/06/07   UP423C MOVED TO MC421, SH104 SH113 MOVED TO MC426      JT  DBG  AJ   LB   NJ   GW                                                                                                                                LEAD ENG                            02/11/06   MC422 - SCREENING
+
+    concerning it may be copied, exhibited07110-EL-DR-2467SW423 - SCREENING SINGLE LINE DIAGRAM - SHEET 3       10  23/01/26   ISSUED FOR CONSTRUCTION - CB25OP003A                   SR   LN  AC   LN   KI   MG                                                                                                                                ENG MGR       J.BILESSURIS          02/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                          SINGLE LINE DIAGRAM
+    photographs be taken of any article 07110-EL-DR-2466SW423 - SCREENING SINGLE LINE DIAGRAM - SHEET 2         9   11/09/09   ISSUED FOR AS BUILT                                    GL   BT  WL   CJT  DF   AC                                                                        Team 45 is the integrated project management team of
+                                                                                                                                                                                                                    Level 2, Hyatt Centre                  Tel: +61 8 9266 0111   Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGRG.WIESER             02/11/06
+     fabricated or assembled from this07110-EL-DR-2465 SW423 - SCREENING SINGLE LINE DIAGRAM - SHEET 1          8   21/01/09   SH104-BR02 & SH113-BR02 ADDED. RE-ISSUED FOR CONST.   KW    BT  RJP  CT   DF   GM                                                                                                                                                                               PROJECT No:           DRG No:                                REV:
+      drawing without the consent of                                                                                                                                                                                87 Adelaide Terrace                    Fax: +61 8 9221 9483   Team 45 and WorleyParsons act on behalf of and as disclosed agentSCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD   REF No.                              REFERENCES                        REV    DATE                         DESCRIPTION                       DRN  ENG  CHK  LE   EM   PM    East Perth  WA  6004  Australia        ABN 52 103 096 340                      of The Pilbara Infrastructure.                             N/A                     A1         300/11098                07110-EL-DR-2652                   10
+
+
+                 1                                     2                                     3                                     4                                     5                                     6                                     7                                     8                                     9                                    10                                     11                                   12

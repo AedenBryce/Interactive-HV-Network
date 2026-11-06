@@ -1,0 +1,1305 @@
+{
+  "recorded": "2026-10-23",
+  "reviewedPackage": "construction-2026-10-23.1",
+  "ownerRecord": "drawing-review/supplemental/owner-configuration-review.md",
+  "scope": "Selected teaching baseline only; not actual positions, physical interlock acceptance or whole-model acceptance.",
+  "contacts": [
+    {
+      "assetId": "sw411:in-01:cb",
+      "position": "open",
+      "basis": "owner-confirmed-current-spare"
+    },
+    {
+      "assetId": "sw411:in-01:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:in-03:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:in-03:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:in-04:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:in-04:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:in-02:cb",
+      "position": "open",
+      "basis": "owner-confirmed-current-spare"
+    },
+    {
+      "assetId": "sw411:in-02:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-01:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-01:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-02:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-02:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-03:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-03:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-04:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-04:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-13:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-13:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-14:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-14:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-15:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-15:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:tier-16:cb",
+      "position": "closed",
+      "basis": "owner-explicit-SW411-in-service-baseline"
+    },
+    {
+      "assetId": "sw411:tier-16:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:bus-a:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:bus-b:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw411:bus-tie:cb",
+      "position": "open",
+      "basis": "owner-individual-tie-baseline"
+    },
+    {
+      "assetId": "station:sb01:f4:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "station:sb02:f1:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "station:sb02:f4:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:sw435:cb",
+      "position": "open",
+      "basis": "owner-individual-tie-baseline"
+    },
+    {
+      "assetId": "sw431:sw435:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:tf431:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:tf432:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:tf437:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw431:tf442:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:sw431:cb",
+      "position": "open",
+      "basis": "owner-individual-tie-baseline"
+    },
+    {
+      "assetId": "sw435:sw431:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:tf435:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:tf433:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:tf453:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:tf436:hv-cb",
+      "position": "open",
+      "basis": "owner-confirmed-current-spare"
+    },
+    {
+      "assetId": "sw435:tf436:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw435:hpgr:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "hpgr:sw002:a01:q8",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "hpgr:sw002:a02:q8",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "hpgr:drive-meb:dc-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "hpgr:sw002:a04:q8",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "hpgr:drive-mea:dc-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "hpgr:sw002:tf004:q8",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:tf421:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:tf422:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:tf423:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:spare:tier2:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw421:spare:tier7:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf440:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf426:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf428:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf427:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf429:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf439:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf430:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:tf443:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw426:ss714:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm714:in01:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm714:in02:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm714:tf714:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw454:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw454:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw454:sw505:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw454:tf454:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw454:tf455:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw454:tf456:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:tf506:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:tf507:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:tf508:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:tf505a:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:vs50501:dc-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:tf505b:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:vs50502:dc-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:tf505c:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw505:vs50503:dc-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:spare-2:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:spare-6:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:spare-7:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:tf451:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "sw451:tf452:hv-es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h1:mc417:in-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h1:mc417:m1:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h1:mc417:m1:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h1:mc417:m1:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h1:mc417:m2:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h1:mc417:m2:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h1:mc417:m2:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:rm418:sw01:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:rm418:sw02:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:rm418:cb03:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:rm418:cb04",
+      "position": "open",
+      "basis": "owner-confirmed-current-spare"
+    },
+    {
+      "assetId": "wh:h7:rm418:cb04:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:mc418:in-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:mc418:m1:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h7:mc418:m1:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h7:mc418:m1:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h7:mc418:m2:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h7:mc418:m2:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h7:mc418:m2:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h9:mc419:in-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h9:mc419:m1:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h9:mc419:m1:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h9:mc419:m1:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h9:mc419:m2:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h9:mc419:m2:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h9:mc419:m2:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm721:in01:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm721:in02:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm721:rm412:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm721:rm713:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm412:e100",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm412:e101",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm412:e102",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm413a:es-q8:upper",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:es01",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:tf420a:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:tf420b:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:spare:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:mc420:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:mc420:motor-01:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "rm420:mc420:motor-01:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "rm420:mc420:motor-01:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "rm420:mc420:motor-02:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "rm420:mc420:motor-02:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "rm420:mc420:motor-02:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "mine:sw441:in:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "mine:sw441:bus:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "mine:tf441:es",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h3:mc416:in-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h3:mc416:m1:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h3:mc416:m1:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h3:mc416:m1:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h3:mc416:m2:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h3:mc416:m2:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h3:mc416:m2:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h8:mc416:in-earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h8:mc416:m1:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h8:mc416:m1:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h8:mc416:m1:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    },
+    {
+      "assetId": "wh:h8:mc416:m2:rc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h8:mc416:m2:fc",
+      "position": "open",
+      "basis": "owner-all-FC-RC-contactors"
+    },
+    {
+      "assetId": "wh:h8:mc416:m2:earth",
+      "position": "open",
+      "basis": "owner-all-earth-switches"
+    }
+  ],
+  "racking": [
+    {
+      "assetId": "sw411:in-01:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:in-03:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:in-04:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:in-02:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-01:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-02:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-03:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-04:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-13:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-14:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-15:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:tier-16:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw411:bus-tie:cb",
+      "position": "out"
+    },
+    {
+      "assetId": "station:sb01:f4:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "station:sb02:f1:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "station:sb02:f4:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw435:cb",
+      "position": "out"
+    },
+    {
+      "assetId": "sw431:tf431:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:mc431:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:tf432:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw432:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw432:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:tf437:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw437:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw437:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:tf442:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw442:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw431:sw442:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:sw431:cb",
+      "position": "out"
+    },
+    {
+      "assetId": "sw435:tf435:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:mc435:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:tf433:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:sw433:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:sw433:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:tf453:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:sw453:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:sw453:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:tf436:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw435:hpgr:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:tf421:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:mc421:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:tf422:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:mc422:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:tf423:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:sw423:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:sw423:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:spare:tier2:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw421:spare:tier7:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf440:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw440:d:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw440:y:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf426:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:mc426:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf428:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:mc428a:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf427:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw427:d:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw427:y:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf429:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw429:d:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw429:y:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf439:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw439:d:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw439:y:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf430:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:mc430:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:tf443:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw443:d:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:sw443:y:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw426:ss714:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "rm714:sw714:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:sw505:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:tf454:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:tf455:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:tf456:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:sw456:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw454:sw456:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:tf506:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:sw506:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:sw506:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:tf507:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:mc507:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:tf508:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:mc508:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:tf505a:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:tf505b:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw505:tf505c:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:spare-2:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:spare-6:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:spare-7:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:tf451:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:mc451:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:tf452:hv-cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:sw452:d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw451:sw452:y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "rm406:mc406a:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "wh:h1:mc417:in",
+      "position": "in"
+    },
+    {
+      "assetId": "wh:h7:mc418:in",
+      "position": "in"
+    },
+    {
+      "assetId": "wh:h9:mc419:in",
+      "position": "in"
+    },
+    {
+      "assetId": "wh:h9:mc419a:in",
+      "position": "in"
+    },
+    {
+      "assetId": "rm413:mc413:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "rm420:mc420:in:vcb",
+      "position": "in"
+    },
+    {
+      "assetId": "mine:sw441:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "mine:tf441:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "mine:mc441:in",
+      "position": "in"
+    },
+    {
+      "assetId": "sw455:in-d:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "sw455:in-y:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "mc454:in:cb",
+      "position": "in"
+    },
+    {
+      "assetId": "wh:h3:mc416:in",
+      "position": "in"
+    },
+    {
+      "assetId": "wh:h8:mc416:in",
+      "position": "in"
+    },
+    {
+      "assetId": "rm420:mc420a:in:acb",
+      "position": "in"
+    },
+    {
+      "assetId": "rm410:mc410a:cb",
+      "position": "in"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "boundary:tf11",
+      "enabled": true
+    },
+    {
+      "sourceId": "boundary:tf12",
+      "enabled": true
+    },
+    {
+      "sourceId": "boundary:tf04",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,2569 @@
+{
+  "schemaVersion": 1,
+  "id": "site/authored-placement",
+  "modelId": "site-whole-network",
+  "modelVersion": "construction-2026-10-23.11",
+  "ownershipPath": "src/models/site/authored-ownership.json",
+  "baselineModelPath": "tmp/hv-layout-baseline-20261105/model.json",
+  "scope": "Authored display adjacency and sequencing only. Parent anchors are justified by exact modeled endpoint links; no physical geography, source-transfer permission, or electrical hierarchy is established by placement.",
+  "composition": {
+    "measurement": "Use complete measured local module bounds, including labels, symbols, frame and terminals. Do not use guessed room dimensions.",
+    "transform": "Exactly one global translation per group; never translate graph descendants.",
+    "lanes": "Resolve lanes left to right by order. Reserve west/east external tracks before measuring lane separation.",
+    "rows": "Rows are stable logical sequence within each lane. Groups with identical laneId and row are a measured horizontal sibling band ordered by slot. Band width is sum of measured widths plus local gaps. Lane width is maximum band width.",
+    "anchors": "A band begins below its primary parent bounds and below the prior band in its lane. Branch groups use a reserved branch gap; close child groups use local gap. A row number is ordering, not a guessed y coordinate.",
+    "alignment": "The crushing-room adjacency overrides stagger: crushing-2/sw435-hv and crushing-1/hv share one top edge at row 3 in adjacent crushing lanes.",
+    "routing": "Route every external connection only between its listed exact terminals; use assigned track in reserved external corridor. Horizontal access uses inter-band gaps. Intermediate room interiors are unavailable. No route may treat an incidental crossing as a junction.",
+    "referenceArea": "Three unframed reference assemblies occupy reserved bands 8â€“10 below the completed SW435/HPGR branch in crushing-2. They have no electrical parent; lane reuse is display adjacency only.",
+    "stagger": "Reuse the stockpile column for train loading and water, and reuse the SW431 column for desands then screening. Independent branch order comes from explicit band rows, not graph traversal. Wide western LV siblings follow their motor boards in consecutive bands.",
+    "fixedOrigins": "Accepted rigid module origins are explicit. Module revisions do not reflow unrelated groups. Existing bands document the authored hierarchy; fixedModuleOrigins is authoritative for production compilation.",
+    "waterHeader": "Owner-requested right-hand OPF1-7/WT1/SW441 branch above SR411, with both station incoming supply runs lengthened. Confirmed OPF1-7 attachment retained."
+  },
+  "lanes": [
+    {
+      "id": "stockpile-train-water",
+      "order": 0,
+      "label": "SW454 / SW505, then SW451 and TF12 water spur",
+      "gapAfter": "branch",
+      "reservedReferenceArea": false,
+      "placementFamily": null
+    },
+    {
+      "id": "cv006",
+      "order": 1,
+      "label": "CV006 and western Hopper8 / Hopper9 / Hopper7",
+      "gapAfter": "branch",
+      "reservedReferenceArea": false,
+      "placementFamily": null
+    },
+    {
+      "id": "crushing-2",
+      "order": 2,
+      "label": "SW435 / HPGR; reserved reference area below",
+      "gapAfter": "branch",
+      "reservedReferenceArea": false,
+      "placementFamily": null
+    },
+    {
+      "id": "crushing-1-desands-screening",
+      "order": 3,
+      "label": "SW431, then SW426 and SW421",
+      "gapAfter": "branch",
+      "reservedReferenceArea": false,
+      "placementFamily": null
+    },
+    {
+      "id": "services",
+      "order": 4,
+      "label": "RM721 and services / Hopper1 / Hopper3",
+      "gapAfter": "branch",
+      "reservedReferenceArea": false,
+      "placementFamily": null
+    },
+    {
+      "id": "tf04-outer",
+      "order": 5,
+      "label": "Isolated complete TF04 / 33 kV / RM420 family",
+      "gapAfter": "branch",
+      "reservedReferenceArea": false,
+      "placementFamily": "tf04-rm420-outer-column"
+    }
+  ],
+  "groups": [
+    {
+      "groupId": "source/tf11",
+      "laneId": "crushing-2",
+      "row": 0,
+      "slot": 0,
+      "alignment": "center",
+      "anchor": {
+        "relation": "root",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "source/tf12",
+      "laneId": "crushing-1-desands-screening",
+      "row": 0,
+      "slot": 0,
+      "alignment": "center",
+      "anchor": {
+        "relation": "root",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "source/tf04",
+      "laneId": "tf04-outer",
+      "row": 0,
+      "slot": 0,
+      "alignment": "center",
+      "anchor": {
+        "relation": "root",
+        "gap": "branch"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "station/amr",
+      "laneId": "tf04-outer",
+      "row": 1,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "source/tf04",
+      "parentConnectionIds": [
+        "line33:station-to-recloser"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "source/tf04",
+        "gap": "local"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "station/iop",
+      "laneId": "tf04-outer",
+      "row": 2,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "station/amr",
+      "parentConnectionIds": [
+        "line33:tie-to-201"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "station/amr",
+        "gap": "local"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "cv006/former-hopper10-22",
+      "laneId": "crushing-2",
+      "row": 8,
+      "slot": 0,
+      "alignment": "center",
+      "anchor": {
+        "relation": "root",
+        "gap": "branch"
+      },
+      "reservedReferenceArea": true
+    },
+    {
+      "groupId": "mine-camp/mine-overlaps",
+      "laneId": "crushing-2",
+      "row": 9,
+      "slot": 0,
+      "alignment": "center",
+      "anchor": {
+        "relation": "root",
+        "gap": "branch"
+      },
+      "reservedReferenceArea": true
+    },
+    {
+      "groupId": "desands/services",
+      "laneId": "crushing-2",
+      "row": 10,
+      "slot": 0,
+      "alignment": "center",
+      "anchor": {
+        "relation": "root",
+        "gap": "branch"
+      },
+      "reservedReferenceArea": true
+    },
+    {
+      "groupId": "crushing-1/lv",
+      "laneId": "crushing-1-desands-screening",
+      "row": 4,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "crushing-1/hv",
+      "parentConnectionIds": [
+        "sw431:tf431:cable-TF431-P-01",
+        "sw431:tf432:cable-TF432-P-01",
+        "sw431:tf437:cable-TF437-P-01",
+        "sw431:tf442:cable-TF442-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "crushing-1/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "crushing-2/final-lv",
+      "laneId": "crushing-2",
+      "row": 4,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "crushing-2/sw435-hv",
+      "parentConnectionIds": [
+        "sw435:tf435:cable-TF435-P-01",
+        "sw435:tf433:cable-TF433-P-01",
+        "sw435:tf453:cable-TF453-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "crushing-2/sw435-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "crushing-2/hpgr-drives",
+      "laneId": "crushing-2",
+      "row": 6,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "crushing-2/hpgr-hv",
+      "parentConnectionIds": [
+        "hpgr:sw002:a02:cable-TF003-P-01",
+        "hpgr:sw002:a04:cable-TF002-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "crushing-2/hpgr-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "screening/lv",
+      "laneId": "crushing-1-desands-screening",
+      "row": 10,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "screening/hv",
+      "parentConnectionIds": [
+        "sw421:tf421:cable-TF421-P-01",
+        "sw421:tf422:cable-TF422-P-01",
+        "sw421:tf423:cable-TF423-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "screening/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "desands/lv-tf440-tf426",
+      "laneId": "crushing-1-desands-screening",
+      "row": 7,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "desands/hv",
+      "parentConnectionIds": [
+        "sw426:tf440:hv-cable",
+        "sw426:tf426:hv-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "desands/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "desands/lv-tf428-tf427",
+      "laneId": "crushing-1-desands-screening",
+      "row": 7,
+      "slot": 1,
+      "alignment": "center",
+      "parentGroupId": "desands/hv",
+      "parentConnectionIds": [
+        "sw426:tf428:hv-cable",
+        "sw426:tf427:hv-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "desands/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "desands/lv-tf429-tf439",
+      "laneId": "crushing-1-desands-screening",
+      "row": 7,
+      "slot": 2,
+      "alignment": "center",
+      "parentGroupId": "desands/hv",
+      "parentConnectionIds": [
+        "sw426:tf429:hv-cable",
+        "sw426:tf439:hv-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "desands/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "desands/lv-tf430-tf443",
+      "laneId": "crushing-1-desands-screening",
+      "row": 7,
+      "slot": 3,
+      "alignment": "center",
+      "parentGroupId": "desands/hv",
+      "parentConnectionIds": [
+        "sw426:tf430:hv-cable",
+        "sw426:tf443:hv-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "desands/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "stockpile/lv-dual-windings",
+      "laneId": "stockpile-train-water",
+      "row": 5,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "stockpile/wet-hv",
+      "parentConnectionIds": [
+        "sw505:tf506:cable-TF506-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "stockpile/wet-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "stockpile/lv-mccs",
+      "laneId": "stockpile-train-water",
+      "row": 5,
+      "slot": 1,
+      "alignment": "center",
+      "parentGroupId": "stockpile/wet-hv",
+      "parentConnectionIds": [
+        "sw505:tf507:cable-TF507-P-01",
+        "sw505:tf508:cable-TF508-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "stockpile/wet-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "stockpile/mv-drives",
+      "laneId": "stockpile-train-water",
+      "row": 6,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "stockpile/wet-hv",
+      "parentConnectionIds": [
+        "sw505:tf505a:cable-TF505A-P-01",
+        "sw505:tf505b:cable-TF505B-P-01",
+        "sw505:tf505c:cable-TF505C-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "stockpile/wet-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "supplemental/sw455-lv",
+      "laneId": "stockpile-train-water",
+      "row": 3,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "stockpile/stockpile-hv",
+      "parentConnectionIds": [
+        "sw454:tf455:cable-TF455-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "stockpile/stockpile-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "supplemental/mc454-lv",
+      "laneId": "stockpile-train-water",
+      "row": 3,
+      "slot": 1,
+      "alignment": "center",
+      "parentGroupId": "stockpile/stockpile-hv",
+      "parentConnectionIds": [
+        "sw454:tf454:cable-TF454-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "stockpile/stockpile-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "train-loading/lv",
+      "laneId": "stockpile-train-water",
+      "row": 8,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "train-loading/hv",
+      "parentConnectionIds": [
+        "sw451:tf451:cable-TF451-P-01",
+        "sw451:tf452:cable-TF452-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "train-loading/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "cv006/head-lv",
+      "laneId": "cv006",
+      "row": 5,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/rm406-hv",
+      "parentConnectionIds": [
+        "rm406:tf406a:cable-TF406A-P1",
+        "rm406:tf406b:cable-TF406B-P1"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/rm406-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "cv006/tail-lv",
+      "laneId": "cv006",
+      "row": 7,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/rm410-hv",
+      "parentConnectionIds": [
+        "rm410:tf410a:cable-TF410A-P1",
+        "rm410:tf410b:cable-TF410B-P1"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/rm410-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "supplemental/cv006-mc410a-lv",
+      "laneId": "cv006",
+      "row": 8,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/tail-lv",
+      "parentConnectionIds": [
+        "cv006-lv:mc410a:incoming"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/tail-lv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/dump-pocket-lv",
+      "laneId": "services",
+      "row": 6,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/dump-pocket-hv",
+      "parentConnectionIds": [
+        "rm412:tf412:incoming-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/dump-pocket-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/conveyor-lv",
+      "laneId": "services",
+      "row": 8,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/conveyor-hv",
+      "parentConnectionIds": [
+        "rm413:tf413:incoming-cable",
+        "rm413:tf414:incoming-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/conveyor-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/drive-inputs",
+      "laneId": "services",
+      "row": 9,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/rm413a-hv",
+      "parentConnectionIds": [
+        "rm413a:tf413a:incoming-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/rm413a-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "hopper-10/transformers",
+      "laneId": "tf04-outer",
+      "row": 4,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "hopper-10/rmu",
+      "parentConnectionIds": [
+        "rm420:tf420a:cable-SS420-TF420A-P01",
+        "rm420:tf420b:cable-SS420-TF420B-P01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "hopper-10/rmu",
+        "gap": "local"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "supplemental/hopper10-lv",
+      "laneId": "tf04-outer",
+      "row": 5,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "hopper-10/transformers",
+      "parentConnectionIds": [
+        "ep:h10:mc420a:incoming"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "hopper-10/transformers",
+        "gap": "local"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "mine-camp/mine-mc441",
+      "laneId": "stockpile-train-water",
+      "row": 11,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "mine-camp/mine-sw441",
+      "parentConnectionIds": [
+        "mine:tf441:hv-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "mine-camp/mine-sw441",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h1-hv",
+      "laneId": "services",
+      "row": 11,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h1-rmu",
+      "parentConnectionIds": [
+        "wh:h1:mc417:supply"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h1-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h1-lv",
+      "laneId": "services",
+      "row": 12,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h1-rmu",
+      "parentConnectionIds": [
+        "wh:h1:tf417a:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h1-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h7-hv",
+      "laneId": "cv006",
+      "row": 16,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h7-rmu",
+      "parentConnectionIds": [
+        "wh:h7:mc418:supply"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h7-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h7-lv",
+      "laneId": "cv006",
+      "row": 17,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h7-rmu",
+      "parentConnectionIds": [
+        "wh:h7:tf418a:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h7-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h9-hv",
+      "laneId": "cv006",
+      "row": 13,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h9-rmu",
+      "parentConnectionIds": [
+        "wh:h9:mc419:supply"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h9-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h9-lv",
+      "laneId": "cv006",
+      "row": 14,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h9-rmu",
+      "parentConnectionIds": [
+        "wh:h9:tf419b:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h9-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western-supplemental/h3/mv",
+      "laneId": "services",
+      "row": 14,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h3",
+      "parentConnectionIds": [
+        "wh:h3:tf416:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h3",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "supplemental/hopper3-lv",
+      "laneId": "services",
+      "row": 15,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h3",
+      "parentConnectionIds": [
+        "wh:h3:tf416a:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h3",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western-supplemental/h8/mv",
+      "laneId": "cv006",
+      "row": 10,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h8",
+      "parentConnectionIds": [
+        "wh:h8:tf416:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h8",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western-supplemental/h8/lv",
+      "laneId": "cv006",
+      "row": 11,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h8",
+      "parentConnectionIds": [
+        "wh:h8:tf416a:input"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h8",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "hopper-10/mv",
+      "laneId": "tf04-outer",
+      "row": 5,
+      "slot": 1,
+      "alignment": "center",
+      "parentGroupId": "hopper-10/transformers",
+      "parentConnectionIds": [
+        "rm420:mc420:incoming-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "hopper-10/transformers",
+        "gap": "local"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "sw411/overview",
+      "laneId": "crushing-2",
+      "row": 1,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "source/tf11",
+      "parentConnectionIds": [
+        "whole:join:tf11-in03"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "source/tf11",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "crushing-1/hv",
+      "laneId": "crushing-1-desands-screening",
+      "row": 3,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:sw431"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "crushing-2/sw435-hv",
+      "laneId": "crushing-2",
+      "row": 3,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:sw435"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "crushing-2/hpgr-hv",
+      "laneId": "crushing-2",
+      "row": 5,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "crushing-2/sw435-hv",
+      "parentConnectionIds": [
+        "hpgr:cable-SW438-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "crushing-2/sw435-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "screening/hv",
+      "laneId": "crushing-1-desands-screening",
+      "row": 9,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:sw421"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "desands/hv",
+      "laneId": "crushing-1-desands-screening",
+      "row": 6,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:sw426"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "desands/laboratory",
+      "laneId": "crushing-1-desands-screening",
+      "row": 8,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "desands/hv",
+      "parentConnectionIds": [
+        "sw426:laboratory:cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "desands/hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "stockpile/stockpile-hv",
+      "laneId": "stockpile-train-water",
+      "row": 2,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:sw454"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "stockpile/wet-hv",
+      "laneId": "stockpile-train-water",
+      "row": 4,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "stockpile/stockpile-hv",
+      "parentConnectionIds": [
+        "sw454:sw505:cable-SW505-P-01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "stockpile/stockpile-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "train-loading/hv",
+      "laneId": "stockpile-train-water",
+      "row": 7,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:sw451"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "cv006/rm406-hv",
+      "laneId": "cv006",
+      "row": 4,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/overhead",
+      "parentConnectionIds": [
+        "rm406:incoming-pole57"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/overhead",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "cv006/rm410-hv",
+      "laneId": "cv006",
+      "row": 6,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/overhead",
+      "parentConnectionIds": [
+        "rm410:incoming-pole49-40"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/overhead",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h1-rmu",
+      "laneId": "services",
+      "row": 10,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/conveyor-hv",
+      "parentConnectionIds": [
+        "whole:join:hopper1"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/conveyor-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h7-rmu",
+      "laneId": "cv006",
+      "row": 15,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h9-rmu",
+      "parentConnectionIds": [
+        "wh:h9-to-h7:cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h9-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h9-rmu",
+      "laneId": "cv006",
+      "row": 12,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/rm410-hv",
+      "parentConnectionIds": [
+        "whole:join:hopper9"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/rm410-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/rm721",
+      "laneId": "services",
+      "row": 3,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:rm721"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "services/mine-services",
+      "laneId": "services",
+      "row": 4,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/rm721",
+      "parentConnectionIds": [
+        "owner:join:rm721-rm712"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/rm721",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/workshop",
+      "laneId": "services",
+      "row": 4,
+      "slot": 1,
+      "alignment": "center",
+      "parentGroupId": "services/rm721",
+      "parentConnectionIds": [
+        "rm721:current-rm713-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/rm721",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/dump-pocket-hv",
+      "laneId": "services",
+      "row": 5,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/rm721",
+      "parentConnectionIds": [
+        "rm721:rm412:cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/rm721",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/conveyor-hv",
+      "laneId": "services",
+      "row": 7,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "services/dump-pocket-hv",
+      "parentConnectionIds": [
+        "rm412:s101-rm413-in01"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/dump-pocket-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "services/rm413a-hv",
+      "laneId": "services",
+      "row": 8,
+      "slot": 1,
+      "alignment": "center",
+      "parentGroupId": "services/conveyor-hv",
+      "parentConnectionIds": [
+        "rm413:double-boot-rm413a"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "services/conveyor-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "hopper-10/rmu",
+      "laneId": "tf04-outer",
+      "row": 3,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "station/iop",
+      "parentConnectionIds": [
+        "whole:join:hopper10-tf04"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "station/iop",
+        "gap": "local"
+      },
+      "placementFamily": "tf04-rm420-outer-column"
+    },
+    {
+      "groupId": "mine-camp/mine-sw441",
+      "laneId": "stockpile-train-water",
+      "row": 10,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "supplemental/water-tf12-source",
+      "parentConnectionIds": [
+        "mine:sw441:incoming:cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "supplemental/water-tf12-source",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h3",
+      "laneId": "services",
+      "row": 13,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "western/h1-rmu",
+      "parentConnectionIds": [
+        "wh:h1:hopper3-cable"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "western/h1-rmu",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "western/h8",
+      "laneId": "cv006",
+      "row": 9,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/rm406-hv",
+      "parentConnectionIds": [
+        "whole:join:hopper8"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/rm406-hv",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "cv006/overhead",
+      "laneId": "cv006",
+      "row": 2,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "sw411/overview",
+      "parentConnectionIds": [
+        "whole:join:cv006"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "sw411/overview",
+        "gap": "branch"
+      }
+    },
+    {
+      "groupId": "cv006/drop-tower",
+      "laneId": "cv006",
+      "row": 3,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "cv006/overhead",
+      "parentConnectionIds": [
+        "drop-tower:entry-abs"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "cv006/overhead",
+        "gap": "local"
+      }
+    },
+    {
+      "groupId": "supplemental/water-tf12-source",
+      "laneId": "stockpile-train-water",
+      "row": 9,
+      "slot": 0,
+      "alignment": "center",
+      "parentGroupId": "source/tf12",
+      "parentConnectionIds": [
+        "whole:join:tf12-in04"
+      ],
+      "anchor": {
+        "relation": "below",
+        "groupId": "source/tf12",
+        "gap": "local"
+      }
+    }
+  ],
+  "adjacencies": [
+    {
+      "fromGroupId": "crushing-2/sw435-hv",
+      "toGroupId": "crushing-1/hv",
+      "relationship": "same-row-facing-sides",
+      "row": 3,
+      "corridorId": "crushing-ring-side",
+      "connectionIds": [
+        "whole:join:crushing-tie"
+      ],
+      "scope": "Display adjacency from owner-confirmed ring; endpoint identity remains in baseline.",
+      "groupIds": [
+        "crushing-2/sw435-hv",
+        "crushing-1/hv"
+      ]
+    },
+    {
+      "fromGroupId": "stockpile/stockpile-hv",
+      "toGroupId": "stockpile/wet-hv",
+      "relationship": "below-in-same-lane",
+      "connectionIds": [
+        "sw454:sw505:cable-SW505-P-01"
+      ],
+      "scope": "Owner-requested display order, confirmed direct modeled cable."
+    }
+  ],
+  "corridors": [
+    {
+      "id": "lane:stockpile-train-water:west",
+      "kind": "vertical",
+      "laneId": "stockpile-train-water",
+      "side": "west",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:stockpile-train-water:east",
+      "kind": "vertical",
+      "laneId": "stockpile-train-water",
+      "side": "east",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:cv006:west",
+      "kind": "vertical",
+      "laneId": "cv006",
+      "side": "west",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:cv006:east",
+      "kind": "vertical",
+      "laneId": "cv006",
+      "side": "east",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:crushing-2:west",
+      "kind": "vertical",
+      "laneId": "crushing-2",
+      "side": "west",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:crushing-2:east",
+      "kind": "vertical",
+      "laneId": "crushing-2",
+      "side": "east",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:crushing-1-desands-screening:west",
+      "kind": "vertical",
+      "laneId": "crushing-1-desands-screening",
+      "side": "west",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:crushing-1-desands-screening:east",
+      "kind": "vertical",
+      "laneId": "crushing-1-desands-screening",
+      "side": "east",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:services:west",
+      "kind": "vertical",
+      "laneId": "services",
+      "side": "west",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:services:east",
+      "kind": "vertical",
+      "laneId": "services",
+      "side": "east",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:tf04-outer:west",
+      "kind": "vertical",
+      "laneId": "tf04-outer",
+      "side": "west",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "lane:tf04-outer:east",
+      "kind": "vertical",
+      "laneId": "tf04-outer",
+      "side": "east",
+      "trackSpacing": "terminal-clearance",
+      "purpose": "Dedicated external connector tracks outside measured group and label bounds."
+    },
+    {
+      "id": "main-feeder-header",
+      "kind": "horizontal",
+      "afterGroupId": "sw411/overview",
+      "beforeRowsAtOrAbove": 2,
+      "gap": "branch",
+      "purpose": "Separate outgoing SW411 feeder tracks before staggered branch columns."
+    },
+    {
+      "id": "crushing-ring-side",
+      "kind": "vertical",
+      "betweenLaneIds": [
+        "crushing-2",
+        "crushing-1-desands-screening"
+      ],
+      "purpose": "Dedicated SW435/SW431 side tie; crossing is visual only unless exact model terminal is shared."
+    },
+    {
+      "id": "secondary-supply-side",
+      "kind": "vertical",
+      "laneId": "stockpile-train-water",
+      "side": "east",
+      "purpose": "TF12 to SW411 auxiliary supply connection; not a placement hierarchy parent."
+    }
+  ],
+  "externalConnections": [
+    {
+      "connectionId": "line33:station-to-recloser",
+      "from": "station:sb02:f4:transformer:output",
+      "to": "line33:pole-1-recloser:in",
+      "fromGroupId": "source/tf04",
+      "toGroupId": "station/amr",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "line33:tie-to-201",
+      "from": "line33:tie-in-abs:out",
+      "to": "line33:pole-201-abs:in",
+      "fromGroupId": "station/amr",
+      "toGroupId": "station/iop",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw431:tf431:cable-TF431-P-01",
+      "from": "sw431:tf431:hv-cb:b",
+      "to": "sw431:tf431:hv",
+      "fromGroupId": "crushing-1/hv",
+      "toGroupId": "crushing-1/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw431:tf432:cable-TF432-P-01",
+      "from": "sw431:tf432:hv-cb:b",
+      "to": "sw431:tf432:hv",
+      "fromGroupId": "crushing-1/hv",
+      "toGroupId": "crushing-1/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw431:tf437:cable-TF437-P-01",
+      "from": "sw431:tf437:hv-cb:b",
+      "to": "sw431:tf437:hv",
+      "fromGroupId": "crushing-1/hv",
+      "toGroupId": "crushing-1/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw431:tf442:cable-TF442-P-01",
+      "from": "sw431:tf442:hv-cb:b",
+      "to": "sw431:tf442:hv",
+      "fromGroupId": "crushing-1/hv",
+      "toGroupId": "crushing-1/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 3,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw435:tf435:cable-TF435-P-01",
+      "from": "sw435:tf435:hv-cb:b",
+      "to": "sw435:tf435:transformer:hv",
+      "fromGroupId": "crushing-2/sw435-hv",
+      "toGroupId": "crushing-2/final-lv",
+      "corridorId": "lane:crushing-2:west",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw435:tf433:cable-TF433-P-01",
+      "from": "sw435:tf433:hv-cb:b",
+      "to": "sw435:tf433:transformer:hv",
+      "fromGroupId": "crushing-2/sw435-hv",
+      "toGroupId": "crushing-2/final-lv",
+      "corridorId": "lane:crushing-2:west",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw435:tf453:cable-TF453-P-01",
+      "from": "sw435:tf453:hv-cb:b",
+      "to": "sw435:tf453:transformer:hv",
+      "fromGroupId": "crushing-2/sw435-hv",
+      "toGroupId": "crushing-2/final-lv",
+      "corridorId": "lane:crushing-2:west",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "hpgr:cable-SW438-P-01",
+      "from": "sw435:hpgr:cb:b",
+      "to": "hpgr:jb001:in",
+      "fromGroupId": "crushing-2/sw435-hv",
+      "toGroupId": "crushing-2/hpgr-hv",
+      "corridorId": "lane:crushing-2:west",
+      "track": 3,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "hpgr:sw002:a02:cable-TF003-P-01",
+      "from": "hpgr:sw002:a02:k101:b",
+      "to": "hpgr:tf003:hv",
+      "fromGroupId": "crushing-2/hpgr-hv",
+      "toGroupId": "crushing-2/hpgr-drives",
+      "corridorId": "lane:crushing-2:west",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "hpgr:sw002:a04:cable-TF002-P-01",
+      "from": "hpgr:sw002:a04:k101:b",
+      "to": "hpgr:tf002:hv",
+      "fromGroupId": "crushing-2/hpgr-hv",
+      "toGroupId": "crushing-2/hpgr-drives",
+      "corridorId": "lane:crushing-2:west",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "hpgr:cable-TF004-P-01",
+      "from": "hpgr:sw002:tf004:f101:b",
+      "to": "hpgr:tf004:hv",
+      "fromGroupId": "crushing-2/hpgr-hv",
+      "toGroupId": "crushing-2/final-lv",
+      "corridorId": "lane:crushing-2:west",
+      "track": 6,
+      "role": "cross-connection"
+    },
+    {
+      "connectionId": "sw421:tf421:cable-TF421-P-01",
+      "from": "sw421:tf421:hv-cb:b",
+      "to": "sw421:tf421:hv",
+      "fromGroupId": "screening/hv",
+      "toGroupId": "screening/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw421:tf422:cable-TF422-P-01",
+      "from": "sw421:tf422:hv-cb:b",
+      "to": "sw421:tf422:hv",
+      "fromGroupId": "screening/hv",
+      "toGroupId": "screening/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw421:tf423:cable-TF423-P-01",
+      "from": "sw421:tf423:hv-cb:b",
+      "to": "sw421:tf423:hv",
+      "fromGroupId": "screening/hv",
+      "toGroupId": "screening/lv",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 6,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf440:hv-cable",
+      "from": "sw426:tf440:cb:b",
+      "to": "sw426:tf440:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf440-tf426",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 7,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf426:hv-cable",
+      "from": "sw426:tf426:cb:b",
+      "to": "sw426:tf426:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf440-tf426",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 8,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf428:hv-cable",
+      "from": "sw426:tf428:cb:b",
+      "to": "sw426:tf428:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf428-tf427",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 9,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf427:hv-cable",
+      "from": "sw426:tf427:cb:b",
+      "to": "sw426:tf427:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf428-tf427",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 10,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf429:hv-cable",
+      "from": "sw426:tf429:cb:b",
+      "to": "sw426:tf429:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf429-tf439",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 11,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf439:hv-cable",
+      "from": "sw426:tf439:cb:b",
+      "to": "sw426:tf439:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf429-tf439",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 12,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf430:hv-cable",
+      "from": "sw426:tf430:cb:b",
+      "to": "sw426:tf430:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf430-tf443",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 13,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:tf443:hv-cable",
+      "from": "sw426:tf443:cb:b",
+      "to": "sw426:tf443:hv",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/lv-tf430-tf443",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 14,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw426:laboratory:cable",
+      "from": "sw426:ss714:cb:b",
+      "to": "rm714:in01:a",
+      "fromGroupId": "desands/hv",
+      "toGroupId": "desands/laboratory",
+      "corridorId": "lane:crushing-1-desands-screening:west",
+      "track": 15,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw454:sw505:cable-SW505-P-01",
+      "from": "sw454:sw505:cb:b",
+      "to": "sw505:in:cb:a",
+      "fromGroupId": "stockpile/stockpile-hv",
+      "toGroupId": "stockpile/wet-hv",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw454:tf454:cable-TF454-P-01",
+      "from": "sw454:tf454:hv-cb:b",
+      "to": "sw454:tf454:hv",
+      "fromGroupId": "stockpile/stockpile-hv",
+      "toGroupId": "supplemental/mc454-lv",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw454:tf455:cable-TF455-P-01",
+      "from": "sw454:tf455:hv-cb:b",
+      "to": "sw454:tf455:hv",
+      "fromGroupId": "stockpile/stockpile-hv",
+      "toGroupId": "supplemental/sw455-lv",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw454:tf456:cable-TF456-P-01",
+      "from": "sw454:tf456:hv-cb:b",
+      "to": "sw454:tf456:hv",
+      "fromGroupId": "stockpile/stockpile-hv",
+      "toGroupId": "stockpile/lv-dual-windings",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 3,
+      "role": "cross-connection"
+    },
+    {
+      "connectionId": "sw505:tf506:cable-TF506-P-01",
+      "from": "sw505:tf506:hv-cb:b",
+      "to": "sw505:tf506:hv",
+      "fromGroupId": "stockpile/wet-hv",
+      "toGroupId": "stockpile/lv-dual-windings",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw505:tf507:cable-TF507-P-01",
+      "from": "sw505:tf507:hv-cb:b",
+      "to": "sw505:tf507:hv",
+      "fromGroupId": "stockpile/wet-hv",
+      "toGroupId": "stockpile/lv-mccs",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw505:tf508:cable-TF508-P-01",
+      "from": "sw505:tf508:hv-cb:b",
+      "to": "sw505:tf508:hv",
+      "fromGroupId": "stockpile/wet-hv",
+      "toGroupId": "stockpile/lv-mccs",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 6,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw505:tf505a:cable-TF505A-P-01",
+      "from": "sw505:tf505a:hv-cb:b",
+      "to": "sw505:tf505a:hv",
+      "fromGroupId": "stockpile/wet-hv",
+      "toGroupId": "stockpile/mv-drives",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 7,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw505:tf505b:cable-TF505B-P-01",
+      "from": "sw505:tf505b:hv-cb:b",
+      "to": "sw505:tf505b:hv",
+      "fromGroupId": "stockpile/wet-hv",
+      "toGroupId": "stockpile/mv-drives",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 8,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw505:tf505c:cable-TF505C-P-01",
+      "from": "sw505:tf505c:hv-cb:b",
+      "to": "sw505:tf505c:hv",
+      "fromGroupId": "stockpile/wet-hv",
+      "toGroupId": "stockpile/mv-drives",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 9,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw451:tf451:cable-TF451-P-01",
+      "from": "sw451:tf451:hv-cb:out",
+      "to": "sw451:tf451:hv",
+      "fromGroupId": "train-loading/hv",
+      "toGroupId": "train-loading/lv",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 10,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "sw451:tf452:cable-TF452-P-01",
+      "from": "sw451:tf452:hv-cb:out",
+      "to": "sw451:tf452:hv",
+      "fromGroupId": "train-loading/hv",
+      "toGroupId": "train-loading/lv",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 11,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm406:incoming-pole57",
+      "from": "cv006:fused-abs:57:b",
+      "to": "rm406:sw01:line",
+      "fromGroupId": "cv006/overhead",
+      "toGroupId": "cv006/rm406-hv",
+      "corridorId": "lane:cv006:west",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm410:incoming-pole49-40",
+      "from": "cv006:abs:49-40:b",
+      "to": "rm410:sw01:line",
+      "fromGroupId": "cv006/overhead",
+      "toGroupId": "cv006/rm410-hv",
+      "corridorId": "lane:cv006:west",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm406:tf406a:cable-TF406A-P1",
+      "from": "rm406:sw02:cable",
+      "to": "rm406:tf406a:hv",
+      "fromGroupId": "cv006/rm406-hv",
+      "toGroupId": "cv006/head-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm406:tf406b:cable-TF406B-P1",
+      "from": "rm406:sw03:cable",
+      "to": "rm406:tf406b:hv",
+      "fromGroupId": "cv006/rm406-hv",
+      "toGroupId": "cv006/head-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 3,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm410:tf410a:cable-TF410A-P1",
+      "from": "rm410:sw02:cable",
+      "to": "rm410:tf410a:hv",
+      "fromGroupId": "cv006/rm410-hv",
+      "toGroupId": "cv006/tail-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm410:tf410b:cable-TF410B-P1",
+      "from": "rm410:sw03:cable",
+      "to": "rm410:tf410b:hv",
+      "fromGroupId": "cv006/rm410-hv",
+      "toGroupId": "cv006/tail-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h1:tf417a:input",
+      "from": "wh:h1:rm417:sw03:common",
+      "to": "wh:h1:tf417a:hv",
+      "fromGroupId": "western/h1-rmu",
+      "toGroupId": "western/h1-lv",
+      "corridorId": "lane:services:west",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h1:mc417:supply",
+      "from": "wh:h1:tf417:secondary",
+      "to": "wh:h1:mc417:in:a",
+      "fromGroupId": "western/h1-rmu",
+      "toGroupId": "western/h1-hv",
+      "corridorId": "lane:services:west",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h1:hopper3-cable",
+      "from": "wh:h1:rm417:sw04:common",
+      "to": "wh:h3:hv416:port",
+      "fromGroupId": "western/h1-rmu",
+      "toGroupId": "western/h3",
+      "corridorId": "lane:services:west",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h3:tf416:input",
+      "from": "wh:h3:hv416:port",
+      "to": "wh:h3:tf416:hv",
+      "fromGroupId": "western/h3",
+      "toGroupId": "western-supplemental/h3/mv",
+      "corridorId": "lane:services:west",
+      "track": 3,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h3:tf416a:input",
+      "from": "wh:h3:hv416:port",
+      "to": "wh:h3:tf416a:hv",
+      "fromGroupId": "western/h3",
+      "toGroupId": "supplemental/hopper3-lv",
+      "corridorId": "lane:services:west",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h7:tf418a:input",
+      "from": "wh:h7:rm418:cb03:disconnect:b",
+      "to": "wh:h7:tf418a:hv",
+      "fromGroupId": "western/h7-rmu",
+      "toGroupId": "western/h7-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 6,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h7:mc418:supply",
+      "from": "wh:h7:tf418:secondary",
+      "to": "wh:h7:mc418:in:a",
+      "fromGroupId": "western/h7-rmu",
+      "toGroupId": "western/h7-hv",
+      "corridorId": "lane:cv006:west",
+      "track": 7,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h8:tf416:input",
+      "from": "wh:h8:hv416:port",
+      "to": "wh:h8:tf416:hv",
+      "fromGroupId": "western/h8",
+      "toGroupId": "western-supplemental/h8/mv",
+      "corridorId": "lane:cv006:west",
+      "track": 8,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h8:tf416a:input",
+      "from": "wh:h8:hv416:port",
+      "to": "wh:h8:tf416a:hv",
+      "fromGroupId": "western/h8",
+      "toGroupId": "western-supplemental/h8/lv",
+      "corridorId": "lane:cv006:west",
+      "track": 9,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h9-to-h7:cable",
+      "from": "wh:h9:rm419:sw02:line",
+      "to": "wh:h7:rm418:sw01:a",
+      "fromGroupId": "western/h9-rmu",
+      "toGroupId": "western/h7-rmu",
+      "corridorId": "lane:cv006:west",
+      "track": 10,
+      "role": "primary-display-link",
+      "fromExitSide": "north",
+      "portRationale": "This cable-side terminal faces above the local switch/bus assembly. Depart through the north boundary before descending outside the room."
+    },
+    {
+      "connectionId": "wh:h9:tf419b:input",
+      "from": "wh:h9:rm419:sw04:common",
+      "to": "wh:h9:tf419b:hv",
+      "fromGroupId": "western/h9-rmu",
+      "toGroupId": "western/h9-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 11,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "wh:h9:mc419:supply",
+      "from": "wh:h9:tf419a:secondary",
+      "to": "wh:h9:mc419:in:a",
+      "fromGroupId": "western/h9-rmu",
+      "toGroupId": "western/h9-hv",
+      "corridorId": "lane:cv006:west",
+      "track": 12,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm721:current-rm713-cable",
+      "from": "rm721:rm713:b",
+      "to": "rm713:in01:a",
+      "fromGroupId": "services/rm721",
+      "toGroupId": "services/workshop",
+      "corridorId": "lane:services:west",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm721:rm412:cable",
+      "from": "rm721:rm412:b",
+      "to": "rm412:s100:a",
+      "fromGroupId": "services/rm721",
+      "toGroupId": "services/dump-pocket-hv",
+      "corridorId": "lane:services:west",
+      "track": 6,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm412:tf412:incoming-cable",
+      "from": "rm412:feeder-contact:b",
+      "to": "rm412:tf412:hv",
+      "fromGroupId": "services/dump-pocket-hv",
+      "toGroupId": "services/dump-pocket-lv",
+      "corridorId": "lane:services:west",
+      "track": 7,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm412:s101-rm413-in01",
+      "from": "rm412:s101:a",
+      "to": "rm413:in01:a",
+      "fromGroupId": "services/dump-pocket-hv",
+      "toGroupId": "services/conveyor-hv",
+      "corridorId": "lane:services:west",
+      "track": 8,
+      "role": "primary-display-link",
+      "fromExitSide": "north",
+      "portRationale": "This cable-side terminal faces above the local switch/bus assembly. Depart through the north boundary before descending outside the room."
+    },
+    {
+      "connectionId": "rm413:tf413:incoming-cable",
+      "from": "rm413:tf413:cb:b",
+      "to": "rm413:tf413:hv",
+      "fromGroupId": "services/conveyor-hv",
+      "toGroupId": "services/conveyor-lv",
+      "corridorId": "lane:services:west",
+      "track": 9,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm413:tf414:incoming-cable",
+      "from": "rm413:tf414:cb:b",
+      "to": "rm413:tf414:hv",
+      "fromGroupId": "services/conveyor-hv",
+      "toGroupId": "services/conveyor-lv",
+      "corridorId": "lane:services:west",
+      "track": 10,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm413:double-boot-rm413a",
+      "from": "rm413:in02:a",
+      "to": "rm413a:bus:bar",
+      "fromGroupId": "services/conveyor-hv",
+      "toGroupId": "services/rm413a-hv",
+      "corridorId": "lane:services:west",
+      "track": 11,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm413a:tf413a:incoming-cable",
+      "from": "rm413a:es-q8:lower:cable",
+      "to": "rm413a:tf413a:hv",
+      "fromGroupId": "services/rm413a-hv",
+      "toGroupId": "services/drive-inputs",
+      "corridorId": "lane:services:west",
+      "track": 12,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm420:tf420a:cable-SS420-TF420A-P01",
+      "from": "rm420:tf420a:sw:out",
+      "to": "rm420:tf420a:primary-connection:port",
+      "fromGroupId": "hopper-10/rmu",
+      "toGroupId": "hopper-10/transformers",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm420:tf420b:cable-SS420-TF420B-P01",
+      "from": "rm420:tf420b:sw:out",
+      "to": "rm420:tf420b:primary-connection:port",
+      "fromGroupId": "hopper-10/rmu",
+      "toGroupId": "hopper-10/transformers",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 3,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "rm420:mc420:incoming-cable",
+      "from": "rm420:tf420a:secondary",
+      "to": "rm420:mc420:in:vcb:in",
+      "fromGroupId": "hopper-10/transformers",
+      "toGroupId": "hopper-10/mv",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "mine:sw441:incoming:cable",
+      "from": "mine:wt1:cb:b",
+      "to": "mine:sw441:in:cb:a",
+      "fromGroupId": "supplemental/water-tf12-source",
+      "toGroupId": "mine-camp/mine-sw441",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 12,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "mine:tf441:hv-cable",
+      "from": "mine:tf441:cb:b",
+      "to": "mine:tf441:hv",
+      "fromGroupId": "mine-camp/mine-sw441",
+      "toGroupId": "mine-camp/mine-mc441",
+      "corridorId": "lane:stockpile-train-water:west",
+      "track": 13,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:sw454",
+      "from": "sw411:tier-01:interface:port",
+      "to": "sw454:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "stockpile/stockpile-hv",
+      "corridorId": "main-feeder-header",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:sw451",
+      "from": "sw411:tier-02:interface:port",
+      "to": "sw451:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "train-loading/hv",
+      "corridorId": "main-feeder-header",
+      "track": 1,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:sw435",
+      "from": "sw411:tier-04:interface:port",
+      "to": "sw435:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "crushing-2/sw435-hv",
+      "corridorId": "main-feeder-header",
+      "track": 2,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:sw431",
+      "from": "sw411:tier-13:interface:port",
+      "to": "sw431:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "crushing-1/hv",
+      "corridorId": "main-feeder-header",
+      "track": 3,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:sw426",
+      "from": "sw411:tier-14:interface:port",
+      "to": "sw426:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "desands/hv",
+      "corridorId": "main-feeder-header",
+      "track": 4,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:sw421",
+      "from": "sw411:tier-15:interface:port",
+      "to": "sw421:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "screening/hv",
+      "corridorId": "main-feeder-header",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:crushing-tie",
+      "from": "sw431:interface:sw435:port",
+      "to": "sw435:interface:sw431:port",
+      "fromGroupId": "crushing-1/hv",
+      "toGroupId": "crushing-2/sw435-hv",
+      "corridorId": "crushing-ring-side",
+      "track": 0,
+      "role": "ring-cross-connection"
+    },
+    {
+      "connectionId": "whole:join:hopper1",
+      "from": "rm413:interface:rm417:port",
+      "to": "wh:h1:interface:rm413:port",
+      "fromGroupId": "services/conveyor-hv",
+      "toGroupId": "western/h1-rmu",
+      "corridorId": "lane:services:west",
+      "track": 13,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:hopper8",
+      "from": "rm406:interface:hopper8:port",
+      "to": "wh:h8:interface:rm406:port",
+      "fromGroupId": "cv006/rm406-hv",
+      "toGroupId": "western/h8",
+      "corridorId": "lane:cv006:west",
+      "track": 13,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:hopper9",
+      "from": "rm410:interface:rm419:incoming",
+      "to": "wh:h9:interface:rm410:port",
+      "fromGroupId": "cv006/rm410-hv",
+      "toGroupId": "western/h9-rmu",
+      "corridorId": "lane:cv006:west",
+      "track": 14,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:cv006",
+      "from": "sw411:tier-03:interface:port",
+      "to": "cv006:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "cv006/overhead",
+      "corridorId": "main-feeder-header",
+      "track": 6,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:rm721",
+      "from": "sw411:tier-16:interface:port",
+      "to": "services:interface:sw411:port",
+      "fromGroupId": "sw411/overview",
+      "toGroupId": "services/rm721",
+      "corridorId": "main-feeder-header",
+      "track": 7,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:tf11-in03",
+      "from": "station:sb01:f4:interface:port",
+      "to": "sw411:in-03:interface:port",
+      "fromGroupId": "source/tf11",
+      "toGroupId": "sw411/overview",
+      "corridorId": "lane:crushing-2:west",
+      "track": 7,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:tf12-in04",
+      "from": "station:sb02:f1:interface:port",
+      "to": "owner:tf12:opf1-7:port",
+      "fromGroupId": "source/tf12",
+      "toGroupId": "supplemental/water-tf12-source",
+      "corridorId": "lane:stockpile-train-water:east",
+      "track": 0,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "whole:join:hopper10-tf04",
+      "from": "line33:hopper-10:interface:port",
+      "to": "rm420:interface:pole286:port",
+      "fromGroupId": "station/iop",
+      "toGroupId": "hopper-10/rmu",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 5,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "ep:h10:mc420a:incoming",
+      "from": "rm420:mc420a:interface:port",
+      "to": "rm420:mc420a:in:acb:in",
+      "fromGroupId": "hopper-10/transformers",
+      "toGroupId": "supplemental/hopper10-lv",
+      "corridorId": "lane:tf04-outer:west",
+      "track": 6,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "cv006-lv:mc410a:incoming",
+      "from": "rm410:interface:mc410a:input",
+      "to": "rm410:mc410a:cb:a",
+      "fromGroupId": "cv006/tail-lv",
+      "toGroupId": "supplemental/cv006-mc410a-lv",
+      "corridorId": "lane:cv006:west",
+      "track": 15,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "owner:join:rm721-rm712",
+      "from": "rm721:in02:b",
+      "to": "rm712:in02:a",
+      "fromGroupId": "services/rm721",
+      "toGroupId": "services/mine-services",
+      "corridorId": "lane:services:west",
+      "track": 14,
+      "role": "primary-display-link"
+    },
+    {
+      "connectionId": "owner:tf12:opf1-7-to-in04",
+      "from": "owner:tf12:opf1-7:port",
+      "to": "sw411:in-04:interface:port",
+      "fromGroupId": "supplemental/water-tf12-source",
+      "toGroupId": "sw411/overview",
+      "corridorId": "secondary-supply-side",
+      "track": 0,
+      "role": "primary-display-link",
+      "displayParentGroupId": "supplemental/water-tf12-source",
+      "displayChildGroupId": "sw411/overview"
+    },
+    {
+      "connectionId": "drop-tower:entry-abs",
+      "from": "cv006:interface:drop-tower-workshop:port",
+      "to": "drop-tower:abs:p18-1:a",
+      "fromGroupId": "cv006/overhead",
+      "toGroupId": "cv006/drop-tower",
+      "corridorId": "lane:cv006:west",
+      "track": 16,
+      "role": "primary-display-link"
+    }
+  ],
+  "unconfirmedDisplayDependencies": [
+    "Measured lane widths, local gaps and corridor clearances must be compiled and collision-validated with actual local geometry. This logical plan does not certify route clearance.",
+    "stockpile/lv-dual-windings owns both TF456 and TF506 endpoints; it is placed below SW505 with its SW454 connection preserved as a cross-connection.",
+    "crushing-2/final-lv owns both SW435 and HPGR endpoint assemblies; it anchors below SW435 while the HPGR TF004 link remains an external cross-connection.",
+    "Independent branches share authored columns at distinct vertical bands. Actual measured transforms and external route clearance require compiler validation; no physical adjacency is claimed."
+  ],
+  "pinnedGroups": [
+    {
+      "groupId": "source/tf12",
+      "measuredOrigin": [
+        41225,
+        -3819.5
+      ],
+      "reason": "Align TF12 above OPF1-7 and SW411 IN04; explicit display placement only."
+    },
+    {
+      "groupId": "supplemental/water-tf12-source",
+      "measuredOrigin": [
+        41240,
+        0
+      ],
+      "reason": "OPF1-7 is on TF12 incoming supply before IN04, not below the downstream water switchroom. Keep its whole local assembly intact."
+    }
+  ],
+  "fixedModuleOrigins": {
+    "source/tf11": [
+      39418.75,
+      -6000
+    ],
+    "source/tf12": [
+      41225,
+      -9819.5
+    ],
+    "source/tf04": [
+      89913.75,
+      0
+    ],
+    "station/amr": [
+      87302.5,
+      3416
+    ],
+    "sw411/overview": [
+      35805,
+      3819.5
+    ],
+    "station/iop": [
+      85157.5,
+      6761.5
+    ],
+    "crushing-1/hv": [
+      52280,
+      8574
+    ],
+    "crushing-2/sw435-hv": [
+      36050,
+      8574
+    ],
+    "stockpile/stockpile-hv": [
+      4086.25,
+      8574
+    ],
+    "services/rm721": [
+      71603.75,
+      8574
+    ],
+    "cv006/overhead": [
+      20173.75,
+      8574
+    ],
+    "crushing-1/lv": [
+      53730,
+      12927
+    ],
+    "crushing-2/final-lv": [
+      37205,
+      13722
+    ],
+    "supplemental/sw455-lv": [
+      6188.75,
+      12405.5
+    ],
+    "supplemental/mc454-lv": [
+      8556.25,
+      12405.5
+    ],
+    "services/mine-services": [
+      71303.75,
+      13337
+    ],
+    "services/workshop": [
+      75891.25,
+      13337
+    ],
+    "hopper-10/rmu": [
+      86408.75,
+      11999.5
+    ],
+    "cv006/drop-tower": [
+      23216.25,
+      11929.5
+    ],
+    "hopper-10/transformers": [
+      88820,
+      17287.5
+    ],
+    "crushing-2/hpgr-hv": [
+      37055,
+      17079
+    ],
+    "desands/hv": [
+      49957.5,
+      16186.5
+    ],
+    "stockpile/wet-hv": [
+      2500,
+      16138.5
+    ],
+    "cv006/rm406-hv": [
+      22831.25,
+      13677.5
+    ],
+    "services/dump-pocket-hv": [
+      73076.25,
+      19558
+    ],
+    "crushing-2/hpgr-drives": [
+      37995,
+      21476
+    ],
+    "desands/lv-tf440-tf426": [
+      48835,
+      20038
+    ],
+    "desands/lv-tf428-tf427": [
+      52380,
+      20038
+    ],
+    "desands/lv-tf429-tf439": [
+      55955,
+      20038
+    ],
+    "desands/lv-tf430-tf443": [
+      59930,
+      20038
+    ],
+    "stockpile/lv-dual-windings": [
+      4113.75,
+      19597
+    ],
+    "stockpile/lv-mccs": [
+      8288.75,
+      19597
+    ],
+    "cv006/head-lv": [
+      23098.75,
+      18815.5
+    ],
+    "services/dump-pocket-lv": [
+      72908.75,
+      23952
+    ],
+    "supplemental/hopper10-lv": [
+      87818.75,
+      20806
+    ],
+    "hopper-10/mv": [
+      88623.75,
+      20806
+    ],
+    "cv006/former-hopper10-22": [
+      38132.5,
+      25958
+    ],
+    "stockpile/mv-drives": [
+      5418.75,
+      23154
+    ],
+    "desands/laboratory": [
+      54807.5,
+      23222.5
+    ],
+    "cv006/rm410-hv": [
+      22395,
+      22710
+    ],
+    "services/conveyor-hv": [
+      73002.5,
+      28444
+    ],
+    "mine-camp/mine-overlaps": [
+      38796.25,
+      30774
+    ],
+    "cv006/tail-lv": [
+      22838.75,
+      28688
+    ],
+    "services/conveyor-lv": [
+      72178.75,
+      32565
+    ],
+    "services/rm413a-hv": [
+      75578.75,
+      32565
+    ],
+    "screening/hv": [
+      52020,
+      28985.5
+    ],
+    "train-loading/hv": [
+      4035,
+      28028.5
+    ],
+    "desands/services": [
+      36643.75,
+      33495
+    ],
+    "screening/lv": [
+      53800,
+      33518.5
+    ],
+    "train-loading/lv": [
+      5345,
+      32761.5
+    ],
+    "supplemental/cv006-mc410a-lv": [
+      24336.25,
+      32582.5
+    ],
+    "services/drive-inputs": [
+      73666.25,
+      36657
+    ],
+    "western/h1-rmu": [
+      72535,
+      40711.5
+    ],
+    "western/h8": [
+      24786.25,
+      35081
+    ],
+    "supplemental/water-tf12-source": [
+      41240,
+      -6000
+    ],
+    "western/h1-hv": [
+      72088.75,
+      46404.5
+    ],
+    "western-supplemental/h8/mv": [
+      18632.5,
+      37496.5
+    ],
+    "mine-camp/mine-sw441": [
+      64660,
+      -3000
+    ],
+    "mine-camp/mine-mc441": [
+      66160,
+      800
+    ],
+    "western/h1-lv": [
+      69476.25,
+      51956
+    ],
+    "western-supplemental/h8/lv": [
+      24101.25,
+      41756
+    ],
+    "western/h9-rmu": [
+      22882.5,
+      45629
+    ],
+    "western/h3": [
+      74438.75,
+      56890
+    ],
+    "western/h9-hv": [
+      22436.25,
+      51349.5
+    ],
+    "western-supplemental/h3/mv": [
+      68285,
+      58391
+    ],
+    "western/h9-lv": [
+      19923.75,
+      56901
+    ],
+    "supplemental/hopper3-lv": [
+      73751.25,
+      62650.5
+    ],
+    "western/h7-rmu": [
+      22446.25,
+      61915
+    ],
+    "western/h7-hv": [
+      22436.25,
+      67715.5
+    ],
+    "western/h7-lv": [
+      19723.75,
+      73267
+    ]
+  },
+  "fixedLanes": {
+    "stockpile-train-water": {
+      "x": 2500,
+      "width": 10932.5,
+      "gutter": 2500
+    },
+    "cv006": {
+      "x": 18632.5,
+      "width": 12672.5,
+      "gutter": 2700
+    },
+    "crushing-2": {
+      "x": 35805,
+      "width": 8630,
+      "gutter": 1800
+    },
+    "crushing-1-desands-screening": {
+      "x": 48835,
+      "width": 14350,
+      "gutter": 2600
+    },
+    "services": {
+      "x": 68285,
+      "width": 12672.5,
+      "gutter": 2500
+    },
+    "tf04-outer": {
+      "x": 85157.5,
+      "width": 10915,
+      "gutter": 1700
+    }
+  },
+  "layoutRevision": "authored-2026-11-05.5"
+}

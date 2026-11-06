@@ -1,0 +1,161 @@
+{
+  "area": "SW451 / Train loading",
+  "issue": 19,
+  "reviewDate": "2026-10-22",
+  "status": "source-review-only-unaccepted",
+  "narrative": "drawing-review/areas/train-loading-review.md",
+  "coverage": {
+    "distinctFilesVisuallyInspectedThisReview": 10,
+    "distinctPagesVisuallyInspectedThisReview": 10,
+    "enlargedCropsInspected": 8,
+    "previousInitialReviewIdsRevisited": {
+      "TL-S09": "S1",
+      "TL-S10": "S3"
+    },
+    "globalCoverageCountUpdated": false
+  },
+  "sources": [
+    {
+      "id": "TL-S01",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2356.pdf",
+      "sha256": "057d1484e47799f5b3ebefa13c9e380b8c2a5278d52b375c510bfc5f798ca56e",
+      "printedRevision": "5",
+      "printedDate": "28/01/25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW451 HV SLD; incomer A-C / 1-2; bus C; feeders/spares C-G / 2-10"
+    },
+    {
+      "id": "TL-S02",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2460.pdf",
+      "sha256": "65acdea584359b3eb9796c756ac7079ad59f7f4628fbdfd71fa88a2bb112adab",
+      "printedRevision": "5",
+      "printedDate": "17/08/09",
+      "printedStatus": "ISSUED FOR AS-BUILT; stamp 17/08/2009",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW452; TF452 A / 5-6; two incomers A-C / 1-10; two 690 V bars C-D"
+    },
+    {
+      "id": "TL-S03",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2658.pdf",
+      "sha256": "171d5286b8df997b56d50a3d1ab660e19126b32ffa48aa7ca3eeb92e23245dc3",
+      "printedRevision": "12A",
+      "printedDate": "17/02/26",
+      "printedStatus": "ISSUED FOR REVIEW - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC451 sheet 1; TF451 A-C / 5-7; LV incomer/neutral C-D; phase bus D"
+    },
+    {
+      "id": "TL-S04",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2672.pdf",
+      "sha256": "35739531874cc56d8bf00bff9b7d8976f65d7d97d8fccd87029a4ef247e01ee3",
+      "printedRevision": "7",
+      "printedDate": "13/01/26",
+      "printedStatus": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC451 sheet 2; continued phase bar D; main rating text D / 2-4"
+    },
+    {
+      "id": "TL-S05",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2673.pdf",
+      "sha256": "9a63c09601c4ae393f259381c0088392b3968b1ca0b040bab441820617a7ca8a",
+      "printedRevision": "6",
+      "printedDate": "13/01/26",
+      "printedStatus": "ISSUED FOR CONSTRUCTION - CB25OP003A",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC451 sheet 3; phase continuation C; bridge into MC451B at B-C / 4-5; outgoing drives below"
+    },
+    {
+      "id": "TL-S06",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2468.pdf",
+      "sha256": "6c0f68aa569740dd94c084f4cb184d28c926527791018a3fe7d6a12cdac0385b",
+      "printedRevision": "5",
+      "printedDate": "12/08/09",
+      "printedStatus": "ISSUED FOR AS-BUILT; stamp 12/08/2009",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Cross-area classification: SW453 / TF453; main-power upstream SW435 A / 4-6, CT/control upstream SW451 A / 1"
+    },
+    {
+      "id": "TL-S07",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2469.pdf",
+      "sha256": "f052bab00a8c417697ad6eee25d604d574f0a7918bf22190a0d82741de309457",
+      "printedRevision": "6",
+      "printedDate": "18/11/25",
+      "printedStatus": "ISSUED FOR CONSTRUCTION",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW453 continuation sheet 2; two 690 V bars C; cross-area classification, outgoing LV loads below"
+    },
+    {
+      "id": "TL-S08",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2361.pdf",
+      "sha256": "24539924a40399ba5c0f35ab6389d7349fc99965b20010433b7bf856f29ae767",
+      "printedRevision": "8",
+      "printedDate": "19/07/23",
+      "printedStatus": "AS BUILT - CB220P055A; AS BUILT stamp 12/07/2023",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "HV protection communications network; SW451 communications panel C-D / 7-10; not a main-power SLD"
+    },
+    {
+      "id": "TL-S09",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0010.pdf",
+      "sha256": "cd77222ad84e15a9ca13d2120994db03be9765ed1a923595bc17bacca4a2795f",
+      "printedRevision": "0",
+      "printedDate": "27.10.25",
+      "printedStatus": "ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Overview; SW451 panel E-G / 5-8; SW411 feeder B / 2; SW435/TF453 panel A-C / 7-12"
+    },
+    {
+      "id": "TL-S10",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "printedRevision": "7",
+      "printedDate": "28/01/25",
+      "printedStatus": "AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SW411 main switchroom; SW451 feeder tier 2, D-G / 2-3"
+    }
+  ],
+  "openReviewIds": [
+    "TL-R01",
+    "TL-R02",
+    "TL-R03",
+    "TL-R04",
+    "TL-R05",
+    "TL-R06",
+    "TL-R07",
+    "TL-R08"
+  ],
+  "runtimeModelCreated": false,
+  "ownerAcceptance": false
+}

@@ -1,0 +1,244 @@
+              1                                      2                                        3                                      4                                      5                                     6                                      7                                      8                                     9                                      10                                     11                                     12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                           A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                           B
+
+
+
+
+
+
+
+               WET SCREENING & SCRUBBING SUBSTATION SS505
+
+               400V MOTOR CONTROL CENTER MC508
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                           C
+
+
+
+
+                 MAIN BUS - 400V, 3000A. 63kA FOR 1 SEC
+
+
+
+
+
+
+
+                                   CB                     CB                     CB                      CB                     CB                     CB                     CB                     CB                      CB                     CB                     CB                     CB                     CB
+                                   UP506C                 UP506E                 DB508                   AC5061                 AC5062                 AC5063                 AC5064                 DB505                   DB5081                 DB5082                 CL201                  CL202                  CL201-MP01
+                                   FD 50A                 FD 50A                 FD 50A                  FD 100A                FD 100A                FD 100A                FD 100A                FD 50A                  FD 250A                FD 250A                FD 250A                FD 250A                FD 63A
+
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                           D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                           E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                           F
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                 5
+
+
+
+
+
+
+                               UPS                    UPS
+                             BYPASS                 BYPASS                    DB                                                                                                                  DB                     DB                     DB                     CL                      CL                     CP
+                             SWITCH                 SWITCH
+
+                            7.5kVA                 7.5kVA                   10kW                                                                                                                10kW                   70kW                   70kW                   62kW                   62kW                    10kW
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                           G
+                                                                                                                                                                                                                                                                                                                                                                                                              APPROVED FOR CONSTRUCTION
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                           DESIGN | CONSTRUCT | COMMISSION
+
+                                                                                                                                                                                                                                                                                                                                                                              VENDOR/DESIGNER DRG No.                                                               REV:
+                                                                                                                                                                                                                                                                                                                                                                                                     15650-100-SLD-EL-002                                            0
+
+                                                                                                                                                                                                                                                                                                                                                      PROJECT NUMBER                                     Fortescue Metals Group Ltd
+                                                                                                                                                                                                                                                                                                          STANDARDS
+                                                                                                                                                                                                                                                                                                            CHECK
+                                                                                                                                                                                                                                                                                                           APPROVED
+                                                                                                            5    21.06.19  ISSUED FOR CONSTRUCTION                                                         AOD        TR        TR        BB        ST        ST                                                                                       CB19OP051A             CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                           4    03.05.19  ISSUED FOR CLIENT REVIEW                                                        AOD                  TR        BB        ST        ST                                                                                                              WET SCRUBBING / SCREENING                                                                     H
+                                                                                                            3    18.03.13  AS BUILT                                                                         SR       DGM       DGM        ZG        AB        AB        MT                                                                                                                                                               MC508This drawing must not
+                                                                                                                                                                                                                                                                                                                                                      be copied or reproduced
+                                                                                                            2    29.02.12  RE-ISSUED FOR CONSTRUCTION                                                      JMc        MR        MR        PA        CD        PH       NHJ                                                                            in any form or used for
+                                                                                                                                                                                                                                                                                                                                                      any purpose other than  SINGLE LINE DIAGRAM - SHEET 1
+                                                                                                            1    13.01.12  RE-ISSUED FOR CONSTRUCTION                                                      JMc        MR        MR        PA        CD        PH       NHJ
+                                                                                                                                                                                                                                                                                                                                                     originally intended without
+   500CB-04220-DR-EL-0045           MC508 SINGLE LINE DIAGRAM SHEET 2                                       0    10.10.11  ISSUED FOR CONSTRUCTION                                                         JMc        MR        MR        PA        IMD       PH       NHJ                                                                              written approval of           SCALE     DRG No:                                                             REV:
+
+                                                                                                                                                                                                                                                                                                       primerogroup.com.au  | DESIGN | CONSTRUCT | COMMISSION
+                                                                                                                                                                                                                                                                                                                                                     Fortescue MetalsGroup Ltd
+   REF DRG No.                                                     TITLE                                   REV    DATE                               DESCRIPTION                                           DRN       CHK       SUP        DES       DAP      PAP       FMG                                                       NORTH                                         A1      NTS           500CB-04220-DR-EL-0044                                          5
+
+
+
+              1                                      2                                        3                                      4                                      5                                     6                                      7                                      8                                     9                                      10                                     11                                     12

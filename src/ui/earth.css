@@ -1,0 +1,8 @@
+.earth-details { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.earth-details > p { margin-top: 8px; font-size: 14px; color: #526279; }
+.terminal-earths { margin: 12px 0 0; font-size: 12px; }
+.terminal-earths > div { display: flex; justify-content: space-between; gap: 12px; padding-block: 4px; }
+.terminal-earths dt { overflow-wrap: anywhere; }
+.earth-conflict { margin-top: 14px; padding: 12px; background: #fff1e5; border: 1px solid #c85b19; border-radius: 6px; }
+.earth-conflict h3 { color: #89390d; }
+.earth-conflict p { margin-top: 8px; color: #61371e; font-size: 14px; }

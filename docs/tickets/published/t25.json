@@ -1,0 +1,17 @@
+{
+  "id": "T25",
+  "number": 26,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/26",
+  "title": "Deliver the accepted whole-network local application",
+  "blockedBy": [
+    11,
+    25
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    11,
+    25
+  ]
+}

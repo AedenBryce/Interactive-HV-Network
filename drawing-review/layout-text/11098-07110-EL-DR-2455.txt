@@ -1,0 +1,182 @@
+                   1                                          2                                           3                                          4                                           5                                          6                                           7                                          8                                           9                                         10                                          11                                         12
+
+
+
+                                   FROM HV SWITCHBOARD                                                                                                                                                    TF432-C-01                                                                                                                                                                               FROM HV SWITCHBOARD
+                                               SW431                                                                                              FROM HV SWITCHBOARD                                                                                                                                                                                                                                          SW431
+                                       07110-EL-DR-2353                                                                                                                    SW431                                                                                                                                                                                                                       07110-EL-DR-2353
+
+A                                                                                                                                                          07110-EL-DR-2353                                                                                                                                                                                                                                                                                                                                                         A
+                                                                                                                                                                                                         TF432-P-01
+
+
+
+                                                                                                                                                                                                                                                                   TRANSFORMER - TF432
+                                                                                                                                                                                                                                                                   22kV/690V/690V
+                                                                                                                                                                                                                                                                   5MVA
+
+                                                                                                                                                                                                                                               SCREEN
+
+
+                                                                                                                                                 SW432-P-01-1                                                                                                                                                             SW432-P-02-1
+
+                                                                                                                                                 SW432-P-01-2                                                                                                                                                             SW432-P-02-2
+
+                                                                                                                                                 SW432-P-01-3                                                                                                                                                             SW432-P-02-3
+
+                                                                                                                                                 SW432-P-01-4                                                                                                                                                             SW432-P-02-4
+
+                                                                                                                                                 SW432-P-01-5                                                                                                                                                             SW432-P-02-5
+B                                                                                                                                                                             CRUSHING No.1 VARIABLE SPEED DRIVE SWITCHBOARD 1                                                                                                                                                                                                                                                                                                       B
+
+                                                                                                                                                                                                                                SW432
+                                                                      5000:1                                                                                                                                                                                                                                                                                                            5000:1
+
+                                                                           CB SW432 IN D                                                                                                                                                                                                                                                                           CB SW432 IN Y
+                                                                           2500A                                                                                                                                                                                                                                                                                                 2500A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    C
+
+                       690V, 2500A, 50kA for 1 Sec
+
+
+
+
+                       690V, 2500A, 50kA for 1 Sec
+
+                                                                                                                               TIER 03F               TIER 3F                    TIER 04F               TIER 4F                     TIER 05F                TIER 5F                    TIER 06F                TIER 6F
+
+                                                          230VAC UPS
+                                                              DB432C
+
+                                                          07110-EL-DR-3411                                                     1000A                  1000A                       1000A                  1000A                      1000A                   1000A                      1000A                   1000A                       SPARE SPACE
+
+
+
+
+                                                                                                                                2 x 500A                2 x 500A                   2 x 500A               2 x 500A                    2 x 500A               2 x 500A                   2 x 500A                2 x 500A
+D                                                          48VDC UPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                D
+                                                              DB432B
+
+                                                          07110-EL-DR-3408
+
+
+
+
+
+
+
+
+
+
+                                                            PROFIBUS
+                                                         MARSH. PANEL
+                                                              MP4321
+                                                          07110-EL-DR-4504
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    E
+
+
+                                                            PROFIBUS
+                                                         MARSH. PANEL
+                                                              MP4322
+                                                          07110-EL-DR-4521
+
+
+
+
+
+
+
+
+                                                                                                                                VS4301                                             VS4302                                            VS4303                                             VS4304
+                                                                                                                        ACS800-07-1500-7                                   ACS800-07-1500-7                                   ACS800-07-1500-7                                   ACS800-07-1500-7
+                                                                                                                            ESR4301 (NOTE 1)                                   ESR4302 (NOTE 1)                                   ESR4303 (NOTE 1)                                  ESR4304 (NOTE 1)
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    G
+
+                                                                                                                                                M                                                  M                                                  M                                                  M
+                                                                                                                                                3~                                                3~                                                 3~                                                 3~
+                                                                                                                FROM      RTDRTD                                   FROM      RTD                                      FROM      RTD                                      FROM      RTD                                                                                                                                                                                                     AS BUILT
+                                                                                                              MP43111                     CR301-EM01             MP43511                    CR302-EM01              MP43112                    CR303-EM01              MP43113                    CR304-EM01
+                                                                                                                                  SECONDARY CRUSHER                                  SECONDARY CRUSHER                                   TERTIARY CRUSHER                                   TERTIARY CRUSHER                                                                                                                                                                            DATE:    17 /08  /2009
+                                                                                                                                             750kW                                              750kW                                              750kW                                             750kW
+
+
+
+
+
+
+    This drawing and all the information                                                                                                                                                                                                         CLIENT                                                                                                                                         DRAWN           W. LEONG                 2/11/06
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                    PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                          ENGINEER        R. COX                   2/11/06
+        It is confidential and is given                                                                                         5    17/08/09    ISSUED FOR AS-BUILT                                           KW    BT    SQ   BT    DF   DF
+                                                                                                                                                                                                                                                                                                                                                                                                CHECKED         D. PALMER                2/11/06      CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                       4    21/02/08    RE-ISSUED FOR CONSTRUCTION                                     CV   LB    AJ   LB    NJ    NJ                                                                                                                                                                                                                                                                                       H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                       LEAD ENG        L. BRUNN                 2/11/06      SW432 - CRUSHING No.1
+         drawing nor any information                                                                                            3    25/01/08    RE-ISSEUD FOR CONSTUCTION                                      JH   RP    AJ   LB    NJ    NJ
+
+    concerning it may be copied, exhibited                                                                                      2    11/05/07    RE-ISSUED FOR CONSTRUCTION                                     JZ   RC    AJ   RC    NJ   GW                                                                                                                                                   ENG MGR         J. BILESSURIS            3/11/06
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                                SINGLE LINE DIAGRAM
+    photographs be taken of any article                                                                                         1    17/11/06    RE-ISSUED FOR CONSTRUCTION                                     WL   RC    AS   LB    JB   GW                                                                                   Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                                 Level 2, Hyatt Centre                                                 Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.  PROJ MGR        G. WIESER                3/11/06
+      fabricated or assembled from this                                                                                         0    02/11/06    ISSUED FOR CONSTRUCTION                                        WL   RC   DGP   LB    JB   GW                                                  Tel: +61 8 9266 0111                                                                                                                                   PROJECT No:             DRG No:                                       REV:
+       drawing without the consent of                                                                                                                                                                                                              87 Adelaide Terrace                         Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent      SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD        REF No.                                   REFERENCES                             REV     DATE                              DESCRIPTION                           DRN   ENG  CHK   LE    EM   PM      East Perth  WA  6004  Australia             ABN 52 103 096 340                            of The Pilbara Infrastructure.                                     NTS                        A1           300/11098                   07110-EL-DR-2455                         5
+
+
+
+                   1                                          2                                           3                                          4                                           5                                          6                                           7                                          8                                           9                                         10                                          11                                         12

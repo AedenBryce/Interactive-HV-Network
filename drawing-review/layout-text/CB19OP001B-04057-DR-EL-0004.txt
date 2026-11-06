@@ -1,0 +1,170 @@
+              1                                    2                                        3                                    4                                     5                                     6                                    7                                     8                                     9                                    10                                    11                                    12
+
+
+                                                                                                                                                         SUPPLY VIA
+                                                                                                                                                         POLE 49-40                                6
+                                                                                                                                                         CB19OP001B-04057-DR-EL-0001
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                               A
+
+                                                                                                                                      POLE-RM410-P1
+
+
+
+                                                                                                                                          70mm2 3C
+                                         RM410 KIOSK                                                                                      XLPE SCN
+
+
+
+
+                                                                                                                           3
+
+
+                                                                                                                                 RM410-
+                                                                                           M                                     SW01-A01          6
+                                                                                                                                 630A
+
+                                                                                                                               3
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                               B
+                                                   22kV 630A  16kA FOR 3 SEC
+
+
+
+                                                                                                             RM410-CB03 STATUS AND REMOTE OPEN/CLOSE SIGNALS
+                                                                                                                          CB19OP001B-04057-DR-EL-0222, 224, 225
+
+                                                                                                  RM410-CB02 STATUS AND REMOTE OPEN/CLOSE SIGNALS
+                                                                                                              CB19OP001B-04057-DR-EL-0222, 224, 225                                                                       3                                                                                   3                                                                                    3
+
+                                                                                       RM410-CB01 STATUS AND REMOTE OPEN/CLOSE SIGNALS
+                                                                                                   CB19OP001B-04057-DR-EL-0222, 224, 225                                                                                   RM410-                                                                               RM410-                                                                              RM410-CB03-A04
+                                                                           RM410-SW01 STATUS AND REMOTE OPEN/CLOSE SIGNALS                                                                                                 CB01-A02                                                                             CB02-A03                                                                            630A
+                                                                                        CB19OP001B-04057-DR-EL-0222, 224, 225                                                           M                                                                                    M                                                                                    M
+                                                                                                                                                                                                                           630A                                                                                 630A
+
+                                                                                                                                                                                                                     3                  6                                                                 3                 6                                                                  3                 6
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                               C
+                                                                                                                                                                                                                           RM410-                                                                               RM410-                                                                              RM410-SW04
+                                                                                                                                                                                                                           SW02                                                                                 SW03                                                                                630A
+                                                                                                                                                                                                                           630A                                                                                630A
+
+
+
+
+                                                                                                                                                                                             SEL751A                                                                             SEL751A                                                                              SEL751A
+
+
+
+            TO RM410-PN01
+        REMOTE CONTROL PANEL                 RM410-PLC4100 PLC CABINET                                                    RM410 LV COMPARTMENT
+           REF. VENDOR DWG
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                               D
+
+
+
+
+
+
+
+                                              2       2                         2     2    2     2       2
+
+
+
+
+                                                                                                                                                                                                                        TF410A                                                                                                                                         RM419                        RM419
+                                                                                                                                                                                                                        22kV/720V/720V                                                 TF410B                    500kVA                                                                             SW01
+                                                                                                                                                                                                                        12 PULSE/NO REGEN (AFE)                                                                  22/0.433kV                                                                         630A
+                                                                                                                                                                                                                                                                                                                                                                                                                              22kV
+                                                                                                                                                                                                                        5.0MVA KNAN TRANSFORMER                                                                  DYN11
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                               E
+
+                                                                                                                                                                                                                                                                                                                                                                                  RM419                 RM419                  RM419
+                                                                                                                                                                                                                                                                                                                                                                                  SW02                  CB01                   CB02
+                                                                                                                                                                                     VS4101
+
+                                                                                                                                                                                                                                                                                                                                                                                                        RM419                  RM419
+      48VDC SUPPLY FROM MC410B-BTC01                                                                                                                                                                        VSD                                                                                                                                                                                         SW03                   SW04
+
+      CB17OP023B-04057-DR-EL-0166                                                                                                                                                                                                                                                                                                                                                                       630A                   630A
+                                                                                                            24VDC SUPPLY TO RM410
+                                                                                                         CB19OP001B-04057-DR-EL-0225                                                                       VS4101
+                                                                                                                                                                                                CB19OP001B-04057-DR-EL-0001                                                                                                                                                                        RM419
+
+                                                                                                                                                                                                                                                                                                                                                                                        CB19OP001B-04057-DR-EL-0001
+
+
+                                                                                                                                                                                                                                                                                                                               MC410A
+      24VDC SUPPLY FROM DB4102                                                                                                                                                                                                                                                                          MCC           520CBC0003-2140-DR-EL-0002
+
+F     CB17OP023B-04057-DR-EL-0225                                                                                                                                                                                                                                                                                     520CBC0002-2140-DR-EL-0003                                                                                                                F
+
+
+
+
+
+
+
+
+                                                                                                            48VDC SUPPLIES TO RM410
+                                                                                                            CB19OP001B-04057-DR-EL-0225                                                                                                                                                                                                                                                                                     AS BUILT
+
+                                                                                                                                                                                                                                                                                                                                                                                                                         DATE:11/01/2022
+                                                                                                                   RM410-C1
+
+                                                                                                               TF410B RMU TRIPS
+                                                                                                         CB19OP001B-04057-DR-EL-0225
+
+
+                                                                                                                                                                                                                                                                                                                               MC410B                                                                      NOTES
+                                                                                                                                                                                                                                                                                                        MCC          CB19OP001B-04057-DR-EL-0005
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                               G
+                                                                                                                                                                                                                                                                                                                                                                        1.     DESIGN AND SHOP DRAWING NUMBER PREFIXES
+
+                                                                                                                                                                                                                                                                                              TF410B-JB01                                                                      WITH 'A' DENOTES CB170P023A PREVIOUS PROJECT
+                                                                                                                                                                                                                                                                                                                                                                               NUMBER, 'B' DENOTES CB19OP001B CURRENT
+                                                                                                                                                                                                                                                                                                                                                                               PROJECT NUMBER.
+
+
+
+                                                                                                                                                                                                                          TF410B-JB01-I1
+
+                                                                                                                                                                                                               TF410B ALARMS AND TRIP RELAY SIGNALS
+                                                                                                                                                                                                                     CB19OP001B-04057-DR-EL-0223                                                                                                                    VENDOR/DESIGNER DRG No.                                                            REV:
+
+
+
+                                                                                                                                                                                                                                                                                                                                             PROJECT NUMBER                                   Fortescue Metals Group Ltd
+   B-04057-DR-EL-0001             CV006 POWER DISTRIBUTION SINGLE LINE DIAGRAM                           6    28.01.25  AS FOUND 23.10.21                                                             AP        CH        MP
+   B-04057-DR-EL-0225             RM410-MP02 REMOTE I/O PANEL MARSHALLING TB TERMINATIONS                5    11.01.22  AS BUILT                                                                      BT                                                                                                                                     CB19OP001B             CLOUDBREAK WESTERN CRUSHING
+
+
+H  B-04057-DR-EL-0224             RM410-MP02 REMOTE I/O PANEL D.O. MODULE 1 TERMINATIONS                 4    05.10.21  UPDATED CABLES FROM MC410A TO MC410B                                          RJ                                                                                                                                                            OVERLAND CONVEYOR CV006                                                                     H
+   B-04057-DR-EL-0223             RM410-MP02 REMOTE I/O PANEL D.I. MODULE 2 TERMINATIONS                 3    30.03.21  ISSUED FOR CONSTRUCTION FOR 520CBC0003                                        TC        JH        JH        TC        JH       JH                                                                                    This drawing must not  CV006 TAIL END RM410
+                                                                                                                                                                                                                                                                                                                                             be copied or reproduced
+   B-04057-DR-EL-0222             RM410-MP02 REMOTE I/O PANEL D.I. MODULE 1 TERMINATIONS                 2    24.11.20  AS BUILT                                                                      TC        JH        JH        TC       TZ        JH                                                                                   in any form or used for
+                                                                                                                                                                                                                                                                                                                                             any purpose other than SINGLE LINE DIAGRAM
+   B-04057-DR-EL-0166             MC410B-BTC01 DETAILED SCHEMATIC DIAGRAM                                1   24.02.20   UPDATED WITH VENDOR INFO                                                      TC        JH        JH        TC       TZ        JH                                                                                   originally intended without
+   B-04057-DR-EL-0005             MC410B 415V KIOSK MOTOR CONTROL CENTRE SINGLE LINE                     0    20.09.19  ISSUED FOR CONSTRUCTION                                                       TC        JH        JH        TC       TZ        JH                                                                                     written approval of           SCALE    DRG No:                                                           REV:
+                                                                                                                                                                                                                                                                                                                                           Fortescue MetalsGroup Ltd
+   REF DRG No.                                                    TITLE                                 REV    DATE                              DESCRIPTION                                         DRN       CHK       SUP       DES       DAP      PAP       FMG                                                     NORTH                                        A1      NTS     CB19OP001B-04057-DR-EL-0004                                         6
+
+
+
+              1                                    2                                        3                                    4                                     5                                     6                                    7                                     8                                     9                                    10                                    11                                    12

@@ -1,0 +1,7 @@
+# TF420A / TF420B winding-symbol correction
+
+Source: `520CBC0007-2130-DR-EL-0003.pdf`, revision 3 dated 28 January 2025, page 1, transformer regions E/3–4 and E/5–6, and note 3 in region G. Both transformer symbols show two delta primary circles above one star secondary circle. Note 3 explicitly identifies dual primary windings for 33 kV and 22 kV incomers. The labels show TF420A 33/22/6.9 kV and TF420B 33/22/0.415 kV.
+
+The renderer had interpreted every terminal after the first as a secondary. In these two assets, the second terminal is the retained 22 kV primary. The winding-role helper now puts both named primary terminals on the input side and the single secondary centrally on the output side. The main diagram, connection ports, equipment-list icons and asset-details icons use the same primary count. The selected 33 kV feed and all underlying electrical identities, transfer rules and unresolved winding information remain unchanged.
+
+The source-referenced winding-role inventory for all 60 retained transformers passed a dedicated test. TF416A remains one primary and one secondary; TF420A/B are each two primaries and one secondary. Eight targeted winding/conductor tests, TypeScript checking and the production build passed. The drawing audit still reports zero caption collisions, frame overlaps, unrelated conductor overlaps, retraces, duplicate painted strokes or missing conductor intervals across 674 visible connection paths.

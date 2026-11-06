@@ -1,0 +1,4748 @@
+{
+  "id": "BASELINE-PROPOSAL-2026-10-23",
+  "status": "pending-owner-selection",
+  "reviewedPackage": "construction-2026-10-23.1",
+  "scope": "Teaching scenario contact choices only. Proposed classifications do not assert current installed service status or accept physical interlocks, connectivity, hardware or whole-model acceptance.",
+  "records": [
+    {
+      "assetId": "station:sb01:f4:cb",
+      "label": "SB-01 F4 CB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CBC0002-13015-DR-EL-0001.pdf",
+          "revision": "3 (18/07/2022; UPDATED AS PER REDLINES)",
+          "page": 1,
+          "clause": "Drawing region: B-D, SB-01 F4"
+        }
+      ]
+    },
+    {
+      "assetId": "station:sb02:f1:cb",
+      "label": "SB-02 F1 CB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CBC0002-13015-DR-EL-0001.pdf",
+          "revision": "3 (18/07/2022; UPDATED AS PER REDLINES)",
+          "page": 1,
+          "clause": "Drawing region: F-G, SB-02 F1"
+        }
+      ]
+    },
+    {
+      "assetId": "station:sb02:f4:cb",
+      "label": "SB-02 F4 CB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CBC0002-13015-DR-EL-0001.pdf",
+          "revision": "3 (18/07/2022; UPDATED AS PER REDLINES)",
+          "page": 1,
+          "clause": "Drawing region: F-G, SB-02 F4"
+        }
+      ]
+    },
+    {
+      "assetId": "line33:pole-1-recloser",
+      "label": "Pole 1 recloser",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10/06/2022; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C, POLE 1 RECLOSER"
+        }
+      ]
+    },
+    {
+      "assetId": "line33:pole-2-abs",
+      "label": "Pole 2 ABS",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10/06/2022; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C, air-break switch immediately before POLE 2"
+        }
+      ]
+    },
+    {
+      "assetId": "line33:tie-in-abs",
+      "label": "49-38-1 tie ABS",
+      "proposedContact": null,
+      "categoryBasis": "explicit-additional-tie-role-baseline-Unconfirmed",
+      "references": [
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10/06/2022; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: D, AMR/IOP TIE-IN POLE 49-38-1"
+        }
+      ]
+    },
+    {
+      "assetId": "line33:pole-201-abs",
+      "label": "Pole 201 exit ABS",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10/06/2022; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: E-F, air-break switch departing POLE 201"
+        }
+      ]
+    },
+    {
+      "assetId": "line33:hopper-286-fused-abs",
+      "label": "Hopper10 fused ABS",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10/06/2022; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: F-G, 80A fused air-break switch at POLE 286 toward RMU420"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:in:cb",
+      "label": "CB SW431 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-2, incoming bay"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-G / 8-9, tier 13 SW431 feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SS431 incoming reference"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Exact question: Please confirm or correct these current SW411 feeding routes: tier13 → SW431 via SW431-P-01; tier14 → SW426 via SW426-P-01; tier15 → SW421 via SW421-P-01. This confirms the cable routes only. Exact answer: all confirmed"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier13 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW431-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier14 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW426-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier15 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW421-P-01"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:tf431:hv-cb",
+      "label": "CB TF431 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF431 feeder and lower power cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2654.pdf",
+          "revision": "7 (14/11/25; issued for review)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 4-6 transformer and LV incomer; D main bar"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:mc431:cb",
+      "label": "CB MC431 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2654.pdf",
+          "revision": "7 (14/11/25; issued for review)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 4-6 transformer and LV incomer; D main bar"
+        },
+        {
+          "document": "11098-07110-EL-DR-2670.pdf",
+          "revision": "7 (14/11/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: D, same 400 V phase-bar continuation"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:tf432:hv-cb",
+      "label": "CB TF432 FD · Tier 5",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF432 feeder and lower power cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2455.pdf",
+          "revision": "5 (17/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:sw432:d:cb",
+      "label": "CB SW432 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2455.pdf",
+          "revision": "5 (17/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:sw432:y:cb",
+      "label": "CB SW432 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2455.pdf",
+          "revision": "5 (17/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:tf437:hv-cb",
+      "label": "CB TF437 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF437 feeder and lower power cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2457.pdf",
+          "revision": "7 (08/01/26; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:sw437:d:cb",
+      "label": "CB SW437 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2457.pdf",
+          "revision": "7 (08/01/26; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        },
+        {
+          "document": "11098-07110-EL-DR-2458.pdf",
+          "revision": "6 (20/08/09)",
+          "page": 1,
+          "clause": "Drawing region: B-C, both phase-bar continuations"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:sw437:y:cb",
+      "label": "CB SW437 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2457.pdf",
+          "revision": "7 (08/01/26; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        },
+        {
+          "document": "11098-07110-EL-DR-2458.pdf",
+          "revision": "6 (20/08/09)",
+          "page": 1,
+          "clause": "Drawing region: B-C, both phase-bar continuations"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:tf442:hv-cb",
+      "label": "CB TF442 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF442 feeder and lower power cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2459.pdf",
+          "revision": "7 (04/03/16; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:sw442:d:cb",
+      "label": "CB SW442 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2459.pdf",
+          "revision": "7 (04/03/16; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        },
+        {
+          "document": "11098-07110-EL-DR-2470.pdf",
+          "revision": "6 (04/02/16; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C, both phase-bar continuations"
+        }
+      ]
+    },
+    {
+      "assetId": "sw431:sw442:y:cb",
+      "label": "CB SW442 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2459.pdf",
+          "revision": "7 (04/03/16; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10 transformer, D/Y incomers and separate bars"
+        },
+        {
+          "document": "11098-07110-EL-DR-2470.pdf",
+          "revision": "6 (04/02/16; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C, both phase-bar continuations"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:in:cb",
+      "label": "CB SW435 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-2, tier 1 incomer"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-G / 3-4, tier 4 SW435 feeder"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Exact question: Please confirm or correct these current SW411 feeding routes: tier01 → SW454 via SW454-P-01; tier02 → SW451 via SW451-P-01; tier04 → SW435 via SW435-P-01. This confirms the cable routes only, not switch positions/interlocks. Exact answer: all confirmed"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier01 feeder and lower destination"
+        },
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-D / 1-2, SW411 incoming SW454-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier02 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW451-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier04 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW435-P-01"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:tf435:hv-cb",
+      "label": "CB TF435 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF435 feeder/destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2660.pdf",
+          "revision": "7 (18/07/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-C transformer/incomer power routes"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:mc435:cb",
+      "label": "CB MC435 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2660.pdf",
+          "revision": "7 (18/07/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "11098-07110-EL-DR-2682.pdf",
+          "revision": "3 (18/07/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C-D continuation of same phase bar"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:tf433:hv-cb",
+      "label": "CB TF433 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF433 feeder/destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2456.pdf",
+          "revision": "5 (17/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C transformer/incomer power routes"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:sw433:d:cb",
+      "label": "CB SW433 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2456.pdf",
+          "revision": "5 (17/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:sw433:y:cb",
+      "label": "CB SW433 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2456.pdf",
+          "revision": "5 (17/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:tf453:hv-cb",
+      "label": "CB TF453 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, TF453 feeder/destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-C transformer/incomer power routes"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:sw453:d:cb",
+      "label": "CB SW453 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "11098-07110-EL-DR-2469.pdf",
+          "revision": "6 (18/11/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C, continuation of same D/Y phase bars"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:sw453:y:cb",
+      "label": "CB SW453 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2468.pdf",
+          "revision": "5 (12/08/09)",
+          "page": 1,
+          "clause": "Drawing region: A-D transformer, incoming breaker(s), phase bar(s)"
+        },
+        {
+          "document": "11098-07110-EL-DR-2469.pdf",
+          "revision": "6 (18/11/25; issued for construction)",
+          "page": 1,
+          "clause": "Drawing region: C, continuation of same D/Y phase bars"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "sw435:hpgr:cb",
+      "label": "CB HPGR FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 8-9, tier 7 HPGR feeder"
+        },
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 2-3, JB001 arrival"
+        }
+      ]
+    },
+    {
+      "assetId": "hpgr:sw002:a02:k101",
+      "label": "A02 · K101",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 6, TF003 feeder"
+        }
+      ]
+    },
+    {
+      "assetId": "hpgr:sw002:a04:k101",
+      "label": "A04 · K101",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 9, TF002 feeder"
+        }
+      ]
+    },
+    {
+      "assetId": "hpgr:sw002:tf004:k202",
+      "label": "TF004 feeder · K202",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 7-8, middle feeder"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW002 A03 / TF004 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "hpgr:mc001:cb",
+      "label": "HPGR MCC incoming MCCB · tag unconfirmed",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB112-02006-DR-EL-0005.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 7-8, TF004/MCCB/MC001 bar"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27/10/25)",
+          "page": 1,
+          "clause": "Drawing region: SW002 TF004 output to MC438"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:in:cb",
+      "label": "CB SW421 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-2, incomer"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-G / 10-11, tier15 CB/ES SW421 FD 01 and SW421-P-01"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: SW411 tier15 and SS421 incoming route"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Exact question: Please confirm or correct these current SW411 feeding routes: tier13 → SW431 via SW431-P-01; tier14 → SW426 via SW426-P-01; tier15 → SW421 via SW421-P-01. This confirms the cable routes only. Exact answer: all confirmed"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier13 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW431-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier14 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW426-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier15 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW421-P-01"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:tf421:hv-cb",
+      "label": "CB TF421 FD\nTier 4",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier4 TF421 feeder and cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2650.pdf",
+          "revision": "10 (23/01/26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF421 A-C / 5-6; CB MC421 IN C-D / 5; 400V bar D / 1-10"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:mc421:cb",
+      "label": "CB MC421 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2650.pdf",
+          "revision": "10 (23/01/26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF421 A-C / 5-6; CB MC421 IN C-D / 5; 400V bar D / 1-10"
+        },
+        {
+          "document": "11098-07110-EL-DR-2671.pdf",
+          "revision": "5B (10/02/26; RE-ISSUED FOR REVIEW - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: D / 1-10, same continued 400V phase bar; no additional incomer"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:tf422:hv-cb",
+      "label": "CB TF422 FD\nTier 5",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier5 TF422 feeder and cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2652.pdf",
+          "revision": "10 (23/01/26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF422 A-C / 5-6; CB MC422 IN C-D / 5; 400V bar D / 1-12"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:mc422:cb",
+      "label": "CB MC422 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2652.pdf",
+          "revision": "10 (23/01/26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF422 A-C / 5-6; CB MC422 IN C-D / 5; 400V bar D / 1-12"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:tf423:hv-cb",
+      "label": "CB TF423 FD\nTier 6",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier6 TF423 feeder and cable"
+        },
+        {
+          "document": "11098-07110-EL-DR-2465.pdf",
+          "revision": "7 (28/10/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF423 A / 5-6; D/Y incomers A-C / 1-2, 9-10; separate 690V bars C / 1-10"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:sw423:d:cb",
+      "label": "CB SW423 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2465.pdf",
+          "revision": "7 (28/10/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF423 A / 5-6; D/Y incomers A-C / 1-2, 9-10; separate 690V bars C / 1-10"
+        },
+        {
+          "document": "11098-07110-EL-DR-2466.pdf",
+          "revision": "5 (18/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: C / 1-10, D/Y phase-bar continuations"
+        },
+        {
+          "document": "11098-07110-EL-DR-2467.pdf",
+          "revision": "10 (18/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-10, D/Y bars; lower reference table SW243 alias"
+        },
+        {
+          "document": "11098-07110-EL-DR-2474.pdf",
+          "revision": "4 (20/08/09; ISSUED FOR AS-BUILT)",
+          "page": 1,
+          "clause": "Drawing region: B-C, two separate continued bars ending near column7"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:sw423:y:cb",
+      "label": "CB SW423 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2465.pdf",
+          "revision": "7 (28/10/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: TF423 A / 5-6; D/Y incomers A-C / 1-2, 9-10; separate 690V bars C / 1-10"
+        },
+        {
+          "document": "11098-07110-EL-DR-2466.pdf",
+          "revision": "5 (18/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: C / 1-10, D/Y phase-bar continuations"
+        },
+        {
+          "document": "11098-07110-EL-DR-2467.pdf",
+          "revision": "10 (18/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-10, D/Y bars; lower reference table SW243 alias"
+        },
+        {
+          "document": "11098-07110-EL-DR-2474.pdf",
+          "revision": "4 (20/08/09; ISSUED FOR AS-BUILT)",
+          "page": 1,
+          "clause": "Drawing region: B-C, two separate continued bars ending near column7"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:spare:tier2:cb",
+      "label": "CB SPARE FD\nTier 2",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 1-2, spare tier2"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: SS421 spare tier2"
+        }
+      ]
+    },
+    {
+      "assetId": "sw421:spare:tier7:cb",
+      "label": "CB SPARE FD\nTier 7",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 8-10, spare tier7"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: SS421 spare tier7"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:in:cb",
+      "label": "CB SW426 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: left tier1 incoming cable, CB and ES"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Exact question: Please confirm or correct these current SW411 feeding routes: tier13 → SW431 via SW431-P-01; tier14 → SW426 via SW426-P-01; tier15 → SW421 via SW421-P-01. This confirms the cable routes only. Exact answer: all confirmed"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier13 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2353.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW431-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier14 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW426-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier15 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2351.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW421-P-01"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf440:cb",
+      "label": "CB TF440 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 0, CB/ES TF440 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw440:d:in:cb",
+      "label": "CB SW440 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04230-DR-EL-0146.pdf",
+          "revision": "4",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw440:y:in:cb",
+      "label": "CB SW440 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04230-DR-EL-0146.pdf",
+          "revision": "4",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf426:cb",
+      "label": "CB TF426 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 2, CB/ES TF426 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:mc426:in:cb",
+      "label": "CB MC426 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2653.pdf",
+          "revision": "14",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf428:cb",
+      "label": "CB TF428 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 4, CB/ES TF428 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:mc428a:in:cb",
+      "label": "CB MC428A IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2676.pdf",
+          "revision": "11",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf427:cb",
+      "label": "CB TF427 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2352.pdf",
+          "revision": "9 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 5, CB/ES TF427 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw427:d:in:cb",
+      "label": "CB SW427 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2463.pdf",
+          "revision": "11",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw427:y:in:cb",
+      "label": "CB SW427 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2463.pdf",
+          "revision": "11",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf429:cb",
+      "label": "CB TF429 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 6, CB/ES TF429 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw429:d:in:cb",
+      "label": "CB SW429 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2481.pdf",
+          "revision": "7",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw429:y:in:cb",
+      "label": "CB SW429 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2481.pdf",
+          "revision": "7",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf439:cb",
+      "label": "CB TF439 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 7, CB/ES TF439 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw439:d:in:cb",
+      "label": "CB SW439 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2483.pdf",
+          "revision": "12",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw439:y:in:cb",
+      "label": "CB SW439 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2483.pdf",
+          "revision": "12",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf430:cb",
+      "label": "CB TF430 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 8, CB/ES TF430 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:mc430:in:cb",
+      "label": "CB MC430 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2683.pdf",
+          "revision": "8",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:tf443:cb",
+      "label": "CB TF443 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier 10, CB/ES TF443 FD and transformer cable"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw443:d:in:cb",
+      "label": "CB SW443 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04230-DR-EL-0147.pdf",
+          "revision": "5",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:sw443:y:in:cb",
+      "label": "CB SW443 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04230-DR-EL-0147.pdf",
+          "revision": "5",
+          "page": 1,
+          "clause": "Drawing region: upper incoming transformer cable(s), CB incoming and main phase bar(s)"
+        }
+      ]
+    },
+    {
+      "assetId": "sw426:ss714:cb",
+      "label": "CB SS714 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "assetId": "rm714:in01",
+      "label": "SF RM714 IN01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "assetId": "rm714:in02",
+      "label": "SF RM714 IN02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "assetId": "rm714:tf714:cb",
+      "label": "CB TF714 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "assetId": "rm714:sw714:in:cb",
+      "label": "CB SW714 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2357.pdf",
+          "revision": "6 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: tier9 SS714 feeder and RM714-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-2255.pdf",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: upper-left incoming cable and RM714 bar; TF714 to SW714 incoming bus"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0",
+          "page": 1,
+          "clause": "Drawing region: laboratory RM714 to MC714"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:in:cb",
+      "label": "CB SW454 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 1-2, incomer"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-G / 1-2, tier1 CB/ES SW454 FD 01"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: B / 1 and route to SW454"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Exact question: Please confirm or correct these current SW411 feeding routes: tier01 → SW454 via SW454-P-01; tier02 → SW451 via SW451-P-01; tier04 → SW435 via SW435-P-01. This confirms the cable routes only, not switch positions/interlocks. Exact answer: all confirmed"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier01 feeder and lower destination"
+        },
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-D / 1-2, SW411 incoming SW454-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier02 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW451-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier04 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW435-P-01"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:sw505:cb",
+      "label": "CB SW505 FD\nSW454 tier 6",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 9-10, tier6 SW505 feeder"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-2, SW454 reference and SW505 incomer"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:in:cb",
+      "label": "CB SW505 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 9-10, tier6 SW505 feeder"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-2, SW454 reference and SW505 incomer"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:tf454:hv-cb",
+      "label": "CB TF454 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier2 TF454 feeder"
+        },
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-3, TF454 → MC454 reference 8010"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:tf455:hv-cb",
+      "label": "CB TF455 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier4 TF455 feeder"
+        },
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 5-6, TF455 → SW455 reference 8020"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:tf456:hv-cb",
+      "label": "CB TF456 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier5 TF456 feeder"
+        },
+        {
+          "document": "11098-04400-EL-DR-8021.pdf",
+          "revision": "7 (14/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-D, transformer A / 5-6; D/Y incomers A-C / 1-10; two phase bars C-D"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:sw456:d:cb",
+      "label": "CB SW456 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8021.pdf",
+          "revision": "7 (14/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-D, transformer A / 5-6; D/Y incomers A-C / 1-10; two phase bars C-D"
+        }
+      ]
+    },
+    {
+      "assetId": "sw454:sw456:y:cb",
+      "label": "CB SW456 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8021.pdf",
+          "revision": "7 (14/11/25; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-D, transformer A / 5-6; D/Y incomers A-C / 1-10; two phase bars C-D"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:tf506:hv-cb",
+      "label": "CB TF506 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier8 TF506 feeder"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0060.pdf",
+          "revision": "2 (11/3/13 handwritten; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10, transformer A / 5-7; D/Y incomers and two 690V bars"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:sw506:d:cb",
+      "label": "CB SW506 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0060.pdf",
+          "revision": "2 (11/3/13 handwritten; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10, transformer A / 5-7; D/Y incomers and two 690V bars"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0061.pdf",
+          "revision": "5 (11.10.25; CV214-EM01 & CV214-EM02 MOTOR UPGRADE TO 110 kW)",
+          "page": 1,
+          "clause": "Drawing region: B-C, separate D/Y bar continuations; SH213 caution"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0062.pdf",
+          "revision": "3 (revision row 14.10.20; AS BUILT stamp 14/10/2024; discrepancy)",
+          "page": 1,
+          "clause": "Drawing region: B-C, D/Y continuations; revision-row/stamp dates differ"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0063.pdf",
+          "revision": "title 3A / red row 4 (09.05.26; prior row 3 30.08.24; redline CV215 motor upgrade; prior IFC)",
+          "page": 1,
+          "clause": "Drawing region: B-C, D/Y continuations; title 3A/red row 4 discrepancy"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0064.pdf",
+          "revision": "6 (30.08.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: B-C, two bars end at right"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:sw506:y:cb",
+      "label": "CB SW506 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0060.pdf",
+          "revision": "2 (11/3/13 handwritten; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-10, transformer A / 5-7; D/Y incomers and two 690V bars"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0061.pdf",
+          "revision": "5 (11.10.25; CV214-EM01 & CV214-EM02 MOTOR UPGRADE TO 110 kW)",
+          "page": 1,
+          "clause": "Drawing region: B-C, separate D/Y bar continuations; SH213 caution"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0062.pdf",
+          "revision": "3 (revision row 14.10.20; AS BUILT stamp 14/10/2024; discrepancy)",
+          "page": 1,
+          "clause": "Drawing region: B-C, D/Y continuations; revision-row/stamp dates differ"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0063.pdf",
+          "revision": "title 3A / red row 4 (09.05.26; prior row 3 30.08.24; redline CV215 motor upgrade; prior IFC)",
+          "page": 1,
+          "clause": "Drawing region: B-C, D/Y continuations; title 3A/red row 4 discrepancy"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0064.pdf",
+          "revision": "6 (30.08.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: B-C, two bars end at right"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:tf507:hv-cb",
+      "label": "CB TF507 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier7 TF507 feeder"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0037.pdf",
+          "revision": "5 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 5-8, TF507, phase fuse/incomer and 400V main bar"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:mc507:cb",
+      "label": "CB MC507 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0037.pdf",
+          "revision": "5 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 5-8, TF507, phase fuse/incomer and 400V main bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0036.pdf",
+          "revision": "3 (11/3/13 handwritten; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: C-D, same 400V bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0038.pdf",
+          "revision": "6 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, continued bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0039.pdf",
+          "revision": "4 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, continued bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0041.pdf",
+          "revision": "5 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, continued bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0040.pdf",
+          "revision": "8 (08.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, bar ends at right"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:tf508:hv-cb",
+      "label": "CB TF508 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0054.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.24)",
+          "page": 1,
+          "clause": "Drawing region: C-G, tier6 TF508 feeder"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0045.pdf",
+          "revision": "9 (14.10.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 5-8, TF508, phase fuse/incomer and 400V main bar"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:mc508:cb",
+      "label": "CB MC508 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0045.pdf",
+          "revision": "9 (14.10.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 5-8, TF508, phase fuse/incomer and 400V main bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0044.pdf",
+          "revision": "5 (21.06.19; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, same 400V bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0046.pdf",
+          "revision": "5 (11.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, continued bar"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0047.pdf",
+          "revision": "8 (11.11.24; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: C-D, bar ends at right"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:tf505a:hv-cb",
+      "label": "CB TF505A FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0055.pdf",
+          "revision": "3 (25.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 2-4, TF505A feeder and inching interlock"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0042.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 2-4, TF505A power input"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0055.pdf",
+          "revision": "3 (25.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-F / 3-8, dotted interlock arrows associated with TF505A/B/C feeders"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:vs50501:output-switch",
+      "label": "VS50501\nOutput contact",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0042.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 2-4, DC BUS EARTHING SWITCH and output switch below inverter"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:tf505b:hv-cb",
+      "label": "CB TF505B FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0055.pdf",
+          "revision": "3 (25.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 5-7, TF505B feeder and inching interlock"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0042.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 5-7, TF505B power input"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0055.pdf",
+          "revision": "3 (25.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-F / 3-8, dotted interlock arrows associated with TF505A/B/C feeders"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:vs50502:output-switch",
+      "label": "VS50502\nOutput contact",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0042.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 5-7, DC BUS EARTHING SWITCH and output switch below inverter"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:tf505c:hv-cb",
+      "label": "CB TF505C FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0055.pdf",
+          "revision": "3 (25.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-G / 8-10, TF505C feeder and inching interlock"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0042.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 8-10, TF505C power input"
+        },
+        {
+          "document": "500CB-04220-DR-EL-0055.pdf",
+          "revision": "3 (25.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-F / 3-8, dotted interlock arrows associated with TF505A/B/C feeders"
+        }
+      ]
+    },
+    {
+      "assetId": "sw505:vs50503:output-switch",
+      "label": "VS50503\nOutput contact",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "500CB-04220-DR-EL-0042.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 8-10, DC BUS EARTHING SWITCH and output switch below inverter"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:in:cb",
+      "label": "CB SW451 IN 01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW411 incoming power reference and SW451-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 2-3, tier 2 SW451 feeder"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-23",
+          "clause": "Exact question: Please confirm or correct these current SW411 feeding routes: tier01 → SW454 via SW454-P-01; tier02 → SW451 via SW451-P-01; tier04 → SW435 via SW435-P-01. This confirms the cable routes only, not switch positions/interlocks. Exact answer: all confirmed"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier01 feeder and lower destination"
+        },
+        {
+          "document": "11098-04400-EL-DR-8001.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-D / 1-2, SW411 incoming SW454-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier02 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, SW451-P-01"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G, tier04 feeder and lower destination"
+        },
+        {
+          "document": "11098-07110-EL-DR-2354.pdf",
+          "revision": "9 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C / 1-2, tier1 SW435-P-01"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:spare-2:cb",
+      "label": "T2 · CB SPARE FD",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G / 2-3, spare tier 2"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:spare-6:cb",
+      "label": "T6 · CB SPARE FD",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G / 7-10, spare tier 6"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:spare-7:cb",
+      "label": "T7 · CB SPARE FD",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G / 7-10, spare tier 7"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:tf451:hv-cb",
+      "label": "CB TF451 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G / 4-5, TF451 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2658.pdf",
+          "revision": "12A (17/02/26; ISSUED FOR REVIEW - CB25OP003A)",
+          "page": 1,
+          "clause": "A-D / 5-8, TF451 phase route and CB MC451 IN"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:mc451:cb",
+      "label": "CB MC451 IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2658.pdf",
+          "revision": "12A (17/02/26; ISSUED FOR REVIEW - CB25OP003A)",
+          "page": 1,
+          "clause": "A-D / 5-8, TF451 phase route and CB MC451 IN"
+        },
+        {
+          "document": "11098-07110-EL-DR-2672.pdf",
+          "revision": "7 (13/01/26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "D / 2-4, 400 V/500 A phase bar and continuation arrows"
+        },
+        {
+          "document": "11098-07110-EL-DR-2673.pdf",
+          "revision": "6 (13/01/26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "B-C / 4-5, MC451-to-MC451B phase-bar bridge"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:tf452:hv-cb",
+      "label": "CB TF452 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2356.pdf",
+          "revision": "5 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G / 5-6, TF452 feeder"
+        },
+        {
+          "document": "11098-07110-EL-DR-2460.pdf",
+          "revision": "5 (17/08/09; ISSUED FOR AS-BUILT)",
+          "page": 1,
+          "clause": "A-D / 1-10, TF452 and distinct delta/star incoming phase routes"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:sw452:d:cb",
+      "label": "CB SW452 IN D",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2460.pdf",
+          "revision": "5 (17/08/09; ISSUED FOR AS-BUILT)",
+          "page": 1,
+          "clause": "A-D / 1-10, TF452 and distinct delta/star incoming phase routes"
+        }
+      ]
+    },
+    {
+      "assetId": "sw451:sw452:y:cb",
+      "label": "CB SW452 IN Y",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2460.pdf",
+          "revision": "5 (17/08/09; ISSUED FOR AS-BUILT)",
+          "page": 1,
+          "clause": "A-D / 1-10, TF452 and distinct delta/star incoming phase routes"
+        }
+      ]
+    },
+    {
+      "assetId": "cv006:abs:49-1",
+      "label": "ABS\nPole 49-1",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A / 1-10, overhead main route and pole57 branch"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "cv006:recloser:49-39a",
+      "label": "Recloser\nPole 49-39A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A / 1-10, overhead main route and pole57 branch"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "cv006:abs:49-40",
+      "label": "ABS\nPole 49-40",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A / 1-10, overhead main route and pole57 branch"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "cv006:fused-abs:57",
+      "label": "Fused ABS\nPole 57",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A / 1-10, overhead main route and pole57 branch"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "cv006:abs:49-38-1",
+      "label": "ABS49-38-1 drawing · downstream22kV line removed · hardware unconfirmed",
+      "proposedContact": null,
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A / 1-10, overhead main route and pole57 branch"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "cv006:fused-abs:286",
+      "label": "Former 22 kV · fused ABS286 reference · hardware unconfirmed",
+      "proposedContact": null,
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A / 1-10, overhead main route and pole57 branch"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:sw01",
+      "label": "RM406-SW01\nIncoming",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:cb01",
+      "label": "RM406-CB01\nA02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:sw02",
+      "label": "RM406-SW02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:cb02",
+      "label": "RM406-CB02\nA03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:sw03",
+      "label": "RM406-SW03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:cb03",
+      "label": "RM406-CB03\nA04",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-E/10-11: RM406 CB03/SW04 outgoing Hopper008 reference."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G/8-11: Hopper8 SS416-HV416 incoming RM406-CB03 and TF416/TF416A fork."
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:sw04",
+      "label": "RM406-SW04",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 9-11, head RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-E/10-11: RM406 CB03/SW04 outgoing Hopper008 reference."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "C-G/8-11: Hopper8 SS416-HV416 incoming RM406-CB03 and TF416/TF416A fork."
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:sw01",
+      "label": "RM410-SW01\nIncoming",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:cb01",
+      "label": "RM410-CB01\nA02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:sw02",
+      "label": "RM410-SW02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:cb02",
+      "label": "RM410-CB02\nA03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:sw03",
+      "label": "RM410-SW03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:cb03",
+      "label": "RM410-CB03\nA04",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "C-F/10-12: RM410 CB03/SW04 outgoing RM419 SW01 route."
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-8: RM419 SW01 from RM410 and SW02 onward to RM418 SW01."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-7: RM418 SW01 incoming from RM419 SW02."
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:sw04",
+      "label": "RM410-SW04",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 3-11, incoming and three outgoing RMU bays"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-3, tail RMU"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: B-D / 3-11, corresponding RMU switch and earth-contact symbol"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "C-F/10-12: RM410 CB03/SW04 outgoing RM419 SW01 route."
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-8: RM419 SW01 from RM410 and SW02 onward to RM418 SW01."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-7: RM418 SW01 incoming from RM419 SW02."
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:vs4061:input-a:switch",
+      "label": "VS4061\nInput A · 2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-F / 9-11, VS4061 two input switches/rectifiers and DC bus"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F, two winding outputs and VSD reference"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:vs4061:input-b:switch",
+      "label": "VS4061\nInput B · 2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-F / 9-11, VS4061 two input switches/rectifiers and DC bus"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F, two winding outputs and VSD reference"
+        }
+      ]
+    },
+    {
+      "assetId": "rm406:mc406a:cb",
+      "label": "MC406A CB\nTBC A · note 1",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0003.pdf",
+          "revision": "2 (17.12.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 5-9, transformer/incomer/phase bar; A-B / 11-12, notes 1-2"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 8-9, TF406B22/0.433kV and CB02/SW03"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:vs4101:input-a:switch",
+      "label": "VS4101\nInput A · 2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-F / 1-3, VS4101 two input switches/rectifiers and DC bus"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: E-F, two winding outputs and VSD reference"
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:vs4101:input-b:switch",
+      "label": "VS4101\nInput B · 2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-F / 1-3, VS4101 two input switches/rectifiers and DC bus"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21; older AS BUILT stamp 11/01/2022)",
+          "page": 1,
+          "clause": "Drawing region: E-F, two winding outputs and VSD reference"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:rm417:sw01",
+      "label": "RM417 SW01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-10, RM417 main/earth contacts and transformer primary forks"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 11-12, common TF417/TF417A fork; truncated CB02"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:rm417:sw02",
+      "label": "RM417 SW02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-10, RM417 main/earth contacts and transformer primary forks"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 11-12, common TF417/TF417A fork; truncated CB02"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:rm417:cb01",
+      "label": "RM417 CB01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-10, RM417 main/earth contacts and transformer primary forks"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 11-12, common TF417/TF417A fork; truncated CB02"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:rm417:sw03",
+      "label": "RM417 SW03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-10, RM417 main/earth contacts and transformer primary forks"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 11-12, common TF417/TF417A fork; truncated CB02"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:mc417a:in",
+      "label": "MC417A MCCB · 630 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0045.pdf",
+          "revision": "1 (AS BUILT; handwritten date unconfirmed)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 8-10, 630A MCCB and 415V phase bar"
+        },
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: F / 4-5, B phase output separate from Ba instrumentation"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:mc417:in",
+      "label": "MC417 incoming VCB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 4-11, incoming tier1 and two motor groups"
+        },
+        {
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: F-G / 1-7, notes5-6 and legend"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:rm417:cb02",
+      "label": "RM417 CB02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-10, RM417 main/earth contacts and transformer primary forks"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 11-12, common TF417/TF417A fork; truncated CB02"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-G/8-11: RM417 CB02/SW04 feeding Hopper3 SS416 kiosk and separate TF416/TF416A primaries."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h1:rm417:sw04",
+      "label": "RM417 SW04",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-10, RM417 main/earth contacts and transformer primary forks"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 11-12, common TF417/TF417A fork; truncated CB02"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-G/8-11: RM417 CB02/SW04 feeding Hopper3 SS416 kiosk and separate TF416/TF416A primaries."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:rm418:sw01",
+      "label": "RM418 SW01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-9, revision6 contact clouds and transformer fork"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 6-8, older RM418 CB01/CB02 and TF418A/TF418B labels"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 current CB03/04"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0041.pdf",
+          "revision": "4 (06.10.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 1-5, supply and CB01/SW03 command/status; A / 7-9, truck signals"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "C-F/10-12: RM410 CB03/SW04 outgoing RM419 SW01 route."
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-8: RM419 SW01 from RM410 and SW02 onward to RM418 SW01."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-7: RM418 SW01 incoming from RM419 SW02."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:rm418:sw02",
+      "label": "RM418 SW02 · spare",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-9, revision6 contact clouds and transformer fork"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 6-8, older RM418 CB01/CB02 and TF418A/TF418B labels"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 current CB03/04"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0041.pdf",
+          "revision": "4 (06.10.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 1-5, supply and CB01/SW03 command/status; A / 7-9, truck signals"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:rm418:cb03",
+      "label": "RM418 CB03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-9, revision6 contact clouds and transformer fork"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 6-8, older RM418 CB01/CB02 and TF418A/TF418B labels"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 current CB03/04"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0041.pdf",
+          "revision": "4 (06.10.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 1-5, supply and CB01/SW03 command/status; A / 7-9, truck signals"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-F/3-9: current Hopper7 RM418 CB03/CB04 and shared TF418/TF418A primary fork."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "E-F/6-8: retained older RM418 CB01/CB02 and TF418A/TF418B source aliases."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:rm418:cb03:disconnect",
+      "label": "CB03 disconnect\nTag unconfirmed",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-9, revision6 contact clouds and transformer fork"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 6-8, older RM418 CB01/CB02 and TF418A/TF418B labels"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 current CB03/04"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0041.pdf",
+          "revision": "4 (06.10.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 1-5, supply and CB01/SW03 command/status; A / 7-9, truck signals"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:rm418:cb04:disconnect",
+      "label": "CB04 disconnect\nTag unconfirmed",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-9, revision6 contact clouds and transformer fork"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: E-F / 6-8, older RM418 CB01/CB02 and TF418A/TF418B labels"
+        },
+        {
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, RM418 current CB03/04"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0041.pdf",
+          "revision": "4 (06.10.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 1-5, supply and CB01/SW03 command/status; A / 7-9, truck signals"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:mc418:in",
+      "label": "MC418 incoming VCB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 4-11, incoming tier1 and two motor groups"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: F-G / 1-7, notes5-6 and legend"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h7:mc418a:in",
+      "label": "MC418A MCCB · 630 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023C-01006-DR-EL-0003.pdf",
+          "revision": "1 (14.06.18; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 8-10, 630A MCCB and 415V phase bar"
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: F / 4-5, separate B phase/Ba instrumentation"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:rm419:sw01",
+      "label": "RM419 SW01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-8, main/earth contact geometry and transformer branches"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 10-12, RM410-CB03-A04/SW04 to RM419-SW01"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-E / 3-8, RM410→RM419→RM418"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "C-F/10-12: RM410 CB03/SW04 outgoing RM419 SW01 route."
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-8: RM419 SW01 from RM410 and SW02 onward to RM418 SW01."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-7: RM418 SW01 incoming from RM419 SW02."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:rm419:sw02",
+      "label": "RM419 SW02 · to Hopper7",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-8, main/earth contact geometry and transformer branches"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 10-12, RM410-CB03-A04/SW04 to RM419-SW01"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-E / 3-8, RM410→RM419→RM418"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "C-F/10-12: RM410 CB03/SW04 outgoing RM419 SW01 route."
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-8: RM419 SW01 from RM410 and SW02 onward to RM418 SW01."
+        },
+        {
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B/6-7: RM418 SW01 incoming from RM419 SW02."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:rm419:cb01",
+      "label": "RM419 CB01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-8, main/earth contact geometry and transformer branches"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 10-12, RM410-CB03-A04/SW04 to RM419-SW01"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-E / 3-8, RM410→RM419→RM418"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:rm419:sw03",
+      "label": "RM419 SW03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-8, main/earth contact geometry and transformer branches"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 10-12, RM410-CB03-A04/SW04 to RM419-SW01"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-E / 3-8, RM410→RM419→RM418"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:rm419:cb02",
+      "label": "RM419 CB02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-8, main/earth contact geometry and transformer branches"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 10-12, RM410-CB03-A04/SW04 to RM419-SW01"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-E / 3-8, RM410→RM419→RM418"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:rm419:sw04",
+      "label": "RM419 SW04",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 3-8, main/earth contact geometry and transformer branches"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.21)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 10-12, RM410-CB03-A04/SW04 to RM419-SW01"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-E / 3-8, RM410→RM419→RM418"
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "revision": "4 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C / 4-5, note1 callout by SW04; F-G / 1-4, note1"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:mc419:in",
+      "label": "MC419 incoming VCB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-F / 4-11, incoming tier5 and two motor groups"
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: F-G / 1-7, notes5-6 and legend"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h9:mc419a:in",
+      "label": "MC419A ACB01 · 2000 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB19OP001C-01068-DR-EL-0003.pdf",
+          "revision": "1 (15.06.20; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 8-10, ACB01 2000A and 415V/2600A bar"
+        },
+        {
+          "document": "CB19OP001C-01068-DR-EL-0004.pdf",
+          "revision": "2 (22.07.20; RE-ISSUED FOR AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 1-11, continued same phase bar from0003"
+        }
+      ]
+    },
+    {
+      "assetId": "rm721:in01",
+      "label": "ISOL RM721 IN01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 4-7; rev 1 rename 03.06.09 in H"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM721 SF/CB naming"
+        }
+      ]
+    },
+    {
+      "assetId": "rm721:in02",
+      "label": "CB RM721 IN02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 4-7; rev 1 rename 03.06.09 in H"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM721 SF/CB naming"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "rm721:rm412",
+      "label": "CB RM412",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 4-7; rev 1 rename 03.06.09 in H"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM721 SF/CB naming"
+        }
+      ]
+    },
+    {
+      "assetId": "rm721:rm713",
+      "label": "ISOL RM713",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2256.pdf",
+          "revision": "3 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-F / 4-7; rev 1 rename 03.06.09 in H"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM721 SF/CB naming"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "rm712:in02",
+      "label": "SF RM712 IN02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "revision": "3 (22.02.08; RE-ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-4, SF incoming symbols"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM712 SF/earth symbol substitutions"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "rm712:in01",
+      "label": "SF RM712 IN01",
+      "proposedContact": null,
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "revision": "3 (22.02.08; RE-ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-4, SF incoming symbols"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM712 SF/earth symbol substitutions"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "rm712:tf712:cb",
+      "label": "CB TF712 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "revision": "3 (22.02.08; RE-ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-3, incoming SF devices, bar and TF712 feeder"
+        }
+      ]
+    },
+    {
+      "assetId": "rm712:sw712:cb",
+      "label": "CB SW712 IN\n1600 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2253.pdf",
+          "revision": "3 (22.02.08; RE-ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 4-8, distinct DGs/MCS/output"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "rm713:in01",
+      "label": "SF RM713 IN01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2254.pdf",
+          "revision": "1 (21.02.08; RM713 WAS SUPPLIED FROM RM712)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-4, SF incoming symbols"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM713 SF/earth symbol substitutions"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "rm713:in02",
+      "label": "SF RM713 IN02",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2254.pdf",
+          "revision": "1 (21.02.08; RM713 WAS SUPPLIED FROM RM712)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-4, SF incoming symbols"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM713 SF/earth symbol substitutions"
+        },
+        {
+          "document": "11098-07110-EL-DR-2254.pdf",
+          "revision": "1 (21.02.08; RM713 WAS SUPPLIED FROM RM712)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 2-9, incoming/bar/TF713/LV incomer and bar"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27/10/2025)",
+          "page": 1,
+          "clause": "C-D/7-8, workshop RM713 IN02 explicitly SPARE; detailed2254 leaves destination unnamed."
+        }
+      ]
+    },
+    {
+      "assetId": "rm713:tf713:cb",
+      "label": "CB TF713 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2254.pdf",
+          "revision": "1 (21.02.08; RM713 WAS SUPPLIED FROM RM712)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 2-9, incoming/bar/TF713/LV incomer and bar"
+        }
+      ]
+    },
+    {
+      "assetId": "rm713:sw713:cb",
+      "label": "CB SW713 IN\n1600 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2254.pdf",
+          "revision": "1 (21.02.08; RM713 WAS SUPPLIED FROM RM712)",
+          "page": 1,
+          "clause": "Drawing region: A-E / 2-9, incoming/bar/TF713/LV incomer and bar"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:s100",
+      "label": "S100\nRM721-facing",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: F-G / 1-3, upper-left RMU; inverted letter-grid orientation"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:s101",
+      "label": "S101\nRM413-facing",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: F-G / 1-3, upper-left RMU; inverted letter-grid orientation"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:q100",
+      "label": "Q100\n200 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: F-G / 1-3, upper-left RMU; inverted letter-grid orientation"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:feeder-contact",
+      "label": "Disconnecting contact\nBelow Q100 · tag unconfirmed",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: F / 1-3, contact below Q100 and dashed linkage to E102"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:q200",
+      "label": "Q200\n690 V Star · 800 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 1-7, F1/Q200 and separate phase conductor"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM412 / SW5001 grouped destination"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:q201",
+      "label": "Q201\n690 V Delta · 800 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 1-7, F2/Q201 and separate phase conductor"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM412 / SW5001 grouped destination"
+        }
+      ]
+    },
+    {
+      "assetId": "rm412:q202",
+      "label": "Q202\n415 V Star · 80 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 1-7, /Q202 and separate phase conductor"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM412 / SW5001 grouped destination"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:in01",
+      "label": "RM413 IN01\nRM412-facing",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-6, IN01/IN02 double-boot, bar and TF feeders"
+        },
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: G / 2-3, S101 TO RM413 reciprocal reference"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:in02",
+      "label": "RM413 IN02\nRM417-facing double boot",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-6, IN01/IN02 double-boot, bar and TF feeders"
+        },
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: G / 2-3, S101 TO RM413 reciprocal reference"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-C/1-6: RM413 IN02 cable-side DOUBLE BOOT CONNECTION to RM417/Hopper1 and RM413A."
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:tf413:cb",
+      "label": "TF413 FD\nABB REJ603 protection label",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-6, IN01/IN02 double-boot, bar and TF feeders"
+        },
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: G / 2-3, S101 TO RM413 reciprocal reference"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11 (14.11.25; IFC)",
+          "page": 1,
+          "clause": "A-B/4-5: RC001/reference2350 and TF413; current source binding corrected by owner, historical cause unconfirmed."
+        },
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-E/2-4: RM413 TF413 feeder, transformer and MC413 route."
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:mc413:cb",
+      "label": "CB MC413 IN\n3000 A printed · supply route confirmed",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: C-E / 2-3, MC413 incoming/bar and missing 1001 reference"
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11 (14.11.25; IFC)",
+          "page": 1,
+          "clause": "A-B / 4-6, FROM 22kV RING MAIN UNIT RC001 / reference 11098-07110-EL-DR-2350 and TF413; C-D / 4-5, CB MC413 IN 3000 A; D / 1-11, 400 V / 3000 A / 50 kA for 1 sec phase bar; H / 8-12, title/revision 11."
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        },
+        {
+          "document": "00151-CB-02006-DR-EL-1001",
+          "revision": "11 (14.11.25; IFC)",
+          "page": 1,
+          "clause": "A-B/4-5: RC001/reference2350 and TF413; current source binding corrected by owner, historical cause unconfirmed."
+        },
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-E/2-4: RM413 TF413 feeder, transformer and MC413 route."
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:tf414:cb",
+      "label": "TF414 FD\nABB REJ603 protection label",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 1-6, IN01/IN02 double-boot, bar and TF feeders"
+        },
+        {
+          "document": "CBC0012-02004-DR-EL-0007.pdf",
+          "revision": "9 (23.10.23; AS FOUND)",
+          "page": 1,
+          "clause": "Drawing region: G / 2-3, S101 TO RM413 reciprocal reference"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413:mcc414:cb",
+      "label": "MCC414 incomer\n2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB095-02004-DR-EL-0014.pdf",
+          "revision": "4 (23.03.12; AS BUILT - CB145)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 4-10, TF414, incomer, neutral/MEN and labelled phase bar"
+        },
+        {
+          "document": "CB095-02004-DR-EL-0015.pdf",
+          "revision": "5 (05.09.24; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: C / 1-11, same phase-bar continuation"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413a:q1",
+      "label": "TF413A Q1 CB",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 4-6, double-boot branch and two ES-Q8 locations"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: C-D / 10-12, RM413A alternate aliases"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413a:es-q8:lower",
+      "label": "ES-Q8 · lower\nContact mechanism unconfirmed",
+      "proposedContact": null,
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: B-C / 4-6, lower switching/earth symbol below Q1 and above TF413A"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; AS BUILT stamp 27/10/2025)",
+          "page": 1,
+          "clause": "Drawing region: RM413A SW TF413A SW-01/ES aliases"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413a:ac-input-a:switch",
+      "label": "TF413A AC input A\n2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 4-8, two 2500A inputs/rectifiers and separate AC routes meeting only on DC side"
+        }
+      ]
+    },
+    {
+      "assetId": "rm413a:ac-input-b:switch",
+      "label": "TF413A AC input B\n2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "revision": "5 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: D-E / 4-8, two 2500A inputs/rectifiers and separate AC routes meeting only on DC side"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:sw01",
+      "label": "RM420 SW01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-B / 8-9, pole286 and incoming cable"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "F-G / 10-11, 80A fused ABS branch to RMU420; A / 11-12 surge-arrestor legend"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, SW411 tier03 and pole286 route"
+        },
+        {
+          "document": "11098-07110-EL-DR-5151.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "D-G / 4-5, tier3 CV006 reference and SPARE aliases"
+        },
+        {
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "revision": "6 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A / 1-12, former22kV branch and current drawn RM406/RM410 routes"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "C-G / 7-11, 33kV IOP route and pole286 Hopper10 branch"
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-F / 3-9, RM420 bus/SW01 and both transformer CB/SW/earth branches; G note3 dual primaries"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "F-G / 10-11, pole286 TF04 line to RMU420"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:tf420a:cb",
+      "label": "RM420 CB01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-F / 3-4, TF420A branch"
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-F / 3-9, RM420 bus/SW01 and both transformer CB/SW/earth branches; G note3 dual primaries"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "F-G / 10-11, pole286 TF04 line to RMU420"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:tf420a:sw",
+      "label": "RM420 SW02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-F / 3-4, TF420A branch"
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-F / 3-9, RM420 bus/SW01 and both transformer CB/SW/earth branches; G note3 dual primaries"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "F-G / 10-11, pole286 TF04 line to RMU420"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:tf420b:cb",
+      "label": "RM420 CB02",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-F / 5-6, TF420B branch"
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-F / 3-9, RM420 bus/SW01 and both transformer CB/SW/earth branches; G note3 dual primaries"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "F-G / 10-11, pole286 TF04 line to RMU420"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:tf420b:sw",
+      "label": "RM420 SW03",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-F / 5-6, TF420B branch"
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-F / 3-9, RM420 bus/SW01 and both transformer CB/SW/earth branches; G note3 dual primaries"
+        },
+        {
+          "document": "CB21OP055B-10016-DR-EL-0089.pdf",
+          "revision": "0 (10.06.22; ISSUED FOR CONSTRUCTION)",
+          "page": 1,
+          "clause": "F-G / 10-11, pole286 TF04 line to RMU420"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:spare:cb",
+      "label": "RM420 CB03 · spare",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-E / 7-8, spare branch"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; FOR INFORMATION ONLY)",
+          "page": 1,
+          "clause": "C-D / 1-3, third RM420 feeder"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:spare:sw",
+      "label": "RM420 SW04 · spare",
+      "proposedContact": "open",
+      "categoryBasis": "drawing-explicit-spare-current-category-Unconfirmed",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "B-E / 7-8, spare branch"
+        },
+        {
+          "document": "CB-10016-DR-EL-0011.pdf",
+          "revision": "0 (27.10.25; ISSUED FOR USE; FOR INFORMATION ONLY)",
+          "page": 1,
+          "clause": "C-D / 1-3, third RM420 feeder"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:mc420:in:vcb",
+      "label": "MC420 tier5 · VCB200A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0004.pdf",
+          "revision": "2 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "A-D / 4-5, incoming tier5 and main bar"
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "E-F / 3-4, secondary continuationA"
+        }
+      ]
+    },
+    {
+      "assetId": "mine:wt1:cb",
+      "label": "WT1-CB · study recloser",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2355.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-G / 4-8, incoming reference2349, phase bar and CB/ES contacts"
+        },
+        {
+          "document": "11098-07110-EL-DR-2657.pdf",
+          "revision": "13 (09.01.26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 5-12, TF441/MC441 incoming and first phase bar; distinct neutral/MEN"
+        },
+        {
+          "document": "CB-10016-DR-EL-0003.001.pdf",
+          "revision": "9 (21.01.21; ADDITIONAL GENERATION, ALINTA TIER)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, OPF1/WT1/SS441"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "mine:sw441:in:cb",
+      "label": "CB SW441 IN01",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2355.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-G / 4-8, incoming reference2349, phase bar and CB/ES contacts"
+        },
+        {
+          "document": "11098-07110-EL-DR-2657.pdf",
+          "revision": "13 (09.01.26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 5-12, TF441/MC441 incoming and first phase bar; distinct neutral/MEN"
+        },
+        {
+          "document": "CB-10016-DR-EL-0003.001.pdf",
+          "revision": "9 (21.01.21; ADDITIONAL GENERATION, ALINTA TIER)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, OPF1/WT1/SS441"
+        },
+        {
+          "document": "Project owner conversation",
+          "revision": "2026-10-22",
+          "clause": "Exact scoped owner answers retained in confirmation.decision; no baseline, availability or interlock acceptance."
+        }
+      ]
+    },
+    {
+      "assetId": "mine:tf441:cb",
+      "label": "CB TF441 FD",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2355.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-G / 4-8, incoming reference2349, phase bar and CB/ES contacts"
+        },
+        {
+          "document": "11098-07110-EL-DR-2657.pdf",
+          "revision": "13 (09.01.26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 5-12, TF441/MC441 incoming and first phase bar; distinct neutral/MEN"
+        },
+        {
+          "document": "CB-10016-DR-EL-0003.001.pdf",
+          "revision": "9 (21.01.21; ADDITIONAL GENERATION, ALINTA TIER)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, OPF1/WT1/SS441"
+        }
+      ]
+    },
+    {
+      "assetId": "mine:mc441:in",
+      "label": "MC441 · 400 V IN",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-07110-EL-DR-2355.pdf",
+          "revision": "7 (28.01.25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-G / 4-8, incoming reference2349, phase bar and CB/ES contacts"
+        },
+        {
+          "document": "11098-07110-EL-DR-2657.pdf",
+          "revision": "13 (09.01.26; ISSUED FOR CONSTRUCTION - CB25OP003A)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 5-12, TF441/MC441 incoming and first phase bar; distinct neutral/MEN"
+        },
+        {
+          "document": "CB-10016-DR-EL-0003.001.pdf",
+          "revision": "9 (21.01.21; ADDITIONAL GENERATION, ALINTA TIER)",
+          "page": 1,
+          "clause": "Drawing region: E-G / 10-12, OPF1/WT1/SS441"
+        }
+      ]
+    },
+    {
+      "assetId": "sw455:in-d:cb",
+      "label": "CB SW455 IN D\n2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8020",
+          "revision": "3",
+          "page": 1,
+          "clause": "Printed 04400-EL-DR-8020; A-B / 4-9 TF455; B-C / 2,10 CB SW455 IN D/Y; C-D / 1-10 separate 690V 2500A phase bars; H / 12 revision3; AS BUILT 17/08/2009."
+        }
+      ]
+    },
+    {
+      "assetId": "sw455:in-y:cb",
+      "label": "CB SW455 IN Y\n2500 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8020",
+          "revision": "3",
+          "page": 1,
+          "clause": "Printed 04400-EL-DR-8020; A-B / 4-9 TF455; B-C / 2,10 CB SW455 IN D/Y; C-D / 1-10 separate 690V 2500A phase bars; H / 12 revision3; AS BUILT 17/08/2009."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h3:mc416a:in",
+      "label": "SS416-MC416A\nMCCB 630 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0165",
+          "revision": "1",
+          "page": 1,
+          "clause": "A-C / 8-9 SS416-TF416A reference, incoming phase conductor and MCCB630A; C-D / 1-11 SS416-MC416A 630A25kA1Sec3-phaseN&E415VAC phase bar; H / 10-12 title and revision1. Handwritten date unconfirmed."
+        }
+      ]
+    },
+    {
+      "assetId": "mc454:in:cb",
+      "label": "CB MC454 IN\n3000 A printed",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "11098-04400-EL-DR-8010",
+          "revision": "6",
+          "page": 1,
+          "clause": "Printed 04400-EL-DR-8010; A-B / 3-5 SW454 reference and TF454 22kV/400V 2MVA; C-D / 3-5 CB MC454 IN 3000A; D / 1-10 phase bar printed400V500A50kA1sec; H / 12 revision6 IFC 19/11/25. Separate neutral/MEN is not phase continuity."
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h3:mc416:in",
+      "label": "Hopper3 · MC416\nIncoming VCB 200 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB16OP038A-02006-DR-EL-0166",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: A-D / 2-11, phase bar and tiers 1-5; E-F / 7-11, sizer motor terminations"
+        },
+        {
+          "document": "CB16OP038A-02006-DR-EL-0166",
+          "revision": "1",
+          "page": 1,
+          "clause": "Drawing region: G / 1-7, notes5-6; C-D / 4-5 incoming and / 7-11 motor interlock glyphs"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h8:mc416:in",
+      "label": "Hopper8 · MC416\nIncoming VCB 200 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023D-01006-DR-EL-0002",
+          "revision": "2 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: A-D / 2-11, phase bar and tiers 1-5; E-F / 7-11, sizer motor terminations"
+        },
+        {
+          "document": "CB17OP023D-01006-DR-EL-0002",
+          "revision": "2 (28/01/25; AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "Drawing region: G / 1-7, notes5-6; C-D / 4-5 incoming and / 7-11 motor interlock glyphs"
+        }
+      ]
+    },
+    {
+      "assetId": "wh:h8:mc416a:in",
+      "label": "Hopper8 · MC416A\nMCCB 630 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "CB17OP023D-01006-DR-EL-0003",
+          "revision": "1 (20/09/18; AS BUILT)",
+          "page": 1,
+          "clause": "Drawing region: A-C / 8-10, SS416-TF416A continuation D and MCCB 630A; C-D / 1-11, first LV phase bar; H revision 1 dated 20/09/18 AS BUILT"
+        }
+      ]
+    },
+    {
+      "assetId": "rm420:mc420a:in:acb",
+      "label": "MC420A · ACB01 main switch\n2000 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0007-2130-DR-EL-0005",
+          "revision": "1 (20.01.22; AS BUILT)",
+          "page": 1,
+          "clause": "A-B / 9-10, FROM SS420-TF420B continuation B, ACB01 MAIN SWITCH 2000A; C-D / 1-12, SR420-MC420A phase bar 2600A80kA1sec415VAC; H title/revision1."
+        },
+        {
+          "document": "520CBC0007-2130-DR-EL-0003.pdf",
+          "revision": "3 (28.01.25; MODIFIED AS FOUND 23.10.23)",
+          "page": 1,
+          "clause": "E-F / 5-6, TF420B secondary continuation B and SR420-MC420A-P01; transformer transfer policy is not established by this LV extension."
+        }
+      ]
+    },
+    {
+      "assetId": "rm410:mc410a:cb",
+      "label": "MC410A CB\n630 A",
+      "proposedContact": "closed",
+      "categoryBasis": "Unconfirmed-in-service-spare-category",
+      "references": [
+        {
+          "document": "520CBC0003-2140-DR-EL-0002",
+          "revision": "6 (08.04.22; AS BUILT)",
+          "page": 1,
+          "clause": "A-B / 4-5 FROM 22kV RING MAIN UNIT RM410-SW03, ref CB19OP001B-04057-DR-EL-0001, TF410B 22kV/415V 500kVA Dyn11; C-D / 4-5 MC410A CB 630A; D / 1-12 phase bar 415V630A63kA1Sec; C-D / 5-8 separate neutral/MEN/earth; H revision6 08.04.22 AS BUILT."
+        }
+      ]
+    }
+  ]
+}

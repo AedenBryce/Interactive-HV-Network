@@ -1,0 +1,224 @@
+             1                                   2                                     3                                   4                                   5                                   6                                   7                                   8                                  9                                   10                                  11                                  12
+
+
+                                                                                                                                                                                                                                                                                                                                                                           NOTES:
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                         1.  48V DC SUPPLIES FROM UPS DISTRIBUTION BOARD                 A
+                                                                                                                                                                                                                                                                                                                                                                              DB505B.
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                           LEGEND:
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                           86   =  LOCKOUT RELAY
+
+                                                                                                                                                                                                                                                                                                                                                                           50   =  INSTANTANEOUS OVERCURRENT OR RATE OF
+                                                                                                                                                                                                                                                                                                                                                                                   RISE RELAY
+                                                                                                                                                                                                                                                            WET SCREENING & SCRUBBING 22kV SWITCHROOM SR505                                                                51   =  AC TIME OVERCURRENT RELAY
+
+                                                                                                                                                                                                                                                                                                                                                                           50G  =  GROUND INSTANTANIEOUS OVERCURRENT OR
+B                                                    TF505A FEEDER                                                                    TF505B FEEDER                                                                    TF505C FEEDER                                                                                      22kV SWITCHBOARD SW505                                   RATE OF RISE RELAY                                     B
+                                                     TIER 5                                                                           TIER 4                                     3                                     TIER 3
+
+                                                                                                                                                                                                                                                                                                                                                                           51G  =  GROUND AC TIME OVERCURRENT RELAY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                22kV, 1250A, 25kA 3 Sec                                                                                                                                                                                                                                                                                                                                                                                                  C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 +48VDC
+
+
+
+
+D                COMMS                                                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                           CB TF505A FD630A                                                                 CB TF505B FD630A                                                                CB TF505C FD630A
+
+
+
+
+
+                                                                           86                                                                               86                                                                              86
+
+
+                                                                           50                                                                               50                                                                              50
+
+
+                                                                           51                                                                               51                                                                               51
+E                                                                                                          ES TF505A FD                                                                    ES TF505B FD                                                                     ES TF505C FD                                                                                                                                                  E
+
+                                                                           50G                                                                             50G                                                                              50G
+
+
+                                                                           51G                                                                             51G                                                                              51G
+
+
+                                                                        SEL 751A                           100:1                                         SEL 751A                           100:1                                        SEL 751A                           100:1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                         F
+
+                                                                                                                        INTERLOCK TO                                                                     INTERLOCK TO                                                                     INTERLOCK TO
+                                                                                                                            INCHING                                                                         INCHING                                                                          INCHING
+                                                                                                                         DRIVE LOCAL                                                                      DRIVE LOCAL                                                                     DRIVE LOCAL
+                                                                                                                           ISOLATOR                                                                        ISOLATOR                                                                         ISOLATOR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                         G
+
+
+
+                                                                     VS50501                          TF505A                                         VS50502                          TF505B                                          VS50503                          TF505C
+
+
+                                                                          TF505A 22kV/1.9kV/1.9kV                                                          TF505B 22kV/1.9kV/1.9kV                                                          TF505C 22kV/1.9kV/1.9kV
+                                                                         VS50501 - SCRUBBER SB214                                                         VS50502 - SCRUBBER SB215                                                        VS50503 - SCRUBBER SB216
+                                                                           500CB-04220-DR-EL-0042                                                          500CB-04220-DR-EL-0042                                                           500CB-04220-DR-EL-0042                                                                                 VENDOR/DESIGNER DRG No.                                                        REV:
+                                                                                                                                                                                                                                                                                                                                                                   005001-2200-1400-SLD-0002                                        2
+
+
+
+
+                                                                                                                                                                                                                                                                                    STANDARDS                                PROJECT NUMBER                                 Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                      CHECK
+                                                                                                                                                                                                                                                                                     APPROVED
+                                                                                                                                                                                                                                                                                                                                  500CB            CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                                                                                                                                                                                                                                                                  WET SCRUBBING / SCREENING                                                              H
+                                                                                                    3   25.01.25  AS FOUND 23.10.23                                                          AP       CH       MP                                                                                                            This drawing must not SW505
+                                                                                                                                                                                                                                                                                                                             be copied or reproduced
+                                                                                                    2    18.03.13 AS BUILT - NO CHANGE                                                       SR      DGM       DGM       ZG       AB       AB       MT                                                                      in any form or used for
+                                                                                                                                                                                                                                                                                                                             any purpose other thanSINGLE LINE DIAGRAM - SHEET 2
+                                                                                                    1    19.12.12 RE-ISSUED FOR CONSTRUCTION                                                JMc       MR       MR        PA       CD       PH       NHJ                                                                     originally intended without
+   500CB-04220-DR-EL-0054        SW505 SINGLE LINE DIAGRAM SHEET 1                                  0    10.10.11 ISSUED FOR CONSTRUCTION                                                   JMc       MR       MR        PA       IMG      PH       NHJ                                                                       written approval of          SCALE   DRG No:                                                        REV:
+                                                                                                                                                                                                                                                                                                                            Fortescue MetalsGroup Ltd
+   REF DRG No.                                                TITLE                                REV    DATE                            DESCRIPTION                                       DRN       CHK      SUP      DES       DAP     PAP       FMG                                                  NORTH                                      A1      NTS          500CB-04220-DR-EL-0055                                     3
+
+
+
+             1                                   2                                     3                                   4                                   5                                   6                                   7                                   8                                  9                                   10                                  11                                  12

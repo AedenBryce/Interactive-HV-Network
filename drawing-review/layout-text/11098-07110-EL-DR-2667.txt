@@ -1,0 +1,185 @@
+                  1                                       2                                        3                                        4                                       5                                        6                                        7                                       8                                        9                                       10                                       11                                      12
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                               CONSTRUCTION NOTES:
+                                                                                                                                                                                                                                                                                                                                                                                                               1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+A                                                                                                                                                                                                                                                                                                                                                                                                              2. CONTACTOR TO BE UPGRADED.                                                        A
+                                                                                                                                                                                                                                                                                                                                                                                                               3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  B
+
+
+
+
+
+
+
+
+             CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+
+            MC434B
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  C
+
+
+
+
+
+
+                  400V, 1000A, 50kA for 1 Sec
+
+
+                                 TIER 1F-00                    TIER 1F-05                                                                  TIER 1F-10                                                                  TIER 1F-15                     TIER 1F-20                                                                  TIER 2F-10                                                                TIER 1F-25                      TIER 2F-25                  TIER 3F-25
+
+
+
+
+
+
+                                 100A                           100A                                                                        32A                                                                         100A                           5A                                                                          32A
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  D
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                               NOTE 1                           NOTE 1                      NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  E
+
+
+
+
+
+                                                                                                                                                        LCS          HE305-LCS01                                                                                                                                                               LCS   HE306-LCS01
+                                                                                                                                                          8                                                                                                                                                                                     8
+
+
+
+                                                                                                                                   LU305-JB01                                                                                                                                                                             LU306-JB01
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 4
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  F
+
+
+                               M       LCS                   M        LCS                                                                                                                                            M        LCS               M           LCS                                                                                                                                           M                               M                           M
+                              3Ø        8                    3Ø        8                                                                                                                                             3Ø        8                3Ø           8                                                                                                                                           3Ø                              3Ø                          3Ø
+                      TH                            TH                                                                                                                                                       TH
+
+
+                        LU305-PU01                    LU305-PU02                     LU305-HE01                     LU305-HE02                    LU305-HE03                    LU305-HE04                    HY305-PU01                   BL305-EM01                       LU306-HE01                    LU306-HE02                     LU306-HE03                    LU306-HE04                  SP304-EM01                          SP302                       SP301
+                        LUBE PUMP                      LUBE PUMP                    LUBE HEATER                   LUBE HEATER                    LUBE HEATER                   LUBE HEATER                     HYDRAULIC                CRUSHER DUST                       LUBE HEATER                   LUBE HEATER                   LUBE HEATER                    LUBE HEATER               CRUSHER ALLEY                 TRANSFER STATION               CRUSHER AREA
+                             No.1                          No.2                           No.1                          No.2                           No.3                          No.4                          PUMP                     SEAL FAN                             No.1                          No.2                           No.3                          No.4                 SOUTHERN END                        103 AREA                  FLOOR PUMP
+                                                                                                                                                                                                                                                                                                                                                                                                   SUMP PUMP                       FLOOR PUMP
+                            37kW                           37kW                           2kW                            2kW                           2kW                           2kW                           37kW                        1.5kW                             2kW                           2kW                            2kW                           2kW                         15kW                            30kW                        30kW
+                   CGC011-B-E05-0362              CGC011-B-E05-0362                                                                                                                                       CGC011-B-E05-0362           CGC011-B-E05-0358
+
+
+G                                             4                                                                                                                                                                                    4                                                                           4     CGC011-B-E05-0359                                                     CB12001-2079-DR-EL-0006                      CB12001-2079-DR-EL-0007                                    G
+                                                                                                                         4     CGC011-B-E05-0359
+                                       DUTY-STANDBY
+                                                                                                                        CR305 - TERTIARY CRUSHER                                                                                                                                                              CR306 - TERTIARY CRUSHER
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ph +61 8 6220 2000, www.verbrec.com
+
+    This drawing and all the information                                                                                                                                                                                         CLIENT                                                                                                                                DRAWN          JZ                     11/05/07
+
+         on it is the property of                                                                                                                                                                                                                                                                                                                                                                                         PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                  ENGINEER       RC                     11/05/07
+
+       It is confidential and is given                                                                                                                                                                                                                                                                                                                                                AJ                                  CLOUD BREAK INFRASTRUCTURE
+    to you for a limited purpose and must                                                                               4   15/07/25    ISSUED FOR CONSTRUCTION - CP25OP003A                      SR    LN   AC   JM   JM   MG                                                                                                                                         CHECKED                               11/05/07
+H                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                              LEAD ENG       RC                     11/05/07     MC434B - CRUSHING AUXILIARIES
+        drawing nor any information                                                                                     3   11/09/09    ISSUED FOR AS BUILT                                       YBC  BT   WL   CJT   DF   AC
+
+    concerning it may be copied, exhibited                                                                              2   21/02/08    RE-ISSUED FOR CONSTRUCTION                                JM   LB    AJ   LB   NJ   NJ                                                                                                                                         ENG MGR        NJ                     14/05/07
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                     SINGLE LINE DIAGRAM SHEET 1
+    photographs be taken of any article                                                                                 1   25/01/08    RE-ISSUED FOR CONSTRUCTION                                JH   RP    AJ   LB   NJ   NJ                                                                             Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                   Level 2, Hyatt Centre                     Tel: +61 8 9266 0111   Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR     GW                     16/05/07
+      fabricated or assembled from this07110-EL-DR-2668    MC434B - CRUSHING AUXILIARIES SLD SHT-2                      0   11/05/07    ISSUED FOR CONSTRUCTION                                   JZ   RC    AJ   RC   NJ   GW                                                                                                                                                                                            PROJECT No:           DRG No:                                    REV:
+       drawing without the consent of                                                                                                                                                                                              87 Adelaide Terrace                       Fax: +61 8 9221 9483    Team 45 and WorleyParsons act on behalf of and as disclosed agent SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD      REF No.                                REFERENCES                          REV     DATE                            DESCRIPTION                         DRN  ENG  CHK   LE   EM   PM     East Perth  WA  6004  Australia           ABN 52 103 096 340                        of The Pilbara Infrastructure.                                 NTS                       A1         300/11098                  07110-EL-DR-2667                      4
+
+
+                  1                                       2                                        3                                        4                                       5                                        6                                        7                                       8                                        9                                       10                                       11                                      12

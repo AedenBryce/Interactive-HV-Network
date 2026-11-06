@@ -1,0 +1,174 @@
+                 1                                      2                                       3                                      4                                      5                                       6                                      7                                      8                                      9                                      10                                      11                                     12
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  A
+
+
+
+
+
+                                                                                                                                              SCREENING VARIABLE SPEED DRIVE SWITCHBOARD
+
+                                                                                                                                                                                     SW423
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  B
+                            STATUTORY                                      STATUTORY                                      STATUTORY                                      STATUTORY                                      STATUTORY                                      STATUTORY                                      STATUTORY                                       STATUTORY
+                          SAFETY RELAY                                   SAFETY RELAY                                   SAFETY RELAY                                   SAFETY RELAY                                   SAFETY RELAY                                   SAFETY RELAY                                   SAFETY RELAY                                   SAFETY RELAY
+                              ESR4207                                        ESR4208                                        ESR4209                                         ESR4210                                        ESR4211                                        ESR4212                                        ESR4213                                        ESR4214
+
+
+
+
+
+
+
+
+                                        690V, 2500A, 50kA for 1 Sec
+
+
+
+
+
+
+
+C                      690V, 2500A, 50kA for 1 Sec                                                                                                                                                                                                                                                                                                                                                                                                                                 C
+
+
+
+                 TIER                                            TIER                                           TIER                                           TIER                                           TIER                                           TIER                                           TIER                                           TIER
+                 09F-08                                          09F-16                                         010F-00                                        010F-08                                        010F-16                                        10F-00                                         12F-00                                         12F-08
+
+
+
+                  80A                                            80A                                            80A                                            80A                                            80A                                            80A                                             80A                                            80A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                                       230V AC                                                                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+                                        24V DC
+
+                                      PROFIBUS (MP4231)
+
+                                      PROFIBUS (MP4232)
+
+                                      PROFIBUS (MP4233)
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  E
+
+
+                                           48V DC
+
+
+
+
+
+                    VS4207                                         VS4208                                         VS4209                                         VS4210                                         VS4211                                         VS4212                                         VS4213                                         VS4214
+             ACS800-01-0070-7                               ACS800-01-0070-7                               ACS800-01-0070-7                               ACS800-01-0070-7                               ACS800-01-0070-7                               ACS800-01-0070-7                               ACS800-01-0070-7                               ACS800-01-0070-7
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  F
+                                                                                                                                                                                                                                                                                                                                                                                                                5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                              Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                              Ph +61 8 6220 2000, www.verbrec.com
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  G
+                       M                                              M                                              M                                              M                                              M                                               M                                              M                                              M                                                     APPLICABLE DOCUMENTS
+                       3Ø                                             3Ø                                             3Ø                                             3Ø                                             3Ø                                             3Ø                                             3Ø                                             3Ø
+             TH                                             TH                                             TH                                             TH                                             TH                                             TH                                             TH                                             TH                                                                           SPECIFICATIONS
+                  VF203-EM01                                     VF204-EM01                                     VF205-EM01                                     VF206-EM01                                     VF207-EM01                                     VF208-EM01                                     VF209-EM01                                     VF210-EM01                                                                 TECHNICAL SPECIFICATION FOR ELECTRICAL
+              SCALPING SCREEN                                PRODUCT SCREEN                                 PRODUCT SCREEN                                 PRODUCT SCREEN                                 PRODUCT SCREEN                                 PRODUCT SCREEN                                 PRODUCT SCREEN                                   PRODUCT FEED                                        11098-07110-EL-SP-1121   EQUIPMENT INSTALLATION
+             VIBRATING FEEDER                               VIBRATING FEEDER                               VIBRATING FEEDER                               VIBRATING FEEDER                               VIBRATING FEEDER                               VIBRATING FEEDER                                VIBRATING FEEDER                              VIBRATING FEEDER
+                      45kW                                           45kW                                           45kW                                           45kW                                           45kW                                           45kW                                           45kW                                           45kW                                                            STANDARD DRAWINGS
+
+         11098-07110-EL-DR-4683                5         11098-07110-EL-DR-4685                         11098-07110-EL-DR-4687                         11098-07110-EL-DR-4689                         11098-07110-EL-DR-4691                         11098-07110-EL-DR-4693                         11098-07110-EL-DR-4467                         11098-07110-EL-DR-4465                                    11098-07110-EL-DR-1000   STANDARD DRAWINGS LIST
+
+
+
+    This drawing and all the information                                                                                                                                                                                  CLIENT                                                                                                                           DRAWN          W. LEONG               2/11/06
+
+         on it is the property of                                                                                                                                                                                                                                                                                                                                                                           PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                      ENGINEER       R. COX                 2/11/06
+       It is confidential and is given                                                                              5   18/11/25   ISSUED FOR CONSTRUCTION - CB25OP003A                     JC   LN   AC   JM   KI   MG
+                                                                                                                                                                                                                                                                                                                                                           CHECKED        D. PALMER              2/11/06    CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                           4   19/08/09   ISSUED AS BUILT                                         KW    BT   SQ  CJT   DF   AC                                                                                                                                                                                                                                                            H
+    be returned on request. Neither this                                                                                                                                                                                                                                                                                                                   LEAD ENG       L. BRUNN               2/11/06    SW423 - SCREENING
+        drawing nor any information                                                                                 3   21/02/08   RE-ISSUED FOR CONSTRUCTION                               CV   LB   AJ   LB   NJ   NJ
+
+    concerning it may be copied, exhibited                                                                          2   11/05/07   RE-ISSUED FOR CONSTRUCTION                               JZ   RC   AJ   RC   NJ  GW                                                                                                                                     ENG MGR        J. BILESSURIS          2/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                       SINGLE LINE DIAGRAM - SHEET 2
+    photographs be taken of any article                                                                             1   17/11/06   RE-ISSUED FOR CONSTRUCTION                               WL   RC   AS   LB   JB  GW                                                                           Team 45 is the integrated project management team of
+                                                                                                                                                                                                                           Level 2, Hyatt Centre                                           Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR  G. WIESER              2/11/06
+     fabricated or assembled from this07110-EL-DR-2465     SW423 - SCREENING SINGLE LINE DIAGRAM - SHEET 1          0   02/11/06   ISSUED FOR CONSTRUCTION                                  WL   RC  DGP   LB   JB  GW                                              Tel: +61 8 9266 0111                                                                                                                    PROJECT No:           DRG No:                                  REV:
+      drawing without the consent of                                                                                                                                                                                       87 Adelaide Terrace                      Fax: +61 8 9221 9483   Team 45 and WorleyParsons act on behalf of and as disclosed agentSCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD    REF No.                               REFERENCES                         REV     DATE                          DESCRIPTION                        DRN  ENG  CHK   LE   EM   PM    East Perth  WA  6004  Australia          ABN 52 103 096 340                       of The Pilbara Infrastructure.                               N/A                     A1         300/11098                 07110-EL-DR-2466                     5
+
+
+                 1                                      2                                       3                                      4                                      5                                       6                                      7                                      8                                      9                                      10                                      11                                     12

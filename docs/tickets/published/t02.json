@@ -1,0 +1,15 @@
+{
+  "id": "T02",
+  "number": 3,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/3",
+  "title": "Explore alternate supplies and explain switching impacts",
+  "blockedBy": [
+    2
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    2
+  ]
+}

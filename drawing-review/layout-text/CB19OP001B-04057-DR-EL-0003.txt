@@ -1,0 +1,190 @@
+               1                                       2                                         3                                       4                                       5                                       6                                       7                                       8                                       9                                       10                                      11                                      12
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                    NOTES
+                                                                                                                                                    FROM 22kV RING MAIN UNIT RM406-SW02
+                                                                                                                                                                                                                                                                                                                                                                                          1.   CB RATINGS TO BE CONFIRMED BY SWITCHGEAR SUPPLIER
+                                                                                                                                                    REF DRG. CB19OP001B-04057-DR-EL-0001
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                         2.   DESIGN PENDING VENDOR INFORMATION, DRAWING TO BE                                            A
+                                                                                                                                                                                                                                                                                                                                                                                               UPDATED WHEN VENDOR IFC DATA RECEIVED.
+
+
+
+
+
+
+                                                                                                                                                                                               TF406B
+                                                                                                                                                                                               22kV/415V
+                                                                                                                                                                                               500kVA
+                                                                                                                                                                                               Dyn11
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          B
+
+
+
+
+
+
+
+
+
+
+         WEST OVERLAND CONVEYOR MOTOR CONTROL CENTRE
+
+
+
+
+
+
+C        MC406A                                                                                                                                                                            TBC                                                                                                                                                                                                                                                                                              C
+                                                                                                                                                                                                                                                       NEUTRAL BAR                      EARTH BAR             REF DRG:
+
+                                                                                                                                                                                                                                                                                                              CB19OP001B-04057-DR-EL-0401
+                                                                                                                                                                                                                                                                          MEN LINK
+
+                                                                                                                                                                                           MC406A CB TBC A. NOTE 1.
+
+                                   415V, TBC A, 63 kA FOR 1 Sec
+
+                  XX-XX                       XX-XX                         XX-XX                  XX-XX                   XX-XX                    XX-XX                   XX-XX                    XX-XX                     XX-XX                                    XX-XX                         XX-XX                              XX-XX                         XX-XX                         XX-XX                          XX-XX                         XX-XX
+
+                                                                                                                                                                                      XX-XX
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                    SPARE                         SPARE
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          D
+
+
+
+
+
+                                                                                                                                                                                                                                                               2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          F
+
+
+
+
+
+
+
+                     M                           M                             M                     M                       M
+                   3                           3                             3                      3                       3                                                                                                                                             DB                            DB
+
+
+
+                CV006-HP01                CV006-GB01-FN01               CV006-GB01-PU01       CV006-GB02-FN01         CV006-GB02-PU01          MC406A-ARC4061          MC406A-ARC4062           MC406A-ARC4063                                                      CV006-DB4063                   SR406-DB4061
+                  BRAKES                PRIMARY DRIVE No.1            PRIMARY DRIVE No.1   SECONDARY DRIVE No.1    SECONDARY DRIVE No.1       AIR CONDITIONER 1        AIR CONDITIONER 2       AIR CONDITIONER 3                    SR406-BTC01                     DRIVE STATION                  SWITCHROOM
+          HYDRAULIC POWER PACK             GEARBOX OIL                     GEARBOX                GEARBOX                 GEARBOX                   DUTY                     DUTY                   STANDBY                          MEGELLAN                          L&SP DB                          DB
+                                            COOLING FAN                    OIL PUMP              OIL COOLING              OIL PUMP                                                                                               BATTERY CHARGER
+                  0.75kW                                                                            FAN                                             45kW                     45kW                     45kW                           48MCRII015                          100A                          100A
+                REFER DRG.                      3kW                          7.5kW                                          7.5kW                REFER DRG.               REFER DRG.               REFER DRG.                       REFER DRG.                        REFER DRG.                    REFER DRG.
+            CB19OP001B-04057-               REFER DRG.                    REFER DRG.                3kW                  REFER DRG.           CB19OP001B-04057-       CB19OP001B-04057-        CB19OP001B-04057-                 CB19OP001B-04057-                CB19OP001B-04057-             CB19OP001B-04057-
+                DR-EL-0131               CB19OP001B-04057-             CB19OP001B-04057-         REFER DRG.          CB19OP001B-04057-            DR-EL-0136              DR-EL-0137               DR-EL-0138                       DR-EL-0139                        DR-EL-0140                    DR-EL-0142
+                                            DR-EL-0132                    DR-EL-0133         CB19OP001B-04057-           DR-EL-0135
+G                                                                                                DR-EL-0134                                                                                                                                                                                                                                                                                                                                                                                G
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                            Phone 1300 135 466
+                                                                                                                                                                                                                                                                                                                                                                                                                                            Email: info@emtek.com.au
+                                                                                                                                                                                                                                                                                                                                                                                                                                            Website: www.emtek.com.au
+                                                                                                                                                                                                                                                                                                                                                                                                                                            ACN 602 820 968
+
+
+                                                                                                                                                                                                                                                                                                                                                                                          VENDOR/DESIGNER DRG No.                                                                  REV:
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                  PROJECT NUMBER                                      Fortescue Metals Group Ltd
+                                                                                                                                                                                                                                                                                                                                                                  CB19OP001B              CLOUDBREAK WESTERN CRUSHING
+
+
+H                                                                                                                                                                                                                                                                                                                                                                                         OVERLAND CONVEYOR CV006                                                                          H
+                                                                                                                                                                                                                                                                                                                                                                  This drawing must not
+                                                                                                                                                                                                                                                                                                                                                                 be copied or reproduced  MC406A 415V MOTOR CONTROL CENTRE
+                                                                                                               2     17.12.20  AS BUILT                                                                           TZ         JH        JH         TZ        JH        JH                                                                                                                                                                                                               SINGLE LINE DIAGRAMin any form or used for
+                                                                                                                1    12.12.19  REISSUED FOR CONSTRUCTION                                                          TZ         JH        JH         TZ        JH        JH                                                                                         any purpose other than
+                                                                                                                                                                                                                                                                                                                                                                originally intended without
+   CB19OP001B-04057-DR-EL-0001       POWER DISTRIBUTION SINGLE LINE DIAGRAM                                    0    25.09.19   ISSUED FOR CONSTRUCTION                                                            TZ         JH        JH         TZ        JH        JH                                                                                           written approval of             SCALE    DRG No:                                                                REV:
+                                                                                                                                                                                                                                                                                                                                                                Fortescue MetalsGroup Ltd
+   REF DRG No.                                                        TITLE                                    REV    DATE                                DESCRIPTION                                             DRN       CHK        SUP       DES        DAP      PAP        FMG                                                         NORTH                                          A1       NTS     CB19OP001B-04057-DR-EL-0003                                             2
+
+
+
+               1                                       2                                         3                                       4                                       5                                       6                                       7                                       8                                       9                                       10                                      11                                      12

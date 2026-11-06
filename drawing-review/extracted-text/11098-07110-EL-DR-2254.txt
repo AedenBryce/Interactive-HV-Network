@@ -1,0 +1,165 @@
+100kW 100kW 100kW 100kW
+400V, 2000A
+PACKAGE SUBSTATION LV SWITCHBOARD
+700kW
+SS713
+PACKAGE SUBSTATION
+SW713
+SW713-DB01-P-01
+SW713-DB02-P-01
+SW713-DB03-P-01
+SW713-DB04-P-01
+SW713-DB07-P-01
+CB SW713 IN
+1600A
+TF 713
+22kV/400V
+1.0MVA
+CB TF713 FD
+630A
+RM713
+22kV, 630A
+SF RM713 IN01
+630A
+SF RM713 IN02
+630A
+RM713-P-01
+SW713-P-01
+CB SPARE
+250A
+CB SPARE
+250A
+SW713-DB04-P-01
+100kW
+SW713-DB04-P-01
+100kW 100kW
+CONSTRUCTION
+BUILDINGS 1
+CONSTRUCTION
+BUILDINGS 2
+CONSTRUCTION
+BUILDINGS 3
+CONSTRUCTION
+BUILDINGS 4
+CONSTRUCTION
+BUILDINGS 5
+CONSTRUCTION
+BUILDINGS 6
+CONSTRUCTION
+BUILDINGS 7
+DISTRIBUTION
+BOARD
+DB7131
+DISTRIBUTION
+BOARD
+DB7132
+DISTRIBUTION
+BOARD
+DB7133
+DISTRIBUTION
+BOARD
+DB7134
+DISTRIBUTION
+BOARD
+DB7135
+DISTRIBUTION
+BOARD
+DB7136
+DISTRIBUTION
+BOARD
+DB7137
+CB DB7131 FD
+250A
+CB DB7132 FD
+250A
+CB DB7133 FD
+250A
+CB DB7134 FD
+250A
+CB DB7137 FD
+125A
+APPROVED FOR CONSTRUCTION
+FROM O/D RING MAIN UNIT
+RM 721
+07110-EL-DR-2256 1
+CLOUD BREAK INFRASTRUCTURE
+SS713 - TEMPORARY BUILDINGS
+SINGLE LINE DIAGRAM
+07110-EL-DR-2254 1NA
+J.ZHAO 11/05/07
+R.COX 11/05/07
+A.JAMES 11/05/07
+L.BRUNN 11/05/07
+N.JAMESON 14/05/07
+G.WIESER 14/05/07
+0 11/05/07 ISSUED FOR CONSTRUCTION JZ RC AJ LB NJ GW
+1 21/02/08 RM713 WAS SUPPLIED FROM RM712 JM LB AJ LB NJ NJ
+                            
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+22/02/2008 11:52:09 AM \\perworfil1\fmg_cad_archive\ARCHIVE\07110\EL\11098-07110-EL-DR-2254\Rev_1\11098-07110-EL-DR-2254.dgn
+300/11098
+This drawing and all the information 
+on it is the property of
+THE PILBARA INFRASTRUCTURE PTY LTD
+It is confidential and is given
+to you for a limited purpose and must
+be returned on request. Neither this
+drawing nor any information
+concerning it may be copied, exhibited
+or furnished to others. Nor may
+photographs be taken of any article 
+fabricated or assembled from this
+drawing without the consent of
+THE PILBARA INFRASTRUCTURE PTY LTD
+Level 2, Hyatt Centre
+87 Adelaide Terrace
+East Perth  WA  6004  Australia
+Tel: +61 8 9266 0111
+Fax: +61 8 9221 9483
+ABN 52 103 096 340
+Team 45 is the integrated project management team of 
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+of The Pilbara Infrastructure.EM
+ENG MGR
+PROJ MGR
+LEAD ENG

@@ -1,0 +1,13 @@
+.evidence-details, .uncertainty-details { border-top: 1px solid var(--border); padding-top: 18px; margin-top: 20px; font-size: 13px; }
+.evidence-details p, .uncertainty-details p { margin-top: 8px; color: #526279; }
+.evidence-details label { display: block; margin-top: 16px; }
+.evidence-details select { display: block; width: 100%; font: inherit; padding: 8px; margin-top: 6px; border: 1px solid var(--border); border-radius: 5px; background: white; color: #102640; }
+.evidence-details article, .connection-evidence { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.evidence-details h4 { margin: 0; font-size: 13px; }
+.evidence-references { padding-left: 18px; overflow-wrap: anywhere; }
+.uncertainty-details { border-left: 3px solid #b4822b; padding: 12px; background: #fff8e9; }
+.unconfirmed-boundary { cursor: pointer; }
+.unconfirmed-boundary path, .unconfirmed-boundary circle { fill: #fff8e9; stroke: #aa761c; stroke-width: 2; }
+.unconfirmed-boundary text { fill: #765117; font-size: 17px; }
+.inspector details { margin: 10px 0; }
+.inspector summary { cursor: pointer; padding: 7px 0; font-weight: 600; }

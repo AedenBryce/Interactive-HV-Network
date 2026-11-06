@@ -1,0 +1,19 @@
+{
+  "id": "T15",
+  "number": 16,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/16",
+  "title": "Explore Screening through its final LV buses",
+  "blockedBy": [
+    6,
+    7,
+    9
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    6,
+    7,
+    9
+  ]
+}

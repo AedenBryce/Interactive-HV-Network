@@ -1,0 +1,39 @@
+{
+  "id": "T24",
+  "number": 25,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/25",
+  "title": "Assemble the whole network and obtain model acceptance",
+  "blockedBy": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ]
+}

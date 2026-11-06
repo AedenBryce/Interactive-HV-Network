@@ -1,0 +1,182 @@
+             1                                    2                                      3                                    4                                   5                                    6                                    7                                   8                                    9                                    10                                  11                                   12
+
+
+
+               FROM HV SWITCHBOARD                                                                                                                                       TF440-C-01                                                                                                                                                    FROM HV SWITCHBOARD
+                         SW426                                                                                            FROM HV SWITCHBOARD                                                                                                                                                                                                    SW426                              NOTES
+                  07110-EL-DR-2352                                                                                                            SW426                                                                                                                                                                                       07110-EL-DR-2352
+
+A                                                                                                                                07110-EL-DR-2352                                                                                                                                                                                                                                   1.   STATUTORY SAFETY RELAY IS LOCATED IN VSD.                  A
+                                                                                                                                                                         TF440-P-01
+
+
+                                                                                                                                                                                                                          TRANSFORMER - TF440
+                                                                                                                                                                                                                          22kV/0.72/0.72 kV
+                                                                                                                                                                                                                          5 MVA
+
+                                                                                                                                                                                                         SCREEN
+
+
+
+                                                                                                SW440-P-01-1                                                                                                                                                                          SW440-P-02-1
+
+                                                                                                SW440-P-01-2                                                                                                                                                                         SW440-P-02-2
+
+                                                                                                SW440-P-01-3                                                                                                                                                                         SW440-P-02-3
+
+                                                                                                SW440-P-01-4                                                                                                                                                                         SW440-P-02-4
+
+
+B                                                                                                                                                                        DESAND SUBSTATION SS440                                                                                                                                                                                                                                                    B
+
+
+                                            5000:1                                                                                                        DESAND AND WATER  690V VSD SWITCHBOARD SW440                                                                                                                         5000:1
+
+
+
+
+                                                 CB SW440 IN D                                                                                                                                                                                                                                               CB SW440 IN Y
+                                                 2500A                                                                                                                                                                                                                                                                   2500A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                690V, 2500A, 50kA FOR 1 Sec                                                                                                                                                                                                                                                                                                                                                                        C
+
+
+                                                                                              TIER 1F-03                                 TIER 2F-03                                  TIER 3F-03                                  TIER 4F-03
+                                                                                                           4                                           4                                           4                                           4
+                                                  690V, 2500A, 50kA FOR 1 Sec
+
+
+                                                                                                                   TIER 7F-03                                  TIER 8F-03                                  TIER 9F-03                                  TIER 10F-03
+                                                                                                                                 4                                           4                                           4                                           4
+
+
+
+
+
+                                                                                              500A                 500A                  500A                  500A                  500A                  500A                  500A                  500A
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                   D
+
+
+                                                                        230V AC
+
+
+                                                                        48V DC
+
+                   230VAC UPS
+                      DB440C
+
+                500CB-04230-DR-EL-0120                                  PROFIBUS MP4401
+
+
+
+
+
+
+                    48VDC UPS
+E                     DB440B                                                                                                                                                                                                                                                                                                                                                                                                                        E
+
+
+                500CB-04230-DR-EL-0119
+
+
+
+
+
+
+                      PROFIBUS                                                                    VS44001                                    VS44002                                     VS44003                                     VS44004
+                   MARSH. PANEL                                                             ACS800-07-1160-7                            ACS800-07-1160-7                            ACS800-07-1160-7                            ACS800-07-1160-7
+                       MP4401                                                                    ESR44001                                    ESR44002                                    ESR44003                                    ESR44004
+                 500CB-04230-DR-IN-0173                                                                         NOTE 1                                      NOTE 1                                     NOTE 1                                      NOTE 1
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                   F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                      M                                           M                                          M                                           M
+                                                                                                     3Ø                                          3Ø                                          3Ø                                          3Ø
+                                                                                            RTD                                         RTD                                         RTD                                         RTD
+
+G                                                                                                                                                                                                                                                                                                                                                                                                            4                                      G
+                                                                                                PU015-EM01                                  PU016-EM01                                  PU017-EM01                                 PU023-EM01
+                                                                                             PROCESS WATER                               PROCESS WATER                              PROCESS WATER                               PROCESS WATER
+                                                                                                PUMP No.5                                   PUMP No.6                                   PUMP No.7                                   PUMP No.9
+
+
+
+                                                                                                   710kW                                       710kW                                       710kW                                       710kW                                                                                                                                                               Level 5, 93-95 William Street, Perth, Western Australia 6000
+
+                                                                                                                                                                                                                                                                                                                                                                                                           Ph +61 8 6220 2000, www.verbrec.com     G
+
+                                                                                            500CB-04230-DR-EL-0088                      500CB-04230-DR-EL-0090                      500CB-04230-DR-EL-0092                     500CB-04230-DR-EL-0096                                                                                                      VENDOR/DESIGNER DRG No.                                                          REV:
+                                                                                                                                                                                                                                                                                                                                                                          005001-4230-1400-SLD-0062                                          4
+
+
+
+
+                                                                                                                                                                                                                                                                                          STANDARDS                                 PROJECT NUMBER                                  Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                            CHECK
+                                                                                                                                                                                                                                                                                           APPROVED
+                                                                                                                                                                                                                                                                                                                                         500CB             CLOUDBREAK ENHANCEMENT PROJECT
+
+
+H                                                                                                     4    28.03.25 ISSUED FOR CONSTRUCTION - CB250P003A                                         BH       LN        AC        JM       JM       DR        MG                                                                                               DE-SANDS PLANT                                                                           H
+                                                                                                      3    18.03.13 AS BUILT - NO CHANGE                                                         SR       DGM      DGM        ZG       AB       AB        MT                                                                        This drawing must not  SW440
+                                                                                                                                                                                                                                                                                                                                    be copied or reproduced
+                                                                                                      2    23.01.12 RE-ISSUED FOR CONSTRUCTION                                                  JMc       MR        MR        PA       CD       PH        GA                                                                       in any form or used for
+                                                                                                                                                                                                                                                                                                                                    any purpose other than SINGLE LINE DIAGRAM
+                                                                                                      1    16.12.11 RE-ISSUED FOR CONSTRUCTION                                                  JMc       MR        MR        PA       CD       PH        DS                                                                       originally intended without
+   500CB-02005-DR-EL-0931         SW440 SINGLE LINE DIAGRAM - SHEET 2                                 0    11.10.11 ISSUED FOR CONSTRUCTION                                                     JMc       MR        MR        PA        IM      PH       NHJ                                                                         written approval of          SCALE    DRG No:                                                          REV:
+                                                                                                                                                                                                                                                                                                                                  Fortescue MetalsGroup Ltd
+   REF DRG No.                                                  TITLE                                REV    DATE                             DESCRIPTION                                        DRN       CHK      SUP       DES       DAP      PAP      FMG                                                    NORTH                                      A1      NTS           500CB-04230-DR-EL-0146                                      4
+
+
+
+             1                                    2                                      3                                    4                                   5                                    6                                    7                                   8                                    9                                    10                                  11                                   12

@@ -1,0 +1,813 @@
+{
+  "area": "Western hoppers 1/3/7/8/9; RM417/RM418/RM419 and competing SS416 identities",
+  "issue": 21,
+  "proposal": "T20",
+  "reviewDate": "2026-10-22",
+  "status": "source-review-only-unaccepted",
+  "narrative": "drawing-review/areas/western-hoppers-review.md",
+  "coverage": {
+    "distinctFilesVisuallyInspectedThisReview": 20,
+    "distinctPagesVisuallyInspectedThisReview": 20,
+    "enlargedCropsInspected": 13,
+    "globalCoverageCountUpdated": false,
+    "originalSourceFilesModified": false,
+    "renderer": "Poppler full-page PNG, scale-to 2400; additional 4800 renders for handwritten revision and exact Hopper3 endpoint references; Pillow crops",
+    "textAloneUsedForConnectivity": false
+  },
+  "sources": [
+    {
+      "id": "WH-S01",
+      "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0044.pdf",
+      "sha256": "2557e6b469fd787807e0c0157b37e781a912fd416f232f6fcee35f31d24813f6",
+      "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM417 A-C / 3-9; TF417/TF417A D-F / 3-5; Hopper 3 SS416 D-G / 8-11",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S02",
+      "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0045.pdf",
+      "sha256": "3a7531b638c94ae8fb76c014568f750619a1fb6d5149dbf28722e9694b38b1bd",
+      "printedRevisionDateStatus": "1 / handwritten date not confidently transcribed / AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC417A LV incomer A-C / 8-10; 415 V phase bar C; revision row H",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S03",
+      "path": "drawings/Asset Drawing Repo/CB16OP038A-02006-DR-EL-0046.pdf",
+      "sha256": "115a5350686bba9cb463ca7e99b8e34956280eea2955a5afa8dc728d99caa2a8",
+      "printedRevisionDateStatus": "3 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC417 HV bar A; tier1 VCB/earth C-D / 4-5; paired motor contactors C-D / 7-11; legend and notes5-8 F-G / 1-7",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S04",
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0001.pdf",
+      "sha256": "2fafa3bd57d8706a0c7ad592b3f961bbc2f3d91915cb04224df573fe088f09d8",
+      "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM418 incoming A-B / 6-7; CB03/CB04 B-C; TF418/TF418A D-F; Hopper 8 SS416 C-G / 8-11",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S05",
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0002.pdf",
+      "sha256": "464bcb180e36cc61f2db002cace3c4c27260fd0a5c7261d3ed50b66f32e6c1e6",
+      "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC418 HV bar A; tier1 VCB/earth C-D / 4-5; motor assemblies C-D / 7-11; notes5-8,11 F-G / 1-7",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S06",
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0003.pdf",
+      "sha256": "1bc5dccbb140bc863d8e99ae60fb775fa9b88c553e3b9d6a1e6ca05129a89166",
+      "printedRevisionDateStatus": "1 / 14.06.18 / AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC418A LV incomer A-C / 8-10; 415 V bar C; footer H",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S07",
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0004.pdf",
+      "sha256": "1143b7931bf8843f76b03a0965d8e1ae4d3d70bd242406435d712ba7ed7a3434",
+      "printedRevisionDateStatus": "3 / 03.09.20 / ISSUED FOR CONSTRUCTION; older rev1 AS BUILT 17.08.20",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "HV/LV earth bars B-D; TF418/TF418A neutral and NER B-C / 5-8; MEN note9 G; disconnectable measurement-link note11 G",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S08",
+      "path": "drawings/Asset Drawing Repo/CB17OP023C-01006-DR-EL-0041.pdf",
+      "sha256": "eb7f9cc260f112110bd92626251afe0790c9e70980612aed5cd7c6a85eb2c172",
+      "printedRevisionDateStatus": "4 / 06.10.20 / AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "24 V source reference A / 1-3; RM418 SW01 commands/status A-B; CB01/SW03 status C-D; spare commands E; tier1 truck signals A / 7-9",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S09",
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0001.pdf",
+      "sha256": "faa247739343fd032d5388dc6103a3ee0453c531397a65b22da3d6b40a0531b6",
+      "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM419 SW01/SW02 A-B / 6-8; CB01/SW03 and CB02/SW04 B-D / 3-5; TF419A/B D-F; administrative-control note1 F-G / 1-4",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S10",
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0002.pdf",
+      "sha256": "cda8f95b922210ae75f0d2e05016a12e05151c51336a8e7b725be71a5ded21da",
+      "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC419 HV bar A; tier5 VCB/earth C-D / 4-5; motor pairs C-D / 7-11; notes5-8 F-G / 1-6",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S11",
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0003.pdf",
+      "sha256": "b827f108461f1b0bad2cdb0798f1331f9a2a184dc852555b9fbeb9cfc2fe5353",
+      "printedRevisionDateStatus": "1 / 15.06.20 / AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC419A TF419B supply, ACB01 and CT A-C / 8-10; 415 V bus C; continuation arrow D / 12",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S12",
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0004.pdf",
+      "sha256": "04117257c37d9e0e1a00ad87556c357252279d0f2c1f36b2578b5db9a5b20843",
+      "printedRevisionDateStatus": "2 / 22.07.20 / RE-ISSUED FOR AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Same MC419A phase bar B-C; continuation from 0003 C / 1; outgoing LV circuits excluded",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S13",
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0005.pdf",
+      "sha256": "00c543d446144b86f3ef48f66000cfd8ed8c9925ceef232f8cfd63f59065eb26",
+      "printedRevisionDateStatus": "2 / 28.07.20 / RE-ISSUED FOR AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "MC419A MEN/neutral B / 3-4; TF419A NER B / 9-10; earth bars C; notes9,10,11,14 E-F / 8-11",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S14",
+      "path": "drawings/Asset Drawing Repo/CB19OP001C-01068-DR-EL-0153.pdf",
+      "sha256": "1b7e98827f544c532fa071433b49dfbbbafd83e40e17b8ddd54f1fe2f27277f8",
+      "printedRevisionDateStatus": "1 / 05.11.20 / AS BUILT",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "SN009 LV motor power/control diagram B-F / 3-8; title H; inspected for disposition, below final LV bus",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S15",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0001.pdf",
+      "sha256": "829c088a3e21390201c627495f5d98e9633c91974894d07657911099bec2ed4e",
+      "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "CV006 distribution; RM410 -> RM419 B-D; RM419 -> RM418 C-E; RM406 -> Hopper8 C-D / 10-11; RM418 transformer aliases E-F / 6-8",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S16",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0002.pdf",
+      "sha256": "7ede7a5edfa8c7cb42a07d0557c544e6d4b073eef192c8aaaf0480a49d32370a",
+      "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM406 CB03/SW04 outgoing C-E / 10-11; Hopper008 reference E; historical Hopper007 note1 F / 10-12",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S17",
+      "path": "drawings/Asset Drawing Repo/CB19OP001B-04057-DR-EL-0004.pdf",
+      "sha256": "6bfb649b99c5d08f96277b5acd85630d6215cc840f536165bd0c531dac9c3c71",
+      "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.21; older AS BUILT stamp 11.01.2022",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM410 CB03-A04/SW04 C / 10-11 and RM419 continuation E-F / 10-12",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S18",
+      "path": "drawings/Asset Drawing Repo/CB17OP023A-04057-DR-EL-0004.pdf",
+      "sha256": "4f4d4f95c4429a45587642444c285ddf47a084b0f63e1974a5a9a7d7b341ee7f",
+      "printedRevisionDateStatus": "5 / 28.01.25 / AS FOUND 23.10.23",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM413 IN02 double-boot branch -> RM417 A-B / 2-5; exact 0044 reference A",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S19",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0010.pdf",
+      "sha256": "cd77222ad84e15a9ca13d2120994db03be9765ed1a923595bc17bacca4a2795f",
+      "printedRevisionDateStatus": "0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "Hopper8/SS416 C-D / 5-6; RM419/RM418 E-G / 9-12; notes1-2 G / 1-3",
+      "sourceType": "original-supplied-pdf"
+    },
+    {
+      "id": "WH-S20",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "printedRevisionDateStatus": "0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+      "pagesVisuallyInspected": [
+        1
+      ],
+      "fullPageInspected": true,
+      "region": "RM413 and RM417 E-G / 9-12; notes1-2 G / 1-3",
+      "sourceType": "original-supplied-pdf"
+    }
+  ],
+  "drawnTopologyRecords": [
+    {
+      "id": "WH-T01",
+      "knowledge": "supported-depiction-only",
+      "claim": "RM413 IN02 has a double-boot branch to RM417, referring to CB16OP038A-02006-DR-EL-0044. The RM417 drawing reciprocally says FROM RM413 (RMU), through SS417-RM417-P01 to RM417-SW01.",
+      "references": [
+        {
+          "sourceId": "WH-S18",
+          "document": "CB17OP023A-04057-DR-EL-0004.pdf",
+          "printedRevisionDateStatus": "5 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S18 p1 A-B / 2-5; WH-S01 p1 A-B / 6-7"
+        },
+        {
+          "sourceId": "WH-S01",
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S18 p1 A-B / 2-5; WH-S01 p1 A-B / 6-7"
+        }
+      ]
+    },
+    {
+      "id": "WH-T02",
+      "knowledge": "supported-depiction-only",
+      "claim": "SS417-RM417 has one 22000 V, 630 A bar. Incoming SW01 and separate SW02 each show main/earth contact arrangements. SW02's upper conductor has no named outgoing destination on WH-S01; it is not evidence of an enabled second source.",
+      "references": [
+        {
+          "sourceId": "WH-S01",
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S01 p1 A-C / 3-9"
+        }
+      ]
+    },
+    {
+      "id": "WH-T03",
+      "knowledge": "supported-depiction-only",
+      "claim": "RM417 CB01 and SW03 switching/earth assembly feed two separate transformer primaries: SS417-TF417 (2500 kVA, 22/6.9 kV, DYN11) and SS417-TF417A (500 kVA, 22/0.415 kV, DYN11). They share the depicted outgoing feeder; do not invent one breaker per transformer.",
+      "references": [
+        {
+          "sourceId": "WH-S01",
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S01 p1 B-F / 3-5, fork below CB01/SW03"
+        }
+      ]
+    },
+    {
+      "id": "WH-T04",
+      "knowledge": "supported-depiction-only",
+      "claim": "TF417's phase output A feeds SS417-MC417; TF417A's phase output B feeds SS417-MC417A. Ac / Ba and the instrument/trip paths are separately marked control/neutral-related references, not parallel phase supplies.",
+      "references": [
+        {
+          "sourceId": "WH-S01",
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S01 p1 D-F / 3-5; WH-S03 p1 E-F / 4-5; WH-S02 p1 A-B / 8-9"
+        },
+        {
+          "sourceId": "WH-S03",
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "printedRevisionDateStatus": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S01 p1 D-F / 3-5; WH-S03 p1 E-F / 4-5; WH-S02 p1 A-B / 8-9"
+        },
+        {
+          "sourceId": "WH-S02",
+          "document": "CB16OP038A-02006-DR-EL-0045.pdf",
+          "printedRevisionDateStatus": "1 / handwritten date not confidently transcribed / AS BUILT",
+          "page": 1,
+          "clause": "WH-S01 p1 D-F / 3-5; WH-S03 p1 E-F / 4-5; WH-S02 p1 A-B / 8-9"
+        }
+      ]
+    },
+    {
+      "id": "WH-T05",
+      "knowledge": "supported-depiction-only",
+      "claim": "MC417 has an HV phase bar labelled 6.6 kV, 200 A. Incoming tier1 contains a 200 A VCB and a transformer-side earth branch. Tier2/3 and tier4/5 each have paired fused contactor paths meeting at a sizer motor-side conductor, plus a motor-side maintenance earth branch. Auxiliary 24/48 V lines are not that HV bar.",
+      "references": [
+        {
+          "sourceId": "WH-S03",
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "printedRevisionDateStatus": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S03 p1 A-F / 4-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T06",
+      "knowledge": "supported-depiction-only",
+      "claim": "RM417 CB02 / SW04 feeds the depicted SS416-HV416 branching point in HOPPER 3 SS416 KIOSK, then distinct SS416-TF416 (2500 kVA, 22/6.9 kV, DYN11) and SS416-TF416A (500 kVA, 22/0.415 kV, DYN11). Their destinations are SS416-MC416 HV and SS416-MC416A LV respectively.",
+      "references": [
+        {
+          "sourceId": "WH-S01",
+          "document": "CB16OP038A-02006-DR-EL-0044.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S01 p1 B-G / 8-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T07",
+      "knowledge": "supported-depiction-only",
+      "claim": "Hopper9 RM419-SW01 supply is explicitly RM410-CB03 at the CV006 tail. RM410 detail shows the CB03-A04 / SW04 outgoing assembly continuing to RM419-SW01. Both ends must be preserved; the cable alone does not bypass those devices.",
+      "references": [
+        {
+          "sourceId": "WH-S09",
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 p1 A-B / 6; WH-S17 p1 C-F / 10-12; WH-S15 p1 B-D / 3-6"
+        },
+        {
+          "sourceId": "WH-S17",
+          "document": "CB19OP001B-04057-DR-EL-0004.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.21; older AS BUILT stamp 11.01.2022",
+          "page": 1,
+          "clause": "WH-S09 p1 A-B / 6; WH-S17 p1 C-F / 10-12; WH-S15 p1 B-D / 3-6"
+        },
+        {
+          "sourceId": "WH-S15",
+          "document": "CB19OP001B-04057-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 p1 A-B / 6; WH-S17 p1 C-F / 10-12; WH-S15 p1 B-D / 3-6"
+        }
+      ]
+    },
+    {
+      "id": "WH-T08",
+      "knowledge": "supported-depiction-only",
+      "claim": "RM419 has one 22 kV bar, incoming SW01 and through SW02. SW02's conductor is explicitly SUPPLY TO HP007 RMU (RM418-SW01), with exact reference CB17OP023C-01006-DR-EL-0001. The receiving page explicitly says SUPPLY FROM SR419-RM419 (RM419-SW02), reference CB19OP001C-01068-DR-EL-0001.",
+      "references": [
+        {
+          "sourceId": "WH-S09",
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 p1 A-B / 6-8; WH-S04 p1 A-B / 6-7"
+        },
+        {
+          "sourceId": "WH-S04",
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 p1 A-B / 6-8; WH-S04 p1 A-B / 6-7"
+        }
+      ]
+    },
+    {
+      "id": "WH-T09",
+      "knowledge": "supported-depiction-only",
+      "claim": "RM419 CB01 / SW03 feeds SS419-TF419A (2500 kVA, 22/6.9 kV, DYN11); CB02 / SW04 independently feeds SS419-TF419B (1500 kVA, 22/0.415 kV, DYN11). The former supplies SR419-MC419 HV, the latter SR419-MC419A LV. SR419 and SS419 prefixes both occur; retain printed aliases.",
+      "references": [
+        {
+          "sourceId": "WH-S09",
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 p1 B-F / 3-5; WH-S10 p1 E-F / 4-5; WH-S11 p1 A-C / 8-10"
+        },
+        {
+          "sourceId": "WH-S10",
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 p1 B-F / 3-5; WH-S10 p1 E-F / 4-5; WH-S11 p1 A-C / 8-10"
+        },
+        {
+          "sourceId": "WH-S11",
+          "document": "CB19OP001C-01068-DR-EL-0003.pdf",
+          "printedRevisionDateStatus": "1 / 15.06.20 / AS BUILT",
+          "page": 1,
+          "clause": "WH-S09 p1 B-F / 3-5; WH-S10 p1 E-F / 4-5; WH-S11 p1 A-C / 8-10"
+        }
+      ]
+    },
+    {
+      "id": "WH-T10",
+      "knowledge": "supported-depiction-only",
+      "claim": "MC419's HV phase bar is labelled 6.6 kV, 200 A. Its incoming VCB/earth assembly is tier5, and the two paired fused motor-contactor groups occupy tiers1/2 and3/4. Motor-side earth branches are shown. Do not copy MC417/418 tier numbering onto MC419.",
+      "references": [
+        {
+          "sourceId": "WH-S10",
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S10 p1 A-F / 4-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T11",
+      "knowledge": "supported-depiction-only",
+      "claim": "SS418-RM418 is a separate 22 kV, 630 A bar. SW01 receives RM419-SW02; SW02 is explicitly SPARE. Current detailed revision6 shows outgoing CB03 and CB04. CB03's main/earth contact assembly feeds both SS418-TF418 (2500 kVA, 22/6.9 kV, DYN11) and SS418-TF418A (500 kVA, 22/0.415 kV, DYN11); CB04's outgoing side is SPARE.",
+      "references": [
+        {
+          "sourceId": "WH-S04",
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S04 p1 A-F / 3-9"
+        }
+      ]
+    },
+    {
+      "id": "WH-T12",
+      "knowledge": "supported-depiction-only",
+      "claim": "TF418 feeds SS418-MC418 HV; TF418A feeds SS418-MC418A LV. MC418's incoming 200 A VCB/earth assembly is tier1. Its HV bar is labelled 6.6 kV; tiers2/3 and4/5 carry paired fused motor contactors and motor-side earth branches.",
+      "references": [
+        {
+          "sourceId": "WH-S04",
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S04 p1 D-F / 3-5; WH-S05 p1 A-F / 4-11"
+        },
+        {
+          "sourceId": "WH-S05",
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S04 p1 D-F / 3-5; WH-S05 p1 A-F / 4-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T13",
+      "knowledge": "supported-depiction-only",
+      "claim": "Hopper8 is explicitly a separate source path from RM406-CB03 to SS416-HV416 via SS416-HV416-P01, then TF416 / TF416A in HOPPER 8 SS416 KIOSK. It is not drawn connected to RM418's local HV bar. RM406's CB03/SW04 route is reciprocally headed Hopper008.",
+      "references": [
+        {
+          "sourceId": "WH-S04",
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S04 p1 C-G / 8-11; WH-S16 p1 C-E / 10-11; WH-S19 p1 C-D / 5-6"
+        },
+        {
+          "sourceId": "WH-S16",
+          "document": "CB19OP001B-04057-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S04 p1 C-G / 8-11; WH-S16 p1 C-E / 10-11; WH-S19 p1 C-D / 5-6"
+        },
+        {
+          "sourceId": "WH-S19",
+          "document": "CB-10016-DR-EL-0010.pdf",
+          "printedRevisionDateStatus": "0 / 27.10.25 / ISSUED FOR USE (SITE VERIFICATION & COMMENTS AMENDED); AS BUILT stamp 27/10/2025",
+          "page": 1,
+          "clause": "WH-S04 p1 C-G / 8-11; WH-S16 p1 C-E / 10-11; WH-S19 p1 C-D / 5-6"
+        }
+      ]
+    },
+    {
+      "id": "WH-T14",
+      "knowledge": "supported-depiction-only",
+      "claim": "Hopper8 TF416 is 2500 kVA, 22/6.9 kV and TF416A is 500 kVA, 22/0.415 kV. Their destinations are MC416 HV and MC416A LV, with references CB17OP023D-01006-DR-EL-0002 and -0003. These are different project references from Hopper3's CB16OP038A references.",
+      "references": [
+        {
+          "sourceId": "WH-S04",
+          "document": "CB17OP023C-01006-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "6 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S04 p1 D-G / 8-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T15",
+      "knowledge": "supported-depiction-only",
+      "claim": "MC417A's incoming phase line from TF417A passes a 630 A MCCB to the single phase bar labelled 630 A / 25 kA / 1 sec / 3-phase N&E / 415 VAC. Its instrument connection Ba is separate from phase input B.",
+      "references": [
+        {
+          "sourceId": "WH-S02",
+          "document": "CB16OP038A-02006-DR-EL-0045.pdf",
+          "printedRevisionDateStatus": "1 / handwritten date not confidently transcribed / AS BUILT",
+          "page": 1,
+          "clause": "WH-S02 p1 A-C / 8-10 and phase bar C / 1-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T16",
+      "knowledge": "supported-depiction-only",
+      "claim": "MC418A's phase input B from TF418A passes a 630 A MCCB to a single bar labelled 630 A / 25 kA / 1 sec / 3-phase N&E / 415 VAC. The separate Ba connection carries instrumentation.",
+      "references": [
+        {
+          "sourceId": "WH-S06",
+          "document": "CB17OP023C-01006-DR-EL-0003.pdf",
+          "printedRevisionDateStatus": "1 / 14.06.18 / AS BUILT",
+          "page": 1,
+          "clause": "WH-S06 p1 A-C / 8-10 and phase bar C / 1-11"
+        }
+      ]
+    },
+    {
+      "id": "WH-T17",
+      "knowledge": "supported-depiction-only",
+      "claim": "TF419B phase input B passes through the MC419A main switch ACB01 (2000 A labels) to the 415 VAC phase bar labelled 2600 A / 80 kA / 1 sec. Sheet0004 explicitly continues this same bar from sheet0003; it is not a second source, incomer or separate bus.",
+      "references": [
+        {
+          "sourceId": "WH-S11",
+          "document": "CB19OP001C-01068-DR-EL-0003.pdf",
+          "printedRevisionDateStatus": "1 / 15.06.20 / AS BUILT",
+          "page": 1,
+          "clause": "WH-S11 p1 A-C / 8-10 and C / 1-12; WH-S12 p1 B-C / 1-11"
+        },
+        {
+          "sourceId": "WH-S12",
+          "document": "CB19OP001C-01068-DR-EL-0004.pdf",
+          "printedRevisionDateStatus": "2 / 22.07.20 / RE-ISSUED FOR AS BUILT",
+          "page": 1,
+          "clause": "WH-S11 p1 A-C / 8-10 and C / 1-12; WH-S12 p1 B-C / 1-11"
+        }
+      ]
+    }
+  ],
+  "interlockEvidence": [
+    {
+      "id": "WH-I01",
+      "sourceClause": "WH-S03 rev3 p1 notes5-6, F-G / 1-7",
+      "explicitEvidence": "Note5 identifies a sizer-maintenance Ronis key interlock and says the key is captive with the earth switch OFF. Note6 identifies a 6.9 kV HV key interlock: the earth switch can close after the upstream earth switch is closed, and its key is captive when ON.",
+      "unconfirmed": "Installed key identities, ownership, all permitted transitions and exact upstream-device mapping. Do not infer a complete rule set or invent a transferable key token from these sentences.",
+      "references": [
+        {
+          "sourceId": "WH-S03",
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "printedRevisionDateStatus": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S03 rev3 p1 notes5-6, F-G / 1-7"
+        }
+      ],
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "WH-I02",
+      "sourceClause": "WH-S05 rev2 p1 notes5-6, F-G / 1-7",
+      "explicitEvidence": "Same explicit Ronis maintenance-key and upstream-earth/key-captive wording as WH-I01. Note11 separately says 100 A fuses are to be replaced with 200 A in future.",
+      "unconfirmed": "Actual fuse upgrade/commissioning; full installed interlock configuration and key exchange. The future note is not an accepted current rating/state.",
+      "references": [
+        {
+          "sourceId": "WH-S05",
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S05 rev2 p1 notes5-6, F-G / 1-7"
+        }
+      ],
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "WH-I03",
+      "sourceClause": "WH-S09 rev4 p1 note1, F-G / 1-4",
+      "explicitEvidence": "RM419 earth switch is to have **administrative controls** and is to be closed before the downstream earth switch is closed; note refers to CB19OP001C-01068-DR-EL-0002.",
+      "unconfirmed": "This explicitly describes administrative controls. It does not establish that a physical device prevents a conflicting action or define an executable physical key system. The exact affected RM419 earth switch is not uniquely identified by the general note alone.",
+      "references": [
+        {
+          "sourceId": "WH-S09",
+          "document": "CB19OP001C-01068-DR-EL-0001.pdf",
+          "printedRevisionDateStatus": "4 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S09 rev4 p1 note1, F-G / 1-4"
+        }
+      ],
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "WH-I04",
+      "sourceClause": "WH-S10 rev2 p1 notes5-6, F-G / 1-6",
+      "explicitEvidence": "Note5 identifies Ronis maintenance key and key captive when earth OFF. Note6 says the 6.9 kV HV earth switch can close after the upstream earth switch is closed; its printed reference is CB19OP001C-01068-DR-EL-0002 (the same sheet).",
+      "unconfirmed": "Unlike WH-S03/S05 note6, this note does not state the additional captive-when-ON sentence. The relationship between this note and WH-I03's administrative provision needs confirmation; do not copy the missing sentence into this source or treat an upstream administrative action as a confirmed physical block.",
+      "references": [
+        {
+          "sourceId": "WH-S10",
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S10 rev2 p1 notes5-6, F-G / 1-6"
+        }
+      ],
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "WH-I05",
+      "sourceClause": "WH-S03 rev3, WH-S05 rev2, WH-S10 rev2 p1 legends F and assemblies C-D",
+      "explicitEvidence": "Legends explicitly identify electrical, mechanical and key interlock glyphs. Paired motor contactors have drawn linkage; incoming VCB/earth arrangements have drawn linkages and note callouts. Note8 says a door-mounted padlockable switch is lockable only OFF.",
+      "unconfirmed": "Complete switch-position truth tables, contactor/earth dependencies, removable/trucked equipment conditions and the identity of every lockable asset. **Inference:** linked paired motor contactors are candidate mutually exclusive paths; owner/source confirmation is needed before encoding that predicate as installed behaviour.",
+      "references": [
+        {
+          "sourceId": "WH-S03",
+          "document": "CB16OP038A-02006-DR-EL-0046.pdf",
+          "printedRevisionDateStatus": "3 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S03 rev3, WH-S05 rev2, WH-S10 rev2 p1 legends F and assemblies C-D"
+        },
+        {
+          "sourceId": "WH-S05",
+          "document": "CB17OP023C-01006-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S03 rev3, WH-S05 rev2, WH-S10 rev2 p1 legends F and assemblies C-D"
+        },
+        {
+          "sourceId": "WH-S10",
+          "document": "CB19OP001C-01068-DR-EL-0002.pdf",
+          "printedRevisionDateStatus": "2 / 28.01.25 / AS FOUND 23.10.23",
+          "page": 1,
+          "clause": "WH-S03 rev3, WH-S05 rev2, WH-S10 rev2 p1 legends F and assemblies C-D"
+        }
+      ],
+      "installedRuleSetAccepted": false
+    },
+    {
+      "id": "WH-I06",
+      "sourceClause": "WH-S08 rev4 p1 A-E / 1-5; A / 7-9",
+      "explicitEvidence": "Shows SW01 remote open/close pushbuttons to PLC inputs, open/closed and earth status lamps, CB01/SW03 indications, spare commands and VCB truck-in/out remote signals.",
+      "unconfirmed": "It does not show the complete actuator/permissive circuit or prove that PLC/control feedback is a physical interlock. Preserve the CB01 versus current CB03 naming conflict. It does not authorise bypassing unresolved controls.",
+      "references": [
+        {
+          "sourceId": "WH-S08",
+          "document": "CB17OP023C-01006-DR-EL-0041.pdf",
+          "printedRevisionDateStatus": "4 / 06.10.20 / AS BUILT",
+          "page": 1,
+          "clause": "WH-S08 rev4 p1 A-E / 1-5; A / 7-9"
+        }
+      ],
+      "installedRuleSetAccepted": false
+    }
+  ],
+  "reviewQuestions": [
+    {
+      "id": "WH-Q01",
+      "status": "open",
+      "question": "WH-S01 calls SS416/TF416/TF416A Hopper3 fed by RM417-CB02; WH-S04 calls the same tags Hopper8 fed by RM406-CB03. Different project references accompany them.",
+      "constructionConsequence": "Preserve source-scoped candidate identities/interfaces. Do not merge them into one installed load with two confirmed supplies, or silently choose a hopper name."
+    },
+    {
+      "id": "WH-Q02",
+      "status": "open",
+      "question": "WH-S15 labels RM418 outgoing CB01-A03 / CB02-A04 and transformers TF418A (6.9 kV) / TF418B (415 V). WH-S04 rev6 and WH-S19 show CB03 / CB04 and TF418 (6.9 kV) / TF418A (415 V), with CB04 spare.",
+      "constructionConsequence": "Retain conflicting aliases per source and the shared-primary branch in each rendition. No automatic alias resolution by similar numbering."
+    },
+    {
+      "id": "WH-Q03",
+      "status": "open",
+      "question": "WH-S08's control page uses RM418-CB01 with SW03 status while WH-S04 rev6 identifies CB03. Its 24 V source reference prints CB16OP038A-02006-DR-EL-0081 despite the CB17OP023C page identity.",
+      "constructionConsequence": "Control-to-primary asset mapping and document reference remain unconfirmed. Do not derive a current interlock predicate from the older tag alone."
+    },
+    {
+      "id": "WH-Q04",
+      "status": "open",
+      "question": "WH-S16 points Hopper008 to CB17OP023C-04057-DR-EL-0001; the supplied hopper RMU filename is CB17OP023C-01006-DR-EL-0001. WH-S04 reciprocally names RM406-CB03 and its supplied -04057-0002 source.",
+      "constructionConsequence": "Reciprocal named interface is supported, but retain the exact conflicting document string; do not rename or substitute source files silently."
+    },
+    {
+      "id": "WH-Q05",
+      "status": "open",
+      "question": "WH-S16 incoming cable is tagged RM418-RM406-P1, but its current arrival says supply via pole57. Note1 says Hopper007 was previously connected to RM418-SW01. WH-S04/09 instead draw RM419-SW02 -> RM418-SW01.",
+      "constructionConsequence": "Preserve historical alias separately. Do not create a second active RM418/RM406 supply from a cable name or historical note."
+    },
+    {
+      "id": "WH-Q06",
+      "status": "open",
+      "question": "MC417/MC418/MC419 bar labels are 6.6 kV, while supplying TF417/TF418/TF419A outputs are labelled 6.9 kV. WH-S20 additionally rounds TF417A to 22/0.4 kV versus detail22/0.415 kV.",
+      "constructionConsequence": "Retain printed values and ask which descriptions represent installed equipment. No voltage calculation or automatic precedence."
+    },
+    {
+      "id": "WH-Q07",
+      "status": "open",
+      "question": "Hopper3's -0165/-0166 and Hopper8's CB17OP023D -0002/-0003 exact detailed endpoint sources were not found in the supplied inventory.",
+      "constructionConsequence": "Incomplete HV/LV interface coverage remains visible; final LV bus/incomer acceptance and HV contact/earthing states remain pending."
+    },
+    {
+      "id": "WH-Q08",
+      "status": "open",
+      "question": "WH-I01/02/04 identify upstream-earth prerequisites and maintenance keys, but full key identities and installed truth tables are absent. WH-I03 explicitly calls RM419 provision administrative.",
+      "constructionConsequence": "Resolve physical versus administrative restrictions and exact upstream earth mapping before enabling controls. Do not add an administrative policy as an invented physical interlock."
+    },
+    {
+      "id": "WH-Q09",
+      "status": "open",
+      "question": "WH-S20 confirms the shared TF417/TF417A primary fork on RM417 CB01 but truncates CB02/SW04 without naming its destination. WH-S01 explicitly continues CB02 to the separately labelled Hopper3 TF416/TF416A group.",
+      "constructionConsequence": "The overview's omitted continuation is not proof of disconnection or completeness. Preserve the detailed Hopper3 evidence and WH-Q01's identity/source conflict."
+    },
+    {
+      "id": "WH-Q10",
+      "status": "open",
+      "question": "Both overviews' notes1-2 state high-level reference use and direct isolation work to detailed SLDs, HV switching programs and key-interlocking procedures. WH-S07 has later construction revision3 after older AS BUILT revision1.",
+      "constructionConsequence": "Printed issue status is not installed-current acceptance. Keep all exact revisions; user must resolve conflicts."
+    },
+    {
+      "id": "WH-Q11",
+      "status": "open",
+      "question": "Neutral/NER and MEN arrangements are explicit in WH-S07/13; WH-S13 note14 names a running earth from upstream RM410-SW04.",
+      "constructionConsequence": "Retain earth-system provenance without converting it into a phase source, a phase-bus earth or a conductive bridge between unrelated circuits."
+    },
+    {
+      "id": "WH-Q12",
+      "status": "open",
+      "question": "Source availability, commissioning, actual device positions, completeness of spare interfaces and supported equipment states are not agreed by these drawings.",
+      "constructionConsequence": "Use null/unconfirmed baseline and explicit source/earth boundaries; no enabled external source or accepted configuration is established."
+    }
+  ],
+  "endpointCoverage": {
+    "explicitFinalLvBuses": [
+      "SS417-MC417A",
+      "SS418-MC418A",
+      "SR419-MC419A"
+    ],
+    "hvNotLvBuses": [
+      "SS417-MC417",
+      "SS418-MC418",
+      "SR419-MC419"
+    ],
+    "unconfirmedEndpoints": [
+      {
+        "sourceId": "WH-S01",
+        "label": "Hopper3 SS416-MC416A LV / MC416 HV",
+        "exactReferencedDocumentsNotLocated": [
+          "CB16OP038A-02006-DR-EL-0165.pdf",
+          "CB16OP038A-02006-DR-EL-0166.pdf"
+        ]
+      },
+      {
+        "sourceId": "WH-S04",
+        "label": "Hopper8 SS416-MC416A LV / MC416 HV",
+        "exactReferencedDocumentsNotLocated": [
+          "CB17OP023D-01006-DR-EL-0003.pdf",
+          "CB17OP023D-01006-DR-EL-0002.pdf"
+        ]
+      }
+    ],
+    "excludedLvOutgoingSources": [
+      "WH-S14"
+    ],
+    "acceptedStartingStates": false,
+    "acceptedSourceAvailability": false,
+    "acceptedWindingSourceEarthTransfers": false,
+    "wholeNetworkAccepted": false
+  },
+  "limits": [
+    "Matching hopper equipment tags do not establish identical installed equipment or simultaneous alternate feeds.",
+    "Unknown transformer source/backfeed and phase-earth continuity remain unconfirmed.",
+    "Administrative control wording does not establish a physical interlock.",
+    "Missing exact filenames do not prove equivalent coverage is absent from all supplied material.",
+    "No accepted precedence or installed-current status inferred from printed revision/status."
+  ]
+}

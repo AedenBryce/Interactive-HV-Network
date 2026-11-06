@@ -1,0 +1,15 @@
+{
+  "id": "T03",
+  "number": 4,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/4",
+  "title": "Explore earth connectivity and source-to-earth conflicts",
+  "blockedBy": [
+    2
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    2
+  ]
+}

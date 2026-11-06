@@ -1,0 +1,182 @@
+             1                                  2                                     3                                   4                                  5                                   6                                  7                                  8                                   9                                  10                                  11                                 12
+
+
+
+
+
+
+                                                     CB-GEN23                      TF-04                       CB-GEN15           CB-GEN14           CB-GEN13           CB-GEN12           CB-GEN11           CB-GEN10           CB-GEN09           CB-GEN08           CB-GEN07            CB-GEN06           CB-GEN05           CB-GEN04           CB-GEN03           CB-GEN02           CB-GEN01
+
+A                                                                                  11kV/0.4kV                                                                                                                                                                                                                                                                                                                                        A
+                                                               11kV                11MVA                                 11kV               11kV               11kV               11kV               11kV               11kV               11kV                11kV               11kV               11kV               11kV               11kV               11kV               11kV               11kV
+            SB01                                               2420kW              SPARE                                 2420kW             2420kW             2420kW             2420kW             2420kW             2420kW             2420kW              2420kW             2420kW             2420kW             2420kW             2420kW             2420kW             2420kW             2420kW
+
+            CLOUDBREAK OPF POWER STN.                                                        SPARE
+            11kV MAIN SWITCHBOARD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                            SEPAM S20          SEPAM S20          SEPAM S20           SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20           SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20
+
+B                                                           200/5A CT          200/5A CT          200/5A CT           200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT           200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT                           B
+                                                            630A               630A               630A                630A               630A               630A               630A               630A               630A               630A               630A                630A               630A               630A               630A               630A               630A               630A
+
+
+
+                                                    11kV        3PH 50Hz          2500A 40kA             3SEC
+
+                                                                                                                                                  SB-01 F1                                                  SB-01 F2                                                 SB-01 F3                              SB-01 F4                              SB-01 F5                                                  SB-01 F6
+
+
+                                                                                                                                                    SEPAM T20                                                BUS TIE                                                   SEPAM S20                             SEPAM T87                             SEPAM S20                                                SEPAM S20
+                                                                                                                                                    200/5A CT                                                SEPAM T87                                                 400/5A CT                             1600/1A CT                            100/5A CT                                                400/5A CT
+                                                                                                                                                    630A                                                     1600/1A CT                                                630A                                  2500A                                 630A               BUS VT                                630A
+                                                                                                                                                                                                             2500A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                    C
+
+
+
+
+
+                                                                                                                                                      TF-03                                                                                                                                                    TF-11                                 TF-02                                                    TF-01
+                                                                                                                                                      11kV/22kV                                                                                                                                                11kV/22kV                             11kV/400V                                                EARTHING TX
+                                                                                                                                                      20/27MVA                                                                                                                                                 20/27MVA                              1MVA
+
+
+                                                                                                                                        MINE SERVICES                                                                                                       CLOUDBREAK                              MINE OPF                              FEEDER 5
+                                                                                                                                           O/H LINE                                                                                                     VILLAGE O/H LINE                         O/H LINE No.2                           POWER STATION
+                                                                                                                                                                                                                                                           CONTINUED ON DRG.                     CONTINUED ON DRG.                       AUX. TO DB-01
+                                                                                                                                                                                                                                                            07110-EL-DR-6160                      07110-EL-DR-2350                   REFER DWG DB01-SL-001
+
+                                                                                                                                                                                                                                                                                                   07110-EL-DR-5151
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+
+                                                                                                                                                          CB-GEN16           CB-GEN17           CB-GEN18           CB-GEN19           CB-GEN20           CB-GEN21                                                 CB-GEN22
+
+
+                                                                                                                                                                    11kV               11kV               11kV               11kV               11kV               11kV                                                      11kV
+                                                                SB02                                                                                                2420kW             2420kW             2420kW             2420kW             2420kW             2420kW                                                    2420kW
+                                                                CLOUDBREAK OPF POWER STN.
+                                                                11kV MAIN SWITCHBOARD
+
+
+
+
+
+
+
+
+
+
+                                                                                                                       BUS VT
+E                                                                                                                      11000/110V                                                                                                                                                                                                                                                                                                    E
+
+
+
+
+
+
+
+
+                                                                                          FAULT CURRENT                                      BUS COUPLER         SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20          SEPAM S20                                                 SEPAM S20
+                                                                                          LIMITING FUSE     4/6kA                            2500A               200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT          200/5A CT                                                 200/5A CT
+                                                                                                                                                                 630A               630A               630A               630A               630A               630A                                                      630A
+
+
+
+                                                                                                                                      11kV        3PH 50Hz         2500A 40kA             3SEC
+
+                                                                                                                                                                                                                SB-02 F1                                                  SB-02 F2                              SB-02 F3                     SB-02 F4                         SB-02 F5                     SB-02 F6
+
+
+                                                                                                                                                                                                                SEPAM T87                                                 SEPAM S20                             SEPAM S20                    SEL487E                          SEPAM G88                    SEPAM S62
+                                                                                                                                                                                                                1500/5 A CT                                               400/5 A CT                            100/5 A CT                   1500/5A CT                       200/5 A CT                   2500/1 A CT
+                                                                                                                                                                                                                2500A                                                     630A                                  630A                         1250A                            630A                         2500A
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                    F
+
+
+
+
+
+                                                                     SCHNEIDER MC SET SWITCHBOARD 11kV
+                                                                     2500A BUS 40kA FOR 3 SECONDS
+
+
+
+
+
+                                                                                                                                                                                                                    TF-12                                                    TF-201                                 TF-202                      TF-04
+                                                                                                                                                                                                                    11kV/22kV                                                EARTHING TX                            11kV/400V                   11kV/33kV
+                                                                                                                                                                                                                    20/27MVA                                                                                        0.5MVA                      15/20MVA                  SPARE
+
+
+                                                                                                                                                                                                         MINE OPF                                                                                        FEEDER 3                     FEEDER 4
+                                                                                                                                                                                                      O/H LINE No.1                                                                                    POWER STATION                 WEST FEEDER
+G                                                                                                                                                                                                                                                                                                      AUX. TO DB-01B                  O/H LINE                                                      TO ALINTA                       G
+                                                                                                                                                                                                       CONTINUED ON DRG.                                                                                                            REFER TO DRG.                                                    REFER TO DRG.
+                                                                                                                                                                                                        07110-EL-DR-2350                                                                                                     CB21OP055B-10016-DR-EL-0089                                        CBSS-ES-SLD-70-80-0001
+                                                                                                                                                                                                        07110-EL-DR-5151
+
+
+                                                                                                                                                                                                                                                                                                                 AS BUILT
+
+                                                                                                                                                                                                                                                                                                              DATE:19/11/2021                  VENDOR/DESIGNER DRG No.                                                        REV:
+
+
+
+                                                                                                                                                                                                                                                                                                                         PROJECT NUMBER                                 Fortescue Metals Group Ltd
+                                                                                                                                                                                                                                                                                                                              500CB            T155: CHICHESTER PROJECT
+
+
+H                                                                                                                                                                                                                                                                                                                                              CLOUDBREAK POWER STATION                                                              H
+                                                                                                   3   18.07.22  UPDATED AS PER REDLINES                                                  AH        AL       RC                                                                                                           This drawing must notPOWER DISTRIBUTION
+                                                                                                                                                                                                                                                                                                                         be copied or reproduced
+                                                                                                   2    19.11.21 AS BUILT FOR CSGH PROJECT                                                AP        AL       RC                                                                                                          in any form or used for
+                                                                                                                                                                                                                                                                                                                         any purpose other thanSINGLE LINE DIAGRAM
+                                                                                                   1    11.10.21 AS BUILT                                                                 AP        AL       RC       AP                                                                                                originally intended without
+                                                                                                   0     25.10   AS BUILT                                                                 BSH      BSH                                                                                                                     written approval of         SCALE   DRG No:                                                        REV:
+                                                                                                                                                                                                                                                                                                                        Fortescue MetalsGroup Ltd
+   REF DRG No.                                                TITLE                               REV    DATE                           DESCRIPTION                                       DRN      CHK      SUP       DES      DAP      PAP      FMG                                                  NORTH                                     A1      NTS     500CBC0002-13015-DR-EL-0001                                    3
+
+
+
+             1                                  2                                     3                                   4                                  5                                   6                                  7                                  8                                   9                                  10                                  11                                 12

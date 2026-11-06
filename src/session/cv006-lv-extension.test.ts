@@ -1,0 +1,56 @@
+import { describe, expect, it } from 'vitest';
+import { SimulationSession } from './session';
+import { wholeNetworkModel } from '../models/site/whole-network';
+import { withSupplementalEndpoints } from '../models/site/endpoint-extensions';
+import { withCv006Lv } from '../models/site/cv006-lv-extension';
+
+describe('supplemental MC410A first LV bus through the session', () => {
+  it('replaces the downstream MC410B placeholder with the depicted blocked MC410A incomer and first phase bar', () => {
+    const base = withSupplementalEndpoints(wholeNetworkModel, 'mc410a-input-contract-1');
+    const before = new SimulationSession(base).saveScenario();
+    const result = new SimulationSession(withCv006Lv(base, 'mc410a-reviewed-contract-1')).snapshot();
+    expect(result.model.version).toBe('mc410a-reviewed-contract-1');
+    expect(result.model.assets.find(asset => asset.id === 'rm410:mc410a:cb')).toMatchObject({ kind: 'breaker', aliases: expect.arrayContaining(['MC410A CB 630A', '630 A']) });
+    expect(result.model.assets.find(asset => asset.id === 'rm410:mc410a:bus')).toMatchObject({ kind: 'bus', aliases: expect.arrayContaining(['MC410A', '415 V', '630 A', '63 kA for 1 sec']) });
+    expect(result.devices['rm410:mc410a:cb']).toBeNull();
+    expect(result.switching['rm410:mc410a:cb'].positions.every(position => !position.allowed)).toBe(true);
+    expect(result.model.connections).toContainEqual(expect.objectContaining({ id: 'cv006-lv:mc410a:incoming', from: 'rm410:interface:mc410a:input', to: 'rm410:mc410a:cb:a' }));
+    expect(result.model.connections).toContainEqual(expect.objectContaining({ id: 'cv006-lv:mc410a:bar', from: 'rm410:mc410a:cb:b', to: 'rm410:mc410a:bus:bar' }));
+    expect(result.model.assets.find(asset => asset.id === 'rm410:interface:mc410a')).toMatchObject({ terminals: ['rm410:interface:mc410a:input'], conductivePairs: [], sourcePairs: [], earthPairs: [] });
+    for (const id of ['rm410:mc410b:cb', 'rm410:mc410b:bus']) expect(result.model.assets.some(asset => asset.id === id)).toBe(false);
+    for (const id of ['rm410:mc410a-to-mc410b', 'rm410:mc410b:incomer-bus']) expect(result.model.connections.some(connection => connection.id === id)).toBe(false);
+    expect(result.devices).not.toHaveProperty('rm410:mc410b:cb');
+    expect(result.model.interlocks!.reviews.some(review => review.assetId === 'rm410:mc410b:cb')).toBe(false);
+    expect(result.model.boundaries!.some(boundary => boundary.terminal === 'rm410:interface:mc410a:to-mc410b')).toBe(false);
+    expect(result.model.evidence!.find(record => record.id === 'CV-MC410A-ENDPOINT')).toMatchObject({ status: 'supported', references: [expect.objectContaining({ document: '520CBC0003-2140-DR-EL-0002', revision: '6 (08.04.22; AS BUILT)', page: 1 })] });
+    expect(result.model.evidence!.find(record => record.id === 'CV-MC410B-MEN-REDLINE')?.summary).toContain('MEN LINK REMOVED LOCATED IN MC410A');
+    expect(result.model.reviews!.find(review => review.id === 'CV-R06')).toMatchObject({ status: 'open', question: expect.stringContaining('433') });
+    expect(result.model.reviews!.find(review => review.id === 'CV-R11')).toMatchObject({ status: 'open', question: expect.stringContaining('0002 revision 6') });
+    expect(new SimulationSession(base).saveScenario()).toEqual(before);
+  }, 20_000);
+  it('preserves both TF410B voltage descriptions, unknown winding policy and upstream navigation in a historical scenario', () => {
+    const base = withSupplementalEndpoints(wholeNetworkModel, 'mc410a-history-input-1');
+    const before = new SimulationSession(base).saveScenario();
+    const session = new SimulationSession(withCv006Lv(base, 'mc410a-history-contract-1'));
+    const file = JSON.parse(JSON.stringify(session.saveScenario()));
+    const reopened = new SimulationSession(wholeNetworkModel);
+    expect(reopened.loadScenario(file)).toEqual({ ok: true });
+    const result = reopened.snapshot();
+    expect(result.mode).toBe('view-only');
+    const transformer = result.model.assets.find(asset => asset.id === 'rm410:tf410b:transformer')!;
+    const originalTransformer = before.model.assets.find(asset => asset.id === transformer.id)!;
+    expect(transformer.label).toContain('433 V');
+    expect(transformer.label).toContain('415 V');
+    expect(transformer.sourcePairs).toEqual(originalTransformer.sourcePairs);
+    expect(transformer.earthPairs).toEqual([]);
+    expect(result.model.earths).toEqual(before.model.earths);
+    expect(result.model.sources).toEqual(before.model.sources);
+    expect(result.model.boundaries!.find(boundary => boundary.terminal === 'rm410:mc410a:bus:bar')).toMatchObject({ sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' });
+    expect(result.connectivity['rm410:mc410a:bus'].earthStatus).toBe('unconfirmed');
+    const detail = result.model.presentation!.views.find(view => view.id === 'supplemental/cv006-mc410a-lv')!;
+    expect(detail.assetIds).toEqual(expect.arrayContaining(['rm410:tf410b:transformer', 'rm410:interface:mc410a', 'rm410:mc410a:cb', 'rm410:mc410a:bus']));
+    expect(detail.boundaries).toContainEqual(expect.objectContaining({ remoteAssetId: 'rm410:sw03', targetViewId: 'cv006/rm410-hv' }));
+    expect(result.model.presentation!.views.some(view => view.id !== detail.id && view.boundaries?.some(boundary => boundary.targetViewId === detail.id && boundary.remoteAssetId === 'rm410:mc410a:cb'))).toBe(true);
+    expect(reopened.saveScenario()).toEqual(file);
+  }, 20_000);
+});

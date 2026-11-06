@@ -1,0 +1,216 @@
+                             FROM HV SWITCHBOARD                                                                                                                                         TF439-C-01                                                                                                                                                                                                 FROM HV SWITCHBOARD
+                                        SW426                                                                                        FROM HV SWITCHBOARD                                                                                                                                                                                                                                                        SW426                     NOTES
+                                 07110-EL-DR-2357                                                                                                           SW426                                                                                                                                                                                                                                       07110-EL-DR-2357
+                                                                                                                                             07110-EL-DR-2357                                                                                                                                                                                                                                                                             1.   STATUTORY SAFETY RELAYS ESR43902 & ESR43904
+                                                                                                                                                                                         TF439-P-01                                                                                                                                                                                                                                            ARE LOCATED IN VSD
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                          2.   JUNCTION BOX TO ALLOW DISCONNECTION OF
+                                                                                                                                                                                                                                               TRANSFORMER - TF439                                                                                                                                                                             BELT FEEDER MOTOR CABLES FOR REMOVAL OF
+                                                                                                                                                                                                                                                                                                                                                                                                                                               FEEDER FOR MAINTENANCE ACCESS FOR BF233
+                                                                                                                                                                                                                                               22kV/690V/690V
+                                                                                                                                                                                                                                               5MVA                                                                                                                                                                                       3.   GREYSCALE REPRESENTS EXISTING EQUIPMENT
+
+
+                                                                                                                                                                                                                             SCREEN
+
+
+                                                                                                                                    SW439-P-01-1                                                                                                                                                   SW439-P-02-1
+                                                                                                                                    SW439-P-01-2                                                                                                                                                   SW439-P-02-2                                                                                                                                             VSD NUMBERING
+
+                                                                                                                                    SW439-P-01-3                                                                                                                                                   SW439-P-02-3                                                                                                                                          OLD                               NEW
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 E
+
+                                                                                                                                    SW439-P-01-4                                                                                                                                                   SW439-P-02-4                                                                                                                                       VS42906                           VS43904
+
+                                                                                                                                    SW439-P-01-5                                                                                                                                                   SW439-P-02-5
+                                                                                                                                                                       DESAND VARIABLE SPEED DRIVE SWITCHBOARD                                                                                                                                                                                                                                        VS42329                           VS43901
+
+
+                                                             5000:1                                                                                                                                           SW439                                                                                                                                                                              5000:1
+
+                                                                   CB SW439 IN D                                                                                                                                                                                                                                                                                              CB SW439 IN Y
+                                                                   2500A                                                                                                                                                                                                                                                                                                                   2500A
+                                                                                                                                                                                                                                                                                                                                                                                                                                          CONSTRUCTION NOTES
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                          1.   CONTACTOR TO BE UPGRADED.
+
+
+                                                                                                 STATUTORY                                                                                  STATUTORY                                                                                                                                  STATUTORY                                     STATUTORY                                            2.   NOTES TO BE REMOVED AFTER CONSTRUCTION.
+                                                                                              SAFETY RELAY                                                                                SAFETY RELAY                                                                                                                              SAFETY RELAY                                   SAFETY RELAY
+                                                                                                  ESR43901                                                                                    ESR43903                                                                                                                                  ESR43915                                       ESR43916
+                 690V, 2500A, 50kA FOR 1 Sec
+
+
+
+
+
+
+                 690V, 2500A, 50kA FOR 1 Sec
+
+
+
+                                                                                     TIER 06F-00                                  TIER 05F                                      TIER 06F-10                                   TIER 03F                                                                                    TIER 9F-10                                     TIER 9F-20
+                             230VAC UPS
+                                 DB439C
+                             07110-EL-DR-3478                                        125A                                         500A                                          125A                                          500A                     500A                                                               125A                                           125A
+
+
+                              48VDC UPS
+                                 DB439B
+                             07110-EL-DR-3477
+
+
+                              24VDC UPS
+                                DB439A                                                                                                                                         NOTE 1                                                                                                                                    NOTE 1                                         NOTE 1
+                             07110-EL-DR-3479                                      NOTE 1
+
+
+
+                                                                 230V AC
+
+                                                                 48V DC
+
+                                                                 24V DC
+                              PROFIBUS
+                          MARSH. PANEL                          PROFIBUS
+                                MP4391
+                         07110-EL-DR-4310/4312
+
+
+
+
+
+
+
+
+
+                                                                                      VS43901                                      VS43902                                       VS43903                                       VS43904                                                                                      VS43915                                       VS43916
+                                                                               ACS800-01-0120-7                              ACS800-07-0610-7                              ACS800-07-0120-7                              ACS800-07-1060-7                                                                            ACS800-07-0120-7                              ACS800-07-0120-7
+                                                                                                                                   ESR43902         NOTE 1                                                                    ESR43904         NOTE 1
+                                                                                                                                                                                                                                                                 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                             BF233-JB01    NOTE 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 G
+                                                                                                 M                                              M                                           M                                             M                                                                                            M                                             M                                                                                     12
+                                                                                                3Ø                                             3Ø                                           3Ø                                            3Ø                                                                                          3Ø                                             3Ø
+                                                                              TH                                              RTD                                           TH                                            RTD                                                                                         TH                                             TH
+                                                                                          BF233-EM01                                     PU235-EM01                                   PU273-EM01                                    PU248-EM01                                                                                  PU271-EM01                                     PU281-EM01
+                                                                                         BELT FEEDER                               CYCLONE FEED PUMP                                     SPIRAL                                       PROCESS                                                                                    MODULE 3                                       MODULE 4
+                                                                                              75kW                                          12 POLE                                   TAIL PUMP                                    WATER PUMP                                                                              SPIRAL FEED PUMP                               SPIRAL FEED PUMP                                                                                         Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ph +61 8 6220 2000, www.verbrec.com
+                                                                                                                                             315kW                                        75kW                                         585kW                                                                                        75kW                                           75kW                       VENDOR/DESIGNER DRG No.                                                                   REV:
+                                                                           12                                                                                         12                                                                                                                                         12                                             12
+                                                                                    11098-07110-EL-DR-4315                                                                      11098-07110-EL-DR-4319                                                                                                                    500CB-04230-DR-EL-0224                        500CB-04230-DR-EL-0226                                                                          -                                 -
+
+
+
+                This drawing and all the information                                                                                     709/12/11   RE-ISSUED FOR CONSTRUCTION                                 JT   PW   PW   INH  INH  MT   CLIENT                                                                                                                                                J.ZHAO                 06/02/08
+
+                     on it is the property of                                                                                        6    11/10/11   ADOPTED FOR CEPT - ISSUED FOR CONSTRUCTION                JMc   PA   MR   PA   IM   PH                                                                                                                                                                                            PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+               THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                   ENGINEER        E.ABRAHAM              06/02/08
+                   It is confidential and is given                                                                                   5   17/08/09    ISSUED FOR AS-BUILT                                       KW    BT   SQ   BT   DF   DF
+                                                                                                                                                                                                                                                                                                                                                                                    CHECKED         A.JAMES                06/02/08    CLOUD BREAK ORE HANDLING
+            H   to you for a limited purpose and must                            12                                                 12   20/03/25    ISSUED FOR CONSTRUCTION - CB25OP003A                      SR    LN   AC   JM   JM   MG                                                                                                                                                                                                                                                                      H
+                be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                LEAD ENG        L.BRUNN                06/02/08    SW439 - DESAND (MODULE 3)
+                    drawing nor any information                                                                                     11   05/06/14    ISSUED FOR CONSTRUCTION                                   MS    LL   AW   JS   CS   DS
+
+                concerning it may be copied, exhibited                                                                              10   14/03/14    ISSUED FOR CONSTRUCTION                                    JT  PW    PW   INH  INH  MT                                                                                                                                         ENG MGR         N.JAMESON              06/02/08
+                  or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                      SINGLE LINE DIAGRAM
+                                                                                                                                     9                AS BUILT - NO CHANGE11/03/13                             SR   ZG   DGM   ZG  AB    AB                                                                             Team 45 is the integrated project management team of
+                photographs be taken of any article                                                                                                                                                                                             Level 2, Hyatt Centre                                                                                                               PROJ MGR        N.JAMESON              06/02/08
+                 fabricated or assembled from this04230-DR-EL-0145                                                                   8    04.05.12   R-ISSUED FOR CONSTRUCTION                                 JMc   ZG  DGM   ZG   CD   PH                                                                      Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.                                                 PROJECT No:            DRG No:                                    REV:
+                                                                        SW439 SINGLE LINE DIAGRAM - SHEET 2                                                                                                                                     87 Adelaide Terrace                                               Team 45 and WorleyParsons act on behalf of and as disclosed agent
+                   drawing without the consent of                                                                                                                                                                                                                                         Tel: +61 8 9266 0111Fax: +61 8 9221 9483ABN 52 103 096 340                                SCALE
+               THE PILBARA INFRASTRUCTURE PTY LTD      REF No.                                REFERENCES                           REV    DATE                            DESCRIPTION                         DRN   ENG  CHK   LE   EM   PM     East Perth  WA  6004  Australia                                                     of The Pilbara Infrastructure.                                  NTS                      A1         300/11098                   07110-EL-DR-2483                     12
+
+
+                              1                                        2                                       3                                        4                                        5                                        6                                        7                                        8                                       9                                       10                                        11                                      12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+04230-DR-EL-0145-COMMENCED
+                                       1:1
+                                               -

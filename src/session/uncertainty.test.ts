@@ -1,0 +1,139 @@
+import { describe, expect, it } from 'vitest';
+import { SimulationSession } from './session';
+import { uncertaintyFixture } from '../models/uncertainty-fixture';
+import { singleSupply } from '../models/synthetic';
+import { earthFixture } from '../models/earth-fixture';
+import type { NetworkModel } from './model';
+
+describe('material uncertainty in a provisional model', () => {
+  it('keeps an unconfirmed route distinct from disconnection and retains a known supply path', () => {
+    const session = new SimulationSession(uncertaintyFixture);
+    const result = session.snapshot();
+    expect(result.connectivity['candidate-bus']).toMatchObject({ sourceStatus: 'unconfirmed', sourceIds: [], possibleSourceIds: ['source-a'] });
+    expect(result.connectionResults['candidate-feed'].sourceStatus).toBe('unconfirmed');
+    expect(result.connectivity['lv-bus']).toMatchObject({ sourceStatus: 'connected', sourceIds: ['source-a'] });
+    const trace = session.trace('lv-bus');
+    expect(trace.ok).toBe(true);
+    if (trace.ok) expect(trace.paths[0].assetIds).toEqual(['supply-a', 'cb-01', 'tf-01', 'lv-bus']);
+    expect(result.model.evidence?.[0].status).toBe('provisional');
+    expect(result.model.reviews?.[0].status).toBe('open');
+  });
+
+  it('does not turn unknown source availability into an unavailable source', () => {
+    const model: NetworkModel = structuredClone(singleSupply);
+    model.starting.sources['source-a'] = null;
+    const session = new SimulationSession(model);
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', sourceIds: [], possibleSourceIds: ['source-a'] });
+    session.changeSource('source-a', false);
+    expect(session.snapshot().connectivity['lv-bus'].sourceStatus).toBe('disconnected');
+    session.changeSource('source-a', true);
+    expect(session.snapshot().connectivity['lv-bus'].sourceStatus).toBe('connected');
+  });
+
+  it('keeps an unknown device position material until a scenario position is selected', () => {
+    const model: NetworkModel = structuredClone(singleSupply);
+    model.starting.devices['cb-01'] = null;
+    const session = new SimulationSession(model);
+    expect(session.snapshot().devices['cb-01']).toBeNull();
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', sourceIds: [], possibleSourceIds: ['source-a'] });
+    session.changeDevice('cb-01', 'closed');
+    expect(session.snapshot().connectivity['lv-bus'].sourceStatus).toBe('connected');
+    session.changeDevice('cb-01', 'open');
+    expect(session.snapshot().connectivity['lv-bus'].sourceStatus).toBe('disconnected');
+  });
+
+  it('evaluates an uncertain earth connection separately from a known supply', () => {
+    const model: NetworkModel = structuredClone(earthFixture);
+    model.earths![0].knowledge = 'provisional';
+    model.starting.devices['es-01'] = 'closed';
+    const session = new SimulationSession(model);
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'connected', sourceIds: ['source-a'], earthStatus: 'unconfirmed', earthIds: [], possibleEarthIds: ['earth-a'] });
+    expect(session.snapshot().conflicts).toEqual([]);
+    expect(session.snapshot().possibleConflicts).toContainEqual(expect.objectContaining({ sourceId: 'source-a', earthId: 'earth-a' }));
+  });
+
+  it('keeps missing off-page coverage unconfirmed even when no supplied source is reachable', () => {
+    const model = {
+      ...structuredClone(singleSupply),
+      boundaries: [{ id: 'off-page', label: 'Unconfirmed external continuation', terminal: 'lv', sourceCoverage: 'unconfirmed', earthCoverage: 'complete', knowledge: 'unresolved' }],
+    };
+    model.starting.devices['cb-01'] = 'open';
+    const session = new SimulationSession(model);
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', sourceIds: [], sourceBoundaryIds: ['off-page'], earthStatus: 'unconfirmed' });
+    expect(session.snapshot().connectivity['supply-a']).toMatchObject({ sourceStatus: 'connected', sourceBoundaryIds: [] });
+  });
+
+  it('retains the evidence and review of an uncertain earth route independently of source paths', () => {
+    const model: NetworkModel = structuredClone(earthFixture);
+    model.evidence = [{ id: 'earth-route-evidence', status: 'provisional', summary: 'Unconfirmed earth branch', references: [{ document: 'Fictional earth drawing', revision: '1', page: 2 }] }];
+    model.reviews = [{ id: 'earth-route-review', status: 'open', question: 'Confirm this earth branch', evidenceIds: ['earth-route-evidence'] }];
+    Object.assign(model.connections.find(connection => connection.id === 'section-earth')!, { knowledge: 'provisional', evidenceIds: ['earth-route-evidence'], reviewIds: ['earth-route-review'] });
+    model.starting.devices['es-01'] = 'closed';
+    const result = new SimulationSession(model).snapshot().connectivity['lv-bus'];
+    expect(result).toMatchObject({ sourceStatus: 'connected', earthStatus: 'unconfirmed', evidenceIds: ['earth-route-evidence'], reviewIds: ['earth-route-review'] });
+  });
+
+  it('does not trust an unsupported claim of complete boundary coverage', () => {
+    const model: NetworkModel = structuredClone(singleSupply);
+    model.starting.devices['cb-01'] = 'open';
+    model.boundaries = [{ id: 'off-page', label: 'Unreviewed continuation', terminal: 'lv', sourceCoverage: 'complete', earthCoverage: 'complete', knowledge: 'provisional' }];
+    const result = new SimulationSession(model).snapshot();
+    expect(result.connectivity['lv-bus']).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed', sourceBoundaryIds: ['off-page'], earthBoundaryIds: ['off-page'] });
+    expect(result.connectionResults['transformer-lv']).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed' });
+  });
+
+  it('preserves model-ordered claim evidence across overlapping source and earth routes', () => {
+    const model: NetworkModel = structuredClone(earthFixture);
+    model.starting.devices['cb-01'] = null;
+    model.starting.devices['es-01'] = null;
+    model.starting.sources['source-a'] = null;
+    model.boundaries = [
+      { id: 'lv-boundary', label: 'Fictional LV continuation', terminal: 'lv', sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' },
+      { id: 'hv-boundary', label: 'Fictional HV continuation', terminal: 'tf-hv', sourceCoverage: 'unconfirmed', earthCoverage: 'unconfirmed' },
+    ];
+    const claims = [...model.assets, ...model.connections, ...model.sources, ...model.earths!, ...model.boundaries];
+    model.evidence = [...claims.map(claim => ({ id: `e:${claim.id}`, status: 'provisional' as const, summary: `Fictional ${claim.id}`, references: [] })), { id: 'shared', status: 'provisional', summary: 'Shared fictional evidence', references: [] }];
+    model.reviews = [...claims.map(claim => ({ id: `r:${claim.id}`, status: 'open' as const, question: `Confirm fictional ${claim.id}`, evidenceIds: [`e:${claim.id}`] })), { id: 'shared', status: 'open', question: 'Shared fictional review', evidenceIds: ['shared'] }];
+    for (const claim of claims) {
+      claim.evidenceIds = [`e:${claim.id}`, 'shared'];
+      claim.reviewIds = [`r:${claim.id}`, 'shared'];
+    }
+    const result = new SimulationSession(model).snapshot().connectivity['lv-bus'];
+    const orderedClaims = ['lv-bus', 'supply-breaker', 'breaker-transformer', 'transformer-lv', 'section-earth', 'cb-01', 'tf-01', 'es-01', 'source-a', 'earth-a', 'lv-boundary', 'hv-boundary'];
+    expect(result.evidenceIds).toEqual(['e:lv-bus', 'shared', ...orderedClaims.slice(1).map(id => `e:${id}`)]);
+    expect(result.reviewIds).toEqual(['r:lv-bus', 'shared', ...orderedClaims.slice(1).map(id => `r:${id}`)]);
+    expect(result).toMatchObject({ sourceStatus: 'unconfirmed', earthStatus: 'unconfirmed', possibleSourceIds: ['source-a'], possibleEarthIds: ['earth-a'], sourceBoundaryIds: ['lv-boundary', 'hv-boundary'], earthBoundaryIds: ['lv-boundary', 'hv-boundary'] });
+  });
+
+  it('does not promote provisional evidence or an open review into a supported or confirmed fact', () => {
+    const session = new SimulationSession(uncertaintyFixture);
+    const before = session.snapshot();
+    const unsupported = structuredClone(uncertaintyFixture);
+    unsupported.connections.find(connection => connection.id === 'candidate-feed')!.knowledge = 'supported';
+    expect(session.loadModel(unsupported)).toMatchObject({ ok: false, error: expect.stringContaining('supporting evidence') });
+    const unconfirmed = structuredClone(uncertaintyFixture);
+    unconfirmed.evidence![0].status = 'owner-confirmed';
+    expect(session.loadModel(unconfirmed).ok).toBe(false);
+    const unresolved = structuredClone(uncertaintyFixture);
+    unresolved.reviews![0].status = 'resolved';
+    expect(session.loadModel(unresolved).ok).toBe(false);
+    expect(session.snapshot()).toEqual(before);
+  });
+
+  it('retains a known supply when an additional source has unknown availability', () => {
+    const model = structuredClone(uncertaintyFixture);
+    model.connections.find(connection => connection.id === 'unknown-source-feed')!.to = 'lv';
+    const session = new SimulationSession(model);
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'connected', sourceIds: ['source-a'], possibleSourceIds: ['source-b'], hasSourceUncertainty: true });
+    expect(session.trace('lv-bus')).toMatchObject({ ok: true, paths: [expect.objectContaining({ sourceId: 'source-a' })] });
+  });
+
+  it('keeps invariant connections known when an unknown position cannot change that relationship', () => {
+    const model = structuredClone(singleSupply);
+    const breaker = model.assets.find(asset => asset.id === 'cb-01')!;
+    breaker.positions[0].pairs = [['cb-in', 'cb-out']];
+    model.starting.devices['cb-01'] = null;
+    const session = new SimulationSession(model);
+    expect(session.snapshot().connectivity['lv-bus']).toMatchObject({ sourceStatus: 'connected', sourceIds: ['source-a'], hasSourceUncertainty: false });
+  });
+});

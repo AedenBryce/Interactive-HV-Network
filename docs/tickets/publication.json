@@ -1,0 +1,809 @@
+{
+  "parent": "https://github.com/AedenBryce/Interactive-HV-Network/issues/1",
+  "status": "published-and-verified",
+  "approvedDate": "2026-10-22",
+  "tickets": [
+    {
+      "id": "T01",
+      "number": 2,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/2",
+      "title": "Run a first local switching simulation",
+      "blockedBy": [],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": []
+    },
+    {
+      "id": "T02",
+      "number": 3,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/3",
+      "title": "Explore alternate supplies and explain switching impacts",
+      "blockedBy": [
+        2
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        2
+      ]
+    },
+    {
+      "id": "T03",
+      "number": 4,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/4",
+      "title": "Explore earth connectivity and source-to-earth conflicts",
+      "blockedBy": [
+        2
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        2
+      ]
+    },
+    {
+      "id": "T04",
+      "number": 5,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/5",
+      "title": "Enforce physical interlocks and explain blocked controls",
+      "blockedBy": [
+        4
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        4
+      ]
+    },
+    {
+      "id": "T05",
+      "number": 6,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/6",
+      "title": "Inspect provisional models without hiding uncertainty",
+      "blockedBy": [
+        3,
+        4
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "T06",
+      "number": 7,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/7",
+      "title": "Explore explicit equipment positions and winding relationships",
+      "blockedBy": [
+        5
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        5
+      ]
+    },
+    {
+      "id": "T07",
+      "number": 8,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/8",
+      "title": "Undo switching and restore the starting configuration",
+      "blockedBy": [
+        3,
+        5
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": "T08",
+      "number": 9,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/9",
+      "title": "Navigate a connected overview and detailed substation views",
+      "blockedBy": [
+        3
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        3
+      ]
+    },
+    {
+      "id": "T09",
+      "number": 10,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/10",
+      "title": "Save, share and reopen self-contained scenarios",
+      "blockedBy": [
+        6,
+        7
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "T10",
+      "number": 11,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/11",
+      "title": "Open older model versions as view-only scenarios",
+      "blockedBy": [
+        8,
+        9,
+        10
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "T11",
+      "number": 12,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/12",
+      "title": "Explore the real main switchroom and its review records",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T12",
+      "number": 13,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/13",
+      "title": "Explore the power station and 33 kV supply interfaces",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T13",
+      "number": 14,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/14",
+      "title": "Explore Crushing No. 1 through its LV bus endpoints",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T14",
+      "number": 15,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/15",
+      "title": "Explore Crushing No. 2 and the HPGR branch",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T15",
+      "number": 16,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/16",
+      "title": "Explore Screening through its final LV buses",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T16",
+      "number": 17,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/17",
+      "title": "Explore Desands through its final LV buses",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T17",
+      "number": 18,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/18",
+      "title": "Explore lump stockpile and wet-scrubbing supplies",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T18",
+      "number": 19,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/19",
+      "title": "Explore train-loading supplies through their LV buses",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T19",
+      "number": 20,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/20",
+      "title": "Explore CV006 head-end and tail-end supplies",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T20",
+      "number": 21,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/21",
+      "title": "Explore western crushing and hopper supply areas",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T21",
+      "number": 22,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/22",
+      "title": "Explore services, workshop and conveyor supply areas",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T22",
+      "number": 23,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/23",
+      "title": "Explore the Hopper 10 supply and endpoint buses",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T23",
+      "number": 24,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/24",
+      "title": "Explore the supplied mine and camp distribution",
+      "blockedBy": [
+        6,
+        7,
+        9
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "T24",
+      "number": 25,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/25",
+      "title": "Assemble the whole network and obtain model acceptance",
+      "blockedBy": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "T25",
+      "number": 26,
+      "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/26",
+      "title": "Deliver the accepted whole-network local application",
+      "blockedBy": [
+        11,
+        25
+      ],
+      "labelVerified": true,
+      "bodyVerified": true,
+      "nativeDependenciesVerified": true,
+      "nativeBlockedBy": [
+        11,
+        25
+      ]
+    }
+  ],
+  "audit": {
+    "verifiedDate": "2026-10-22",
+    "ticketCount": 25,
+    "nativeEdgeCount": 68,
+    "allChecksPassed": true,
+    "parentBodyUnchanged": true,
+    "parentStateUnchanged": true,
+    "parentLabelsUnchanged": true,
+    "parentNativeRelationships": [
+      {
+        "type": "blocked_by",
+        "numbers": []
+      },
+      {
+        "type": "blocking",
+        "numbers": []
+      }
+    ],
+    "checks": [
+      {
+        "id": "T01",
+        "number": 2,
+        "actualBlockedBy": [],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T02",
+        "number": 3,
+        "actualBlockedBy": [
+          2
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T03",
+        "number": 4,
+        "actualBlockedBy": [
+          2
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T04",
+        "number": 5,
+        "actualBlockedBy": [
+          4
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T05",
+        "number": 6,
+        "actualBlockedBy": [
+          3,
+          4
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T06",
+        "number": 7,
+        "actualBlockedBy": [
+          5
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T07",
+        "number": 8,
+        "actualBlockedBy": [
+          3,
+          5
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T08",
+        "number": 9,
+        "actualBlockedBy": [
+          3
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T09",
+        "number": 10,
+        "actualBlockedBy": [
+          6,
+          7
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T10",
+        "number": 11,
+        "actualBlockedBy": [
+          8,
+          9,
+          10
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T11",
+        "number": 12,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T12",
+        "number": 13,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T13",
+        "number": 14,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T14",
+        "number": 15,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T15",
+        "number": 16,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T16",
+        "number": 17,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T17",
+        "number": 18,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T18",
+        "number": 19,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T19",
+        "number": 20,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T20",
+        "number": 21,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T21",
+        "number": 22,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T22",
+        "number": 23,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T23",
+        "number": 24,
+        "actualBlockedBy": [
+          6,
+          7,
+          9
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T24",
+        "number": 25,
+        "actualBlockedBy": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      },
+      {
+        "id": "T25",
+        "number": 26,
+        "actualBlockedBy": [
+          11,
+          25
+        ],
+        "dependenciesMatch": true,
+        "labelVerified": true,
+        "bodyVerified": true,
+        "state": "open"
+      }
+    ],
+    "acyclic": true,
+    "initialFrontier": [
+      2
+    ]
+  }
+}
+

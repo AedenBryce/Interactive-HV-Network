@@ -1,0 +1,204 @@
+MC434B
+400V, 1000A, 50kA for 1 Sec
+CONTINUED ON 07110-EL-DR-2669
+CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+AC
+AC342-P-01
+AC
+AC4424-P-01
+AC
+AC4423-P-01
+AC
+AC4422-P-01
+AC
+AC4421-P-01
+SH102-DCP01-P-01
+SH105-DCP01-P-01
+CV105-EM01-P-03
+22kW
+ 
+AC No.1
+SWRM
+LV VSD
+AC4421
+22kW
+ 
+AC No.2
+SWRM
+LV VSD
+AC4422
+22kW
+ 
+AC No.3
+SWRM
+LV VSD
+AC4423
+22kW
+ 
+AC No.4
+SWRM
+LV VSD
+AC4424
+18kW
+ 
+ 
+MCC SWRM
+AIR CON
+AC4342
+5F-12
+TIER
+6F-18
+TIER
+6F-21
+TIER
+6F-24
+TIER
+6F-27
+TIER
+5F-20
+TIER
+5F-25
+TIER
+5F-15
+TIER
+2.6A2.6A50A 63A 63A 63A 63A 2.6A
+CV105-EM01-P-04
+SH105-EM01-P-02
+SH102-EM01-P-02
+ISOL ISOL ISOL ISOL ISOL
+CGC011-B-E05-0357
+0.75kW
+ 
+ 
+ 
+BRAKE
+SH102-EM01
+CGC011-B-E05-0357
+0.75kW
+ 
+ 
+ 
+BRAKE
+SH105-EM01
+CGC011-B-E05-0357
+0.75kW
+ 
+ 
+ 
+BRAKE
+CV105-EM01
+Ph +61 8 6220 2000, www.verbrec.com
+Level 5, 93-95 William Street, Perth, Western Australia 6000
+2
+2 05/05/25 ISSUED FOR CONSTRUCTION - CP250P003A              SR LN AC JM JM MG
+                  
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                 
+                
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+07110-EL-DR-2669     MC434B - CRUSHING AUXILARIES SLD SHT - 3     
+                  
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+NOTE 1 NOTE 1 NOTE 1
+3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+2. CONTACTOR TO BE UPGRADED.
+1. MOTOR PROTECTION RELAY TO BE UPGRADED.
+CONSTRUCTION NOTES:
+2 2 2
+CLOUD BREAK INFRASTRUCTURE
+MC434B - CRUSHING AUXILIARIES
+SINGLE LINE DIAGRAM SHEET 4
+07110-EL-DR-2686 2NTS
+J.MOGGRIDGE 21/02/08
+L.BRUNN 21/02/08
+A.JAMES 21/02/08
+L.BRUNN 21/02/08
+N.JAMESON 21/02/08
+N.JAMESON 21/02/08
+0 21/02/08 ISSUED FOR CONSTRUCTION JM LB AJ LB NJ NJ
+1 11/09/09 ISSUED FOR AS BUILT YBC BT WL CJT DF AC
+               
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+ 
+                
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+A1
+1
+A
+B
+C
+D
+E
+F
+G
+H
+2 3 4 5 6 7 8 9 10 11 12
+1 2 3 4 5 6 87 9 10 11 12
+A
+B
+C
+D
+E
+F
+G
+H
+REF No. REFERENCES REV DATE DESCRIPTION DRN ENG CHK LE PM
+CLIENT DRAWN
+ENGINEER
+CHECKED
+REV:PROJECT No: DRG No:
+SCALE
+PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+$DATE$ $TIME$ $FILEL$
+300/11098THE PILBARA INFRASTRUCTURE PTY LTD
+drawing without the consent of
+fabricated or assembled from this
+photographs be taken of any article 
+or furnished to others. Nor may
+concerning it may be copied, exhibited
+drawing nor any information
+be returned on request. Neither this
+to you for a limited purpose and must
+It is confidential and is given
+THE PILBARA INFRASTRUCTURE PTY LTD
+on it is the property of
+This drawing and all the information 
+East Perth  WA  6004  Australia
+87 Adelaide Terrace
+Level 2, Hyatt Centre
+ABN 52 103 096 340
+Fax: +61 8 9221 9483
+Tel: +61 8 9266 0111
+of The Pilbara Infrastructure.
+Team 45 and WorleyParsons act on behalf of and as disclosed agent
+Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.
+Team 45 is the integrated project management team of 
+EM
+ENG MGR
+PROJ MGR
+LEAD ENG

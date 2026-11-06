@@ -1,0 +1,184 @@
+             1                                 2                                   3                                  4                                 5                                 6                                  7                                 8                                 9                                 10                                 11                                12
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                         EXISTING
+
+
+
+
+
+
+
+
+
+A                           OVERSIZE REDUCTION                                                                                                                                                                                                                                                                                                                                                                          A
+                            SUBSTATION
+                            SS413
+                                               FROM RM412                       TO RM417
+                                                   REFER DRG.                     REFER DRG.
+                                             CB0012-02004-DR-EL-0007      CB16OP038A-02006-DR-EL-0044
+
+
+                                                                                       DOUBLE BOOT
+                                                                                       CONNECTION
+
+
+                                                          RM413               RM413                                                                                                                                                                                                                                                                                                                         NEW
+                                                          IN01                  IN02
+                                      5
+                                                              22kV, RM413
+                                                                                                                                           KIOSK                   ES-Q8
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                       B
+
+                                                       TF413 FD               TF414 FD
+                                                     ABB REJ603               ABB REJ603
+
+                                                                                                                                                                  RM413A
+                                                                                                                                                                  22kV RMU
+                                                                                                                                                                  TF413A Q1
+
+                                                                                                                                                REF615            CB
+                                                                       REFER DRG.                                                              PROTECTION
+                                                                  CB095-02004-DR-EL-0014                                                        RELAY
+
+
+
+
+
+
+                                                                                                                                                                 ES-Q8
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                       C
+
+
+
+                                                                                                                                                                         TF413A
+                                                                       TF413                                                                                             22kV/720V/720V
+                                                                       22kV/400V                                                                                         12 PULSE/NO REGEN (AFE)
+                                                                       2.0MVA                                                                                            5.0MVA ONAN TRANSFORMER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                       D
+                         SWITCHROOM SR413
+
+                                                                                                                                                                                                                                                                                                                                                                MULTI-DRIVE VSD
+
+
+
+
+
+
+                                                                                                                                                       2500A                2500A
+
+
+
+
+
+                                                                        MC413                                                      RECTIFIERS
+
+
+
+
+                                                                REFER DRG.
+E                                                            CB-02006-DR-EL-1001                                                                                                                                                                                                                                                                                                                                        E
+
+                                                                                                                                                                                                                                                                                                                                                        DC BUS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                   INVERTERS
+F                                                                                                                                                                                                                                                                                                                                                                                                                       F
+
+
+
+
+                                                                       MC413A
+
+
+
+                                                                     REFER DRG.
+                                                              CB17OP023A-04057-DR-EL-0033
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                       G
+                                                                                                                                                                                              M                                   M                                   M                                   M
+                                                                                                                                                                                             3                                   3                                   3                                   3
+
+
+                                                                                                                                                                                           160kW                              1250kW                              1250kW                              1250kW
+                                                                                                                                                                                        SURGE BIN                           OVERLAND                            OVERLAND                            OVERLAND
+                                                                                                                                                                                           APRON                            CONVEYOR                            CONVEYOR                            CONVEYOR
+                                                                                                                                                                                          FEEDER                      PRIMARY DRIVE No.1                SECONDARY DRIVE No.1                 PRIMARY DRIVE No.2
+                                                                                                                                                                                        AF006-EM01                          CV005-EM01                         CV005-EM03                          CV005-EM02                       VENDOR/DESIGNER DRG No.                                                     REV:
+                                                                                                                                                                                                                                                                                                                                                                  ELC-455-127                                    2
+
+                                                                                                                                                                                                                                                                                                               PROJECT NUMBER                               Fortescue Metals Group Ltd
+
+                                                                                                5   28.01.25 AS FOUND 23.10.23                                                      AP       CH       MP                                                                                                        CB17OP023A          CLOUDBREAK ORE HANDLING
+
+
+H                                                                                               4   21.08.19 ISSUED FOR CV005 UPGRADE                                                GV       JH       JH      GV       TZ       JH                                                                                                 WEST OVERLAND CONVEYOR                                                              H
+                                                                                                3   01.07.19 MARKUP NEW CV005 MOTOR EM02 ADDESD                                      GV       JH       JH       GV       TZ      JH                                                                            This drawing must notSR413 690V POWER DISTRIBUTION
+                                                                                                                                                                                                                                                                                                               be copied or reproduced
+                                                                                                2   13.07.18 AS BUILT                                                               KB       MP       KB       LB       BK       RS       AD                                                                   in any form or used for
+                                                                                                                                                                                                                                                                                                               any purpose other thanSINGLE LINE DIAGRAM
+   04057-DR-EL-0073            SWITCHROOM SR413 LAYOUT                                          1   19.06.18 AS BUILT                                                               KB       LB       KB       LB       BK       RS                                                                           originally intended without
+   04057-DR-EL-0033            MC413A 400V MCC SINGLE LINE DIAGRAM                              0   23.03.18 ISSUED FOR CONSTRUCTION                                                KB       BK       KB       ZG       BK       JP       RJ                                                                     written approval of        SCALE   DRG No:                                                     REV:
+                                                                                                                                                                                                                                                                                                              Fortescue MetalsGroup Ltd
+   REF DRG No.                                              TITLE                              REV   DATE                           DESCRIPTION                                     DRN      CHK      SUP      DES      DAP     PAP      FMG                                                NORTH                                    A1      NTS   CB17OP023A-04057-DR-EL-0004                                   5
+
+
+
+             1                                 2                                   3                                  4                                 5                                 6                                  7                                 8                                 9                                 10                                 11                                12

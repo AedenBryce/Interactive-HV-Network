@@ -1,0 +1,170 @@
+                   1                                         2                                          3                                         4                                         5                                          6                                         7                                          8                                         9                                         10                                         11                                        12
+
+
+                                                                                                                                                                FROM
+                                                                                                                                                  HV SWITCHBOARD SW411                                                                                                                                                                                                                                                                        NOTES:
+                                                                                                                                                        07110-EL-DR-5151
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                             1.    48V DC SUPPLIES FROM LOCAL DISTRIBUTION                              A
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    BOARD DB426B
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                 NS4267-F-01
+                                                                                                                                                                                                                                                                                                                                  TO MC426 COMMS CABINET
+
+                                                                                                                                                                                                                                                                                                 NS4267-F-02                      07110-EL-DR-4285
+                                                                                                                                                                                                                                                                                                                                                                                                                                              LEGEND:
+
+
+                                                                                                                                                                                                                                                                                                                                  TO DB426A                                                                                                   87B   =  BUS ZONE DIFFERENTIAL RELAY SYSTEM
+                                                                                                                                                                                                                                                                                              SW426-COMM-P-01                                                                                                                                 87T   =  TRANSFORMER DIFFERENTIAL RELAY SYSTEM
+                                                                                                                                                                                                                                                                                                                                  07110-EL-DR-3360
+                 DESAND HV SWITCHBOARD                                                                                                                                                                                                                                                                                                                                                                                                        86    =  LOCKOUT RELAY
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                             50    =  INSTANTANIOUS OVERCURRENT OR RATE OF                              B
+           9       TF440 FEEDER                                                                          SW426 INCOMER                                                                        TF426 FEEDER                    BUS EARTH                                                   TF427 FEEDER                             TF428 FEEDER                                                                                                        RISE RELAY
+                                                                                                                                                                           ES SW426
+                   TIER 0                                                                                TIER 1                                                            IN 01              TIER 2                          TIER 3                                                      TIER 5                                   TIER 4                                                                                                     51    =  AC TIME OVERCURRENT RELAY
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                              50G   =  GROUND INSTANTANIOUS OVERCURRENT OR
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       RATE OF RISE RELAY
+                                                                                                                                     SEL 351A                   600:1
+                                                                                                                                                                                                                                                   MOXA 405A                                                                                                                                                                                  51G   =  GROUND AC TIME OVERCURRENT RELAY
+                                                                                                                                      86
+
+
+                                                                                                                                      50
+                                                                                                                                                                 CB SW426 IN 01                                                                 5110         6110
+                                                                                                                                      51                         630A
+
+
+                                                                                                                                      50G
+
+
+                                                                                                                                      51G                                                                                                           SEL 2030
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                   22kV      110V
+
+
+
+
+
+
+
+D                                                                               +48VDC (PROTECTION)                                                                                                                                                                                                                                                                                                                                                                                                                      D
+
+                                                                                               COMMS
+
+                                                                                       +48VDC (TRIP)
+
+
+
+
+
+
+                                   CB TF440 FD                                                                                                                                                        CB TF426 FD                                                                                           CB TF427 FD                                                     CB TF428 FD
+                                           630A                                                                                                                                                       630A                                                                                                  630A                                                            630A
+
+
+
+                                                                       86                                                                                                     86                                                                                                    86                                                              86
+                                                                                                                                                                                                                                         ES SW426
+                                                                       50                                                                                                     50                                                                                                    50                                                              50
+
+
+                                   ES TF440 FD                         51                                                                                                     51                      ES TF426 FD                                                                   51                      ES TF427 FD                              51                      ES TF428 FD
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        E
+                                                                      50G                                                                                                     50G                                                                                                  50G                                                              50G
+
+
+                                                                      51G                                                                                                     51G                                                                                                  51G                                                              51G
+
+
+                                                                      87T                                                                                                     87T                                                                                                  87T                                                              87T
+
+
+                                           200:1                  SEL 387E                                                                                                 SEL 387A                   600:1                                                                      SEL 387E                   200:1                                SEL 387A                   100:1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        F
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        APPLICABLE DOCUMENTS
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        G
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     SPECIFICATIONS
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                             11098-07110-EL-SP-1121     TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                 TF440          SW440      SW440                                                                                  MC426                   TF426                                                                         SW427      SW427           TF427                               MC428                    TF428                                                                                                   EQUIPMENT INSTALLATION
+                                                                                                                  TO DB426B
+                                                                                                             07110-EL-DR-3365                                                                                                                                                                                                                                                                                                                                    STANDARD DRAWINGS
+                                                 TF440 22kV/690V/690V                                                                                                   TF426 22kV/400V                                                                                TF427 22kV/690V/690V                                                   TF428 22kV/400V
+                                                             SW440                                                                                                       MC426 - DESAND                                                                                     SW427 - DESAND                                                     MC428 - DESAND                                                                                11098-07110-EL-DR-1000     STANDARD DRAWINGS LIST
+                                                500CB-04230-DR-EL-0146                                                                                                  07110-EL-DR-2653                                                                                    07110-EL-DR-2463                                                  07110-EL-DR-2676                                                    VENDOR/DESIGNER DRG No.                                                                       REV:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    005001-4230-1400-SLD-0076                     8
+
+    This drawing and all the information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                PILBARA IRON ORE & INFRASTRUCTURE PROJECT928/01/25AS FOUND 23.10.23APMPCHCLIENTDRAWNR. TITREN2/11/06
+
+          on it is the property of                                                                                           8    18/03/13                AS BUILT - NO CHANGE                             SR   ZG   DGM   ZG   AB    AB
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                 ENGINEER        R. COX                   2/11/06
+        It is confidential and is given                                                                                      7    09/12/12    RE-ISSUED FOR CONSTRUCTION                                   JMc  PA    MR   PA    CD   PH
+                                                                                                                                                                                                                                                                                                                                                                                       CHECKED         D. PALMER                2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must07110-EL-DR-2357    SW426 - DESAND SINGLE LINE DIAGRAM - SHEET 2                    6    11/10/11    ADOPTED FOR CEPT - ISSUED FOR CONSTRUCTION                   JMc  PA    MR   PA    IM   PH                                                                                                                                                                                                                                                                                 H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                              LEAD ENG        L. BRUNN                 2/11/06     SW426 - DESAND
+        drawing nor any information   07000-EL-DR-2360       HV PROTECTION, SCHEMATIC DIAGRAM                                5   05/08/09     ISSUED FOR AS-BUILT                                          KW   CJT  CTE   CJT   DF   DF
+
+    concerning it may be copied, exhibited07110-EL-DR-2370   MINE MAIN EARTHING, SINGLE LINE DIAGRAM                         4   22/02/08     RE-ISSUED FOR CONSTRUCTION                                   CV   LB    AJ   LB    BB   BB                                                                                                                                               ENG MGR         J. BILESSURIS            3/11/06
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                      SINGLE LINE DIAGRAM - SHEET 1
+                                      07110-EL-DR-2360       MINE POWER DISTRIBUTION PROTECTION, SINGLE LINE DIAGRAM         3    20/12/07    RE-ISSUED FOR CONSTRUCTION                                   CV   EA    AJ   LB    NJ   NJ                                                                                 Team 45 is the integrated project management team of
+    photographs be taken of any article                                                                                                                                                                                                      Level 2, Hyatt Centre                                                                                                                     PROJ MGR        G. WIESER                3/11/06
+      fabricated or assembled from this07110-EL-DR-2350      MINE POWER DISTRIBUTION, SINGLE LINE DIAGRAM                    2    11/05/07    RE-ISSUED FOR CONSTRUCTION                                   JZ   RC    AJ   RC    NJ   GW                                                                         Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.                                                      PROJECT No:             DRG No:                                     REV:
+       drawing without the consent of                                                                                                                                                                                                        87 Adelaide Terrace                         Tel: +61 8 9266 0111Fax: +61 8 9221 9483ABN 52 103 096 340Team 45 and WorleyParsons act on behalf of and as disclosed agentSCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                  REFERENCES                            REV     DATE                             DESCRIPTION                          DRN   ENG  CHK   LE    EM   PM     East Perth  WA  6004  Australia                                                         of The Pilbara Infrastructure.                                    N/A                        A1         300/11098                    07110-EL-DR-2352                        9
+
+
+                   1                                         2                                          3                                         4                                         5                                          6                                         7                                          8                                         9                                         10                                         11                                        12

@@ -1,0 +1,175 @@
+                  1                                        2                                         3                                        4                                        5                                         6                                        7                                        8                                        9                                        10                                        11                                       12
+
+
+
+                 FROM HV SWITCHBOARD                                                                                                                                           TF453-C-01                                                                                                                                                                                                    FROM HV SWITCHBOARD
+                             SW451                                                                                         FROM HV SWITCHBOARD                                                                                                                                                                                                                                                          SW435                          NOTES:
+                     07110-EL-DR-2356                                                                                                             SW435                                                                                                                                                                                                                                          07110-EL-DR-2354
+
+A                                                                                                                                  07110-EL-DR-2354                                                                                                                                                                                                                                                                                     1. STATUTORY SAFETY RELAY                                          A
+                                                                                                                                                                               TF453-P-01
+                                                                                                                                                                                                                                                                                                                                                                                                                                          FOR EACH APRON FEEDER
+                                                                                                                                                                                                                                                                                                                                                                                                                                          LOCATED IN MASTER VSD.
+                                                                                                                                                                                                                                      TRANSFORMER - TF453
+                                                                                                                                                                                                                                      22kV/690V/690V
+                                                                                                                                                                                                                                      5MVA
+
+                                                                                                                                                                                                                   SCREEN
+
+
+                                                                                                                         SW453-P-01-1                                                                                                                                                     SW453-P-02-1
+
+                                                                                                                         SW453-P-01-2                                                                                                                                                     SW453-P-02-2
+
+                                                                                                                         SW453-P-01-3                                                                                                                                                     SW453-P-02-3
+
+                                                                                                                         SW453-P-01-4                                                                                                                                                     SW453-P-02-4
+
+                                                                                                                         SW453-P-01-5                                                                                                                                                     SW453-P-02-5
+B                                                                                                                                                     TRAIN LOADING VARIABLE SPEED DRIVE SWITCHBOARD                                                                                                                                                                                                                                                                                                       B
+
+                                                  5000:1                                                                                                                                            SW453                                                                                                                                                                            5000:1
+
+
+                                                        CB SW453 IN D                                                                                                                                                                                                                                                                                            CB SW453 IN Y
+                                                        2500A                                                                                                                                                                                                                                                                                                                 2500A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          C
+
+
+
+                                                                        690V, 2500A, 50kA FOR 1 Sec
+
+
+
+
+                                                                       690V, 2500A, 50kA FOR 1 Sec
+
+                230VAC UPS DB453C                             TIER 07F                                                      TIER 06F                                         TIER 05F                                                      TIER 04F                                         TIER 03F                                                      TIER 3F
+
+
+
+
+                         REFER DRG                            500A                                                          500A                                              500A                                                          500A                                             500A                                                          500A
+                      07110-EL-DR-3470
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          D
+
+                 48VDC UPS DB453B
+
+
+
+                         REFER DRG
+                      07110-EL-DR-3466
+
+
+
+              PROFIBUS MARSHALLING                                                                                                                                                                                                                                                                                                                                                                    230V AC
+                     PANEL MP4531                                                                                                                                                                                                                                                                                                                                                                     48V DC
+
+
+
+                         REFER DRG
+                      07110-EL-DR-4580
+                                                                                                                                                                                                                                                                                                                                                                                                      PROFIBUS
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          E
+
+              PROFIBUS MARSHALLING
+                    PANEL MP4532
+
+
+
+                         REFER DRG
+                      07110-EL-DR-4740
+
+
+
+
+
+
+
+
+
+                                                         VS4531 - MASTER                       FO COMMS                VS4532 - SLAVE                                   VS4533 - MASTER                       FO COMMS                VS4534 - SLAVE                                   VS4535 - MASTER                        FO COMMS                VS4536 - SLAVE
+                                                        ACS800-07-0440-7                                              ACS800-07-0440-7                                  ACS800-07-0440-7                                              ACS800-07-0440-7                                 ACS800-07-0440-7                                              ACS800-07-0440-7
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          F
+                                                          ESR4531 NOTE 1                                                                                                 ESR4533 NOTE 1                                                                                                  ESR4535 NOTE 1
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            AS BUILT
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         DATE:   12 /08  /2009
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          G
+                                                                          M                                                               M                                                M                                                             M                                                M                                                             M                                                                   APPLICABLE DOCUMENTS
+
+
+
+
+                                                                          3~                                                             3~                                                3~                                                            3~                                               3~                                                            3~                                                                              SPECIFICATIONS
+                                                          RTD                                                            RTD                                              RTD                                                           RTD                                               RTD                                                          RTD                                                                                                  TECHNICAL SPECIFICATION FOR ELECTRICAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                 11098-07000-EL-SP-1121     EQUIPMENT INSTALLATION
+                                                            AF401-EM01                                                     AF401-EM02                                       AF402-EM01                                                    AF402-EM02                                       AF403-EM01                                                    AF403-EM02
+                                                              HG FINES                                                       HG FINES                                         HG FINES                                                      HG FINES                                        SV FINES                                                       SV FINES                                                                                 STANDARD DRAWINGS
+                                                          APRON FEEDER                                                   APRON FEEDER                                     APRON FEEDER                                                  APRON FEEDER                                     APRON FEEDER                                                   APRON FEEDER
+                                                                315kW                                                          315kW                                            315kW                                                         315kW                                           315kW                                                           315kW                                                              07110-EL-DR-1000           STANDARD DRAWINGS LIST
+
+
+    This drawing and all the information                                                                                                                                                                                             CLIENT                                                                                                                                  DRAWN          W. LEONG                2/11/06
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                              PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+   THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                        ENGINEER       R. COX                  2/11/06
+       It is confidential and is given                                                                                    5   12/08/09    ISSUED FOR AS-BUILT                                        KW    BT   SQ   BT   DF    DF
+                                                                                                                                                                                                                                                                                                                                                                             CHECKED        D. PALMER               2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                 4   08/11/07    RE-ISSUED FOR CONSTRUCTION                                 PA    RP   AJ   LB    NJ  GW                                                                                                                                                                                                                                                                          H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                    LEAD ENG       L. BRUNN                2/11/06     SW453 - STOCK PILING APRON FEEDERS
+        drawing nor any information                                                                                       3   22/06/07    RE-ISSUED FOR CONSTRUCTION                                 JM    BN   AJ   LB    NJ  GW
+
+    concerning it may be copied, exhibited                                                                                2   11/05/07    RE-ISSUED FOR CONSTRUCTION                                 JZ    RC   AJ   RC    NJ  GW                                                                                                                                            ENG MGR        J. BILESSURIS           3/11/06
+      or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                           SINGLE LINE DIAGRAM - SHEET 1
+    photographs be taken of any article                                                                                   1   17/11/06    RE-ISSUED FOR CONSTRUCTION                                 DGP   RC   AS   LB    JB  GW                                                                               Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                       Level 2, Hyatt Centre                                             Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR      G. WIESER               3/11/06
+      fabricated or assembled from this                                                                                   0   02/11/06    ISSUED FOR CONSTRUCTION                                    WL    RC  DGP   LB    JB  GW                                                Tel: +61 8 9266 0111                                                                                                                           PROJECT No:            DRG No:                                    REV:
+       drawing without the consent of                                                                                                                                                                                                  87 Adelaide Terrace                       Fax: +61 8 9221 9483     Team 45 and WorleyParsons act on behalf of and as disclosed agent  SCALE
+   THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                REFERENCES                           REV     DATE                            DESCRIPTION                          DRN  ENG  CHK   LE   EM    PM     East Perth  WA  6004  Australia           ABN 52 103 096 340                         of The Pilbara Infrastructure.                                  NTS                       A1          300/11098                  07110-EL-DR-2468                       5
+
+
+
+                  1                                        2                                         3                                        4                                        5                                         6                                        7                                        8                                        9                                        10                                        11                                       12

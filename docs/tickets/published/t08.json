@@ -1,0 +1,15 @@
+{
+  "id": "T08",
+  "number": 9,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/9",
+  "title": "Navigate a connected overview and detailed substation views",
+  "blockedBy": [
+    3
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    3
+  ]
+}

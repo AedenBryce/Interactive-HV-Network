@@ -1,0 +1,210 @@
+                   1                                          2                                          3                                          4                                          5                                          6                                          7                                          8                                          9                                         10                                          11                                        12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              B
+
+
+
+
+
+
+
+
+                     CRUSHING AUXILIARIES MOTOR CONTROL CENTRE
+
+                       MC434A
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              C
+
+
+
+
+
+
+                              400V, 1000A, 50kA for 1 Sec
+
+                                             TIER 02F-15                          TIER 02F-20                              TIER 01F-00                            TIER 01F-05                                                     TIER 01F-10                                                            TIER 01F-15                     TIER 01F-20                                  TIER 05F-20
+
+
+
+
+
+
+                                              100A                                  5A                                      100A                                   100A                                                            32A                                                                   100A                              5A                                          50A
+
+
+
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              E
+
+
+
+
+
+                                                                                                                                                                                                                                                LCS   HE304-LCS01
+                                                                                                                                                                                                                                                 8                                                                                                                                             VS4326
+                                                                                                                                                                                                                                                                                                                                                                                       ACS550-01-031A-4
+                                                                                                                                                                                                                                                                                                                                                                                            B055+0J400
+                                                                                                                                                                                                                         LU304-JB01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              F
+
+
+                                           M        LCS                      M            LCS                            M        LCS                           M        LCS                                                                                                                          M        LCS                  M            LCS                                               M
+                                           3~        8                       3~            8                             3~        8                           3~         8                                                                                                                           3~        8                  3~             8                                               3~
+                                  TH                                                                            TH                                     TH                                                                                                                                    TH
+
+
+                                     HY303-PU01                            BL303-EM01                             LU304-PU01                            LU304-PU02                  LU304-HE01              LU304-HE02                LU304-HE03                LU304-HE04                     HY304-PU01                       BL304-EM01                                                  PU301-EM01
+                                     HYDRAULIC                           CRUSHER DUST                             LUBE PUMP                              LUBE PUMP                LUBE HEATER              LUBE HEATER               LUBE HEATER               LUBE HEATER                      HYDRAULIC                     CRUSHER DUST                                               CHILLED WATER
+                                         PUMP                               SEAL FAN                                   No.1                                   No.2                       No.1                    No.2                      No.3                      No.4                          PUMP                          SEAL FAN                                                   PUMP No. 1
+
+                                         37kW                                   1.5kW                                 37kW                                   37kW                        2kW                      2kW                      2kW                       2kW                            37kW                            1.5kW                                                        15kW
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              G
+                                                                                                                                    DUTY-STANDBY
+
+
+
+                                                                                                                                                                                                            CR304 - TERTIARY CRUSHER
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        AS BUILT
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     DATE:    11 /09  /2009
+
+
+
+
+
+
+
+
+    This drawing and all the information                                                                                                                                                                                                      CLIENT                                                                                                                                        DRAWN           JZ                       11/05/07
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                                PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                      ENGINEER        RC                       11/05/07
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                                     CHECKED         AJ                       11/05/07     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                                   LEAD ENG        RC                       11/05/07     MC434A - CRUSHING AUXILIARIES
+        drawing nor any information                                                                                            3   11/09/09     ISSUED FOR AS BUILT                                          YBC   BT   WL    CJT   DF   AC
+
+    concerning it may be copied, exhibited                                                                                     2   21/02/08     RE-ISSUED FOR CONSTRUCTION                                    JM   LB    AJ   LB    NJ   NJ                                                                                                                                                 ENG MGR         NJ                      14/05/07
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                            SINGLE LINE DIAGRAM - SHEET 3
+    photographs be taken of any article                                                                                        1   25/01/08     RE-ISSUED FOR CONSTRUCTION                                    JH   RP    AJ   LB    NJ   NJ                                                                                 Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                              Level 2, Hyatt Centre                                                 Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons. PROJ MGR        GW                       16/05/07
+      fabricated or assembled from this                                                                                        0   11/05/07     ISSUED FOR CONSTRUCTION                                       JZ   RC    AJ   RC    NJ   GW                                                 Tel: +61 8 9266 0111                                                                                                                                  PROJECT No:             DRG No:                                      REV:
+       drawing without the consent of                                                                                                                                                                                                           87 Adelaide Terrace                         Fax: +61 8 9221 9483      Team 45 and WorleyParsons act on behalf of and as disclosed agent     SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                   REFERENCES                            REV     DATE                              DESCRIPTION                           DRN   ENG  CHK   LE    EM   PM     East Perth  WA  6004  Australia             ABN 52 103 096 340                           of The Pilbara Infrastructure.                                     NTS                        A1          300/11098                    07110-EL-DR-2666                        3
+
+
+
+                   1                                          2                                          3                                          4                                          5                                          6                                          7                                          8                                          9                                         10                                          11                                        12

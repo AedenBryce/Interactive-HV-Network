@@ -1,0 +1,173 @@
+                   1                                         2                                         3                                          4                                         5                                         6                                          7                                         8                                         9                                         10                                         11                                        12
+
+
+          FROM DESAND SWITCHBOARD                                        TO RING MAIN UNIT
+                          SW426                                                   RMU713                                                                                    4 x 1C 500mm`                 MAIN CHANGEOVER                          4 x 1C 500mm`
+                  07110-EL-DR-2352                                        07110-EL-DR-2254                                                                                                                         SWITCH
+                                                                                                                                                                                CDG1-R                                                                 CDG7-R
+
+A                                                                                                                                                                              CDG1-W                                                                 CDG7-W                                                                                                                                                                                                                                                           A
+                                                                                                                                         DG1 (6207)                             CDG1-B                                MCS                              CDG7-B                          DG7 (6206)
+
+                                                                                                                                                                                CDG1-N                                                                 CDG7-N
+
+                                                                                                                                                                                CDG1-E                                                                 CDG7-E
+
+                                                                                                                                                                            120mm` EARTH                                                           120mm` EARTH
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                               PACKAGE SUBSTATION
+
+                                                                                                                                                                                                                                                                                                                                                                                                           SS712
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      B
+                                 SF RM712 IN02                                             SF RM712 IN01
+                                 630A                                                      630A
+
+
+                                 22kV, 630A
+
+
+
+
+
+                                                          CB TF712 FD
+                                                          630A
+
+                                                                                                                                                                                                                                                                                                                       3
+
+
+
+                                                             TF 712
+                                                             22kV/415V (NO LOAD)
+                                                             1.0MVA
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      C
+
+
+                                                                                                        RM712
+
+
+
+
+
+
+
+
+
+                                                             CABLES DISCONNECTED AND
+                                                             PULLED OUT OF MAIN DISTRIBUTION BOARD
+
+
+
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      D
+                                                                                                                                                                                                                                                                                                                                    PACKAGE SUBSTATION LV SWITCHBOARD
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                       SW712
+
+
+
+
+
+                                                          CB SW712 IN
+                                                          1600A
+
+
+
+
+                                                           400V (FULL LOAD), 2000A
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      E
+
+
+
+
+                                                                             CB                                    CB                                    CB                                    CB                                    CB                                    CB                                    CB                                    CB DB7128 FD                          CB DB7129 FD
+                                                                             630A                                  400A                                  160A                                  250A                                  400A                                  250A                                  400A                                  32A                                   32A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      F
+
+
+
+
+
+
+
+
+
+
+
+
+            TEAM 45                  TEAM 45
+             ANNEX                     OFFICE
+
+                                                                                                                                                                                                                                                                                                                                          DISTRIBUTION                           DISTRIBUTION
+             DB7121                    DB7122                        SPARE                                  TMDB                                 DB7134                                DB7133                                DB7132                                 DB7131                               FUTURE                                 BOARD                                 BOARD
+G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      G
+                                                                                                                                                                                                                                                                                                                                               DB712L1                               DB712L2
+
+
+                                                                                                                                              C45 OFFICE                           CRIB SHEDS                            CRIB SHEDS                            CRIB SHEDS                               SEWAGE                                LIGHTING                              LIGHTING
+                                                                                                                                                                                   ROWS 1 & 2                           ROWS 3 & 4                        ROW 5 & OFFICES                             TREATMENT
+
+                                                                    1 x 4C+E 120mm`                                                                                                                                                                                                                       PLANT
+
+                                                                        CDB-7122
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  APPROVED FOR CONSTRUCTION
+
+                                                                        CDB-7121
+
+                                                                    1 x 4C+E 120mm`
+
+
+    This drawing and all the information                                                                                                                                                                                                   CLIENT                                                                                                                                     DRAWN           W. LEONG                 2/11/06
+
+          on it is the property of                                                                                                                                                                                                                                                                                                                                                                                                         PILBARA IRON ORE & INFRASTRUCTURE PROJECT
+    THE PILBARA INFRASTRUCTURE PTY LTD                                                                                                                                                                                                                                                                                                                                                ENGINEER        R. COX                   2/11/06
+
+        It is confidential and is given                                                                                                                                                                                                                                                                                                                                               CHECKED         D. PALMER                2/11/06     CLOUD BREAK INFRASTRUCTURE
+H   to you for a limited purpose and must                                                                                                                                                                                                                                                                                                                                                                                                                                                                              H
+     be returned on request. Neither this                                                                                                                                                                                                                                                                                                                                             LEAD ENG        L. BRUNN                 2/11/06     SS712 - MINE SERVICES
+        drawing nor any information                                                                                          3   22/02/08    RE-ISSUED FOR CONSTRUCTION                                   JM    LB   AJ    LB   NJ    NJ
+
+    concerning it may be copied, exhibited                                                                                   2   11/05/07    RE-ISSUED FOR CONSTRUCTION                                    JZ   RC   AJ    RC   NJ   GW                                                                                                                                               ENG MGR         J. BILESSURIS            3/11/06
+       or furnished to others. Nor may                                                                                                                                                                                                                                                                                                                                                                                                     SINGLE LINE DIAGRAM
+    photographs be taken of any article                                                                                      1   06/12/06    RE-ISSUED FOR CONSTRUCTION                                   DGP   LB   AJ    LB   JB   GW                                                                                 Team 45 is the integrated project management team of
+                                                                                                                                                                                                                                            Level 2, Hyatt Centre                                                Fortescue Metals Group, The Pilbara Infrastructure and WorleyParsons.PROJ MGR        G. WIESER                3/11/06
+      fabricated or assembled from this07110-EL-DR-0026      ADMINISTRATION BUILDING SINGLE LINE DIAGRAM                     0   02/11/06    ISSUED FOR CONSTRUCTION                                      WL    RC   DGP   LB   JB   GW                                                 Tel: +61 8 9266 0111                                                                                                                               PROJECT No:             DRG No:                                     REV:
+       drawing without the consent of                                                                                                                                                                                                       87 Adelaide Terrace                         Fax: +61 8 9221 9483     Team 45 and WorleyParsons act on behalf of and as disclosed agent    SCALE
+    THE PILBARA INFRASTRUCTURE PTY LTD       REF No.                                  REFERENCES                           REV     DATE                             DESCRIPTION                           DRN  ENG   CHK   LE   EM   PM     East Perth  WA  6004  Australia             ABN 52 103 096 340                          of The Pilbara Infrastructure.                                    N/A                        A1          300/11098                   07110-EL-DR-2253                       3
+
+
+
+                   1                                         2                                         3                                          4                                         5                                         6                                          7                                         8                                         9                                         10                                         11                                        12

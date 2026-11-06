@@ -1,0 +1,11 @@
+{
+  "id": "T01",
+  "number": 2,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/2",
+  "title": "Run a first local switching simulation",
+  "blockedBy": [],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": []
+}

@@ -1,0 +1,217 @@
+             1                                   2                                     3                                  4                                   5                                   6                                  7                                   8                                   9                                  10                                  11                                  12
+
+
+
+                                                               FROM                                                                                                                                                                                                                                                                                                      NOTES:
+                                                   HV SWITCHBOARD SW454
+                                                        04400-DR-EL-8001
+
+A                                                                                                                                                                                                                                                                                                                                                                        1.   48V DC SUPPLIES FROM UPS DISTRIBUTION BOARD               A
+                                                                                                                                                                                                                                                                                                                                                                              DB505B.
+
+
+
+                                                                                                                                                          NSXXXX-F-01                 TO MP105 COMMS CABINET
+
+
+                                                                                                                                                          NSXXXX-F-02                 500CB-04220-DR-IN-0047
+                                                                                                                                                                                                                                                                                                                                                                         LEGEND:
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                         87T  =  TRANSFORMER DIFFERENTIAL RELAY SYSTEM
+
+                                                                                                                                                                                                                                                                                                                                                                         86   =  LOCKOUT RELAY
+
+                                                                                                                                                                                                                                                                                                                                                                         50   =  INSTANTANEOUS OVERCURRENT OR RATE OF
+                                                                                                                                                                                                                                                               WET SCREENING & SCRUBBING 22kV SWITCHROOM SR505                                                                   RISE RELAY
+
+                                                                                                                                                                                                                                                                                                                        22kV SWITCHBOARD SW505                           51   =  AC TIME OVERCURRENT RELAY
+
+                                                                                                                                                                                                                                                                                                                                                                         50G  =  GROUND INSTANTANIEOUS OVERCURRENT OR
+B         SW505 INCOMER                                                   ES SW505 IN 01        BUS EARTH                                                  TF506 FEEDER                                                         TF507 FEEDER                                                    TF508 FEEDER                                                                     RATE OF RISE RELAY                                     B
+          TIER 1                3                                                               TIER 2                                                     TIER 8                                                               TIER 7                         3                                TIER 6
+                                                                                                                                                                                                                                                                                                                                                                         51G  =  GROUND AC TIME OVERCURRENT RELAY
+
+                             SEL 351A                           600:1
+
+
+                                86
+
+
+                                50
+
+                                                                CB SW505 IN 01
+                                51                              630A
+                                                                                                                     SEL 2032
+                               50G
+
+
+                                51G
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                              22kV, 1250A, 25kA 3 Sec                                                                                                  C
+
+
+
+                                                          110V AC CONTROL
+
+
+
+
+
+
+
+
+
+
+                                                                                                                            22kV   110V
+
+
+
+
+
+
+
+                                                          +48VDC
+
+
+
+
+D              COMMS                                                                                                                                                                                                                                                                                                                                                                                                                    D
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                          CB TF506 FD630A                                                  CB TF507 FD630A                                                 CB TF508 FD630A
+
+                                                                                                                                                                           86                                                                   86                                                               86
+                                                                                                                ES SWXXX
+
+                                                                                                                                                                           50                                                                   50                                                               50
+
+
+                                                                                                                                                                           51                                                                   51                                                               51
+
+
+                                                                                                                                                                          50G                                                                   50G                                                             50G
+
+E                                                                                                                                                                                                         ES TF506 FD                                                      ES TF507 FD                                                     ES TF508 FD                                                                                  E
+                                                                                                                                                                          51G                                                                   51G                                                             51G
+
+
+                                                                                                                                                                          87T                                                                   87T                                                             87T
+
+
+                                                                                                                                                                        SEL 387E                           200:1                             SEL 387A                      100:1                              SEL 387A                     100:1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                       F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+G                                                                                                                                                                                                                                                                                                                                                                                                                                       G
+
+
+
+                   TO DB505B                                                                                                                                 SW506       SW506                   TF506                                     MC507                 TF507                                     MC508                 TF508
+           500CB-04220-DR-EL-0002
+
+                                                                                                                                                                    TF506 22kV/690V/690V                                                     TF507 22kV/400V                                                 TF508 22kV/400V
+                                                                                                                                                           SW506 - WET SCREENING & SCRUBBING                                     MC507 - WET SCREENING & SCRUBBING                               MC508 - WET SCREENING & SCRUBBING
+                                                                                                                                                                    500CB-04220-DR-EL-0060                                               500CB-04220-DR-EL-0037                                          500CB-04220-DR-EL-0045                  VENDOR/DESIGNER DRG No.                                                        REV:
+                                                                                                                                                                                                                                                                                                                                                                 005001-2200-1400-SLD-0001                                       2
+
+
+
+
+                                                                                                                                                                                                                                                                                   STANDARDS                               PROJECT NUMBER                                 Fortescue Metals Group Ltd
+
+                                                                                                                                                                                                                                                                                    CHECK
+                                                                                                                                                                                                                                                                                   APPROVED
+                                                                                                                                                                                                                                                                                                                                500CB            CLOUDBREAK MODIFICATION PROJECT
+
+
+H                                                                                                                                                                                                                                                                                                                                                WET SCRUBBING / SCREENING                                                              H
+                                                                                                   3    28.01.25 AS FOUND 23.10.24                                                          AP       CH       MP                                                                                                           This drawing must not SW505
+                                                                                                                                                                                                                                                                                                                           be copied or reproduced
+                                                                                                   2    18.03.13 AS BUILT - NO CHANGE                                                       SR      DGM       DGM       ZG       AB       AB       MT                                                                      in any form or used for
+                                                                                                                                                                                                                                                                                                                           any purpose other thanSINGLE LINE DIAGRAM - SHEET 1
+                                                                                                    1   29.12.12 RE-ISSUED FOR CONSTRUCTION                                                JMc       MR       MR        PA       CD       PH       NHJ                                                                    originally intended without
+   500CB-04220-DR-EL-0055        SW505 SINGLE LINE DIAGRAM SHEET 2                                 0    10.10.11 ISSUED FOR CONSTRUCTION                                                   JMc       MR       MR        PA       IMD      PH       NHJ                                                                       written approval of         SCALE   DRG No:                                                        REV:
+                                                                                                                                                                                                                                                                                                                          Fortescue MetalsGroup Ltd
+   REF DRG No.                                                TITLE                                REV   DATE                            DESCRIPTION                                       DRN      CHK       SUP      DES      DAP      PAP      FMG                                                   NORTH                                     A1      NTS          500CB-04220-DR-EL-0054                                    3
+
+
+
+             1                                   2                                     3                                  4                                   5                                   6                                  7                                   8                                   9                                  10                                  11                                  12

@@ -1,0 +1,377 @@
+{
+  "status": "drawing-evidence preparation; not runtime model; not owner accepted",
+  "reviewDate": "2026-10-22",
+  "sources": [
+    {
+      "ref": "W1",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-5151.pdf",
+      "sha256": "5a6bea0965b039e8653b581dda775069192e156233be5ffbebb97caa333c3975",
+      "projectRevision": 7,
+      "revisionDate": "2025-01-28",
+      "page": 1
+    },
+    {
+      "ref": "W2",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0010.pdf",
+      "sha256": "cd77222ad84e15a9ca13d2120994db03be9765ed1a923595bc17bacca4a2795f",
+      "projectRevision": 0,
+      "revisionDate": "2025-10-27",
+      "page": 1
+    },
+    {
+      "ref": "W3",
+      "path": "drawings/Asset Drawing Repo/CB-10016-DR-EL-0011.pdf",
+      "sha256": "5efee91c3b54fdd76e1927a1821bbd2d972be5a2f7e550e5075cac599a14b9c9",
+      "projectRevision": 0,
+      "revisionDate": "2025-10-27",
+      "page": 1
+    },
+    {
+      "ref": "W4",
+      "path": "drawings/Asset Drawing Repo/11098-07110-EL-DR-2350.pdf",
+      "sha256": "758316a53d6c34d9d5273dbc77e4556753bfc2fcbe9e951745b0aec6693c2b08",
+      "projectRevision": 16,
+      "revisionDate": "2016-05-31",
+      "page": 1
+    }
+  ],
+  "buses": [
+    {
+      "candidateKey": "sw411-bus-a",
+      "printedLabel": "BUS A",
+      "source": "W2",
+      "region": "upper-left"
+    },
+    {
+      "candidateKey": "sw411-bus-b",
+      "printedLabel": "BUS B",
+      "source": "W3",
+      "region": "upper-left"
+    }
+  ],
+  "busTie": {
+    "printedLabel": "CB SW411 BT",
+    "tier": 8,
+    "betweenBusCandidates": [
+      "sw411-bus-a",
+      "sw411-bus-b"
+    ],
+    "evidence": [
+      "W1 central bus",
+      "W3 upper-left",
+      "W4 top"
+    ],
+    "initialPosition": null
+  },
+  "incomers": [
+    {
+      "candidateKey": "sw411-in-01",
+      "printedBreaker": "CB SW411 IN01",
+      "printedEarthSwitch": "ES SW411 IN01",
+      "bus": "A",
+      "tier": 6,
+      "earthBranchSide": "incoming-line side of breaker",
+      "evidence": [
+        "W1 central incomer bay",
+        "W2 upper-left"
+      ],
+      "sourceAssignmentStatus": "Unconfirmed - R001",
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-in-03",
+      "printedBreaker": "CB SW411 IN03",
+      "printedEarthSwitch": "ES SW411 IN03",
+      "bus": "A",
+      "tier": 7,
+      "earthBranchSide": "incoming-line side of breaker",
+      "evidence": [
+        "W1 central incomer bay",
+        "W2 upper-left"
+      ],
+      "sourceAssignmentStatus": "Unconfirmed - R001",
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-in-04",
+      "printedBreaker": "CB SW411 IN04",
+      "printedEarthSwitch": "ES SW411 IN04",
+      "bus": "B",
+      "tier": 10,
+      "earthBranchSide": "incoming-line side of breaker",
+      "evidence": [
+        "W1 central incomer bay",
+        "W3 upper-left"
+      ],
+      "sourceAssignmentStatus": "Unconfirmed - R001",
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-in-02",
+      "printedBreaker": "CB SW411 IN02",
+      "printedEarthSwitch": "ES SW411 IN02",
+      "bus": "B",
+      "tier": 11,
+      "earthBranchSide": "incoming-line side of breaker",
+      "evidence": [
+        "W1 central incomer bay",
+        "W3 upper-left"
+      ],
+      "sourceAssignmentStatus": "Unconfirmed - R001",
+      "initialPosition": null
+    }
+  ],
+  "feeders": [
+    {
+      "candidateKey": "sw411-tier-1",
+      "bus": "A",
+      "tier": 1,
+      "printedBreaker": "CB SW454 FD01",
+      "printedEarthSwitch": "ES SW454 FD01",
+      "conflictingAliases": [],
+      "destination": "SW454",
+      "cableLabelW1": "SW454-P-01",
+      "destinationDrawingReferenceW1": "04400-EL-DR-8001",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W2",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-2",
+      "bus": "A",
+      "tier": 2,
+      "printedBreaker": "CB SW451 FD01",
+      "printedEarthSwitch": "ES SW451 FD01",
+      "conflictingAliases": [],
+      "destination": "SW451",
+      "cableLabelW1": "SW451-P-01",
+      "destinationDrawingReferenceW1": "07110-EL-DR-2356",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W2",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-3",
+      "bus": "A",
+      "tier": 3,
+      "printedBreaker": "CBW OHL FD",
+      "printedEarthSwitch": "ES OHL FD",
+      "conflictingAliases": [
+        {
+          "source": "W1",
+          "breaker": "CB SPARE",
+          "earthSwitch": "ES SPARE"
+        }
+      ],
+      "destination": "OHL WEST / CV006 POWER DISTRIBUTION",
+      "cableLabelW1": null,
+      "destinationDrawingReferenceW1": "CB19OP001B-04057-DR-EL-0001",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W2",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-4",
+      "bus": "A",
+      "tier": 4,
+      "printedBreaker": "CB SW435 FD01",
+      "printedEarthSwitch": "ES SW435 FD01",
+      "conflictingAliases": [],
+      "destination": "SW435",
+      "cableLabelW1": "SW435-P-01",
+      "destinationDrawingReferenceW1": "07110-EL-DR-2354",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W2",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-13",
+      "bus": "B",
+      "tier": 13,
+      "printedBreaker": "CB SW431 FD01",
+      "printedEarthSwitch": "ES SW431 FD01",
+      "conflictingAliases": [],
+      "destination": "SW431",
+      "cableLabelW1": "SW431-P-01",
+      "destinationDrawingReferenceW1": "07110-EL-DR-2353",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W3",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-14",
+      "bus": "B",
+      "tier": 14,
+      "printedBreaker": "CB SW426 FD01",
+      "printedEarthSwitch": "ES SW426 FD01",
+      "conflictingAliases": [],
+      "destination": "SW426",
+      "cableLabelW1": "SW426-P-01",
+      "destinationDrawingReferenceW1": "07110-EL-DR-2352",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W3",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-15",
+      "bus": "B",
+      "tier": 15,
+      "printedBreaker": "CB SW421 FD01",
+      "printedEarthSwitch": "ES SW421 FD01",
+      "conflictingAliases": [],
+      "destination": "SW421",
+      "cableLabelW1": "SW421-P-01",
+      "destinationDrawingReferenceW1": "07110-EL-DR-2351",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W3",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    },
+    {
+      "candidateKey": "sw411-tier-16",
+      "bus": "B",
+      "tier": 16,
+      "printedBreaker": "CB RM721 FD01",
+      "printedEarthSwitch": "ES RM721 FD01",
+      "conflictingAliases": [
+        {
+          "source": "W1",
+          "breaker": "CB SW454 FD 01",
+          "earthSwitch": "ES SW454 FD 01",
+          "cable": "SW454-P-01"
+        }
+      ],
+      "destination": "RM721",
+      "cableLabelW1": null,
+      "destinationDrawingReferenceW1": "07110-EL-DR-2256",
+      "earthBranchSide": "outgoing-cable side of breaker",
+      "evidence": [
+        {
+          "ref": "W1",
+          "region": "central feeder bay and lower destination"
+        },
+        {
+          "ref": "W3",
+          "region": "upper-left SW411 diagram"
+        }
+      ],
+      "currentInstallationConfirmed": false,
+      "initialPosition": null
+    }
+  ],
+  "busEarthSwitches": [
+    {
+      "printedLabel": "ES BUS A SW411",
+      "bus": "A",
+      "tier": 5,
+      "source": "W2",
+      "region": "upper-left"
+    },
+    {
+      "printedLabel": "ES BUS B SW411",
+      "bus": "B",
+      "tier": 12,
+      "source": "W3",
+      "region": "upper-left"
+    }
+  ],
+  "interlockEvidence": {
+    "source": "W1",
+    "page": 1,
+    "clause": "note 3",
+    "text": "MECHANICAL INTERLOCK OF EARTHING TO BE PROVIDED TO SWITCHYARD AND POWER STATION",
+    "installedConditions": "Unconfirmed",
+    "affectedDeviceSet": "Unconfirmed",
+    "permissionConfirmed": false
+  },
+  "constructionInterpretation": {
+    "classification": "Inference",
+    "candidateKeysArePrintedTerminalTags": false,
+    "terminalRoles": [
+      "bus-side",
+      "incoming-line side",
+      "outgoing-cable side",
+      "earth"
+    ],
+    "earthIsThroughRoute": false,
+    "noElectricalCalculations": true
+  },
+  "unresolved": [
+    "R001 source mapping/commissioning",
+    "R002 tier16 device/cable identities",
+    "R003 installed interlock conditions and affected set",
+    "R005 starting configuration",
+    "SW411-Q01 OHL/SPARE identity/continuation",
+    "SW411-Q02 repeated TFX4 source labels and terminal relationships",
+    "SW411-Q03 bus-tie rating1600A vs2000A"
+  ]
+}

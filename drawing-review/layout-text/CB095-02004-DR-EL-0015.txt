@@ -1,0 +1,222 @@
+               1                                         2                                            3                                         4                                         5                                         6                                         7                                         8                                         9                                         10                                        11                                        12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  B
+                                                                                                                                                                                                                                                                                                                                                                                                                                           CRUSHING MCC414
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  C
+
+
+
+
+
+
+
+                                                                              3P, 415V, 50Hz, 3200A, 65kA FOR 1s
+
+                                                                                                    3                              3                               3                                   3                                   3                           3                        3                               3                              3                               3                              3                                      3
+
+
+
+
+
+
+                                                                                                    MCCB                            MCCB                           MCCB                                 MCCB                                MCCB                       MCCB                      MCCB                            MCCB                           MCCB                           MCCB                            MCCB                                  MCCB
+
+D                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  D
+
+
+
+
+                                                                                                                                                                                                              NOTE 2                             NOTE 2                                               NOTE 2
+
+
+
+                                                                                                                                                                                                         SS      BYPASS                       SS     BYPASS                                        SS     BYPASS                  SS      BYPASS
+
+
+                                                                                                                                   NOTE 1                                                                                                                                                                                                                      NOTE 1                          NOTE 1
+
+
+
+
+
+
+
+
+
+
+
+
+E                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  E
+
+
+
+
+
+
+
+
+                                                                                                    3                                                              3                                 3                                      3                          3                         3                                                                                                                            3                                      3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+F                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  F
+
+
+
+                                                                                                 M                                                              M                                    M                                   M                                                    M                                                                                                                             M                                     M
+
+
+
+                                                                                                                                                             2.2kW                                250KW                               250KW                       22KW                     315kW                                                                                                                         0.37kW                                 30kW
+                                                                                               75kW                           SPARE                           HP02                                CR001                                CR002                      MG01                     CV003                                                                                          15KW                            GP03                                 SP001
+                                                                                              PU-400             CB095-02004-DR-EL-0009               HYDRAULIC PUMP                     PRIMARY CRUSHER                     PRIMARY CRUSHER                TRAMP METAL                  PRIMARY                                                          SPARE                          SPARE1                    PRIMARY CRUSHER                          SUMP PUMP
+                                                                                            RAW WATER                                                     FOR CR002                 CB095-02006-DR-EL-0001               CB095-02006-DR-EL-0002                 MAGNET                   CRUSHER                                                                                     SPARE DRIVE                     GREASE PUMP
+                                                                                         BOOSTER PUMP                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           CB16OP003-02004-DR-EL-0005CB095-02004-DR-EL-00041518-00-SD-026PRODUCTCB095-02004-DR-EL-0010FOR AF005
+                                                                                                                                                                                                                                                                                        CONVEYOR                                     5                                                                       CB095-02004-DR-EL-0011
+
+G                                                                                                                                                                                                                                                                            CB095-02004-DR-EL-0001                                                                                                                                                                                                                G
+
+
+
+       CONSTRUCTION NOTES:
+       1. MOTOR PROTECTION RELAY TO BE UPGRADED.                                                                                                                                                                                                                                                                                                                                                                                                                                                          5
+       2. CONTACTOR TO BE UPGRADED.
+       3. NOTES TO BE REMOVED AFTER CONSTRUCTION.
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Level 5, 93-95 William Street, Perth, Western Australia 6000
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ph +61 8 6220 2000, www.verbrec.com
+
+                                                                                                                                                                                                                                                                                                                                                                                                             VENDOR/DESIGNER DRG No.                                                                      REV:
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                   PROJECT NUMBER                                         Fortescue Metals Group Ltd
+
+                                                                                                                     5    05.09.24    ISSUED FOR CONSTRUCTION - CB25OP003A                                                   LN         GG         GG         LN         HS        HS         MG                                                                                         CB095               1518 FMG CLOUDBREAK OVERSIZE REDUCTION
+
+
+H                                                                                                                    4     09.10.15   AS BUILT                                                                               NB         TR                                                                                                                                                                   CRUSHING                                                                                              H
+                                                                                                                     3    23.03.12    AS BUILT - CB145                                                                       AH         JZ         AH         IK         IK        SD         LB                                                                                    This drawing must not    MOTOR CONTROL CENTER - MCC414
+                                                                                                                                                                                                                                                                                                                                                                                   be copied or reproduced
+                                                                                                                     2     13.03.12   ISSUED FOR CONSTRUCTION - CV004 & SN003 REMOVED - CB145                                AH         JZ         AH         IK         IK        SD         LB                                                                                   in any form or used for
+                                                                                                                                                                                                                                                                                                                                                                                   any purpose other than    SINGLE LINE DIAGRAM
+                                                                                                                     1                AS BUILT                                                                                                                                                                                                                                    originally intended without
+                                                                                                                     0    14.04.10    ISSUED FOR CONSTRUCTION                                                                MH                                                                                                                                                      written approval of              SCALE     DRG No:                                                                   REV:
+                                                                                                                                                                                                                                                                                                                                                                                  Fortescue MetalsGroup Ltd
+   REF DRG No.                                                           TITLE                                      REV     DATE                                 DESCRIPTION                                                DRN        CHK        SUP        DES        DAP       PAP         FMG                                                           NORTH                                             A1       NTS             CB095-02004-DR-EL-0015                                              5
+
+
+
+               1                                         2                                            3                                         4                                         5                                         6                                         7                                         8                                         9                                         10                                        11                                        12

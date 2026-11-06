@@ -1,0 +1,17 @@
+{
+  "id": "T05",
+  "number": 6,
+  "url": "https://github.com/AedenBryce/Interactive-HV-Network/issues/6",
+  "title": "Inspect provisional models without hiding uncertainty",
+  "blockedBy": [
+    3,
+    4
+  ],
+  "labelVerified": true,
+  "bodyVerified": true,
+  "nativeDependenciesVerified": true,
+  "nativeBlockedBy": [
+    3,
+    4
+  ]
+}

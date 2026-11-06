@@ -1,0 +1,8 @@
+.session-history { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
+.history-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.history-controls button { padding: 8px 10px; border: 1px solid #092443; border-radius: 5px; background: white; color: #102640; font-size: 13px; }
+.history-controls button:hover:not(:disabled) { background: #edf2f7; }
+.history-controls button:disabled { color: #748196; border-color: #d3dce6; background: #f1f4f8; }
+.session-history p, .session-history li { color: #526279; font-size: 13px; }
+.session-history ol { margin: 10px 0 0; padding-left: 20px; max-height: 180px; overflow: auto; }
+.session-history li { padding: 3px 0; }
