@@ -36,6 +36,7 @@ export type SessionSnapshot = {
   connectionResults: Record<string, ConnectionResult>;
   history: SessionAction[];
   canUndo: boolean;
+  programCaptureActive: boolean;
 };
 export type Impact = { assetId: string; connectivityChanged: boolean; routesChanged: boolean; before: AssetConnectivity; after: AssetConnectivity };
 export type ActionResult = { ok: true } | { ok: false; error: string };
@@ -51,6 +52,8 @@ export class SimulationSession {
   #history: HistoryEntry[] = [];
   #nextActionId = 1;
   #packages = new Map<string, string>();
+  #programCapture?: { token: number; historyStart: number };
+  #nextProgramCaptureToken = 1;
 
   constructor(model: unknown) {
     this.#model = modelSchema.parse(model);
@@ -61,6 +64,7 @@ export class SimulationSession {
   }
 
   loadModel(input: unknown): ActionResult {
+    if (this.#programCapture) return { ok: false, error: 'Model selection is blocked while a switching program is being captured.' };
     const result = modelSchema.safeParse(input);
     if (!result.success) return { ok: false, error: result.error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join('\n') };
     const registered = this.#registerPackage(result.data);
@@ -81,6 +85,7 @@ export class SimulationSession {
   }
 
   loadScenario(input: unknown): ActionResult {
+    if (this.#programCapture) return { ok: false, error: 'Scenario loading is blocked while a switching program is being captured.' };
     const result = scenarioSchema.safeParse(input);
     if (!result.success) return { ok: false, error: result.error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join('\n') };
     const registered = this.#registerPackage(result.data.model);
@@ -132,6 +137,7 @@ export class SimulationSession {
   }
 
   changeSource(sourceId: string, enabled: boolean): ActionResult {
+    if (this.#programCapture) return { ok: false, error: 'Source availability changes are blocked while a switching program is being captured.' };
     if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
     if (!this.#model.sources.some(source => source.id === sourceId) || typeof enabled !== 'boolean') return { ok: false, error: `Unknown source or unsupported availability: ${sourceId}.` };
     if (this.#sources[sourceId] === enabled) return { ok: true };
@@ -147,6 +153,7 @@ export class SimulationSession {
   }
 
   undo(): ActionResult {
+    if (this.#programCapture) return { ok: false, error: 'Use confirmed switching-program undo while capture is active.' };
     if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
     const previous = this.#history.at(-1);
     if (!previous) return { ok: false, error: 'No accepted action is available to undo.' };
@@ -159,12 +166,43 @@ export class SimulationSession {
   }
 
   reset(): ActionResult {
+    if (this.#programCapture) return { ok: false, error: 'Reset is blocked while a switching program is being captured.' };
     if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
     const before = this.snapshot().connectivity;
     this.#devices = structuredClone(this.#model.starting.devices);
     this.#sources = { ...this.#model.starting.sources };
     this.#history = [];
     this.#nextActionId = 1;
+    this.#recordImpact(before);
+    return { ok: true };
+  }
+
+  beginProgramCapture(): { ok: true; token: number; historyStart: number } | { ok: false; error: string } {
+    if (this.#mode === 'view-only') return { ok: false, error: viewOnlyReason };
+    if (this.#programCapture) return { ok: false, error: 'A switching program is already being captured.' };
+    const token = this.#nextProgramCaptureToken++;
+    const historyStart = this.#history.length;
+    this.#programCapture = { token, historyStart };
+    return { ok: true, token, historyStart };
+  }
+
+  endProgramCapture(token: number): ActionResult {
+    if (!this.#programCapture || this.#programCapture.token !== token) return { ok: false, error: 'Switching-program capture is no longer active.' };
+    this.#programCapture = undefined;
+    return { ok: true };
+  }
+
+  undoProgramCaptureAction(token: number, expectedActionId: number): ActionResult {
+    const capture = this.#programCapture;
+    if (!capture || capture.token !== token) return { ok: false, error: 'Switching-program capture is no longer active.' };
+    const previous = this.#history.at(-1);
+    if (!previous || this.#history.length <= capture.historyStart || previous.action.id !== expectedActionId || previous.action.kind === 'source') {
+      return { ok: false, error: 'The confirmed action is no longer the latest switching-program step.' };
+    }
+    const before = this.snapshot().connectivity;
+    this.#devices = structuredClone(previous.before.devices);
+    this.#sources = { ...previous.before.sources };
+    this.#history.pop();
     this.#recordImpact(before);
     return { ok: true };
   }
@@ -208,7 +246,8 @@ export class SimulationSession {
       switching,
       connectionResults: uncertainty.connectionResults,
       history: this.#history.map(entry => entry.action),
-      canUndo: this.#mode === 'exploration' && this.#history.length > 0,
+      canUndo: this.#mode === 'exploration' && !this.#programCapture && this.#history.length > 0,
+      programCaptureActive: !!this.#programCapture,
     });
   }
 }

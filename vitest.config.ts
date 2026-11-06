@@ -7,6 +7,7 @@ export default defineConfig({
     include: [
       'src/session/**/*.test.ts',
       'src/program/asset-program-metadata.test.ts',
+      'src/program/switching-program-coordinator.test.ts',
       'src/ui/object-rotation.test.ts',
       'src/ui/AssetActions.test.tsx',
       'src/ui/connector-clearance.test.ts',
