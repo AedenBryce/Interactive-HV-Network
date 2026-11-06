@@ -1,0 +1,452 @@
+"id","label","kind","removable","positions","starting"
+"sw411:in-01:cb","CB SW411 IN01","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw411:in-01:es","ES SW411 IN01","earth-switch",,"open;closed","""open"""
+"sw411:in-03:cb","CB SW411 IN03","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:in-03:es","ES SW411 IN03","earth-switch",,"open;closed","""open"""
+"sw411:in-04:cb","CB SW411 IN04","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:in-04:es","ES SW411 IN04","earth-switch",,"open;closed","""open"""
+"sw411:in-02:cb","CB SW411 IN02","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw411:in-02:es","ES SW411 IN02","earth-switch",,"open;closed","""open"""
+"sw411:tier-01:cb","CB SW454 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-01:es","ES SW454 FD01","earth-switch",,"open;closed","""open"""
+"sw411:tier-02:cb","CB SW451 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-02:es","ES SW451 FD01","earth-switch",,"open;closed","""open"""
+"sw411:tier-03:cb","T3 CB — unconfirmed","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-03:es","T3 ES — unconfirmed","earth-switch",,"open;closed","""open"""
+"sw411:tier-04:cb","CB SW435 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-04:es","ES SW435 FD01","earth-switch",,"open;closed","""open"""
+"sw411:tier-13:cb","CB SW431 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-13:es","ES SW431 FD01","earth-switch",,"open;closed","""open"""
+"sw411:tier-14:cb","CB SW426 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-14:es","ES SW426 FD01","earth-switch",,"open;closed","""open"""
+"sw411:tier-15:cb","CB SW421 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-15:es","ES SW421 FD01","earth-switch",,"open;closed","""open"""
+"sw411:tier-16:cb","CB RM721 FD01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw411:tier-16:es","ES RM721 FD 01","earth-switch",,"open;closed","""open"""
+"sw411:bus-a:es","ES BUS A SW411","earth-switch",,"open;closed","""open"""
+"sw411:bus-b:es","ES BUS B SW411","earth-switch",,"open;closed","""open"""
+"sw411:bus-tie:cb","CB SW411 BT","breaker","breaker","","{""contact"":""open"",""racking"":""out""}"
+"station:sb01:f4:cb","SB-01 F4 CB","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"station:sb01:f4:es","SB-01 F4 ES","earth-switch",,"open;closed","""open"""
+"station:sb02:f1:cb","SB-02 F1 CB","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"station:sb02:f1:es","SB-02 F1 ES","earth-switch",,"open;closed","""open"""
+"station:sb02:f4:cb","SB-02 F4 CB","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"station:sb02:f4:es","SB-02 F4 ES","earth-switch",,"open;closed","""open"""
+"line33:pole-1-recloser","Pole 1 recloser","breaker",,"open;closed","""closed"""
+"line33:pole-2-abs","Pole 2 ABS","disconnector",,"open;closed","""closed"""
+"line33:tie-in-abs","49-38-1 tie ABS","disconnector",,"open;closed","""closed"""
+"line33:pole-201-abs","Pole 201 exit ABS","disconnector",,"open;closed","""closed"""
+"line33:hopper-286-fused-abs","Hopper10 fused ABS","disconnector",,"open;closed","""closed"""
+"sw431:in:cb","CB SW431 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:in:es","ES SW431 IN 01","earth-switch",,"open;closed","""open"""
+"sw431:sw435:cb","CB SW435 FD 02","breaker","breaker","","{""contact"":""open"",""racking"":""out""}"
+"sw431:sw435:es","ES SW435 FD 02","earth-switch",,"open;closed","""open"""
+"sw431:bus:es","ES SW431","earth-switch",,"open;closed","""open"""
+"sw431:tf431:hv-cb","CB TF431 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf431:hv-es","ES TF431 FD","earth-switch",,"open;closed","""open"""
+"sw431:mc431:cb","CB MC431 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf432:hv-cb","CB TF432 FD · Tier 5","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf432:hv-es","ES TF432 FD · Tier 5","earth-switch",,"open;closed","""open"""
+"sw431:sw432:d:cb","CB SW432 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:sw432:y:cb","CB SW432 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf437:hv-cb","CB TF437 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf437:hv-es","ES TF437 FD","earth-switch",,"open;closed","""open"""
+"sw431:sw437:d:cb","CB SW437 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:sw437:y:cb","CB SW437 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf442:hv-cb","CB TF442 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:tf442:hv-es","ES TF442 FD","earth-switch",,"open;closed","""open"""
+"sw431:sw442:d:cb","CB SW442 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw431:sw442:y:cb","CB SW442 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:in:cb","CB SW435 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:in:es","ES SW435 IN 01","earth-switch",,"open;closed","""open"""
+"sw435:bus:es","ES SW435","earth-switch",,"open;closed","""open"""
+"sw435:sw431:cb","CB SW431 FD 02","breaker","breaker","","{""contact"":""open"",""racking"":""out""}"
+"sw435:sw431:es","ES SW431 FD 02","earth-switch",,"open;closed","""open"""
+"sw435:tf435:hv-cb","CB TF435 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:tf435:hv-es","ES TF435 FD","earth-switch",,"open;closed","""open"""
+"sw435:mc435:cb","CB MC435 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:tf433:hv-cb","CB TF433 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:tf433:hv-es","ES TF433 FD","earth-switch",,"open;closed","""open"""
+"sw435:sw433:d:cb","CB SW433 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:sw433:y:cb","CB SW433 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:tf453:hv-cb","CB TF453 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:tf453:hv-es","ES TF453 FD","earth-switch",,"open;closed","""open"""
+"sw435:sw453:d:cb","CB SW453 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:sw453:y:cb","CB SW453 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:tf436:hv-cb","CB TF436 FD · tier5 spare
+Breaker present · no outgoing cable","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw435:tf436:hv-es","ES TF436 FD · tier5 spare
+Earth switch present · state unconfirmed","earth-switch",,"open;closed","""open"""
+"sw435:hpgr:cb","CB HPGR FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw435:hpgr:es","ES HPGR FD","earth-switch",,"open;closed","""open"""
+"hpgr:sw002:a01:q8","SW002 A01 · Q8","earth-switch",,"open;closed","""open"""
+"hpgr:sw002:a02:k101","A02 · K101","disconnector","disconnector","","{""contact"":""closed"",""racking"":""in""}"
+"hpgr:sw002:a02:q8","A02 · Q8","earth-switch",,"open;closed","""open"""
+"hpgr:drive-meb:dc-earth","MEB · DC earth / Fortress","earth-switch",,"open;closed","""open"""
+"hpgr:drive-meb:outlet","MEB motor-side outlet
+Selected Service / Isolated / Earthed model","disconnector",,"service;isolated;earthed","""service"""
+"hpgr:sw002:a04:k101","A04 · K101","disconnector","disconnector","","{""contact"":""closed"",""racking"":""in""}"
+"hpgr:sw002:a04:q8","A04 · Q8","earth-switch",,"open;closed","""open"""
+"hpgr:drive-mea:dc-earth","MEA · DC earth / Fortress","earth-switch",,"open;closed","""open"""
+"hpgr:drive-mea:outlet","MEA motor-side outlet
+Selected Service / Isolated / Earthed model","disconnector",,"service;isolated;earthed","""service"""
+"hpgr:sw002:tf004:k202","TF004 feeder · K202","disconnector","disconnector","","{""contact"":""closed"",""racking"":""in""}"
+"hpgr:sw002:tf004:q8","TF004 feeder · Q8","earth-switch",,"open;closed","""open"""
+"hpgr:mc001:cb","HPGR MCC incoming MCCB · tag unconfirmed","breaker",,"open;closed","""closed"""
+"sw421:in:cb","CB SW421 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:in:es","ES SW421 IN 01","earth-switch",,"open;closed","""open"""
+"sw421:bus:es","ES SW421
+Bus earth · tier 3","earth-switch",,"open;closed","""open"""
+"sw421:tf421:hv-cb","CB TF421 FD
+Tier 4","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:tf421:hv-es","ES TF421 FD","earth-switch",,"open;closed","""open"""
+"sw421:mc421:cb","CB MC421 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:tf422:hv-cb","CB TF422 FD
+Tier 5","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:tf422:hv-es","ES TF422 FD","earth-switch",,"open;closed","""open"""
+"sw421:mc422:cb","CB MC422 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:tf423:hv-cb","CB TF423 FD
+Tier 6","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:tf423:hv-es","ES TF423 FD","earth-switch",,"open;closed","""open"""
+"sw421:sw423:d:cb","CB SW423 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:sw423:y:cb","CB SW423 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw421:spare:tier2:cb","CB SPARE FD
+Tier 2","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw421:spare:tier2:es","ES SPARE FD
+Tier 2","earth-switch",,"open;closed","""open"""
+"sw421:spare:tier7:cb","CB SPARE FD
+Tier 7","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw421:spare:tier7:es","ES SPARE FD
+Tier 7","earth-switch",,"open;closed","""open"""
+"sw426:in:cb","CB SW426 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:in:es","ES SW426 IN 01","earth-switch",,"open;closed","""open"""
+"sw426:bus:es","ES SW426","earth-switch",,"open;closed","""open"""
+"sw426:tf440:cb","CB TF440 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf440:es","ES TF440 FD","earth-switch",,"open;closed","""open"""
+"sw426:sw440:d:in:cb","CB SW440 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:sw440:y:in:cb","CB SW440 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf426:cb","CB TF426 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf426:es","ES TF426 FD","earth-switch",,"open;closed","""open"""
+"sw426:mc426:in:cb","CB MC426 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf428:cb","CB TF428 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf428:es","ES TF428 FD","earth-switch",,"open;closed","""open"""
+"sw426:mc428a:in:cb","CB MC428A IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf427:cb","CB TF427 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf427:es","ES TF427 FD","earth-switch",,"open;closed","""open"""
+"sw426:sw427:d:in:cb","CB SW427 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:sw427:y:in:cb","CB SW427 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf429:cb","CB TF429 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf429:es","ES TF429 FD","earth-switch",,"open;closed","""open"""
+"sw426:sw429:d:in:cb","CB SW429 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:sw429:y:in:cb","CB SW429 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf439:cb","CB TF439 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf439:es","ES TF439 FD","earth-switch",,"open;closed","""open"""
+"sw426:sw439:d:in:cb","CB SW439 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:sw439:y:in:cb","CB SW439 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf430:cb","CB TF430 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf430:es","ES TF430 FD","earth-switch",,"open;closed","""open"""
+"sw426:mc430:in:cb","CB MC430 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf443:cb","CB TF443 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:tf443:es","ES TF443 FD","earth-switch",,"open;closed","""open"""
+"sw426:sw443:d:in:cb","CB SW443 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:sw443:y:in:cb","CB SW443 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:ss714:cb","CB SS714 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw426:ss714:es","ES SS714 FD","earth-switch",,"open;closed","""open"""
+"rm714:in01","SF RM714 IN01","disconnector",,"open;closed","""closed"""
+"rm714:in02","SF RM714 IN02","disconnector",,"open;closed","""closed"""
+"rm714:in01:es","RM714 IN01 earth · presence owner-confirmed; path review pending","earth-switch",,"open;closed","""open"""
+"rm714:in02:es","RM714 IN02 earth · presence owner-confirmed; path review pending","earth-switch",,"open;closed","""open"""
+"rm714:tf714:cb","CB TF714 FD","breaker",,"open;closed","""closed"""
+"rm714:tf714:es","TF714 feeder earth · presence owner-confirmed; path review pending","earth-switch",,"open;closed","""open"""
+"rm714:sw714:in:cb","CB SW714 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:in:cb","CB SW454 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:in:es","ES SW454 IN 01","earth-switch",,"open;closed","""open"""
+"sw454:bus:es","ES SW454
+Bus earth · tier 3","earth-switch",,"open;closed","""open"""
+"sw454:sw505:cb","CB SW505 FD
+SW454 tier 6","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:sw505:es","ES SW505 FD","earth-switch",,"open;closed","""open"""
+"sw505:in:cb","CB SW505 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:in:es","ES SW505 IN 01","earth-switch",,"open;closed","""open"""
+"sw505:bus:es","ES SWXXX / ES SW505
+Bus earth · tag unconfirmed","earth-switch",,"open;closed","""open"""
+"sw454:tf454:hv-cb","CB TF454 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:tf454:hv-es","ES TF454 FD","earth-switch",,"open;closed","""open"""
+"sw454:tf455:hv-cb","CB TF455 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:tf455:hv-es","ES TF455 FD","earth-switch",,"open;closed","""open"""
+"sw454:tf456:hv-cb","CB TF456 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:tf456:hv-es","ES TF456 FD","earth-switch",,"open;closed","""open"""
+"sw454:sw456:d:cb","CB SW456 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw454:sw456:y:cb","CB SW456 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf506:hv-cb","CB TF506 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf506:hv-es","ES TF506 FD","earth-switch",,"open;closed","""open"""
+"sw505:sw506:d:cb","CB SW506 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:sw506:y:cb","CB SW506 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf507:hv-cb","CB TF507 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf507:hv-es","ES TF507 FD","earth-switch",,"open;closed","""open"""
+"sw505:mc507:cb","CB MC507 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf508:hv-cb","CB TF508 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf508:hv-es","ES TF508 FD","earth-switch",,"open;closed","""open"""
+"sw505:mc508:cb","CB MC508 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf505a:hv-cb","CB TF505A FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf505a:hv-es","ES TF505A FD","earth-switch",,"open;closed","""open"""
+"sw505:vs50501:dc-earth","VS50501
+DC earth","earth-switch",,"open;closed","""open"""
+"sw505:vs50501:output-switch","VS50501
+Output contact","disconnector",,"open;closed","""closed"""
+"sw505:tf505b:hv-cb","CB TF505B FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf505b:hv-es","ES TF505B FD","earth-switch",,"open;closed","""open"""
+"sw505:vs50502:dc-earth","VS50502
+DC earth","earth-switch",,"open;closed","""open"""
+"sw505:vs50502:output-switch","VS50502
+Output contact","disconnector",,"open;closed","""closed"""
+"sw505:tf505c:hv-cb","CB TF505C FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw505:tf505c:hv-es","ES TF505C FD","earth-switch",,"open;closed","""open"""
+"sw505:vs50503:dc-earth","VS50503
+DC earth","earth-switch",,"open;closed","""open"""
+"sw505:vs50503:output-switch","VS50503
+Output contact","disconnector",,"open;closed","""closed"""
+"sw451:in:cb","CB SW451 IN 01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw451:in:es","ES SW451 IN 01","earth-switch",,"open;closed","""open"""
+"sw451:bus:es","SW451 bus earth · tag unconfirmed","earth-switch",,"open;closed","""open"""
+"sw451:spare-2:cb","T2 · CB SPARE FD","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw451:spare-2:es","T2 · ES SPARE FD","earth-switch",,"open;closed","""open"""
+"sw451:spare-6:cb","T6 · CB SPARE FD","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw451:spare-6:es","T6 · ES SPARE FD","earth-switch",,"open;closed","""open"""
+"sw451:spare-7:cb","T7 · CB SPARE FD","breaker","breaker","","{""contact"":""open"",""racking"":""in""}"
+"sw451:spare-7:es","T7 · ES SPARE FD","earth-switch",,"open;closed","""open"""
+"sw451:tf451:hv-cb","CB TF451 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw451:tf451:hv-es","ES TF451 FD","earth-switch",,"open;closed","""open"""
+"sw451:mc451:cb","CB MC451 IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw451:tf452:hv-cb","CB TF452 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw451:tf452:hv-es","ES TF452 FD","earth-switch",,"open;closed","""open"""
+"sw451:sw452:d:cb","CB SW452 IN D","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw451:sw452:y:cb","CB SW452 IN Y","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"cv006:abs:49-1","ABS
+Pole 49-1","disconnector",,"open;closed","""closed"""
+"cv006:recloser:49-39a","Recloser
+Pole 49-39A","breaker",,"open;closed","""closed"""
+"cv006:abs:49-40","ABS
+Pole 49-40","disconnector",,"open;closed","""closed"""
+"cv006:fused-abs:57","Fused ABS
+Pole 57","disconnector",,"open;closed","""closed"""
+"rm406:sw01","RM406-SW01
+Incoming","disconnector",,"service;isolated;earthed","""service"""
+"rm406:cb01","RM406-CB01
+A02","breaker",,"open;closed","""closed"""
+"rm406:sw02","RM406-SW02","disconnector",,"service;isolated;earthed","""service"""
+"rm406:cb02","RM406-CB02
+A03","breaker",,"open;closed","""closed"""
+"rm406:sw03","RM406-SW03","disconnector",,"service;isolated;earthed","""service"""
+"rm406:cb03","RM406-CB03
+A04","breaker",,"open;closed","""closed"""
+"rm406:sw04","RM406-SW04","disconnector",,"service;isolated;earthed","""service"""
+"rm410:sw01","RM410-SW01
+Incoming","disconnector",,"service;isolated;earthed","""service"""
+"rm410:cb01","RM410-CB01
+A02","breaker",,"open;closed","""closed"""
+"rm410:sw02","RM410-SW02","disconnector",,"service;isolated;earthed","""service"""
+"rm410:cb02","RM410-CB02
+A03","breaker",,"open;closed","""closed"""
+"rm410:sw03","RM410-SW03","disconnector",,"service;isolated;earthed","""service"""
+"rm410:cb03","RM410-CB03
+A04","breaker",,"open;closed","""closed"""
+"rm410:sw04","RM410-SW04","disconnector",,"service;isolated;earthed","""service"""
+"rm406:vs4061:input-a:switch","VS4061
+Input A · 2500 A","disconnector",,"open;closed","""closed"""
+"rm406:vs4061:input-b:switch","VS4061
+Input B · 2500 A","disconnector",,"open;closed","""closed"""
+"rm406:mc406a:cb","MC406A CB
+TBC A · note 1","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm410:vs4101:input-a:switch","VS4101
+Input A · 2500 A","disconnector",,"open;closed","""closed"""
+"rm410:vs4101:input-b:switch","VS4101
+Input B · 2500 A","disconnector",,"open;closed","""closed"""
+"wh:h1:rm417:sw01","RM417 SW01","disconnector",,"service;isolated;earthed","""service"""
+"wh:h1:rm417:sw02","RM417 SW02","disconnector",,"service;isolated;earthed","""service"""
+"wh:h1:rm417:cb01","RM417 CB01","breaker",,"open;closed","""closed"""
+"wh:h1:rm417:sw03","RM417 SW03","disconnector",,"service;isolated;earthed","""service"""
+"wh:h1:mc417a:in","MC417A MCCB · 630 A","breaker",,"open;closed","""closed"""
+"wh:h1:mc417:in","MC417 incoming VCB","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h1:mc417:in-earth","MC417 incoming earth","earth-switch",,"open;closed","""open"""
+"wh:h1:mc417:m1:rc","MC417 M1 RC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h1:mc417:m1:fc","MC417 M1 FC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h1:mc417:m1:earth","MC417 M1 maintenance earth","earth-switch",,"open;closed","""open"""
+"wh:h1:mc417:m2:rc","MC417 M2 RC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h1:mc417:m2:fc","MC417 M2 FC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h1:mc417:m2:earth","MC417 M2 maintenance earth","earth-switch",,"open;closed","""open"""
+"wh:h1:rm417:cb02","RM417 CB02","breaker",,"open;closed","""closed"""
+"wh:h1:rm417:sw04","RM417 SW04","disconnector",,"service;isolated;earthed","""service"""
+"wh:h7:rm418:sw01","RM418 SW01","disconnector",,"open;closed","""closed"""
+"wh:h7:rm418:sw01:es","RM418 ES01 · unconfirmed","earth-switch",,"open;closed","""open"""
+"wh:h7:rm418:sw02","RM418 SW02 · spare","disconnector",,"open;closed","""open"""
+"wh:h7:rm418:sw02:es","RM418 SW02 cable earth","earth-switch",,"open;closed","""open"""
+"wh:h7:rm418:cb03","RM418 CB03","breaker",,"open;closed","""closed"""
+"wh:h7:rm418:cb03:disconnect","CB03 disconnect
+Tag unconfirmed","disconnector",,"open;closed","""closed"""
+"wh:h7:rm418:cb03:earth","CB03 outgoing earth","earth-switch",,"open;closed","""open"""
+"wh:h7:rm418:cb04","RM418 CB04 · spare","breaker",,"open;closed","""open"""
+"wh:h7:rm418:cb04:disconnect","CB04 disconnect
+Tag unconfirmed","disconnector",,"open;closed","""open"""
+"wh:h7:rm418:cb04:earth","CB04 outgoing earth","earth-switch",,"open;closed","""open"""
+"wh:h7:mc418:in","MC418 incoming VCB","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h7:mc418:in-earth","MC418 incoming earth","earth-switch",,"open;closed","""open"""
+"wh:h7:mc418:m1:rc","MC418 M1 RC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h7:mc418:m1:fc","MC418 M1 FC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h7:mc418:m1:earth","MC418 M1 maintenance earth","earth-switch",,"open;closed","""open"""
+"wh:h7:mc418:m2:rc","MC418 M2 RC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h7:mc418:m2:fc","MC418 M2 FC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h7:mc418:m2:earth","MC418 M2 maintenance earth","earth-switch",,"open;closed","""open"""
+"wh:h7:mc418a:in","MC418A MCCB · 630 A","breaker",,"open;closed","""closed"""
+"wh:h9:rm419:sw01","RM419 SW01","disconnector",,"service;isolated;earthed","""service"""
+"wh:h9:rm419:sw02","RM419 SW02 · to Hopper7","disconnector",,"service;isolated;earthed","""service"""
+"wh:h9:rm419:cb01","RM419 CB01","breaker",,"open;closed","""closed"""
+"wh:h9:rm419:sw03","RM419 SW03","disconnector",,"service;isolated;earthed","""service"""
+"wh:h9:rm419:cb02","RM419 CB02","breaker",,"open;closed","""closed"""
+"wh:h9:rm419:sw04","RM419 SW04","disconnector",,"service;isolated;earthed","""service"""
+"wh:h9:mc419:in","MC419 incoming VCB","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h9:mc419:in-earth","MC419 incoming earth","earth-switch",,"open;closed","""open"""
+"wh:h9:mc419:m1:rc","MC419 M1 RC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h9:mc419:m1:fc","MC419 M1 FC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h9:mc419:m1:earth","MC419 M1 maintenance earth","earth-switch",,"open;closed","""open"""
+"wh:h9:mc419:m2:rc","MC419 M2 RC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h9:mc419:m2:fc","MC419 M2 FC","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h9:mc419:m2:earth","MC419 M2 maintenance earth","earth-switch",,"open;closed","""open"""
+"wh:h9:mc419a:in","MC419A ACB01 · 2000 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm721:in01","ISOL RM721 IN01","disconnector",,"open;closed","""closed"""
+"rm721:in01:es","RM721 IN01
+Cable-side earth","earth-switch",,"open;closed","""open"""
+"rm721:in02","CB RM721 IN02","breaker",,"open;closed","""closed"""
+"rm721:in02:es","CB RM721 IN02
+Cable-side earth","earth-switch",,"open;closed","""open"""
+"rm721:rm412","CB RM412","breaker",,"open;closed","""closed"""
+"rm721:rm412:es","CB RM412
+Cable-side earth","earth-switch",,"open;closed","""open"""
+"rm721:rm713","ISOL RM713","disconnector",,"open;closed","""closed"""
+"rm721:rm713:es","ISOL RM713
+Cable-side earth","earth-switch",,"open;closed","""open"""
+"rm712:in02","SF RM712 IN02","disconnector",,"open;closed","""closed"""
+"rm712:in01","SF RM712 IN01","disconnector",,"open;closed","""open"""
+"rm712:tf712:cb","CB TF712 FD","breaker",,"open;closed","""closed"""
+"rm712:sw712:cb","CB SW712 IN
+1600 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm713:in01","SF RM713 IN01","disconnector",,"open;closed","""closed"""
+"rm713:in02","SF RM713 IN02","disconnector",,"open;closed","""open"""
+"rm713:tf713:cb","CB TF713 FD","breaker",,"open;closed","""closed"""
+"rm713:sw713:cb","CB SW713 IN
+1600 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm412:s100","S100
+RM721-facing","disconnector",,"open;closed","""closed"""
+"rm412:s101","S101
+RM413-facing","disconnector",,"open;closed","""closed"""
+"rm412:e100","E100
+S100 common-side earth","earth-switch",,"open;closed","""open"""
+"rm412:e101","E101
+S101 common-side earth","earth-switch",,"open;closed","""open"""
+"rm412:q100","Q100
+200 A","breaker",,"open;closed","""closed"""
+"rm412:feeder-contact","S102
+Separate fixed switch below Q100","disconnector",,"open;closed","""closed"""
+"rm412:e102","E102
+Transformer-side earth","earth-switch",,"open;closed","""open"""
+"rm412:q200","Q200
+690 V Star · 800 A","breaker",,"open;closed","""closed"""
+"rm412:q201","Q201
+690 V Delta · 800 A","breaker",,"open;closed","""closed"""
+"rm412:q202","Q202
+415 V Star · 80 A","breaker",,"open;closed","""closed"""
+"rm413:in01","RM413 IN01
+RM412-facing","disconnector",,"open;closed","""closed"""
+"rm413:in02","RM413 IN02
+RM417-facing double boot","disconnector",,"open;closed","""closed"""
+"rm413:tf413:cb","TF413 FD
+ABB REJ603 protection label","breaker",,"open;closed","""closed"""
+"rm413:mc413:cb","CB MC413 IN
+3000 A printed · supply route confirmed","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm413:tf414:cb","TF414 FD
+ABB REJ603 protection label","breaker",,"open;closed","""closed"""
+"rm413:mcc414:cb","MCC414 incomer
+2500 A","breaker",,"open;closed","""closed"""
+"rm413a:es-q8:upper","ES-Q8 · upper
+Incoming/bar earth","earth-switch",,"open;closed","""open"""
+"rm413a:q1","TF413A Q1 CB","breaker",,"open;closed","""closed"""
+"rm413a:es-q8:lower","ES-Q8 · lower
+Service / Isolated / Earthed","disconnector",,"service;isolated;earthed","""service"""
+"rm413a:ac-input-a:switch","TF413A AC input A
+2500 A","disconnector",,"open;closed","""closed"""
+"rm413a:ac-input-b:switch","TF413A AC input B
+2500 A","disconnector",,"open;closed","""closed"""
+"rm420:sw01","RM420 SW01","disconnector",,"open;closed","""closed"""
+"rm420:es01","RM420 ES01","earth-switch",,"open;closed","""open"""
+"rm420:tf420a:cb","RM420 CB01","breaker",,"open;closed","""closed"""
+"rm420:tf420a:sw","RM420 SW02","disconnector",,"open;closed","""closed"""
+"rm420:tf420a:es","RM420 ES02","earth-switch",,"open;closed","""open"""
+"rm420:tf420b:cb","RM420 CB02","breaker",,"open;closed","""closed"""
+"rm420:tf420b:sw","RM420 SW03","disconnector",,"open;closed","""closed"""
+"rm420:tf420b:es","RM420 ES03","earth-switch",,"open;closed","""open"""
+"rm420:spare:cb","RM420 CB03 · spare","breaker",,"open;closed","""open"""
+"rm420:spare:sw","RM420 SW04 · spare","disconnector",,"open;closed","""open"""
+"rm420:spare:es","RM420 ES04 · spare","earth-switch",,"open;closed","""open"""
+"rm420:mc420:in:vcb","MC420 tier5 · VCB200A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm420:mc420:in:es","MC420 incoming earth · tag unconfirmed","earth-switch",,"open;closed","""open"""
+"rm420:mc420:motor-01:rc","Tier1 · RC400A","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"rm420:mc420:motor-01:fc","Tier2 · FC400A","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"rm420:mc420:motor-01:es","SZ010-EM01 · maintenance earth","earth-switch",,"open;closed","""open"""
+"rm420:mc420:motor-02:rc","Tier3 · RC400A","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"rm420:mc420:motor-02:fc","Tier4 · FC400A","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"rm420:mc420:motor-02:es","SZ010-EM02 · maintenance earth","earth-switch",,"open;closed","""open"""
+"mine:wt1:cb","WT1-CB · study recloser","breaker",,"open;closed","""closed"""
+"mine:sw441:in:cb","CB SW441 IN01","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"mine:sw441:in:es","ES SW441 IN01","earth-switch",,"open;closed","""open"""
+"mine:sw441:bus:es","ES SW441","earth-switch",,"open;closed","""open"""
+"mine:tf441:cb","CB TF441 FD","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"mine:tf441:es","ES TF441 FD","earth-switch",,"open;closed","""open"""
+"mine:mc441:in","MC441 · 400 V IN","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw455:in-d:cb","CB SW455 IN D
+2500 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"sw455:in-y:cb","CB SW455 IN Y
+2500 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h3:mc416a:in","SS416-MC416A
+MCCB 630 A","breaker",,"open;closed","""closed"""
+"mc454:in:cb","CB MC454 IN
+3000 A printed","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h3:mc416:in","Hopper3 · MC416
+Incoming VCB 200 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h3:mc416:in-earth","Hopper3 · MC416
+Cable-side earth · note 6","earth-switch",,"open;closed","""open"""
+"wh:h3:mc416:m1:rc","SZ003-EM01 RC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h3:mc416:m1:fc","SZ003-EM01 FC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h3:mc416:m1:earth","SZ003-EM01
+Maintenance earth · note 5","earth-switch",,"open;closed","""open"""
+"wh:h3:mc416:m2:rc","SZ003-EM02 RC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h3:mc416:m2:fc","SZ003-EM02 FC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h3:mc416:m2:earth","SZ003-EM02
+Maintenance earth · note 5","earth-switch",,"open;closed","""open"""
+"wh:h8:mc416:in","Hopper8 · MC416
+Incoming VCB 200 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"wh:h8:mc416:in-earth","Hopper8 · MC416
+Cable-side earth · note 6","earth-switch",,"open;closed","""open"""
+"wh:h8:mc416:m1:rc","SZ008-EM01 RC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h8:mc416:m1:fc","SZ008-EM01 FC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h8:mc416:m1:earth","SZ008-EM01
+Maintenance earth · note 5","earth-switch",,"open;closed","""open"""
+"wh:h8:mc416:m2:rc","SZ008-EM02 RC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h8:mc416:m2:fc","SZ008-EM02 FC
+400 A phase contactor","contactor","contactor","","{""contact"":""open"",""racking"":""in""}"
+"wh:h8:mc416:m2:earth","SZ008-EM02
+Maintenance earth · note 5","earth-switch",,"open;closed","""open"""
+"wh:h8:mc416a:in","Hopper8 · MC416A
+MCCB 630 A","breaker",,"open;closed","""closed"""
+"rm420:mc420a:in:acb","MC420A · ACB01 main switch
+2000 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"rm410:mc410a:cb","MC410A CB
+630 A","breaker","breaker","","{""contact"":""closed"",""racking"":""in""}"
+"drop-tower:abs:p18-1","P18-1 ABS","disconnector",,"open;closed","""closed"""
+"drop-tower:abs:p18-8","P18-8 fused ABS","disconnector",,"open;closed","""closed"""

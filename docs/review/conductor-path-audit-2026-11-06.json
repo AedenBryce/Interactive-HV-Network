@@ -1,0 +1,554 @@
+{
+  "summary": {
+    "wirePaths": 674,
+    "rawSharedOverlaps": 60,
+    "rawUnrelatedOverlaps": 0,
+    "retraces": 0,
+    "paintedOverlaps": 0,
+    "uncoveredSegments": 0
+  },
+  "rawOverlaps": [
+    {
+      "a": "sw411:in-01:interface-link",
+      "b": "sw411:in-01:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 176.0000000000009,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw411:in-03:interface-link",
+      "b": "sw411:in-03:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 176.0000000000009,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw411:in-04:interface-link",
+      "b": "sw411:in-04:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 176.0000000000009,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw411:in-02:interface-link",
+      "b": "sw411:in-02:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 176.0000000000009,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw411:tier-04:interface-link",
+      "b": "sw411:tier-04:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 115.99999999999909,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw411:tier-13:interface-link",
+      "b": "sw411:tier-13:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 115.99999999999909,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw411:tier-16:interface-link",
+      "b": "sw411:tier-16:earth-branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 203.19999999999982,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "station:sb01:f4:es:branch",
+      "b": "station:sb01:f4:transformer:input-link",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.80000000000018,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "station:sb02:f1:es:branch",
+      "b": "station:sb02:f1:transformer:input-link",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.80000000000018,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "station:sb02:f4:es:branch",
+      "b": "station:sb02:f4:transformer:input-link",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.80000000000018,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw431:incoming:cable-SW431-P-01",
+      "b": "sw431:in:es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw435:incoming:cable-SW435-P-01",
+      "b": "sw435:in:es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 135.19999999999982,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "hpgr:sw002:a02:q8:branch",
+      "b": "hpgr:sw002:a02:cable-TF003-P-01",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.8000000000029,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "hpgr:sw002:a04:q8:branch",
+      "b": "hpgr:sw002:a04:cable-TF002-P-01",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "hpgr:sw002:tf004:q8:branch",
+      "b": "hpgr:cable-TF004-P-01",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw421:incoming:cable-SW421-P-01",
+      "b": "sw421:in:es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 162.39999999999782,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw421:tf421:hv-es:branch",
+      "b": "sw421:tf421:cable-TF421-P-01",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 162.40000000000146,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw426:tf426:es:branch",
+      "b": "sw426:tf426:hv-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 0.0015704510733485222,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw426:tf439:es:branch",
+      "b": "sw426:tf439:hv-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 380,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw426:ss714:es:branch",
+      "b": "sw426:laboratory:cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 257.59999999999854,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw454:incoming:cable-SW454-P-01",
+      "b": "sw454:in:es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw454:sw505:cable-SW505-P-01",
+      "b": "sw505:in:es:branch",
+      "aSegment": 1,
+      "bSegment": 0,
+      "length": 148.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "sw451:incoming:cable-SW451-P-01",
+      "b": "sw451:in:es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 121.60000000000036,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "cv006:sw411-pole17",
+      "b": "cv006:pole17-drop-tower",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 719.4225194292703,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "cv006:pole49-abs49-1",
+      "b": "cv006:pole49-fused-abs57",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 119.0957923536007,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h1:tf417:input",
+      "b": "wh:h1:tf417a:input",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 4.112137091135082,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h1:mc417:supply",
+      "b": "wh:h1:mc417:in-earth:branch",
+      "aSegment": 1,
+      "bSegment": 0,
+      "length": 304,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h1:mc417:m1:earth:branch",
+      "b": "wh:h1:mc417:m1:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 523.7436599833527,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h1:mc417:m2:earth:branch",
+      "b": "wh:h1:mc417:m2:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 523.7436599833527,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h3:tf416:input",
+      "b": "wh:h3:tf416a:input",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 147.2724096218517,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h7:rm418:cb03:earth:branch",
+      "b": "wh:h7:tf418a:input",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.8000000000029,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h7:mc418:supply",
+      "b": "wh:h7:mc418:in-earth:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 476.8000000000029,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h7:mc418:m1:earth:branch",
+      "b": "wh:h7:mc418:m1:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 272,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h7:mc418:m2:earth:branch",
+      "b": "wh:h7:mc418:m2:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 272,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h9:mc419:supply",
+      "b": "wh:h9:mc419:in-earth:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 574.8813787648505,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h9:mc419:m1:rc:common-link",
+      "b": "wh:h9:mc419:m1:fc:common-link",
+      "aSegment": 1,
+      "bSegment": 1,
+      "length": 448,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h9:mc419:m2:rc:common-link",
+      "b": "wh:h9:mc419:m2:fc:common-link",
+      "aSegment": 1,
+      "bSegment": 1,
+      "length": 448,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm413:in02-rm417",
+      "b": "rm413:double-boot-rm413a",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 1109.5803456528083,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm413:in02-rm417",
+      "b": "rm413:in02:cable-es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 416,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm413:double-boot-rm413a",
+      "b": "rm413:in02:cable-es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 416,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:incoming:cable",
+      "b": "rm420:es01:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 148.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:tf420a:es:branch",
+      "b": "rm420:tf420a:cable-SS420-TF420A-P01",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 226.84168246764602,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:tf420b:es:branch",
+      "b": "rm420:tf420b:cable-SS420-TF420B-P01",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 226.84168246764602,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:spare:es:branch",
+      "b": "rm420:spare:stub",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 226.84168246764602,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-01:rc:contact-motor",
+      "b": "rm420:mc420:motor-01:fc:contact-motor",
+      "aSegment": 2,
+      "bSegment": 2,
+      "length": 930,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-01:rc:contact-motor",
+      "b": "rm420:mc420:motor-01:es:branch",
+      "aSegment": 2,
+      "bSegment": 0,
+      "length": 930,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-01:fc:contact-motor",
+      "b": "rm420:mc420:motor-01:es:branch",
+      "aSegment": 1,
+      "bSegment": 1,
+      "length": 299.1999999999998,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-01:fc:contact-motor",
+      "b": "rm420:mc420:motor-01:es:branch",
+      "aSegment": 2,
+      "bSegment": 0,
+      "length": 930,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-02:rc:contact-motor",
+      "b": "rm420:mc420:motor-02:fc:contact-motor",
+      "aSegment": 2,
+      "bSegment": 2,
+      "length": 930,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-02:rc:contact-motor",
+      "b": "rm420:mc420:motor-02:es:branch",
+      "aSegment": 2,
+      "bSegment": 0,
+      "length": 930,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-02:fc:contact-motor",
+      "b": "rm420:mc420:motor-02:es:branch",
+      "aSegment": 1,
+      "bSegment": 1,
+      "length": 299.1999999999998,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "rm420:mc420:motor-02:fc:contact-motor",
+      "b": "rm420:mc420:motor-02:es:branch",
+      "aSegment": 2,
+      "bSegment": 0,
+      "length": 930,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "mine:sw441:incoming:cable",
+      "b": "mine:sw441:in:es:branch",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 320,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h3:mc416:supplemental-supply",
+      "b": "wh:h3:mc416:in-earth:branch",
+      "aSegment": 1,
+      "bSegment": 0,
+      "length": 100.00000000000364,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h3:mc416:m1:earth:branch",
+      "b": "wh:h3:mc416:m1:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 244.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h3:mc416:m2:earth:branch",
+      "b": "wh:h3:mc416:m2:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 244.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h8:mc416:supplemental-supply",
+      "b": "wh:h8:mc416:in-earth:branch",
+      "aSegment": 1,
+      "bSegment": 0,
+      "length": 100,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h8:mc416:m1:earth:branch",
+      "b": "wh:h8:mc416:m1:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 244.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "wh:h8:mc416:m2:earth:branch",
+      "b": "wh:h8:mc416:m2:motor-cable",
+      "aSegment": 0,
+      "bSegment": 0,
+      "length": 244.79999999999927,
+      "sharedConductor": true,
+      "retrace": false
+    },
+    {
+      "a": "owner:join:rm721-rm712",
+      "b": "rm712:in02:es:branch",
+      "aSegment": 1,
+      "bSegment": 0,
+      "length": 192.07836164454784,
+      "sharedConductor": true,
+      "retrace": false
+    }
+  ],
+  "paintedOverlaps": [],
+  "uncovered": []
+}

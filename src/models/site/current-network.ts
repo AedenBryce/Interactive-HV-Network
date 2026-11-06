@@ -1,3 +1,5 @@
+import type { NetworkModel } from '../../session/model';
+import { withOverviewDeviceCorrections } from './overview-device-corrections';
 import { wholeNetworkModel } from './whole-network';
 import { withSupplementalEndpoints } from './endpoint-extensions';
 import { withWesternDetails } from './western-extensions';
@@ -37,6 +39,7 @@ import { withOwnerLvEndpointScope } from './owner-lv-endpoint-scope';
 import { withOwnerSelectorContacts } from './owner-selector-contacts';
 import { withOwnerBinaryAcContacts } from './owner-binary-ac-contacts';
 import { withOwnerRemainingElectricalClaims } from './owner-remaining-electrical-claims';
+import { withOwnerFinalBaselineReview } from './owner-final-baseline-review';
 
 // Each distributed construction is immutable. Extensions operate on clones;
 // historical area packages and the reviewed .4 assembly retain their content.
@@ -92,7 +95,27 @@ export const contactNetworkModel = withOwnerBinaryAcContacts(
     ), 'construction-2026-10-23.9-stage3',
   ), 'construction-2026-10-23.9',
 );
-export const currentNetworkModel = withOwnerRemainingElectricalClaims(contactNetworkModel, 'construction-2026-10-23.10');
+const ownerElectricalClaimsNetworkModel = withOwnerRemainingElectricalClaims(contactNetworkModel, 'construction-2026-10-23.10');
+export const previousReviewedNetworkModel = withOwnerFinalBaselineReview(ownerElectricalClaimsNetworkModel, 'construction-2026-10-23.11');
+positionTf12InterfaceInSw411Detail(previousReviewedNetworkModel);
+export const currentNetworkModel = withOverviewDeviceCorrections(previousReviewedNetworkModel);
+
+function positionTf12InterfaceInSw411Detail(model: NetworkModel) {
+  const view = model.presentation!.views.find(candidate => candidate.id === 'sw411/overview');
+  if (!view) return;
+  const endpoint = (connectionId: string, assetId: string) => {
+    const link = model.connections.find(candidate => candidate.id === connectionId)!;
+    const asset = model.assets.find(candidate => candidate.id === assetId)!;
+    return asset.terminals.find(terminal => terminal === link.from || terminal === link.to)!;
+  };
+  const pole = view.layout.terminals[endpoint('owner:tf12:opf1-7-to-in04', 'owner:tf12:opf1-7')];
+  const breaker = view.layout.terminals[endpoint('sw411:in-04:interface-link', 'sw411:in-04:cb')];
+  const interfaceId = 'sw411:in-04:interface';
+  const interfaceTerminal = endpoint('owner:tf12:opf1-7-to-in04', interfaceId);
+  const position: [number, number] = [(pole[0] + breaker[0]) / 2, (pole[1] + breaker[1]) / 2];
+  view.layout.assets[interfaceId] = position;
+  view.layout.terminals[interfaceTerminal] = position;
+}
 
 function buildCurrentNetworkModel() {
   const version = 'construction-2026-10-23.1';

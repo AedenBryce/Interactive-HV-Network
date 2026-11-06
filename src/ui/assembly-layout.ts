@@ -13,8 +13,11 @@ export function layoutMotorAssemblies(model: NetworkModel, layout: DiagramLayout
     if (!forward || !reverseFuse || !forwardFuse || !motor) continue;
     const x = (layout.assets[reverseFuse.id][0] + layout.assets[forwardFuse.id][0]) / 2;
     const y = Math.min(layout.assets[reverseFuse.id][1], layout.assets[forwardFuse.id][1]);
-    layout.assets[reverseFuse.id] = [x - 260, y]; layout.assets[forwardFuse.id] = [x + 260, y];
-    layout.assets[reverse.id] = [x - 260, y + 400]; layout.assets[forward.id] = [x + 260, y + 400];
+    // Device cards are wider than the old 520-unit center spacing. Give the
+    // RC and FC branches a 600-unit center spacing so neither their cards nor
+    // the neighbouring status labels collide.
+    layout.assets[reverseFuse.id] = [x - 300, y]; layout.assets[forwardFuse.id] = [x + 300, y];
+    layout.assets[reverse.id] = [x - 300, y + 400]; layout.assets[forward.id] = [x + 300, y + 400];
     const junction = model.assets.find(asset => asset.id.startsWith(`${base}:`) && isMotorJunction(asset));
     if (junction) layout.assets[junction.id] = [x, y + 650];
     layout.assets[motor.id] = [x, y + 1100];

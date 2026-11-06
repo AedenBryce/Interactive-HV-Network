@@ -1,5 +1,7 @@
 # Local delivery verification
 
+Current continuation point: [6 November 2026 handover](../HANDOVER.md). Earlier implementation/delivery records below are historical where they conflict with that handover.
+
 ## Current evidence
 
 The current renderer isb0ae27a, adding separated feeder trees, above-bus SW411 spare incomers and explicit combined-selector earth contacts. Current archive: `output/hv-network-v10-selector-review.zip` (811,694bytes; SHA256 `7826AFEE9AD95E16C136618A8B3CED2E93EE263678246EEEBF2C1EFC201538CF`). Its extracted three-file `www` folder is served at127.0.0.1:4174. Earlier records remain historical evidence. Whole-model acceptance remains pending.

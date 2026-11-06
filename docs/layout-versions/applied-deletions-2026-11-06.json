@@ -1,0 +1,20 @@
+{
+  "layoutRevision": "authored-2026-11-06.7",
+  "sourceExport": "hv-layout-review-authored-2026-11-06.6 (1).json",
+  "removedDrawingObjects": [
+    "rm420:tf420a:primary-connection",
+    "rm420:tf420b:primary-connection",
+    "wh:h9:mc419:m2:common"
+  ],
+  "deletedLabels": [
+    "rm420:tf420b:primary-connection",
+    "rm420:tf420a:primary-connection",
+    "wh:h8:mc416:m1:common",
+    "wh:h8:mc416:m2:common",
+    "wh:h3:mc416:m2:common",
+    "wh:h3:mc416:m1:common",
+    "wh:h1:mc417:m2:common",
+    "wh:h1:mc417:m1:common"
+  ],
+  "electricalConnectivity": "Retained existing graph terminals and connections; removed drawing markers only."
+}

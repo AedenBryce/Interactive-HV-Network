@@ -30,3 +30,19 @@
 .diagram-region rect { fill: #f4f7fb; stroke: #b6c5d6; stroke-width: 5; }
 .diagram-region text { fill: #102640; font-weight: 600; }
 .diagram-region:focus-visible rect { stroke: #f47735; stroke-width: 12; }
+.layout-edit-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1px solid #395067; background: #132131; color: #d8e2ef; font-size: 12px; }
+.layout-edit-toolbar label { display: flex; align-items: center; gap: 5px; }
+.layout-edit-toolbar button, .layout-edit-toolbar select { padding: 5px 8px; border: 1px solid #486079; border-radius: 4px; background: #1b3044; color: #e0e9f4; font: inherit; }
+.layout-edit-toolbar button:disabled { opacity: .45; }
+.layout-edit-toolbar small { flex-basis: 100%; color: #a9c1d7; }
+.deletion-review { width: 100%; max-height: 130px; overflow: auto; }
+.deletion-review summary { cursor: pointer; }
+.deletion-review p { margin: 5px 0; color: #b5c6d8; }
+.deletion-review div { display: flex; gap: 6px; padding-top: 4px; }
+.layout-edit-mode [data-layout-asset-id], .layout-edit-mode [data-layout-room-id] { cursor: move; }
+.selected-layout-room > rect { stroke: #76d5ff !important; stroke-width: 3 !important; }
+.deletion-mark { fill: none; stroke: #ff7777; stroke-width: 4; pointer-events: none; }
+.deletion-mark path, .deletion-mark rect { vector-effect: non-scaling-stroke; }
+.marked-for-deletion text { fill: #ff9c9c !important; text-decoration: line-through; }
+.layout-marquee { fill: #63cfff; fill-opacity: .12; stroke: #72d6ff; stroke-width: 1.5; stroke-dasharray: 5 3; vector-effect: non-scaling-stroke; pointer-events: none; }
+.layout-selection-box { fill: none; stroke: #72d6ff; stroke-width: 1.5; stroke-dasharray: 6 3; vector-effect: non-scaling-stroke; pointer-events: stroke; cursor: move; }

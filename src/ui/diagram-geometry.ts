@@ -1,7 +1,8 @@
 import type { Asset, NetworkModel } from '../session/model';
 import type { DiagramView } from '../session/presentation';
 import { isDrive, isFuse, isMotor } from './equipment-appearance';
-import { threePositionGeometry } from './ThreePositionSymbol';
+import { threePositionGeometry } from './three-position-contacts';
+import { transformerWindings } from './transformer-windings';
 
 export type Point = [number, number];
 export type Box = { x: number; y: number; width: number; height: number };
@@ -57,6 +58,10 @@ function crossing(a: Point, b: Point, segment: Segment) {
 export function clearRoute(from: Point, to: Point, obstacles: Box[], occupied: Segment[]): Point[] | undefined {
   const xs = [...new Set([from[0], to[0], ...obstacles.flatMap(box => [box.x, box.x + box.width]), ...occupied.flatMap(segment => [segment.from[0] - 16, segment.from[0] + 16, segment.to[0] - 16, segment.to[0] + 16])])].sort((a, b) => a - b);
   const ys = [...new Set([from[1], to[1], ...obstacles.flatMap(box => [box.y, box.y + box.height]), ...occupied.flatMap(segment => [segment.from[1] - 16, segment.from[1] + 16, segment.to[1] - 16, segment.to[1] + 16])])].sort((a, b) => a - b);
+  // The orthogonal search grid grows as X×Y. Large whole-network conflicts
+  // are first handled by the clear parallel-lane candidates; cap A* to local
+  // neighborhoods so one dense ring route cannot freeze the browser.
+  if (xs.length * ys.length > 30_000) return undefined;
   const id = (p: Point) => xs.indexOf(p[0]) * ys.length + ys.indexOf(p[1]);
   const point = (node: number): Point => [xs[Math.floor(node / ys.length)], ys[node % ys.length]];
   const start = id(from); const end = id(to);
@@ -80,7 +85,7 @@ export function clearRoute(from: Point, to: Point, obstacles: Box[], occupied: S
     for (const next of neighbors) {
       if (next < 0 || closed.has(next)) continue;
       const b = point(next); if (obstacles.some(box => cutsBox(a, b, box))) continue;
-      const cost = distance.get(node)! + Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + occupied.reduce((sum, segment) => sum + sharedLength(a, b, segment) * 200 + (crossing(a, b, segment) ? 180 : 0), 0);
+      const cost = distance.get(node)! + Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + occupied.reduce((sum, segment) => sum + sharedLength(a, b, segment) * 1e6 + (crossing(a, b, segment) ? 1e9 : 0), 0);
       if (cost >= (distance.get(next) ?? Infinity)) continue;
       distance.set(next, cost); previous.set(next, node); push(next, cost + Math.abs(b[0] - to[0]) + Math.abs(b[1] - to[1]));
     }
@@ -95,6 +100,7 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
   const visible = new Set(source.assetIds);
   const owners = new Map(model.assets.flatMap(asset => asset.terminals.map(terminal => [terminal, asset.id] as const)));
   const assets = model.assets.filter(asset => visible.has(asset.id));
+  const byId = new Map(assets.map(asset => [asset.id, asset]));
   const layout = {
     ...source.layout,
     assets: Object.fromEntries(Object.entries(source.layout.assets).map(([id, p]) => [id, point(p)])),
@@ -103,7 +109,83 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
   const connections = model.connections.filter(link => visible.has(owners.get(link.from)!) && visible.has(owners.get(link.to)!) || source.boundaries?.some(boundary => boundary.connectionId === link.id));
   const symbolBoxes = assets.map(asset => { const [x, y] = layout.assets[asset.id]; return { id: asset.id, x: x - 38, y: y - 38, width: 76, height: 76 }; });
   const terminalBoxes = [...new Set(connections.flatMap(link => [link.from, link.to]))].map(id => { const [x, y] = layout.terminals[id]; return { x: x - 10, y: y - 10, width: 20, height: 20 }; });
-  const hints = new Map(connections.map(link => [link.id, orthogonalPoints([layout.terminals[link.from], ...(source.layout.bends?.[link.id] ?? []).map(point), layout.terminals[link.to]])]));
+  // A bus is one shared conductor, not a set of feeder lines that all start
+  // from the same center point. Give every connected route a separate tap on
+  // the actual bus symbol so the rendered feeders meet the bar without
+  // drawing over one another.
+  const busTaps = new Map<string, Map<string, Point>>();
+  for (const bus of assets.filter(asset => asset.kind === 'bus')) {
+    const incident = connections.filter(link => owners.get(link.from) === bus.id || owners.get(link.to) === bus.id)
+      .map(link => ({ link, terminal: owners.get(link.from) === bus.id ? link.from : link.to, peer: owners.get(link.from) === bus.id ? link.to : link.from }));
+    if (!incident.length) continue;
+    const horizontal = Math.abs((layout.rotations?.[bus.id] ?? 0) % 180) === 90;
+    const center = layout.assets[bus.id];
+    const axis = (terminal: string) => layout.terminals[terminal][horizontal ? 0 : 1];
+    const desired = incident.map(item => ({ ...item, position: axis(item.peer) })).sort((a, b) => a.position - b.position || a.link.id.localeCompare(b.link.id));
+    const spacing = 72;
+    let taps = desired.map(item => item.position);
+    if (taps.length > 1 && taps.at(-1)! - taps[0] < spacing * (taps.length - 1)) {
+      const midpoint = (taps[0] + taps.at(-1)!) / 2;
+      taps = taps.map((_, index) => midpoint + (index - (taps.length - 1) / 2) * spacing);
+    } else {
+      for (let index = 1; index < taps.length; index++) taps[index] = Math.max(taps[index], taps[index - 1] + spacing);
+    }
+    const byLink = new Map<string, Point>();
+    desired.forEach((item, index) => byLink.set(item.link.id, horizontal ? [taps[index], center[1]] : [center[0], taps[index]]));
+    busTaps.set(bus.id, byLink);
+    const halfSpan = Math.max(...taps.map(value => Math.abs(value - (horizontal ? center[0] : center[1])))) + 70;
+    layout.busSpans = { ...layout.busSpans, [bus.id]: Math.max(layout.busSpans?.[bus.id] ?? 0, halfSpan * 2) };
+  }
+  const connectionEnds = new Map(connections.map(link => [link.id, {
+    from: busTaps.get(owners.get(link.from)!)?.get(link.id) ?? layout.terminals[link.from],
+    to: busTaps.get(owners.get(link.to)!)?.get(link.id) ?? layout.terminals[link.to],
+  }]));
+  const preferredEarthRoutes = new Map<string, Point[]>();
+  const hints = new Map(connections.map(link => {
+    const { from, to } = connectionEnds.get(link.id)!;
+    return [link.id, orthogonalPoints([from, ...(source.layout.bends?.[link.id] ?? []).map(point), to])];
+  }));
+  // Cable-side earth switches share their external terminal with the outgoing
+  // cable in the electrical model. Draw that common conductor once and tee
+  // the earth lead off at the nearest point on the cable route.
+  for (const earth of assets.filter(asset => asset.kind === 'earth-switch')) {
+    const earthLink = connections.find(link => owners.get(link.from) === earth.id || owners.get(link.to) === earth.id);
+    if (!earthLink) continue;
+    const earthTerminal = owners.get(earthLink.from) === earth.id ? earthLink.from : earthLink.to;
+    const sharedTerminal = earthTerminal === earthLink.from ? earthLink.to : earthLink.from;
+    const sharedOwner = owners.get(sharedTerminal);
+    if (!sharedOwner || byId.get(sharedOwner)?.kind === 'bus') continue;
+    const cableLink = connections.find(link => link.id !== earthLink.id && (link.from === sharedTerminal || link.to === sharedTerminal)
+      && byId.get(owners.get(link.from === sharedTerminal ? link.to : link.from)!)?.kind === 'interface');
+    if (!cableLink) continue;
+    const cablePath = hints.get(cableLink.id)!;
+    const earthPoint = layout.terminals[earthTerminal];
+    let junction: Point | undefined; let nearest = Infinity;
+    for (let index = 1; index < cablePath.length; index++) {
+      const a = cablePath[index - 1]; const b = cablePath[index];
+      const candidate: Point = a[0] === b[0]
+        ? [a[0], Math.max(Math.min(a[1], b[1]) + 48, Math.min(Math.max(a[1], b[1]) - 48, earthPoint[1]))]
+        : [Math.max(Math.min(a[0], b[0]) + 48, Math.min(Math.max(a[0], b[0]) - 48, earthPoint[0])), a[1]];
+      const distance = Math.abs(candidate[0] - earthPoint[0]) + Math.abs(candidate[1] - earthPoint[1]);
+      const fromCableTerminal = owners.get(cableLink.from) === sharedOwner ? cableLink.from : cableLink.to;
+      const toCableTerminal = fromCableTerminal === cableLink.from ? cableLink.to : cableLink.from;
+      if (Math.abs(candidate[0] - layout.terminals[fromCableTerminal][0]) + Math.abs(candidate[1] - layout.terminals[fromCableTerminal][1]) < 56
+        || Math.abs(candidate[0] - layout.terminals[toCableTerminal][0]) + Math.abs(candidate[1] - layout.terminals[toCableTerminal][1]) < 56) continue;
+      if (distance < nearest) { nearest = distance; junction = candidate; }
+    }
+    const ends = connectionEnds.get(earthLink.id)!;
+    const sharedPoint = sharedTerminal === earthLink.from ? ends.from : ends.to;
+    const earthEnd = earthTerminal === earthLink.from ? ends.from : ends.to;
+    if (!junction) {
+      preferredEarthRoutes.set(earthLink.id, orthogonalPoints([sharedPoint, [earthEnd[0], sharedPoint[1]], earthEnd]));
+      continue;
+    }
+    const updated = sharedTerminal === earthLink.from ? { ...ends, from: junction } : { ...ends, to: junction };
+    connectionEnds.set(earthLink.id, updated);
+    const tee = orthogonalPoints([updated.from, updated.to]);
+    hints.set(earthLink.id, tee);
+    preferredEarthRoutes.set(earthLink.id, tee);
+  }
   const leadHints = assets.flatMap(asset => { const [x, y] = layout.assets[asset.id]; return equipmentPorts(asset, layout).ports.map((port, index) => ({ terminal: asset.terminals[index], points: orthogonalPoints([layout.terminals[asset.terminals[index]], [x + port[0], y + port[1]]]) })); });
   const labelPaths = [...hints.values(), ...leadHints.map(hint => hint.points)];
   const labels = new Map<string, AssetLabel>();
@@ -125,7 +207,7 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
   }
   const routed: Segment[] = leadHints.flatMap(hint => hint.points.slice(1).map((point, index) => ({ from: hint.points[index], to: point, terminals: [hint.terminal] }))); const routes = new Map<string, Point[]>();
   for (const link of connections) {
-    const from = layout.terminals[link.from]; const to = layout.terminals[link.to];
+    const { from, to } = connectionEnds.get(link.id)!;
     const own = new Set([owners.get(link.from), owners.get(link.to)]);
     const obstacles = [...symbolBoxes.filter(box => !own.has(box.id)), ...labels.values()].map(box => ({ x: box.x - gap, y: box.y - gap, width: box.width + gap * 2, height: box.height + gap * 2 }));
     const candidates = [hints.get(link.id)!, orthogonalPoints([from, to]), orthogonalPoints([from, [from[0], to[1]], to])];
@@ -137,6 +219,12 @@ export function diagramGeometry(model: NetworkModel, source: DiagramView) {
     for (const x of xs) candidates.push(orthogonalPoints([from, [x, from[1]], [x, to[1]], to]));
     for (const y of ys) candidates.push(orthogonalPoints([from, [from[0], y], [to[0], y], to]));
     const otherSegments = routed.filter(segment => !segment.terminals.includes(link.from) && !segment.terminals.includes(link.to));
+    const preferredEarth = preferredEarthRoutes.get(link.id);
+    if (preferredEarth) {
+      routes.set(link.id, preferredEarth);
+      preferredEarth.slice(1).forEach((p, index) => routed.push({ from: preferredEarth[index], to: p, terminals: [link.from, link.to] }));
+      continue;
+    }
     const score = (points: Point[]) => {
       let cost = points.length * 18;
       for (let i = 1; i < points.length; i++) {
@@ -175,10 +263,13 @@ export function equipmentPorts(asset: Asset, layout: DiagramView['layout']) {
   const rotate = ([x, y]: Point): Point => rotation === 90 ? [-y, x] : rotation === -90 ? [y, -x] : rotation === 180 ? [-x, -y] : [x, y];
   const point = (terminal: string): Point => [layout.terminals[terminal][0] - cx, layout.terminals[terminal][1] - cy];
   const transverse = (terminal: string) => { const [x, y] = point(terminal); return rotation === 90 ? -x : rotation === -90 ? x : rotation === 180 ? -y : y; };
-  const secondaryOrder = asset.terminals.slice(1).toSorted((a, b) => transverse(a) - transverse(b));
+  const windingRoles = transformerWindings(asset);
+  const secondaryOrder = windingRoles.secondaries.toSorted((a, b) => transverse(a) - transverse(b));
   const selector = threePositionGeometry(asset, layout);
-  const ports: Point[] = selector ? selector.ports : asset.kind === 'bus' ? [] : asset.kind === 'transformer'
-    ? asset.terminals.map((terminal, index) => rotate(index === 0 ? [-33, 0] : [33, (secondaryOrder.indexOf(terminal) - (asset.terminals.length - 2) / 2) * 24]))
+  const ports: Point[] = selector ? selector.ports : asset.earthAssembly ? asset.terminals.map(t => [0, layout.terminals[t][1] < cy ? -30 : 30] as Point) : asset.kind === 'bus' ? [] : asset.kind === 'transformer'
+    ? asset.terminals.map(terminal => rotate(windingRoles.primaries.includes(terminal)
+      ? [-33, (windingRoles.primaries.indexOf(terminal) - (windingRoles.primaries.length - 1) / 2) * 24]
+      : [33, (secondaryOrder.indexOf(terminal) - (secondaryOrder.length - 1) / 2) * 24]))
     : isMotor(asset) ? [[0, -30]]
     : isDrive(asset) ? asset.terminals.map(terminal => /:ac-(?:star|d)$/.test(terminal) ? [-22, -40] : /:ac-(?:delta|y)$/.test(terminal) ? [22, -40] : terminal.endsWith(':dc') ? [34, 0] : [0, 40])
     : isFuse(asset) ? [[0, -30], [0, 30]]
@@ -188,8 +279,9 @@ export function equipmentPorts(asset: Asset, layout: DiagramView['layout']) {
       if (Math.abs(x) >= Math.abs(y)) { const py = y / Math.abs(x) * 12; return [Math.sign(x) * Math.sqrt(18 ** 2 - py ** 2), py]; }
       const px = x / Math.abs(y) * 12; return [px, Math.sign(y) * Math.sqrt(18 ** 2 - px ** 2)];
     })
-    : asset.kind === 'earth-switch' ? [[-30, -30], [0, 39]]
+    : asset.kind === 'earth-switch' ? [[0, 0], [0, 66]]
     : asset.kind === 'source' && asset.terminals.length === 1 ? [[30, 0]]
     : asset.terminals.slice(0, 2).map((_, index) => rotate([index ? 30 : -30, 0]));
   return { rotation, ports };
 }
+

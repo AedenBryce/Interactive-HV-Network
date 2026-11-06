@@ -10,6 +10,8 @@ const assetSchema = z.strictObject({
   ...claimFields,
   id, label: z.string().min(1),
   aliases: z.array(id).optional(),
+  earthAssembly: z.strictObject({ earthAssetId: id, commonTerminal: id }).optional(),
+  isolatorDuty: z.enum(['on-load', 'off-load']).optional(),
   kind: z.enum(['source', 'breaker', 'contactor', 'disconnector', 'transformer', 'bus', 'earth-switch', 'interface']),
   terminals: z.array(id).min(1),
   conductivePairs: z.array(pair),
@@ -71,6 +73,10 @@ export const modelSchema = z.strictObject({
     }
   }
   for (const asset of model.assets) {
+    if (asset.earthAssembly) {
+      const earth = model.assets.find(candidate => candidate.id === asset.earthAssembly!.earthAssetId);
+      if (!earth || earth.kind !== 'earth-switch' || !asset.terminals.includes(asset.earthAssembly.commonTerminal)) error(`Invalid combined earth assembly: ${asset.id}.`);
+    }
     const mechanism = getRemovableMechanism(asset);
     if ([asset.removableBreaker, asset.removableContactor, asset.removableDisconnector].filter(Boolean).length > 1) error(`Asset ${asset.id} cannot declare multiple removable mechanisms.`);
     if (asset.sourceArcs !== undefined && (asset.positions.length > 0 || mechanism)) error(`Source arcs in ${asset.id} require a fixed asset without positions or a removable mechanism.`);

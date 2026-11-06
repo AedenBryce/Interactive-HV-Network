@@ -1,5 +1,20 @@
 # Interactive HV Network
 
+Current continuation point: [6 November 2026 handover](HANDOVER.md). Earlier implementation/delivery records below are historical where they conflict with that handover.
+
+## Final owner distribution — 6 November 2026
+
+The built-in opening layout is `authored-2026-11-06.9`, captured from the owner's final Chrome export. Drawing content is unchanged. The model remains `construction-2026-11-06.12`; switching starts at its agreed baseline. Editing requires the owner-provided password. Finish Editing and reload lock editing again; this is a local browser UI guard, not hosted authentication.
+
+- Windows portable ZIP: [HV-Network-2026-11-06-r9-Windows.zip](output/HV-Network-2026-11-06-r9-Windows.zip). Extract the entire ZIP, then double-click `START-HV-NETWORK.cmd`. Keep its window open while using the tool. Bundled Node.js runtime; no installation or internet required. Windows x64.
+- Static hosting ZIP: [HV-Network-2026-11-06-r9-Web.zip](output/HV-Network-2026-11-06-r9-Web.zip). Host the contents of `site/` on an approved HTTPS static host. No publication has been performed.
+- [Saved defaults and fallbacks](docs/layout-versions/README.md).
+
+Layout changes made later save only in that user's browser. Download Review returns edits to the owner for a new release. Save Scenario is separate and retains simulation states. New releases should use new folders, retaining saved scenarios. The archives contain site network data but exclude the PDF drawings.
+
+Verification: TypeScript and production build passed; the packaged local server loaded the app with no browser errors, search navigated to an asset, editing required the password, and the fresh-browser layout export exactly matched the owner layout. ZIP CRC and manifest SHA-256 checks passed. Distribution to another computer and deployment to a web host remain untested.
+
+
 A local browser application for understanding represented network connections and downstream switching impacts.
 
 **Current models: synthetic demonstrations, 13 provisional site areas and an assembled whole-network construction.** The construction has owner-selected starting positions and complete V1 local control profiles. Remaining electrical/coverage discrepancies and whole-model acceptance are open. The application reports connectivity, without electrical calculations or operational isolation authorisation.

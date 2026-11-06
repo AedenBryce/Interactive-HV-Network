@@ -1,0 +1,77 @@
+{
+  "source": "src/models/site/authored-network.json",
+  "sourceSha256": "cc0294748b5399522bbf534245f9d7ef822628d527dab6a41a1007284ee4b2bf",
+  "layoutRevision": "authored-2026-11-05.5",
+  "modelId": "site-whole-network",
+  "modelVersion": "construction-2026-10-23.11",
+  "modelFingerprint": "3059d0a90fa737920525ba44b80a20f416db7a118992b2ac25e08065481ac604",
+  "topologyFingerprint": "f116f9074e3a68d1493ba02b3158179b44e94c6b9d7bb10064bf649610ffa0dc",
+  "state": "Agreed model baseline; diagram exports, not browser screenshots.",
+  "images": [
+    {
+      "path": "docs/review/hv-layout/overview.svg",
+      "label": "Complete network — authored baseline",
+      "viewBox": [
+        300,
+        -9769.5,
+        95782.5,
+        87100.5
+      ],
+      "assets": 684,
+      "connections": 677,
+      "sha256": "4b0536009dcf5b08ee222c98d322911ae31578d75f74e0e150bc5f350482500d"
+    },
+    {
+      "path": "docs/review/hv-layout/sw411.svg",
+      "label": "SW411 switchgear — authored baseline",
+      "viewBox": [
+        220,
+        3639.5,
+        73110,
+        4114.5
+      ],
+      "assets": 684,
+      "connections": 677,
+      "sha256": "8bf735423100f00b4f42df246b1ad80dd7fbc243b532ea0590d95485e7712bfa"
+    },
+    {
+      "path": "docs/review/hv-layout/sw426.svg",
+      "label": "SW426 switchroom — authored baseline",
+      "viewBox": [
+        49777.5,
+        16006.5,
+        12465,
+        3211.5
+      ],
+      "assets": 684,
+      "connections": 677,
+      "sha256": "3d82a909ecd0a7132b1c5adcd67e21f8f68e91b51550b1db80f1743f4788088a"
+    },
+    {
+      "path": "docs/review/hv-layout/tf04-rm420.svg",
+      "label": "TF04 to RM420 — authored baseline",
+      "viewBox": [
+        85067.5,
+        -30,
+        11095,
+        25251
+      ],
+      "assets": 684,
+      "connections": 677,
+      "sha256": "ffbb1810073e3b4dea8f82291f4277e412a61a5f5dd6e8ce853c80953aaba98e"
+    },
+    {
+      "path": "docs/review/hv-layout/sw505.svg",
+      "label": "SW505 drives — authored baseline",
+      "viewBox": [
+        2320,
+        15958.5,
+        11292.5,
+        11160
+      ],
+      "assets": 684,
+      "connections": 677,
+      "sha256": "65c18d90ea46586e04402797bfe4fa36cd521aae66b83fb9d84f96f39d99dcf0"
+    }
+  ]
+}

@@ -11,8 +11,8 @@ export const presentationSchema = z.strictObject({
     bounds,
     layout: z.strictObject({
       assets: z.record(id, point), terminals: z.record(id, point),
-      rotations: z.record(id, coordinate).optional(), labelOffsets: z.record(id, point).optional(),
-      bends: z.record(id, z.array(point)).optional(),
+      objectRotations: z.record(id, coordinate).optional(), rotations: z.record(id, coordinate).optional(), labelOffsets: z.record(id, point).optional(),
+      bends: z.record(id, z.array(point)).optional(), busSpans: z.record(id, coordinate).optional(),
     }),
     boundaries: z.array(z.strictObject({ connectionId: id, remoteAssetId: id, targetViewId: id, position: point })).optional(),
     regions: z.array(z.strictObject({ id, label: id, bounds, targetViewId: id })).optional(),
@@ -81,3 +81,4 @@ export function fallbackPresentation(model: PresentedModel): DiagramPresentation
   }
   return { overviewId: 'overview', views: [{ id: 'overview', label: 'Network overview', assetIds: model.assets.map(asset => asset.id), layout: { assets, terminals }, bounds: [0, 0, 1100, Math.max(300, Math.ceil(model.assets.length / 5) * 200)] }] };
 }
+

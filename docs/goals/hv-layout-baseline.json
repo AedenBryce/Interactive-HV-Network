@@ -1,0 +1,8027 @@
+{
+  "revision": "691aaeada7c77e84b9479b288f696727ef12cca4",
+  "sourceSnapshot": "tmp/hv-layout-baseline-20261105",
+  "sourceManifestSha256": "db4639626458438697569d767389138266069b998ea059758c975fa3e07f2b92",
+  "modelId": "site-whole-network",
+  "modelVersion": "construction-2026-10-23.11",
+  "modelSha256": "3059d0a90fa737920525ba44b80a20f416db7a118992b2ac25e08065481ac604",
+  "topologySha256": "f116f9074e3a68d1493ba02b3158179b44e94c6b9d7bb10064bf649610ffa0dc",
+  "assetCount": 684,
+  "connectionCount": 677,
+  "terminalCount": 1206,
+  "assets": [
+    {
+      "id": "boundary:tf04",
+      "terminals": [
+        "boundary:tf04:port"
+      ]
+    },
+    {
+      "id": "boundary:tf11",
+      "terminals": [
+        "boundary:tf11:port"
+      ]
+    },
+    {
+      "id": "boundary:tf12",
+      "terminals": [
+        "boundary:tf12:port"
+      ]
+    },
+    {
+      "id": "cv006:abs:49-1",
+      "terminals": [
+        "cv006:abs:49-1:a",
+        "cv006:abs:49-1:b"
+      ]
+    },
+    {
+      "id": "cv006:abs:49-38-1",
+      "terminals": [
+        "cv006:abs:49-38-1:a",
+        "cv006:abs:49-38-1:b"
+      ]
+    },
+    {
+      "id": "cv006:abs:49-40",
+      "terminals": [
+        "cv006:abs:49-40:a",
+        "cv006:abs:49-40:b"
+      ]
+    },
+    {
+      "id": "cv006:fused-abs:286",
+      "terminals": [
+        "cv006:fused-abs:286:a",
+        "cv006:fused-abs:286:b"
+      ]
+    },
+    {
+      "id": "cv006:fused-abs:57",
+      "terminals": [
+        "cv006:fused-abs:57:a",
+        "cv006:fused-abs:57:b"
+      ]
+    },
+    {
+      "id": "cv006:interface:drop-tower-workshop",
+      "terminals": [
+        "cv006:interface:drop-tower-workshop:port"
+      ]
+    },
+    {
+      "id": "cv006:interface:hopper10",
+      "terminals": [
+        "cv006:interface:hopper10:port"
+      ]
+    },
+    {
+      "id": "cv006:interface:line-comparison",
+      "terminals": [
+        "cv006:interface:line-comparison:22kv",
+        "cv006:interface:line-comparison:33kv"
+      ]
+    },
+    {
+      "id": "cv006:interface:sw411",
+      "terminals": [
+        "cv006:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:17",
+      "terminals": [
+        "cv006:pole:17:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:201",
+      "terminals": [
+        "cv006:pole:201:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:286",
+      "terminals": [
+        "cv006:pole:286:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:287",
+      "terminals": [
+        "cv006:pole:287:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:49",
+      "terminals": [
+        "cv006:pole:49:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:49-38",
+      "terminals": [
+        "cv006:pole:49-38:port"
+      ]
+    },
+    {
+      "id": "cv006:pole:49-39",
+      "terminals": [
+        "cv006:pole:49-39:port"
+      ]
+    },
+    {
+      "id": "cv006:recloser:49-39a",
+      "terminals": [
+        "cv006:recloser:49-39a:a",
+        "cv006:recloser:49-39a:b"
+      ]
+    },
+    {
+      "id": "drop-tower:abs:p18-1",
+      "terminals": [
+        "drop-tower:abs:p18-1:a",
+        "drop-tower:abs:p18-1:b"
+      ]
+    },
+    {
+      "id": "drop-tower:abs:p18-8",
+      "terminals": [
+        "drop-tower:abs:p18-8:a",
+        "drop-tower:abs:p18-8:b"
+      ]
+    },
+    {
+      "id": "drop-tower:fuse:p18-8",
+      "terminals": [
+        "drop-tower:fuse:p18-8:a",
+        "drop-tower:fuse:p18-8:b"
+      ]
+    },
+    {
+      "id": "drop-tower:tf:p18-8",
+      "terminals": [
+        "drop-tower:tf:p18-8:hv",
+        "drop-tower:tf:p18-8:lv"
+      ]
+    },
+    {
+      "id": "hpgr:drive-mea:converter",
+      "terminals": [
+        "hpgr:drive-mea:converter:ac-star",
+        "hpgr:drive-mea:converter:ac-delta",
+        "hpgr:drive-mea:converter:dc",
+        "hpgr:drive-mea:converter:output"
+      ]
+    },
+    {
+      "id": "hpgr:drive-mea:dc-earth",
+      "terminals": [
+        "hpgr:drive-mea:dc-earth:a",
+        "hpgr:drive-mea:dc-earth:b"
+      ]
+    },
+    {
+      "id": "hpgr:drive-mea:outlet",
+      "terminals": [
+        "hpgr:drive-mea:outlet:vsd",
+        "hpgr:drive-mea:outlet:motor",
+        "hpgr:drive-mea:outlet:earth"
+      ]
+    },
+    {
+      "id": "hpgr:drive-meb:converter",
+      "terminals": [
+        "hpgr:drive-meb:converter:ac-star",
+        "hpgr:drive-meb:converter:ac-delta",
+        "hpgr:drive-meb:converter:dc",
+        "hpgr:drive-meb:converter:output"
+      ]
+    },
+    {
+      "id": "hpgr:drive-meb:dc-earth",
+      "terminals": [
+        "hpgr:drive-meb:dc-earth:a",
+        "hpgr:drive-meb:dc-earth:b"
+      ]
+    },
+    {
+      "id": "hpgr:drive-meb:outlet",
+      "terminals": [
+        "hpgr:drive-meb:outlet:vsd",
+        "hpgr:drive-meb:outlet:motor",
+        "hpgr:drive-meb:outlet:earth"
+      ]
+    },
+    {
+      "id": "hpgr:jb001",
+      "terminals": [
+        "hpgr:jb001:in",
+        "hpgr:jb001:out"
+      ]
+    },
+    {
+      "id": "hpgr:mc001:bus",
+      "terminals": [
+        "hpgr:mc001:bus:bar"
+      ]
+    },
+    {
+      "id": "hpgr:mc001:cb",
+      "terminals": [
+        "hpgr:mc001:cb:a",
+        "hpgr:mc001:cb:b"
+      ]
+    },
+    {
+      "id": "hpgr:motor-mea",
+      "terminals": [
+        "hpgr:motor-mea:port"
+      ]
+    },
+    {
+      "id": "hpgr:motor-meb",
+      "terminals": [
+        "hpgr:motor-meb:port"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a01:q8",
+      "terminals": [
+        "hpgr:sw002:a01:q8:a",
+        "hpgr:sw002:a01:q8:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a02:f1",
+      "terminals": [
+        "hpgr:sw002:a02:f1:a",
+        "hpgr:sw002:a02:f1:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a02:k101",
+      "terminals": [
+        "hpgr:sw002:a02:k101:a",
+        "hpgr:sw002:a02:k101:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a02:q8",
+      "terminals": [
+        "hpgr:sw002:a02:q8:a",
+        "hpgr:sw002:a02:q8:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a04:f1",
+      "terminals": [
+        "hpgr:sw002:a04:f1:a",
+        "hpgr:sw002:a04:f1:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a04:k101",
+      "terminals": [
+        "hpgr:sw002:a04:k101:a",
+        "hpgr:sw002:a04:k101:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:a04:q8",
+      "terminals": [
+        "hpgr:sw002:a04:q8:a",
+        "hpgr:sw002:a04:q8:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:bus",
+      "terminals": [
+        "hpgr:sw002:bus:bar"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:tf004:f101",
+      "terminals": [
+        "hpgr:sw002:tf004:f101:a",
+        "hpgr:sw002:tf004:f101:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:tf004:k202",
+      "terminals": [
+        "hpgr:sw002:tf004:k202:a",
+        "hpgr:sw002:tf004:k202:b"
+      ]
+    },
+    {
+      "id": "hpgr:sw002:tf004:q8",
+      "terminals": [
+        "hpgr:sw002:tf004:q8:a",
+        "hpgr:sw002:tf004:q8:b"
+      ]
+    },
+    {
+      "id": "hpgr:tf001",
+      "terminals": [
+        "hpgr:tf001:hv",
+        "hpgr:tf001:mv"
+      ]
+    },
+    {
+      "id": "hpgr:tf002",
+      "terminals": [
+        "hpgr:tf002:hv",
+        "hpgr:tf002:ac-star",
+        "hpgr:tf002:ac-delta"
+      ]
+    },
+    {
+      "id": "hpgr:tf003",
+      "terminals": [
+        "hpgr:tf003:hv",
+        "hpgr:tf003:ac-star",
+        "hpgr:tf003:ac-delta"
+      ]
+    },
+    {
+      "id": "hpgr:tf004",
+      "terminals": [
+        "hpgr:tf004:hv",
+        "hpgr:tf004:lv"
+      ]
+    },
+    {
+      "id": "line33:bigge-sp1-sp2:interface",
+      "terminals": [
+        "line33:bigge-sp1-sp2:interface:port"
+      ]
+    },
+    {
+      "id": "line33:bigge-sp1:interface",
+      "terminals": [
+        "line33:bigge-sp1:interface:port"
+      ]
+    },
+    {
+      "id": "line33:end-287:interface",
+      "terminals": [
+        "line33:end-287:interface:port"
+      ]
+    },
+    {
+      "id": "line33:future-214:interface",
+      "terminals": [
+        "line33:future-214:interface:port"
+      ]
+    },
+    {
+      "id": "line33:future-4a:interface",
+      "terminals": [
+        "line33:future-4a:interface:port"
+      ]
+    },
+    {
+      "id": "line33:hopper-10:interface",
+      "terminals": [
+        "line33:hopper-10:interface:port"
+      ]
+    },
+    {
+      "id": "line33:hopper-286-fused-abs",
+      "terminals": [
+        "line33:hopper-286-fused-abs:in",
+        "line33:hopper-286-fused-abs:out"
+      ]
+    },
+    {
+      "id": "line33:norfolk:interface",
+      "terminals": [
+        "line33:norfolk:interface:port"
+      ]
+    },
+    {
+      "id": "line33:pole-1-recloser",
+      "terminals": [
+        "line33:pole-1-recloser:in",
+        "line33:pole-1-recloser:out"
+      ]
+    },
+    {
+      "id": "line33:pole-2-abs",
+      "terminals": [
+        "line33:pole-2-abs:in",
+        "line33:pole-2-abs:out"
+      ]
+    },
+    {
+      "id": "line33:pole-201-abs",
+      "terminals": [
+        "line33:pole-201-abs:in",
+        "line33:pole-201-abs:out"
+      ]
+    },
+    {
+      "id": "line33:pole-214",
+      "terminals": [
+        "line33:pole-214:port"
+      ]
+    },
+    {
+      "id": "line33:pole-227",
+      "terminals": [
+        "line33:pole-227:port"
+      ]
+    },
+    {
+      "id": "line33:pole-272",
+      "terminals": [
+        "line33:pole-272:port"
+      ]
+    },
+    {
+      "id": "line33:pole-272-1:interface",
+      "terminals": [
+        "line33:pole-272-1:interface:port"
+      ]
+    },
+    {
+      "id": "line33:pole-284",
+      "terminals": [
+        "line33:pole-284:port"
+      ]
+    },
+    {
+      "id": "line33:pole-286",
+      "terminals": [
+        "line33:pole-286:port"
+      ]
+    },
+    {
+      "id": "line33:pole-4",
+      "terminals": [
+        "line33:pole-4:port"
+      ]
+    },
+    {
+      "id": "line33:tie-in-abs",
+      "terminals": [
+        "line33:tie-in-abs:in",
+        "line33:tie-in-abs:out"
+      ]
+    },
+    {
+      "id": "mc454:bus",
+      "terminals": [
+        "mc454:bus:bar"
+      ]
+    },
+    {
+      "id": "mc454:in:cb",
+      "terminals": [
+        "mc454:in:cb:a",
+        "mc454:in:cb:b"
+      ]
+    },
+    {
+      "id": "mine:interface:services-rm721",
+      "terminals": [
+        "mine:interface:services-rm721:port"
+      ]
+    },
+    {
+      "id": "mine:interface:station",
+      "terminals": [
+        "mine:interface:station:port"
+      ]
+    },
+    {
+      "id": "mine:interface:sw411",
+      "terminals": [
+        "mine:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "mine:interface:water-opf1",
+      "terminals": [
+        "mine:interface:water-opf1:port"
+      ]
+    },
+    {
+      "id": "mine:interface:western",
+      "terminals": [
+        "mine:interface:western:port"
+      ]
+    },
+    {
+      "id": "mine:mc441:bus",
+      "terminals": [
+        "mine:mc441:bus:bar"
+      ]
+    },
+    {
+      "id": "mine:mc441:in",
+      "terminals": [
+        "mine:mc441:in:a",
+        "mine:mc441:in:b"
+      ]
+    },
+    {
+      "id": "mine:sw441:bus",
+      "terminals": [
+        "mine:sw441:bus:bar"
+      ]
+    },
+    {
+      "id": "mine:sw441:bus:es",
+      "terminals": [
+        "mine:sw441:bus:es:a",
+        "mine:sw441:bus:es:b"
+      ]
+    },
+    {
+      "id": "mine:sw441:in:cb",
+      "terminals": [
+        "mine:sw441:in:cb:a",
+        "mine:sw441:in:cb:b"
+      ]
+    },
+    {
+      "id": "mine:sw441:in:es",
+      "terminals": [
+        "mine:sw441:in:es:a",
+        "mine:sw441:in:es:b"
+      ]
+    },
+    {
+      "id": "mine:tf441",
+      "terminals": [
+        "mine:tf441:hv",
+        "mine:tf441:lv"
+      ]
+    },
+    {
+      "id": "mine:tf441:cb",
+      "terminals": [
+        "mine:tf441:cb:a",
+        "mine:tf441:cb:b"
+      ]
+    },
+    {
+      "id": "mine:tf441:es",
+      "terminals": [
+        "mine:tf441:es:a",
+        "mine:tf441:es:b"
+      ]
+    },
+    {
+      "id": "mine:wt1:cb",
+      "terminals": [
+        "mine:wt1:cb:a",
+        "mine:wt1:cb:b"
+      ]
+    },
+    {
+      "id": "owner:tf12:opf1-7",
+      "terminals": [
+        "owner:tf12:opf1-7:port"
+      ]
+    },
+    {
+      "id": "rm406:bus",
+      "terminals": [
+        "rm406:bus:bar"
+      ]
+    },
+    {
+      "id": "rm406:cb01",
+      "terminals": [
+        "rm406:cb01:a",
+        "rm406:cb01:b"
+      ]
+    },
+    {
+      "id": "rm406:cb02",
+      "terminals": [
+        "rm406:cb02:a",
+        "rm406:cb02:b"
+      ]
+    },
+    {
+      "id": "rm406:cb03",
+      "terminals": [
+        "rm406:cb03:a",
+        "rm406:cb03:b"
+      ]
+    },
+    {
+      "id": "rm406:interface:hopper8",
+      "terminals": [
+        "rm406:interface:hopper8:port"
+      ]
+    },
+    {
+      "id": "rm406:mc406a:bus",
+      "terminals": [
+        "rm406:mc406a:bus:bar"
+      ]
+    },
+    {
+      "id": "rm406:mc406a:cb",
+      "terminals": [
+        "rm406:mc406a:cb:a",
+        "rm406:mc406a:cb:b"
+      ]
+    },
+    {
+      "id": "rm406:sw01",
+      "terminals": [
+        "rm406:sw01:line",
+        "rm406:sw01:cable",
+        "rm406:sw01:earth"
+      ]
+    },
+    {
+      "id": "rm406:sw02",
+      "terminals": [
+        "rm406:sw02:line",
+        "rm406:sw02:cable",
+        "rm406:sw02:earth"
+      ]
+    },
+    {
+      "id": "rm406:sw03",
+      "terminals": [
+        "rm406:sw03:line",
+        "rm406:sw03:cable",
+        "rm406:sw03:earth"
+      ]
+    },
+    {
+      "id": "rm406:sw04",
+      "terminals": [
+        "rm406:sw04:line",
+        "rm406:sw04:cable",
+        "rm406:sw04:earth"
+      ]
+    },
+    {
+      "id": "rm406:tf406a:transformer",
+      "terminals": [
+        "rm406:tf406a:hv",
+        "rm406:tf406a:lv-a",
+        "rm406:tf406a:lv-b"
+      ]
+    },
+    {
+      "id": "rm406:tf406b:transformer",
+      "terminals": [
+        "rm406:tf406b:hv",
+        "rm406:tf406b:lv"
+      ]
+    },
+    {
+      "id": "rm406:vs4061:input-a:boundary",
+      "terminals": [
+        "rm406:vs4061:input-a:boundary:port"
+      ]
+    },
+    {
+      "id": "rm406:vs4061:input-a:switch",
+      "terminals": [
+        "rm406:vs4061:input-a:switch:a",
+        "rm406:vs4061:input-a:switch:b"
+      ]
+    },
+    {
+      "id": "rm406:vs4061:input-b:boundary",
+      "terminals": [
+        "rm406:vs4061:input-b:boundary:port"
+      ]
+    },
+    {
+      "id": "rm406:vs4061:input-b:switch",
+      "terminals": [
+        "rm406:vs4061:input-b:switch:a",
+        "rm406:vs4061:input-b:switch:b"
+      ]
+    },
+    {
+      "id": "rm410:bus",
+      "terminals": [
+        "rm410:bus:bar"
+      ]
+    },
+    {
+      "id": "rm410:cb01",
+      "terminals": [
+        "rm410:cb01:a",
+        "rm410:cb01:b"
+      ]
+    },
+    {
+      "id": "rm410:cb02",
+      "terminals": [
+        "rm410:cb02:a",
+        "rm410:cb02:b"
+      ]
+    },
+    {
+      "id": "rm410:cb03",
+      "terminals": [
+        "rm410:cb03:a",
+        "rm410:cb03:b"
+      ]
+    },
+    {
+      "id": "rm410:interface:mc410a",
+      "terminals": [
+        "rm410:interface:mc410a:input"
+      ]
+    },
+    {
+      "id": "rm410:interface:rm418",
+      "terminals": [
+        "rm410:interface:rm418:port"
+      ]
+    },
+    {
+      "id": "rm410:interface:rm419",
+      "terminals": [
+        "rm410:interface:rm419:incoming",
+        "rm410:interface:rm419:through"
+      ]
+    },
+    {
+      "id": "rm410:mc410a:bus",
+      "terminals": [
+        "rm410:mc410a:bus:bar"
+      ]
+    },
+    {
+      "id": "rm410:mc410a:cb",
+      "terminals": [
+        "rm410:mc410a:cb:a",
+        "rm410:mc410a:cb:b"
+      ]
+    },
+    {
+      "id": "rm410:sw01",
+      "terminals": [
+        "rm410:sw01:line",
+        "rm410:sw01:cable",
+        "rm410:sw01:earth"
+      ]
+    },
+    {
+      "id": "rm410:sw02",
+      "terminals": [
+        "rm410:sw02:line",
+        "rm410:sw02:cable",
+        "rm410:sw02:earth"
+      ]
+    },
+    {
+      "id": "rm410:sw03",
+      "terminals": [
+        "rm410:sw03:line",
+        "rm410:sw03:cable",
+        "rm410:sw03:earth"
+      ]
+    },
+    {
+      "id": "rm410:sw04",
+      "terminals": [
+        "rm410:sw04:line",
+        "rm410:sw04:cable",
+        "rm410:sw04:earth"
+      ]
+    },
+    {
+      "id": "rm410:tf410a:transformer",
+      "terminals": [
+        "rm410:tf410a:hv",
+        "rm410:tf410a:lv-a",
+        "rm410:tf410a:lv-b"
+      ]
+    },
+    {
+      "id": "rm410:tf410b:transformer",
+      "terminals": [
+        "rm410:tf410b:hv",
+        "rm410:tf410b:lv"
+      ]
+    },
+    {
+      "id": "rm410:vs4101:input-a:boundary",
+      "terminals": [
+        "rm410:vs4101:input-a:boundary:port"
+      ]
+    },
+    {
+      "id": "rm410:vs4101:input-a:switch",
+      "terminals": [
+        "rm410:vs4101:input-a:switch:a",
+        "rm410:vs4101:input-a:switch:b"
+      ]
+    },
+    {
+      "id": "rm410:vs4101:input-b:boundary",
+      "terminals": [
+        "rm410:vs4101:input-b:boundary:port"
+      ]
+    },
+    {
+      "id": "rm410:vs4101:input-b:switch",
+      "terminals": [
+        "rm410:vs4101:input-b:switch:a",
+        "rm410:vs4101:input-b:switch:b"
+      ]
+    },
+    {
+      "id": "rm412:bus",
+      "terminals": [
+        "rm412:bus:bar"
+      ]
+    },
+    {
+      "id": "rm412:e100",
+      "terminals": [
+        "rm412:e100:a",
+        "rm412:e100:b"
+      ]
+    },
+    {
+      "id": "rm412:e101",
+      "terminals": [
+        "rm412:e101:a",
+        "rm412:e101:b"
+      ]
+    },
+    {
+      "id": "rm412:e102",
+      "terminals": [
+        "rm412:e102:a",
+        "rm412:e102:b"
+      ]
+    },
+    {
+      "id": "rm412:f1",
+      "terminals": [
+        "rm412:f1:in",
+        "rm412:f1:out"
+      ]
+    },
+    {
+      "id": "rm412:f2",
+      "terminals": [
+        "rm412:f2:in",
+        "rm412:f2:out"
+      ]
+    },
+    {
+      "id": "rm412:feeder-contact",
+      "terminals": [
+        "rm412:feeder-contact:a",
+        "rm412:feeder-contact:b"
+      ]
+    },
+    {
+      "id": "rm412:lv-415-star:bus",
+      "terminals": [
+        "rm412:lv-415-star:bus:bar"
+      ]
+    },
+    {
+      "id": "rm412:lv-690-delta:bus",
+      "terminals": [
+        "rm412:lv-690-delta:bus:bar"
+      ]
+    },
+    {
+      "id": "rm412:lv-690-star:bus",
+      "terminals": [
+        "rm412:lv-690-star:bus:bar"
+      ]
+    },
+    {
+      "id": "rm412:q100",
+      "terminals": [
+        "rm412:q100:a",
+        "rm412:q100:b"
+      ]
+    },
+    {
+      "id": "rm412:q200",
+      "terminals": [
+        "rm412:q200:a",
+        "rm412:q200:b"
+      ]
+    },
+    {
+      "id": "rm412:q201",
+      "terminals": [
+        "rm412:q201:a",
+        "rm412:q201:b"
+      ]
+    },
+    {
+      "id": "rm412:q202",
+      "terminals": [
+        "rm412:q202:a",
+        "rm412:q202:b"
+      ]
+    },
+    {
+      "id": "rm412:s100",
+      "terminals": [
+        "rm412:s100:a",
+        "rm412:s100:b"
+      ]
+    },
+    {
+      "id": "rm412:s101",
+      "terminals": [
+        "rm412:s101:a",
+        "rm412:s101:b"
+      ]
+    },
+    {
+      "id": "rm412:tf412",
+      "terminals": [
+        "rm412:tf412:hv",
+        "rm412:tf412:lv-690-star",
+        "rm412:tf412:lv-690-delta",
+        "rm412:tf412:lv-415-star"
+      ]
+    },
+    {
+      "id": "rm413:bus",
+      "terminals": [
+        "rm413:bus:bar"
+      ]
+    },
+    {
+      "id": "rm413:in01",
+      "terminals": [
+        "rm413:in01:a",
+        "rm413:in01:b"
+      ]
+    },
+    {
+      "id": "rm413:in02",
+      "terminals": [
+        "rm413:in02:a",
+        "rm413:in02:b"
+      ]
+    },
+    {
+      "id": "rm413:interface:rm417",
+      "terminals": [
+        "rm413:interface:rm417:port"
+      ]
+    },
+    {
+      "id": "rm413:mc413:bus",
+      "terminals": [
+        "rm413:mc413:bus:bar"
+      ]
+    },
+    {
+      "id": "rm413:mc413:cb",
+      "terminals": [
+        "rm413:mc413:cb:a",
+        "rm413:mc413:cb:b"
+      ]
+    },
+    {
+      "id": "rm413:mcc414:bus",
+      "terminals": [
+        "rm413:mcc414:bus:bar"
+      ]
+    },
+    {
+      "id": "rm413:mcc414:cb",
+      "terminals": [
+        "rm413:mcc414:cb:a",
+        "rm413:mcc414:cb:b"
+      ]
+    },
+    {
+      "id": "rm413:tf413",
+      "terminals": [
+        "rm413:tf413:hv",
+        "rm413:tf413:lv"
+      ]
+    },
+    {
+      "id": "rm413:tf413:cb",
+      "terminals": [
+        "rm413:tf413:cb:a",
+        "rm413:tf413:cb:b"
+      ]
+    },
+    {
+      "id": "rm413:tf414",
+      "terminals": [
+        "rm413:tf414:hv",
+        "rm413:tf414:lv"
+      ]
+    },
+    {
+      "id": "rm413:tf414:cb",
+      "terminals": [
+        "rm413:tf414:cb:a",
+        "rm413:tf414:cb:b"
+      ]
+    },
+    {
+      "id": "rm413a:ac-input-a:boundary",
+      "terminals": [
+        "rm413a:ac-input-a:boundary:port"
+      ]
+    },
+    {
+      "id": "rm413a:ac-input-a:switch",
+      "terminals": [
+        "rm413a:ac-input-a:switch:a",
+        "rm413a:ac-input-a:switch:b"
+      ]
+    },
+    {
+      "id": "rm413a:ac-input-b:boundary",
+      "terminals": [
+        "rm413a:ac-input-b:boundary:port"
+      ]
+    },
+    {
+      "id": "rm413a:ac-input-b:switch",
+      "terminals": [
+        "rm413a:ac-input-b:switch:a",
+        "rm413a:ac-input-b:switch:b"
+      ]
+    },
+    {
+      "id": "rm413a:bus",
+      "terminals": [
+        "rm413a:bus:bar"
+      ]
+    },
+    {
+      "id": "rm413a:es-q8:lower",
+      "terminals": [
+        "rm413a:es-q8:lower:line",
+        "rm413a:es-q8:lower:cable",
+        "rm413a:es-q8:lower:earth"
+      ]
+    },
+    {
+      "id": "rm413a:es-q8:upper",
+      "terminals": [
+        "rm413a:es-q8:upper:a",
+        "rm413a:es-q8:upper:b"
+      ]
+    },
+    {
+      "id": "rm413a:q1",
+      "terminals": [
+        "rm413a:q1:a",
+        "rm413a:q1:b"
+      ]
+    },
+    {
+      "id": "rm413a:tf413a",
+      "terminals": [
+        "rm413a:tf413a:hv",
+        "rm413a:tf413a:lv-a",
+        "rm413a:tf413a:lv-b"
+      ]
+    },
+    {
+      "id": "rm420:bus",
+      "terminals": [
+        "rm420:bus:port"
+      ]
+    },
+    {
+      "id": "rm420:comparison:cv00622",
+      "terminals": [
+        "rm420:comparison:cv00622:port"
+      ]
+    },
+    {
+      "id": "rm420:comparison:station33",
+      "terminals": [
+        "rm420:comparison:station33:port"
+      ]
+    },
+    {
+      "id": "rm420:es01",
+      "terminals": [
+        "rm420:es01:in",
+        "rm420:es01:out"
+      ]
+    },
+    {
+      "id": "rm420:interface:pole286",
+      "terminals": [
+        "rm420:interface:pole286:port"
+      ]
+    },
+    {
+      "id": "rm420:mc420:bus",
+      "terminals": [
+        "rm420:mc420:bus:port"
+      ]
+    },
+    {
+      "id": "rm420:mc420:in:es",
+      "terminals": [
+        "rm420:mc420:in:es:in",
+        "rm420:mc420:in:es:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:in:vcb",
+      "terminals": [
+        "rm420:mc420:in:vcb:in",
+        "rm420:mc420:in:vcb:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-01:es",
+      "terminals": [
+        "rm420:mc420:motor-01:es:in",
+        "rm420:mc420:motor-01:es:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-01:fc",
+      "terminals": [
+        "rm420:mc420:motor-01:fc:in",
+        "rm420:mc420:motor-01:fc:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-01:fc:fuse",
+      "terminals": [
+        "rm420:mc420:motor-01:fc:fuse:in",
+        "rm420:mc420:motor-01:fc:fuse:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-01:output",
+      "terminals": [
+        "rm420:mc420:motor-01:output:port"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-01:rc",
+      "terminals": [
+        "rm420:mc420:motor-01:rc:in",
+        "rm420:mc420:motor-01:rc:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-01:rc:fuse",
+      "terminals": [
+        "rm420:mc420:motor-01:rc:fuse:in",
+        "rm420:mc420:motor-01:rc:fuse:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-02:es",
+      "terminals": [
+        "rm420:mc420:motor-02:es:in",
+        "rm420:mc420:motor-02:es:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-02:fc",
+      "terminals": [
+        "rm420:mc420:motor-02:fc:in",
+        "rm420:mc420:motor-02:fc:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-02:fc:fuse",
+      "terminals": [
+        "rm420:mc420:motor-02:fc:fuse:in",
+        "rm420:mc420:motor-02:fc:fuse:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-02:output",
+      "terminals": [
+        "rm420:mc420:motor-02:output:port"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-02:rc",
+      "terminals": [
+        "rm420:mc420:motor-02:rc:in",
+        "rm420:mc420:motor-02:rc:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420:motor-02:rc:fuse",
+      "terminals": [
+        "rm420:mc420:motor-02:rc:fuse:in",
+        "rm420:mc420:motor-02:rc:fuse:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420a:bus",
+      "terminals": [
+        "rm420:mc420a:bus:bar"
+      ]
+    },
+    {
+      "id": "rm420:mc420a:in:acb",
+      "terminals": [
+        "rm420:mc420a:in:acb:in",
+        "rm420:mc420a:in:acb:out"
+      ]
+    },
+    {
+      "id": "rm420:mc420a:interface",
+      "terminals": [
+        "rm420:mc420a:interface:port"
+      ]
+    },
+    {
+      "id": "rm420:spare:cb",
+      "terminals": [
+        "rm420:spare:cb:in",
+        "rm420:spare:cb:out"
+      ]
+    },
+    {
+      "id": "rm420:spare:es",
+      "terminals": [
+        "rm420:spare:es:in",
+        "rm420:spare:es:out"
+      ]
+    },
+    {
+      "id": "rm420:spare:interface",
+      "terminals": [
+        "rm420:spare:interface:port"
+      ]
+    },
+    {
+      "id": "rm420:spare:sw",
+      "terminals": [
+        "rm420:spare:sw:in",
+        "rm420:spare:sw:out"
+      ]
+    },
+    {
+      "id": "rm420:sw01",
+      "terminals": [
+        "rm420:sw01:in",
+        "rm420:sw01:out"
+      ]
+    },
+    {
+      "id": "rm420:tf420a",
+      "terminals": [
+        "rm420:tf420a:primary33",
+        "rm420:tf420a:primary22",
+        "rm420:tf420a:secondary"
+      ]
+    },
+    {
+      "id": "rm420:tf420a:cb",
+      "terminals": [
+        "rm420:tf420a:cb:in",
+        "rm420:tf420a:cb:out"
+      ]
+    },
+    {
+      "id": "rm420:tf420a:es",
+      "terminals": [
+        "rm420:tf420a:es:in",
+        "rm420:tf420a:es:out"
+      ]
+    },
+    {
+      "id": "rm420:tf420a:primary-connection",
+      "terminals": [
+        "rm420:tf420a:primary-connection:port"
+      ]
+    },
+    {
+      "id": "rm420:tf420a:sw",
+      "terminals": [
+        "rm420:tf420a:sw:in",
+        "rm420:tf420a:sw:out"
+      ]
+    },
+    {
+      "id": "rm420:tf420b",
+      "terminals": [
+        "rm420:tf420b:primary33",
+        "rm420:tf420b:primary22",
+        "rm420:tf420b:secondary"
+      ]
+    },
+    {
+      "id": "rm420:tf420b:cb",
+      "terminals": [
+        "rm420:tf420b:cb:in",
+        "rm420:tf420b:cb:out"
+      ]
+    },
+    {
+      "id": "rm420:tf420b:es",
+      "terminals": [
+        "rm420:tf420b:es:in",
+        "rm420:tf420b:es:out"
+      ]
+    },
+    {
+      "id": "rm420:tf420b:primary-connection",
+      "terminals": [
+        "rm420:tf420b:primary-connection:port"
+      ]
+    },
+    {
+      "id": "rm420:tf420b:sw",
+      "terminals": [
+        "rm420:tf420b:sw:in",
+        "rm420:tf420b:sw:out"
+      ]
+    },
+    {
+      "id": "rm712:bus",
+      "terminals": [
+        "rm712:bus:bar"
+      ]
+    },
+    {
+      "id": "rm712:in01",
+      "terminals": [
+        "rm712:in01:a",
+        "rm712:in01:b"
+      ]
+    },
+    {
+      "id": "rm712:in02",
+      "terminals": [
+        "rm712:in02:a",
+        "rm712:in02:b"
+      ]
+    },
+    {
+      "id": "rm712:interface:former-rm713",
+      "terminals": [
+        "rm712:interface:former-rm713:port"
+      ]
+    },
+    {
+      "id": "rm712:interface:sw426",
+      "terminals": [
+        "rm712:interface:sw426:port"
+      ]
+    },
+    {
+      "id": "rm712:sw712:bus",
+      "terminals": [
+        "rm712:sw712:bus:bar"
+      ]
+    },
+    {
+      "id": "rm712:sw712:cb",
+      "terminals": [
+        "rm712:sw712:cb:a",
+        "rm712:sw712:cb:b"
+      ]
+    },
+    {
+      "id": "rm712:tf712",
+      "terminals": [
+        "rm712:tf712:hv",
+        "rm712:tf712:lv"
+      ]
+    },
+    {
+      "id": "rm712:tf712:cb",
+      "terminals": [
+        "rm712:tf712:cb:a",
+        "rm712:tf712:cb:b"
+      ]
+    },
+    {
+      "id": "rm712:tf712:removed-lv-cable-end",
+      "terminals": [
+        "rm712:tf712:removed-lv-cable-end:port"
+      ]
+    },
+    {
+      "id": "rm713:bus",
+      "terminals": [
+        "rm713:bus:bar"
+      ]
+    },
+    {
+      "id": "rm713:in01",
+      "terminals": [
+        "rm713:in01:a",
+        "rm713:in01:b"
+      ]
+    },
+    {
+      "id": "rm713:in02",
+      "terminals": [
+        "rm713:in02:a",
+        "rm713:in02:b"
+      ]
+    },
+    {
+      "id": "rm713:interface:in02",
+      "terminals": [
+        "rm713:interface:in02:port"
+      ]
+    },
+    {
+      "id": "rm713:sw713:bus",
+      "terminals": [
+        "rm713:sw713:bus:bar"
+      ]
+    },
+    {
+      "id": "rm713:sw713:cb",
+      "terminals": [
+        "rm713:sw713:cb:a",
+        "rm713:sw713:cb:b"
+      ]
+    },
+    {
+      "id": "rm713:tf713",
+      "terminals": [
+        "rm713:tf713:hv",
+        "rm713:tf713:lv"
+      ]
+    },
+    {
+      "id": "rm713:tf713:cb",
+      "terminals": [
+        "rm713:tf713:cb:a",
+        "rm713:tf713:cb:b"
+      ]
+    },
+    {
+      "id": "rm714:bus",
+      "terminals": [
+        "rm714:bus:bar"
+      ]
+    },
+    {
+      "id": "rm714:in01",
+      "terminals": [
+        "rm714:in01:a",
+        "rm714:in01:b"
+      ]
+    },
+    {
+      "id": "rm714:in01:es",
+      "terminals": [
+        "rm714:in01:es:a",
+        "rm714:in01:es:b"
+      ]
+    },
+    {
+      "id": "rm714:in02",
+      "terminals": [
+        "rm714:in02:a",
+        "rm714:in02:b"
+      ]
+    },
+    {
+      "id": "rm714:in02:es",
+      "terminals": [
+        "rm714:in02:es:a",
+        "rm714:in02:es:b"
+      ]
+    },
+    {
+      "id": "rm714:interface:ring-in02",
+      "terminals": [
+        "rm714:interface:ring-in02:port"
+      ]
+    },
+    {
+      "id": "rm714:sw714:bus",
+      "terminals": [
+        "rm714:sw714:bus:bar"
+      ]
+    },
+    {
+      "id": "rm714:sw714:in:cb",
+      "terminals": [
+        "rm714:sw714:in:cb:a",
+        "rm714:sw714:in:cb:b"
+      ]
+    },
+    {
+      "id": "rm714:tf714",
+      "terminals": [
+        "rm714:tf714:hv",
+        "rm714:tf714:lv"
+      ]
+    },
+    {
+      "id": "rm714:tf714:cb",
+      "terminals": [
+        "rm714:tf714:cb:a",
+        "rm714:tf714:cb:b"
+      ]
+    },
+    {
+      "id": "rm714:tf714:es",
+      "terminals": [
+        "rm714:tf714:es:a",
+        "rm714:tf714:es:b"
+      ]
+    },
+    {
+      "id": "rm721:bus",
+      "terminals": [
+        "rm721:bus:bar"
+      ]
+    },
+    {
+      "id": "rm721:in01",
+      "terminals": [
+        "rm721:in01:a",
+        "rm721:in01:b"
+      ]
+    },
+    {
+      "id": "rm721:in01:es",
+      "terminals": [
+        "rm721:in01:es:a",
+        "rm721:in01:es:b"
+      ]
+    },
+    {
+      "id": "rm721:in02",
+      "terminals": [
+        "rm721:in02:a",
+        "rm721:in02:b"
+      ]
+    },
+    {
+      "id": "rm721:in02:es",
+      "terminals": [
+        "rm721:in02:es:a",
+        "rm721:in02:es:b"
+      ]
+    },
+    {
+      "id": "rm721:interface:rm712",
+      "terminals": [
+        "rm721:interface:rm712:port"
+      ]
+    },
+    {
+      "id": "rm721:rm412",
+      "terminals": [
+        "rm721:rm412:a",
+        "rm721:rm412:b"
+      ]
+    },
+    {
+      "id": "rm721:rm412:es",
+      "terminals": [
+        "rm721:rm412:es:a",
+        "rm721:rm412:es:b"
+      ]
+    },
+    {
+      "id": "rm721:rm713",
+      "terminals": [
+        "rm721:rm713:a",
+        "rm721:rm713:b"
+      ]
+    },
+    {
+      "id": "rm721:rm713:es",
+      "terminals": [
+        "rm721:rm713:es:a",
+        "rm721:rm713:es:b"
+      ]
+    },
+    {
+      "id": "services:interface:rm714-shared",
+      "terminals": [
+        "services:interface:rm714-shared:port"
+      ]
+    },
+    {
+      "id": "services:interface:sw411",
+      "terminals": [
+        "services:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "station:sb01:f4:cb",
+      "terminals": [
+        "station:sb01:f4:cb:in",
+        "station:sb01:f4:cb:out"
+      ]
+    },
+    {
+      "id": "station:sb01:f4:es",
+      "terminals": [
+        "station:sb01:f4:es:in",
+        "station:sb01:f4:es:out"
+      ]
+    },
+    {
+      "id": "station:sb01:f4:interface",
+      "terminals": [
+        "station:sb01:f4:interface:port"
+      ]
+    },
+    {
+      "id": "station:sb01:f4:transformer",
+      "terminals": [
+        "station:sb01:f4:transformer:hv",
+        "station:sb01:f4:transformer:output"
+      ]
+    },
+    {
+      "id": "station:sb02:f1:cb",
+      "terminals": [
+        "station:sb02:f1:cb:in",
+        "station:sb02:f1:cb:out"
+      ]
+    },
+    {
+      "id": "station:sb02:f1:es",
+      "terminals": [
+        "station:sb02:f1:es:in",
+        "station:sb02:f1:es:out"
+      ]
+    },
+    {
+      "id": "station:sb02:f1:interface",
+      "terminals": [
+        "station:sb02:f1:interface:port"
+      ]
+    },
+    {
+      "id": "station:sb02:f1:transformer",
+      "terminals": [
+        "station:sb02:f1:transformer:hv",
+        "station:sb02:f1:transformer:output"
+      ]
+    },
+    {
+      "id": "station:sb02:f4:cb",
+      "terminals": [
+        "station:sb02:f4:cb:in",
+        "station:sb02:f4:cb:out"
+      ]
+    },
+    {
+      "id": "station:sb02:f4:es",
+      "terminals": [
+        "station:sb02:f4:es:in",
+        "station:sb02:f4:es:out"
+      ]
+    },
+    {
+      "id": "station:sb02:f4:transformer",
+      "terminals": [
+        "station:sb02:f4:transformer:hv",
+        "station:sb02:f4:transformer:output"
+      ]
+    },
+    {
+      "id": "sw411:bus-a",
+      "terminals": [
+        "sw411:bus-a:bar"
+      ]
+    },
+    {
+      "id": "sw411:bus-a:es",
+      "terminals": [
+        "sw411:bus-a:es:line",
+        "sw411:bus-a:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:bus-b",
+      "terminals": [
+        "sw411:bus-b:bar"
+      ]
+    },
+    {
+      "id": "sw411:bus-b:es",
+      "terminals": [
+        "sw411:bus-b:es:line",
+        "sw411:bus-b:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:bus-tie:cb",
+      "terminals": [
+        "sw411:bus-tie:cb:bus-a",
+        "sw411:bus-tie:cb:bus-b"
+      ]
+    },
+    {
+      "id": "sw411:in-01:cb",
+      "terminals": [
+        "sw411:in-01:cb:bus",
+        "sw411:in-01:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:in-01:es",
+      "terminals": [
+        "sw411:in-01:es:line",
+        "sw411:in-01:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:in-01:interface",
+      "terminals": [
+        "sw411:in-01:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:in-02:cb",
+      "terminals": [
+        "sw411:in-02:cb:bus",
+        "sw411:in-02:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:in-02:es",
+      "terminals": [
+        "sw411:in-02:es:line",
+        "sw411:in-02:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:in-02:interface",
+      "terminals": [
+        "sw411:in-02:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:in-03:cb",
+      "terminals": [
+        "sw411:in-03:cb:bus",
+        "sw411:in-03:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:in-03:es",
+      "terminals": [
+        "sw411:in-03:es:line",
+        "sw411:in-03:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:in-03:interface",
+      "terminals": [
+        "sw411:in-03:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:in-04:cb",
+      "terminals": [
+        "sw411:in-04:cb:bus",
+        "sw411:in-04:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:in-04:es",
+      "terminals": [
+        "sw411:in-04:es:line",
+        "sw411:in-04:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:in-04:interface",
+      "terminals": [
+        "sw411:in-04:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-01:cb",
+      "terminals": [
+        "sw411:tier-01:cb:bus",
+        "sw411:tier-01:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-01:es",
+      "terminals": [
+        "sw411:tier-01:es:line",
+        "sw411:tier-01:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-01:interface",
+      "terminals": [
+        "sw411:tier-01:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-02:cb",
+      "terminals": [
+        "sw411:tier-02:cb:bus",
+        "sw411:tier-02:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-02:es",
+      "terminals": [
+        "sw411:tier-02:es:line",
+        "sw411:tier-02:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-02:interface",
+      "terminals": [
+        "sw411:tier-02:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-03:cb",
+      "terminals": [
+        "sw411:tier-03:cb:bus",
+        "sw411:tier-03:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-03:es",
+      "terminals": [
+        "sw411:tier-03:es:line",
+        "sw411:tier-03:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-03:interface",
+      "terminals": [
+        "sw411:tier-03:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-04:cb",
+      "terminals": [
+        "sw411:tier-04:cb:bus",
+        "sw411:tier-04:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-04:es",
+      "terminals": [
+        "sw411:tier-04:es:line",
+        "sw411:tier-04:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-04:interface",
+      "terminals": [
+        "sw411:tier-04:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-13:cb",
+      "terminals": [
+        "sw411:tier-13:cb:bus",
+        "sw411:tier-13:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-13:es",
+      "terminals": [
+        "sw411:tier-13:es:line",
+        "sw411:tier-13:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-13:interface",
+      "terminals": [
+        "sw411:tier-13:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-14:cb",
+      "terminals": [
+        "sw411:tier-14:cb:bus",
+        "sw411:tier-14:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-14:es",
+      "terminals": [
+        "sw411:tier-14:es:line",
+        "sw411:tier-14:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-14:interface",
+      "terminals": [
+        "sw411:tier-14:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-15:cb",
+      "terminals": [
+        "sw411:tier-15:cb:bus",
+        "sw411:tier-15:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-15:es",
+      "terminals": [
+        "sw411:tier-15:es:line",
+        "sw411:tier-15:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-15:interface",
+      "terminals": [
+        "sw411:tier-15:interface:port"
+      ]
+    },
+    {
+      "id": "sw411:tier-16:cb",
+      "terminals": [
+        "sw411:tier-16:cb:bus",
+        "sw411:tier-16:cb:line"
+      ]
+    },
+    {
+      "id": "sw411:tier-16:es",
+      "terminals": [
+        "sw411:tier-16:es:line",
+        "sw411:tier-16:es:earth"
+      ]
+    },
+    {
+      "id": "sw411:tier-16:interface",
+      "terminals": [
+        "sw411:tier-16:interface:port"
+      ]
+    },
+    {
+      "id": "sw421:bus",
+      "terminals": [
+        "sw421:bus:bar"
+      ]
+    },
+    {
+      "id": "sw421:bus:es",
+      "terminals": [
+        "sw421:bus:es:a",
+        "sw421:bus:es:b"
+      ]
+    },
+    {
+      "id": "sw421:in:cb",
+      "terminals": [
+        "sw421:in:cb:a",
+        "sw421:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:in:es",
+      "terminals": [
+        "sw421:in:es:a",
+        "sw421:in:es:b"
+      ]
+    },
+    {
+      "id": "sw421:interface:sw411",
+      "terminals": [
+        "sw421:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "sw421:mc421:bus",
+      "terminals": [
+        "sw421:mc421:bus:bar"
+      ]
+    },
+    {
+      "id": "sw421:mc421:cb",
+      "terminals": [
+        "sw421:mc421:cb:a",
+        "sw421:mc421:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:mc422:bus",
+      "terminals": [
+        "sw421:mc422:bus:bar"
+      ]
+    },
+    {
+      "id": "sw421:mc422:cb",
+      "terminals": [
+        "sw421:mc422:cb:a",
+        "sw421:mc422:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:spare:tier2:cb",
+      "terminals": [
+        "sw421:spare:tier2:cb:a",
+        "sw421:spare:tier2:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:spare:tier2:es",
+      "terminals": [
+        "sw421:spare:tier2:es:a",
+        "sw421:spare:tier2:es:b"
+      ]
+    },
+    {
+      "id": "sw421:spare:tier2:interface",
+      "terminals": [
+        "sw421:spare:tier2:interface:port"
+      ]
+    },
+    {
+      "id": "sw421:spare:tier7:cb",
+      "terminals": [
+        "sw421:spare:tier7:cb:a",
+        "sw421:spare:tier7:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:spare:tier7:es",
+      "terminals": [
+        "sw421:spare:tier7:es:a",
+        "sw421:spare:tier7:es:b"
+      ]
+    },
+    {
+      "id": "sw421:spare:tier7:interface",
+      "terminals": [
+        "sw421:spare:tier7:interface:port"
+      ]
+    },
+    {
+      "id": "sw421:sw423:d:bus",
+      "terminals": [
+        "sw421:sw423:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw421:sw423:d:cb",
+      "terminals": [
+        "sw421:sw423:d:cb:a",
+        "sw421:sw423:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:sw423:y:bus",
+      "terminals": [
+        "sw421:sw423:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw421:sw423:y:cb",
+      "terminals": [
+        "sw421:sw423:y:cb:a",
+        "sw421:sw423:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw421:tf421:hv-cb",
+      "terminals": [
+        "sw421:tf421:hv-cb:a",
+        "sw421:tf421:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw421:tf421:hv-es",
+      "terminals": [
+        "sw421:tf421:hv-es:a",
+        "sw421:tf421:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw421:tf421:transformer",
+      "terminals": [
+        "sw421:tf421:hv",
+        "sw421:tf421:lv"
+      ]
+    },
+    {
+      "id": "sw421:tf422:hv-cb",
+      "terminals": [
+        "sw421:tf422:hv-cb:a",
+        "sw421:tf422:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw421:tf422:hv-es",
+      "terminals": [
+        "sw421:tf422:hv-es:a",
+        "sw421:tf422:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw421:tf422:transformer",
+      "terminals": [
+        "sw421:tf422:hv",
+        "sw421:tf422:lv"
+      ]
+    },
+    {
+      "id": "sw421:tf423:hv-cb",
+      "terminals": [
+        "sw421:tf423:hv-cb:a",
+        "sw421:tf423:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw421:tf423:hv-es",
+      "terminals": [
+        "sw421:tf423:hv-es:a",
+        "sw421:tf423:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw421:tf423:transformer",
+      "terminals": [
+        "sw421:tf423:hv",
+        "sw421:tf423:lv-d",
+        "sw421:tf423:lv-y"
+      ]
+    },
+    {
+      "id": "sw426:bus",
+      "terminals": [
+        "sw426:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:bus:es",
+      "terminals": [
+        "sw426:bus:es:a",
+        "sw426:bus:es:b"
+      ]
+    },
+    {
+      "id": "sw426:in:cb",
+      "terminals": [
+        "sw426:in:cb:a",
+        "sw426:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:in:es",
+      "terminals": [
+        "sw426:in:es:a",
+        "sw426:in:es:b"
+      ]
+    },
+    {
+      "id": "sw426:interface:rm712",
+      "terminals": [
+        "sw426:interface:rm712:port"
+      ]
+    },
+    {
+      "id": "sw426:interface:sw411",
+      "terminals": [
+        "sw426:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "sw426:interface:sw712",
+      "terminals": [
+        "sw426:interface:sw712:port"
+      ]
+    },
+    {
+      "id": "sw426:mc426:bus",
+      "terminals": [
+        "sw426:mc426:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:mc426:in:cb",
+      "terminals": [
+        "sw426:mc426:in:cb:a",
+        "sw426:mc426:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:mc428a:bus",
+      "terminals": [
+        "sw426:mc428a:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:mc428a:in:cb",
+      "terminals": [
+        "sw426:mc428a:in:cb:a",
+        "sw426:mc428a:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:mc430:bus",
+      "terminals": [
+        "sw426:mc430:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:mc430:in:cb",
+      "terminals": [
+        "sw426:mc430:in:cb:a",
+        "sw426:mc430:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:ss714:cb",
+      "terminals": [
+        "sw426:ss714:cb:a",
+        "sw426:ss714:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:ss714:es",
+      "terminals": [
+        "sw426:ss714:es:a",
+        "sw426:ss714:es:b"
+      ]
+    },
+    {
+      "id": "sw426:sw427:d:bus",
+      "terminals": [
+        "sw426:sw427:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw427:d:in:cb",
+      "terminals": [
+        "sw426:sw427:d:in:cb:a",
+        "sw426:sw427:d:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw427:y:bus",
+      "terminals": [
+        "sw426:sw427:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw427:y:in:cb",
+      "terminals": [
+        "sw426:sw427:y:in:cb:a",
+        "sw426:sw427:y:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw429:d:bus",
+      "terminals": [
+        "sw426:sw429:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw429:d:in:cb",
+      "terminals": [
+        "sw426:sw429:d:in:cb:a",
+        "sw426:sw429:d:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw429:y:bus",
+      "terminals": [
+        "sw426:sw429:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw429:y:in:cb",
+      "terminals": [
+        "sw426:sw429:y:in:cb:a",
+        "sw426:sw429:y:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw439:d:bus",
+      "terminals": [
+        "sw426:sw439:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw439:d:in:cb",
+      "terminals": [
+        "sw426:sw439:d:in:cb:a",
+        "sw426:sw439:d:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw439:y:bus",
+      "terminals": [
+        "sw426:sw439:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw439:y:in:cb",
+      "terminals": [
+        "sw426:sw439:y:in:cb:a",
+        "sw426:sw439:y:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw440:d:bus",
+      "terminals": [
+        "sw426:sw440:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw440:d:in:cb",
+      "terminals": [
+        "sw426:sw440:d:in:cb:a",
+        "sw426:sw440:d:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw440:y:bus",
+      "terminals": [
+        "sw426:sw440:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw440:y:in:cb",
+      "terminals": [
+        "sw426:sw440:y:in:cb:a",
+        "sw426:sw440:y:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw443:d:bus",
+      "terminals": [
+        "sw426:sw443:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw443:d:in:cb",
+      "terminals": [
+        "sw426:sw443:d:in:cb:a",
+        "sw426:sw443:d:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:sw443:y:bus",
+      "terminals": [
+        "sw426:sw443:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw426:sw443:y:in:cb",
+      "terminals": [
+        "sw426:sw443:y:in:cb:a",
+        "sw426:sw443:y:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf426",
+      "terminals": [
+        "sw426:tf426:hv",
+        "sw426:tf426:lv"
+      ]
+    },
+    {
+      "id": "sw426:tf426:cb",
+      "terminals": [
+        "sw426:tf426:cb:a",
+        "sw426:tf426:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf426:es",
+      "terminals": [
+        "sw426:tf426:es:a",
+        "sw426:tf426:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf427",
+      "terminals": [
+        "sw426:tf427:hv",
+        "sw426:tf427:d",
+        "sw426:tf427:y"
+      ]
+    },
+    {
+      "id": "sw426:tf427:cb",
+      "terminals": [
+        "sw426:tf427:cb:a",
+        "sw426:tf427:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf427:es",
+      "terminals": [
+        "sw426:tf427:es:a",
+        "sw426:tf427:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf428",
+      "terminals": [
+        "sw426:tf428:hv",
+        "sw426:tf428:lv"
+      ]
+    },
+    {
+      "id": "sw426:tf428:cb",
+      "terminals": [
+        "sw426:tf428:cb:a",
+        "sw426:tf428:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf428:es",
+      "terminals": [
+        "sw426:tf428:es:a",
+        "sw426:tf428:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf429",
+      "terminals": [
+        "sw426:tf429:hv",
+        "sw426:tf429:d",
+        "sw426:tf429:y"
+      ]
+    },
+    {
+      "id": "sw426:tf429:cb",
+      "terminals": [
+        "sw426:tf429:cb:a",
+        "sw426:tf429:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf429:es",
+      "terminals": [
+        "sw426:tf429:es:a",
+        "sw426:tf429:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf430",
+      "terminals": [
+        "sw426:tf430:hv",
+        "sw426:tf430:lv"
+      ]
+    },
+    {
+      "id": "sw426:tf430:cb",
+      "terminals": [
+        "sw426:tf430:cb:a",
+        "sw426:tf430:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf430:es",
+      "terminals": [
+        "sw426:tf430:es:a",
+        "sw426:tf430:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf439",
+      "terminals": [
+        "sw426:tf439:hv",
+        "sw426:tf439:d",
+        "sw426:tf439:y"
+      ]
+    },
+    {
+      "id": "sw426:tf439:cb",
+      "terminals": [
+        "sw426:tf439:cb:a",
+        "sw426:tf439:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf439:es",
+      "terminals": [
+        "sw426:tf439:es:a",
+        "sw426:tf439:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf440",
+      "terminals": [
+        "sw426:tf440:hv",
+        "sw426:tf440:d",
+        "sw426:tf440:y"
+      ]
+    },
+    {
+      "id": "sw426:tf440:cb",
+      "terminals": [
+        "sw426:tf440:cb:a",
+        "sw426:tf440:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf440:es",
+      "terminals": [
+        "sw426:tf440:es:a",
+        "sw426:tf440:es:b"
+      ]
+    },
+    {
+      "id": "sw426:tf443",
+      "terminals": [
+        "sw426:tf443:hv",
+        "sw426:tf443:d",
+        "sw426:tf443:y"
+      ]
+    },
+    {
+      "id": "sw426:tf443:cb",
+      "terminals": [
+        "sw426:tf443:cb:a",
+        "sw426:tf443:cb:b"
+      ]
+    },
+    {
+      "id": "sw426:tf443:es",
+      "terminals": [
+        "sw426:tf443:es:a",
+        "sw426:tf443:es:b"
+      ]
+    },
+    {
+      "id": "sw431:bus",
+      "terminals": [
+        "sw431:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:bus:es",
+      "terminals": [
+        "sw431:bus:es:a",
+        "sw431:bus:es:b"
+      ]
+    },
+    {
+      "id": "sw431:in:cb",
+      "terminals": [
+        "sw431:in:cb:a",
+        "sw431:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:in:es",
+      "terminals": [
+        "sw431:in:es:a",
+        "sw431:in:es:b"
+      ]
+    },
+    {
+      "id": "sw431:interface:sw411",
+      "terminals": [
+        "sw431:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "sw431:interface:sw435",
+      "terminals": [
+        "sw431:interface:sw435:port"
+      ]
+    },
+    {
+      "id": "sw431:mc431:bus",
+      "terminals": [
+        "sw431:mc431:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:mc431:cb",
+      "terminals": [
+        "sw431:mc431:cb:a",
+        "sw431:mc431:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw432:d:bus",
+      "terminals": [
+        "sw431:sw432:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:sw432:d:cb",
+      "terminals": [
+        "sw431:sw432:d:cb:a",
+        "sw431:sw432:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw432:y:bus",
+      "terminals": [
+        "sw431:sw432:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:sw432:y:cb",
+      "terminals": [
+        "sw431:sw432:y:cb:a",
+        "sw431:sw432:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw435:cb",
+      "terminals": [
+        "sw431:sw435:cb:a",
+        "sw431:sw435:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw435:es",
+      "terminals": [
+        "sw431:sw435:es:a",
+        "sw431:sw435:es:b"
+      ]
+    },
+    {
+      "id": "sw431:sw437:d:bus",
+      "terminals": [
+        "sw431:sw437:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:sw437:d:cb",
+      "terminals": [
+        "sw431:sw437:d:cb:a",
+        "sw431:sw437:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw437:y:bus",
+      "terminals": [
+        "sw431:sw437:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:sw437:y:cb",
+      "terminals": [
+        "sw431:sw437:y:cb:a",
+        "sw431:sw437:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw442:d:bus",
+      "terminals": [
+        "sw431:sw442:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:sw442:d:cb",
+      "terminals": [
+        "sw431:sw442:d:cb:a",
+        "sw431:sw442:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:sw442:y:bus",
+      "terminals": [
+        "sw431:sw442:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw431:sw442:y:cb",
+      "terminals": [
+        "sw431:sw442:y:cb:a",
+        "sw431:sw442:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw431:tf431:hv-cb",
+      "terminals": [
+        "sw431:tf431:hv-cb:a",
+        "sw431:tf431:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw431:tf431:hv-es",
+      "terminals": [
+        "sw431:tf431:hv-es:a",
+        "sw431:tf431:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw431:tf431:transformer",
+      "terminals": [
+        "sw431:tf431:hv",
+        "sw431:tf431:lv"
+      ]
+    },
+    {
+      "id": "sw431:tf432:hv-cb",
+      "terminals": [
+        "sw431:tf432:hv-cb:a",
+        "sw431:tf432:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw431:tf432:hv-es",
+      "terminals": [
+        "sw431:tf432:hv-es:a",
+        "sw431:tf432:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw431:tf432:transformer",
+      "terminals": [
+        "sw431:tf432:hv",
+        "sw431:tf432:lv-d",
+        "sw431:tf432:lv-y"
+      ]
+    },
+    {
+      "id": "sw431:tf437:hv-cb",
+      "terminals": [
+        "sw431:tf437:hv-cb:a",
+        "sw431:tf437:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw431:tf437:hv-es",
+      "terminals": [
+        "sw431:tf437:hv-es:a",
+        "sw431:tf437:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw431:tf437:transformer",
+      "terminals": [
+        "sw431:tf437:hv",
+        "sw431:tf437:lv-d",
+        "sw431:tf437:lv-y"
+      ]
+    },
+    {
+      "id": "sw431:tf442:hv-cb",
+      "terminals": [
+        "sw431:tf442:hv-cb:a",
+        "sw431:tf442:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw431:tf442:hv-es",
+      "terminals": [
+        "sw431:tf442:hv-es:a",
+        "sw431:tf442:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw431:tf442:transformer",
+      "terminals": [
+        "sw431:tf442:hv",
+        "sw431:tf442:lv-d",
+        "sw431:tf442:lv-y"
+      ]
+    },
+    {
+      "id": "sw435:bus",
+      "terminals": [
+        "sw435:bus:bar"
+      ]
+    },
+    {
+      "id": "sw435:bus:es",
+      "terminals": [
+        "sw435:bus:es:a",
+        "sw435:bus:es:b"
+      ]
+    },
+    {
+      "id": "sw435:hpgr:cb",
+      "terminals": [
+        "sw435:hpgr:cb:a",
+        "sw435:hpgr:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:hpgr:es",
+      "terminals": [
+        "sw435:hpgr:es:a",
+        "sw435:hpgr:es:b"
+      ]
+    },
+    {
+      "id": "sw435:in:cb",
+      "terminals": [
+        "sw435:in:cb:a",
+        "sw435:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:in:es",
+      "terminals": [
+        "sw435:in:es:a",
+        "sw435:in:es:b"
+      ]
+    },
+    {
+      "id": "sw435:interface:mc436",
+      "terminals": [
+        "sw435:interface:mc436:port"
+      ]
+    },
+    {
+      "id": "sw435:interface:sw411",
+      "terminals": [
+        "sw435:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "sw435:interface:sw431",
+      "terminals": [
+        "sw435:interface:sw431:port"
+      ]
+    },
+    {
+      "id": "sw435:mc435:bus",
+      "terminals": [
+        "sw435:mc435:bus:bar"
+      ]
+    },
+    {
+      "id": "sw435:mc435:cb",
+      "terminals": [
+        "sw435:mc435:cb:a",
+        "sw435:mc435:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:sw431:cb",
+      "terminals": [
+        "sw435:sw431:cb:a",
+        "sw435:sw431:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:sw431:es",
+      "terminals": [
+        "sw435:sw431:es:a",
+        "sw435:sw431:es:b"
+      ]
+    },
+    {
+      "id": "sw435:sw433:d:bus",
+      "terminals": [
+        "sw435:sw433:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw435:sw433:d:cb",
+      "terminals": [
+        "sw435:sw433:d:cb:a",
+        "sw435:sw433:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:sw433:y:bus",
+      "terminals": [
+        "sw435:sw433:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw435:sw433:y:cb",
+      "terminals": [
+        "sw435:sw433:y:cb:a",
+        "sw435:sw433:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:sw453:d:bus",
+      "terminals": [
+        "sw435:sw453:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw435:sw453:d:cb",
+      "terminals": [
+        "sw435:sw453:d:cb:a",
+        "sw435:sw453:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:sw453:y:bus",
+      "terminals": [
+        "sw435:sw453:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw435:sw453:y:cb",
+      "terminals": [
+        "sw435:sw453:y:cb:a",
+        "sw435:sw453:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw435:tf433:hv-cb",
+      "terminals": [
+        "sw435:tf433:hv-cb:a",
+        "sw435:tf433:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw435:tf433:hv-es",
+      "terminals": [
+        "sw435:tf433:hv-es:a",
+        "sw435:tf433:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw435:tf433:transformer",
+      "terminals": [
+        "sw435:tf433:transformer:hv",
+        "sw435:tf433:transformer:lv-d",
+        "sw435:tf433:transformer:lv-y"
+      ]
+    },
+    {
+      "id": "sw435:tf435:hv-cb",
+      "terminals": [
+        "sw435:tf435:hv-cb:a",
+        "sw435:tf435:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw435:tf435:hv-es",
+      "terminals": [
+        "sw435:tf435:hv-es:a",
+        "sw435:tf435:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw435:tf435:transformer",
+      "terminals": [
+        "sw435:tf435:transformer:hv",
+        "sw435:tf435:transformer:lv"
+      ]
+    },
+    {
+      "id": "sw435:tf436:hv-cb",
+      "terminals": [
+        "sw435:tf436:hv-cb:a",
+        "sw435:tf436:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw435:tf436:hv-es",
+      "terminals": [
+        "sw435:tf436:hv-es:a",
+        "sw435:tf436:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw435:tf453:hv-cb",
+      "terminals": [
+        "sw435:tf453:hv-cb:a",
+        "sw435:tf453:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw435:tf453:hv-es",
+      "terminals": [
+        "sw435:tf453:hv-es:a",
+        "sw435:tf453:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw435:tf453:transformer",
+      "terminals": [
+        "sw435:tf453:transformer:hv",
+        "sw435:tf453:transformer:lv-d",
+        "sw435:tf453:transformer:lv-y"
+      ]
+    },
+    {
+      "id": "sw451:bus",
+      "terminals": [
+        "sw451:bus:port"
+      ]
+    },
+    {
+      "id": "sw451:bus:es",
+      "terminals": [
+        "sw451:bus:es:in",
+        "sw451:bus:es:out"
+      ]
+    },
+    {
+      "id": "sw451:in:cb",
+      "terminals": [
+        "sw451:in:cb:in",
+        "sw451:in:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:in:es",
+      "terminals": [
+        "sw451:in:es:in",
+        "sw451:in:es:out"
+      ]
+    },
+    {
+      "id": "sw451:interface:sw411",
+      "terminals": [
+        "sw451:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "sw451:mc451:bus",
+      "terminals": [
+        "sw451:mc451:bus:port"
+      ]
+    },
+    {
+      "id": "sw451:mc451:cb",
+      "terminals": [
+        "sw451:mc451:cb:in",
+        "sw451:mc451:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:mc451b:section",
+      "terminals": [
+        "sw451:mc451b:section:port"
+      ]
+    },
+    {
+      "id": "sw451:spare-2:cb",
+      "terminals": [
+        "sw451:spare-2:cb:in",
+        "sw451:spare-2:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:spare-2:es",
+      "terminals": [
+        "sw451:spare-2:es:in",
+        "sw451:spare-2:es:out"
+      ]
+    },
+    {
+      "id": "sw451:spare-2:interface",
+      "terminals": [
+        "sw451:spare-2:interface:port"
+      ]
+    },
+    {
+      "id": "sw451:spare-6:cb",
+      "terminals": [
+        "sw451:spare-6:cb:in",
+        "sw451:spare-6:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:spare-6:es",
+      "terminals": [
+        "sw451:spare-6:es:in",
+        "sw451:spare-6:es:out"
+      ]
+    },
+    {
+      "id": "sw451:spare-6:interface",
+      "terminals": [
+        "sw451:spare-6:interface:port"
+      ]
+    },
+    {
+      "id": "sw451:spare-7:cb",
+      "terminals": [
+        "sw451:spare-7:cb:in",
+        "sw451:spare-7:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:spare-7:es",
+      "terminals": [
+        "sw451:spare-7:es:in",
+        "sw451:spare-7:es:out"
+      ]
+    },
+    {
+      "id": "sw451:spare-7:interface",
+      "terminals": [
+        "sw451:spare-7:interface:port"
+      ]
+    },
+    {
+      "id": "sw451:sw452:d:bus",
+      "terminals": [
+        "sw451:sw452:d:bus:port"
+      ]
+    },
+    {
+      "id": "sw451:sw452:d:cb",
+      "terminals": [
+        "sw451:sw452:d:cb:in",
+        "sw451:sw452:d:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:sw452:y:bus",
+      "terminals": [
+        "sw451:sw452:y:bus:port"
+      ]
+    },
+    {
+      "id": "sw451:sw452:y:cb",
+      "terminals": [
+        "sw451:sw452:y:cb:in",
+        "sw451:sw452:y:cb:out"
+      ]
+    },
+    {
+      "id": "sw451:tf451",
+      "terminals": [
+        "sw451:tf451:hv",
+        "sw451:tf451:lv"
+      ]
+    },
+    {
+      "id": "sw451:tf451:hv-cb",
+      "terminals": [
+        "sw451:tf451:hv-cb:in",
+        "sw451:tf451:hv-cb:out"
+      ]
+    },
+    {
+      "id": "sw451:tf451:hv-es",
+      "terminals": [
+        "sw451:tf451:hv-es:in",
+        "sw451:tf451:hv-es:out"
+      ]
+    },
+    {
+      "id": "sw451:tf452",
+      "terminals": [
+        "sw451:tf452:hv",
+        "sw451:tf452:lv-d",
+        "sw451:tf452:lv-y"
+      ]
+    },
+    {
+      "id": "sw451:tf452:hv-cb",
+      "terminals": [
+        "sw451:tf452:hv-cb:in",
+        "sw451:tf452:hv-cb:out"
+      ]
+    },
+    {
+      "id": "sw451:tf452:hv-es",
+      "terminals": [
+        "sw451:tf452:hv-es:in",
+        "sw451:tf452:hv-es:out"
+      ]
+    },
+    {
+      "id": "sw454:bus",
+      "terminals": [
+        "sw454:bus:bar"
+      ]
+    },
+    {
+      "id": "sw454:bus:es",
+      "terminals": [
+        "sw454:bus:es:a",
+        "sw454:bus:es:b"
+      ]
+    },
+    {
+      "id": "sw454:in:cb",
+      "terminals": [
+        "sw454:in:cb:a",
+        "sw454:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw454:in:es",
+      "terminals": [
+        "sw454:in:es:a",
+        "sw454:in:es:b"
+      ]
+    },
+    {
+      "id": "sw454:interface:mc454-mc455",
+      "terminals": [
+        "sw454:interface:mc454-mc455:port"
+      ]
+    },
+    {
+      "id": "sw454:interface:sw411",
+      "terminals": [
+        "sw454:interface:sw411:port"
+      ]
+    },
+    {
+      "id": "sw454:interface:sw455",
+      "terminals": [
+        "sw454:interface:sw455:d",
+        "sw454:interface:sw455:y"
+      ]
+    },
+    {
+      "id": "sw454:sw456:d:bus",
+      "terminals": [
+        "sw454:sw456:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw454:sw456:d:cb",
+      "terminals": [
+        "sw454:sw456:d:cb:a",
+        "sw454:sw456:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw454:sw456:y:bus",
+      "terminals": [
+        "sw454:sw456:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw454:sw456:y:cb",
+      "terminals": [
+        "sw454:sw456:y:cb:a",
+        "sw454:sw456:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw454:sw505:cb",
+      "terminals": [
+        "sw454:sw505:cb:a",
+        "sw454:sw505:cb:b"
+      ]
+    },
+    {
+      "id": "sw454:sw505:es",
+      "terminals": [
+        "sw454:sw505:es:a",
+        "sw454:sw505:es:b"
+      ]
+    },
+    {
+      "id": "sw454:tf454:hv-cb",
+      "terminals": [
+        "sw454:tf454:hv-cb:a",
+        "sw454:tf454:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw454:tf454:hv-es",
+      "terminals": [
+        "sw454:tf454:hv-es:a",
+        "sw454:tf454:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw454:tf454:transformer",
+      "terminals": [
+        "sw454:tf454:hv",
+        "sw454:tf454:lv"
+      ]
+    },
+    {
+      "id": "sw454:tf455:hv-cb",
+      "terminals": [
+        "sw454:tf455:hv-cb:a",
+        "sw454:tf455:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw454:tf455:hv-es",
+      "terminals": [
+        "sw454:tf455:hv-es:a",
+        "sw454:tf455:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw454:tf455:transformer",
+      "terminals": [
+        "sw454:tf455:hv",
+        "sw454:tf455:lv-d",
+        "sw454:tf455:lv-y"
+      ]
+    },
+    {
+      "id": "sw454:tf456:hv-cb",
+      "terminals": [
+        "sw454:tf456:hv-cb:a",
+        "sw454:tf456:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw454:tf456:hv-es",
+      "terminals": [
+        "sw454:tf456:hv-es:a",
+        "sw454:tf456:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw454:tf456:transformer",
+      "terminals": [
+        "sw454:tf456:hv",
+        "sw454:tf456:lv-d",
+        "sw454:tf456:lv-y"
+      ]
+    },
+    {
+      "id": "sw455:bus-d",
+      "terminals": [
+        "sw455:bus-d:bar"
+      ]
+    },
+    {
+      "id": "sw455:bus-y",
+      "terminals": [
+        "sw455:bus-y:bar"
+      ]
+    },
+    {
+      "id": "sw455:in-d:cb",
+      "terminals": [
+        "sw455:in-d:cb:a",
+        "sw455:in-d:cb:b"
+      ]
+    },
+    {
+      "id": "sw455:in-y:cb",
+      "terminals": [
+        "sw455:in-y:cb:a",
+        "sw455:in-y:cb:b"
+      ]
+    },
+    {
+      "id": "sw505:bus",
+      "terminals": [
+        "sw505:bus:bar"
+      ]
+    },
+    {
+      "id": "sw505:bus:es",
+      "terminals": [
+        "sw505:bus:es:a",
+        "sw505:bus:es:b"
+      ]
+    },
+    {
+      "id": "sw505:in:cb",
+      "terminals": [
+        "sw505:in:cb:a",
+        "sw505:in:cb:b"
+      ]
+    },
+    {
+      "id": "sw505:in:es",
+      "terminals": [
+        "sw505:in:es:a",
+        "sw505:in:es:b"
+      ]
+    },
+    {
+      "id": "sw505:mc507:bus",
+      "terminals": [
+        "sw505:mc507:bus:bar"
+      ]
+    },
+    {
+      "id": "sw505:mc507:cb",
+      "terminals": [
+        "sw505:mc507:cb:a",
+        "sw505:mc507:cb:b"
+      ]
+    },
+    {
+      "id": "sw505:mc507:phase-fuse",
+      "terminals": [
+        "sw505:mc507:phase-fuse:in",
+        "sw505:mc507:phase-fuse:out"
+      ]
+    },
+    {
+      "id": "sw505:mc508:bus",
+      "terminals": [
+        "sw505:mc508:bus:bar"
+      ]
+    },
+    {
+      "id": "sw505:mc508:cb",
+      "terminals": [
+        "sw505:mc508:cb:a",
+        "sw505:mc508:cb:b"
+      ]
+    },
+    {
+      "id": "sw505:mc508:phase-fuse",
+      "terminals": [
+        "sw505:mc508:phase-fuse:in",
+        "sw505:mc508:phase-fuse:out"
+      ]
+    },
+    {
+      "id": "sw505:sb214-em01",
+      "terminals": [
+        "sw505:sb214-em01:port"
+      ]
+    },
+    {
+      "id": "sw505:sb215-em01",
+      "terminals": [
+        "sw505:sb215-em01:port"
+      ]
+    },
+    {
+      "id": "sw505:sb216-em01",
+      "terminals": [
+        "sw505:sb216-em01:port"
+      ]
+    },
+    {
+      "id": "sw505:sw506:d:bus",
+      "terminals": [
+        "sw505:sw506:d:bus:bar"
+      ]
+    },
+    {
+      "id": "sw505:sw506:d:cb",
+      "terminals": [
+        "sw505:sw506:d:cb:a",
+        "sw505:sw506:d:cb:b"
+      ]
+    },
+    {
+      "id": "sw505:sw506:y:bus",
+      "terminals": [
+        "sw505:sw506:y:bus:bar"
+      ]
+    },
+    {
+      "id": "sw505:sw506:y:cb",
+      "terminals": [
+        "sw505:sw506:y:cb:a",
+        "sw505:sw506:y:cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505a:hv-cb",
+      "terminals": [
+        "sw505:tf505a:hv-cb:a",
+        "sw505:tf505a:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505a:hv-es",
+      "terminals": [
+        "sw505:tf505a:hv-es:a",
+        "sw505:tf505a:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505a:transformer",
+      "terminals": [
+        "sw505:tf505a:hv",
+        "sw505:tf505a:mv-d",
+        "sw505:tf505a:mv-y"
+      ]
+    },
+    {
+      "id": "sw505:tf505b:hv-cb",
+      "terminals": [
+        "sw505:tf505b:hv-cb:a",
+        "sw505:tf505b:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505b:hv-es",
+      "terminals": [
+        "sw505:tf505b:hv-es:a",
+        "sw505:tf505b:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505b:transformer",
+      "terminals": [
+        "sw505:tf505b:hv",
+        "sw505:tf505b:mv-d",
+        "sw505:tf505b:mv-y"
+      ]
+    },
+    {
+      "id": "sw505:tf505c:hv-cb",
+      "terminals": [
+        "sw505:tf505c:hv-cb:a",
+        "sw505:tf505c:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505c:hv-es",
+      "terminals": [
+        "sw505:tf505c:hv-es:a",
+        "sw505:tf505c:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw505:tf505c:transformer",
+      "terminals": [
+        "sw505:tf505c:hv",
+        "sw505:tf505c:mv-d",
+        "sw505:tf505c:mv-y"
+      ]
+    },
+    {
+      "id": "sw505:tf506:hv-cb",
+      "terminals": [
+        "sw505:tf506:hv-cb:a",
+        "sw505:tf506:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf506:hv-es",
+      "terminals": [
+        "sw505:tf506:hv-es:a",
+        "sw505:tf506:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw505:tf506:transformer",
+      "terminals": [
+        "sw505:tf506:hv",
+        "sw505:tf506:lv-d",
+        "sw505:tf506:lv-y"
+      ]
+    },
+    {
+      "id": "sw505:tf507:hv-cb",
+      "terminals": [
+        "sw505:tf507:hv-cb:a",
+        "sw505:tf507:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf507:hv-es",
+      "terminals": [
+        "sw505:tf507:hv-es:a",
+        "sw505:tf507:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw505:tf507:transformer",
+      "terminals": [
+        "sw505:tf507:hv",
+        "sw505:tf507:lv"
+      ]
+    },
+    {
+      "id": "sw505:tf508:hv-cb",
+      "terminals": [
+        "sw505:tf508:hv-cb:a",
+        "sw505:tf508:hv-cb:b"
+      ]
+    },
+    {
+      "id": "sw505:tf508:hv-es",
+      "terminals": [
+        "sw505:tf508:hv-es:a",
+        "sw505:tf508:hv-es:b"
+      ]
+    },
+    {
+      "id": "sw505:tf508:transformer",
+      "terminals": [
+        "sw505:tf508:hv",
+        "sw505:tf508:lv"
+      ]
+    },
+    {
+      "id": "sw505:vs50501:converter",
+      "terminals": [
+        "sw505:vs50501:ac-d",
+        "sw505:vs50501:ac-y",
+        "sw505:vs50501:dc",
+        "sw505:vs50501:output"
+      ]
+    },
+    {
+      "id": "sw505:vs50501:dc-earth",
+      "terminals": [
+        "sw505:vs50501:dc-earth:a",
+        "sw505:vs50501:dc-earth:b"
+      ]
+    },
+    {
+      "id": "sw505:vs50501:output-switch",
+      "terminals": [
+        "sw505:vs50501:output-switch:a",
+        "sw505:vs50501:output-switch:b"
+      ]
+    },
+    {
+      "id": "sw505:vs50502:converter",
+      "terminals": [
+        "sw505:vs50502:ac-d",
+        "sw505:vs50502:ac-y",
+        "sw505:vs50502:dc",
+        "sw505:vs50502:output"
+      ]
+    },
+    {
+      "id": "sw505:vs50502:dc-earth",
+      "terminals": [
+        "sw505:vs50502:dc-earth:a",
+        "sw505:vs50502:dc-earth:b"
+      ]
+    },
+    {
+      "id": "sw505:vs50502:output-switch",
+      "terminals": [
+        "sw505:vs50502:output-switch:a",
+        "sw505:vs50502:output-switch:b"
+      ]
+    },
+    {
+      "id": "sw505:vs50503:converter",
+      "terminals": [
+        "sw505:vs50503:ac-d",
+        "sw505:vs50503:ac-y",
+        "sw505:vs50503:dc",
+        "sw505:vs50503:output"
+      ]
+    },
+    {
+      "id": "sw505:vs50503:dc-earth",
+      "terminals": [
+        "sw505:vs50503:dc-earth:a",
+        "sw505:vs50503:dc-earth:b"
+      ]
+    },
+    {
+      "id": "sw505:vs50503:output-switch",
+      "terminals": [
+        "sw505:vs50503:output-switch:a",
+        "sw505:vs50503:output-switch:b"
+      ]
+    },
+    {
+      "id": "wh:h1:interface:rm413",
+      "terminals": [
+        "wh:h1:interface:rm413:port"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:bus",
+      "terminals": [
+        "wh:h1:mc417:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:in",
+      "terminals": [
+        "wh:h1:mc417:in:a",
+        "wh:h1:mc417:in:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:in-earth",
+      "terminals": [
+        "wh:h1:mc417:in-earth:a",
+        "wh:h1:mc417:in-earth:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:common",
+      "terminals": [
+        "wh:h1:mc417:m1:common:port"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:earth",
+      "terminals": [
+        "wh:h1:mc417:m1:earth:a",
+        "wh:h1:mc417:m1:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:fc",
+      "terminals": [
+        "wh:h1:mc417:m1:fc:a",
+        "wh:h1:mc417:m1:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:fc:fuse",
+      "terminals": [
+        "wh:h1:mc417:m1:fc:fuse:a",
+        "wh:h1:mc417:m1:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:motor",
+      "terminals": [
+        "wh:h1:mc417:m1:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:rc",
+      "terminals": [
+        "wh:h1:mc417:m1:rc:a",
+        "wh:h1:mc417:m1:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m1:rc:fuse",
+      "terminals": [
+        "wh:h1:mc417:m1:rc:fuse:a",
+        "wh:h1:mc417:m1:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:common",
+      "terminals": [
+        "wh:h1:mc417:m2:common:port"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:earth",
+      "terminals": [
+        "wh:h1:mc417:m2:earth:a",
+        "wh:h1:mc417:m2:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:fc",
+      "terminals": [
+        "wh:h1:mc417:m2:fc:a",
+        "wh:h1:mc417:m2:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:fc:fuse",
+      "terminals": [
+        "wh:h1:mc417:m2:fc:fuse:a",
+        "wh:h1:mc417:m2:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:motor",
+      "terminals": [
+        "wh:h1:mc417:m2:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:rc",
+      "terminals": [
+        "wh:h1:mc417:m2:rc:a",
+        "wh:h1:mc417:m2:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417:m2:rc:fuse",
+      "terminals": [
+        "wh:h1:mc417:m2:rc:fuse:a",
+        "wh:h1:mc417:m2:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417a:bus",
+      "terminals": [
+        "wh:h1:mc417a:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h1:mc417a:in",
+      "terminals": [
+        "wh:h1:mc417a:in:a",
+        "wh:h1:mc417a:in:b"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:bus",
+      "terminals": [
+        "wh:h1:rm417:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:cb01",
+      "terminals": [
+        "wh:h1:rm417:cb01:a",
+        "wh:h1:rm417:cb01:b"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:cb02",
+      "terminals": [
+        "wh:h1:rm417:cb02:a",
+        "wh:h1:rm417:cb02:b"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:sw01",
+      "terminals": [
+        "wh:h1:rm417:sw01:line",
+        "wh:h1:rm417:sw01:common",
+        "wh:h1:rm417:sw01:earth"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:sw02",
+      "terminals": [
+        "wh:h1:rm417:sw02:line",
+        "wh:h1:rm417:sw02:common",
+        "wh:h1:rm417:sw02:earth"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:sw02:interface",
+      "terminals": [
+        "wh:h1:rm417:sw02:interface:port"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:sw03",
+      "terminals": [
+        "wh:h1:rm417:sw03:line",
+        "wh:h1:rm417:sw03:common",
+        "wh:h1:rm417:sw03:earth"
+      ]
+    },
+    {
+      "id": "wh:h1:rm417:sw04",
+      "terminals": [
+        "wh:h1:rm417:sw04:line",
+        "wh:h1:rm417:sw04:common",
+        "wh:h1:rm417:sw04:earth"
+      ]
+    },
+    {
+      "id": "wh:h1:tf417",
+      "terminals": [
+        "wh:h1:tf417:hv",
+        "wh:h1:tf417:secondary"
+      ]
+    },
+    {
+      "id": "wh:h1:tf417a",
+      "terminals": [
+        "wh:h1:tf417a:hv",
+        "wh:h1:tf417a:secondary"
+      ]
+    },
+    {
+      "id": "wh:h3:hv416",
+      "terminals": [
+        "wh:h3:hv416:port"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:bus",
+      "terminals": [
+        "wh:h3:mc416:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:in",
+      "terminals": [
+        "wh:h3:mc416:in:a",
+        "wh:h3:mc416:in:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:in-earth",
+      "terminals": [
+        "wh:h3:mc416:in-earth:a",
+        "wh:h3:mc416:in-earth:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:interface",
+      "terminals": [
+        "wh:h3:mc416:interface:port"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:common",
+      "terminals": [
+        "wh:h3:mc416:m1:common:port"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:earth",
+      "terminals": [
+        "wh:h3:mc416:m1:earth:a",
+        "wh:h3:mc416:m1:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:fc",
+      "terminals": [
+        "wh:h3:mc416:m1:fc:a",
+        "wh:h3:mc416:m1:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:fc:fuse",
+      "terminals": [
+        "wh:h3:mc416:m1:fc:fuse:a",
+        "wh:h3:mc416:m1:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:motor",
+      "terminals": [
+        "wh:h3:mc416:m1:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:rc",
+      "terminals": [
+        "wh:h3:mc416:m1:rc:a",
+        "wh:h3:mc416:m1:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m1:rc:fuse",
+      "terminals": [
+        "wh:h3:mc416:m1:rc:fuse:a",
+        "wh:h3:mc416:m1:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:common",
+      "terminals": [
+        "wh:h3:mc416:m2:common:port"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:earth",
+      "terminals": [
+        "wh:h3:mc416:m2:earth:a",
+        "wh:h3:mc416:m2:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:fc",
+      "terminals": [
+        "wh:h3:mc416:m2:fc:a",
+        "wh:h3:mc416:m2:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:fc:fuse",
+      "terminals": [
+        "wh:h3:mc416:m2:fc:fuse:a",
+        "wh:h3:mc416:m2:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:motor",
+      "terminals": [
+        "wh:h3:mc416:m2:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:rc",
+      "terminals": [
+        "wh:h3:mc416:m2:rc:a",
+        "wh:h3:mc416:m2:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416:m2:rc:fuse",
+      "terminals": [
+        "wh:h3:mc416:m2:rc:fuse:a",
+        "wh:h3:mc416:m2:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416a:bus",
+      "terminals": [
+        "wh:h3:mc416a:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416a:in",
+      "terminals": [
+        "wh:h3:mc416a:in:a",
+        "wh:h3:mc416a:in:b"
+      ]
+    },
+    {
+      "id": "wh:h3:mc416a:interface",
+      "terminals": [
+        "wh:h3:mc416a:interface:port"
+      ]
+    },
+    {
+      "id": "wh:h3:tf416",
+      "terminals": [
+        "wh:h3:tf416:hv",
+        "wh:h3:tf416:secondary"
+      ]
+    },
+    {
+      "id": "wh:h3:tf416a",
+      "terminals": [
+        "wh:h3:tf416a:hv",
+        "wh:h3:tf416a:secondary"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:bus",
+      "terminals": [
+        "wh:h7:mc418:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:in",
+      "terminals": [
+        "wh:h7:mc418:in:a",
+        "wh:h7:mc418:in:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:in-earth",
+      "terminals": [
+        "wh:h7:mc418:in-earth:a",
+        "wh:h7:mc418:in-earth:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:common",
+      "terminals": [
+        "wh:h7:mc418:m1:common:port"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:earth",
+      "terminals": [
+        "wh:h7:mc418:m1:earth:a",
+        "wh:h7:mc418:m1:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:fc",
+      "terminals": [
+        "wh:h7:mc418:m1:fc:a",
+        "wh:h7:mc418:m1:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:fc:fuse",
+      "terminals": [
+        "wh:h7:mc418:m1:fc:fuse:a",
+        "wh:h7:mc418:m1:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:motor",
+      "terminals": [
+        "wh:h7:mc418:m1:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:rc",
+      "terminals": [
+        "wh:h7:mc418:m1:rc:a",
+        "wh:h7:mc418:m1:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m1:rc:fuse",
+      "terminals": [
+        "wh:h7:mc418:m1:rc:fuse:a",
+        "wh:h7:mc418:m1:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:common",
+      "terminals": [
+        "wh:h7:mc418:m2:common:port"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:earth",
+      "terminals": [
+        "wh:h7:mc418:m2:earth:a",
+        "wh:h7:mc418:m2:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:fc",
+      "terminals": [
+        "wh:h7:mc418:m2:fc:a",
+        "wh:h7:mc418:m2:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:fc:fuse",
+      "terminals": [
+        "wh:h7:mc418:m2:fc:fuse:a",
+        "wh:h7:mc418:m2:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:motor",
+      "terminals": [
+        "wh:h7:mc418:m2:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:rc",
+      "terminals": [
+        "wh:h7:mc418:m2:rc:a",
+        "wh:h7:mc418:m2:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418:m2:rc:fuse",
+      "terminals": [
+        "wh:h7:mc418:m2:rc:fuse:a",
+        "wh:h7:mc418:m2:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418a:bus",
+      "terminals": [
+        "wh:h7:mc418a:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h7:mc418a:in",
+      "terminals": [
+        "wh:h7:mc418a:in:a",
+        "wh:h7:mc418a:in:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:bus",
+      "terminals": [
+        "wh:h7:rm418:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb03",
+      "terminals": [
+        "wh:h7:rm418:cb03:a",
+        "wh:h7:rm418:cb03:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb03:disconnect",
+      "terminals": [
+        "wh:h7:rm418:cb03:disconnect:a",
+        "wh:h7:rm418:cb03:disconnect:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb03:earth",
+      "terminals": [
+        "wh:h7:rm418:cb03:earth:a",
+        "wh:h7:rm418:cb03:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb04",
+      "terminals": [
+        "wh:h7:rm418:cb04:a",
+        "wh:h7:rm418:cb04:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb04:disconnect",
+      "terminals": [
+        "wh:h7:rm418:cb04:disconnect:a",
+        "wh:h7:rm418:cb04:disconnect:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb04:earth",
+      "terminals": [
+        "wh:h7:rm418:cb04:earth:a",
+        "wh:h7:rm418:cb04:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:cb04:spare",
+      "terminals": [
+        "wh:h7:rm418:cb04:spare:port"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw01",
+      "terminals": [
+        "wh:h7:rm418:sw01:a",
+        "wh:h7:rm418:sw01:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw01:es",
+      "terminals": [
+        "wh:h7:rm418:sw01:es:a",
+        "wh:h7:rm418:sw01:es:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw02",
+      "terminals": [
+        "wh:h7:rm418:sw02:a",
+        "wh:h7:rm418:sw02:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw02:es",
+      "terminals": [
+        "wh:h7:rm418:sw02:es:a",
+        "wh:h7:rm418:sw02:es:b"
+      ]
+    },
+    {
+      "id": "wh:h7:rm418:sw02:interface",
+      "terminals": [
+        "wh:h7:rm418:sw02:interface:port"
+      ]
+    },
+    {
+      "id": "wh:h7:tf418",
+      "terminals": [
+        "wh:h7:tf418:hv",
+        "wh:h7:tf418:secondary"
+      ]
+    },
+    {
+      "id": "wh:h7:tf418a",
+      "terminals": [
+        "wh:h7:tf418a:hv",
+        "wh:h7:tf418a:secondary"
+      ]
+    },
+    {
+      "id": "wh:h8:hv416",
+      "terminals": [
+        "wh:h8:hv416:port"
+      ]
+    },
+    {
+      "id": "wh:h8:interface:rm406",
+      "terminals": [
+        "wh:h8:interface:rm406:port"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:bus",
+      "terminals": [
+        "wh:h8:mc416:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:in",
+      "terminals": [
+        "wh:h8:mc416:in:a",
+        "wh:h8:mc416:in:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:in-earth",
+      "terminals": [
+        "wh:h8:mc416:in-earth:a",
+        "wh:h8:mc416:in-earth:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:interface",
+      "terminals": [
+        "wh:h8:mc416:interface:port"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:common",
+      "terminals": [
+        "wh:h8:mc416:m1:common:port"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:earth",
+      "terminals": [
+        "wh:h8:mc416:m1:earth:a",
+        "wh:h8:mc416:m1:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:fc",
+      "terminals": [
+        "wh:h8:mc416:m1:fc:a",
+        "wh:h8:mc416:m1:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:fc:fuse",
+      "terminals": [
+        "wh:h8:mc416:m1:fc:fuse:a",
+        "wh:h8:mc416:m1:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:motor",
+      "terminals": [
+        "wh:h8:mc416:m1:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:rc",
+      "terminals": [
+        "wh:h8:mc416:m1:rc:a",
+        "wh:h8:mc416:m1:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m1:rc:fuse",
+      "terminals": [
+        "wh:h8:mc416:m1:rc:fuse:a",
+        "wh:h8:mc416:m1:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:common",
+      "terminals": [
+        "wh:h8:mc416:m2:common:port"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:earth",
+      "terminals": [
+        "wh:h8:mc416:m2:earth:a",
+        "wh:h8:mc416:m2:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:fc",
+      "terminals": [
+        "wh:h8:mc416:m2:fc:a",
+        "wh:h8:mc416:m2:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:fc:fuse",
+      "terminals": [
+        "wh:h8:mc416:m2:fc:fuse:a",
+        "wh:h8:mc416:m2:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:motor",
+      "terminals": [
+        "wh:h8:mc416:m2:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:rc",
+      "terminals": [
+        "wh:h8:mc416:m2:rc:a",
+        "wh:h8:mc416:m2:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416:m2:rc:fuse",
+      "terminals": [
+        "wh:h8:mc416:m2:rc:fuse:a",
+        "wh:h8:mc416:m2:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416a:bus",
+      "terminals": [
+        "wh:h8:mc416a:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416a:in",
+      "terminals": [
+        "wh:h8:mc416a:in:a",
+        "wh:h8:mc416a:in:b"
+      ]
+    },
+    {
+      "id": "wh:h8:mc416a:interface",
+      "terminals": [
+        "wh:h8:mc416a:interface:port"
+      ]
+    },
+    {
+      "id": "wh:h8:tf416",
+      "terminals": [
+        "wh:h8:tf416:hv",
+        "wh:h8:tf416:secondary"
+      ]
+    },
+    {
+      "id": "wh:h8:tf416a",
+      "terminals": [
+        "wh:h8:tf416a:hv",
+        "wh:h8:tf416a:secondary"
+      ]
+    },
+    {
+      "id": "wh:h9:interface:rm410",
+      "terminals": [
+        "wh:h9:interface:rm410:port"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:bus",
+      "terminals": [
+        "wh:h9:mc419:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:in",
+      "terminals": [
+        "wh:h9:mc419:in:a",
+        "wh:h9:mc419:in:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:in-earth",
+      "terminals": [
+        "wh:h9:mc419:in-earth:a",
+        "wh:h9:mc419:in-earth:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:common",
+      "terminals": [
+        "wh:h9:mc419:m1:common:port"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:earth",
+      "terminals": [
+        "wh:h9:mc419:m1:earth:a",
+        "wh:h9:mc419:m1:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:fc",
+      "terminals": [
+        "wh:h9:mc419:m1:fc:a",
+        "wh:h9:mc419:m1:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:fc:fuse",
+      "terminals": [
+        "wh:h9:mc419:m1:fc:fuse:a",
+        "wh:h9:mc419:m1:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:motor",
+      "terminals": [
+        "wh:h9:mc419:m1:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:rc",
+      "terminals": [
+        "wh:h9:mc419:m1:rc:a",
+        "wh:h9:mc419:m1:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m1:rc:fuse",
+      "terminals": [
+        "wh:h9:mc419:m1:rc:fuse:a",
+        "wh:h9:mc419:m1:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:common",
+      "terminals": [
+        "wh:h9:mc419:m2:common:port"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:earth",
+      "terminals": [
+        "wh:h9:mc419:m2:earth:a",
+        "wh:h9:mc419:m2:earth:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:fc",
+      "terminals": [
+        "wh:h9:mc419:m2:fc:a",
+        "wh:h9:mc419:m2:fc:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:fc:fuse",
+      "terminals": [
+        "wh:h9:mc419:m2:fc:fuse:a",
+        "wh:h9:mc419:m2:fc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:motor",
+      "terminals": [
+        "wh:h9:mc419:m2:motor:port"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:rc",
+      "terminals": [
+        "wh:h9:mc419:m2:rc:a",
+        "wh:h9:mc419:m2:rc:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419:m2:rc:fuse",
+      "terminals": [
+        "wh:h9:mc419:m2:rc:fuse:a",
+        "wh:h9:mc419:m2:rc:fuse:b"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419a:bus",
+      "terminals": [
+        "wh:h9:mc419a:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h9:mc419a:in",
+      "terminals": [
+        "wh:h9:mc419a:in:a",
+        "wh:h9:mc419a:in:b"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:bus",
+      "terminals": [
+        "wh:h9:rm419:bus:bar"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:cb01",
+      "terminals": [
+        "wh:h9:rm419:cb01:a",
+        "wh:h9:rm419:cb01:b"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:cb02",
+      "terminals": [
+        "wh:h9:rm419:cb02:a",
+        "wh:h9:rm419:cb02:b"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:sw01",
+      "terminals": [
+        "wh:h9:rm419:sw01:line",
+        "wh:h9:rm419:sw01:common",
+        "wh:h9:rm419:sw01:earth"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:sw02",
+      "terminals": [
+        "wh:h9:rm419:sw02:line",
+        "wh:h9:rm419:sw02:common",
+        "wh:h9:rm419:sw02:earth"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:sw03",
+      "terminals": [
+        "wh:h9:rm419:sw03:line",
+        "wh:h9:rm419:sw03:common",
+        "wh:h9:rm419:sw03:earth"
+      ]
+    },
+    {
+      "id": "wh:h9:rm419:sw04",
+      "terminals": [
+        "wh:h9:rm419:sw04:line",
+        "wh:h9:rm419:sw04:common",
+        "wh:h9:rm419:sw04:earth"
+      ]
+    },
+    {
+      "id": "wh:h9:tf419a",
+      "terminals": [
+        "wh:h9:tf419a:hv",
+        "wh:h9:tf419a:secondary"
+      ]
+    },
+    {
+      "id": "wh:h9:tf419b",
+      "terminals": [
+        "wh:h9:tf419b:hv",
+        "wh:h9:tf419b:secondary"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "boundary:tf04:feeder-input",
+      "from": "boundary:tf04:port",
+      "to": "station:sb02:f4:cb:in"
+    },
+    {
+      "id": "boundary:tf11:feeder-input",
+      "from": "boundary:tf11:port",
+      "to": "station:sb01:f4:cb:in"
+    },
+    {
+      "id": "boundary:tf12:feeder-input",
+      "from": "boundary:tf12:port",
+      "to": "station:sb02:f1:cb:in"
+    },
+    {
+      "id": "cv006-lv:mc410a:bar",
+      "from": "rm410:mc410a:cb:b",
+      "to": "rm410:mc410a:bus:bar"
+    },
+    {
+      "id": "cv006-lv:mc410a:incoming",
+      "from": "rm410:interface:mc410a:input",
+      "to": "rm410:mc410a:cb:a"
+    },
+    {
+      "id": "cv006:abs49-1-pole49-38",
+      "from": "cv006:abs:49-1:b",
+      "to": "cv006:pole:49-38:port"
+    },
+    {
+      "id": "cv006:pole17-drop-tower",
+      "from": "cv006:pole:17:port",
+      "to": "cv006:interface:drop-tower-workshop:port"
+    },
+    {
+      "id": "cv006:pole17-pole49",
+      "from": "cv006:pole:17:port",
+      "to": "cv006:pole:49:port"
+    },
+    {
+      "id": "cv006:pole49-38-pole49-39",
+      "from": "cv006:pole:49-38:port",
+      "to": "cv006:pole:49-39:port"
+    },
+    {
+      "id": "cv006:pole49-39-recloser",
+      "from": "cv006:pole:49-39:port",
+      "to": "cv006:recloser:49-39a:a"
+    },
+    {
+      "id": "cv006:pole49-abs49-1",
+      "from": "cv006:pole:49:port",
+      "to": "cv006:abs:49-1:a"
+    },
+    {
+      "id": "cv006:pole49-fused-abs57",
+      "from": "cv006:pole:49:port",
+      "to": "cv006:fused-abs:57:a"
+    },
+    {
+      "id": "cv006:recloser-abs49-40",
+      "from": "cv006:recloser:49-39a:b",
+      "to": "cv006:abs:49-40:a"
+    },
+    {
+      "id": "cv006:sw411-pole17",
+      "from": "cv006:interface:sw411:port",
+      "to": "cv006:pole:17:port"
+    },
+    {
+      "id": "drop-tower:abs-fuse",
+      "from": "drop-tower:abs:p18-8:b",
+      "to": "drop-tower:fuse:p18-8:a"
+    },
+    {
+      "id": "drop-tower:abs-line",
+      "from": "drop-tower:abs:p18-1:b",
+      "to": "drop-tower:abs:p18-8:a"
+    },
+    {
+      "id": "drop-tower:entry-abs",
+      "from": "cv006:interface:drop-tower-workshop:port",
+      "to": "drop-tower:abs:p18-1:a"
+    },
+    {
+      "id": "drop-tower:fuse-transformer",
+      "from": "drop-tower:fuse:p18-8:b",
+      "to": "drop-tower:tf:p18-8:hv"
+    },
+    {
+      "id": "ep:h10:mc420a:bar",
+      "from": "rm420:mc420a:in:acb:out",
+      "to": "rm420:mc420a:bus:bar"
+    },
+    {
+      "id": "ep:h10:mc420a:incoming",
+      "from": "rm420:mc420a:interface:port",
+      "to": "rm420:mc420a:in:acb:in"
+    },
+    {
+      "id": "ep:h3:mc416a:bar",
+      "from": "wh:h3:mc416a:in:b",
+      "to": "wh:h3:mc416a:bus:bar"
+    },
+    {
+      "id": "ep:h3:mc416a:incoming",
+      "from": "wh:h3:mc416a:interface:port",
+      "to": "wh:h3:mc416a:in:a"
+    },
+    {
+      "id": "ep:mc454:bar",
+      "from": "mc454:in:cb:b",
+      "to": "mc454:bus:bar"
+    },
+    {
+      "id": "ep:mc454:incoming",
+      "from": "sw454:interface:mc454-mc455:port",
+      "to": "mc454:in:cb:a"
+    },
+    {
+      "id": "ep:sw455:d:bar",
+      "from": "sw455:in-d:cb:b",
+      "to": "sw455:bus-d:bar"
+    },
+    {
+      "id": "ep:sw455:d:incoming",
+      "from": "sw454:interface:sw455:d",
+      "to": "sw455:in-d:cb:a"
+    },
+    {
+      "id": "ep:sw455:y:bar",
+      "from": "sw455:in-y:cb:b",
+      "to": "sw455:bus-y:bar"
+    },
+    {
+      "id": "ep:sw455:y:incoming",
+      "from": "sw454:interface:sw455:y",
+      "to": "sw455:in-y:cb:a"
+    },
+    {
+      "id": "hpgr:cable-CR005MEA-P-01",
+      "from": "hpgr:drive-mea:outlet:motor",
+      "to": "hpgr:motor-mea:port"
+    },
+    {
+      "id": "hpgr:cable-CR005MEB-P-01",
+      "from": "hpgr:drive-meb:outlet:motor",
+      "to": "hpgr:motor-meb:port"
+    },
+    {
+      "id": "hpgr:cable-SW002-P-02-group",
+      "from": "hpgr:tf001:mv",
+      "to": "hpgr:sw002:bus:bar"
+    },
+    {
+      "id": "hpgr:cable-SW438-P-01",
+      "from": "sw435:hpgr:cb:b",
+      "to": "hpgr:jb001:in"
+    },
+    {
+      "id": "hpgr:cable-TF001-P-01",
+      "from": "hpgr:jb001:out",
+      "to": "hpgr:tf001:hv"
+    },
+    {
+      "id": "hpgr:cable-TF004-P-01",
+      "from": "hpgr:sw002:tf004:f101:b",
+      "to": "hpgr:tf004:hv"
+    },
+    {
+      "id": "hpgr:drive-mea:dc-earth:branch",
+      "from": "hpgr:drive-mea:converter:dc",
+      "to": "hpgr:drive-mea:dc-earth:a"
+    },
+    {
+      "id": "hpgr:drive-mea:inverter-to-outlet",
+      "from": "hpgr:drive-mea:converter:output",
+      "to": "hpgr:drive-mea:outlet:vsd"
+    },
+    {
+      "id": "hpgr:drive-meb:dc-earth:branch",
+      "from": "hpgr:drive-meb:converter:dc",
+      "to": "hpgr:drive-meb:dc-earth:a"
+    },
+    {
+      "id": "hpgr:drive-meb:inverter-to-outlet",
+      "from": "hpgr:drive-meb:converter:output",
+      "to": "hpgr:drive-meb:outlet:vsd"
+    },
+    {
+      "id": "hpgr:mc001:cb:bus-link",
+      "from": "hpgr:mc001:cb:b",
+      "to": "hpgr:mc001:bus:bar"
+    },
+    {
+      "id": "hpgr:mc001:cb:winding-cable",
+      "from": "hpgr:tf004:lv",
+      "to": "hpgr:mc001:cb:a"
+    },
+    {
+      "id": "hpgr:sw002:a01:q8:branch",
+      "from": "hpgr:tf001:mv",
+      "to": "hpgr:sw002:a01:q8:a"
+    },
+    {
+      "id": "hpgr:sw002:a02:bus-fuse",
+      "from": "hpgr:sw002:bus:bar",
+      "to": "hpgr:sw002:a02:f1:a"
+    },
+    {
+      "id": "hpgr:sw002:a02:cable-TF003-P-01",
+      "from": "hpgr:sw002:a02:k101:b",
+      "to": "hpgr:tf003:hv"
+    },
+    {
+      "id": "hpgr:sw002:a02:fuse-contact",
+      "from": "hpgr:sw002:a02:f1:b",
+      "to": "hpgr:sw002:a02:k101:a"
+    },
+    {
+      "id": "hpgr:sw002:a02:q8:branch",
+      "from": "hpgr:sw002:a02:k101:b",
+      "to": "hpgr:sw002:a02:q8:a"
+    },
+    {
+      "id": "hpgr:sw002:a04:bus-fuse",
+      "from": "hpgr:sw002:bus:bar",
+      "to": "hpgr:sw002:a04:f1:a"
+    },
+    {
+      "id": "hpgr:sw002:a04:cable-TF002-P-01",
+      "from": "hpgr:sw002:a04:k101:b",
+      "to": "hpgr:tf002:hv"
+    },
+    {
+      "id": "hpgr:sw002:a04:fuse-contact",
+      "from": "hpgr:sw002:a04:f1:b",
+      "to": "hpgr:sw002:a04:k101:a"
+    },
+    {
+      "id": "hpgr:sw002:a04:q8:branch",
+      "from": "hpgr:sw002:a04:k101:b",
+      "to": "hpgr:sw002:a04:q8:a"
+    },
+    {
+      "id": "hpgr:sw002:tf004:q8:branch",
+      "from": "hpgr:sw002:tf004:f101:b",
+      "to": "hpgr:sw002:tf004:q8:a"
+    },
+    {
+      "id": "hpgr:tf002:delta-to-converter",
+      "from": "hpgr:tf002:ac-delta",
+      "to": "hpgr:drive-mea:converter:ac-delta"
+    },
+    {
+      "id": "hpgr:tf002:star-to-converter",
+      "from": "hpgr:tf002:ac-star",
+      "to": "hpgr:drive-mea:converter:ac-star"
+    },
+    {
+      "id": "hpgr:tf003:delta-to-converter",
+      "from": "hpgr:tf003:ac-delta",
+      "to": "hpgr:drive-meb:converter:ac-delta"
+    },
+    {
+      "id": "hpgr:tf003:star-to-converter",
+      "from": "hpgr:tf003:ac-star",
+      "to": "hpgr:drive-meb:converter:ac-star"
+    },
+    {
+      "id": "hpgr:tf004:bus-k202",
+      "from": "hpgr:sw002:bus:bar",
+      "to": "hpgr:sw002:tf004:k202:a"
+    },
+    {
+      "id": "hpgr:tf004:k202-f101",
+      "from": "hpgr:sw002:tf004:k202:b",
+      "to": "hpgr:sw002:tf004:f101:a"
+    },
+    {
+      "id": "line33:201-to-214",
+      "from": "line33:pole-201-abs:out",
+      "to": "line33:pole-214:port"
+    },
+    {
+      "id": "line33:214-to-227",
+      "from": "line33:pole-214:port",
+      "to": "line33:pole-227:port"
+    },
+    {
+      "id": "line33:227-to-272",
+      "from": "line33:pole-227:port",
+      "to": "line33:pole-272:port"
+    },
+    {
+      "id": "line33:272-to-284",
+      "from": "line33:pole-272:port",
+      "to": "line33:pole-284:port"
+    },
+    {
+      "id": "line33:284-to-286",
+      "from": "line33:pole-284:port",
+      "to": "line33:pole-286:port"
+    },
+    {
+      "id": "line33:amr-trunk",
+      "from": "line33:pole-4:port",
+      "to": "line33:tie-in-abs:in"
+    },
+    {
+      "id": "line33:hopper-286-fused-abs-input",
+      "from": "line33:pole-286:port",
+      "to": "line33:hopper-286-fused-abs:in"
+    },
+    {
+      "id": "line33:hopper-286-fused-abs-output",
+      "from": "line33:hopper-286-fused-abs:out",
+      "to": "line33:hopper-10:interface:port"
+    },
+    {
+      "id": "line33:pole-1-to-2",
+      "from": "line33:pole-1-recloser:out",
+      "to": "line33:pole-2-abs:in"
+    },
+    {
+      "id": "line33:pole-2-to-4",
+      "from": "line33:pole-2-abs:out",
+      "to": "line33:pole-4:port"
+    },
+    {
+      "id": "line33:station-to-recloser",
+      "from": "station:sb02:f4:transformer:output",
+      "to": "line33:pole-1-recloser:in"
+    },
+    {
+      "id": "line33:tie-to-201",
+      "from": "line33:tie-in-abs:out",
+      "to": "line33:pole-201-abs:in"
+    },
+    {
+      "id": "mine:mc441:bus-link",
+      "from": "mine:mc441:in:b",
+      "to": "mine:mc441:bus:bar"
+    },
+    {
+      "id": "mine:mc441:incoming-cable",
+      "from": "mine:tf441:lv",
+      "to": "mine:mc441:in:a"
+    },
+    {
+      "id": "mine:sw441:bus:es:branch",
+      "from": "mine:sw441:bus:bar",
+      "to": "mine:sw441:bus:es:a"
+    },
+    {
+      "id": "mine:sw441:in:es:branch",
+      "from": "mine:sw441:in:cb:a",
+      "to": "mine:sw441:in:es:a"
+    },
+    {
+      "id": "mine:sw441:incoming:bar",
+      "from": "mine:sw441:in:cb:b",
+      "to": "mine:sw441:bus:bar"
+    },
+    {
+      "id": "mine:sw441:incoming:cable",
+      "from": "mine:wt1:cb:b",
+      "to": "mine:sw441:in:cb:a"
+    },
+    {
+      "id": "mine:tf441:bar",
+      "from": "mine:sw441:bus:bar",
+      "to": "mine:tf441:cb:a"
+    },
+    {
+      "id": "mine:tf441:es:branch",
+      "from": "mine:tf441:cb:b",
+      "to": "mine:tf441:es:a"
+    },
+    {
+      "id": "mine:tf441:hv-cable",
+      "from": "mine:tf441:cb:b",
+      "to": "mine:tf441:hv"
+    },
+    {
+      "id": "mine:wt1:source",
+      "from": "mine:interface:water-opf1:port",
+      "to": "mine:wt1:cb:a"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:bigge-sp1",
+      "from": "line33:pole-284:port",
+      "to": "line33:bigge-sp1:interface:port"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:bigge-sp1-sp2",
+      "from": "line33:pole-284:port",
+      "to": "line33:bigge-sp1-sp2:interface:port"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:end-287",
+      "from": "line33:pole-286:port",
+      "to": "line33:end-287:interface:port"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:future-214",
+      "from": "line33:pole-214:port",
+      "to": "line33:future-214:interface:port"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:future-4a",
+      "from": "line33:pole-4:port",
+      "to": "line33:future-4a:interface:port"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:norfolk",
+      "from": "line33:pole-227:port",
+      "to": "line33:norfolk:interface:port"
+    },
+    {
+      "id": "owner-scope:line33:takeoff:pole-272-1",
+      "from": "line33:pole-272:port",
+      "to": "line33:pole-272-1:interface:port"
+    },
+    {
+      "id": "owner:join:rm721-rm712",
+      "from": "rm721:in02:b",
+      "to": "rm712:in02:a"
+    },
+    {
+      "id": "owner:tf12:opf1-7-to-in04",
+      "from": "owner:tf12:opf1-7:port",
+      "to": "sw411:in-04:interface:port"
+    },
+    {
+      "id": "owner:tf12:opf1-7-water",
+      "from": "owner:tf12:opf1-7:port",
+      "to": "mine:interface:water-opf1:port"
+    },
+    {
+      "id": "owner:tf712-sw712-incoming",
+      "from": "rm712:tf712:removed-lv-cable-end:port",
+      "to": "rm712:sw712:cb:a"
+    },
+    {
+      "id": "rm406:cb01-sw02",
+      "from": "rm406:cb01:b",
+      "to": "rm406:sw02:line"
+    },
+    {
+      "id": "rm406:cb01:bar",
+      "from": "rm406:bus:bar",
+      "to": "rm406:cb01:a"
+    },
+    {
+      "id": "rm406:cb02-sw03",
+      "from": "rm406:cb02:b",
+      "to": "rm406:sw03:line"
+    },
+    {
+      "id": "rm406:cb02:bar",
+      "from": "rm406:bus:bar",
+      "to": "rm406:cb02:a"
+    },
+    {
+      "id": "rm406:cb03-sw04",
+      "from": "rm406:cb03:b",
+      "to": "rm406:sw04:line"
+    },
+    {
+      "id": "rm406:cb03:bar",
+      "from": "rm406:bus:bar",
+      "to": "rm406:cb03:a"
+    },
+    {
+      "id": "rm406:incoming-bar",
+      "from": "rm406:sw01:cable",
+      "to": "rm406:bus:bar"
+    },
+    {
+      "id": "rm406:incoming-pole57",
+      "from": "cv006:fused-abs:57:b",
+      "to": "rm406:sw01:line"
+    },
+    {
+      "id": "rm406:mc406a:incomer-bus",
+      "from": "rm406:mc406a:cb:b",
+      "to": "rm406:mc406a:bus:bar"
+    },
+    {
+      "id": "rm406:mc406a:winding-incomer",
+      "from": "rm406:tf406b:lv",
+      "to": "rm406:mc406a:cb:a"
+    },
+    {
+      "id": "rm406:sw04-hopper8",
+      "from": "rm406:sw04:cable",
+      "to": "rm406:interface:hopper8:port"
+    },
+    {
+      "id": "rm406:tf406a:cable-TF406A-P1",
+      "from": "rm406:sw02:cable",
+      "to": "rm406:tf406a:hv"
+    },
+    {
+      "id": "rm406:tf406b:cable-TF406B-P1",
+      "from": "rm406:sw03:cable",
+      "to": "rm406:tf406b:hv"
+    },
+    {
+      "id": "rm406:vs4061:input-a:switch-boundary",
+      "from": "rm406:vs4061:input-a:switch:b",
+      "to": "rm406:vs4061:input-a:boundary:port"
+    },
+    {
+      "id": "rm406:vs4061:input-a:winding-cable",
+      "from": "rm406:tf406a:lv-a",
+      "to": "rm406:vs4061:input-a:switch:a"
+    },
+    {
+      "id": "rm406:vs4061:input-b:switch-boundary",
+      "from": "rm406:vs4061:input-b:switch:b",
+      "to": "rm406:vs4061:input-b:boundary:port"
+    },
+    {
+      "id": "rm406:vs4061:input-b:winding-cable",
+      "from": "rm406:tf406a:lv-b",
+      "to": "rm406:vs4061:input-b:switch:a"
+    },
+    {
+      "id": "rm410:cb01-sw02",
+      "from": "rm410:cb01:b",
+      "to": "rm410:sw02:line"
+    },
+    {
+      "id": "rm410:cb01:bar",
+      "from": "rm410:bus:bar",
+      "to": "rm410:cb01:a"
+    },
+    {
+      "id": "rm410:cb02-sw03",
+      "from": "rm410:cb02:b",
+      "to": "rm410:sw03:line"
+    },
+    {
+      "id": "rm410:cb02:bar",
+      "from": "rm410:bus:bar",
+      "to": "rm410:cb02:a"
+    },
+    {
+      "id": "rm410:cb03-sw04",
+      "from": "rm410:cb03:b",
+      "to": "rm410:sw04:line"
+    },
+    {
+      "id": "rm410:cb03:bar",
+      "from": "rm410:bus:bar",
+      "to": "rm410:cb03:a"
+    },
+    {
+      "id": "rm410:incoming-bar",
+      "from": "rm410:sw01:cable",
+      "to": "rm410:bus:bar"
+    },
+    {
+      "id": "rm410:incoming-pole49-40",
+      "from": "cv006:abs:49-40:b",
+      "to": "rm410:sw01:line"
+    },
+    {
+      "id": "rm410:sw04-rm419",
+      "from": "rm410:sw04:cable",
+      "to": "rm410:interface:rm419:incoming"
+    },
+    {
+      "id": "rm410:tf410a:cable-TF410A-P1",
+      "from": "rm410:sw02:cable",
+      "to": "rm410:tf410a:hv"
+    },
+    {
+      "id": "rm410:tf410b-mc410a",
+      "from": "rm410:tf410b:lv",
+      "to": "rm410:interface:mc410a:input"
+    },
+    {
+      "id": "rm410:tf410b:cable-TF410B-P1",
+      "from": "rm410:sw03:cable",
+      "to": "rm410:tf410b:hv"
+    },
+    {
+      "id": "rm410:vs4101:input-a:switch-boundary",
+      "from": "rm410:vs4101:input-a:switch:b",
+      "to": "rm410:vs4101:input-a:boundary:port"
+    },
+    {
+      "id": "rm410:vs4101:input-a:winding-cable",
+      "from": "rm410:tf410a:lv-a",
+      "to": "rm410:vs4101:input-a:switch:a"
+    },
+    {
+      "id": "rm410:vs4101:input-b:switch-boundary",
+      "from": "rm410:vs4101:input-b:switch:b",
+      "to": "rm410:vs4101:input-b:boundary:port"
+    },
+    {
+      "id": "rm410:vs4101:input-b:winding-cable",
+      "from": "rm410:tf410a:lv-b",
+      "to": "rm410:vs4101:input-b:switch:a"
+    },
+    {
+      "id": "rm412:e100:branch",
+      "from": "rm412:bus:bar",
+      "to": "rm412:e100:a"
+    },
+    {
+      "id": "rm412:e101:branch",
+      "from": "rm412:bus:bar",
+      "to": "rm412:e101:a"
+    },
+    {
+      "id": "rm412:e102:branch",
+      "from": "rm412:feeder-contact:b",
+      "to": "rm412:e102:a"
+    },
+    {
+      "id": "rm412:f1:winding-cable",
+      "from": "rm412:tf412:lv-690-star",
+      "to": "rm412:f1:in"
+    },
+    {
+      "id": "rm412:f2:winding-cable",
+      "from": "rm412:tf412:lv-690-delta",
+      "to": "rm412:f2:in"
+    },
+    {
+      "id": "rm412:q100-bar",
+      "from": "rm412:bus:bar",
+      "to": "rm412:q100:a"
+    },
+    {
+      "id": "rm412:q100-contact",
+      "from": "rm412:q100:b",
+      "to": "rm412:feeder-contact:a"
+    },
+    {
+      "id": "rm412:q200:final-conductor",
+      "from": "rm412:q200:b",
+      "to": "rm412:lv-690-star:bus:bar"
+    },
+    {
+      "id": "rm412:q200:supply",
+      "from": "rm412:f1:out",
+      "to": "rm412:q200:a"
+    },
+    {
+      "id": "rm412:q201:final-conductor",
+      "from": "rm412:q201:b",
+      "to": "rm412:lv-690-delta:bus:bar"
+    },
+    {
+      "id": "rm412:q201:supply",
+      "from": "rm412:f2:out",
+      "to": "rm412:q201:a"
+    },
+    {
+      "id": "rm412:q202:final-conductor",
+      "from": "rm412:q202:b",
+      "to": "rm412:lv-415-star:bus:bar"
+    },
+    {
+      "id": "rm412:q202:supply",
+      "from": "rm412:tf412:lv-415-star",
+      "to": "rm412:q202:a"
+    },
+    {
+      "id": "rm412:s100-bar",
+      "from": "rm412:s100:b",
+      "to": "rm412:bus:bar"
+    },
+    {
+      "id": "rm412:s101-bar",
+      "from": "rm412:s101:b",
+      "to": "rm412:bus:bar"
+    },
+    {
+      "id": "rm412:s101-rm413-in01",
+      "from": "rm412:s101:a",
+      "to": "rm413:in01:a"
+    },
+    {
+      "id": "rm412:tf412:incoming-cable",
+      "from": "rm412:feeder-contact:b",
+      "to": "rm412:tf412:hv"
+    },
+    {
+      "id": "rm413:double-boot-rm413a",
+      "from": "rm413:in02:a",
+      "to": "rm413a:bus:bar"
+    },
+    {
+      "id": "rm413:in01-bar",
+      "from": "rm413:in01:b",
+      "to": "rm413:bus:bar"
+    },
+    {
+      "id": "rm413:in02-bar",
+      "from": "rm413:in02:b",
+      "to": "rm413:bus:bar"
+    },
+    {
+      "id": "rm413:in02-rm417",
+      "from": "rm413:in02:a",
+      "to": "rm413:interface:rm417:port"
+    },
+    {
+      "id": "rm413:mc413:incomer-bar",
+      "from": "rm413:mc413:cb:b",
+      "to": "rm413:mc413:bus:bar"
+    },
+    {
+      "id": "rm413:mc413:winding-incomer",
+      "from": "rm413:tf413:lv",
+      "to": "rm413:mc413:cb:a"
+    },
+    {
+      "id": "rm413:mcc414:incomer-bar",
+      "from": "rm413:mcc414:cb:b",
+      "to": "rm413:mcc414:bus:bar"
+    },
+    {
+      "id": "rm413:mcc414:winding-incomer",
+      "from": "rm413:tf414:lv",
+      "to": "rm413:mcc414:cb:a"
+    },
+    {
+      "id": "rm413:tf413:bar",
+      "from": "rm413:bus:bar",
+      "to": "rm413:tf413:cb:a"
+    },
+    {
+      "id": "rm413:tf413:incoming-cable",
+      "from": "rm413:tf413:cb:b",
+      "to": "rm413:tf413:hv"
+    },
+    {
+      "id": "rm413:tf414:bar",
+      "from": "rm413:bus:bar",
+      "to": "rm413:tf414:cb:a"
+    },
+    {
+      "id": "rm413:tf414:incoming-cable",
+      "from": "rm413:tf414:cb:b",
+      "to": "rm413:tf414:hv"
+    },
+    {
+      "id": "rm413a:ac-input-a:switch-boundary",
+      "from": "rm413a:ac-input-a:switch:b",
+      "to": "rm413a:ac-input-a:boundary:port"
+    },
+    {
+      "id": "rm413a:ac-input-a:winding-cable",
+      "from": "rm413a:tf413a:lv-a",
+      "to": "rm413a:ac-input-a:switch:a"
+    },
+    {
+      "id": "rm413a:ac-input-b:switch-boundary",
+      "from": "rm413a:ac-input-b:switch:b",
+      "to": "rm413a:ac-input-b:boundary:port"
+    },
+    {
+      "id": "rm413a:ac-input-b:winding-cable",
+      "from": "rm413a:tf413a:lv-b",
+      "to": "rm413a:ac-input-b:switch:a"
+    },
+    {
+      "id": "rm413a:es-q8:upper:branch",
+      "from": "rm413a:bus:bar",
+      "to": "rm413a:es-q8:upper:a"
+    },
+    {
+      "id": "rm413a:q1-bar",
+      "from": "rm413a:bus:bar",
+      "to": "rm413a:q1:a"
+    },
+    {
+      "id": "rm413a:q1-lower-contact",
+      "from": "rm413a:q1:b",
+      "to": "rm413a:es-q8:lower:line"
+    },
+    {
+      "id": "rm413a:tf413a:incoming-cable",
+      "from": "rm413a:es-q8:lower:cable",
+      "to": "rm413a:tf413a:hv"
+    },
+    {
+      "id": "rm420:es01:branch",
+      "from": "rm420:sw01:in",
+      "to": "rm420:es01:in"
+    },
+    {
+      "id": "rm420:incoming:bus-link",
+      "from": "rm420:sw01:out",
+      "to": "rm420:bus:port"
+    },
+    {
+      "id": "rm420:incoming:cable",
+      "from": "rm420:interface:pole286:port",
+      "to": "rm420:sw01:in"
+    },
+    {
+      "id": "rm420:mc420:in:es:branch",
+      "from": "rm420:mc420:in:vcb:in",
+      "to": "rm420:mc420:in:es:in"
+    },
+    {
+      "id": "rm420:mc420:incomer-bus",
+      "from": "rm420:mc420:in:vcb:out",
+      "to": "rm420:mc420:bus:port"
+    },
+    {
+      "id": "rm420:mc420:incoming-cable",
+      "from": "rm420:tf420a:secondary",
+      "to": "rm420:mc420:in:vcb:in"
+    },
+    {
+      "id": "rm420:mc420:motor-01:es:branch",
+      "from": "rm420:mc420:motor-01:output:port",
+      "to": "rm420:mc420:motor-01:es:in"
+    },
+    {
+      "id": "rm420:mc420:motor-01:fc:bus-fuse",
+      "from": "rm420:mc420:bus:port",
+      "to": "rm420:mc420:motor-01:fc:fuse:in"
+    },
+    {
+      "id": "rm420:mc420:motor-01:fc:contact-motor",
+      "from": "rm420:mc420:motor-01:fc:out",
+      "to": "rm420:mc420:motor-01:output:port"
+    },
+    {
+      "id": "rm420:mc420:motor-01:fc:fuse-contact",
+      "from": "rm420:mc420:motor-01:fc:fuse:out",
+      "to": "rm420:mc420:motor-01:fc:in"
+    },
+    {
+      "id": "rm420:mc420:motor-01:rc:bus-fuse",
+      "from": "rm420:mc420:bus:port",
+      "to": "rm420:mc420:motor-01:rc:fuse:in"
+    },
+    {
+      "id": "rm420:mc420:motor-01:rc:contact-motor",
+      "from": "rm420:mc420:motor-01:rc:out",
+      "to": "rm420:mc420:motor-01:output:port"
+    },
+    {
+      "id": "rm420:mc420:motor-01:rc:fuse-contact",
+      "from": "rm420:mc420:motor-01:rc:fuse:out",
+      "to": "rm420:mc420:motor-01:rc:in"
+    },
+    {
+      "id": "rm420:mc420:motor-02:es:branch",
+      "from": "rm420:mc420:motor-02:output:port",
+      "to": "rm420:mc420:motor-02:es:in"
+    },
+    {
+      "id": "rm420:mc420:motor-02:fc:bus-fuse",
+      "from": "rm420:mc420:bus:port",
+      "to": "rm420:mc420:motor-02:fc:fuse:in"
+    },
+    {
+      "id": "rm420:mc420:motor-02:fc:contact-motor",
+      "from": "rm420:mc420:motor-02:fc:out",
+      "to": "rm420:mc420:motor-02:output:port"
+    },
+    {
+      "id": "rm420:mc420:motor-02:fc:fuse-contact",
+      "from": "rm420:mc420:motor-02:fc:fuse:out",
+      "to": "rm420:mc420:motor-02:fc:in"
+    },
+    {
+      "id": "rm420:mc420:motor-02:rc:bus-fuse",
+      "from": "rm420:mc420:bus:port",
+      "to": "rm420:mc420:motor-02:rc:fuse:in"
+    },
+    {
+      "id": "rm420:mc420:motor-02:rc:contact-motor",
+      "from": "rm420:mc420:motor-02:rc:out",
+      "to": "rm420:mc420:motor-02:output:port"
+    },
+    {
+      "id": "rm420:mc420:motor-02:rc:fuse-contact",
+      "from": "rm420:mc420:motor-02:rc:fuse:out",
+      "to": "rm420:mc420:motor-02:rc:in"
+    },
+    {
+      "id": "rm420:spare:bus-cb",
+      "from": "rm420:bus:port",
+      "to": "rm420:spare:cb:in"
+    },
+    {
+      "id": "rm420:spare:cb-sw",
+      "from": "rm420:spare:cb:out",
+      "to": "rm420:spare:sw:in"
+    },
+    {
+      "id": "rm420:spare:es:branch",
+      "from": "rm420:spare:sw:out",
+      "to": "rm420:spare:es:in"
+    },
+    {
+      "id": "rm420:spare:stub",
+      "from": "rm420:spare:sw:out",
+      "to": "rm420:spare:interface:port"
+    },
+    {
+      "id": "rm420:tf420a:bus-cb",
+      "from": "rm420:bus:port",
+      "to": "rm420:tf420a:cb:in"
+    },
+    {
+      "id": "rm420:tf420a:cable-SS420-TF420A-P01",
+      "from": "rm420:tf420a:sw:out",
+      "to": "rm420:tf420a:primary-connection:port"
+    },
+    {
+      "id": "rm420:tf420a:cb-sw",
+      "from": "rm420:tf420a:cb:out",
+      "to": "rm420:tf420a:sw:in"
+    },
+    {
+      "id": "rm420:tf420a:es:branch",
+      "from": "rm420:tf420a:sw:out",
+      "to": "rm420:tf420a:es:in"
+    },
+    {
+      "id": "rm420:tf420b:bus-cb",
+      "from": "rm420:bus:port",
+      "to": "rm420:tf420b:cb:in"
+    },
+    {
+      "id": "rm420:tf420b:cable-SS420-TF420B-P01",
+      "from": "rm420:tf420b:sw:out",
+      "to": "rm420:tf420b:primary-connection:port"
+    },
+    {
+      "id": "rm420:tf420b:cb-sw",
+      "from": "rm420:tf420b:cb:out",
+      "to": "rm420:tf420b:sw:in"
+    },
+    {
+      "id": "rm420:tf420b:es:branch",
+      "from": "rm420:tf420b:sw:out",
+      "to": "rm420:tf420b:es:in"
+    },
+    {
+      "id": "rm420:tf420b:lv-continuation",
+      "from": "rm420:tf420b:secondary",
+      "to": "rm420:mc420a:interface:port"
+    },
+    {
+      "id": "rm712:in01-bar",
+      "from": "rm712:in01:b",
+      "to": "rm712:bus:bar"
+    },
+    {
+      "id": "rm712:in02-bar",
+      "from": "rm712:in02:b",
+      "to": "rm712:bus:bar"
+    },
+    {
+      "id": "rm712:sw712:incomer-bar",
+      "from": "rm712:sw712:cb:b",
+      "to": "rm712:sw712:bus:bar"
+    },
+    {
+      "id": "rm712:tf712:bar",
+      "from": "rm712:bus:bar",
+      "to": "rm712:tf712:cb:a"
+    },
+    {
+      "id": "rm712:tf712:incoming-cable",
+      "from": "rm712:tf712:cb:b",
+      "to": "rm712:tf712:hv"
+    },
+    {
+      "id": "rm712:tf712:removed-cable-segment",
+      "from": "rm712:tf712:lv",
+      "to": "rm712:tf712:removed-lv-cable-end:port"
+    },
+    {
+      "id": "rm713:cable-SW713-P-01",
+      "from": "rm713:tf713:lv",
+      "to": "rm713:sw713:cb:a"
+    },
+    {
+      "id": "rm713:in01-bar",
+      "from": "rm713:in01:b",
+      "to": "rm713:bus:bar"
+    },
+    {
+      "id": "rm713:in02-bar",
+      "from": "rm713:in02:b",
+      "to": "rm713:bus:bar"
+    },
+    {
+      "id": "rm713:sw713:incomer-bar",
+      "from": "rm713:sw713:cb:b",
+      "to": "rm713:sw713:bus:bar"
+    },
+    {
+      "id": "rm713:tf713:bar",
+      "from": "rm713:bus:bar",
+      "to": "rm713:tf713:cb:a"
+    },
+    {
+      "id": "rm713:tf713:incoming-cable",
+      "from": "rm713:tf713:cb:b",
+      "to": "rm713:tf713:hv"
+    },
+    {
+      "id": "rm714:in01:bus-link",
+      "from": "rm714:in01:b",
+      "to": "rm714:bus:bar"
+    },
+    {
+      "id": "rm714:in01:es:branch",
+      "from": "rm714:in01:a",
+      "to": "rm714:in01:es:a"
+    },
+    {
+      "id": "rm714:in02:bus-link",
+      "from": "rm714:in02:b",
+      "to": "rm714:bus:bar"
+    },
+    {
+      "id": "rm714:in02:es:branch",
+      "from": "rm714:in02:a",
+      "to": "rm714:in02:es:a"
+    },
+    {
+      "id": "rm714:sw714:bus-link",
+      "from": "rm714:sw714:in:cb:b",
+      "to": "rm714:sw714:bus:bar"
+    },
+    {
+      "id": "rm714:sw714:cable",
+      "from": "rm714:tf714:lv",
+      "to": "rm714:sw714:in:cb:a"
+    },
+    {
+      "id": "rm714:tf714:bus-link",
+      "from": "rm714:bus:bar",
+      "to": "rm714:tf714:cb:a"
+    },
+    {
+      "id": "rm714:tf714:cable",
+      "from": "rm714:tf714:cb:b",
+      "to": "rm714:tf714:hv"
+    },
+    {
+      "id": "rm714:tf714:es:branch",
+      "from": "rm714:tf714:cb:b",
+      "to": "rm714:tf714:es:a"
+    },
+    {
+      "id": "rm721:cable-RM721-P-01",
+      "from": "services:interface:sw411:port",
+      "to": "rm721:in01:a"
+    },
+    {
+      "id": "rm721:current-rm713-cable",
+      "from": "rm721:rm713:b",
+      "to": "rm713:in01:a"
+    },
+    {
+      "id": "rm721:in01-bar",
+      "from": "rm721:in01:b",
+      "to": "rm721:bus:bar"
+    },
+    {
+      "id": "rm721:in01:es:branch",
+      "from": "rm721:in01:a",
+      "to": "rm721:in01:es:a"
+    },
+    {
+      "id": "rm721:in02:bar",
+      "from": "rm721:bus:bar",
+      "to": "rm721:in02:a"
+    },
+    {
+      "id": "rm721:in02:es:branch",
+      "from": "rm721:in02:b",
+      "to": "rm721:in02:es:a"
+    },
+    {
+      "id": "rm721:rm412:bar",
+      "from": "rm721:bus:bar",
+      "to": "rm721:rm412:a"
+    },
+    {
+      "id": "rm721:rm412:cable",
+      "from": "rm721:rm412:b",
+      "to": "rm412:s100:a"
+    },
+    {
+      "id": "rm721:rm412:es:branch",
+      "from": "rm721:rm412:b",
+      "to": "rm721:rm412:es:a"
+    },
+    {
+      "id": "rm721:rm713:bar",
+      "from": "rm721:bus:bar",
+      "to": "rm721:rm713:a"
+    },
+    {
+      "id": "rm721:rm713:es:branch",
+      "from": "rm721:rm713:b",
+      "to": "rm721:rm713:es:a"
+    },
+    {
+      "id": "station:sb01:f4:continuation",
+      "from": "station:sb01:f4:transformer:output",
+      "to": "station:sb01:f4:interface:port"
+    },
+    {
+      "id": "station:sb01:f4:es:branch",
+      "from": "station:sb01:f4:cb:out",
+      "to": "station:sb01:f4:es:in"
+    },
+    {
+      "id": "station:sb01:f4:transformer:input-link",
+      "from": "station:sb01:f4:cb:out",
+      "to": "station:sb01:f4:transformer:hv"
+    },
+    {
+      "id": "station:sb02:f1:continuation",
+      "from": "station:sb02:f1:transformer:output",
+      "to": "station:sb02:f1:interface:port"
+    },
+    {
+      "id": "station:sb02:f1:es:branch",
+      "from": "station:sb02:f1:cb:out",
+      "to": "station:sb02:f1:es:in"
+    },
+    {
+      "id": "station:sb02:f1:transformer:input-link",
+      "from": "station:sb02:f1:cb:out",
+      "to": "station:sb02:f1:transformer:hv"
+    },
+    {
+      "id": "station:sb02:f4:es:branch",
+      "from": "station:sb02:f4:cb:out",
+      "to": "station:sb02:f4:es:in"
+    },
+    {
+      "id": "station:sb02:f4:transformer:input-link",
+      "from": "station:sb02:f4:cb:out",
+      "to": "station:sb02:f4:transformer:hv"
+    },
+    {
+      "id": "sw411:bus-a:earth-branch",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:bus-a:es:line"
+    },
+    {
+      "id": "sw411:bus-b:earth-branch",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:bus-b:es:line"
+    },
+    {
+      "id": "sw411:in-01:bus-link",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:in-01:cb:bus"
+    },
+    {
+      "id": "sw411:in-01:earth-branch",
+      "from": "sw411:in-01:cb:line",
+      "to": "sw411:in-01:es:line"
+    },
+    {
+      "id": "sw411:in-01:interface-link",
+      "from": "sw411:in-01:cb:line",
+      "to": "sw411:in-01:interface:port"
+    },
+    {
+      "id": "sw411:in-02:bus-link",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:in-02:cb:bus"
+    },
+    {
+      "id": "sw411:in-02:earth-branch",
+      "from": "sw411:in-02:cb:line",
+      "to": "sw411:in-02:es:line"
+    },
+    {
+      "id": "sw411:in-02:interface-link",
+      "from": "sw411:in-02:cb:line",
+      "to": "sw411:in-02:interface:port"
+    },
+    {
+      "id": "sw411:in-03:bus-link",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:in-03:cb:bus"
+    },
+    {
+      "id": "sw411:in-03:earth-branch",
+      "from": "sw411:in-03:cb:line",
+      "to": "sw411:in-03:es:line"
+    },
+    {
+      "id": "sw411:in-03:interface-link",
+      "from": "sw411:in-03:cb:line",
+      "to": "sw411:in-03:interface:port"
+    },
+    {
+      "id": "sw411:in-04:bus-link",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:in-04:cb:bus"
+    },
+    {
+      "id": "sw411:in-04:earth-branch",
+      "from": "sw411:in-04:cb:line",
+      "to": "sw411:in-04:es:line"
+    },
+    {
+      "id": "sw411:in-04:interface-link",
+      "from": "sw411:in-04:cb:line",
+      "to": "sw411:in-04:interface:port"
+    },
+    {
+      "id": "sw411:tie-to-bus-a",
+      "from": "sw411:bus-tie:cb:bus-a",
+      "to": "sw411:bus-a:bar"
+    },
+    {
+      "id": "sw411:tie-to-bus-b",
+      "from": "sw411:bus-tie:cb:bus-b",
+      "to": "sw411:bus-b:bar"
+    },
+    {
+      "id": "sw411:tier-01:bus-link",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:tier-01:cb:bus"
+    },
+    {
+      "id": "sw411:tier-01:earth-branch",
+      "from": "sw411:tier-01:cb:line",
+      "to": "sw411:tier-01:es:line"
+    },
+    {
+      "id": "sw411:tier-01:interface-link",
+      "from": "sw411:tier-01:cb:line",
+      "to": "sw411:tier-01:interface:port"
+    },
+    {
+      "id": "sw411:tier-02:bus-link",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:tier-02:cb:bus"
+    },
+    {
+      "id": "sw411:tier-02:earth-branch",
+      "from": "sw411:tier-02:cb:line",
+      "to": "sw411:tier-02:es:line"
+    },
+    {
+      "id": "sw411:tier-02:interface-link",
+      "from": "sw411:tier-02:cb:line",
+      "to": "sw411:tier-02:interface:port"
+    },
+    {
+      "id": "sw411:tier-03:bus-link",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:tier-03:cb:bus"
+    },
+    {
+      "id": "sw411:tier-03:earth-branch",
+      "from": "sw411:tier-03:cb:line",
+      "to": "sw411:tier-03:es:line"
+    },
+    {
+      "id": "sw411:tier-03:interface-link",
+      "from": "sw411:tier-03:cb:line",
+      "to": "sw411:tier-03:interface:port"
+    },
+    {
+      "id": "sw411:tier-04:bus-link",
+      "from": "sw411:bus-a:bar",
+      "to": "sw411:tier-04:cb:bus"
+    },
+    {
+      "id": "sw411:tier-04:earth-branch",
+      "from": "sw411:tier-04:cb:line",
+      "to": "sw411:tier-04:es:line"
+    },
+    {
+      "id": "sw411:tier-04:interface-link",
+      "from": "sw411:tier-04:cb:line",
+      "to": "sw411:tier-04:interface:port"
+    },
+    {
+      "id": "sw411:tier-13:bus-link",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:tier-13:cb:bus"
+    },
+    {
+      "id": "sw411:tier-13:earth-branch",
+      "from": "sw411:tier-13:cb:line",
+      "to": "sw411:tier-13:es:line"
+    },
+    {
+      "id": "sw411:tier-13:interface-link",
+      "from": "sw411:tier-13:cb:line",
+      "to": "sw411:tier-13:interface:port"
+    },
+    {
+      "id": "sw411:tier-14:bus-link",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:tier-14:cb:bus"
+    },
+    {
+      "id": "sw411:tier-14:earth-branch",
+      "from": "sw411:tier-14:cb:line",
+      "to": "sw411:tier-14:es:line"
+    },
+    {
+      "id": "sw411:tier-14:interface-link",
+      "from": "sw411:tier-14:cb:line",
+      "to": "sw411:tier-14:interface:port"
+    },
+    {
+      "id": "sw411:tier-15:bus-link",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:tier-15:cb:bus"
+    },
+    {
+      "id": "sw411:tier-15:earth-branch",
+      "from": "sw411:tier-15:cb:line",
+      "to": "sw411:tier-15:es:line"
+    },
+    {
+      "id": "sw411:tier-15:interface-link",
+      "from": "sw411:tier-15:cb:line",
+      "to": "sw411:tier-15:interface:port"
+    },
+    {
+      "id": "sw411:tier-16:bus-link",
+      "from": "sw411:bus-b:bar",
+      "to": "sw411:tier-16:cb:bus"
+    },
+    {
+      "id": "sw411:tier-16:earth-branch",
+      "from": "sw411:tier-16:cb:line",
+      "to": "sw411:tier-16:es:line"
+    },
+    {
+      "id": "sw411:tier-16:interface-link",
+      "from": "sw411:tier-16:cb:line",
+      "to": "sw411:tier-16:interface:port"
+    },
+    {
+      "id": "sw421:bus:es:branch",
+      "from": "sw421:bus:bar",
+      "to": "sw421:bus:es:a"
+    },
+    {
+      "id": "sw421:in:es:branch",
+      "from": "sw421:in:cb:a",
+      "to": "sw421:in:es:a"
+    },
+    {
+      "id": "sw421:incoming:bus-link",
+      "from": "sw421:in:cb:b",
+      "to": "sw421:bus:bar"
+    },
+    {
+      "id": "sw421:incoming:cable-SW421-P-01",
+      "from": "sw421:interface:sw411:port",
+      "to": "sw421:in:cb:a"
+    },
+    {
+      "id": "sw421:mc421:incomer-bus",
+      "from": "sw421:mc421:cb:b",
+      "to": "sw421:mc421:bus:bar"
+    },
+    {
+      "id": "sw421:mc421:winding-cable",
+      "from": "sw421:tf421:lv",
+      "to": "sw421:mc421:cb:a"
+    },
+    {
+      "id": "sw421:mc422:incomer-bus",
+      "from": "sw421:mc422:cb:b",
+      "to": "sw421:mc422:bus:bar"
+    },
+    {
+      "id": "sw421:mc422:winding-cable",
+      "from": "sw421:tf422:lv",
+      "to": "sw421:mc422:cb:a"
+    },
+    {
+      "id": "sw421:spare:tier2:bus-link",
+      "from": "sw421:bus:bar",
+      "to": "sw421:spare:tier2:cb:a"
+    },
+    {
+      "id": "sw421:spare:tier2:es:branch",
+      "from": "sw421:spare:tier2:cb:b",
+      "to": "sw421:spare:tier2:es:a"
+    },
+    {
+      "id": "sw421:spare:tier2:unnamed-outgoing",
+      "from": "sw421:spare:tier2:cb:b",
+      "to": "sw421:spare:tier2:interface:port"
+    },
+    {
+      "id": "sw421:spare:tier7:bus-link",
+      "from": "sw421:bus:bar",
+      "to": "sw421:spare:tier7:cb:a"
+    },
+    {
+      "id": "sw421:spare:tier7:es:branch",
+      "from": "sw421:spare:tier7:cb:b",
+      "to": "sw421:spare:tier7:es:a"
+    },
+    {
+      "id": "sw421:spare:tier7:unnamed-outgoing",
+      "from": "sw421:spare:tier7:cb:b",
+      "to": "sw421:spare:tier7:interface:port"
+    },
+    {
+      "id": "sw421:sw423:d:cable-SW423-P-01-group",
+      "from": "sw421:tf423:lv-d",
+      "to": "sw421:sw423:d:cb:a"
+    },
+    {
+      "id": "sw421:sw423:d:incomer-bus",
+      "from": "sw421:sw423:d:cb:b",
+      "to": "sw421:sw423:d:bus:bar"
+    },
+    {
+      "id": "sw421:sw423:y:cable-SW423-P-02-group",
+      "from": "sw421:tf423:lv-y",
+      "to": "sw421:sw423:y:cb:a"
+    },
+    {
+      "id": "sw421:sw423:y:incomer-bus",
+      "from": "sw421:sw423:y:cb:b",
+      "to": "sw421:sw423:y:bus:bar"
+    },
+    {
+      "id": "sw421:tf421:bus-link",
+      "from": "sw421:bus:bar",
+      "to": "sw421:tf421:hv-cb:a"
+    },
+    {
+      "id": "sw421:tf421:cable-TF421-P-01",
+      "from": "sw421:tf421:hv-cb:b",
+      "to": "sw421:tf421:hv"
+    },
+    {
+      "id": "sw421:tf421:hv-es:branch",
+      "from": "sw421:tf421:hv-cb:b",
+      "to": "sw421:tf421:hv-es:a"
+    },
+    {
+      "id": "sw421:tf422:bus-link",
+      "from": "sw421:bus:bar",
+      "to": "sw421:tf422:hv-cb:a"
+    },
+    {
+      "id": "sw421:tf422:cable-TF422-P-01",
+      "from": "sw421:tf422:hv-cb:b",
+      "to": "sw421:tf422:hv"
+    },
+    {
+      "id": "sw421:tf422:hv-es:branch",
+      "from": "sw421:tf422:hv-cb:b",
+      "to": "sw421:tf422:hv-es:a"
+    },
+    {
+      "id": "sw421:tf423:bus-link",
+      "from": "sw421:bus:bar",
+      "to": "sw421:tf423:hv-cb:a"
+    },
+    {
+      "id": "sw421:tf423:cable-TF423-P-01",
+      "from": "sw421:tf423:hv-cb:b",
+      "to": "sw421:tf423:hv"
+    },
+    {
+      "id": "sw421:tf423:hv-es:branch",
+      "from": "sw421:tf423:hv-cb:b",
+      "to": "sw421:tf423:hv-es:a"
+    },
+    {
+      "id": "sw426:bus:es:branch",
+      "from": "sw426:bus:bar",
+      "to": "sw426:bus:es:a"
+    },
+    {
+      "id": "sw426:in:es:branch",
+      "from": "sw426:in:cb:a",
+      "to": "sw426:in:es:a"
+    },
+    {
+      "id": "sw426:incoming:bus-link",
+      "from": "sw426:in:cb:b",
+      "to": "sw426:bus:bar"
+    },
+    {
+      "id": "sw426:incoming:cable",
+      "from": "sw426:interface:sw411:port",
+      "to": "sw426:in:cb:a"
+    },
+    {
+      "id": "sw426:laboratory:cable",
+      "from": "sw426:ss714:cb:b",
+      "to": "rm714:in01:a"
+    },
+    {
+      "id": "sw426:mc426:bus-link",
+      "from": "sw426:mc426:in:cb:b",
+      "to": "sw426:mc426:bus:bar"
+    },
+    {
+      "id": "sw426:mc426:lv-cable",
+      "from": "sw426:tf426:lv",
+      "to": "sw426:mc426:in:cb:a"
+    },
+    {
+      "id": "sw426:mc428a:bus-link",
+      "from": "sw426:mc428a:in:cb:b",
+      "to": "sw426:mc428a:bus:bar"
+    },
+    {
+      "id": "sw426:mc428a:lv-cable",
+      "from": "sw426:tf428:lv",
+      "to": "sw426:mc428a:in:cb:a"
+    },
+    {
+      "id": "sw426:mc430:bus-link",
+      "from": "sw426:mc430:in:cb:b",
+      "to": "sw426:mc430:bus:bar"
+    },
+    {
+      "id": "sw426:mc430:lv-cable",
+      "from": "sw426:tf430:lv",
+      "to": "sw426:mc430:in:cb:a"
+    },
+    {
+      "id": "sw426:ss714:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:ss714:cb:a"
+    },
+    {
+      "id": "sw426:ss714:es:branch",
+      "from": "sw426:ss714:cb:b",
+      "to": "sw426:ss714:es:a"
+    },
+    {
+      "id": "sw426:sw427:d:bus-link",
+      "from": "sw426:sw427:d:in:cb:b",
+      "to": "sw426:sw427:d:bus:bar"
+    },
+    {
+      "id": "sw426:sw427:d:lv-cable",
+      "from": "sw426:tf427:d",
+      "to": "sw426:sw427:d:in:cb:a"
+    },
+    {
+      "id": "sw426:sw427:y:bus-link",
+      "from": "sw426:sw427:y:in:cb:b",
+      "to": "sw426:sw427:y:bus:bar"
+    },
+    {
+      "id": "sw426:sw427:y:lv-cable",
+      "from": "sw426:tf427:y",
+      "to": "sw426:sw427:y:in:cb:a"
+    },
+    {
+      "id": "sw426:sw429:d:bus-link",
+      "from": "sw426:sw429:d:in:cb:b",
+      "to": "sw426:sw429:d:bus:bar"
+    },
+    {
+      "id": "sw426:sw429:d:lv-cable",
+      "from": "sw426:tf429:d",
+      "to": "sw426:sw429:d:in:cb:a"
+    },
+    {
+      "id": "sw426:sw429:y:bus-link",
+      "from": "sw426:sw429:y:in:cb:b",
+      "to": "sw426:sw429:y:bus:bar"
+    },
+    {
+      "id": "sw426:sw429:y:lv-cable",
+      "from": "sw426:tf429:y",
+      "to": "sw426:sw429:y:in:cb:a"
+    },
+    {
+      "id": "sw426:sw439:d:bus-link",
+      "from": "sw426:sw439:d:in:cb:b",
+      "to": "sw426:sw439:d:bus:bar"
+    },
+    {
+      "id": "sw426:sw439:d:lv-cable",
+      "from": "sw426:tf439:d",
+      "to": "sw426:sw439:d:in:cb:a"
+    },
+    {
+      "id": "sw426:sw439:y:bus-link",
+      "from": "sw426:sw439:y:in:cb:b",
+      "to": "sw426:sw439:y:bus:bar"
+    },
+    {
+      "id": "sw426:sw439:y:lv-cable",
+      "from": "sw426:tf439:y",
+      "to": "sw426:sw439:y:in:cb:a"
+    },
+    {
+      "id": "sw426:sw440:d:bus-link",
+      "from": "sw426:sw440:d:in:cb:b",
+      "to": "sw426:sw440:d:bus:bar"
+    },
+    {
+      "id": "sw426:sw440:d:lv-cable",
+      "from": "sw426:tf440:d",
+      "to": "sw426:sw440:d:in:cb:a"
+    },
+    {
+      "id": "sw426:sw440:y:bus-link",
+      "from": "sw426:sw440:y:in:cb:b",
+      "to": "sw426:sw440:y:bus:bar"
+    },
+    {
+      "id": "sw426:sw440:y:lv-cable",
+      "from": "sw426:tf440:y",
+      "to": "sw426:sw440:y:in:cb:a"
+    },
+    {
+      "id": "sw426:sw443:d:bus-link",
+      "from": "sw426:sw443:d:in:cb:b",
+      "to": "sw426:sw443:d:bus:bar"
+    },
+    {
+      "id": "sw426:sw443:d:lv-cable",
+      "from": "sw426:tf443:d",
+      "to": "sw426:sw443:d:in:cb:a"
+    },
+    {
+      "id": "sw426:sw443:y:bus-link",
+      "from": "sw426:sw443:y:in:cb:b",
+      "to": "sw426:sw443:y:bus:bar"
+    },
+    {
+      "id": "sw426:sw443:y:lv-cable",
+      "from": "sw426:tf443:y",
+      "to": "sw426:sw443:y:in:cb:a"
+    },
+    {
+      "id": "sw426:tf426:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf426:cb:a"
+    },
+    {
+      "id": "sw426:tf426:es:branch",
+      "from": "sw426:tf426:cb:b",
+      "to": "sw426:tf426:es:a"
+    },
+    {
+      "id": "sw426:tf426:hv-cable",
+      "from": "sw426:tf426:cb:b",
+      "to": "sw426:tf426:hv"
+    },
+    {
+      "id": "sw426:tf427:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf427:cb:a"
+    },
+    {
+      "id": "sw426:tf427:es:branch",
+      "from": "sw426:tf427:cb:b",
+      "to": "sw426:tf427:es:a"
+    },
+    {
+      "id": "sw426:tf427:hv-cable",
+      "from": "sw426:tf427:cb:b",
+      "to": "sw426:tf427:hv"
+    },
+    {
+      "id": "sw426:tf428:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf428:cb:a"
+    },
+    {
+      "id": "sw426:tf428:es:branch",
+      "from": "sw426:tf428:cb:b",
+      "to": "sw426:tf428:es:a"
+    },
+    {
+      "id": "sw426:tf428:hv-cable",
+      "from": "sw426:tf428:cb:b",
+      "to": "sw426:tf428:hv"
+    },
+    {
+      "id": "sw426:tf429:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf429:cb:a"
+    },
+    {
+      "id": "sw426:tf429:es:branch",
+      "from": "sw426:tf429:cb:b",
+      "to": "sw426:tf429:es:a"
+    },
+    {
+      "id": "sw426:tf429:hv-cable",
+      "from": "sw426:tf429:cb:b",
+      "to": "sw426:tf429:hv"
+    },
+    {
+      "id": "sw426:tf430:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf430:cb:a"
+    },
+    {
+      "id": "sw426:tf430:es:branch",
+      "from": "sw426:tf430:cb:b",
+      "to": "sw426:tf430:es:a"
+    },
+    {
+      "id": "sw426:tf430:hv-cable",
+      "from": "sw426:tf430:cb:b",
+      "to": "sw426:tf430:hv"
+    },
+    {
+      "id": "sw426:tf439:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf439:cb:a"
+    },
+    {
+      "id": "sw426:tf439:es:branch",
+      "from": "sw426:tf439:cb:b",
+      "to": "sw426:tf439:es:a"
+    },
+    {
+      "id": "sw426:tf439:hv-cable",
+      "from": "sw426:tf439:cb:b",
+      "to": "sw426:tf439:hv"
+    },
+    {
+      "id": "sw426:tf440:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf440:cb:a"
+    },
+    {
+      "id": "sw426:tf440:es:branch",
+      "from": "sw426:tf440:cb:b",
+      "to": "sw426:tf440:es:a"
+    },
+    {
+      "id": "sw426:tf440:hv-cable",
+      "from": "sw426:tf440:cb:b",
+      "to": "sw426:tf440:hv"
+    },
+    {
+      "id": "sw426:tf443:bus-link",
+      "from": "sw426:bus:bar",
+      "to": "sw426:tf443:cb:a"
+    },
+    {
+      "id": "sw426:tf443:es:branch",
+      "from": "sw426:tf443:cb:b",
+      "to": "sw426:tf443:es:a"
+    },
+    {
+      "id": "sw426:tf443:hv-cable",
+      "from": "sw426:tf443:cb:b",
+      "to": "sw426:tf443:hv"
+    },
+    {
+      "id": "sw431:bus:es:branch",
+      "from": "sw431:bus:bar",
+      "to": "sw431:bus:es:a"
+    },
+    {
+      "id": "sw431:cross-link:cable-SW431-P-02",
+      "from": "sw431:sw435:cb:b",
+      "to": "sw431:interface:sw435:port"
+    },
+    {
+      "id": "sw431:in:es:branch",
+      "from": "sw431:in:cb:a",
+      "to": "sw431:in:es:a"
+    },
+    {
+      "id": "sw431:incoming:bus-link",
+      "from": "sw431:in:cb:b",
+      "to": "sw431:bus:bar"
+    },
+    {
+      "id": "sw431:incoming:cable-SW431-P-01",
+      "from": "sw431:interface:sw411:port",
+      "to": "sw431:in:cb:a"
+    },
+    {
+      "id": "sw431:mc431:incomer-bus",
+      "from": "sw431:mc431:cb:b",
+      "to": "sw431:mc431:bus:bar"
+    },
+    {
+      "id": "sw431:mc431:winding-cable",
+      "from": "sw431:tf431:lv",
+      "to": "sw431:mc431:cb:a"
+    },
+    {
+      "id": "sw431:sw432:d:incomer-bus",
+      "from": "sw431:sw432:d:cb:b",
+      "to": "sw431:sw432:d:bus:bar"
+    },
+    {
+      "id": "sw431:sw432:d:winding-cable",
+      "from": "sw431:tf432:lv-d",
+      "to": "sw431:sw432:d:cb:a"
+    },
+    {
+      "id": "sw431:sw432:y:incomer-bus",
+      "from": "sw431:sw432:y:cb:b",
+      "to": "sw431:sw432:y:bus:bar"
+    },
+    {
+      "id": "sw431:sw432:y:winding-cable",
+      "from": "sw431:tf432:lv-y",
+      "to": "sw431:sw432:y:cb:a"
+    },
+    {
+      "id": "sw431:sw435:bus-link",
+      "from": "sw431:bus:bar",
+      "to": "sw431:sw435:cb:a"
+    },
+    {
+      "id": "sw431:sw435:es:branch",
+      "from": "sw431:sw435:cb:b",
+      "to": "sw431:sw435:es:a"
+    },
+    {
+      "id": "sw431:sw437:d:incomer-bus",
+      "from": "sw431:sw437:d:cb:b",
+      "to": "sw431:sw437:d:bus:bar"
+    },
+    {
+      "id": "sw431:sw437:d:winding-cable",
+      "from": "sw431:tf437:lv-d",
+      "to": "sw431:sw437:d:cb:a"
+    },
+    {
+      "id": "sw431:sw437:y:incomer-bus",
+      "from": "sw431:sw437:y:cb:b",
+      "to": "sw431:sw437:y:bus:bar"
+    },
+    {
+      "id": "sw431:sw437:y:winding-cable",
+      "from": "sw431:tf437:lv-y",
+      "to": "sw431:sw437:y:cb:a"
+    },
+    {
+      "id": "sw431:sw442:d:incomer-bus",
+      "from": "sw431:sw442:d:cb:b",
+      "to": "sw431:sw442:d:bus:bar"
+    },
+    {
+      "id": "sw431:sw442:d:winding-cable",
+      "from": "sw431:tf442:lv-d",
+      "to": "sw431:sw442:d:cb:a"
+    },
+    {
+      "id": "sw431:sw442:y:incomer-bus",
+      "from": "sw431:sw442:y:cb:b",
+      "to": "sw431:sw442:y:bus:bar"
+    },
+    {
+      "id": "sw431:sw442:y:winding-cable",
+      "from": "sw431:tf442:lv-y",
+      "to": "sw431:sw442:y:cb:a"
+    },
+    {
+      "id": "sw431:tf431:bus-link",
+      "from": "sw431:bus:bar",
+      "to": "sw431:tf431:hv-cb:a"
+    },
+    {
+      "id": "sw431:tf431:cable-TF431-P-01",
+      "from": "sw431:tf431:hv-cb:b",
+      "to": "sw431:tf431:hv"
+    },
+    {
+      "id": "sw431:tf431:hv-es:branch",
+      "from": "sw431:tf431:hv-cb:b",
+      "to": "sw431:tf431:hv-es:a"
+    },
+    {
+      "id": "sw431:tf432:bus-link",
+      "from": "sw431:bus:bar",
+      "to": "sw431:tf432:hv-cb:a"
+    },
+    {
+      "id": "sw431:tf432:cable-TF432-P-01",
+      "from": "sw431:tf432:hv-cb:b",
+      "to": "sw431:tf432:hv"
+    },
+    {
+      "id": "sw431:tf432:hv-es:branch",
+      "from": "sw431:tf432:hv-cb:b",
+      "to": "sw431:tf432:hv-es:a"
+    },
+    {
+      "id": "sw431:tf437:bus-link",
+      "from": "sw431:bus:bar",
+      "to": "sw431:tf437:hv-cb:a"
+    },
+    {
+      "id": "sw431:tf437:cable-TF437-P-01",
+      "from": "sw431:tf437:hv-cb:b",
+      "to": "sw431:tf437:hv"
+    },
+    {
+      "id": "sw431:tf437:hv-es:branch",
+      "from": "sw431:tf437:hv-cb:b",
+      "to": "sw431:tf437:hv-es:a"
+    },
+    {
+      "id": "sw431:tf442:bus-link",
+      "from": "sw431:bus:bar",
+      "to": "sw431:tf442:hv-cb:a"
+    },
+    {
+      "id": "sw431:tf442:cable-TF442-P-01",
+      "from": "sw431:tf442:hv-cb:b",
+      "to": "sw431:tf442:hv"
+    },
+    {
+      "id": "sw431:tf442:hv-es:branch",
+      "from": "sw431:tf442:hv-cb:b",
+      "to": "sw431:tf442:hv-es:a"
+    },
+    {
+      "id": "sw435:bus:es:branch",
+      "from": "sw435:bus:bar",
+      "to": "sw435:bus:es:a"
+    },
+    {
+      "id": "sw435:cross-link:cable-SW431-P-02",
+      "from": "sw435:sw431:cb:b",
+      "to": "sw435:interface:sw431:port"
+    },
+    {
+      "id": "sw435:hpgr:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:hpgr:cb:a"
+    },
+    {
+      "id": "sw435:hpgr:es:branch",
+      "from": "sw435:hpgr:cb:b",
+      "to": "sw435:hpgr:es:a"
+    },
+    {
+      "id": "sw435:in:es:branch",
+      "from": "sw435:in:cb:a",
+      "to": "sw435:in:es:a"
+    },
+    {
+      "id": "sw435:incoming:bus-link",
+      "from": "sw435:in:cb:b",
+      "to": "sw435:bus:bar"
+    },
+    {
+      "id": "sw435:incoming:cable-SW435-P-01",
+      "from": "sw435:interface:sw411:port",
+      "to": "sw435:in:cb:a"
+    },
+    {
+      "id": "sw435:mc435:cb:bus-link",
+      "from": "sw435:mc435:cb:b",
+      "to": "sw435:mc435:bus:bar"
+    },
+    {
+      "id": "sw435:mc435:cb:winding-cable",
+      "from": "sw435:tf435:transformer:lv",
+      "to": "sw435:mc435:cb:a"
+    },
+    {
+      "id": "sw435:sw431:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:sw431:cb:a"
+    },
+    {
+      "id": "sw435:sw431:es:branch",
+      "from": "sw435:sw431:cb:b",
+      "to": "sw435:sw431:es:a"
+    },
+    {
+      "id": "sw435:sw433:d:cb:bus-link",
+      "from": "sw435:sw433:d:cb:b",
+      "to": "sw435:sw433:d:bus:bar"
+    },
+    {
+      "id": "sw435:sw433:d:cb:winding-cable",
+      "from": "sw435:tf433:transformer:lv-d",
+      "to": "sw435:sw433:d:cb:a"
+    },
+    {
+      "id": "sw435:sw433:y:cb:bus-link",
+      "from": "sw435:sw433:y:cb:b",
+      "to": "sw435:sw433:y:bus:bar"
+    },
+    {
+      "id": "sw435:sw433:y:cb:winding-cable",
+      "from": "sw435:tf433:transformer:lv-y",
+      "to": "sw435:sw433:y:cb:a"
+    },
+    {
+      "id": "sw435:sw453:d:cb:bus-link",
+      "from": "sw435:sw453:d:cb:b",
+      "to": "sw435:sw453:d:bus:bar"
+    },
+    {
+      "id": "sw435:sw453:d:cb:winding-cable",
+      "from": "sw435:tf453:transformer:lv-d",
+      "to": "sw435:sw453:d:cb:a"
+    },
+    {
+      "id": "sw435:sw453:y:cb:bus-link",
+      "from": "sw435:sw453:y:cb:b",
+      "to": "sw435:sw453:y:bus:bar"
+    },
+    {
+      "id": "sw435:sw453:y:cb:winding-cable",
+      "from": "sw435:tf453:transformer:lv-y",
+      "to": "sw435:sw453:y:cb:a"
+    },
+    {
+      "id": "sw435:tf433:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:tf433:hv-cb:a"
+    },
+    {
+      "id": "sw435:tf433:cable-TF433-P-01",
+      "from": "sw435:tf433:hv-cb:b",
+      "to": "sw435:tf433:transformer:hv"
+    },
+    {
+      "id": "sw435:tf433:hv-es:branch",
+      "from": "sw435:tf433:hv-cb:b",
+      "to": "sw435:tf433:hv-es:a"
+    },
+    {
+      "id": "sw435:tf435:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:tf435:hv-cb:a"
+    },
+    {
+      "id": "sw435:tf435:cable-TF435-P-01",
+      "from": "sw435:tf435:hv-cb:b",
+      "to": "sw435:tf435:transformer:hv"
+    },
+    {
+      "id": "sw435:tf435:hv-es:branch",
+      "from": "sw435:tf435:hv-cb:b",
+      "to": "sw435:tf435:hv-es:a"
+    },
+    {
+      "id": "sw435:tf436:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:tf436:hv-cb:a"
+    },
+    {
+      "id": "sw435:tf436:hv-es:branch",
+      "from": "sw435:tf436:hv-cb:b",
+      "to": "sw435:tf436:hv-es:a"
+    },
+    {
+      "id": "sw435:tf453:bus-link",
+      "from": "sw435:bus:bar",
+      "to": "sw435:tf453:hv-cb:a"
+    },
+    {
+      "id": "sw435:tf453:cable-TF453-P-01",
+      "from": "sw435:tf453:hv-cb:b",
+      "to": "sw435:tf453:transformer:hv"
+    },
+    {
+      "id": "sw435:tf453:hv-es:branch",
+      "from": "sw435:tf453:hv-cb:b",
+      "to": "sw435:tf453:hv-es:a"
+    },
+    {
+      "id": "sw451:bus:es:branch",
+      "from": "sw451:bus:port",
+      "to": "sw451:bus:es:in"
+    },
+    {
+      "id": "sw451:in:es:branch",
+      "from": "sw451:in:cb:in",
+      "to": "sw451:in:es:in"
+    },
+    {
+      "id": "sw451:incoming:bus-link",
+      "from": "sw451:in:cb:out",
+      "to": "sw451:bus:port"
+    },
+    {
+      "id": "sw451:incoming:cable-SW451-P-01",
+      "from": "sw451:interface:sw411:port",
+      "to": "sw451:in:cb:in"
+    },
+    {
+      "id": "sw451:mc451:incomer-bus",
+      "from": "sw451:mc451:cb:out",
+      "to": "sw451:mc451:bus:port"
+    },
+    {
+      "id": "sw451:mc451:section-bridge",
+      "from": "sw451:mc451:bus:port",
+      "to": "sw451:mc451b:section:port"
+    },
+    {
+      "id": "sw451:mc451:winding-cable",
+      "from": "sw451:tf451:lv",
+      "to": "sw451:mc451:cb:in"
+    },
+    {
+      "id": "sw451:spare-2:bus-link",
+      "from": "sw451:bus:port",
+      "to": "sw451:spare-2:cb:in"
+    },
+    {
+      "id": "sw451:spare-2:continuation",
+      "from": "sw451:spare-2:cb:out",
+      "to": "sw451:spare-2:interface:port"
+    },
+    {
+      "id": "sw451:spare-2:es:branch",
+      "from": "sw451:spare-2:cb:out",
+      "to": "sw451:spare-2:es:in"
+    },
+    {
+      "id": "sw451:spare-6:bus-link",
+      "from": "sw451:bus:port",
+      "to": "sw451:spare-6:cb:in"
+    },
+    {
+      "id": "sw451:spare-6:continuation",
+      "from": "sw451:spare-6:cb:out",
+      "to": "sw451:spare-6:interface:port"
+    },
+    {
+      "id": "sw451:spare-6:es:branch",
+      "from": "sw451:spare-6:cb:out",
+      "to": "sw451:spare-6:es:in"
+    },
+    {
+      "id": "sw451:spare-7:bus-link",
+      "from": "sw451:bus:port",
+      "to": "sw451:spare-7:cb:in"
+    },
+    {
+      "id": "sw451:spare-7:continuation",
+      "from": "sw451:spare-7:cb:out",
+      "to": "sw451:spare-7:interface:port"
+    },
+    {
+      "id": "sw451:spare-7:es:branch",
+      "from": "sw451:spare-7:cb:out",
+      "to": "sw451:spare-7:es:in"
+    },
+    {
+      "id": "sw451:sw452:d:incomer-bus",
+      "from": "sw451:sw452:d:cb:out",
+      "to": "sw451:sw452:d:bus:port"
+    },
+    {
+      "id": "sw451:sw452:d:winding-cable",
+      "from": "sw451:tf452:lv-d",
+      "to": "sw451:sw452:d:cb:in"
+    },
+    {
+      "id": "sw451:sw452:y:incomer-bus",
+      "from": "sw451:sw452:y:cb:out",
+      "to": "sw451:sw452:y:bus:port"
+    },
+    {
+      "id": "sw451:sw452:y:winding-cable",
+      "from": "sw451:tf452:lv-y",
+      "to": "sw451:sw452:y:cb:in"
+    },
+    {
+      "id": "sw451:tf451:bus-link",
+      "from": "sw451:bus:port",
+      "to": "sw451:tf451:hv-cb:in"
+    },
+    {
+      "id": "sw451:tf451:cable-TF451-P-01",
+      "from": "sw451:tf451:hv-cb:out",
+      "to": "sw451:tf451:hv"
+    },
+    {
+      "id": "sw451:tf451:hv-es:branch",
+      "from": "sw451:tf451:hv-cb:out",
+      "to": "sw451:tf451:hv-es:in"
+    },
+    {
+      "id": "sw451:tf452:bus-link",
+      "from": "sw451:bus:port",
+      "to": "sw451:tf452:hv-cb:in"
+    },
+    {
+      "id": "sw451:tf452:cable-TF452-P-01",
+      "from": "sw451:tf452:hv-cb:out",
+      "to": "sw451:tf452:hv"
+    },
+    {
+      "id": "sw451:tf452:hv-es:branch",
+      "from": "sw451:tf452:hv-cb:out",
+      "to": "sw451:tf452:hv-es:in"
+    },
+    {
+      "id": "sw454:bus:es:branch",
+      "from": "sw454:bus:bar",
+      "to": "sw454:bus:es:a"
+    },
+    {
+      "id": "sw454:in:es:branch",
+      "from": "sw454:in:cb:a",
+      "to": "sw454:in:es:a"
+    },
+    {
+      "id": "sw454:incoming:bus-link",
+      "from": "sw454:in:cb:b",
+      "to": "sw454:bus:bar"
+    },
+    {
+      "id": "sw454:incoming:cable-SW454-P-01",
+      "from": "sw454:interface:sw411:port",
+      "to": "sw454:in:cb:a"
+    },
+    {
+      "id": "sw454:interface:mc454-mc455:winding-1",
+      "from": "sw454:tf454:lv",
+      "to": "sw454:interface:mc454-mc455:port"
+    },
+    {
+      "id": "sw454:interface:sw455:winding-1",
+      "from": "sw454:tf455:lv-d",
+      "to": "sw454:interface:sw455:d"
+    },
+    {
+      "id": "sw454:interface:sw455:winding-2",
+      "from": "sw454:tf455:lv-y",
+      "to": "sw454:interface:sw455:y"
+    },
+    {
+      "id": "sw454:sw456:d:incomer-bus",
+      "from": "sw454:sw456:d:cb:b",
+      "to": "sw454:sw456:d:bus:bar"
+    },
+    {
+      "id": "sw454:sw456:d:winding-cable",
+      "from": "sw454:tf456:lv-d",
+      "to": "sw454:sw456:d:cb:a"
+    },
+    {
+      "id": "sw454:sw456:y:incomer-bus",
+      "from": "sw454:sw456:y:cb:b",
+      "to": "sw454:sw456:y:bus:bar"
+    },
+    {
+      "id": "sw454:sw456:y:winding-cable",
+      "from": "sw454:tf456:lv-y",
+      "to": "sw454:sw456:y:cb:a"
+    },
+    {
+      "id": "sw454:sw505:bus-link",
+      "from": "sw454:bus:bar",
+      "to": "sw454:sw505:cb:a"
+    },
+    {
+      "id": "sw454:sw505:cable-SW505-P-01",
+      "from": "sw454:sw505:cb:b",
+      "to": "sw505:in:cb:a"
+    },
+    {
+      "id": "sw454:sw505:es:branch",
+      "from": "sw454:sw505:cb:b",
+      "to": "sw454:sw505:es:a"
+    },
+    {
+      "id": "sw454:tf454:bus-link",
+      "from": "sw454:bus:bar",
+      "to": "sw454:tf454:hv-cb:a"
+    },
+    {
+      "id": "sw454:tf454:cable-TF454-P-01",
+      "from": "sw454:tf454:hv-cb:b",
+      "to": "sw454:tf454:hv"
+    },
+    {
+      "id": "sw454:tf454:hv-es:branch",
+      "from": "sw454:tf454:hv-cb:b",
+      "to": "sw454:tf454:hv-es:a"
+    },
+    {
+      "id": "sw454:tf455:bus-link",
+      "from": "sw454:bus:bar",
+      "to": "sw454:tf455:hv-cb:a"
+    },
+    {
+      "id": "sw454:tf455:cable-TF455-P-01",
+      "from": "sw454:tf455:hv-cb:b",
+      "to": "sw454:tf455:hv"
+    },
+    {
+      "id": "sw454:tf455:hv-es:branch",
+      "from": "sw454:tf455:hv-cb:b",
+      "to": "sw454:tf455:hv-es:a"
+    },
+    {
+      "id": "sw454:tf456:bus-link",
+      "from": "sw454:bus:bar",
+      "to": "sw454:tf456:hv-cb:a"
+    },
+    {
+      "id": "sw454:tf456:cable-TF456-P-01",
+      "from": "sw454:tf456:hv-cb:b",
+      "to": "sw454:tf456:hv"
+    },
+    {
+      "id": "sw454:tf456:hv-es:branch",
+      "from": "sw454:tf456:hv-cb:b",
+      "to": "sw454:tf456:hv-es:a"
+    },
+    {
+      "id": "sw505:bus:es:branch",
+      "from": "sw505:bus:bar",
+      "to": "sw505:bus:es:a"
+    },
+    {
+      "id": "sw505:in:es:branch",
+      "from": "sw505:in:cb:a",
+      "to": "sw505:in:es:a"
+    },
+    {
+      "id": "sw505:incoming:bus-link",
+      "from": "sw505:in:cb:b",
+      "to": "sw505:bus:bar"
+    },
+    {
+      "id": "sw505:mc507:incomer-bus",
+      "from": "sw505:mc507:cb:b",
+      "to": "sw505:mc507:bus:bar"
+    },
+    {
+      "id": "sw505:mc507:winding-cable",
+      "from": "sw505:mc507:phase-fuse:out",
+      "to": "sw505:mc507:cb:a"
+    },
+    {
+      "id": "sw505:mc507:winding-fuse",
+      "from": "sw505:tf507:lv",
+      "to": "sw505:mc507:phase-fuse:in"
+    },
+    {
+      "id": "sw505:mc508:incomer-bus",
+      "from": "sw505:mc508:cb:b",
+      "to": "sw505:mc508:bus:bar"
+    },
+    {
+      "id": "sw505:mc508:winding-cable",
+      "from": "sw505:mc508:phase-fuse:out",
+      "to": "sw505:mc508:cb:a"
+    },
+    {
+      "id": "sw505:mc508:winding-fuse",
+      "from": "sw505:tf508:lv",
+      "to": "sw505:mc508:phase-fuse:in"
+    },
+    {
+      "id": "sw505:sw506:d:incomer-bus",
+      "from": "sw505:sw506:d:cb:b",
+      "to": "sw505:sw506:d:bus:bar"
+    },
+    {
+      "id": "sw505:sw506:d:winding-cable",
+      "from": "sw505:tf506:lv-d",
+      "to": "sw505:sw506:d:cb:a"
+    },
+    {
+      "id": "sw505:sw506:y:incomer-bus",
+      "from": "sw505:sw506:y:cb:b",
+      "to": "sw505:sw506:y:bus:bar"
+    },
+    {
+      "id": "sw505:sw506:y:winding-cable",
+      "from": "sw505:tf506:lv-y",
+      "to": "sw505:sw506:y:cb:a"
+    },
+    {
+      "id": "sw505:tf505a:bus-link",
+      "from": "sw505:bus:bar",
+      "to": "sw505:tf505a:hv-cb:a"
+    },
+    {
+      "id": "sw505:tf505a:cable-TF505A-P-01",
+      "from": "sw505:tf505a:hv-cb:b",
+      "to": "sw505:tf505a:hv"
+    },
+    {
+      "id": "sw505:tf505a:hv-es:branch",
+      "from": "sw505:tf505a:hv-cb:b",
+      "to": "sw505:tf505a:hv-es:a"
+    },
+    {
+      "id": "sw505:tf505b:bus-link",
+      "from": "sw505:bus:bar",
+      "to": "sw505:tf505b:hv-cb:a"
+    },
+    {
+      "id": "sw505:tf505b:cable-TF505B-P-01",
+      "from": "sw505:tf505b:hv-cb:b",
+      "to": "sw505:tf505b:hv"
+    },
+    {
+      "id": "sw505:tf505b:hv-es:branch",
+      "from": "sw505:tf505b:hv-cb:b",
+      "to": "sw505:tf505b:hv-es:a"
+    },
+    {
+      "id": "sw505:tf505c:bus-link",
+      "from": "sw505:bus:bar",
+      "to": "sw505:tf505c:hv-cb:a"
+    },
+    {
+      "id": "sw505:tf505c:cable-TF505C-P-01",
+      "from": "sw505:tf505c:hv-cb:b",
+      "to": "sw505:tf505c:hv"
+    },
+    {
+      "id": "sw505:tf505c:hv-es:branch",
+      "from": "sw505:tf505c:hv-cb:b",
+      "to": "sw505:tf505c:hv-es:a"
+    },
+    {
+      "id": "sw505:tf506:bus-link",
+      "from": "sw505:bus:bar",
+      "to": "sw505:tf506:hv-cb:a"
+    },
+    {
+      "id": "sw505:tf506:cable-TF506-P-01",
+      "from": "sw505:tf506:hv-cb:b",
+      "to": "sw505:tf506:hv"
+    },
+    {
+      "id": "sw505:tf506:hv-es:branch",
+      "from": "sw505:tf506:hv-cb:b",
+      "to": "sw505:tf506:hv-es:a"
+    },
+    {
+      "id": "sw505:tf507:bus-link",
+      "from": "sw505:bus:bar",
+      "to": "sw505:tf507:hv-cb:a"
+    },
+    {
+      "id": "sw505:tf507:cable-TF507-P-01",
+      "from": "sw505:tf507:hv-cb:b",
+      "to": "sw505:tf507:hv"
+    },
+    {
+      "id": "sw505:tf507:hv-es:branch",
+      "from": "sw505:tf507:hv-cb:b",
+      "to": "sw505:tf507:hv-es:a"
+    },
+    {
+      "id": "sw505:tf508:bus-link",
+      "from": "sw505:bus:bar",
+      "to": "sw505:tf508:hv-cb:a"
+    },
+    {
+      "id": "sw505:tf508:cable-TF508-P-01",
+      "from": "sw505:tf508:hv-cb:b",
+      "to": "sw505:tf508:hv"
+    },
+    {
+      "id": "sw505:tf508:hv-es:branch",
+      "from": "sw505:tf508:hv-cb:b",
+      "to": "sw505:tf508:hv-es:a"
+    },
+    {
+      "id": "sw505:vs50501:ac-d-cable",
+      "from": "sw505:tf505a:mv-d",
+      "to": "sw505:vs50501:ac-d"
+    },
+    {
+      "id": "sw505:vs50501:ac-y-cable",
+      "from": "sw505:tf505a:mv-y",
+      "to": "sw505:vs50501:ac-y"
+    },
+    {
+      "id": "sw505:vs50501:dc-earth:branch",
+      "from": "sw505:vs50501:dc",
+      "to": "sw505:vs50501:dc-earth:a"
+    },
+    {
+      "id": "sw505:vs50501:inverter-output-contact",
+      "from": "sw505:vs50501:output",
+      "to": "sw505:vs50501:output-switch:a"
+    },
+    {
+      "id": "sw505:vs50501:motor-power-cable",
+      "from": "sw505:vs50501:output-switch:b",
+      "to": "sw505:sb214-em01:port"
+    },
+    {
+      "id": "sw505:vs50502:ac-d-cable",
+      "from": "sw505:tf505b:mv-d",
+      "to": "sw505:vs50502:ac-d"
+    },
+    {
+      "id": "sw505:vs50502:ac-y-cable",
+      "from": "sw505:tf505b:mv-y",
+      "to": "sw505:vs50502:ac-y"
+    },
+    {
+      "id": "sw505:vs50502:dc-earth:branch",
+      "from": "sw505:vs50502:dc",
+      "to": "sw505:vs50502:dc-earth:a"
+    },
+    {
+      "id": "sw505:vs50502:inverter-output-contact",
+      "from": "sw505:vs50502:output",
+      "to": "sw505:vs50502:output-switch:a"
+    },
+    {
+      "id": "sw505:vs50502:motor-power-cable",
+      "from": "sw505:vs50502:output-switch:b",
+      "to": "sw505:sb215-em01:port"
+    },
+    {
+      "id": "sw505:vs50503:ac-d-cable",
+      "from": "sw505:tf505c:mv-d",
+      "to": "sw505:vs50503:ac-d"
+    },
+    {
+      "id": "sw505:vs50503:ac-y-cable",
+      "from": "sw505:tf505c:mv-y",
+      "to": "sw505:vs50503:ac-y"
+    },
+    {
+      "id": "sw505:vs50503:dc-earth:branch",
+      "from": "sw505:vs50503:dc",
+      "to": "sw505:vs50503:dc-earth:a"
+    },
+    {
+      "id": "sw505:vs50503:inverter-output-contact",
+      "from": "sw505:vs50503:output",
+      "to": "sw505:vs50503:output-switch:a"
+    },
+    {
+      "id": "sw505:vs50503:motor-power-cable",
+      "from": "sw505:vs50503:output-switch:b",
+      "to": "sw505:sb216-em01:port"
+    },
+    {
+      "id": "wh:h1:cb01-bus",
+      "from": "wh:h1:rm417:bus:bar",
+      "to": "wh:h1:rm417:cb01:a"
+    },
+    {
+      "id": "wh:h1:cb01-sw03",
+      "from": "wh:h1:rm417:cb01:b",
+      "to": "wh:h1:rm417:sw03:line"
+    },
+    {
+      "id": "wh:h1:cb02-bus",
+      "from": "wh:h1:rm417:bus:bar",
+      "to": "wh:h1:rm417:cb02:a"
+    },
+    {
+      "id": "wh:h1:cb02-sw04",
+      "from": "wh:h1:rm417:cb02:b",
+      "to": "wh:h1:rm417:sw04:line"
+    },
+    {
+      "id": "wh:h1:hopper3-cable",
+      "from": "wh:h1:rm417:sw04:common",
+      "to": "wh:h3:hv416:port"
+    },
+    {
+      "id": "wh:h1:mc417:in-earth:branch",
+      "from": "wh:h1:mc417:in:a",
+      "to": "wh:h1:mc417:in-earth:a"
+    },
+    {
+      "id": "wh:h1:mc417:incoming-bus",
+      "from": "wh:h1:mc417:in:b",
+      "to": "wh:h1:mc417:bus:bar"
+    },
+    {
+      "id": "wh:h1:mc417:m1:earth:branch",
+      "from": "wh:h1:mc417:m1:common:port",
+      "to": "wh:h1:mc417:m1:earth:a"
+    },
+    {
+      "id": "wh:h1:mc417:m1:fc:common-link",
+      "from": "wh:h1:mc417:m1:fc:b",
+      "to": "wh:h1:mc417:m1:common:port"
+    },
+    {
+      "id": "wh:h1:mc417:m1:fc:fuse-contact",
+      "from": "wh:h1:mc417:m1:fc:fuse:b",
+      "to": "wh:h1:mc417:m1:fc:a"
+    },
+    {
+      "id": "wh:h1:mc417:m1:fc:fuse:bus-link",
+      "from": "wh:h1:mc417:bus:bar",
+      "to": "wh:h1:mc417:m1:fc:fuse:a"
+    },
+    {
+      "id": "wh:h1:mc417:m1:motor-cable",
+      "from": "wh:h1:mc417:m1:common:port",
+      "to": "wh:h1:mc417:m1:motor:port"
+    },
+    {
+      "id": "wh:h1:mc417:m1:rc:common-link",
+      "from": "wh:h1:mc417:m1:rc:b",
+      "to": "wh:h1:mc417:m1:common:port"
+    },
+    {
+      "id": "wh:h1:mc417:m1:rc:fuse-contact",
+      "from": "wh:h1:mc417:m1:rc:fuse:b",
+      "to": "wh:h1:mc417:m1:rc:a"
+    },
+    {
+      "id": "wh:h1:mc417:m1:rc:fuse:bus-link",
+      "from": "wh:h1:mc417:bus:bar",
+      "to": "wh:h1:mc417:m1:rc:fuse:a"
+    },
+    {
+      "id": "wh:h1:mc417:m2:earth:branch",
+      "from": "wh:h1:mc417:m2:common:port",
+      "to": "wh:h1:mc417:m2:earth:a"
+    },
+    {
+      "id": "wh:h1:mc417:m2:fc:common-link",
+      "from": "wh:h1:mc417:m2:fc:b",
+      "to": "wh:h1:mc417:m2:common:port"
+    },
+    {
+      "id": "wh:h1:mc417:m2:fc:fuse-contact",
+      "from": "wh:h1:mc417:m2:fc:fuse:b",
+      "to": "wh:h1:mc417:m2:fc:a"
+    },
+    {
+      "id": "wh:h1:mc417:m2:fc:fuse:bus-link",
+      "from": "wh:h1:mc417:bus:bar",
+      "to": "wh:h1:mc417:m2:fc:fuse:a"
+    },
+    {
+      "id": "wh:h1:mc417:m2:motor-cable",
+      "from": "wh:h1:mc417:m2:common:port",
+      "to": "wh:h1:mc417:m2:motor:port"
+    },
+    {
+      "id": "wh:h1:mc417:m2:rc:common-link",
+      "from": "wh:h1:mc417:m2:rc:b",
+      "to": "wh:h1:mc417:m2:common:port"
+    },
+    {
+      "id": "wh:h1:mc417:m2:rc:fuse-contact",
+      "from": "wh:h1:mc417:m2:rc:fuse:b",
+      "to": "wh:h1:mc417:m2:rc:a"
+    },
+    {
+      "id": "wh:h1:mc417:m2:rc:fuse:bus-link",
+      "from": "wh:h1:mc417:bus:bar",
+      "to": "wh:h1:mc417:m2:rc:fuse:a"
+    },
+    {
+      "id": "wh:h1:mc417:supply",
+      "from": "wh:h1:tf417:secondary",
+      "to": "wh:h1:mc417:in:a"
+    },
+    {
+      "id": "wh:h1:mc417a:incomer-bus",
+      "from": "wh:h1:mc417a:in:b",
+      "to": "wh:h1:mc417a:bus:bar"
+    },
+    {
+      "id": "wh:h1:mc417a:supply",
+      "from": "wh:h1:tf417a:secondary",
+      "to": "wh:h1:mc417a:in:a"
+    },
+    {
+      "id": "wh:h1:rm413-cable",
+      "from": "wh:h1:interface:rm413:port",
+      "to": "wh:h1:rm417:sw01:line"
+    },
+    {
+      "id": "wh:h1:rm417:sw01-bus",
+      "from": "wh:h1:rm417:sw01:common",
+      "to": "wh:h1:rm417:bus:bar"
+    },
+    {
+      "id": "wh:h1:rm417:sw02-bus",
+      "from": "wh:h1:rm417:sw02:common",
+      "to": "wh:h1:rm417:bus:bar"
+    },
+    {
+      "id": "wh:h1:tf417:input",
+      "from": "wh:h1:rm417:sw03:common",
+      "to": "wh:h1:tf417:hv"
+    },
+    {
+      "id": "wh:h1:tf417a:input",
+      "from": "wh:h1:rm417:sw03:common",
+      "to": "wh:h1:tf417a:hv"
+    },
+    {
+      "id": "wh:h3:mc416:in-earth:branch",
+      "from": "wh:h3:mc416:in:a",
+      "to": "wh:h3:mc416:in-earth:a"
+    },
+    {
+      "id": "wh:h3:mc416:incoming-bar",
+      "from": "wh:h3:mc416:in:b",
+      "to": "wh:h3:mc416:bus:bar"
+    },
+    {
+      "id": "wh:h3:mc416:interface:supply",
+      "from": "wh:h3:tf416:secondary",
+      "to": "wh:h3:mc416:interface:port"
+    },
+    {
+      "id": "wh:h3:mc416:m1:earth:branch",
+      "from": "wh:h3:mc416:m1:common:port",
+      "to": "wh:h3:mc416:m1:earth:a"
+    },
+    {
+      "id": "wh:h3:mc416:m1:fc:common-link",
+      "from": "wh:h3:mc416:m1:fc:b",
+      "to": "wh:h3:mc416:m1:common:port"
+    },
+    {
+      "id": "wh:h3:mc416:m1:fc:fuse-contact",
+      "from": "wh:h3:mc416:m1:fc:fuse:b",
+      "to": "wh:h3:mc416:m1:fc:a"
+    },
+    {
+      "id": "wh:h3:mc416:m1:fc:fuse:bar-link",
+      "from": "wh:h3:mc416:bus:bar",
+      "to": "wh:h3:mc416:m1:fc:fuse:a"
+    },
+    {
+      "id": "wh:h3:mc416:m1:motor-cable",
+      "from": "wh:h3:mc416:m1:common:port",
+      "to": "wh:h3:mc416:m1:motor:port"
+    },
+    {
+      "id": "wh:h3:mc416:m1:rc:common-link",
+      "from": "wh:h3:mc416:m1:rc:b",
+      "to": "wh:h3:mc416:m1:common:port"
+    },
+    {
+      "id": "wh:h3:mc416:m1:rc:fuse-contact",
+      "from": "wh:h3:mc416:m1:rc:fuse:b",
+      "to": "wh:h3:mc416:m1:rc:a"
+    },
+    {
+      "id": "wh:h3:mc416:m1:rc:fuse:bar-link",
+      "from": "wh:h3:mc416:bus:bar",
+      "to": "wh:h3:mc416:m1:rc:fuse:a"
+    },
+    {
+      "id": "wh:h3:mc416:m2:earth:branch",
+      "from": "wh:h3:mc416:m2:common:port",
+      "to": "wh:h3:mc416:m2:earth:a"
+    },
+    {
+      "id": "wh:h3:mc416:m2:fc:common-link",
+      "from": "wh:h3:mc416:m2:fc:b",
+      "to": "wh:h3:mc416:m2:common:port"
+    },
+    {
+      "id": "wh:h3:mc416:m2:fc:fuse-contact",
+      "from": "wh:h3:mc416:m2:fc:fuse:b",
+      "to": "wh:h3:mc416:m2:fc:a"
+    },
+    {
+      "id": "wh:h3:mc416:m2:fc:fuse:bar-link",
+      "from": "wh:h3:mc416:bus:bar",
+      "to": "wh:h3:mc416:m2:fc:fuse:a"
+    },
+    {
+      "id": "wh:h3:mc416:m2:motor-cable",
+      "from": "wh:h3:mc416:m2:common:port",
+      "to": "wh:h3:mc416:m2:motor:port"
+    },
+    {
+      "id": "wh:h3:mc416:m2:rc:common-link",
+      "from": "wh:h3:mc416:m2:rc:b",
+      "to": "wh:h3:mc416:m2:common:port"
+    },
+    {
+      "id": "wh:h3:mc416:m2:rc:fuse-contact",
+      "from": "wh:h3:mc416:m2:rc:fuse:b",
+      "to": "wh:h3:mc416:m2:rc:a"
+    },
+    {
+      "id": "wh:h3:mc416:m2:rc:fuse:bar-link",
+      "from": "wh:h3:mc416:bus:bar",
+      "to": "wh:h3:mc416:m2:rc:fuse:a"
+    },
+    {
+      "id": "wh:h3:mc416:supplemental-supply",
+      "from": "wh:h3:mc416:interface:port",
+      "to": "wh:h3:mc416:in:a"
+    },
+    {
+      "id": "wh:h3:mc416a:interface:supply",
+      "from": "wh:h3:tf416a:secondary",
+      "to": "wh:h3:mc416a:interface:port"
+    },
+    {
+      "id": "wh:h3:tf416:input",
+      "from": "wh:h3:hv416:port",
+      "to": "wh:h3:tf416:hv"
+    },
+    {
+      "id": "wh:h3:tf416a:input",
+      "from": "wh:h3:hv416:port",
+      "to": "wh:h3:tf416a:hv"
+    },
+    {
+      "id": "wh:h7:mc418:in-earth:branch",
+      "from": "wh:h7:mc418:in:a",
+      "to": "wh:h7:mc418:in-earth:a"
+    },
+    {
+      "id": "wh:h7:mc418:incoming-bus",
+      "from": "wh:h7:mc418:in:b",
+      "to": "wh:h7:mc418:bus:bar"
+    },
+    {
+      "id": "wh:h7:mc418:m1:earth:branch",
+      "from": "wh:h7:mc418:m1:common:port",
+      "to": "wh:h7:mc418:m1:earth:a"
+    },
+    {
+      "id": "wh:h7:mc418:m1:fc:common-link",
+      "from": "wh:h7:mc418:m1:fc:b",
+      "to": "wh:h7:mc418:m1:common:port"
+    },
+    {
+      "id": "wh:h7:mc418:m1:fc:fuse-contact",
+      "from": "wh:h7:mc418:m1:fc:fuse:b",
+      "to": "wh:h7:mc418:m1:fc:a"
+    },
+    {
+      "id": "wh:h7:mc418:m1:fc:fuse:bus-link",
+      "from": "wh:h7:mc418:bus:bar",
+      "to": "wh:h7:mc418:m1:fc:fuse:a"
+    },
+    {
+      "id": "wh:h7:mc418:m1:motor-cable",
+      "from": "wh:h7:mc418:m1:common:port",
+      "to": "wh:h7:mc418:m1:motor:port"
+    },
+    {
+      "id": "wh:h7:mc418:m1:rc:common-link",
+      "from": "wh:h7:mc418:m1:rc:b",
+      "to": "wh:h7:mc418:m1:common:port"
+    },
+    {
+      "id": "wh:h7:mc418:m1:rc:fuse-contact",
+      "from": "wh:h7:mc418:m1:rc:fuse:b",
+      "to": "wh:h7:mc418:m1:rc:a"
+    },
+    {
+      "id": "wh:h7:mc418:m1:rc:fuse:bus-link",
+      "from": "wh:h7:mc418:bus:bar",
+      "to": "wh:h7:mc418:m1:rc:fuse:a"
+    },
+    {
+      "id": "wh:h7:mc418:m2:earth:branch",
+      "from": "wh:h7:mc418:m2:common:port",
+      "to": "wh:h7:mc418:m2:earth:a"
+    },
+    {
+      "id": "wh:h7:mc418:m2:fc:common-link",
+      "from": "wh:h7:mc418:m2:fc:b",
+      "to": "wh:h7:mc418:m2:common:port"
+    },
+    {
+      "id": "wh:h7:mc418:m2:fc:fuse-contact",
+      "from": "wh:h7:mc418:m2:fc:fuse:b",
+      "to": "wh:h7:mc418:m2:fc:a"
+    },
+    {
+      "id": "wh:h7:mc418:m2:fc:fuse:bus-link",
+      "from": "wh:h7:mc418:bus:bar",
+      "to": "wh:h7:mc418:m2:fc:fuse:a"
+    },
+    {
+      "id": "wh:h7:mc418:m2:motor-cable",
+      "from": "wh:h7:mc418:m2:common:port",
+      "to": "wh:h7:mc418:m2:motor:port"
+    },
+    {
+      "id": "wh:h7:mc418:m2:rc:common-link",
+      "from": "wh:h7:mc418:m2:rc:b",
+      "to": "wh:h7:mc418:m2:common:port"
+    },
+    {
+      "id": "wh:h7:mc418:m2:rc:fuse-contact",
+      "from": "wh:h7:mc418:m2:rc:fuse:b",
+      "to": "wh:h7:mc418:m2:rc:a"
+    },
+    {
+      "id": "wh:h7:mc418:m2:rc:fuse:bus-link",
+      "from": "wh:h7:mc418:bus:bar",
+      "to": "wh:h7:mc418:m2:rc:fuse:a"
+    },
+    {
+      "id": "wh:h7:mc418:supply",
+      "from": "wh:h7:tf418:secondary",
+      "to": "wh:h7:mc418:in:a"
+    },
+    {
+      "id": "wh:h7:mc418a:incomer-bus",
+      "from": "wh:h7:mc418a:in:b",
+      "to": "wh:h7:mc418a:bus:bar"
+    },
+    {
+      "id": "wh:h7:mc418a:supply",
+      "from": "wh:h7:tf418a:secondary",
+      "to": "wh:h7:mc418a:in:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb03:bus-link",
+      "from": "wh:h7:rm418:bus:bar",
+      "to": "wh:h7:rm418:cb03:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb03:disconnect-link",
+      "from": "wh:h7:rm418:cb03:b",
+      "to": "wh:h7:rm418:cb03:disconnect:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb03:earth:branch",
+      "from": "wh:h7:rm418:cb03:disconnect:b",
+      "to": "wh:h7:rm418:cb03:earth:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb04:bus-link",
+      "from": "wh:h7:rm418:bus:bar",
+      "to": "wh:h7:rm418:cb04:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb04:disconnect-link",
+      "from": "wh:h7:rm418:cb04:b",
+      "to": "wh:h7:rm418:cb04:disconnect:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb04:earth:branch",
+      "from": "wh:h7:rm418:cb04:disconnect:b",
+      "to": "wh:h7:rm418:cb04:earth:a"
+    },
+    {
+      "id": "wh:h7:rm418:cb04:spare-link",
+      "from": "wh:h7:rm418:cb04:disconnect:b",
+      "to": "wh:h7:rm418:cb04:spare:port"
+    },
+    {
+      "id": "wh:h7:rm418:sw01:es:branch",
+      "from": "wh:h7:rm418:sw01:a",
+      "to": "wh:h7:rm418:sw01:es:a"
+    },
+    {
+      "id": "wh:h7:rm418:sw02:es:branch",
+      "from": "wh:h7:rm418:sw02:a",
+      "to": "wh:h7:rm418:sw02:es:a"
+    },
+    {
+      "id": "wh:h7:sw01-bus",
+      "from": "wh:h7:rm418:sw01:b",
+      "to": "wh:h7:rm418:bus:bar"
+    },
+    {
+      "id": "wh:h7:sw02-bus",
+      "from": "wh:h7:rm418:sw02:b",
+      "to": "wh:h7:rm418:bus:bar"
+    },
+    {
+      "id": "wh:h7:sw02-stub",
+      "from": "wh:h7:rm418:sw02:interface:port",
+      "to": "wh:h7:rm418:sw02:a"
+    },
+    {
+      "id": "wh:h7:tf418:input",
+      "from": "wh:h7:rm418:cb03:disconnect:b",
+      "to": "wh:h7:tf418:hv"
+    },
+    {
+      "id": "wh:h7:tf418a:input",
+      "from": "wh:h7:rm418:cb03:disconnect:b",
+      "to": "wh:h7:tf418a:hv"
+    },
+    {
+      "id": "wh:h8:mc416:in-earth:branch",
+      "from": "wh:h8:mc416:in:a",
+      "to": "wh:h8:mc416:in-earth:a"
+    },
+    {
+      "id": "wh:h8:mc416:incoming-bar",
+      "from": "wh:h8:mc416:in:b",
+      "to": "wh:h8:mc416:bus:bar"
+    },
+    {
+      "id": "wh:h8:mc416:interface:supply",
+      "from": "wh:h8:tf416:secondary",
+      "to": "wh:h8:mc416:interface:port"
+    },
+    {
+      "id": "wh:h8:mc416:m1:earth:branch",
+      "from": "wh:h8:mc416:m1:common:port",
+      "to": "wh:h8:mc416:m1:earth:a"
+    },
+    {
+      "id": "wh:h8:mc416:m1:fc:common-link",
+      "from": "wh:h8:mc416:m1:fc:b",
+      "to": "wh:h8:mc416:m1:common:port"
+    },
+    {
+      "id": "wh:h8:mc416:m1:fc:fuse-contact",
+      "from": "wh:h8:mc416:m1:fc:fuse:b",
+      "to": "wh:h8:mc416:m1:fc:a"
+    },
+    {
+      "id": "wh:h8:mc416:m1:fc:fuse:bar-link",
+      "from": "wh:h8:mc416:bus:bar",
+      "to": "wh:h8:mc416:m1:fc:fuse:a"
+    },
+    {
+      "id": "wh:h8:mc416:m1:motor-cable",
+      "from": "wh:h8:mc416:m1:common:port",
+      "to": "wh:h8:mc416:m1:motor:port"
+    },
+    {
+      "id": "wh:h8:mc416:m1:rc:common-link",
+      "from": "wh:h8:mc416:m1:rc:b",
+      "to": "wh:h8:mc416:m1:common:port"
+    },
+    {
+      "id": "wh:h8:mc416:m1:rc:fuse-contact",
+      "from": "wh:h8:mc416:m1:rc:fuse:b",
+      "to": "wh:h8:mc416:m1:rc:a"
+    },
+    {
+      "id": "wh:h8:mc416:m1:rc:fuse:bar-link",
+      "from": "wh:h8:mc416:bus:bar",
+      "to": "wh:h8:mc416:m1:rc:fuse:a"
+    },
+    {
+      "id": "wh:h8:mc416:m2:earth:branch",
+      "from": "wh:h8:mc416:m2:common:port",
+      "to": "wh:h8:mc416:m2:earth:a"
+    },
+    {
+      "id": "wh:h8:mc416:m2:fc:common-link",
+      "from": "wh:h8:mc416:m2:fc:b",
+      "to": "wh:h8:mc416:m2:common:port"
+    },
+    {
+      "id": "wh:h8:mc416:m2:fc:fuse-contact",
+      "from": "wh:h8:mc416:m2:fc:fuse:b",
+      "to": "wh:h8:mc416:m2:fc:a"
+    },
+    {
+      "id": "wh:h8:mc416:m2:fc:fuse:bar-link",
+      "from": "wh:h8:mc416:bus:bar",
+      "to": "wh:h8:mc416:m2:fc:fuse:a"
+    },
+    {
+      "id": "wh:h8:mc416:m2:motor-cable",
+      "from": "wh:h8:mc416:m2:common:port",
+      "to": "wh:h8:mc416:m2:motor:port"
+    },
+    {
+      "id": "wh:h8:mc416:m2:rc:common-link",
+      "from": "wh:h8:mc416:m2:rc:b",
+      "to": "wh:h8:mc416:m2:common:port"
+    },
+    {
+      "id": "wh:h8:mc416:m2:rc:fuse-contact",
+      "from": "wh:h8:mc416:m2:rc:fuse:b",
+      "to": "wh:h8:mc416:m2:rc:a"
+    },
+    {
+      "id": "wh:h8:mc416:m2:rc:fuse:bar-link",
+      "from": "wh:h8:mc416:bus:bar",
+      "to": "wh:h8:mc416:m2:rc:fuse:a"
+    },
+    {
+      "id": "wh:h8:mc416:supplemental-supply",
+      "from": "wh:h8:mc416:interface:port",
+      "to": "wh:h8:mc416:in:a"
+    },
+    {
+      "id": "wh:h8:mc416a:incoming-bar",
+      "from": "wh:h8:mc416a:in:b",
+      "to": "wh:h8:mc416a:bus:bar"
+    },
+    {
+      "id": "wh:h8:mc416a:interface:supply",
+      "from": "wh:h8:tf416a:secondary",
+      "to": "wh:h8:mc416a:interface:port"
+    },
+    {
+      "id": "wh:h8:mc416a:supplemental-supply",
+      "from": "wh:h8:mc416a:interface:port",
+      "to": "wh:h8:mc416a:in:a"
+    },
+    {
+      "id": "wh:h8:rm406-cable",
+      "from": "wh:h8:interface:rm406:port",
+      "to": "wh:h8:hv416:port"
+    },
+    {
+      "id": "wh:h8:tf416:input",
+      "from": "wh:h8:hv416:port",
+      "to": "wh:h8:tf416:hv"
+    },
+    {
+      "id": "wh:h8:tf416a:input",
+      "from": "wh:h8:hv416:port",
+      "to": "wh:h8:tf416a:hv"
+    },
+    {
+      "id": "wh:h9-to-h7:cable",
+      "from": "wh:h9:rm419:sw02:line",
+      "to": "wh:h7:rm418:sw01:a"
+    },
+    {
+      "id": "wh:h9:cb01-bus",
+      "from": "wh:h9:rm419:bus:bar",
+      "to": "wh:h9:rm419:cb01:a"
+    },
+    {
+      "id": "wh:h9:cb01-sw03",
+      "from": "wh:h9:rm419:cb01:b",
+      "to": "wh:h9:rm419:sw03:line"
+    },
+    {
+      "id": "wh:h9:cb02-bus",
+      "from": "wh:h9:rm419:bus:bar",
+      "to": "wh:h9:rm419:cb02:a"
+    },
+    {
+      "id": "wh:h9:cb02-sw04",
+      "from": "wh:h9:rm419:cb02:b",
+      "to": "wh:h9:rm419:sw04:line"
+    },
+    {
+      "id": "wh:h9:mc419:in-earth:branch",
+      "from": "wh:h9:mc419:in:a",
+      "to": "wh:h9:mc419:in-earth:a"
+    },
+    {
+      "id": "wh:h9:mc419:incoming-bus",
+      "from": "wh:h9:mc419:in:b",
+      "to": "wh:h9:mc419:bus:bar"
+    },
+    {
+      "id": "wh:h9:mc419:m1:earth:branch",
+      "from": "wh:h9:mc419:m1:common:port",
+      "to": "wh:h9:mc419:m1:earth:a"
+    },
+    {
+      "id": "wh:h9:mc419:m1:fc:common-link",
+      "from": "wh:h9:mc419:m1:fc:b",
+      "to": "wh:h9:mc419:m1:common:port"
+    },
+    {
+      "id": "wh:h9:mc419:m1:fc:fuse-contact",
+      "from": "wh:h9:mc419:m1:fc:fuse:b",
+      "to": "wh:h9:mc419:m1:fc:a"
+    },
+    {
+      "id": "wh:h9:mc419:m1:fc:fuse:bus-link",
+      "from": "wh:h9:mc419:bus:bar",
+      "to": "wh:h9:mc419:m1:fc:fuse:a"
+    },
+    {
+      "id": "wh:h9:mc419:m1:motor-cable",
+      "from": "wh:h9:mc419:m1:common:port",
+      "to": "wh:h9:mc419:m1:motor:port"
+    },
+    {
+      "id": "wh:h9:mc419:m1:rc:common-link",
+      "from": "wh:h9:mc419:m1:rc:b",
+      "to": "wh:h9:mc419:m1:common:port"
+    },
+    {
+      "id": "wh:h9:mc419:m1:rc:fuse-contact",
+      "from": "wh:h9:mc419:m1:rc:fuse:b",
+      "to": "wh:h9:mc419:m1:rc:a"
+    },
+    {
+      "id": "wh:h9:mc419:m1:rc:fuse:bus-link",
+      "from": "wh:h9:mc419:bus:bar",
+      "to": "wh:h9:mc419:m1:rc:fuse:a"
+    },
+    {
+      "id": "wh:h9:mc419:m2:earth:branch",
+      "from": "wh:h9:mc419:m2:common:port",
+      "to": "wh:h9:mc419:m2:earth:a"
+    },
+    {
+      "id": "wh:h9:mc419:m2:fc:common-link",
+      "from": "wh:h9:mc419:m2:fc:b",
+      "to": "wh:h9:mc419:m2:common:port"
+    },
+    {
+      "id": "wh:h9:mc419:m2:fc:fuse-contact",
+      "from": "wh:h9:mc419:m2:fc:fuse:b",
+      "to": "wh:h9:mc419:m2:fc:a"
+    },
+    {
+      "id": "wh:h9:mc419:m2:fc:fuse:bus-link",
+      "from": "wh:h9:mc419:bus:bar",
+      "to": "wh:h9:mc419:m2:fc:fuse:a"
+    },
+    {
+      "id": "wh:h9:mc419:m2:motor-cable",
+      "from": "wh:h9:mc419:m2:common:port",
+      "to": "wh:h9:mc419:m2:motor:port"
+    },
+    {
+      "id": "wh:h9:mc419:m2:rc:common-link",
+      "from": "wh:h9:mc419:m2:rc:b",
+      "to": "wh:h9:mc419:m2:common:port"
+    },
+    {
+      "id": "wh:h9:mc419:m2:rc:fuse-contact",
+      "from": "wh:h9:mc419:m2:rc:fuse:b",
+      "to": "wh:h9:mc419:m2:rc:a"
+    },
+    {
+      "id": "wh:h9:mc419:m2:rc:fuse:bus-link",
+      "from": "wh:h9:mc419:bus:bar",
+      "to": "wh:h9:mc419:m2:rc:fuse:a"
+    },
+    {
+      "id": "wh:h9:mc419:supply",
+      "from": "wh:h9:tf419a:secondary",
+      "to": "wh:h9:mc419:in:a"
+    },
+    {
+      "id": "wh:h9:mc419a:incomer-bus",
+      "from": "wh:h9:mc419a:in:b",
+      "to": "wh:h9:mc419a:bus:bar"
+    },
+    {
+      "id": "wh:h9:mc419a:supply",
+      "from": "wh:h9:tf419b:secondary",
+      "to": "wh:h9:mc419a:in:a"
+    },
+    {
+      "id": "wh:h9:rm410-cable",
+      "from": "wh:h9:interface:rm410:port",
+      "to": "wh:h9:rm419:sw01:line"
+    },
+    {
+      "id": "wh:h9:sw01-bus",
+      "from": "wh:h9:rm419:sw01:common",
+      "to": "wh:h9:rm419:bus:bar"
+    },
+    {
+      "id": "wh:h9:sw02-bus",
+      "from": "wh:h9:rm419:sw02:common",
+      "to": "wh:h9:rm419:bus:bar"
+    },
+    {
+      "id": "wh:h9:tf419a:input",
+      "from": "wh:h9:rm419:sw03:common",
+      "to": "wh:h9:tf419a:hv"
+    },
+    {
+      "id": "wh:h9:tf419b:input",
+      "from": "wh:h9:rm419:sw04:common",
+      "to": "wh:h9:tf419b:hv"
+    },
+    {
+      "id": "whole:join:crushing-tie",
+      "from": "sw431:interface:sw435:port",
+      "to": "sw435:interface:sw431:port"
+    },
+    {
+      "id": "whole:join:cv006",
+      "from": "sw411:tier-03:interface:port",
+      "to": "cv006:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:hopper1",
+      "from": "rm413:interface:rm417:port",
+      "to": "wh:h1:interface:rm413:port"
+    },
+    {
+      "id": "whole:join:hopper10-tf04",
+      "from": "line33:hopper-10:interface:port",
+      "to": "rm420:interface:pole286:port"
+    },
+    {
+      "id": "whole:join:hopper8",
+      "from": "rm406:interface:hopper8:port",
+      "to": "wh:h8:interface:rm406:port"
+    },
+    {
+      "id": "whole:join:hopper9",
+      "from": "rm410:interface:rm419:incoming",
+      "to": "wh:h9:interface:rm410:port"
+    },
+    {
+      "id": "whole:join:rm721",
+      "from": "sw411:tier-16:interface:port",
+      "to": "services:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:sw421",
+      "from": "sw411:tier-15:interface:port",
+      "to": "sw421:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:sw426",
+      "from": "sw411:tier-14:interface:port",
+      "to": "sw426:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:sw431",
+      "from": "sw411:tier-13:interface:port",
+      "to": "sw431:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:sw435",
+      "from": "sw411:tier-04:interface:port",
+      "to": "sw435:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:sw451",
+      "from": "sw411:tier-02:interface:port",
+      "to": "sw451:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:sw454",
+      "from": "sw411:tier-01:interface:port",
+      "to": "sw454:interface:sw411:port"
+    },
+    {
+      "id": "whole:join:tf11-in03",
+      "from": "station:sb01:f4:interface:port",
+      "to": "sw411:in-03:interface:port"
+    },
+    {
+      "id": "whole:join:tf12-in04",
+      "from": "station:sb02:f1:interface:port",
+      "to": "owner:tf12:opf1-7:port"
+    },
+    {
+      "id": "whole:primary33:tf420a",
+      "from": "rm420:tf420a:primary-connection:port",
+      "to": "rm420:tf420a:primary33"
+    },
+    {
+      "id": "whole:primary33:tf420b",
+      "from": "rm420:tf420b:primary-connection:port",
+      "to": "rm420:tf420b:primary33"
+    }
+  ]
+}

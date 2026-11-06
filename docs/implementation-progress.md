@@ -1,5 +1,7 @@
 # Implementation progress
 
+Current continuation point: [6 November 2026 handover](../HANDOVER.md). Earlier implementation/delivery records below are historical where they conflict with that handover.
+
 The complete scope remains all 25 published implementation tickets and owner acceptance of the whole-network model. This record does not replace GitHub acceptance criteria.
 
 ## GitHub #2: first switching simulation
