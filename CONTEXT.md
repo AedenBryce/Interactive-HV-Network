@@ -53,3 +53,31 @@ A modelled path connecting an enabled electrical source to earth. The tool highl
 
 **Impact**:
 A change in modelled connectivity caused by a switching action or a change in source availability. It is explained through affected assets and highlighted paths, including remaining alternate supply paths.
+
+**Switching program**:
+An ordered record of accepted apparatus actions and their required checks, prepared for either Isolation or Restoration and developed into the approved Word template. It starts from the current simulated device state. Developing the document ends recording and retains the resulting simulated state so a later Restoration program can start from there.
+
+**Accepted apparatus action**:
+A physical switching operation accepted by the network model and recorded in the active switching program. Source-availability changes are not apparatus actions and are not recorded in the program.
+
+**Program undo**:
+Removal of the most recently accepted apparatus action, its generated verification and test steps, and reversal of that action in the simulated device state, after the user confirms which action to remove.
+
+**Switching verification sequence**:
+For each accepted apparatus action, a check of its current state precedes the action and a check of its resulting state follows it. Before an earth switch is closed, the sequence checks that it is open, tests the meter, tests for dead, and tests the meter again; it then closes the earth switch and checks that it is closed.
+
+For the four pre-close rows, all use the earth switch's location and Identify value. Verify Earth Open uses the earth switch's assigned `0V`, Type `EARTH SWITCH` and Action `VERIFY`. The two Test Meter rows use the associated circuit voltage, leave Type blank and use Action `TEST`. Test for Dead uses the associated circuit voltage, Type `PHASE VOLTAGE INDICATOR` and Action `TEST`. Instructions carry the check wording. The Earth Switch close and Verify Earth Closed rows use `0V`.
+
+**Asset voltage assignment**:
+The voltage value used for an asset in a switching program. It is assigned from the relevant source drawings and must match an available `VOLTAGE` choice in the master template. Earth switches are assigned `0V`. A drawing value that cannot be represented by an available choice requires the owner's direction.
+
+Owner-confirmed assignments on 6 November 2026: TF413A AC inputs A and B use `690V`; VS50501/02/03 output contacts use `1.9kV`; MC001 uses `415V`; MC406A and MC410A use `415V`; the Sizer/MC420 group uses `6.9kV`. The owner directed adding `1.9kV` and `6.9kV` to the template dropdown; both are present in the updated master template.
+
+**Asset program metadata**:
+The assigned program location, voltage and relevant drawing references shown with an asset and used to fill program rows. This metadata does not change the accepted electrical model, its starting configuration or its layout. Location and voltage use the master's existing choices; drawing references omit revision text.
+
+**Asset drawing reference**:
+The source drawing or drawings relevant to an asset, shown with that asset. The displayed reference identifies the drawing without its revision and excludes unrelated references.
+
+**Switching-program mode**:
+While a switching program is active, model selection, scenario loading, reset and abstract source-availability changes are blocked. Source changes are not program steps. Only accepted apparatus actions are captured.
