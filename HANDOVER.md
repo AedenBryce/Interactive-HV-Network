@@ -2,7 +2,7 @@
 
 ## Start here in the next chat
 
-The owner considers the local tool good and has selected the current drawing as final. Preserve it. The current task is to finish repository delivery and continue only with the owner's next requested project work. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
+The owner considers the local tool good and has selected the current drawing as final. Preserve it. On 6 November 2026 the owner formally accepted the assembled educational model and its recorded starting configuration; GitHub issue #25 is closed as completed with all eight criteria checked. The accepted pair is electrical model `construction-2026-11-06.12` and layout `authored-2026-11-06.9`. Issue #26 remains open for delivery evidence; PR #27 is the delivery branch. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
 
 Read `AGENTS.md`, this file, `CONTEXT.md`, and the current distribution section of `README.md`. GitHub is AedenBryce/Interactive-HV-Network. The implementation and this handover are on `codex/final-local-tool-handover-2026-11-06`. The snapshot is published in [PR #27](https://github.com/AedenBryce/Interactive-HV-Network/pull/27). It was open, not merged, at handover. Check its current status before editing; do not assume it has merged into main.
 
@@ -35,7 +35,7 @@ PDF sources remain local under `drawings/Asset Drawing Repo` and are excluded fr
 - Station battery limits begin at the three retained feeder breakers for TF11, TF12 and TF04. Mine services/camp are excluded. TF04 continues to Hopper10; selected other takeoffs are boundaries. The model contains the detailed earlier owner confirmations; keep them.
 - Starting configuration and physical action profiles are recorded in the model. Do not equate a visual default with live plant state. Do not silently resolve unconfirmed installed facts.
 - Key/door sequences expressly deferred by the owner remain deferred. Other unresolved interlocks remain blocked unless explicitly confirmed.
-- Final owner drawing selection is recorded. Formal whole-electrical-model acceptance against issue #25 is not separately confirmed by this handover; do not close #25/#26 on the basis of a successful layout or build.
+- Final owner drawing selection is recorded. The owner explicitly accepted `construction-2026-11-06.12`, paired with `authored-2026-11-06.9`, including its recorded starting configuration. GitHub #25 records that acceptance and is closed. This accepts the educational model as represented, with documented boundaries and unresolved claims retained; it does not establish live status or operational isolation authority.
 - Final drawing must not change unless the owner requests it. Subsequent changes in this chat were launcher/packaging fixes only.
 
 ## Editing and persistence
@@ -100,6 +100,21 @@ The portable server binds only to 127.0.0.1. It starts at8765 and skips occupied
 
 ## Verification and known limits
 
+### Issue #25 acceptance audit — 6 November 2026
+
+GitHub issue [#25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25) is closed as completed. The owner checked all eight criteria and formally accepted model `construction-2026-11-06.12`, final layout `authored-2026-11-06.9`, and the recorded starting configuration. The frozen scenario is `docs/layout-versions/owner-scenario-final-2026-11-06.json`.
+
+1. **Assembled model and interfaces:** `current-network.test.ts` and `whole-network.test.ts` cover stable identities, area packages, reconciled joins and cross-area scenarios; that focused run passed 20/20 tests. The exact `.12` package also passed `overview-device-corrections.test.ts` (3/3), including schema validation, identity/baseline preservation, restored-control blocking and historical view-only behavior.
+2. **Drawing coverage:** `drawing-review/coverage.json` records 141 supplied files, 140 unique hashes, one byte-identical duplicate, 141 explicit review-source rows and zero unmatched rows. The register documents review scope and limitations; it does not promote every drawing claim to confirmed installed fact.
+3. **Agreed scope and LV boundaries:** the accepted `.12` package retains its scoped boundaries and final LV endpoints. Outgoing LV circuits and other owner-excluded scope remain outside the model as documented; unresolved external source/earth coverage remains labelled.
+4. **Discrepancy evidence and decisions:** area and supplemental review records carry drawing references, affected model identities, scoped owner decisions and open review questions. The frozen `.12` model contains 223 resolved and 193 open review records; the owner accepted it with those unresolved claims retained.
+5. **Whole-model owner review:** the owner confirmed review and approval in the conversation; the GitHub #25 acceptance comment records the exact immutable model/layout pair and starting configuration.
+6. **Ambiguity treatment:** the owner's acceptance explicitly retains documented scope boundaries and unresolved claims. It does not declare an unconfirmed installation arrangement correct.
+7. **Immutable acceptance:** the scenario, source layout and authored layout pair identify model `.12` and layout `.9`; the acceptance is recorded externally on #25 without rewriting the accepted model.
+8. **Cross-area scenarios and regression:** the focused current-network/whole-network run passed 20/20 tests, including real-package structure/evidence checks and an explicitly fictional cross-area path/impact scenario; the exact `.12` package test passed 3/3. The separate authored-layout-loader suite currently has 15 passing and 6 failing geometry assertions. Full-suite pass status remains unconfirmed. Preserve `.9`; these layout assertions do not authorise changing the accepted drawing.
+
+This audit distinguishes owner acceptance from software verification. Issue #25's completion does not close delivery ticket #26 or establish field installation, live equipment state, source/earth coverage, electrical calculations or operational isolation authority.
+
 On6November2026:
 
 - TypeScript check and Vite production build passed (large-bundle advisory remains).
@@ -117,10 +132,10 @@ pnpm exec vitest run --configLoader native --pool=threads --maxWorkers=1 --no-fi
 
 ## Next work, ordered
 
-1. Check the handover PR/branch state and preserve the `.9` source pair. Owner decides the next requested feature; no autonomous layout rework.
+1. Check PR #27's current GitHub state and preserve the `.9` source pair. Issue #25 is complete; do not reopen acceptance or alter the accepted model without an owner request.
 2. Validate the portable ZIP on a second Windows PC, including blocked/busy port and browser-launch behaviour under its company controls.
 3. Reconcile the six layout assertions and investigate the slow full test run without changing the owner-final drawing blindly.
-4. Reconcile open GitHub issues#25/#26 with the owner: formal model acceptance, remaining unconfirmed installed controls and delivery evidence. #1 is the specification. Leave these open until their actual criteria are satisfied.
+4. Continue issue #26's delivery criteria against the accepted `.12` / `.9` pair. Keep remaining unconfirmed installed facts labelled; #1 remains the specification.
 5. If requested, choose an internal hosting destination, implement real access control there, and deploy. The GPT/internal-site deployment is not already completed or authorised by the earlier local packaging request.
 
-No current goal should be created, resumed or replaced from this handover alone. The earlier goal documents under docs/goals are historical; the owner explicitly asked to avoid getting lost in repeated layout work.
+The earlier goal documents under docs/goals are historical. Preserve the accepted layout and electrical confirmations during later delivery work; do not restart layout optimisation unless the owner asks.

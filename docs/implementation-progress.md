@@ -2,7 +2,11 @@
 
 Current continuation point: [6 November 2026 handover](../HANDOVER.md). Earlier implementation/delivery records below are historical where they conflict with that handover.
 
-The complete scope remains all 25 published implementation tickets and owner acceptance of the whole-network model. This record does not replace GitHub acceptance criteria.
+This record preserves the implementation chronology for the 25 published tickets and does not replace their GitHub acceptance criteria. Current project status is recorded immediately below.
+
+## Current status — 6 November 2026
+
+The owner formally accepted `site-whole-network` / `construction-2026-11-06.12`, its recorded starting configuration and final layout `authored-2026-11-06.9`. GitHub #25 is closed with all eight criteria checked. The detailed criterion audit and validation limits are in [HANDOVER.md](../HANDOVER.md). This supersedes earlier pending-acceptance statements below; those entries remain dated historical snapshots. Issue #26 remains open for delivery validation.
 
 ## GitHub #2: first switching simulation
 

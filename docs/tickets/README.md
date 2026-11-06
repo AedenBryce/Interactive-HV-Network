@@ -8,7 +8,7 @@ Parent specification: [#1](https://github.com/AedenBryce/Interactive-HV-Network/
 
 [#2 - Run a first local switching simulation](https://github.com/AedenBryce/Interactive-HV-Network/issues/2) is the only ticket with no blockers. Continue with the implement flow for that issue. Afterwards, work any ticket whose blockers are complete.
 
-Whole-network V1 acceptance remains required. Synthetic examples and area slices are implementation increments; model acceptance is an explicit owner decision in #25.
+Whole-network V1 acceptance was recorded by the owner in GitHub #25 on 6 November 2026 for model `.12` and layout `.9`. Synthetic examples and area slices remain implementation increments, not installed-network verification.
 
 ## Backlog
 
@@ -50,8 +50,12 @@ Whole-network V1 acceptance remains required. Synthetic examples and area slices
 
 Machine-readable verification: [publication manifest](publication.json). Original approved drafts remain under drafts/ for reference; GitHub issues contain the published blocker issue numbers.
 
-## Current tracker status —23 October2026
+## Tracker status snapshot —23 October2026
 
 Read-only GitHub issue fetches confirm #2–#24 are closed, each with all published checklist items checked. #25 remains open with four checked and four unchecked criteria; #26 remains open with seven unchecked criteria. These are tracker states, not whole-model acceptance evidence. The publication statements above retain their original date.
 
-Current outstanding work is complete agreed coverage, remaining owner decisions, whole-diagram review, explicit immutable acceptance and delivery of that accepted model. See the [delivery verification record](../delivery-verification.md) and [implementation progress](../implementation-progress.md). The final full-suite run remains reserved until delivery is ready.
+That is a historical tracker snapshot. It is superseded by the current status below.
+
+## Current tracker status —6 November2026
+
+The owner accepted model `construction-2026-11-06.12`, layout `authored-2026-11-06.9`, and its recorded starting configuration. GitHub #25 is closed with all eight criteria checked. Issue #26 remains open for application delivery evidence. The criterion audit, test results and limits are in [HANDOVER.md](../../HANDOVER.md).

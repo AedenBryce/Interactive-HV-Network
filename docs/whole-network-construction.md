@@ -1,6 +1,6 @@
 # Review the whole-network construction package
 
-The package is ready for software exploration and owner review. **It is not an accepted installed-network model or an isolation instruction.** GitHub #25's owner acceptance and coverage gates remain open.
+**Status update — 6 November 2026:** the owner accepted `site-whole-network` / `construction-2026-11-06.12` with layout `authored-2026-11-06.9`; GitHub issue #25 is closed. This remains acceptance of the educational model as represented, with the documented uncertainty and scope boundaries retained. It does not establish installed configuration, live status or operational isolation authority. The snapshot and counts below describe the earlier `construction-2026-10-23.10` review package and are historical, not the current accepted release. See [HANDOVER.md](../HANDOVER.md) for the acceptance audit.
 
 ## Current inspection snapshot: `construction-2026-10-23.10`
 

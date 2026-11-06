@@ -1,6 +1,6 @@
 # Review model .10
 
-**Decision needed:** review the represented network and accept this specific V1 teaching model and starting configuration, or identify corrections. This is the outstanding owner decision in [GitHub25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25). Software checks do not establish installed coverage or owner acceptance.
+**Historical packet for `construction-2026-10-23.10`.** Its review decision is superseded: on 6 November 2026 the owner accepted `construction-2026-11-06.12` with layout `authored-2026-11-06.9` and its recorded starting configuration in [GitHub issue #25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25). This packet's counts and prompts describe `.10`; they are not the accepted package. Acceptance does not establish installed coverage, live equipment status or operational isolation authority.
 
 ## Open the review
 

@@ -1,8 +1,8 @@
 # Owner review: whole-network construction
 
-**Status: construction; whole-network owner acceptance pending.** This packet supports the project owner's review of represented topology, endpoints, sources, supported device positions, physical interlocks and the starting configuration. Scoped owner confirmations are recorded below; they do not establish whole-network acceptance or operating permission.
+**Status update — 6 November 2026:** the owner accepted `site-whole-network` / `construction-2026-11-06.12`, paired with `authored-2026-11-06.9`, in [GitHub issue #25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25). This packet's model identity, inventory and review prompts describe earlier construction snapshots; consult [HANDOVER.md](../HANDOVER.md) for the accepted release and evidence audit. Acceptance retains documented unresolved claims and is not operating permission or live status confirmation.
 
-For the current decision, start with the concise [version .10 review packet](v10-owner-review.md). The historical records below retain earlier questions and their later scoped resolutions.
+The [version .10 review packet](v10-owner-review.md) and records below preserve earlier questions and scoped resolutions; they are not the current acceptance request. See [HANDOVER.md](../HANDOVER.md) for the `.12` / `.9` acceptance evidence.
 
 **Station scope implemented; downstream exclusions applied.** The owner states exactly: “The only feeders from SB01 and SB02 that are required are the ones from TF11, TF12 and TF-04. That should be the battery limits.” The confirmed cut is at each retained SB01/SB02 feeder breaker, retaining that feeder and transformer while excluding station buses, generators and other feeders. The current 23 October package retains that station boundary. DB01/DB01B and other excluded station feeders are no longer active requests. See the [exact amendment](specs/interactive-hv-network.md#owner-scope-amendment--22-october-2026) and [scope implementation record](../drawing-review/supplemental/station-battery-limits-review.md).
 
