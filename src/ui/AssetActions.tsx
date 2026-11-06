@@ -82,6 +82,7 @@ export function AssetActions({ snapshot, assetId, anchor, roomLabel, onChange, o
       <dl>
         <div><dt>PROGRAM LOCATION</dt><dd>{programMetadata.location ?? 'NOT ASSIGNED'}</dd></div>
         <div><dt>PROGRAM VOLTAGE</dt><dd>{programMetadata.voltage ?? 'NOT ASSIGNED'}</dd></div>
+        {asset.kind === 'earth-switch' && <div><dt>EARTH TEST CIRCUIT VOLTAGE</dt><dd>{programMetadata.associatedCircuitVoltage ?? 'NOT ASSIGNED'}</dd></div>}
         <div><dt>DRAWING REFERENCES</dt><dd>{programMetadata.drawingReferences.length
           ? programMetadata.drawingReferences.join(', ')
           : 'NOT ASSIGNED'}</dd></div>

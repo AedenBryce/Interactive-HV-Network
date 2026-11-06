@@ -19,12 +19,14 @@ export type ProgramLocation = typeof PROGRAM_LOCATION_CHOICES[number];
 export type AssetProgramMetadataEntry = {
   location?: ProgramLocation;
   voltage?: ProgramVoltage;
+  associatedCircuitVoltage?: ProgramVoltage;
   drawingReferences?: readonly string[];
 };
 
 export type AssetProgramMetadata = {
   location?: ProgramLocation;
   voltage?: ProgramVoltage;
+  associatedCircuitVoltage?: ProgramVoltage;
   drawingReferences: readonly string[];
   missingFields: ('location' | 'voltage' | 'drawing references')[];
 };
@@ -72,5 +74,5 @@ export function getAssetProgramMetadata(model: Pick<NetworkModel, 'id'>, asset: 
   if (!entry?.location) missingFields.push('location');
   if (!voltage) missingFields.push('voltage');
   if (!drawingReferences.length) missingFields.push('drawing references');
-  return { location: entry?.location, voltage, drawingReferences, missingFields };
+  return { location: entry?.location, voltage, associatedCircuitVoltage: entry?.associatedCircuitVoltage, drawingReferences, missingFields };
 }

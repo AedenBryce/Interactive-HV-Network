@@ -26,6 +26,10 @@ import type { SwitchingProgramStep, SwitchingProgramType } from '../program/swit
 import { SwitchingProgramControls } from './SwitchingProgramControls';
 import type { SessionAction } from '../session/session';
 import { describeApparatusAction, describeSwitchingProgramStep } from '../session/action-description';
+import masterSwitchingProgramTemplate from '../../100-TE-DC-0022_0 High Voltage Switching Program.docm?url';
+import { getAssetProgramMetadata } from '../program/asset-program-metadata';
+import { createSwitchingProgramDocument } from '../program/switching-program-document';
+import { docmBlob } from '../program/docm-template-adapter';
 
 const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', contactor: 'Contactor', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 const initialSelection = (model: typeof defaultModel) => model.assets.find(item => item.id === 'sw411:in-03:cb')?.id
@@ -37,6 +41,8 @@ export function App() {
   const [session] = useState(() => new SimulationSession(defaultModel));
   const [programCoordinator] = useState(() => new SwitchingProgramCoordinator(session));
   const [program, setProgram] = useState(() => programCoordinator.snapshot());
+  const [programBlockers, setProgramBlockers] = useState<string[]>([]);
+  const [programDeveloping, setProgramDeveloping] = useState(false);
   const [snapshot, setSnapshot] = useState(() => session.snapshot());
   const [selectedId, setSelectedId] = useState(() => initialSelection(defaultModel));
   const [message, setMessage] = useState('');
@@ -113,6 +119,7 @@ export function App() {
       const target = snapshot.model.assets.find(item => item.id === id)!;
       const result = session.changeDevice(id, position);
       if (result.ok) {
+        setProgramBlockers([]);
         setSnapshot(session.snapshot());
         setProgram(programCoordinator.snapshot());
         const label = typeof position === 'string' ? target.positions.find(p => p.id === position)?.label : snapshot.switching[id].actions?.find(action => action.command.kind === position.kind && action.command.value === position.value)?.label;
@@ -124,7 +131,7 @@ export function App() {
   function startProgram(type: SwitchingProgramType) {
     updateSession(() => {
       const result = programCoordinator.start(type);
-      if (result.ok) { setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage(`${type === 'isolation' ? 'Isolation' : 'Restoration'} switching program started from the current simulated state.`); }
+      if (result.ok) { setProgramBlockers([]); setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage(`${type === 'isolation' ? 'Isolation' : 'Restoration'} switching program started from the current simulated state.`); }
       else setMessage(result.error);
     });
   }
@@ -143,23 +150,54 @@ export function App() {
     if (!window.confirm(`Remove ${description}?`)) return;
     updateSession(() => {
       const result = programCoordinator.undoLast(action.id);
-      if (result.ok) { setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage(`Removed ${description}. Simulated state restored.`); }
+      if (result.ok) { setProgramBlockers([]); setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage(`Removed ${description}. Simulated state restored.`); }
       else setMessage(result.error);
     });
   }
 
-  function endProgramCapture() {
-    updateSession(() => {
-      const result = programCoordinator.endForDevelopment();
-      if (result.ok) { setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage('Switching-program capture ended. The simulated state was retained.'); }
-      else setMessage(result.error);
-    });
+  async function developProgram() {
+    if (programDeveloping) return;
+    setProgramDeveloping(true);
+    setProgramBlockers([]);
+    try {
+      const current = programCoordinator.snapshot();
+      if (!current.type) throw new Error('Choose Isolation or Restoration before developing a program.');
+      const response = await fetch(masterSwitchingProgramTemplate);
+      if (!response.ok) throw new Error('The master switching-program template could not be loaded.');
+      const templateBytes = new Uint8Array(await response.arrayBuffer());
+      const result = await createSwitchingProgramDocument(templateBytes, current, snapshot.model, getAssetProgramMetadata);
+      if (!result.ok) {
+        setProgramBlockers(result.blockers);
+        setMessage(`No Word document was created. ${result.blockers.length} asset or template value(s) need review; capture remains active.`);
+        return;
+      }
+
+      if (current.active) {
+        const ended = programCoordinator.endForDevelopment();
+        if (!ended.ok) throw new Error(ended.error);
+        setSnapshot(session.snapshot());
+        setProgram(programCoordinator.snapshot());
+      }
+
+      const outputName = `Interactive-HV-${current.type}-Switching-Program.docm`;
+      const url = URL.createObjectURL(docmBlob(result.bytes));
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = outputName;
+      anchor.click();
+      URL.revokeObjectURL(url);
+      setMessage(`Created ${outputName}. The simulated device state was retained.`);
+    } catch (error) {
+      setMessage(error instanceof Error ? `Word program could not be developed: ${error.message}` : 'Word program could not be developed.');
+    } finally {
+      setProgramDeveloping(false);
+    }
   }
 
   function cancelProgram() {
     updateSession(() => {
       const result = programCoordinator.cancel();
-      if (result.ok) { setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage('Switching program cancelled. Captured steps discarded; simulated state retained.'); }
+      if (result.ok) { setProgramBlockers([]); setSnapshot(session.snapshot()); setProgram(programCoordinator.snapshot()); setMessage('Switching program cancelled. Captured steps discarded; simulated state retained.'); }
       else setMessage(result.error);
     });
   }
@@ -187,8 +225,8 @@ export function App() {
 
   return <div className="app">
     <header className="app-header"><h1>HV Network</h1><button aria-controls="network-model" aria-expanded={!railCollapsed} onClick={() => setRailCollapsed(value => !value)}>{railCollapsed ? 'Show asset list' : 'Hide asset list'}</button><span role="status" aria-live="polite">{busy ? 'Updating network…' : 'Local simulation'}</span></header>
-    <SwitchingProgramControls program={program} stepLabel={programStepLabel} onStart={startProgram} onUndo={undoProgramAction} onEnd={endProgramCapture} onCancel={cancelProgram} />
-    <div className={`workspace${detailsCollapsed ? ' details-collapsed' : ''}${railCollapsed ? ' rail-collapsed' : ''}`} inert={busy} aria-busy={busy}>
+    <SwitchingProgramControls program={program} stepLabel={programStepLabel} onStart={startProgram} onUndo={undoProgramAction} onDevelop={developProgram} developing={programDeveloping} blockers={programBlockers} onCancel={cancelProgram} />
+    <div className={`workspace${detailsCollapsed ? ' details-collapsed' : ''}${railCollapsed ? ' rail-collapsed' : ''}`} inert={busy || programDeveloping} aria-busy={busy || programDeveloping}>
       <aside id="network-model" className="network-rail" aria-label="Network model" hidden={railCollapsed}>
         <h2>Network model</h2>
         <p className="model-name">{snapshot.model.name}<br /><span className="version">{snapshot.model.version}</span></p>
