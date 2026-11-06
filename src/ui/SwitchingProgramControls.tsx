@@ -17,8 +17,8 @@ export function SwitchingProgramControls({ program, stepLabel, onStart, onUndo, 
   return <section className="switching-program-controls" aria-label="Switching program capture">
     <h2>Switching program</h2>
     {!program.active && <div className="switching-program-start">
-      <button onClick={() => onStart('isolation')}>Start Isolation Program</button>
-      <button onClick={() => onStart('restoration')}>Start Restoration Program</button>
+      <button disabled={developing} onClick={() => onStart('isolation')}>Start Isolation Program</button>
+      <button disabled={developing} onClick={() => onStart('restoration')}>Start Restoration Program</button>
       {program.actions.length > 0 && <><p>{program.type === 'isolation' ? 'Isolation' : 'Restoration'} capture ended. The captured sequence is ready for document development.</p><ol>{program.steps.map(step => <li key={step.id}>{stepLabel(step)}</li>)}</ol><button disabled={developing} onClick={onDevelop}>{developing ? 'Developing Word program…' : 'Develop Word program'}</button></>}
     </div>}
     {program.active && <>

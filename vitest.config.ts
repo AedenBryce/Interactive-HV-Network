@@ -13,6 +13,7 @@ export default defineConfig({
       'src/program/switching-program-document.test.ts',
       'src/ui/object-rotation.test.ts',
       'src/ui/AssetActions.test.tsx',
+      'src/ui/SwitchingProgramControls.test.tsx',
       'src/ui/connector-clearance.test.ts',
       'src/ui/action-status.test.ts',
       'src/ui/combined-switch-actions.test.ts',

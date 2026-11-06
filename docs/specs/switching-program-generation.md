@@ -62,7 +62,7 @@ The generated document remains a document for user review and editing. The tool 
 - **Preserved project state:** do not change the accepted model version, its starting configuration, electrical confirmations, or the accepted authored layout. Do not regenerate or optimize the drawing.
 - **Owner-confirmed voltage mappings (6 November 2026):** TF413A AC inputs A and B use `690V`; VS50501/02/03 output contacts use `1.9kV`; MC001, MC406A and MC410A use `415V`; the Sizer/MC420 group uses `6.9kV`. The owner directed adding `1.9kV` and `6.9kV` to the template dropdown; both values are present. Location assignments and the remaining asset source audit are not complete.
 - **Unresolved source values:** no voltage or location is inferred from a label or diagram placement. Unsupported values are not substituted with a nearby dropdown choice.
-- **Stable mode:** while capture is active, block model selection, scenario loading, Reset, and source-availability changes.
+- **Stable mode:** while capture is active, block model selection, scenario loading, Reset, and source-availability changes. While document development is in progress, disable starting, undoing or cancelling a capture and make the network workspace inert. If generation is blocked or fails, leave the capture active and restore its controls; on success, end capture while retaining the resulting simulated state.
 
 ## Testing Decisions
 
