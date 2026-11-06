@@ -22,9 +22,10 @@ import { healthyFuseState, isFuse, isMotorJunction } from './equipment-appearanc
 import { isObsoleteReference } from './obsolete-references';
 import { transformerWindings } from './transformer-windings';
 import { SwitchingProgramCoordinator } from '../program/switching-program-coordinator';
-import type { SwitchingProgramType } from '../program/switching-program-coordinator';
+import type { SwitchingProgramStep, SwitchingProgramType } from '../program/switching-program-coordinator';
 import { SwitchingProgramControls } from './SwitchingProgramControls';
 import type { SessionAction } from '../session/session';
+import { describeApparatusAction, describeSwitchingProgramStep } from '../session/action-description';
 
 const kindLabels: Record<Asset['kind'], string> = { source: 'Electrical source', breaker: 'Circuit breaker', contactor: 'Contactor', disconnector: 'Disconnector', transformer: 'Transformer', bus: 'Bus', 'earth-switch': 'Earth switch', interface: 'Network interface' };
 const initialSelection = (model: typeof defaultModel) => model.assets.find(item => item.id === 'sw411:in-03:cb')?.id
@@ -130,14 +131,11 @@ export function App() {
 
   function programActionLabel(action: SessionAction) {
     if (action.kind === 'source') return `${snapshot.model.sources.find(source => source.id === action.sourceId)?.label ?? action.sourceId} source availability`;
-    const target = snapshot.model.assets.find(item => item.id === action.assetId);
-    const label = target?.label ?? action.assetId;
-    if (action.kind === 'device') return `${target?.positions.find(position => position.id === action.to)?.label ?? action.to} ${label}`;
-    const value = action.command.kind === 'contact' ? action.to.contact : action.to.racking;
-    const verb = action.command.kind === 'contact'
-      ? value === 'closed' ? 'Close' : value === 'open' ? 'Open' : String(value)
-      : value === 'in' ? 'Rack In' : value === 'out' ? 'Rack Out' : String(value);
-    return `${verb} ${label}`;
+    return describeApparatusAction(action, snapshot.model);
+  }
+
+  function programStepLabel(step: SwitchingProgramStep) {
+    return describeSwitchingProgramStep(step, snapshot.model);
   }
 
   function undoProgramAction(action: SessionAction) {
@@ -189,7 +187,7 @@ export function App() {
 
   return <div className="app">
     <header className="app-header"><h1>HV Network</h1><button aria-controls="network-model" aria-expanded={!railCollapsed} onClick={() => setRailCollapsed(value => !value)}>{railCollapsed ? 'Show asset list' : 'Hide asset list'}</button><span role="status" aria-live="polite">{busy ? 'Updating network…' : 'Local simulation'}</span></header>
-    <SwitchingProgramControls program={program} actionLabel={programActionLabel} onStart={startProgram} onUndo={undoProgramAction} onEnd={endProgramCapture} onCancel={cancelProgram} />
+    <SwitchingProgramControls program={program} stepLabel={programStepLabel} onStart={startProgram} onUndo={undoProgramAction} onEnd={endProgramCapture} onCancel={cancelProgram} />
     <div className={`workspace${detailsCollapsed ? ' details-collapsed' : ''}${railCollapsed ? ' rail-collapsed' : ''}`} inert={busy} aria-busy={busy}>
       <aside id="network-model" className="network-rail" aria-label="Network model" hidden={railCollapsed}>
         <h2>Network model</h2>

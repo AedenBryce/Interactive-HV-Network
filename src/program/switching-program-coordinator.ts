@@ -1,18 +1,21 @@
 import type { SessionAction, SimulationSession } from '../session/session';
+import type { DeviceState } from '../session/mechanisms';
 
 export type SwitchingProgramType = 'isolation' | 'restoration';
 export type SwitchingProgramSnapshot = {
   active: boolean;
   type?: SwitchingProgramType;
   actions: SessionAction[];
+  steps: SwitchingProgramStep[];
 };
+export type SwitchingProgramStep = { id: string; actionId: number; role: 'verify-before' | 'action' | 'verify-after'; action: SessionAction; state?: DeviceState };
 
 type ActiveCapture = { token: number; historyStart: number; type: SwitchingProgramType };
 
 export class SwitchingProgramCoordinator {
   #session: SimulationSession;
   #active?: ActiveCapture;
-  #completed: SwitchingProgramSnapshot = { active: false, actions: [] };
+  #completed: SwitchingProgramSnapshot = { active: false, actions: [], steps: [] };
 
   constructor(session: SimulationSession) { this.#session = session; }
 
@@ -21,14 +24,20 @@ export class SwitchingProgramCoordinator {
     const started = this.#session.beginProgramCapture();
     if (!started.ok) return started;
     this.#active = { token: started.token, historyStart: started.historyStart, type };
-    this.#completed = { active: true, type, actions: [] };
+    this.#completed = { active: true, type, actions: [], steps: [] };
     return { ok: true as const };
   }
 
   snapshot(): SwitchingProgramSnapshot {
     if (!this.#active) return structuredClone(this.#completed);
     const history = this.#session.snapshot().history;
-    return structuredClone({ active: true, type: this.#active.type, actions: history.slice(this.#active.historyStart).filter(action => action.kind !== 'source') });
+    const actions = history.slice(this.#active.historyStart).filter((action): action is Exclude<SessionAction, { kind: 'source' }> => action.kind !== 'source');
+    const steps = actions.flatMap((action): SwitchingProgramStep[] => [
+      { id: `${action.id}:before`, actionId: action.id, role: 'verify-before', action, state: action.from },
+      { id: `${action.id}:action`, actionId: action.id, role: 'action', action },
+      { id: `${action.id}:after`, actionId: action.id, role: 'verify-after', action, state: action.to },
+    ]);
+    return structuredClone({ active: true, type: this.#active.type, actions, steps });
   }
 
   undoLast(expectedActionId: number) {
@@ -53,7 +62,7 @@ export class SwitchingProgramCoordinator {
     const result = this.#session.endProgramCapture(this.#active.token);
     if (!result.ok) return result;
     this.#active = undefined;
-    this.#completed = { active: false, actions: [] };
+    this.#completed = { active: false, actions: [], steps: [] };
     return { ok: true as const };
   }
 }

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { SimulationSession } from '../session/session';
 import { singleSupply } from '../models/synthetic';
 import { SwitchingProgramCoordinator } from './switching-program-coordinator';
+import { describeApparatusAction, describeSessionAction, describeSwitchingProgramStep } from '../session/action-description';
 
 describe('switching program coordinator', () => {
   it('captures accepted apparatus changes in order from the current state, including opposite actions', () => {
@@ -16,6 +17,10 @@ describe('switching program coordinator', () => {
     expect(program.snapshot().actions.map(({ kind, from, to }) => ({ kind, from, to }))).toEqual([
       { kind: 'device', from: 'open', to: 'closed' },
       { kind: 'device', from: 'closed', to: 'open' },
+    ]);
+    expect(program.snapshot().steps.map(step => [step.actionId, step.role, step.state])).toEqual([
+      [2, 'verify-before', 'open'], [2, 'action', undefined], [2, 'verify-after', 'closed'],
+      [3, 'verify-before', 'closed'], [3, 'action', undefined], [3, 'verify-after', 'open'],
     ]);
   });
 
@@ -35,6 +40,7 @@ describe('switching program coordinator', () => {
     expect(program.undoLast(last.id)).toEqual({ ok: true });
     expect(session.snapshot().devices['cb-01']).toBe('open');
     expect(program.snapshot().actions).toEqual([]);
+    expect(program.snapshot().steps).toEqual([]);
   });
 
   it('ends capture on cancel while retaining simulated state and discarding captured sequence', () => {
@@ -44,7 +50,21 @@ describe('switching program coordinator', () => {
     session.changeDevice('cb-01', 'open');
     expect(program.cancel()).toEqual({ ok: true });
     expect(session.snapshot().devices['cb-01']).toBe('open');
-    expect(program.snapshot()).toMatchObject({ active: false, actions: [] });
+    expect(program.snapshot()).toMatchObject({ active: false, actions: [], steps: [] });
     expect(session.changeSource('source-a', false)).toEqual({ ok: true });
+  });
+
+  it('uses one action description for the undo prompt and session history', () => {
+    const session = new SimulationSession(singleSupply);
+    session.changeDevice('cb-01', 'open');
+    const action = session.snapshot().history[0];
+    expect(describeApparatusAction(action, singleSupply)).toBe('Open CB-01');
+    expect(describeSessionAction(action, singleSupply)).toBe('CB-01: Closed → Open');
+    const program = new SwitchingProgramCoordinator(session);
+    program.start('isolation');
+    session.changeDevice('cb-01', 'closed');
+    expect(program.snapshot().steps.map(step => describeSwitchingProgramStep(step, singleSupply))).toEqual([
+      'Verify Open CB-01', 'Action: Closed CB-01', 'Verify Closed CB-01',
+    ]);
   });
 });
