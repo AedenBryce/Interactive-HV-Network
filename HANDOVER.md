@@ -2,13 +2,13 @@
 
 ## Start here in the next chat
 
-The owner considers the local tool good and has selected the current drawing as final. Preserve it. On 6 November 2026 the owner formally accepted the assembled educational model and its recorded starting configuration; GitHub issue #25 is closed as completed with all eight criteria checked. The accepted pair is electrical model `construction-2026-11-06.12` and layout `authored-2026-11-06.9`. GitHub issue #26 is now closed with all seven delivery criteria checked and its validation evidence and limits recorded in the issue. PR #27 remains the open delivery branch; check its current state before editing and do not assume it has merged into main. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
+The owner considers the local tool good and has selected the current drawing as final. Preserve it. On 6 November 2026 the owner formally accepted the assembled educational model and its recorded starting configuration; GitHub issue #25 is closed as completed with all eight criteria checked. The accepted pair is electrical model `construction-2026-11-06.12` and layout `authored-2026-11-06.9`. GitHub issue #26 is now closed with all seven delivery criteria checked and its validation evidence and limits recorded in the issue. PR #27 was merged into `main` on 6 November 2026 as merge commit `749f9d6`. At the time of this update, GitHub showed issue #1 (the parent specification) as the only open issue. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
 
-Read `AGENTS.md`, this file, `CONTEXT.md`, and the current distribution section of `README.md`. GitHub is AedenBryce/Interactive-HV-Network. The implementation and this handover are on `codex/final-local-tool-handover-2026-11-06`. The snapshot is published in [PR #27](https://github.com/AedenBryce/Interactive-HV-Network/pull/27). It was open, not merged, at handover. Check its current status before editing; do not assume it has merged into main.
+Read `AGENTS.md`, this file, `CONTEXT.md`, and the current distribution section of `README.md`. GitHub is AedenBryce/Interactive-HV-Network. The delivery snapshot is on `main` via [merged PR #27](https://github.com/AedenBryce/Interactive-HV-Network/pull/27); its source branch was `codex/final-local-tool-handover-2026-11-06`. Preserve the accepted model/layout pair and electrical confirmations in all follow-up work.
 
 Suggested first message for a new chat:
 
-> Continue this project from HANDOVER.md on branch codex/final-local-tool-handover-2026-11-06. Preserve the final owner layout authored-2026-11-06.9 and all electrical confirmations. Do not regenerate or optimise the drawing. Read the handover and GitHub PR/open issues, report the current state briefly, then wait for my next requested change.
+> Continue this project from HANDOVER.md on main. Preserve the final owner layout authored-2026-11-06.9 and all electrical confirmations. Do not regenerate or optimise the drawing. Check GitHub's current issues and delivery status, report the verified state briefly, then wait for my next requested change.
 
 ## Final version and exact sources of truth
 
@@ -119,7 +119,7 @@ GitHub issue [#25](https://github.com/AedenBryce/Interactive-HV-Network/issues/2
 7. **Immutable acceptance:** the scenario, source layout and authored layout pair identify model `.12` and layout `.9`; the acceptance is recorded externally on #25 without rewriting the accepted model.
 8. **Cross-area scenarios and regression:** the focused current-network/whole-network run passed 20/20 tests, including real-package structure/evidence checks and an explicitly fictional cross-area path/impact scenario; the exact `.12` package test passed 3/3. The separate authored-layout-loader suite currently has 15 passing and 6 failing geometry assertions. Full-suite pass status remains unconfirmed. Preserve `.9`; these layout assertions do not authorise changing the accepted drawing.
 
-This audit distinguishes owner acceptance from software verification. Issue #25's completion does not close delivery ticket #26 or establish field installation, live equipment state, source/earth coverage, electrical calculations or operational isolation authority.
+This audit distinguishes owner acceptance from software verification. Issue #25's completion did not by itself close delivery ticket #26; issue #26 was separately closed after delivery verification. Neither issue establishes field installation, live equipment state, source/earth coverage, electrical calculations or operational isolation authority.
 
 On6November2026:
 
@@ -138,8 +138,8 @@ pnpm exec vitest run --configLoader native --pool=threads --maxWorkers=1 --no-fi
 
 ## Next work, ordered
 
-1. Review the current PR #27 state and its diff before deciding whether to merge. Issue #25 model acceptance and issue #26 delivery verification are recorded; preserve the `.12` / `.9` pair.
-2. Validate the portable ZIP on a second Windows PC, including blocked/busy port and browser-launch behaviour under its company controls.
+1. PR #27 has been merged into `main` as merge commit `749f9d6`. Issue #25 model acceptance and issue #26 delivery verification are recorded; preserve the `.12` / `.9` pair. GitHub currently shows only parent specification #1 open; no delivery tickets remain open.
+2. Validate the portable ZIP on a second Windows PC, including blocked/busy port and browser-launch behaviour under that PC's company controls. This remains unverified; the preparation-PC launch is the only confirmed machine launch.
 3. Reconcile the six layout assertions and investigate the slow full test run without changing the owner-final drawing blindly.
 4. If requested, choose an internal hosting destination, implement real access control there, and deploy. The GPT/internal-site deployment is not already completed or authorised by the earlier local packaging request.
 
