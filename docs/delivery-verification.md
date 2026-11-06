@@ -1,26 +1,29 @@
 # Local delivery verification
 
-Current continuation point: [6 November 2026 handover](../HANDOVER.md). Earlier implementation/delivery records below are historical where they conflict with that handover.
+Current continuation point: [6 November 2026 handover](../HANDOVER.md). This opening section is the current accepted delivery record. All dated records below it describe earlier builds and are historical where they differ from the current `.12` / `.9` package.
 
-## Current evidence
+## Accepted V1 evidence — 6 November 2026
 
-The current renderer isb0ae27a, adding separated feeder trees, above-bus SW411 spare incomers and explicit combined-selector earth contacts. Current archive: `output/hv-network-v10-selector-review.zip` (811,694bytes; SHA256 `7826AFEE9AD95E16C136618A8B3CED2E93EE263678246EEEBF2C1EFC201538CF`). Its extracted three-file `www` folder is served at127.0.0.1:4174. Earlier records remain historical evidence. Whole-model acceptance remains pending.
+The owner formally accepted educational model `construction-2026-11-06.12`, final layout `authored-2026-11-06.9`, and its recorded starting configuration in GitHub issue [#25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25). The drawing and electrical confirmations were not changed during these delivery checks.
 
-Verified23October2026 against immutable `construction-2026-10-23.10`, implementation57a2ee9. The current whole-model review is pending; the owner's confirmed Section1 and preference for whole-tool visual review are recorded in [the walkthrough](v10-walkthrough.md).
+| Package | Size | Manifest entries | Result |
+| --- | ---: | ---: | --- |
+| `output/HV-Network-2026-11-06-r9-Windows.zip` | 35,294,901 bytes | 14 | ZIP integrity and every manifest SHA-256 passed |
+| `output/HV-Network-2026-11-06-r9-Web.zip` | 595,666 bytes | 10 | ZIP integrity and every manifest SHA-256 passed |
 
-The original isolated `tmp/delivery-v10` folder contained these production files; the current preview instead serves the downward-tree archive described above:
+Both manifests identify model `.12` and layout `.9`. Neither archive contains PDFs or separate JSON model/scenario files. The network and built-in historical model choices are bundled in the application. The Web ZIP has not been published to a host.
 
-| File | Bytes | SHA256 |
-| --- | ---: | --- |
-| index.html |466| B22E97A498646394121959BB358F2C3742A5B5427E9F32468B5B4DC4A4E22B00 |
-| assets/index-D-Oih6Pk.css |13,126| D6A60C468404369FC4ABFE7A254A7DF0248B4F09E2291849CF346C0E142ABC05 |
-| assets/index-BdyJkv-T.js |1,763,805| A6195D789A859531CA6772F1243233F1CCF6829BE0D82447BE1A4D68EA8357E1 |
+The Windows ZIP was launched on the preparation PC using `START-HV-NETWORK.cmd`. The bundled runtime served the app on `127.0.0.1:8765`; the page returned HTTP 200 and loaded the whole-network application. The model panel displayed `.12` and the current selected starting states. The Web ZIP was integrity-checked but not hosted or opened in a browser.
 
-Original electrical-browser evidence is recorded in [implementation progress](implementation-progress.md): startup without PDFs/repository sources, laboratory LV supply interruption and racking guards, Undo/Reset, actual matching `.10` restore, and original `.9` view-only restore with Undo/Reset disabled. Browser warning/error entries were empty. The live server handle was polled again after the walkthrough began: it remains running; its request log contains successful HTML,CSS,JavaScript requests and favicon404, with no PDF or model-file request.
+Targeted browser checks on the packaged Windows app covered whole-network startup, asset search and detail selection, `.12` model selection, historical model selection and return to `.12`, source availability, source-path highlighting, independent source and earth connectivity, action impacts, Undo and Reset. The SW411 exercise showed Close blocked while the breaker was racked out and Rack in blocked while its earth switch was closed, with the selected interlock evidence visible. A source availability change and each temporary breaker/earth action were undone; Reset then confirmed the recorded baseline. These were educational session changes only. The UI explicitly says that it does not authorise actual switching.
 
-The local review archive `output/hv-network-v10-review.zip` is797,511bytes, SHA256 `5520826AF4D6E6D5FB8902B22789D38005286E700B8156E45AE36B7EF70C00BA`. It contains the same three production files under `www/`, the actual self-contained `.10` baseline scenario, standalone startup/review instructions and a per-file SHA256 manifest. ZIP integrity and every manifest payload hash were checked. The scenario fingerprint remains `D9F5EE5DF69AC5A3FE8846AF215F4D1FEA651B9B2881F7655707490A3DE4436D` (8,382,404bytes). Python3.12.10 is installed on the preparation PC; instructions serve the extracted `www` folder on loopback port4186 with Python's standard HTTP server. Those packaged files match the isolated build already exercised; the extracted archive itself has not been launched separately.
+The focused accepted-model test file serialises and reopens a `.12` scenario, loads the earlier real `.9` package as view-only, verifies Reset and Undo are blocked there, then restores the `.12` scenario. The complete `src/session` suite passed after the `.12` regression check was corrected: 84 files and 471 tests. `pnpm typecheck` passed. The app's historical model selector also opened the bundled SW411 `.10-22.2` snapshot without a separate model file, then returned to `.12`.
 
-This is a **review copy**, not accepted final delivery. Full-suite verification, complete owner visual review, explicit immutable-version acceptance and final ticket closure remain pending. No model or acceptance status was rewritten while packaging. The updated renderer has been checked at the native narrow in-app viewport and1280×900; other browsers/viewports remain unverified.
+Known limits: the full configured test suite has not been verified green. The authored-layout-loader suite has 15 passing and 6 historical geometry assertions failing; do not change accepted layout `.9` to satisfy those assertions. A second-PC launch and Web hosting were not tested. No live equipment state, installation, source/earth coverage beyond the explicit model records, electrical calculation, or switching authorisation is established by this verification.
+
+## Historical delivery records
+
+The following records predate acceptance of `.12` / `.9`. Their pending-acceptance and ticket-status statements describe their own dated builds, not the current package above.
 
 ## Historical .5 evidence
 

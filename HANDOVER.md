@@ -2,7 +2,7 @@
 
 ## Start here in the next chat
 
-The owner considers the local tool good and has selected the current drawing as final. Preserve it. On 6 November 2026 the owner formally accepted the assembled educational model and its recorded starting configuration; GitHub issue #25 is closed as completed with all eight criteria checked. The accepted pair is electrical model `construction-2026-11-06.12` and layout `authored-2026-11-06.9`. Issue #26 remains open for delivery evidence; PR #27 is the delivery branch. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
+The owner considers the local tool good and has selected the current drawing as final. Preserve it. On 6 November 2026 the owner formally accepted the assembled educational model and its recorded starting configuration; GitHub issue #25 is closed as completed with all eight criteria checked. The accepted pair is electrical model `construction-2026-11-06.12` and layout `authored-2026-11-06.9`. GitHub issue #26 is now closed with all seven delivery criteria checked and its validation evidence and limits recorded in the issue. PR #27 remains the open delivery branch; check its current state before editing and do not assume it has merged into main. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
 
 Read `AGENTS.md`, this file, `CONTEXT.md`, and the current distribution section of `README.md`. GitHub is AedenBryce/Interactive-HV-Network. The implementation and this handover are on `codex/final-local-tool-handover-2026-11-06`. The snapshot is published in [PR #27](https://github.com/AedenBryce/Interactive-HV-Network/pull/27). It was open, not merged, at handover. Check its current status before editing; do not assume it has merged into main.
 
@@ -100,6 +100,12 @@ The portable server binds only to 127.0.0.1. It starts at8765 and skips occupied
 
 ## Verification and known limits
 
+### Issue #26 delivery verification — 6 November 2026
+
+GitHub issue #26 is closed as completed. The Windows and Web ZIPs passed ZIP CRC and manifest SHA-256 checks and identify model `construction-2026-11-06.12` with layout `authored-2026-11-06.9`. The Windows ZIP launched on the preparation PC at `127.0.0.1:8765` and returned HTTP 200. The packaged-app walkthrough covered whole-network/detail navigation, source and earth connectivity, action impacts, interlock blocks, tracing, undo/reset, and opening the bundled historical model as view-only. Session scenario serialization/version behavior was checked at the `SimulationSession` boundary. The approved session suite passed 84 files / 471 tests; `pnpm typecheck` passed.
+
+Limits recorded on #26: the full configured suite is not confirmed green; the authored-layout-loader suite has six historical geometry assertion failures; browser file-chooser submission, hosted Web delivery, and second-PC launch were not verified. The Web ZIP is packaged but not hosted. No electrical calculations, live equipment behavior, or physical state are claimed. The accepted `.9` drawing and electrical confirmations were not changed.
+
 ### Issue #25 acceptance audit — 6 November 2026
 
 GitHub issue [#25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25) is closed as completed. The owner checked all eight criteria and formally accepted model `construction-2026-11-06.12`, final layout `authored-2026-11-06.9`, and the recorded starting configuration. The frozen scenario is `docs/layout-versions/owner-scenario-final-2026-11-06.json`.
@@ -132,10 +138,9 @@ pnpm exec vitest run --configLoader native --pool=threads --maxWorkers=1 --no-fi
 
 ## Next work, ordered
 
-1. Check PR #27's current GitHub state and preserve the `.9` source pair. Issue #25 is complete; do not reopen acceptance or alter the accepted model without an owner request.
+1. Review the current PR #27 state and its diff before deciding whether to merge. Issue #25 model acceptance and issue #26 delivery verification are recorded; preserve the `.12` / `.9` pair.
 2. Validate the portable ZIP on a second Windows PC, including blocked/busy port and browser-launch behaviour under its company controls.
 3. Reconcile the six layout assertions and investigate the slow full test run without changing the owner-final drawing blindly.
-4. Continue issue #26's delivery criteria against the accepted `.12` / `.9` pair. Keep remaining unconfirmed installed facts labelled; #1 remains the specification.
-5. If requested, choose an internal hosting destination, implement real access control there, and deploy. The GPT/internal-site deployment is not already completed or authorised by the earlier local packaging request.
+4. If requested, choose an internal hosting destination, implement real access control there, and deploy. The GPT/internal-site deployment is not already completed or authorised by the earlier local packaging request.
 
 The earlier goal documents under docs/goals are historical. Preserve the accepted layout and electrical confirmations during later delivery work; do not restart layout optimisation unless the owner asks.
