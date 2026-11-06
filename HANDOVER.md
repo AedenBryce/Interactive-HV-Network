@@ -4,7 +4,7 @@
 
 The owner considers the local tool good and has selected the current drawing as final. Preserve it. The current task is to finish repository delivery and continue only with the owner's next requested project work. Do not resume layout optimisation, restart the old layout goal, rerun experimental layout generators, or change positions to satisfy historical tests.
 
-Read `AGENTS.md`, this file, `CONTEXT.md`, and the current distribution section of `README.md`. GitHub is AedenBryce/Interactive-HV-Network. The implementation and this handover are on `codex/final-local-tool-handover-2026-11-06`. Check the PR status before editing; do not assume it has merged into main.
+Read `AGENTS.md`, this file, `CONTEXT.md`, and the current distribution section of `README.md`. GitHub is AedenBryce/Interactive-HV-Network. The implementation and this handover are on `codex/final-local-tool-handover-2026-11-06`. The snapshot is published in [PR #27](https://github.com/AedenBryce/Interactive-HV-Network/pull/27). It was open, not merged, at handover. Check its current status before editing; do not assume it has merged into main.
 
 Suggested first message for a new chat:
 
