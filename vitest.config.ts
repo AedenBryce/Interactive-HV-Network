@@ -6,7 +6,9 @@ export default defineConfig({
   test: {
     include: [
       'src/session/**/*.test.ts',
+      'src/program/asset-program-metadata.test.ts',
       'src/ui/object-rotation.test.ts',
+      'src/ui/AssetActions.test.tsx',
       'src/ui/connector-clearance.test.ts',
       'src/ui/action-status.test.ts',
       'src/ui/combined-switch-actions.test.ts',

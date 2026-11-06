@@ -6,6 +6,7 @@ import { describeDeviceState, isIndependentState } from '../session/mechanisms';
 import { healthyFuseState, isFuse } from './equipment-appearance';
 import { currentAssetLabel } from './review-updates';
 import { switchActions } from './combined-switch-actions';
+import { getAssetProgramMetadata } from '../program/asset-program-metadata';
 
 export function AssetActions({ snapshot, assetId, anchor, roomLabel, onChange, onSource, onClose }: {
   snapshot: SessionSnapshot; assetId: string; anchor: { x: number; y: number }; roomLabel?: string;
@@ -17,6 +18,7 @@ export function AssetActions({ snapshot, assetId, anchor, roomLabel, onChange, o
   const drag = useRef<{ pointerId: number; x: number; y: number; left: number; top: number } | null>(null);
   const asset = snapshot.model.assets.find(item => item.id === assetId)!;
   const state = snapshot.devices[assetId];
+  const programMetadata = Object.hasOwn(snapshot.devices, assetId) ? getAssetProgramMetadata(snapshot.model, asset) : undefined;
   const actions = switchActions(snapshot, asset);
   const name = currentAssetLabel(snapshot.model, asset).split('\n')[0].toUpperCase();
 
@@ -75,6 +77,17 @@ export function AssetActions({ snapshot, assetId, anchor, roomLabel, onChange, o
         : (isIndependentState(state) ? describeDeviceState(state) : asset.positions.find(position => position.id === state)?.label ?? 'NETWORK ASSET').toUpperCase()}
     </p>
     {snapshot.mode === 'view-only' && <p>VIEW-ONLY SCENARIO</p>}
+    {programMetadata && <section className="program-metadata" aria-label="Switching program details">
+      <h4>SWITCHING PROGRAM DETAILS</h4>
+      <dl>
+        <div><dt>PROGRAM LOCATION</dt><dd>{programMetadata.location ?? 'NOT ASSIGNED'}</dd></div>
+        <div><dt>PROGRAM VOLTAGE</dt><dd>{programMetadata.voltage ?? 'NOT ASSIGNED'}</dd></div>
+        <div><dt>DRAWING REFERENCES</dt><dd>{programMetadata.drawingReferences.length
+          ? programMetadata.drawingReferences.join(', ')
+          : 'NOT ASSIGNED'}</dd></div>
+      </dl>
+      {programMetadata.missingFields.length > 0 && <p className="program-metadata-status" role="status">PROGRAM METADATA INCOMPLETE</p>}
+    </section>}
     {!!actions.length && <div className="state-buttons">{actions.map(action =>
       <button key={action.label} aria-pressed={action.selected} disabled={snapshot.mode === 'view-only' || !action.allowed || action.selected} title={action.reason?.toUpperCase()} onClick={() => onChange(action.assetId, action.command)}>{action.label.toUpperCase()}</button>
     )}</div>}

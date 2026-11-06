@@ -96,6 +96,13 @@ body, .app { background: #0b1017; }
 .asset-actions .fuse-state-status { display: flex; flex-direction: column; gap: 4px; margin: 12px 0; padding: 9px 11px; border: 1px solid #526a82; border-left: 3px solid #77d16b; border-radius: 5px; background: #101923; }
 .asset-actions .fuse-state-status span { color: #9baec5; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
 .asset-actions .fuse-state-status strong { color: #e2edf8; font-size: 14px; font-weight: 600; }
+.asset-actions .program-metadata { margin-top: 14px; padding-top: 12px; border-top: 1px solid #40566b; }
+.asset-actions .program-metadata h4 { margin: 0 0 9px; color: #e2edf8; font-size: 12px; letter-spacing: .04em; }
+.asset-actions .program-metadata dl { display: grid; gap: 7px; margin: 0; }
+.asset-actions .program-metadata dl > div { display: grid; grid-template-columns: minmax(108px, 1fr) minmax(0, 1.3fr); gap: 8px; }
+.asset-actions .program-metadata dt { color: #9baec5; font-size: 11px; }
+.asset-actions .program-metadata dd { margin: 0; color: #e2edf8; overflow-wrap: anywhere; }
+.asset-actions .program-metadata-status { color: #efc66f; font-size: 11px; font-weight: 600; letter-spacing: .025em; }
 .wire.earthed.disconnected:not(.unconfirmed-source):not(.conflict):not(.traced) { stroke: var(--disconnected); }
 .whole-network .wire { vector-effect: non-scaling-stroke; stroke-width: 1.6; }
 /* Source uncertainty stays in titles and coverage badges. Red denotes no
