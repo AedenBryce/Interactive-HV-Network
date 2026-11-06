@@ -8,7 +8,9 @@ export type SwitchingProgramSnapshot = {
   actions: SessionAction[];
   steps: SwitchingProgramStep[];
 };
-export type SwitchingProgramStep = { id: string; actionId: number; role: 'verify-before' | 'action' | 'verify-after'; action: SessionAction; state?: DeviceState };
+export type ApparatusProgramStep = { source: 'apparatus'; id: string; actionId: number; role: 'verify-before' | 'action' | 'verify-after'; action: Exclude<SessionAction, { kind: 'source' }>; state?: DeviceState };
+export type ProgramCommunicationStep = { source: 'program'; id: string; action: 'INFORM'; instructions: string };
+export type SwitchingProgramStep = ApparatusProgramStep | ProgramCommunicationStep;
 
 type ActiveCapture = { token: number; historyStart: number; type: SwitchingProgramType };
 
@@ -32,12 +34,29 @@ export class SwitchingProgramCoordinator {
     if (!this.#active) return structuredClone(this.#completed);
     const history = this.#session.snapshot().history;
     const actions = history.slice(this.#active.historyStart).filter((action): action is Exclude<SessionAction, { kind: 'source' }> => action.kind !== 'source');
-    const steps = actions.flatMap((action): SwitchingProgramStep[] => [
-      { id: `${action.id}:before`, actionId: action.id, role: 'verify-before', action, state: action.from },
-      { id: `${action.id}:action`, actionId: action.id, role: 'action', action },
-      { id: `${action.id}:after`, actionId: action.id, role: 'verify-after', action, state: action.to },
-    ]);
+    const steps = this.#steps(this.#active.type, actions);
     return structuredClone({ active: true, type: this.#active.type, actions, steps });
+  }
+
+  #steps(type: SwitchingProgramType, actions: Exclude<SessionAction, { kind: 'source' }>[]): SwitchingProgramStep[] {
+    const opening: ProgramCommunicationStep[] = type === 'isolation'
+      ? [{ source: 'program', id: 'program:opening', action: 'INFORM', instructions: 'INFORM CCR OF INTENT TO ISOLATE EQUIPMENT' }]
+      : [
+        { source: 'program', id: 'program:cancel-certificate', action: 'INFORM', instructions: 'CANCEL ACCESS CERTIFICATE' },
+        { source: 'program', id: 'program:opening', action: 'INFORM', instructions: 'INFORM CCR OF INTENT TO DE-ISOLATE EQUIPMENT' },
+      ];
+    const apparatus = actions.flatMap((action): ApparatusProgramStep[] => [
+      { source: 'apparatus', id: `${action.id}:before`, actionId: action.id, role: 'verify-before', action, state: action.from },
+      { source: 'apparatus', id: `${action.id}:action`, actionId: action.id, role: 'action', action },
+      { source: 'apparatus', id: `${action.id}:after`, actionId: action.id, role: 'verify-after', action, state: action.to },
+    ]);
+    const closing: ProgramCommunicationStep[] = type === 'isolation'
+      ? [
+        { source: 'program', id: 'program:isolation-complete', action: 'INFORM', instructions: 'INFORM CCR ISOLATIONS IS COMPLETE' },
+        { source: 'program', id: 'program:issue-certificate', action: 'INFORM', instructions: 'ISSUE ACCESS CERTIFICATE' },
+      ]
+      : [{ source: 'program', id: 'program:restoration-complete', action: 'INFORM', instructions: 'INFORM CCR THAT EQUIPMENT IS DE-ISOLATED' }];
+    return [...opening, ...apparatus, ...closing];
   }
 
   undoLast(expectedActionId: number) {

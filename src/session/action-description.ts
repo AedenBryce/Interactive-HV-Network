@@ -34,9 +34,9 @@ export function describeSessionAction(action: SessionAction, model: NetworkModel
 }
 
 export function describeSwitchingProgramStep(step: SwitchingProgramStep, model: NetworkModel) {
+  if (step.source === 'program') return `${step.action} · ${step.instructions}`;
   const action = step.action;
-  if (step.role === 'action') return `Action: ${action.kind === 'source' ? 'Source availability' : describeApparatusAction(action, model)}`;
-  if (action.kind === 'source') return 'Source availability check';
+  if (step.role === 'action') return `Action: ${describeApparatusAction(action, model)}`;
   const asset = model.assets.find(candidate => candidate.id === action.assetId);
   let stateLabel: string;
   if (action.kind === 'device') {

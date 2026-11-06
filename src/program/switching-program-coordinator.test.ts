@@ -5,6 +5,17 @@ import { SwitchingProgramCoordinator } from './switching-program-coordinator';
 import { describeApparatusAction, describeSessionAction, describeSwitchingProgramStep } from '../session/action-description';
 
 describe('switching program coordinator', () => {
+  it.each([
+    ['isolation', ['INFORM CCR OF INTENT TO ISOLATE EQUIPMENT', 'INFORM CCR ISOLATIONS IS COMPLETE', 'ISSUE ACCESS CERTIFICATE']],
+    ['restoration', ['CANCEL ACCESS CERTIFICATE', 'INFORM CCR OF INTENT TO DE-ISOLATE EQUIPMENT', 'INFORM CCR THAT EQUIPMENT IS DE-ISOLATED']],
+  ] as const)('includes the fixed %s program communications in sequence order', (type, instructions) => {
+    const program = new SwitchingProgramCoordinator(new SimulationSession(singleSupply));
+    program.start(type);
+
+    expect(program.snapshot().steps.map(step => step.source === 'program' ? [step.action, step.instructions] : 'apparatus'))
+      .toEqual(instructions.map(instruction => ['INFORM', instruction]));
+  });
+
   it('captures accepted apparatus changes in order from the current state, including opposite actions', () => {
     const session = new SimulationSession(singleSupply);
     session.changeDevice('cb-01', 'open');
@@ -18,7 +29,7 @@ describe('switching program coordinator', () => {
       { kind: 'device', from: 'open', to: 'closed' },
       { kind: 'device', from: 'closed', to: 'open' },
     ]);
-    expect(program.snapshot().steps.map(step => [step.actionId, step.role, step.state])).toEqual([
+    expect(program.snapshot().steps.filter(step => step.source === 'apparatus').map(step => [step.actionId, step.role, step.state])).toEqual([
       [2, 'verify-before', 'open'], [2, 'action', undefined], [2, 'verify-after', 'closed'],
       [3, 'verify-before', 'closed'], [3, 'action', undefined], [3, 'verify-after', 'open'],
     ]);
@@ -40,7 +51,7 @@ describe('switching program coordinator', () => {
     expect(program.undoLast(last.id)).toEqual({ ok: true });
     expect(session.snapshot().devices['cb-01']).toBe('open');
     expect(program.snapshot().actions).toEqual([]);
-    expect(program.snapshot().steps).toEqual([]);
+    expect(program.snapshot().steps.filter(step => step.source === 'apparatus')).toEqual([]);
   });
 
   it('ends capture on cancel while retaining simulated state and discarding captured sequence', () => {
@@ -64,7 +75,9 @@ describe('switching program coordinator', () => {
     program.start('isolation');
     session.changeDevice('cb-01', 'closed');
     expect(program.snapshot().steps.map(step => describeSwitchingProgramStep(step, singleSupply))).toEqual([
+      'INFORM · INFORM CCR OF INTENT TO ISOLATE EQUIPMENT',
       'Verify Open CB-01', 'Action: Closed CB-01', 'Verify Closed CB-01',
+      'INFORM · INFORM CCR ISOLATIONS IS COMPLETE', 'INFORM · ISSUE ACCESS CERTIFICATE',
     ]);
   });
 });
