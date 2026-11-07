@@ -28,6 +28,7 @@ describe('AssetActions switching-program metadata', () => {
     expect(markup).toContain('PROGRAM LOCATION');
     expect(markup).toContain('NOT ASSIGNED');
     expect(markup).toContain('PROGRAM METADATA INCOMPLETE');
+    expect(markup).toContain('LOCATION');
   });
 
   it('shows the owner-confirmed 0V earth-switch voltage without inventing a drawing reference', () => {
@@ -37,6 +38,7 @@ describe('AssetActions switching-program metadata', () => {
     expect(markup).toContain('DRAWING REFERENCES');
     expect(markup).toContain('NOT ASSIGNED');
     expect(markup).toContain('PROGRAM METADATA INCOMPLETE');
+    expect(markup).toContain('ASSOCIATED CIRCUIT TEST VOLTAGE');
   });
 
   it('omits program metadata for an asset that is not switchable', () => {

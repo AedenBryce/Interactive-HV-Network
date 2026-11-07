@@ -87,7 +87,9 @@ export function AssetActions({ snapshot, assetId, anchor, roomLabel, onChange, o
           ? programMetadata.drawingReferences.join(', ')
           : 'NOT ASSIGNED'}</dd></div>
       </dl>
-      {programMetadata.missingFields.length > 0 && <p className="program-metadata-status" role="status">PROGRAM METADATA INCOMPLETE</p>}
+      {programMetadata.missingFields.length > 0 && <p className="program-metadata-status" role="status">
+        PROGRAM METADATA INCOMPLETE: {programMetadata.missingFields.map(field => field.toUpperCase()).join(', ')}
+      </p>}
     </section>}
     {!!actions.length && <div className="state-buttons">{actions.map(action =>
       <button key={action.label} aria-pressed={action.selected} disabled={snapshot.mode === 'view-only' || snapshot.programCaptureActive || !action.allowed || action.selected} title={snapshot.programCaptureActive ? 'Program capture controls accepted apparatus actions only.' : action.reason?.toUpperCase()} onClick={() => onChange(action.assetId, action.command)}>{action.label.toUpperCase()}</button>

@@ -67,7 +67,7 @@ describe('asset program metadata', () => {
     expect(metadata.voltage).toBe('0V');
     expect(metadata.location).toBeUndefined();
     expect(metadata.drawingReferences).toEqual([]);
-    expect(metadata.missingFields).toEqual(['location', 'drawing references']);
+    expect(metadata.missingFields).toEqual(['location', 'drawing references', 'associated circuit test voltage']);
   });
 
   it('does not reuse current-site assignments for other models', () => {

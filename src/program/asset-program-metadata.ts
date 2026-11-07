@@ -28,7 +28,7 @@ export type AssetProgramMetadata = {
   voltage?: ProgramVoltage;
   associatedCircuitVoltage?: ProgramVoltage;
   drawingReferences: readonly string[];
-  missingFields: ('location' | 'voltage' | 'drawing references')[];
+  missingFields: ('location' | 'voltage' | 'drawing references' | 'associated circuit test voltage')[];
 };
 
 // This sidecar is keyed by model identity and asset identity. It deliberately
@@ -74,5 +74,6 @@ export function getAssetProgramMetadata(model: Pick<NetworkModel, 'id'>, asset: 
   if (!entry?.location) missingFields.push('location');
   if (!voltage) missingFields.push('voltage');
   if (!drawingReferences.length) missingFields.push('drawing references');
+  if (asset.kind === 'earth-switch' && !entry?.associatedCircuitVoltage) missingFields.push('associated circuit test voltage');
   return { location: entry?.location, voltage, associatedCircuitVoltage: entry?.associatedCircuitVoltage, drawingReferences, missingFields };
 }
