@@ -90,7 +90,10 @@ describe('switching program document rows', () => {
     expect(plan.rows.filter(row => row.action === 'CLOSE').map(row => row.identify)).toEqual([expectedIdentify]);
   });
 
-  it.each([['ES SW454 FD01', 'SW454 FDR'], ['ES TF431 FD', 'TF431 FDR']])(
+  it.each([
+    ['ES SW454 FD01', 'SW454 FDR'], ['ES TF431 FD', 'TF431 FDR'],
+    ['ES TF714 feeder earth · presence owner-confirmed; path review pending', 'TF714 FDR'],
+  ])(
     'removes the earth-switch type prefix before applying the approved mapping for %s', (label, expectedIdentify) => {
     const model = structuredClone(earthFixture);
     const earthSwitch = model.assets.find(asset => asset.id === 'es-01');

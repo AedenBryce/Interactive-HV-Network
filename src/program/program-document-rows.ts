@@ -79,10 +79,11 @@ function identifyForAsset(asset: Asset, choices: ProgramTemplateChoices) {
     .replace(/\s+/g, ' ');
   const identifierVariants = candidates.map(candidate => {
     const compact = normalizeIdentifier(candidate);
+    const approvedKey = compact.startsWith('TF714 FEEDER EARTH ·') ? 'TF714 FEEDER EARTH' : compact;
     // TF feeder naming was approved as a family mapping: TFxxx FD → TFxxx FDR.
-    const approved = approvedAliases[compact]
-      ?? ((asset.kind === 'breaker' || asset.kind === 'earth-switch') && /^TF\d{3} FD$/.test(compact)
-        ? compact.replace(/ FD$/, ' FDR')
+    const approved = approvedAliases[approvedKey]
+      ?? ((asset.kind === 'breaker' || asset.kind === 'earth-switch') && /^TF\d{3} FD$/.test(approvedKey)
+        ? approvedKey.replace(/ FD$/, ' FDR')
         : undefined);
     return approved ?? compact;
   });
