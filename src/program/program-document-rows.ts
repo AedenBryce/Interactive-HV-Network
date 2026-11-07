@@ -44,6 +44,7 @@ function typeForAsset(asset: Asset, choices: ProgramTemplateChoices) {
   const known: Partial<Record<Asset['kind'], string>> = {
     breaker: 'CIRCUIT BREAKER',
     contactor: 'CONTACTOR',
+    disconnector: 'DISCONNECTOR',
     'earth-switch': 'EARTH SWITCH',
   };
   const direct = known[asset.kind];
@@ -105,9 +106,16 @@ function operationFromLabel(label: string | undefined): string | undefined {
   }
 }
 
+function isThreePositionDisconnector(asset: Asset) {
+  if (asset.kind !== 'disconnector') return false;
+  const labels = new Set(asset.positions.map(position => normalized(position.label)));
+  return ['SERVICE', 'ISOLATED', 'EARTHED'].every(label => labels.has(label));
+}
+
 function operationForAction(action: Exclude<SessionAction, { kind: 'source' }>, asset: Asset): string | undefined {
   if (action.kind !== 'device') return choice(independentCommandLabel(action.command), ['Open', 'Close', 'Rack in', 'Rack out'])?.toUpperCase();
   const position = asset.positions.find(candidate => candidate.id === action.to);
+  if (isThreePositionDisconnector(asset) && position && ['SERVICE', 'ISOLATED', 'EARTHED'].includes(normalized(position.label))) return 'SELECT';
   return operationFromLabel(position?.label);
 }
 
@@ -119,6 +127,9 @@ function verifiedInstruction(action: Exclude<SessionAction, { kind: 'source' }>,
     stateLabel = action.command.kind === 'contact'
       ? state.contact === 'open' ? 'Open' : state.contact === 'closed' ? 'Closed' : undefined
       : state.racking === 'in' ? 'Rack in' : state.racking === 'out' ? 'Rack out' : undefined;
+  }
+  if (isThreePositionDisconnector(asset) && stateLabel && ['SERVICE', 'ISOLATED', 'EARTHED'].includes(normalized(stateLabel))) {
+    return `VERIFY ${normalized(stateLabel)}`;
   }
   const operation = operationFromLabel(stateLabel);
   if (operation === 'OPEN') return 'VERIFY OPEN';
@@ -178,6 +189,21 @@ export function buildSwitchingProgramDocumentRows(
     }
   }
 
+  function threePositionEarthTests(fields: ReturnType<typeof assetFields>) {
+    const test = selected('TEST', 'actions', fields.label);
+    const meterInstruction = selected('TEST METER', 'instructions', fields.label);
+    const deadInstruction = selected('TEST FOR DEAD', 'instructions', fields.label);
+    const pvi = selected('PHASE VOLTAGE INDICATOR', 'types', fields.label);
+    if (fields.location && fields.voltage && fields.identify && test && meterInstruction && deadInstruction && pvi) {
+      const base = { location: fields.location, voltage: fields.voltage, identify: fields.identify, action: test };
+      rows.push(
+        { ...base, instructions: meterInstruction },
+        { ...base, type: pvi, instructions: deadInstruction },
+        { ...base, instructions: meterInstruction },
+      );
+    }
+  }
+
   for (let index = 0; index < program.steps.length; index += 1) {
     const step = program.steps[index];
     if (step.source === 'program') {
@@ -203,6 +229,22 @@ export function buildSwitchingProgramDocumentRows(
     const fields = assetFields(asset);
     const operation = operationForAction(action.action, asset);
     const actionValue = selected(operation, 'actions', fields.label);
+
+    if (isThreePositionDisconnector(asset) && action.action.kind === 'device') {
+      const targetPosition = asset.positions.find(position => position.id === action.action.to);
+      const targetLabel = targetPosition && ['SERVICE', 'ISOLATED', 'EARTHED'].includes(normalized(targetPosition.label))
+        ? normalized(targetPosition.label)
+        : undefined;
+      const instruction = targetLabel ? `${operation} ${targetLabel}` : undefined;
+      const actionInstructions = selected(instruction, 'instructions', fields.label);
+      if (actionValue && actionInstructions && fields.location && fields.voltage && fields.type && fields.identify) {
+        verifiedRow(fields, step.action, step.state);
+        if (targetLabel === 'EARTHED') threePositionEarthTests(fields);
+        rows.push({ location: fields.location, voltage: fields.voltage, type: fields.type, identify: fields.identify, action: actionValue, instructions: actionInstructions });
+        verifiedRow(fields, action.action, after.state);
+      }
+      continue;
+    }
 
     if (asset.kind === 'earth-switch' && operation === 'CLOSE') {
       const testVoltage = fields.metadata.associatedCircuitVoltage

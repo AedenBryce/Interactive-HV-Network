@@ -71,6 +71,12 @@ describe('macro-enabled template adapter', () => {
 
     expect(choices.instructions).toContain('INFORM CCR ISOLATIONS IS COMPLETE');
     expect(choices.instructions).toContain('TEST METER');
+    expect(choices.types).toContain('DISCONNECTOR');
+    expect(choices.instructions).toContain('OPEN DISCONNECTOR');
+    expect(choices.instructions).toContain('CLOSE DISCONNECTOR');
+    expect(choices.instructions).toEqual(expect.arrayContaining([
+      'SELECT SERVICE', 'VERIFY SERVICE', 'SELECT ISOLATED', 'VERIFY ISOLATED', 'SELECT EARTHED', 'VERIFY EARTHED',
+    ]));
     expect(choices.voltages).toContain('720V');
     expect(choices.voltages).toContain('11kV');
     expect(new TextDecoder().decode(resultDocument?.data)).toContain('INFORM CCR ISOLATIONS IS COMPLETE');

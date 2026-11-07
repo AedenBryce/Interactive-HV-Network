@@ -10,12 +10,13 @@ import type { ProgramTemplateChoices } from './program-document-rows';
 const choices: ProgramTemplateChoices = {
   locations: ['MC001', 'SW411'],
   voltages: ['0V', '415V', '6.6kV'],
-  types: ['CIRCUIT BREAKER', 'EARTH SWITCH', 'PHASE VOLTAGE INDICATOR'],
+  types: ['CIRCUIT BREAKER', 'DISCONNECTOR', 'EARTH SWITCH', 'PHASE VOLTAGE INDICATOR'],
   identifies: ['CB-01', 'ES-01'],
-  actions: ['CLOSE', 'INFORM', 'TEST', 'VERIFY'],
+  actions: ['CLOSE', 'INFORM', 'SELECT', 'TEST', 'VERIFY'],
   instructions: [
     'INFORM CCR OF INTENT TO ISOLATE EQUIPMENT', 'INFORM CCR ISOLATIONS IS COMPLETE', 'ISSUE ACCESS CERTIFICATE',
-    'VERIFY OPEN', 'VERIFY CLOSED', 'CLOSE CIRCUIT BREAKER', 'CLOSE EARTH SWITCH', 'TEST METER', 'TEST FOR DEAD',
+    'VERIFY OPEN', 'VERIFY CLOSED', 'CLOSE CIRCUIT BREAKER', 'OPEN DISCONNECTOR', 'CLOSE DISCONNECTOR', 'CLOSE EARTH SWITCH', 'TEST METER', 'TEST FOR DEAD',
+    'SELECT SERVICE', 'VERIFY SERVICE', 'SELECT ISOLATED', 'VERIFY ISOLATED', 'SELECT EARTHED', 'VERIFY EARTHED',
   ],
 };
 
@@ -56,6 +57,78 @@ describe('switching program document rows', () => {
     expect(plan.blockers).toContain('CB-01: location is not assigned.');
     expect(plan.blockers).toContain('CB-01: voltage is not assigned.');
     expect(plan.blockers).toContain('CB-01: drawing references are not assigned.');
+  });
+
+  it('maps a disconnector operation to the added template type and instruction choices', () => {
+    const model = structuredClone(singleSupply);
+    const asset = model.assets.find(candidate => candidate.id === 'cb-01');
+    if (!asset) throw new Error('Missing synthetic switching device fixture.');
+    asset.kind = 'disconnector';
+    asset.label = 'SW-01';
+    asset.aliases = ['SW-01'];
+    const session = new SimulationSession(model);
+    session.changeDevice('cb-01', 'open');
+    const capture = new SwitchingProgramCoordinator(session);
+    capture.start('isolation');
+    session.changeDevice('cb-01', 'closed');
+
+    const plan = buildSwitchingProgramDocumentRows(capture.snapshot(), model, {
+      ...choices,
+      identifies: ['SW-01'],
+    }, () => ({ location: 'MC001', voltage: '415V', drawingReferences: ['DRAWING-SWITCH'], missingFields: [] }));
+
+    expect(plan.blockers).toEqual([]);
+    expect(plan.rows.filter(row => row.action !== 'INFORM').map(({ type, identify, action, instructions }) => ({ type, identify, action, instructions }))).toEqual([
+      { type: 'DISCONNECTOR', identify: 'SW-01', action: 'VERIFY', instructions: 'VERIFY OPEN' },
+      { type: 'DISCONNECTOR', identify: 'SW-01', action: 'CLOSE', instructions: 'CLOSE DISCONNECTOR' },
+      { type: 'DISCONNECTOR', identify: 'SW-01', action: 'VERIFY', instructions: 'VERIFY CLOSED' },
+    ]);
+  });
+
+  it.each([
+    ['service', 'isolated', [
+      ['DISCONNECTOR', '415V', 'SW-3P', 'VERIFY', 'VERIFY SERVICE'],
+      ['DISCONNECTOR', '415V', 'SW-3P', 'SELECT', 'SELECT ISOLATED'],
+      ['DISCONNECTOR', '415V', 'SW-3P', 'VERIFY', 'VERIFY ISOLATED'],
+    ]],
+    ['isolated', 'service', [
+      ['DISCONNECTOR', '415V', 'SW-3P', 'VERIFY', 'VERIFY ISOLATED'],
+      ['DISCONNECTOR', '415V', 'SW-3P', 'SELECT', 'SELECT SERVICE'],
+      ['DISCONNECTOR', '415V', 'SW-3P', 'VERIFY', 'VERIFY SERVICE'],
+    ]],
+    ['isolated', 'earthed', [
+      ['DISCONNECTOR', '415V', 'SW-3P', 'VERIFY', 'VERIFY ISOLATED'],
+      [undefined, '415V', 'SW-3P', 'TEST', 'TEST METER'],
+      ['PHASE VOLTAGE INDICATOR', '415V', 'SW-3P', 'TEST', 'TEST FOR DEAD'],
+      [undefined, '415V', 'SW-3P', 'TEST', 'TEST METER'],
+      ['DISCONNECTOR', '415V', 'SW-3P', 'SELECT', 'SELECT EARTHED'],
+      ['DISCONNECTOR', '415V', 'SW-3P', 'VERIFY', 'VERIFY EARTHED'],
+    ]],
+  ])('records three-position disconnector %s → %s with selection and verification rows', (start, target, expected) => {
+    const model = structuredClone(singleSupply);
+    const asset = model.assets.find(candidate => candidate.id === 'cb-01');
+    if (!asset) throw new Error('Missing synthetic switching device fixture.');
+    asset.kind = 'disconnector';
+    asset.label = 'SW-3P';
+    asset.aliases = ['SW-3P'];
+    asset.positions = [
+      { id: 'service', label: 'Service', pairs: [] },
+      { id: 'isolated', label: 'Isolated', pairs: [] },
+      { id: 'earthed', label: 'Earthed', pairs: [] },
+    ];
+    model.starting.devices['cb-01'] = start;
+    const session = new SimulationSession(model);
+    const capture = new SwitchingProgramCoordinator(session);
+    capture.start('isolation');
+    session.changeDevice('cb-01', target);
+
+    const plan = buildSwitchingProgramDocumentRows(capture.snapshot(), model, {
+      ...choices,
+      identifies: ['SW-3P'],
+    }, () => ({ location: 'MC001', voltage: '415V', drawingReferences: ['DRAWING-3P'], missingFields: [] }));
+
+    expect(plan.blockers).toEqual([]);
+    expect(plan.rows.filter(row => row.action !== 'INFORM').map(({ type, voltage, identify, action, instructions }) => [type, voltage, identify, action, instructions])).toEqual(expected);
   });
 
   it.each([
