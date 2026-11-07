@@ -65,6 +65,20 @@ describe('switching program coordinator', () => {
     expect(session.changeSource('source-a', false)).toEqual({ ok: true });
   });
 
+  it('ends capture after development while retaining the completed sequence and simulated state', () => {
+    const session = new SimulationSession(singleSupply);
+    const program = new SwitchingProgramCoordinator(session);
+    program.start('isolation');
+    session.changeDevice('cb-01', 'open');
+    const expectedSteps = program.snapshot().steps;
+
+    expect(program.endForDevelopment()).toEqual({ ok: true });
+    expect(program.snapshot()).toMatchObject({ active: false, type: 'isolation', actions: [{ assetId: 'cb-01', to: 'open' }], steps: expectedSteps });
+    expect(session.snapshot().devices['cb-01']).toBe('open');
+    expect(session.snapshot().programCaptureActive).toBe(false);
+    expect(session.changeSource('source-a', false)).toEqual({ ok: true });
+  });
+
   it('uses one action description for the undo prompt and session history', () => {
     const session = new SimulationSession(singleSupply);
     session.changeDevice('cb-01', 'open');

@@ -67,10 +67,17 @@ describe('macro-enabled template adapter', () => {
     const result = await readDocmPackage(output);
     const resultDocument = result.find(entry => entry.name === 'word/document.xml');
     const resultMacro = result.find(entry => entry.name === 'word/vbaProject.bin');
+    const resultHeaders = result.filter(entry => /^word\/header\d+\.xml$/.test(entry.name));
 
     expect(choices.instructions).toContain('INFORM CCR ISOLATIONS IS COMPLETE');
     expect(choices.instructions).toContain('TEST METER');
+    expect(choices.voltages).toContain('720V');
+    expect(choices.voltages).toContain('11kV');
     expect(new TextDecoder().decode(resultDocument?.data)).toContain('INFORM CCR ISOLATIONS IS COMPLETE');
+    expect(resultHeaders.every(header => !new TextDecoder().decode(header.data).toUpperCase().includes('DRAFT'))).toBe(true);
+    for (const originalHeader of original.filter(entry => /^word\/header\d+\.xml$/.test(entry.name))) {
+      expect(result.find(entry => entry.name === originalHeader.name)?.data).toEqual(originalHeader.data);
+    }
     expect([...resultMacro?.data ?? []]).toEqual([...macro.data]);
   });
 });

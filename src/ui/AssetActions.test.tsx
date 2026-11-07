@@ -19,16 +19,15 @@ function renderActions(model: typeof earthFixture | typeof currentNetworkModel, 
 }
 
 describe('AssetActions switching-program metadata', () => {
-  it('shows the assigned voltage and drawing reference and calls out an unassigned location', () => {
+  it('shows the assigned program location, voltage, and drawing reference', () => {
     const markup = renderActions(currentNetworkModel, 'rm413a:ac-input-a:switch');
 
     expect(markup).toContain('SWITCHING PROGRAM DETAILS');
     expect(markup).toContain('690V');
     expect(markup).toContain('CB17OP023A-04057-DR-EL-0004');
     expect(markup).toContain('PROGRAM LOCATION');
-    expect(markup).toContain('NOT ASSIGNED');
-    expect(markup).toContain('PROGRAM METADATA INCOMPLETE');
-    expect(markup).toContain('LOCATION');
+    expect(markup).toContain('RM413A');
+    expect(markup).not.toContain('PROGRAM METADATA INCOMPLETE');
   });
 
   it('shows the owner-confirmed 0V earth-switch voltage without inventing a drawing reference', () => {

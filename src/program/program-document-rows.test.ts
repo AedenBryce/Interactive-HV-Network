@@ -118,7 +118,7 @@ describe('switching program document rows', () => {
     expect(plan.rows.filter(row => row.action !== 'INFORM').map(row => row.identify)).toEqual(Array(6).fill(expectedIdentify));
   });
 
-  it('expands an earth close into the agreed checks and requires an assigned circuit test voltage', () => {
+  it.each(['6.6kV', '0V'] as const)('expands an earth close using associated circuit test voltage %s', testVoltage => {
     const session = new SimulationSession(earthFixture);
     const capture = new SwitchingProgramCoordinator(session);
     capture.start('isolation');
@@ -126,7 +126,7 @@ describe('switching program document rows', () => {
     const metadata = (model: typeof earthFixture, asset: typeof earthFixture.assets[number]) => ({
       location: 'SW411' as const,
       voltage: asset.kind === 'earth-switch' ? '0V' as const : '415V' as const,
-      associatedCircuitVoltage: asset.kind === 'earth-switch' ? '6.6kV' as const : undefined,
+      associatedCircuitVoltage: asset.kind === 'earth-switch' ? testVoltage : undefined,
       drawingReferences: ['DRAWING-EARTH'],
       missingFields: [] as const,
     });
@@ -137,9 +137,9 @@ describe('switching program document rows', () => {
     expect(plan.blockers).toEqual([]);
     expect(steps.map(({ type, voltage, identify, action, instructions }) => ({ type, voltage, identify, action, instructions }))).toEqual([
       { type: 'EARTH SWITCH', voltage: '0V', identify: 'ES-01', action: 'VERIFY', instructions: 'VERIFY OPEN' },
-      { type: undefined, voltage: '6.6kV', identify: 'ES-01', action: 'TEST', instructions: 'TEST METER' },
-      { type: 'PHASE VOLTAGE INDICATOR', voltage: '6.6kV', identify: 'ES-01', action: 'TEST', instructions: 'TEST FOR DEAD' },
-      { type: undefined, voltage: '6.6kV', identify: 'ES-01', action: 'TEST', instructions: 'TEST METER' },
+      { type: undefined, voltage: testVoltage, identify: 'ES-01', action: 'TEST', instructions: 'TEST METER' },
+      { type: 'PHASE VOLTAGE INDICATOR', voltage: testVoltage, identify: 'ES-01', action: 'TEST', instructions: 'TEST FOR DEAD' },
+      { type: undefined, voltage: testVoltage, identify: 'ES-01', action: 'TEST', instructions: 'TEST METER' },
       { type: 'EARTH SWITCH', voltage: '0V', identify: 'ES-01', action: 'CLOSE', instructions: 'CLOSE EARTH SWITCH' },
       { type: 'EARTH SWITCH', voltage: '0V', identify: 'ES-01', action: 'VERIFY', instructions: 'VERIFY CLOSED' },
     ]);
