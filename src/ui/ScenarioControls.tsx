@@ -26,8 +26,8 @@ export function ScenarioControls({ snapshot, onSave, onLoad, onError, onReturn }
   }
   return <section className="scenario-controls" aria-label="Scenario files">
     <h3>Scenario files</h3>
-    {snapshot.mode === 'view-only' && <div className="historical-notice" role="status"><strong>View only — model versions differ</strong><p>Viewing {snapshot.model.id} / {snapshot.model.version}.</p><p>Current model: {snapshot.currentModel.id} / {snapshot.currentModel.version}.</p><p>Inspection, navigation and tracing remain available. Electrical state changes are disabled.</p><button onClick={onReturn}>Start current model</button></div>}
-    <div className="scenario-buttons"><button onClick={save}>Save scenario</button><label className="load-scenario">Open scenario<input ref={input} aria-label="Open scenario file" type="file" accept=".json,application/json" onChange={event => { void load(event.target.files?.[0]); }} /></label></div>
+    {snapshot.mode === 'view-only' && <div className="historical-notice" role="status"><strong>View only — model versions differ</strong><p>Viewing {snapshot.model.id} / {snapshot.model.version}.</p><p>Current model: {snapshot.currentModel.id} / {snapshot.currentModel.version}.</p><p>Inspection, navigation and tracing remain available. Electrical state changes are disabled.</p><button disabled={snapshot.programCaptureActive} onClick={onReturn}>Start current model</button></div>}
+    <div className="scenario-buttons"><button onClick={save}>Save scenario</button><label className={`load-scenario${snapshot.programCaptureActive ? ' disabled' : ''}`} aria-disabled={snapshot.programCaptureActive}>Open scenario<input ref={input} aria-label="Open scenario file" type="file" accept=".json,application/json" disabled={snapshot.programCaptureActive} onChange={event => { void load(event.target.files?.[0]); }} /></label></div>
     <p>Scenario files include the original model, diagram and selected states.</p>
   </section>;
 }

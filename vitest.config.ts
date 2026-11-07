@@ -6,7 +6,14 @@ export default defineConfig({
   test: {
     include: [
       'src/session/**/*.test.ts',
+      'src/program/asset-program-metadata.test.ts',
+      'src/program/switching-program-coordinator.test.ts',
+      'src/program/program-document-rows.test.ts',
+      'src/program/docm-template-adapter.test.ts',
+      'src/program/switching-program-document.test.ts',
       'src/ui/object-rotation.test.ts',
+      'src/ui/AssetActions.test.tsx',
+      'src/ui/SwitchingProgramControls.test.tsx',
       'src/ui/connector-clearance.test.ts',
       'src/ui/action-status.test.ts',
       'src/ui/combined-switch-actions.test.ts',

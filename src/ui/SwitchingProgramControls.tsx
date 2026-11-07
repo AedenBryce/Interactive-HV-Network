@@ -1,0 +1,39 @@
+import type { SessionAction } from '../session/session';
+import type { SwitchingProgramSnapshot, SwitchingProgramStep, SwitchingProgramType } from '../program/switching-program-coordinator';
+import './switching-program.css';
+
+type Props = {
+  program: SwitchingProgramSnapshot;
+  stepLabel: (step: SwitchingProgramStep) => string;
+  onStart: (type: SwitchingProgramType) => void;
+  onUndo: (action: SessionAction) => void;
+  onDevelop: () => void;
+  developing: boolean;
+  blockers: readonly string[];
+  onCancel: () => void;
+};
+
+export function SwitchingProgramControls({ program, stepLabel, onStart, onUndo, onDevelop, developing, blockers, onCancel }: Props) {
+  return <section className="switching-program-controls" aria-label="Switching program capture">
+    <h2>Switching program</h2>
+    {!program.active && <div className="switching-program-start">
+      <button disabled={developing} onClick={() => onStart('isolation')}>Start Isolation Program</button>
+      <button disabled={developing} onClick={() => onStart('restoration')}>Start Restoration Program</button>
+      {program.actions.length > 0 && <><p>{program.type === 'isolation' ? 'Isolation' : 'Restoration'} capture ended. The captured sequence is ready for document development.</p><ol>{program.steps.map(step => <li key={step.id}>{stepLabel(step)}</li>)}</ol><button disabled={developing} onClick={onDevelop}>{developing ? 'Developing Word program…' : 'Develop Word program'}</button></>}
+    </div>}
+    {program.active && <>
+      <p>{program.type === 'isolation' ? 'Isolation' : 'Restoration'} capture started from the current simulated state. Accepted apparatus actions: {program.actions.length}.</p>
+      {program.steps.length > 0 ? <ol>{program.steps.map(step => <li key={step.id}>{stepLabel(step)}</li>)}</ol> : <p>No accepted apparatus actions recorded yet.</p>}
+      <div className="switching-program-buttons">
+        <button disabled={developing || !program.actions.length} onClick={() => onUndo(program.actions.at(-1)!)}>Revert last step</button>
+        <button disabled={developing} onClick={onDevelop}>{developing ? 'Developing Word program…' : 'Develop Word program'}</button>
+        <button disabled={developing} onClick={onCancel}>Cancel program</button>
+      </div>
+    </>}
+    {blockers.length > 0 && <details className="switching-program-blockers">
+      <summary>Review {blockers.length} incomplete asset or template values</summary>
+      <ul>{blockers.map((blocker, index) => <li key={`${index}:${blocker}`}>{blocker}</li>)}</ul>
+    </details>}
+    <p className="switching-program-note">Records accepted simulated apparatus actions. It does not establish live equipment status or authorize operational isolation.</p>
+  </section>;
+}
