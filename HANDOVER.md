@@ -106,6 +106,16 @@ GitHub issue #26 is closed as completed. The Windows and Web ZIPs passed ZIP CRC
 
 Limits recorded on #26: the full configured suite is not confirmed green; the authored-layout-loader suite has six historical geometry assertion failures; browser file-chooser submission, hosted Web delivery, and second-PC launch were not verified. The Web ZIP is packaged but not hosted. No electrical calculations, live equipment behavior, or physical state are claimed. The accepted `.9` drawing and electrical confirmations were not changed.
 
+### Switching-program follow-on — 7 November 2026
+
+The owner reports that another person launched the Windows package successfully on a second PC. Web hosting and the browser file-chooser workflow remain unverified; no hosting destination has been selected.
+
+Switching-program capture and Word generation are implemented on branch `codex/switching-program-metadata` in [PR #34](https://github.com/AedenBryce/Interactive-HV-Network/pull/34), ready for review and not merged. Issues #30–#33 remain open until merge. Issue #29 is the feature-level specification, not an implementation ticket. Preserve model `construction-2026-11-06.12`, layout `authored-2026-11-06.9`, the starting configuration, and all electrical confirmations.
+
+The metadata review assigned voltage and drawing references to all 378 switchable assets and exact existing template locations to 341. The remaining 37 locations are left blank, as directed, because the template has no matching choice; document generation surfaces those missing values rather than substituting them. Earth-switch and test-circuit voltage rules remain as owner-confirmed in the local feature specification and issue #29.
+
+On PR head `f7704b5`, `pnpm typecheck` passed and the seven switching-program test files passed 278/278. A full-suite rerun showed the six historical authored-layout assertions and two slow route/frame failures before it was interrupted; no complete run summary is available. Visual rendering of a representative generated `.docm` has not been verified. No connected Word session or bundled Windows LibreOffice runtime was available. Do not claim the full suite is green or alter the accepted layout to satisfy old geometry assertions.
+
 ### Issue #25 acceptance audit — 6 November 2026
 
 GitHub issue [#25](https://github.com/AedenBryce/Interactive-HV-Network/issues/25) is closed as completed. The owner checked all eight criteria and formally accepted model `construction-2026-11-06.12`, final layout `authored-2026-11-06.9`, and the recorded starting configuration. The frozen scenario is `docs/layout-versions/owner-scenario-final-2026-11-06.json`.
@@ -138,9 +148,9 @@ pnpm exec vitest run --configLoader native --pool=threads --maxWorkers=1 --no-fi
 
 ## Next work, ordered
 
-1. PR #27 has been merged into `main` as merge commit `749f9d6`. Issue #25 model acceptance and issue #26 delivery verification are recorded; preserve the `.12` / `.9` pair. GitHub currently shows only parent specification #1 open; no delivery tickets remain open.
-2. Validate the portable ZIP on a second Windows PC, including blocked/busy port and browser-launch behaviour under that PC's company controls. This remains unverified; the preparation-PC launch is the only confirmed machine launch.
-3. Reconcile the six layout assertions and investigate the slow full test run without changing the owner-final drawing blindly.
-4. If requested, choose an internal hosting destination, implement real access control there, and deploy. The GPT/internal-site deployment is not already completed or authorised by the earlier local packaging request.
+1. Review and merge PR #34 to deliver issues #30–#33. Issue #29 is the feature-level specification, not an implementation ticket. No merge has been performed.
+2. Visually inspect a representative generated `.docm` in Word. The tool environment has no connected Word session or bundled Windows LibreOffice runtime; the owner or a connected Word session will need to provide that check.
+3. Reconcile the six historical layout assertions and investigate the slow route/frame test setup without changing the owner-final drawing.
+4. The owner reports successful launch on a second PC. Web hosting and browser file-chooser submission remain unverified. If requested, choose an internal hosting destination, implement real access control there, and deploy; no destination is inferred or selected.
 
 The earlier goal documents under docs/goals are historical. Preserve the accepted layout and electrical confirmations during later delivery work; do not restart layout optimisation unless the owner asks.
