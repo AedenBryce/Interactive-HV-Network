@@ -189,19 +189,20 @@ export function buildSwitchingProgramDocumentRows(
     }
   }
 
-  function threePositionEarthTests(fields: ReturnType<typeof assetFields>) {
+  function meterDeadMeterRows(fields: ReturnType<typeof assetFields>, voltage: ProgramVoltage | undefined) {
     const test = selected('TEST', 'actions', fields.label);
     const meterInstruction = selected('TEST METER', 'instructions', fields.label);
     const deadInstruction = selected('TEST FOR DEAD', 'instructions', fields.label);
     const pvi = selected('PHASE VOLTAGE INDICATOR', 'types', fields.label);
-    if (fields.location && fields.voltage && fields.identify && test && meterInstruction && deadInstruction && pvi) {
-      const base = { location: fields.location, voltage: fields.voltage, identify: fields.identify, action: test };
-      rows.push(
+    if (fields.location && voltage && fields.identify && test && meterInstruction && deadInstruction && pvi) {
+      const base = { location: fields.location, voltage, identify: fields.identify, action: test };
+      return [
         { ...base, instructions: meterInstruction },
         { ...base, type: pvi, instructions: deadInstruction },
         { ...base, instructions: meterInstruction },
-      );
+      ] satisfies ProgramDocumentRow[];
     }
+    return undefined;
   }
 
   for (let index = 0; index < program.steps.length; index += 1) {
@@ -237,9 +238,10 @@ export function buildSwitchingProgramDocumentRows(
         : undefined;
       const instruction = targetLabel ? `${operation} ${targetLabel}` : undefined;
       const actionInstructions = selected(instruction, 'instructions', fields.label);
-      if (actionValue && actionInstructions && fields.location && fields.voltage && fields.type && fields.identify) {
+      const testRows = targetLabel === 'EARTHED' ? meterDeadMeterRows(fields, fields.voltage) : undefined;
+      if (actionValue && actionInstructions && fields.location && fields.voltage && fields.type && fields.identify && (targetLabel !== 'EARTHED' || testRows)) {
         verifiedRow(fields, step.action, step.state);
-        if (targetLabel === 'EARTHED') threePositionEarthTests(fields);
+        if (testRows) rows.push(...testRows);
         rows.push({ location: fields.location, voltage: fields.voltage, type: fields.type, identify: fields.identify, action: actionValue, instructions: actionInstructions });
         verifiedRow(fields, action.action, after.state);
       }
@@ -252,20 +254,16 @@ export function buildSwitchingProgramDocumentRows(
         : undefined;
       if (!fields.metadata.associatedCircuitVoltage) addBlocker(blockers, fields.label, 'associated circuit test voltage is not assigned');
       const verify = selected('VERIFY', 'actions', fields.label);
-      const test = selected('TEST', 'actions', fields.label);
+      const testRows = meterDeadMeterRows(fields, testVoltage);
       const closeInstruction = selected('CLOSE EARTH SWITCH', 'instructions', fields.label);
       const openInstruction = selected('VERIFY OPEN', 'instructions', fields.label);
       const closedInstruction = selected('VERIFY CLOSED', 'instructions', fields.label);
-      const meterInstruction = selected('TEST METER', 'instructions', fields.label);
-      const deadInstruction = selected('TEST FOR DEAD', 'instructions', fields.label);
       const earthVoltage = fields.voltage;
-      if (fields.location && fields.type && fields.identify && earthVoltage && verify && test && actionValue && closeInstruction && openInstruction && closedInstruction && meterInstruction && deadInstruction && testVoltage) {
+      if (fields.location && fields.type && fields.identify && earthVoltage && verify && actionValue && closeInstruction && openInstruction && closedInstruction && testRows) {
         const base = { location: fields.location, identify: fields.identify };
         rows.push(
           { ...base, type: 'EARTH SWITCH', voltage: '0V', action: verify, instructions: openInstruction },
-          { ...base, voltage: testVoltage, action: test, instructions: meterInstruction },
-          { ...base, voltage: testVoltage, type: 'PHASE VOLTAGE INDICATOR', action: test, instructions: deadInstruction },
-          { ...base, voltage: testVoltage, action: test, instructions: meterInstruction },
+          ...testRows,
           { ...base, type: fields.type, voltage: '0V', action: actionValue, instructions: closeInstruction },
           { ...base, type: fields.type, voltage: '0V', action: verify, instructions: closedInstruction },
         );
