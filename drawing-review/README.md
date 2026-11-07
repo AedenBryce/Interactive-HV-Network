@@ -30,6 +30,8 @@ Seven complete pages were rendered and inspected. Title-block crops were also in
 
 S1 and S2, page 1, notes 1 and 2 explicitly describe those sheets as high-level reference overviews and say not to use those drawings for isolation purposes. Detailed SLDs and confirmed interlock information still need to be reconciled. No precedence rule between overview and detailed sheets has been agreed.
 
+For the switching-program metadata crosswalk, use the overview sheets as an index to detailed drawings: when an asset is inside an identified `SRxxx` boundary, the `REFER DRG` callout within that boundary identifies the relevant detailed drawing for the enclosed assets. This is a drawing-reference mapping method only; it does not establish equipment state, voltage, interlocks, or authority to use the overview for isolation. For example, S1 page 1 shows RM406 with `CB19OP001B-04057-DR-EL-0002`, RM410 with `CB19OP001B-04057-DR-EL-0004`, and SR451 with `11098-07110-EL-DR-2356`.
+
 ## First network scope index
 
 The following tags are visible in the inspected source pages. This index records where to continue the review; it is not a complete asset register or an accepted connectivity model. Current installed arrangements and starting states remain unconfirmed.

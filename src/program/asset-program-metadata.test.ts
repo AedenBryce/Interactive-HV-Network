@@ -11,6 +11,64 @@ function assetFrom(model: typeof currentNetworkModel, assetId: string) {
 
 describe('asset program metadata', () => {
   it.each([
+    'sw411:in-01:cb', 'sw411:in-02:cb', 'sw411:in-03:cb', 'sw411:in-04:cb',
+    'sw411:tier-01:cb', 'sw411:tier-02:cb', 'sw411:tier-03:cb', 'sw411:tier-04:cb',
+    'sw411:tier-13:cb', 'sw411:tier-14:cb', 'sw411:tier-15:cb', 'sw411:tier-16:cb', 'sw411:bus-tie:cb',
+  ])('reads the 22kV SW411 breaker assignment from its drawing for %s', assetId => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.voltage).toBe('22kV');
+    expect(metadata.drawingReferences).toEqual(['11098-07110-EL-DR-5151']);
+    expect(metadata.location).toBe('SW411');
+    expect(metadata.missingFields).toEqual([]);
+  });
+
+  it.each([
+    ['sw411:in-01:es', true], ['sw411:in-02:es', true], ['sw411:in-03:es', true], ['sw411:in-04:es', true],
+    ['sw411:tier-01:es', true], ['sw411:tier-02:es', true], ['sw411:tier-03:es', true], ['sw411:tier-04:es', true],
+    ['sw411:tier-13:es', true], ['sw411:tier-14:es', true], ['sw411:tier-15:es', true], ['sw411:tier-16:es', true],
+    ['sw411:bus-a:es', true], ['sw411:bus-b:es', true],
+  ])('uses the SW411 drawing for earth switch %s and sets circuit test voltage only when shown', (assetId, hasAssociatedCircuitVoltage) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.voltage).toBe('0V');
+    expect(metadata.associatedCircuitVoltage).toBe(hasAssociatedCircuitVoltage ? '22kV' : undefined);
+    expect(metadata.drawingReferences).toEqual(['11098-07110-EL-DR-5151']);
+    expect(metadata.location).toBe('SW411');
+    expect(metadata.missingFields).toEqual([]);
+    if (hasAssociatedCircuitVoltage) expect(metadata.missingFields).not.toContain('associated circuit test voltage');
+    else expect(metadata.missingFields).toContain('associated circuit test voltage');
+  });
+
+  it.each([
+    ['sw421:in:cb', 'SW421', '22kV', ['11098-07110-EL-DR-2351']],
+    ['sw421:in:es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+    ['sw421:bus:es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+    ['sw421:tf421:hv-cb', 'SW421', '22kV', ['11098-07110-EL-DR-2351']],
+    ['sw421:tf421:hv-es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+    ['sw421:mc421:cb', 'MC421', '400V', ['11098-07110-EL-DR-2650', '11098-07110-EL-DR-2351']],
+    ['sw421:tf422:hv-cb', 'SW421', '22kV', ['11098-07110-EL-DR-2351']],
+    ['sw421:tf422:hv-es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+    ['sw421:mc422:cb', 'MC422', '400V', ['11098-07110-EL-DR-2652', '11098-07110-EL-DR-2351']],
+    ['sw421:tf423:hv-cb', 'SW421', '22kV', ['11098-07110-EL-DR-2351']],
+    ['sw421:tf423:hv-es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+    ['sw421:sw423:d:cb', 'SW423', '690V', ['11098-07110-EL-DR-2465', '11098-07110-EL-DR-2351']],
+    ['sw421:sw423:y:cb', 'SW423', '690V', ['11098-07110-EL-DR-2465', '11098-07110-EL-DR-2351']],
+    ['sw421:spare:tier2:cb', 'SW421', '22kV', ['11098-07110-EL-DR-2351']],
+    ['sw421:spare:tier2:es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+    ['sw421:spare:tier7:cb', 'SW421', '22kV', ['11098-07110-EL-DR-2351']],
+    ['sw421:spare:tier7:es', 'SW421', '0V', ['11098-07110-EL-DR-2351']],
+  ])('uses the drawing-backed location and voltage for %s', (assetId, location, voltage, drawingReferences) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.location).toBe(location);
+    expect(metadata.voltage).toBe(voltage);
+    expect(metadata.drawingReferences).toEqual(drawingReferences);
+    expect(metadata.missingFields).toEqual([]);
+    if (assetId.endsWith(':es')) expect(metadata.associatedCircuitVoltage).toBe('22kV');
+  });
+
+  it.each([
     ['hpgr:mc001:cb', '415V', 'CB112-02006-DR-EL-0005'],
     ['rm406:mc406a:cb', '415V', 'CB19OP001B-04057-DR-EL-0003'],
     ['rm410:mc410a:cb', '415V', '520CBC0003-2140-DR-EL-0002'],
