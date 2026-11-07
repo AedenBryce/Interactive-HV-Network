@@ -63,7 +63,7 @@ describe('AssetActions switching-program metadata', () => {
   it('keeps accepted apparatus controls available in the popup during program capture', () => {
     const markup = renderActionsDuringCapture(earthFixture, 'cb-01');
 
-    expect(markup).toMatch(/<button[^>]*>OPEN<\/button>/);
-    expect(markup).not.toMatch(/<button[^>]*disabled=""[^>]*>OPEN<\/button>/);
+    expect(markup).toMatch(/<button aria-pressed="false">OPEN CB · CB-01<\/button>/);
+    expect(markup).not.toMatch(/<button[^>]*disabled=""[^>]*>OPEN CB · CB-01<\/button>/);
   });
 });
