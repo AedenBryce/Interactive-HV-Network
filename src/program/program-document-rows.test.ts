@@ -58,11 +58,24 @@ describe('switching program document rows', () => {
     expect(plan.blockers).toContain('CB-01: drawing references are not assigned.');
   });
 
-  it('maps the approved feeder Identify spelling from a tool breaker label', () => {
+  it.each([
+    ['CB SW435 FD01', 'SW435 FDR01'], ['CB SW435 FD02', 'SW435 FDR02'],
+    ['CB SW421 FD01', 'SW421 FDR'], ['CB SW426 FD01', 'SW426 FDR'],
+    ['CB SW431 FD01', 'SW431 FDR'], ['CB SW441 FD01', 'SW441 FDR'],
+    ['CB SW451 FD01', 'SW451 FDR'], ['CB SW454 FD01', 'SW454 FDR'],
+    ['CB TF004 FD', 'TF004 FDR'], ['CB TF714 FD', 'TF714 FDR'],
+    ['CB SW421 IN01', 'SW421 IN'], ['CB SW426 IN01', 'SW426 IN'],
+    ['CB SW431 IN01', 'SW431 IN'], ['CB SW441 IN01', 'SW441 IN'],
+    ['CB SW451 IN01', 'SW451 IN'], ['CB SW454 IN01', 'SW454 IN'], ['CB SW505 IN01', 'SW505 IN'],
+    ['CB BUS A SW411', 'SW411 BUS A'], ['CB BUS B SW411', 'SW411 BUS B'], ['CB SW411 BT', 'SW411 BUS TIE'],
+    ['CB MC406A CB', 'MC406A IN'], ['CB MC417 INCOMING VCB', 'MC417 IN'],
+    ['CB MC418 INCOMING VCB', 'MC418 IN'], ['CB MC419 INCOMING VCB', 'MC419 IN'],
+    ['CB MC417A MCCB', 'MC417A IN'], ['CB MC418A MCCB', 'MC418A IN'], ['CB TF004 FEEDER', 'TF004 FDR'],
+  ])('maps the approved tool label %s to template Identify %s', (label, expectedIdentify) => {
     const model = structuredClone(singleSupply);
     const breaker = model.assets.find(asset => asset.id === 'cb-01');
     if (!breaker) throw new Error('Missing synthetic breaker fixture.');
-    breaker.label = 'CB SW435 FD01';
+    breaker.label = label;
     const session = new SimulationSession(model);
     session.changeDevice('cb-01', 'open');
     const capture = new SwitchingProgramCoordinator(session);
@@ -70,25 +83,26 @@ describe('switching program document rows', () => {
     session.changeDevice('cb-01', 'closed');
 
     const plan = buildSwitchingProgramDocumentRows(capture.snapshot(), model, {
-      ...choices, identifies: ['SW435 FDR01'],
+      ...choices, identifies: [expectedIdentify],
     }, () => ({ location: 'SW411', voltage: '6.6kV', drawingReferences: ['DRAWING-A'], missingFields: [] }));
 
     expect(plan.blockers).toEqual([]);
-    expect(plan.rows.filter(row => row.action === 'CLOSE').map(row => row.identify)).toEqual(['SW435 FDR01']);
+    expect(plan.rows.filter(row => row.action === 'CLOSE').map(row => row.identify)).toEqual([expectedIdentify]);
   });
 
-  it('removes the earth-switch type prefix before mapping an approved feeder Identify value', () => {
+  it.each([['ES SW454 FD01', 'SW454 FDR'], ['ES TF431 FD', 'TF431 FDR']])(
+    'removes the earth-switch type prefix before applying the approved mapping for %s', (label, expectedIdentify) => {
     const model = structuredClone(earthFixture);
     const earthSwitch = model.assets.find(asset => asset.id === 'es-01');
     if (!earthSwitch) throw new Error('Missing synthetic earth switch fixture.');
-    earthSwitch.label = 'ES SW454 FD01';
+    earthSwitch.label = label;
     const session = new SimulationSession(model);
     const capture = new SwitchingProgramCoordinator(session);
     capture.start('isolation');
     session.changeDevice('es-01', 'closed');
 
     const plan = buildSwitchingProgramDocumentRows(capture.snapshot(), model, {
-      ...choices, identifies: ['SW454 FDR'],
+      ...choices, identifies: [expectedIdentify],
     }, (_model, asset) => ({
       location: 'SW411',
       voltage: asset.kind === 'earth-switch' ? '0V' : '415V',
@@ -98,7 +112,7 @@ describe('switching program document rows', () => {
     }));
 
     expect(plan.blockers).toEqual([]);
-    expect(plan.rows.filter(row => row.action !== 'INFORM').map(row => row.identify)).toEqual(Array(6).fill('SW454 FDR'));
+    expect(plan.rows.filter(row => row.action !== 'INFORM').map(row => row.identify)).toEqual(Array(6).fill(expectedIdentify));
   });
 
   it('expands an earth close into the agreed checks and requires an assigned circuit test voltage', () => {
