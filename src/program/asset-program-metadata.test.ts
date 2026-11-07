@@ -116,6 +116,106 @@ describe('asset program metadata', () => {
     expect(metadata.missingFields).toEqual(['location']);
   });
 
+  it.each([
+    ['sw451:in:cb', 'SW451', '22kV', undefined, '11098-07110-EL-DR-2356'],
+    ['sw451:tf451:hv-cb', 'SW451', '22kV', undefined, '11098-07110-EL-DR-2356'],
+    ['sw451:spare-6:cb', 'SW451', '22kV', undefined, '11098-07110-EL-DR-2356'],
+    ['sw451:spare-6:es', 'SW451', '0V', '22kV', '11098-07110-EL-DR-2356'],
+    ['rm714:in01:es', 'RM714', '0V', '22kV', '11098-07110-EL-DR-2255'],
+    ['rm714:tf714:es', 'RM714', '0V', '22kV', '11098-07110-EL-DR-2255'],
+    ['rm713:in01:es', 'RM713', '0V', '22kV', '11098-07110-EL-DR-2254'],
+    ['rm721:in01', 'RM721', '22kV', undefined, '11098-07110-EL-DR-2256'],
+    ['rm721:in01:es', 'RM721', '0V', '22kV', '11098-07110-EL-DR-2256'],
+    ['rm721:in02', 'RM721', '22kV', undefined, '11098-07110-EL-DR-2256'],
+    ['rm721:in02:es', 'RM721', '0V', '22kV', '11098-07110-EL-DR-2256'],
+    ['rm721:rm412', 'RM721', '22kV', undefined, '11098-07110-EL-DR-2256'],
+    ['rm721:rm412:es', 'RM721', '0V', '22kV', '11098-07110-EL-DR-2256'],
+    ['rm721:rm713', 'RM721', '22kV', undefined, '11098-07110-EL-DR-2256'],
+    ['rm721:rm713:es', 'RM721', '0V', '22kV', '11098-07110-EL-DR-2256'],
+    ['mine:sw441:in:es', 'SW441', '0V', '22kV', '11098-07110-EL-DR-2355'],
+    ['rm420:sw01', 'RM420', '33kV', undefined, '520CBC0007-2130-DR-EL-0003'],
+    ['rm413:mc413:cb', 'MC413', '415V', undefined, 'CB17OP023A-04057-DR-EL-0004'],
+  ] as const)('uses the source-backed metadata for %s', (assetId, location, voltage, associatedCircuitVoltage, drawingReference) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.location).toBe(location);
+    expect(metadata.voltage).toBe(voltage);
+    expect(metadata.associatedCircuitVoltage).toBe(associatedCircuitVoltage);
+    expect(metadata.drawingReferences).toEqual([drawingReference]);
+    expect(metadata.missingFields).toEqual([]);
+  });
+
+  it.each([
+    ['station:sb01:f4:cb', '500CBC0002-13015-DR-EL-0001', ['location', 'voltage']],
+    ['line33:pole-1-recloser', 'CB21OP055B-10016-DR-EL-0089', ['location', 'voltage']],
+    ['hpgr:sw002:a01:q8', 'CB112-02006-DR-EL-0005', ['location', 'associated circuit test voltage']],
+    ['sw505:vs50501:dc-earth', '500CB-04220-DR-EL-0042', ['location', 'associated circuit test voltage']],
+    ['rm406:vs4061:input-a:switch', 'CB19OP001B-04057-DR-EL-0002', ['location', 'voltage']],
+  ] as const)('records a relevant source reference but keeps unresolved values blank for %s', (assetId, drawingReference, missingFields) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.drawingReferences).toEqual([drawingReference]);
+    expect(metadata.location).toBeUndefined();
+    expect(metadata.missingFields).toEqual(missingFields);
+  });
+
+  it.each([
+    ['cv006:abs:49-1', 'CB19OP001B-04057-DR-EL-0001', ['location', 'voltage']],
+    ['cv006:recloser:49-39a', 'CB19OP001B-04057-DR-EL-0001', ['location', 'voltage']],
+    ['cv006:abs:49-40', 'CB19OP001B-04057-DR-EL-0001', ['location', 'voltage']],
+    ['cv006:fused-abs:57', 'CB19OP001B-04057-DR-EL-0001', ['location', 'voltage']],
+    ['rm412:e100', 'CBC0012-02004-DR-EL-0007', ['location', 'associated circuit test voltage']],
+    ['rm412:q200', 'CBC0012-02004-DR-EL-0007', ['location', 'voltage']],
+    ['rm413:in02:cable-es', 'CB17OP023A-04057-DR-EL-0004', ['location', 'associated circuit test voltage']],
+    ['rm420:es01', '520CBC0007-2130-DR-EL-0003', ['location', 'associated circuit test voltage']],
+  ] as const)('uses a relevant drawing reference but keeps unsupported values blank for %s', (assetId, drawingReference, missingFields) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.drawingReferences).toEqual([drawingReference]);
+    expect(metadata.location).toBeUndefined();
+    expect(metadata.missingFields).toEqual(missingFields);
+  });
+
+  it.each([
+    ['hpgr:drive-mea:outlet', ['CB112-02006-DR-EL-0005']],
+    ['wh:h7:mc418a:in', ['CB17OP023C-01006-DR-EL-0001', 'CB17OP023C-01006-DR-EL-0003']],
+    ['wh:h9:mc419a:in', ['CB19OP001C-01068-DR-EL-0003', 'CB19OP001C-01068-DR-EL-0004']],
+    ['rm413:mcc414:cb', ['CB095-02004-DR-EL-0014', 'CB095-02004-DR-EL-0015']],
+    ['rm420:mc420:in:es', ['520CBC0007-2130-DR-EL-0003', '520CBC0007-2130-DR-EL-0004']],
+    ['drop-tower:abs:p18-8', ['CB-10016-DR-EL-0003']],
+  ] as const)('records all directly relevant source sheets for %s', (assetId, drawingReferences) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.drawingReferences).toEqual(drawingReferences);
+    expect(metadata.location).toBeUndefined();
+    expect(metadata.missingFields).toContain('location');
+  });
+
+  it.each([
+    ['wh:h1:mc417a:in', 'SS417', '415V', undefined, 'CB-10016-DR-EL-0003', []],
+    ['wh:h8:mc416a:in', undefined, '415V', undefined, 'CB-10016-DR-EL-0003', ['location']],
+    ['wh:h7:mc418:in-earth', undefined, '0V', '6.9kV', 'CB17OP023C-01006-DR-EL-0001', ['location']],
+    ['mine:wt1:cb', undefined, '22kV', undefined, '11098-07110-EL-DR-2355', ['location']],
+  ] as const)('uses directly matched Equipment Data / overview fields for %s', (assetId, location, voltage, associatedCircuitVoltage, drawingReference, missingFields) => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, assetId));
+
+    expect(metadata.location).toBe(location);
+    expect(metadata.voltage).toBe(voltage);
+    expect(metadata.associatedCircuitVoltage).toBe(associatedCircuitVoltage);
+    expect(metadata.drawingReferences).toEqual([drawingReference]);
+    expect(metadata.missingFields).toEqual(missingFields);
+  });
+
+  it('keeps the MC419 incoming-earth reference unresolved when the overview and Equipment Data disagree', () => {
+    const metadata = getAssetProgramMetadata(currentNetworkModel, assetFrom(currentNetworkModel, 'wh:h9:mc419:in-earth'));
+
+    expect(metadata.location).toBe('RM419');
+    expect(metadata.voltage).toBe('0V');
+    expect(metadata.associatedCircuitVoltage).toBe('6.9kV');
+    expect(metadata.drawingReferences).toEqual([]);
+    expect(metadata.missingFields).toEqual(['drawing references']);
+  });
+
   it('assigns 0V to modeled earth switches and exposes other missing fields', () => {
     const asset = earthFixture.assets.find(candidate => candidate.id === 'es-01');
     if (!asset) throw new Error('Missing synthetic earth switch fixture.');
