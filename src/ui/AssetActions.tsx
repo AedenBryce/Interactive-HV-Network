@@ -92,7 +92,7 @@ export function AssetActions({ snapshot, assetId, anchor, roomLabel, onChange, o
       </p>}
     </section>}
     {!!actions.length && <div className="state-buttons">{actions.map(action =>
-      <button key={action.label} aria-pressed={action.selected} disabled={snapshot.mode === 'view-only' || snapshot.programCaptureActive || !action.allowed || action.selected} title={snapshot.programCaptureActive ? 'Program capture controls accepted apparatus actions only.' : action.reason?.toUpperCase()} onClick={() => onChange(action.assetId, action.command)}>{action.label.toUpperCase()}</button>
+      <button key={action.label} aria-pressed={action.selected} disabled={snapshot.mode === 'view-only' || !action.allowed || action.selected} title={action.reason?.toUpperCase()} onClick={() => onChange(action.assetId, action.command)}>{action.label.toUpperCase()}</button>
     )}</div>}
     {snapshot.model.sources.filter(source => source.assetId === assetId).map(source => <div className="state-buttons" key={source.id}><button disabled={snapshot.mode === 'view-only' || snapshot.programCaptureActive || snapshot.sources[source.id] === true} onClick={() => onSource(source.id, true)}>ENABLE SUPPLY</button><button disabled={snapshot.mode === 'view-only' || snapshot.programCaptureActive || snapshot.sources[source.id] === false} onClick={() => onSource(source.id, false)}>DISABLE SUPPLY</button></div>)}
   </div>;

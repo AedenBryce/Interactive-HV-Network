@@ -18,6 +18,20 @@ function renderActions(model: typeof earthFixture | typeof currentNetworkModel, 
   }));
 }
 
+function renderActionsDuringCapture(model: typeof earthFixture, assetId: string) {
+  const session = new SimulationSession(model);
+  const capture = session.beginProgramCapture();
+  if (!capture.ok) throw new Error(capture.error);
+  return renderToStaticMarkup(createElement(AssetActions, {
+    snapshot: session.snapshot(),
+    assetId,
+    anchor: { x: 20, y: 30 },
+    onChange: () => undefined,
+    onSource: () => undefined,
+    onClose: () => undefined,
+  }));
+}
+
 describe('AssetActions switching-program metadata', () => {
   it('shows the assigned program location, voltage, and drawing reference', () => {
     const markup = renderActions(currentNetworkModel, 'rm413a:ac-input-a:switch');
@@ -44,5 +58,12 @@ describe('AssetActions switching-program metadata', () => {
     const markup = renderActions(earthFixture, 'isolated-bus');
 
     expect(markup).not.toContain('SWITCHING PROGRAM DETAILS');
+  });
+
+  it('keeps accepted apparatus controls available in the popup during program capture', () => {
+    const markup = renderActionsDuringCapture(earthFixture, 'cb-01');
+
+    expect(markup).toMatch(/<button[^>]*>OPEN<\/button>/);
+    expect(markup).not.toMatch(/<button[^>]*disabled=""[^>]*>OPEN<\/button>/);
   });
 });
