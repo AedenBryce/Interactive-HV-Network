@@ -73,17 +73,18 @@ function identifyForAsset(asset: Asset, choices: ProgramTemplateChoices) {
     'MC406A CB': 'MC406A IN', 'MC417 INCOMING VCB': 'MC417 IN', 'MC418 INCOMING VCB': 'MC418 IN',
     'MC419 INCOMING VCB': 'MC419 IN', 'MC417A MCCB': 'MC417A IN', 'MC418A MCCB': 'MC418A IN',
     'TF004 FEEDER': 'TF004 FDR', 'TF714 FEEDER EARTH': 'TF714 FDR',
+    'TF714 FEEDER EARTH · PRESENCE OWNER-CONFIRMED; PATH REVIEW PENDING': 'TF714 FDR',
+    'TF714 FEEDER EARTH · UNCONFIRMED': 'TF714 FDR',
   };
   const normalizeIdentifier = (value: string) => normalized(value)
     .replace(/\b(IN|FD|FDR)\s+(?=\d)/g, '$1')
     .replace(/\s+/g, ' ');
   const identifierVariants = candidates.map(candidate => {
     const compact = normalizeIdentifier(candidate);
-    const approvedKey = compact.startsWith('TF714 FEEDER EARTH ·') ? 'TF714 FEEDER EARTH' : compact;
     // TF feeder naming was approved as a family mapping: TFxxx FD → TFxxx FDR.
-    const approved = approvedAliases[approvedKey]
-      ?? ((asset.kind === 'breaker' || asset.kind === 'earth-switch') && /^TF\d{3} FD$/.test(approvedKey)
-        ? approvedKey.replace(/ FD$/, ' FDR')
+    const approved = approvedAliases[compact]
+      ?? ((asset.kind === 'breaker' || asset.kind === 'earth-switch') && /^TF\d{3} FD$/.test(compact)
+        ? compact.replace(/ FD$/, ' FDR')
         : undefined);
     return approved ?? compact;
   });
