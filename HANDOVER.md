@@ -114,7 +114,7 @@ Switching-program capture and Word generation are implemented on branch `codex/s
 
 The metadata review assigned voltage and drawing references to all 378 switchable assets and exact existing template locations to 341. The remaining 37 locations are left blank, as directed, because the template has no matching choice; document generation surfaces those missing values rather than substituting them. Earth-switch and test-circuit voltage rules remain as owner-confirmed in the local feature specification and issue #29.
 
-On PR head `f7704b5`, `pnpm typecheck` passed and the seven switching-program test files passed 278/278. A full-suite rerun showed the six historical authored-layout assertions and two slow route/frame failures before it was interrupted; no complete run summary is available. Visual rendering of a representative generated `.docm` has not been verified. No connected Word session or bundled Windows LibreOffice runtime was available. Do not claim the full suite is green or alter the accepted layout to satisfy old geometry assertions.
+On PR head `4b298bb`, `pnpm typecheck` passed and the seven switching-program test files passed 278/278. A full-suite rerun showed the six historical authored-layout assertions and two slow route/frame failures before it was interrupted; no complete run summary is available. Visual rendering of a representative generated `.docm` has not been verified. No connected Word session or bundled Windows LibreOffice runtime was available. Do not claim the full suite is green or alter the accepted layout to satisfy old geometry assertions.
 
 ### Issue #25 acceptance audit — 6 November 2026
 

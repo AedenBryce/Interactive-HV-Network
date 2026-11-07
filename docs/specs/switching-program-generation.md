@@ -80,7 +80,7 @@ Use synthetic session fixtures for behavioural edge cases and a fixture based on
 
 ## Further Notes
 
-- Source voltage and location assignment is not yet complete. The remaining drawing-backed exceptions will be presented to the owner as a consolidated list before those asset metadata values are finalized.
+- The source review assigned voltage and relevant drawing references to all 378 switchable assets. Of these, 341 have an exact existing template `LOCATION` choice; the other 37 are intentionally left blank because the template has no matching choice. Generation surfaces those unassigned locations instead of substituting a value. The owner-confirmed voltage and test-circuit mappings are recorded in the implementation decisions above.
 - The source template's `VOLTAGE` dropdown includes the owner-approved `400V`, `1.9kV`, `6.9kV`, `720V` and `11kV` additions; the approved Identify values and mappings are in the repository's master `.docm`.
 - The source template's `INSTRUCTION` dropdown includes the owner-approved `INFORM CCR ISOLATIONS IS COMPLETE` and `TEST METER` values.
 - The owner-confirmed voltage assignments listed above are the current decisions for metadata implementation. Asset voltage values are populated for all 378 switchable assets, including `0V` for earth switches. Associated circuit test voltage is populated for all 131 earth switches, including the owner-confirmed `0V` cases; 37 LOCATION fields remain unassigned and surfaced for review rather than inferred.
