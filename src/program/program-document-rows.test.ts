@@ -58,6 +58,49 @@ describe('switching program document rows', () => {
     expect(plan.blockers).toContain('CB-01: drawing references are not assigned.');
   });
 
+  it('maps the approved feeder Identify spelling from a tool breaker label', () => {
+    const model = structuredClone(singleSupply);
+    const breaker = model.assets.find(asset => asset.id === 'cb-01');
+    if (!breaker) throw new Error('Missing synthetic breaker fixture.');
+    breaker.label = 'CB SW435 FD01';
+    const session = new SimulationSession(model);
+    session.changeDevice('cb-01', 'open');
+    const capture = new SwitchingProgramCoordinator(session);
+    capture.start('isolation');
+    session.changeDevice('cb-01', 'closed');
+
+    const plan = buildSwitchingProgramDocumentRows(capture.snapshot(), model, {
+      ...choices, identifies: ['SW435 FDR01'],
+    }, () => ({ location: 'SW411', voltage: '6.6kV', drawingReferences: ['DRAWING-A'], missingFields: [] }));
+
+    expect(plan.blockers).toEqual([]);
+    expect(plan.rows.filter(row => row.action === 'CLOSE').map(row => row.identify)).toEqual(['SW435 FDR01']);
+  });
+
+  it('removes the earth-switch type prefix before mapping an approved feeder Identify value', () => {
+    const model = structuredClone(earthFixture);
+    const earthSwitch = model.assets.find(asset => asset.id === 'es-01');
+    if (!earthSwitch) throw new Error('Missing synthetic earth switch fixture.');
+    earthSwitch.label = 'ES SW454 FD01';
+    const session = new SimulationSession(model);
+    const capture = new SwitchingProgramCoordinator(session);
+    capture.start('isolation');
+    session.changeDevice('es-01', 'closed');
+
+    const plan = buildSwitchingProgramDocumentRows(capture.snapshot(), model, {
+      ...choices, identifies: ['SW454 FDR'],
+    }, (_model, asset) => ({
+      location: 'SW411',
+      voltage: asset.kind === 'earth-switch' ? '0V' : '415V',
+      associatedCircuitVoltage: asset.kind === 'earth-switch' ? '6.6kV' : undefined,
+      drawingReferences: ['DRAWING-EARTH'],
+      missingFields: [],
+    }));
+
+    expect(plan.blockers).toEqual([]);
+    expect(plan.rows.filter(row => row.action !== 'INFORM').map(row => row.identify)).toEqual(Array(6).fill('SW454 FDR'));
+  });
+
   it('expands an earth close into the agreed checks and requires an assigned circuit test voltage', () => {
     const session = new SimulationSession(earthFixture);
     const capture = new SwitchingProgramCoordinator(session);

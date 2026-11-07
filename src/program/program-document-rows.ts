@@ -54,16 +54,33 @@ function typeForAsset(asset: Asset, choices: ProgramTemplateChoices) {
   return candidates.length === 1 ? candidates[0] : undefined;
 }
 
-function identifyForAsset(asset: Asset, type: string | undefined, choices: ProgramTemplateChoices) {
-  const candidates = [asset.label, ...(asset.aliases ?? [])].map(value => value.trim().replace(/\s+/g, ' '));
-  if (normalized(type ?? '') === 'CIRCUIT BREAKER') {
-    for (const candidate of [...candidates]) {
-      const withoutType = candidate.replace(/^CB\s+/i, '');
-      if (withoutType !== candidate) candidates.push(withoutType);
-    }
+function identifyForAsset(asset: Asset, choices: ProgramTemplateChoices) {
+  const labels = [asset.label, ...(asset.aliases ?? [])].map(value => value.trim().replace(/\s+/g, ' '));
+  const prefixes = asset.kind === 'breaker' ? ['CB'] : asset.kind === 'earth-switch' ? ['ES'] : [];
+  const candidates = [...labels];
+  for (const label of labels) for (const prefix of prefixes) {
+    const withoutType = label.replace(new RegExp(`^${prefix}\\s+`, 'i'), '');
+    if (withoutType !== label) candidates.push(withoutType);
   }
-  const labels = new Set(candidates.map(normalized));
-  return choices.identifies.find(candidate => labels.has(normalized(candidate)));
+
+  const identifierVariants = [...candidates];
+  for (const candidate of candidates) {
+    const compact = candidate.replace(/\b(IN|FD|FDR)\s+(?=\d)/gi, '$1');
+    if (compact !== candidate) identifierVariants.push(compact);
+    const feederNumber = compact.replace(/\bFD\s*(\d{1,2})\b/gi, 'FDR$1');
+    if (feederNumber !== compact) identifierVariants.push(feederNumber);
+    const feederWithoutOne = compact.replace(/\bFD\s*0?1\b/gi, 'FDR');
+    if (feederWithoutOne !== compact) identifierVariants.push(feederWithoutOne);
+    const feeder = compact.replace(/\bFD\b/gi, 'FDR');
+    if (feeder !== compact) identifierVariants.push(feeder);
+  }
+
+  const normalizeIdentifier = (value: string) => normalized(value).replace(/\b(IN|FD|FDR)\s+(?=\d)/g, '$1');
+  for (const variant of identifierVariants) {
+    const matches = choices.identifies.filter(candidate => normalizeIdentifier(candidate) === normalizeIdentifier(variant));
+    if (matches.length === 1) return matches[0];
+  }
+  return undefined;
 }
 
 function operationFromLabel(label: string | undefined): string | undefined {
@@ -134,7 +151,7 @@ export function buildSwitchingProgramDocumentRows(
     metadata.drawingReferences.forEach(reference => references.add(reference));
 
     const type = selected(typeForAsset(asset, choices), 'types', label);
-    const identify = selected(identifyForAsset(asset, type, choices), 'identifies', label);
+    const identify = selected(identifyForAsset(asset, choices), 'identifies', label);
     const location = metadata.location ? selected(metadata.location, 'locations', label) as ProgramLocation | undefined : undefined;
     const voltage = metadata.voltage ? selected(metadata.voltage, 'voltages', label) as ProgramVoltage | undefined : undefined;
     return { label, metadata, type, identify, location, voltage };
